@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: whats-new.html 
+keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, workload factory, amazon fsx' 
+summary: 瞭解 Amazon FSX for NetApp ONTAP 的新功能。 
+---
+= 新功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+瞭解 Amazon FSX for NetApp ONTAP 的新功能。
+
+
+
+== 7 月 7 日
+
+Amazon FSX for NetApp ONTAP 目前已正式推出 BlueXP 工作負載工廠。
+
+link:learn-fsx-ontap.html["瞭解適用於 Amazon FSX for NetApp ONTAP 的 BlueXP 工作負載工廠"]。

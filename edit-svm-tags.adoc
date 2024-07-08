@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: edit-svm-tags.html 
+keywords: edit storage vm tags, vm tags, svm tags 
+summary: 隨時新增、更新或移除儲存 VM 的儲存 VM 標籤。 
+---
+= 編輯儲存 VM 標籤
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+標記可協助您分類資源。您可以隨時新增、編輯及移除儲存 VM 的標籤。
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 * 適用於 ONTAP * 的 FSX 標籤中、選取檔案系統的三點功能表、並將儲存 VM 更新、然後選取 * 管理 * 。
+. 從檔案系統總覽中、選取 * 儲存 VMS* 標籤。
+. 從 Storage VMs 標籤中、選取要編輯標記的儲存 VM 的三點功能表。
+. 選取 * 編輯儲存 VM 標記 * 。
+. 在「編輯儲存 VM 標籤」頁面上、新增、編輯或移除標籤。
++
+您可以套用至儲存 VM 的標籤數量上限為 50 個。
+
+. 按一下「 * 套用 * 」。
+

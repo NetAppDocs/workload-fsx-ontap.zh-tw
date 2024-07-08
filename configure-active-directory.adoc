@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: configure-active-directory.html 
+keywords: configure AD, configure active directory, update ad, edit active directory 
+summary:  
+---
+= 設定及更新儲存 VM 的 Active Directory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在適用於 ONTAP 檔案系統的 FSX 中、為儲存 VM 設定及更新 Active Directory 。
+
+.關於這項工作
+同樣的步驟也適用於設定及更新儲存 VM 的 Active Directory 。
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 * 適用於 ONTAP * 的 FSX 標籤中、選取檔案系統的三點功能表、並將儲存 VM 更新、然後選取 * 管理 * 。
+. 從檔案系統總覽中、選取 * 儲存 VMS* 標籤。
+. 從 Storage VMs （儲存 VM ）標籤中、選取要設定 Active Directory 的儲存 VM 的三點功能表。
+. 選取 * 管理 AD 組態 * 。
+. 在「管理 AD 組態」頁面上、提供下列項目：
++
+.. * 要加入的 Active Directory 網域 * ：輸入 Active Directory 的完整網域名稱（ FQDN ）。
+.. * DNS IP 位址 * ：輸入最多三個 IP 位址、並以逗號分隔。
+.. *SMB 伺服器 NetBIOS 名稱 * ：輸入 Active Directory 電腦物件的 SMB 伺服器 NetBIOS 名稱、以建立儲存 VM 。這是 Active Directory 中此 SVM 的名稱。
+.. * 使用者名稱 * ：在現有的 Active Directory 中輸入服務帳戶的使用者名稱。
++
+請勿包含網域首碼或尾碼。對於 `EXAMPLE\ADMIN`，請使用 `ADMIN`。
+
+.. * 密碼 * ：輸入服務帳戶的密碼。
+.. * 組織單位（ OU ） * ：輸入組織單位。
++
+OU 是您要加入檔案系統之組織單位的辨別路徑名稱。
+
+.. * 委派系統管理員群組 * ：選擇性地輸入委派的檔案系統管理員群組。
++
+刪除的系統管理員群組是 Active Directory 中可管理檔案系統的群組名稱。
+
++
+如果您使用的是 AWS 託管的 Microsoft AD 、則必須指定群組、例如 AWS 委派的 FSX 管理員、 AWS 委派管理員、或是具有 OU 委派權限的自訂群組。
+
++
+如果您要加入自我管理的 AD 、請使用 AD 中的群組名稱。預設群組為 `Domain Admins`。
+
+
+
+. 按一下「 * 套用 * 」。
+

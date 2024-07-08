@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: create-storage-vm.html 
+keywords: create storage VM, create svm 
+summary: 您可以建立適用於 ONTAP 儲存 VM （ SVM ）的 FSX 、以便在工作負載工廠中為您的工作負載提供儲存和資料服務。 
+---
+= 為 ONTAP 檔案系統的 FSX 建立儲存 VM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+為適用於 ONTAP 檔案系統的 FSX 建立儲存 VM （ SVM ）、以便在 Workload Factory 中為您的工作負載、以虛擬方式存取儲存和資料服務。
+
+.關於這項工作
+儲存 VM 是隔離的檔案伺服器、您可以使用它來存取 Workload Factory Storage 中每個工作負載的資料。每個 SVM 都有自己的管理認證和端點、用於管理和存取資料。
+
+有了 SVM 、當您存取適用於 ONTAP 的 FSX 中的資料時、您的用戶端和工作站會使用 SVM 的端點（ IP 位址）、掛載由 SVM 託管的 Volume 、 CIFS/SMB 共享區或 iSCSI LUN 。
+
+.開始之前
+確認每個檔案系統支援的儲存 VM 數量。如需每個檔案系統的 SVM 最大數量、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["管理 ONTAP 儲存虛擬機器的 FSX"^] AWS 文件中的。
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 FSX for （適用於 ONTAP 的 FSX ）標籤中、按一下檔案系統的三點功能表、為建立儲存 VM 、然後選取 * 管理 * 。
+. 從檔案系統總覽中、選取 * 建立儲存 VM* 。
+. 在「儲存 VM 」頁面的「儲存 VM 組態」下、提供下列項目：
++
+.. * 名稱 * ：輸入儲存 VM 的名稱。
+.. * 儲存 VM 認證 * ：提供此儲存 VM 使用者的密碼 `vsadmin` 、或使用檔案系統的 `fsxadmin` 使用者認證。
+.. * 根磁碟區安全樣式 * ：根據存取資料的用戶端類型、選取根磁碟區安全樣式： UNIX （ Linux 用戶端）、 NTFS （ Windows 用戶端）或混合。
+.. * 標記 * ：您可以選擇性地新增最多 50 個標記。
+
+
+. 按一下「 * 建立 * 」。
+

@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: troubleshooting.html 
+keywords: troubleshooting, troubleshoot, help, issues 
+summary: Amazon FSX for NetApp ONTAP 文件會提供疑難排解主題、供您參考。 
+---
+= 適用於 ONTAP 的 FSX 疑難排解
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Amazon FSX for NetApp ONTAP 文件會提供疑難排解主題、供您參考。
+
+如需詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/troubleshooting.html["Amazon FSX for NetApp ONTAP 疑難排解"^] 。

@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: restore-from-backup.html 
+keywords: restore backup, new volume, volume restoration, backup 
+summary: 將磁碟區從備份還原至 AWS 帳戶中任何適用於 ONTAP 檔案系統的 FSX 。 
+---
+= 從備份還原磁碟區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+將磁碟區從備份還原至 AWS 帳戶中任何適用於 ONTAP 檔案系統的 FSX 。
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 *FSX for ONTAP （用於卷的 FSX ） * 選項卡中，單擊包含卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。
+. 在檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 在 * Volumes （磁碟區） * 標籤中、按一下要從備份還原之磁碟區的三點功能表。
+. 選擇 * 資料保護動作 * 、 * ONTAP 備份 * 的 FSX 、然後 * 從備份 * 還原。
+. 在從備份還原對話方塊中、提供下列項目：
++
+.. * 目標檔案系統 * ：從下拉式功能表中選取目標檔案系統。
+.. * 目標儲存虛擬機器 * ：從下拉式功能表中選取目標儲存虛擬機器。
+.. * 備份名稱 * ：從下拉式功能表中選取備份名稱。
+.. * 恢復的 Volume 名稱 * ：輸入還原的 Volume 名稱。
+
+
+. 按一下 * 還原 * 。
+

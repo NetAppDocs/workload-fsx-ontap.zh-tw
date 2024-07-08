@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: manage-links.html 
+keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
+summary: 您可以建立和管理連結、在 Workload Factory 帳戶和 ONTAP 檔案系統的一或多個 FSX 之間提供信任關係和連線能力。這可讓您直接從 ONTAP 檔案系統監控及管理某些功能、這些功能無法透過 AWS FSX for ONTAP API 使用。 
+---
+= 管理連結
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+管理您與 Workload Factory 帳戶相關的連結。
+
+link:links-overview.html["深入瞭解連結"] 或 link:create-link.html["建立連結"]。
+
+
+
+== 檢視與您帳戶相關的連結
+
+您可以檢視目前與您帳戶相關的連結。
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 從「帳戶」功能表中、選取 * 連結 * 。
++
+image:screenshot-links-button.png["顯示如何開啟連結頁面的螢幕擷取畫面。"]
+
+. 如果有任何連結、概觀頁面會提供相關資訊。
+. 若要檢視與連結相關聯的 ONTAP 檔案系統的 FSX 、請選取相關資源區段中的 * 檢視 * 按鈕。
++
+image:screenshot-view-link-details.png["顯示使用特定連結之 ONTAP 檔案系統的 FSX 的畫面。"]
+
+. 如果您需要連結的 Amazon 資源名稱（ ARN ）、您可以選取 ARN 欄位旁的 _COPY_ 圖示。
+
+
+
+
+== 將連結與 ONTAP 檔案系統的 FSX 建立關聯
+
+建立連結之後、即可將其與適用於 ONTAP 檔案系統的 FSX 建立關聯。每個檔案系統只能與單一 NetApp 帳戶中的一個連結建立關聯、但連結可以與許多檔案系統建立關聯。
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 *FSX for ONTAP * 標籤中、選取檔案系統的三點功能表以建立連結的關聯、然後選取 * 管理 * 。
+. 在檔案系統總覽中、選取 * 關聯連結 * 。
+. 在「建立關聯」連結頁面中、選取 * 建立現有連結的關聯 * 、選取連結、然後選取 * 套用 * 。
+
+
+.結果
+此連結與適用於 ONTAP 檔案系統的 FSX 相關聯、您可以執行進階 ONTAP 作業。
+
+
+
+== 編輯連結
+
+您無法從 Workload Factory 介面編輯連結。如果您需要變更連結、則需要建立新連結、然後將該連結與檔案系統建立關聯。
+
+
+NOTE: 您可以使用 AWS 主控台編輯 Lambda 網路組態（例如 VPC 、子網路和安全性群組）、變更會反映在連結管理 UI 中；不過、這些變更可能會導致 Lambda 和 ONTAP 之間的連線問題、不建議使用。
+
+
+
+== 移除連結
+
+您可以移除不再在環境中使用的連結。移除連結後、任何適用於 ONTAP 檔案系統的 FSX 或其他使用連結的資源將無法使用特定功能。
+
+請注意、此連結僅會從 Workload Factory 刪除、不會從 AWS 環境中刪除。移除 Workload Factory 中的連結後、您必須從 AWS 帳戶刪除 Lambda 功能。
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 從「帳戶」功能表中、選取 * 連結 * 。
+. 從「連結」頁面中、選取功能表按鈕、然後選取 * 移除 * 。
++
+image:screenshot-remove-link.png["顯示如何從 Workload Factory 移除連結的螢幕擷取畫面。"]
+
+. 如果您確定、請再次選取 * 移除 * 。
+
+
+請參閱 AWS 文件 link:https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-awscli.html#with-userapp-walkthrough-custom-events-delete-function["刪除 Lambda 函數"]。

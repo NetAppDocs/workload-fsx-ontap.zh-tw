@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: enable-auto-capacity-management.html 
+keywords: auto capacity, automatic capacity management, file system capacity 
+summary: 啟用此功能可讓 Workload Factory 自動將遞增儲存設備新增至適用於 ONTAP 檔案系統的 FSX 、以因應容量需求隨時間而異。 
+---
+= 啟用檔案系統的自動容量管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+啟用此功能可讓 Workload Factory 自動將遞增儲存設備新增至適用於 ONTAP 檔案系統的 FSX 、以因應容量需求隨時間而異。
+
+.關於這項工作
+只有一個帳戶可以管理此功能。
+
+所有適用於 ONTAP 檔案系統的 FSX 的 SSD 儲存容量上限為 524,288 GiB 。若要要求增加配額、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配額"^] AWS FSX for NetApp ONTAP 文件中的。
+
+.開始之前
+您必須在 Workload Factory 中擁有 _ 自動化 _ 權限的認證、才能完成此工作。
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在 Storage （儲存設備）中、選取 * 前往 Storage inventory* （儲存設備庫存）。
+. 在 * 適用於 ONTAP * 的 FSX 索引標籤中、按一下檔案系統的三點功能表、以啟用的自動容量管理。
+. 選擇*管理*。
+. 在 [ 資訊 ] 下，按一下 * 自動容量管理 * 旁邊的鉛筆圖示。當滑鼠移動到 * 自動容量管理 * 列上時、下拉式箭頭旁會出現鉛筆圖示。
+. 在 * 自動容量管理 * 對話方塊中、提供下列項目：
++
+.. * 認證 * ：從下拉式功能表中選取具有 _ 自動化 _ 權限的認證。
+.. 按一下「啟用」按鈕以 * 啟用自動容量管理 * 。
++
+或者、停用此功能。如果您需要增加檔案系統容量、則必須先停用自動容量管理。
+
+.. * 容量臨界值 * ：輸入 ONTAP 檔案系統的 FSX 大小上限。
+.. * 容量增加增量 * ：輸入百分比以遞增增加容量。
+
+
+. 按一下「 * 套用 * 」。
+

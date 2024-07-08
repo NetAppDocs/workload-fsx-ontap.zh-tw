@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: rebalance-volume.html 
+keywords: rebalance capacity, volume capacity, redistribute capacity 
+summary: 重新平衡磁碟區的容量、以避免隨著時間而發展的不平衡現象。 
+---
+= 重新平衡磁碟區的容量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+重新平衡磁碟區的容量、以避免隨著時間而發展的不平衡現象。
+
+.關於這項工作
+重新平衡磁碟區會在新增檔案和檔案成長、隨著時間的推移而產生不平衡時、重新分配容量。手動開始重新平衡作業後、我們會選取檔案、並自動且不中斷地移動。
+
+
+NOTE: 只有 FlexGroup 磁碟區才支援重新平衡磁碟區。
+
+.開始之前
+若要重新平衡磁碟區、您必須 link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結、請按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。連結建立關聯後、請返回此作業。
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在 * 儲存 * 中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要重新平衡的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 從 Volumes （磁碟區）索引標籤中、選取要重新平衡的磁碟區三點選單。
+. 選擇 * 進階動作 * 、然後 * 重新平衡 Volume * 。
+. 在重新平衡體積對話方塊中、選取 * 重新平衡 * 。
+

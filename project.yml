@@ -1,0 +1,167 @@
+---
+settings:
+  name: Amazon FSx for NetApp ONTAP
+  platform: cloud
+  internal:
+    pdf_enabled: true
+    termcheck_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  rss_page: whats-new.html
+  langs: zh-tw,us-en,ja-jp,ko-kr,zh-cn,de-de,es-es,fr-fr,it-it
+sidebar:
+  entries:
+  - title: Amazon FSX for NetApp ONTAP 的文件
+    url: "/index.html"
+  - title: 版本資訊
+    entries:
+    - title: 新增功能
+      url: "/whats-new.html"
+    - title: 已知限制
+      url: "/known-limitations.html"
+  - title: 開始使用
+    entries:
+    - title: 瞭解Amazon FSX for NetApp ONTAP 的功能
+      url: "/learn-fsx-ontap.html"
+    - title: 快速入門
+      url: "/quick-start.html"
+    - title: 為 ONTAP 檔案系統建立 FSX
+      url: "/create-file-system.html"
+  - title: 使用Amazon FSX for NetApp ONTAP 解決方案
+    entries:
+    - title: 探索節約效益
+      url: "/explore-savings.html"
+    - title: 使用連結
+      entries:
+      - title: 連結總覽
+        url: "/links-overview.html"
+      - title: 建立連結
+        url: "/create-link.html"
+      - title: 管理連結
+        url: "/manage-links.html"
+    - title: 管理磁碟區
+      entries:
+      - title: 建立Volume
+        url: "/create-volume.html"
+      - title: 存取您的資料
+        url: access-data.html
+    - title: 建立儲存VM
+      url: "/create-storage-vm.html"
+    - title: 保護您的資料
+      entries:
+      - title: 資料保護總覽
+        url: "/data-protection-overview.html"
+      - title: 管理快照
+        entries:
+        - title: 建立快照
+          url: "/create-snapshot.html"
+        - title: 建立快照原則
+          url: "/create-snapshot-policy.html"
+        - title: 從快照還原磁碟區
+          url: "/restore-volume-from-snapshot.html"
+        - title: 從快照建立新的磁碟區
+          url: "/create-volume-from-snapshot.html"
+      - title: 管理備份至物件儲存設備
+        entries:
+        - title: 建立手動備份
+          url: "/create-backup.html"
+        - title: 從備份還原磁碟區
+          url: "/restore-from-backup.html"
+      - title: 管理複寫
+        entries:
+        - title: 建立複寫關係
+          url: "/create-replication.html"
+        - title: 初始化複寫關係
+          url: "/initialize-replication.html"
+      - title: 複製磁碟區
+        url: clone-volume.html
+  - title: 管理與監控
+    entries:
+    - title: Volume管理
+      entries:
+      - title: 編輯 Volume 自動擴充
+        url: "/edit-volume-autogrow.html"
+      - title: 增加 Volume 容量
+        url: "/increase-volume-capacity.html"
+      - title: 編輯 Volume 標記
+        url: "/edit-volume-tags.html"
+      - title: 重新平衡磁碟區的容量
+        url: "/rebalance-volume.html"
+      - title: 變更分層原則
+        url: "/change-tiering-policy.html"
+      - title: 變更 NFS 匯出原則
+        url: "/change-nfs-export-policy.html"
+      - title: 變更 CIFS 共用
+        url: "/change-cifs-share.html"
+      - title: 分割複製的 Volume
+        url: split-cloned-volume.html
+      - title: 刪除 Volume
+        url: "/delete-volume.html"
+    - title: 檔案系統管理
+      entries:
+      - title: 增加檔案系統容量
+        url: "/increase-file-system-capacity.html"
+      - title: 啟用自動容量管理
+        url: "/enable-auto-capacity-management.html"
+      - title: 重設 fsxadmin 密碼
+        url: "/reset-fsxadmin-password.html"
+      - title: 刪除檔案系統
+        url: "/delete-file-system.html"
+    - title: 儲存VM管理
+      entries:
+      - title: 將儲存 VM 複寫到另一個檔案系統
+        url: "/replicate-svm-to-file-system.html"
+      - title: 設定及更新儲存 VM 的 Active Directory
+        url: "/configure-active-directory.html"
+      - title: 編輯儲存 VM 標籤
+        url: "/edit-svm-tags.html"
+      - title: 重設儲存 VM 密碼
+        url: reset-svm-password.html
+      - title: 刪除儲存VM
+        url: "/delete-svm.html"
+    - title: 資料保護管理
+      entries:
+      - title: 變更磁碟區的快照原則
+        url: change-snapshot-policy.html
+      - title: 更新 ONTAP 備份排程的 FSX
+        url: "/update-backup-schedule.html"
+      - title: 啟用及編輯快照以進行長期保留
+        url: "/enable-snapshots-long-term.html"
+      - title: 反轉複寫關係
+        url: "/reverse-replication.html"
+      - title: 變更來源 Volume 的複寫排程
+        url: "/change-replication-schedule.html"
+      - title: 限制複寫關係的最大傳輸率
+        url: "/limit-transfer-rate.html"
+      - title: 在複寫關係中手動更新快照資料
+        url: "/update-snapshot-replication.html"
+      - title: 停止複寫關係
+        url: "/stop-replication.html"
+      - title: 刪除複寫關係
+        url: "/delete-replication.html"
+    - title: 效能管理
+      entries:
+      - title: 為檔案系統配置 IOPS
+        url: "/provision-iops.html"
+      - title: 更新檔案系統的處理量容量
+        url: "/update-throughput-capacity.html"
+  - title: 參考資料
+    entries:
+    - title: 適用於 ONTAP 的 FSX 效能
+      url: "/performance-reference.html"
+    - title: 適用於 ONTAP 的 FSX 安全性
+      url: "/security-reference.html"
+  - title: 知識與支援
+    entries:
+    - title: 註冊以取得支援
+      url: "/support-registration.html"
+    - title: 取得協助
+      url: "/get-help.html"
+    - title: 疑難排解
+      url: "/troubleshooting.html"
+  - title: 法律聲明
+    url: "/legal-notices.html"
+product-family:
+  name: BlueXP Workload Factory for AWS
+  repo: workload-family

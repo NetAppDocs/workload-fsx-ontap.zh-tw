@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: provision-iops.html 
+keywords: iops, SSD, provision, allocate 
+summary: 自動為 ONTAP 檔案系統的 FSX 配置或手動配置 SSD IOPS 。 
+---
+= 為 ONTAP 檔案系統配置 FSX 的 SSD IOPS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+自動為 ONTAP 檔案系統的 FSX 配置或手動配置 SSD IOPS 。
+
+.關於這項工作
+您可以為 FSX 檔案系統啟用自動 SSD IOPS 資源配置、或手動配置 IOPS 。
+
+自動佈建的 IOPS 是以每 GiB 3 IOPS 計算。
+
+如果您手動配置 IOPS 、可能需要先增加 IOPS 、才能進行 link:increase-file-system-capacity.html["增加檔案系統容量"]。
+
+如需 IOPS 限制、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配額"^] AWS FSX for NetApp ONTAP 文件中的。
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在儲存設備中、按一下 * 移至儲存設備詳細目錄 * 。
+. 在 * 適用於 ONTAP * 的 FSX 標籤中、按一下檔案系統的三點功能表來配置 IOPS 、然後選取 * 管理 * 。
+. 在 [ 資訊 ] 下，按一下 [*IOPS 分配 ] 旁邊的鉛筆圖示。當滑鼠移動到 *IOPS allocation （ IOPS 分配）列上時、下拉式箭頭旁會出現鉛筆圖示。
+. 在 [ 已配置的 IOPS ] 對話方塊中，選取 * 自動 * 或 * 使用者已配置 * 。
+. 如果您選取 * 使用者佈建 * 、請輸入 * IOPS 值 * 。
+. 按一下「 * 套用 * 」。
+

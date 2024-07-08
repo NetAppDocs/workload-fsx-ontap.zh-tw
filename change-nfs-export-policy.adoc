@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: change-nfs-export-policy.html 
+keywords: NFS, nfs, export policy, change export policy, update export policy, modify export policy 
+summary: 變更使用 NFSv3 或 NFSv4.1 傳輸協定類型之 Volume 的 NFS 匯出原則。 
+---
+= 變更磁碟區的 NFS 匯出原則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+變更使用 NFSv3 或 NFSv4.1 傳輸協定類型之 Volume 的 NFS 匯出原則。
+
+.關於這項工作
+變更 Volume 的匯出原則涉及新增匯出原則規則、其中詳細說明用戶端規格、存取控制、超級使用者存取和 NFS 版本。您可以新增多個匯出原則、並將其排定優先順序。
+
+.開始之前
+判斷匯出原則規則的用戶端規格。用戶端規格的有效值如下：
+
+* IP位址
+* 具有子網路遮罩的 IP 位址
+* 具有網路遮罩的 IP 位址
+* 網路群組名稱前有「 @ 」字元
+* 網域名稱前面加上句點「。」
+* 主機名稱
+
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 *FSX for ONTAP * 標籤中、選取要更新磁碟區之檔案系統的三點功能表、然後選取 * 管理 * 。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 在 Volumes （磁碟區）標籤中、按一下 Volume 的 thThree thots （三點）功能表、以變更 NFS 匯出原則。
+. 選擇 * 進階動作 * 、然後 * 編輯 NFS 匯出原則 * 。
+. 在「編輯 NFS 匯出原則」頁面上、提供下列項目：
++
+.. * 存取控制 * ：選取 * 自訂匯出原則 * 或 * 現有匯出原則 * 。
++
+或者、您也可以選擇 * 無法存取 Volume * 。
+
+.. * 匯出原則名稱 * ：選擇性地輸入匯出原則的名稱。
+.. * 新增匯出原則規則 * ：提供下列詳細資料、並將原則從 #1 開始排序為優先順序規則：
++
+... * 用戶端規格 * ：以逗號分隔多個值。
+... * 存取控制 * ：從下拉式功能表中選取 * 讀取 / 寫入 * 、 * 唯讀 * 或 * 無存取 * 。
+... * 超級使用者存取 * ：選擇 * 是 * 或 * 否 * 。
+... * NFS 版本 * ：選擇 * 全部 * 、 * NFSv3* 或 * NFSv4* 。
+
+
+
+
+. 按一下「 * 套用 * 」。
+

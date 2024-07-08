@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: delete-volume.html 
+keywords: delete volume, volume deletion 
+summary: 您可以隨時刪除適用於 ONTAP 檔案系統的 FSX 中的磁碟區。此操作無法還原。 
+---
+= 刪除 Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以隨時刪除適用於 ONTAP 檔案系統的 FSX 中的磁碟區。此操作無法還原。
+
+.開始之前
+刪除磁碟區之前、請先考慮下列事項：
+
+* 本機快照：將永久刪除與此 FSX for ONTAP 檔案系統相關的所有快照。
+* 適用於 ONTAP 備份的 FSX ：適用於 ONTAP 備份複本的 FSX 將會保留、您仍然可以使用這些備份複本。
+* 複寫關係：我們建議您 link:delete-replication.html["刪除任何現有的複寫關係"] 在刪除磁碟區之前、先建立此磁碟區的關係、以免關係中斷。
+
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要刪除的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 從 Volumes （磁碟區）索引標籤中、選取要刪除的磁碟區的三點功能表。
+. 選擇 * 基本動作 * 、然後 * 刪除 Volume * 。
+. 在刪除磁碟區對話方塊中、輸入「 delete 」以刪除磁碟區。
+. 按一下*刪除*。
+

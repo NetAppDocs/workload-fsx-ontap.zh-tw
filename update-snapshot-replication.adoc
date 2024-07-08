@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: update-snapshot-replication.html 
+keywords: update snapshot data, replication 
+summary: 在複寫關係中、隨時手動更新在來源磁碟區和目標磁碟區之間傳輸的快照資料。 
+---
+= 在複寫關係中更新快照資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+複寫關係具有設定的複寫排程、但您可以視需要手動更新來源磁碟區和目標磁碟區之間傳輸的快照資料。
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 * 適用於 ONTAP * 的 FSX 標籤中、按一下要更新檔案系統的三點功能表、然後選取 * 管理 * 。
+. 從檔案系統總覽中、選取 * 複寫關係 * 索引標籤。
+. 在「複寫關係」索引標籤中、按一下要更新的複寫關係的三點功能表。
+. 選擇 * 立即更新 * 。
+. 在「更新」對話方塊中、按一下 * 立即更新 * 。
+

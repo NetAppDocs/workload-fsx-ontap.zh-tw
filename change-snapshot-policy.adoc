@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: change-snapshot-policy.html 
+keywords: snapshot policy, snapshot schedule, modify snapshot policy, edit snapshot policy, change snapshot policy 
+summary: 隨時更新磁碟區的快照原則。 
+---
+= 變更磁碟區的快照原則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+隨時更新磁碟區的快照原則。
+
+.關於這項工作
+此作業會更新磁碟區所拍攝快照的頻率、或停用自動快照。
+
+.開始之前
+需要連結才能顯示現有的快照原則。若要建立連結的關聯、請按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。然後返回此作業。
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 選擇 * Volumes （卷） * 選項卡。
+. 在 * Volumes （卷） * 選項卡中，選擇要更改其快照策略的卷的三點菜單。
+. 選擇 * 資料保護動作 * 、 * 快照 * 、然後 * 管理快照原則 * 。
+. 在「 Snapshot 原則管理」頁面上、選取 * 變更現有的快照原則 * 。
+. 在 * Snapshot 原則名稱 * 欄位中、為此磁碟區選取不同的快照原則。
++
+要禁用自動快照，請選擇 `none`。
+
++
+如果不存在其他快照原則 link:create-snapshot-policy.html["為此磁碟區建立新的快照原則"]、。
+
+. 按一下「 * 套用 * 」。
+

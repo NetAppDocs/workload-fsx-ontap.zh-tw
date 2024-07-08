@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: clone-volume.html 
+keywords: clone volume 
+summary: 複製磁碟區、以建立原始磁碟區的讀寫磁碟區以進行測試。 
+---
+= 複製磁碟區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+複製磁碟區、以建立原始磁碟區的讀寫磁碟區以進行測試。
+
+複本會反映資料目前的時間點狀態。您也可以使用複本、讓更多使用者存取資料、而不需讓他們存取正式作業資料。
+
+.關於這項工作
+只有 FlexClone Volume 支援 Volume 複製。
+
+複製磁碟區時、會建立可寫入的磁碟區、其中包含來自父磁碟區的快照參照。在幾秒內建立複本。複製的資料不會位於磁碟區複本上、而是位於父磁碟區上。在建立複本後寫入磁碟區的任何新資料都位於複本上。
+
+若要讓複製的 Volume 包含來自父磁碟區的所有資料、以及建立後新增至複本的任何新資料、您需要 link:split-cloned-volume.html["分割複本"] 從父磁碟區執行。此外、如果父磁碟區有複本、則無法刪除該父磁碟區。刪除父磁碟區之前、必須先分割複本。
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 選擇 * Volumes （卷） * 選項卡。
+. 在 Volumes （磁碟區）標籤中、選取要複製之磁碟區的 thThree thots （三點）功能表。
+. 選取 * 資料保護動作 * 、然後選取 * 完整複製 Volume * 。
+. 在 Clone Volume （複製 Volume ）對話方塊中、輸入 Volume Clone 的名稱。
+. 按一下* Clone（複製）*。
+

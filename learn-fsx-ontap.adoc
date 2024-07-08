@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: learn-fsx-ontap.html 
+keywords: Amazon FSx for NetApp ONTAP, FSx, storage, aws 
+summary: Amazon FSX for NetApp ONTAP 是一項完全託管的服務、可讓客戶在工作負載工廠內啟動及執行檔案系統作為工作負載的儲存後端。 
+---
+= 瞭解適用於 NetApp ONTAP 的 Amazon FSX 工作負載工廠
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Amazon FSX for NetApp ONTAP 是完全託管的雲端型資料儲存服務、可提供進階資料管理功能和高度擴充的效能。適用於 ONTAP 的 FSX 可讓您建立及管理檔案系統、做為 BlueXP Workload Factory 中所有工作負載的儲存後端。
+
+FSX for ONTAP VMware提供NetApp客戶目前內部部署所使用的相同功能、效能和管理功能、以及原生AWS服務的簡易性、敏捷度、安全性和擴充性。
+
+ONTAP 的 FSX 是工作負載工廠的 _Storage_ 元件。
+
+
+
+== 功能
+
+適用於 ONTAP 的 FSX 提供下列功能：
+
+* * 完全託管服務 * ：提供與 Workload Factory 主控台整合的全託管服務。
+* * 高可用度 * ：為 ONTAP 檔案系統的每個 FSX 提供高可用度、支援單一和多重可用度區域部署。
+* * 自動快照 * ：利用自動化、有效率的快照來保護資料、快照近乎即時、空間效率極高的時間點檔案系統或磁碟區唯讀複本。
+* * Volume 複寫 * ：透過 Amazon Web Services 的跨區域複寫功能、提供災難恢復功能。
+* * 高效備份 * ：以另一個區域的資料複本、提供更高的保護。如此可在發生緊急情況時提供額外的保護層級。
+* * 快速複製 * ：以快速複製加速應用程式開發。
+* * 多重傳輸協定支援 * ：支援網路檔案系統（ NFS ）、伺服器訊息區塊（ SMB ）和網際網路小型電腦系統介面（ iSCSI ）通訊協定。
+* * 高處理量 * ：提供高處理量效能、以確保在 ONTAP 檔案系統的 FSX 上執行的工作負載、能維持低延遲。
+* * 記憶體內快取和 NVMe 快取 * ：整合獨特的記憶體內快取和 NVMe 快取、進一步提升常用資料的效能。
+* * 數十萬 IOPS * ： SSD 磁碟可提供數十萬個 IOPS 、確保您的儲存設備和工作負載能及時獲得成果。
+* * 精簡配置 * ：可預先配置容量、節省成本、直到需要更多容量為止。
+* * 重複資料刪除與壓縮 * ：消除重複的資料區塊、壓縮資料區塊、以減少 ONTAP 檔案系統的 FSX 所需的實體儲存容量、進而節省成本。
+* * 資料分層 * ：將較不常存取的資料從主要高效能 SSD 儲存層移至次要容量集區儲存層、藉此降低儲存成本。
+
+
+
+
+== Workload Factory 的其他功能
+
+* * 儲存成本比較計算機 * ：將 Amazon Elastic Block Store （ EBS ）、 Elastic File System （ EFS ）和適用於 Windows 檔案伺服器的 FSX 儲存成本與適用於 ONTAP 的 FSX 進行比較。從計算機中、您可以檢視適用於 ONTAP 儲存組態的 FSX 如何節省成本、並規劃移轉至適用於 ONTAP 儲存設備的 FSX 。
+* * 工作負載工廠使用者介面 * ：提供 _ 快速建立 _ 和 _ 進階建立 _ 部署模式選項。快速建立包括 AWS 、 NetApp 、以及適用於您儲存組態的業界標準最佳實務做法。
+* * 代碼箱 * ：為開發人員提供適用於 ONTAP 作業的 FSX 程式碼檢視器、用於複製和下載的程式碼範本、以及用於重新使用程式碼的自動化目錄。
+
+
+
+
+== 成本
+
+您的 FSX for ONTAP 帳戶由 AWS 維護、而非由 Workload Factory 維護。請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Amazon FSX for NetApp ONTAP 的定價"^]。
+
+
+
+== 支援的地區
+
+https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["檢視支援的Amazon地區。"^]
+
+
+
+== 取得協助
+
+Amazon FSX for NetApp ONTAP 的功能是AWS的第一方解決方案。如需與適用於 ONTAP 檔案系統、基礎架構或任何使用此服務的解決方案的 FSX 相關的問題或技術支援問題、請使用 AWS 管理主控台的支援中心、開啟 AWS 的支援案例。選取「FSXfor ONTAP Sf1」服務和適當的類別。提供建立AWS支援案例所需的其餘資訊。
+
+如需有關 Workload Factory 或 Workload Factory 應用程式與服務的一般問題、請 link:get-help.html["取得適用於 ONTAP for Workload Factory 的 FSX 說明"]參閱。

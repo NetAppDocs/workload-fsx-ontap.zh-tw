@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: security-reference.html 
+keywords: security, data protection, IAM, file system access control, vpc 
+summary:  
+---
+= 適用於 ONTAP 的 FSX 安全性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Amazon FSX for NetApp ONTAP 文件提供下列安全性主題供您參考。
+
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/data-protection.html["Amazon FSX for NetApp ONTAP 中的資料保護"^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/security-iam.html["適用於 Amazon FSX for NetApp ONTAP 的身分識別與存取管理"^]
+* link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limit-access-security-groups.html["Amazon VPC 的檔案系統存取控制"^] Amazon FSX for NetApp ONTAP 文件
+

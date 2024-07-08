@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: view-volume-details.html 
+keywords: volume details, volume information 
+summary: 檢視 Volume 詳細資料、配送、使用、存取和保護。 
+---
+= 檢視Volume詳細資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+檢視 Volume 詳細資料、配送、使用、存取和保護。
+
+只有在檔案系統中建立磁碟區之後、才會顯示磁碟區詳細資料。
+
+.步驟
+. 登入 Workload Factory 主控台。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 Volumes （磁碟區）標籤中、針對您要修改的磁碟區、選取三點選單。
+. 選擇 * 基本動作 * 、然後 * 檢視 Volume 詳細資料 * 。
+. 在 * Volume details* 中、選取標籤以檢視下列 Volume 詳細資料：
++
+.. * 一般詳細資料 * ：包括磁碟區名稱、磁碟區 UUID 、磁碟區 ID 、建立時間、狀態、 Volume 類型（讀寫 / 資料保護（ RW/DP ）或唯讀）、 Snapshot 原則名稱、託管儲存 VM （ SVM ）和標籤。
+.. * 發佈 * ：包括託管集合體、 Volume 樣式（ FlexGroup 或 FlexVol ）、組成（僅限 FlexGroup ）和重新平衡比率（僅限 FlexGroup - 高、中或低）。
+.. * 使用量 * ：包括大小、使用的 SSD 、使用的容量集區、自動擴充設定、最大成長規模、 儲存效率設定、節省的壓縮空間、節省的重複資料刪除空間、分層原則和冷卻日。
+.. * 存取 * ：包括匯接路徑、安全樣式、匯出原則和 NFS 版本（適用於 NFS ）、 Active Directory 、 CIFS 共用名稱、使用者或群組、以及 SMB/CIFS 的權限、以及 iSCSI 的啟動器群組和主機 IQN 。
+.. * 保護 * ：包括本機快照、快照原則名稱、遠端複寫、以及用於 ONTAP 備份的 FSX 。
+
+
+
