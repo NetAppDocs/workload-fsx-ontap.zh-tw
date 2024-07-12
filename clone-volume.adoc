@@ -23,7 +23,7 @@ summary: 複製磁碟區、以建立原始磁碟區的讀寫磁碟區以進行�
 若要讓複製的 Volume 包含來自父磁碟區的所有資料、以及建立後新增至複本的任何新資料、您需要 link:split-cloned-volume.html["分割複本"] 從父磁碟區執行。此外、如果父磁碟區有複本、則無法刪除該父磁碟區。刪除父磁碟區之前、必須先分割複本。
 
 .步驟
-. 登入 Workload Factory 主控台。
+. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
 . 選擇 * Volumes （卷） * 選項卡。
 . 在 Volumes （磁碟區）標籤中、選取要複製之磁碟區的 thThree thots （三點）功能表。

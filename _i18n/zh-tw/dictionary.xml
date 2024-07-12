@@ -22,7 +22,6 @@
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">開始之前</block>
   <block id="30780a2d5d1315bb3798040fb45df6f0" category="paragraph">決定要授予存取權限的使用者或群組、以及授予存取權限的類型。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步驟</block>
-  <block id="80cda6d0b485a6d7ad08bec0e4e1e512" category="list-text">登入 Workload Factory 主控台。</block>
   <block id="7f855d340cfe6607ed51975896dd19da" category="list-text">在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。</block>
   <block id="80ad238f0c32ccf7b3f91d0b7b0ea76b" category="list-text">在 *FSX for ONTAP * 標籤中、選取要更新磁碟區之檔案系統的三點功能表、然後選取 * 管理 * 。</block>
   <block id="f76864e1c2588ae3d6373b6ab95e2209" category="list-text">從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。</block>
@@ -640,7 +639,6 @@
   <block id="e916aa8237833ef72c75def81e289920" category="paragraph">或者、您也可以 <block ref="2bbbc5acd5fd256837600f63916b0e57" category="inline-link-macro-rx"></block> 讓 Workload Factory 為您管理檔案系統容量。</block>
   <block id="bdccdc17ac819f178e84be61503a0de2" category="paragraph">增加檔案系統容量會影響適用於 ONTAP 檔案系統的 FSX 的 IOPS 。</block>
   <block id="11df76043d9d8bb3a76f1f7e71096a92" category="inline-link-macro">配置 IOPS</block>
-  <block id="b677ee098503d5853f180332f5658aa6" category="paragraph">當您自動 <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> 使用檔案系統時、每增加 1 GiB 的 SSD 容量、 IOPS 就會增加 3 IOPS 。例如、如果您配置 100 TiB （ 102400 GiB ）的 SSD 容量、 IOPS 將增加 300 TiB （ 307,200 GiB ）。</block>
   <block id="e7317a971e575aecebe43b18f10a7503" category="paragraph">手動時 <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> 、您可能需要增加 IOPS 配置、以支援增加的檔案系統容量。</block>
   <block id="ffc888e5ff626bf410d67b62a9e8a9a8" category="paragraph">如需 SSD 儲存容量限制、請參閱 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> AWS FSX for NetApp ONTAP 文件。</block>
   <block id="3fa4dafc00a14f08641efa3389891289" category="inline-link-macro">停用自動容量管理</block>
@@ -1090,4 +1088,6 @@
   <block id="ef045d17e80274aec5be009d1f13f5a2" category="sidebar">為檔案系統配置 IOPS</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">參考資料</block>
   <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">疑難排解</block>
+  <block id="1feb39b44e4fcef3d4be063a2f0c0c2c" category="list-text">登入 <block ref="372504cb6bb48559009ff8f8cdb9a245" category="inline-link-macro-rx"></block></block>
+  <block id="b39f472a8f42e6a145c20b290f2c0f7b" category="paragraph">當您自動 <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> 使用檔案系統時、每增加 1 GiB 的 SSD 容量、 IOPS 就會增加 3 IOPS 。</block>
 </blocks>

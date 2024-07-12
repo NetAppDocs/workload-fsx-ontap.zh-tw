@@ -50,7 +50,7 @@ image:screenshot-ebs-calculator.png["儲存計算機頁面、其中比較了 ONT
 .Amazon彈性區塊儲存區（EBS）
 --
 .步驟
-. 登入 Workload Factory 主控台。
+. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
 . 在 Storage 中、選擇 * Explore 節約 * 、然後選擇 * Amazon Elastic Block Store （ EBS ） * 。
 . 在儲存節約計算機中、提供下列詳細資料：
 +
@@ -71,7 +71,7 @@ image:screenshot-ebs-calculator.png["儲存計算機頁面、其中比較了 ONT
 .Amazon FSX for Windows File Server
 --
 .步驟
-. 登入 Workload Factory 主控台。
+. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
 . 在 Storage 中、選擇 * Explore 節約 * 、然後選擇 * Amazon FSX for Windows File Server* 。
 . 在儲存節約計算機中、提供下列詳細資料：
 +
@@ -93,7 +93,7 @@ image:screenshot-ebs-calculator.png["儲存計算機頁面、其中比較了 ONT
 .Amazon Elastic File System （ EFS ）
 --
 .步驟
-. 登入 Workload Factory 主控台。
+. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
 . 在「儲存空間」中、選擇 * 「探索節約 * 」、然後選擇 * 「 Amazon Elastic File System （ EFS ） * 」。
 . 在儲存節約計算機中、提供下列詳細資料：
 +

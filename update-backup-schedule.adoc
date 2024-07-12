@@ -14,7 +14,7 @@ summary: 視需要更新適用於 ONTAP 備份排程的 FSX 。
 視需要更新適用於 ONTAP 備份排程的 FSX 。
 
 .步驟
-. 登入 Workload Factory 主控台。
+. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
 . 在儲存設備中、按一下 * 移至儲存設備詳細目錄 * 。
 . 在 * 適用於 ONTAP * 的 FSX 標籤中、按一下檔案系統的三點功能表以更新的備份排程、然後選取 * 管理 * 。
 . 在 [ 資訊 ] 下，按一下 *FSX for ONTAP backup* 旁邊的鉛筆圖示。當滑鼠移動到 *FSX for ONTAP backup* 列上時、下拉式箭頭旁會出現鉛筆圖示。

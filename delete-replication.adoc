@@ -16,7 +16,7 @@ summary: 視需要刪除複寫關係。
 當您刪除複寫關係時、適用於 ONTAP 的 FSX 也會刪除來源和目標 Volume 的一般複寫快照。
 
 .步驟
-. 登入 Workload Factory 主控台。
+. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
 . 在 * 適用於 ONTAP * 的 FSX 標籤中、按一下要更新檔案系統的三點功能表、然後選取 * 管理 * 。
 . 從檔案系統總覽中、選取 * 複寫關係 * 索引標籤。

@@ -34,7 +34,7 @@ summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免�
 .複寫單一磁碟區
 --
 .步驟
-. 登入 Workload Factory 主控台。
+. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
 . 在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要複製的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。
 . 從 Volumes （磁碟區）標籤中、選取要複寫的磁碟區的 thThree thots （三點）功能表。
@@ -80,7 +80,7 @@ _Auto_ 是使用 ONTAP 使用者介面的 Workload Factory FSX 建立 Volume 時
 .複寫檔案系統中的所有磁碟區
 --
 .步驟
-. 登入 Workload Factory 主控台。
+. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
 . 在 FSX for （適用於 ONTAP 的 FSX ）標籤中、按一下含有磁碟區的檔案系統的三點功能表、然後選取 * 管理 * 。
 . 從檔案系統總覽中、選取 * 建立複寫 * 。

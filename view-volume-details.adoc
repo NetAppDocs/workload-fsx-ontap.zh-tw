@@ -16,7 +16,7 @@ summary: 檢視 Volume 詳細資料、配送、使用、存取和保護。
 只有在檔案系統中建立磁碟區之後、才會顯示磁碟區詳細資料。
 
 .步驟
-. 登入 Workload Factory 主控台。
+. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
 . 在 Volumes （磁碟區）標籤中、針對您要修改的磁碟區、選取三點選單。
 . 選擇 * 基本動作 * 、然後 * 檢視 Volume 詳細資料 * 。
