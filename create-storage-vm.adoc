@@ -21,6 +21,15 @@ summary: 您可以建立適用於 ONTAP 儲存 VM （ SVM ）的 FSX 、以便�
 .開始之前
 確認每個檔案系統支援的儲存 VM 數量。如需每個檔案系統的 SVM 最大數量、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["管理 ONTAP 儲存虛擬機器的 FSX"^] AWS 文件中的。
 
+
+
+== 建立儲存VM
+
+您可以從 Workload Factory 主控台建立儲存 VM 。您也可以使用 Codebox 中的下列工具： REST API 、 CloudForformation 和 Terraform 。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["瞭解如何使用 Codebox 進行自動化"^]。
+
+
+NOTE: 從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏 `fsxadmin` 和 `vsadmin` 密碼。執行程式碼時、您需要重新輸入密碼。
+
 .步驟
 . 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。

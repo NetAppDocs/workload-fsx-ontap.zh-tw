@@ -15,6 +15,27 @@ summary: 瞭解 Amazon FSX for NetApp ONTAP 的新功能。
 
 
 
+== 8 月 4 日
+
+
+
+=== Terraform 支援
+
+您現在可以使用 Codebox 中的 Terraform 來部署和管理檔案系統和儲存 VM 。
+
+* link:create-file-system.html["建立檔案系統"]
+* link:create-storage-vm.html["建立儲存VM"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["使用 CodeBox 的 Terraform"^]
+
+
+
+
+=== 儲存計算機中的處理量和 IOPS 建議
+
+儲存計算機會根據 AWS 最佳實務做法、針對處理量和 IOPS 、為 ONTAP 檔案系統設定 FSX 提供建議、為您的選擇提供最佳指引。
+
+
+
 == 7 月 7 日
 
 Amazon FSX for NetApp ONTAP 目前已正式推出 BlueXP 工作負載工廠。

@@ -49,6 +49,18 @@ ONTAP 的 FSX 是工作負載工廠的 _Storage_ 元件。
 
 
 
+== 使用 Workload Factory 的工具
+
+您可以搭配下列工具使用 BlueXP Workload Factory ：
+
+* * 工作負載工廠主控台 * ：工作負載工廠主控台提供視覺化介面、可讓您全面檢視應用程式和專案
+* * REST API* ：工作負載原廠 REST API 可讓您部署及管理適用於 ONTAP 檔案系統和其他 AWS 資源的 FSX
+* * CloudForgi38* ： AWS CloudForgation 程式碼可讓您執行在 Workload Factory 主控台中定義的動作、以建構、配置及管理 AWS 帳戶中 CloudForgation 堆疊中的 AWS 和第三方資源。
+* * Terraform BlueXP 工作負載工廠供應商 * ： Terraform 可讓您建置及管理在 Workload Factory 主控台中產生的基礎架構工作流程。
+
+
+
+
 == 成本
 
 您的 FSX for ONTAP 帳戶由 AWS 維護、而非由 Workload Factory 維護。請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Amazon FSX for NetApp ONTAP 的定價"^]。

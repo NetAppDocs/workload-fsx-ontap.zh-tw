@@ -31,7 +31,7 @@ image:screenshot-links-button.png["顯示如何開啟連結頁面的螢幕擷取
 . 如果有任何連結、概觀頁面會提供相關資訊。
 . 若要檢視與連結相關聯的 ONTAP 檔案系統的 FSX 、請選取相關資源區段中的 * 檢視 * 按鈕。
 +
-image:screenshot-view-link-details.png["顯示使用特定連結之 ONTAP 檔案系統的 FSX 的畫面。"]
+image:screenshot-view-link-details.png["顯示使用特定連結之 ONTAP 檔案系統的 FSX 的螢幕擷取畫面。"]
 
 . 如果您需要連結的 Amazon 資源名稱（ ARN ）、您可以選取 ARN 欄位旁的 _COPY_ 圖示。
 

@@ -151,7 +151,6 @@
   <block id="bf2ef084e923ce6ebc4b57db27892de8" category="inline-link-macro">瞭解如何授予 AWS 帳戶權限</block>
   <block id="3dea7c5f73758b891c81f43eb58f840c" category="list-text">IAM 角色的 ARN 、賦予工作負載工廠為 ONTAP 檔案系統建立 FSX 所需的權限。<block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block>。</block>
   <block id="aba4a700f63e9801b4211989fc2b559f" category="list-text">您將在其中建立FSX以利ONTAP 執行個體的區域和VPC資訊。</block>
-  <block id="2b0fb6a4abeeba5cfeb6d787e562ecf6" category="paragraph">您可以使用 _Quick creity_ 或 _Advanced creity_ 、為 ONTAP 檔案系統建立 FSX 。</block>
   <block id="956eaa6186169471a13345860cad0757" category="open-title">快速建立</block>
   <block id="8fae2064aa1f6e3d97040aa274445281" category="paragraph">快速建立可讓您使用建議的最佳實務組態。您可以在為 ONTAP 檔案系統建立 FSX 之後、變更大部分的設定。</block>
   <block id="b168baf285ba580ab175e14956248425" category="list-text">在儲存設備中、選取 * 為 ONTAP * 建立 FSX 。</block>
@@ -185,7 +184,6 @@
   <block id="aaeafa132246393a2d26d406e5a7a87b" category="paragraph">如果您建立檔案系統、現在可以在 * 庫存 * 頁面中檢視 ONTAP 檔案系統的 FSX 。</block>
   <block id="28cdc97b1969c0c544a77fde4457a7e5" category="open-title">進階建立</block>
   <block id="6805fd9faa6a9d49c19e9f0869323fd8" category="paragraph">使用 Advanced create 、您可以設定所有組態選項、包括可用度、安全性、備份和維護。</block>
-  <block id="fb0ebb9bace9dbf879ba2d83c580b1ab" category="list-text">前往 Workload Factory 主控台。</block>
   <block id="05d67c5923f1020ef47b7e3fb35cba6e" category="list-text">在 Create FSX for （為 ONTAP 建立 FSX ）頁面上、選取 * Advanced create* （進階建立 * ）。</block>
   <block id="16babb73337008dc5c8f7dfa9f1a09b2" category="list-text">在「網路與安全性」下、提供下列項目：</block>
   <block id="38ee1102173e9d9f4d6871edf96fc7fb" category="list-text">* 區域與 VPC* ：選取檔案系統的區域與 VPC 。</block>
@@ -387,7 +385,6 @@
   <block id="bbcc4e18576e310acdd3a82682875a7f" category="list-text">此原則的運作方式與原則相同、<block ref="c21f969b5f03d33d43e04f8f136e7682" prefix=" " category="inline-code"></block> 只是它只會從每週排程中保留一個快照。</block>
   <block id="e3944f065f8a736803ad0b4de4b49f84" category="list-text">此原則不會擷取任何快照。您可以將此原則指派給磁碟區、以防止自動擷取快照。</block>
   <block id="b206a5f8985f80349f02e0144a4a341d" category="list-text">* 分層原則 * ：選取儲存在磁碟區中資料的分層原則。</block>
-  <block id="9d9cbc75dd5189b39aa0b396d3861992" category="paragraph">Auto 是使用 ONTAP 使用者介面的 Workload Factory FSX 建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> AWS FSX for NetApp ONTAP 文件中的。</block>
   <block id="057899be9192508684a0a7c0ddce247b" category="list-text">在進階組態下、提供下列項目：</block>
   <block id="31bc68ca566d500bf92a8cab85ec5ae3" category="list-text">* 交會路徑 * ：在儲存 VM 的命名空間中輸入裝入磁碟區的位置。預設交會路徑為<block ref="efef91582c9b0099c391a47d56e741d2" prefix=" " category="inline-code"></block>。</block>
   <block id="a481fc89f2e7d4e062f18bfa2b0d4c70" category="list-text">* 集合體清單 * ：僅適用於 FlexGroup Volume 。新增或移除集合體。集合體的最小數量為 1 。</block>
@@ -449,7 +446,6 @@
   <block id="524193967bbe3f8da7683435e0a28ea4" category="list-text">在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要刪除的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。</block>
   <block id="b0498e030069e9d348b276238c375c45" category="list-text">從 Volumes （磁碟區）索引標籤中、選取要刪除的磁碟區的三點功能表。</block>
   <block id="c54ab0793e326deff351b944ad70d29c" category="list-text">選擇 * 基本動作 * 、然後 * 刪除 Volume * 。</block>
-  <block id="5d0a77c40657ab0e4ae965d1cce24e97" category="list-text">在刪除磁碟區對話方塊中、輸入「 delete 」以刪除磁碟區。</block>
   <block id="321fbbd6f40d9b084f632750d5190dc8" category="summary">隨時新增、更新或移除儲存 VM 的儲存 VM 標籤。</block>
   <block id="3628bd405a4cbc203f36176e9e1c0969" category="doc">編輯儲存 VM 標籤</block>
   <block id="9b1137e2c037a2cb220c382a83325048" category="paragraph">標記可協助您分類資源。您可以隨時新增、編輯及移除儲存 VM 的標籤。</block>
@@ -512,11 +508,9 @@
   <block id="c8add51a412bd14b1fa8548ea7d4cc9c" category="paragraph">如果您已將 AWS 認證新增至 Workload Factory 帳戶、以啟用 _ 自動化 _ 模式（<block ref="3ac12273abf0be5e05b49ceaac600ad4" category="inline-link-macro-rx"></block>）、則 Workload Factory 可以識別 AWS 帳戶中可用的所有儲存系統、並在儲存設備清查頁面中顯示這些系統上的磁碟區特性。所搜尋的 AWS 帳戶是根據您在 Workload Factory 帳戶中定義的認證而定。</block>
   <block id="0281a53baaa49bd24211566406a670bd" category="paragraph">此圖顯示已在 AWS 帳戶中探索的適用於 Windows 檔案伺服器系統的 FSX 上的磁碟區。</block>
   <block id="5d607e96f80f5e0c54fe4550ff3646df" category="inline-image-macro">顯示適用於 Windows 檔案伺服器的 FSX 上目前磁碟區庫存的儲存設備詳細目錄頁面。</block>
-  <block id="1b6b615e774f37106845ba90d2603b7c" category="paragraph"><block ref="1b6b615e774f37106845ba90d2603b7c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="16203b7e08e16041d0c8fdff61a3a4f3" category="paragraph">如果您尚未新增認證來將 Workload Factory 帳戶與 AWS 帳戶連結（稱為 _basive_ 模式）、您可以手動輸入要部署的儲存系統所需的特性、而儲存計算機則會根據成本來判斷最佳的檔案系統。您可以使用此方法來為 ONTAP 檔案系統範圍內的新 FSX 、同時也使用 _DE自動化 _ 模式。</block>
   <block id="358b1837aae1be80f9df6667968fb7dd" category="paragraph">此圖顯示儲存計算機頁面、並比較適用於 ONTAP 和 EBS 儲存設備的 FSX 。</block>
   <block id="770b3813731da1b92ad91e1b7d040019" category="inline-image-macro">儲存計算機頁面、其中比較了 ONTAP 的 FSX 和彈性區塊存放區儲存設備。</block>
-  <block id="0804cd2e6d379bedf0c48b78b009bac3" category="paragraph"><block ref="0804cd2e6d379bedf0c48b78b009bac3" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ed8b2920ddc5b14cb6c0ba24c4b6c3af" category="inline-link-macro">授予 _ 自動化 _ 權限</block>
   <block id="87d163ac7ed334c52282a95bd5a124d9" category="paragraph">若要讓 Workload Factory 在 AWS 帳戶中偵測適用於 Windows 檔案伺服器儲存環境的 Amazon Elastic Block Store （ EBS ）、 Elastic File System （ EFS ）和 FSX 、請確定您 <block ref="d9270f60c282b5496f17a4b48a6da305" category="inline-link-macro-rx"></block> 在 AWS 帳戶中。</block>
   <block id="cf48d7891f28d92c4308fb5debb574b0" category="section-title">探索節約效益</block>
@@ -670,8 +664,6 @@
   <block id="1eba71d64e6c5e410e558530711e835b" category="summary">已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。請仔細檢閱這些限制。</block>
   <block id="482723983a4f2af954e36ff41e567451" category="doc">已知限制</block>
   <block id="e0b6f78e01f9a479e1f512c03bb3d4fa" category="paragraph">已知的限制可識別此產品版本在 Workload Factory 中不支援的平台、裝置或功能、或是無法與產品正確互通的平台、請仔細檢閱這些限制。</block>
-  <block id="3b39e22b0ceb822bf56d19eb7ec14f7f" category="section-title">作業模式</block>
-  <block id="04ea39659b8293c396417d41c90f0112" category="paragraph">_read_ 模式目前無法使用。</block>
   <block id="97e7c9a7d06eac006a28bf05467fcc8b" category="section-title">連結</block>
   <block id="091b1e7473941991566e0020e4b31a0d" category="paragraph">若要在 Workload Factory 使用者介面中完成複寫等作業、需要連結。</block>
   <block id="fd18465573ec21a6218982055981f6b1" category="section-title">儲存效率</block>
@@ -810,8 +802,6 @@
   <block id="f3636be9e3c5c98f7985af1fe293ad19" category="paragraph"><block ref="f3636be9e3c5c98f7985af1fe293ad19" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f6ece838c4df65278bd8c3281de96ff5" category="list-text">如果有任何連結、概觀頁面會提供相關資訊。</block>
   <block id="c1197fb19ed4c969880f963d9b6df11f" category="list-text">若要檢視與連結相關聯的 ONTAP 檔案系統的 FSX 、請選取相關資源區段中的 * 檢視 * 按鈕。</block>
-  <block id="c3aeb4fd111efbf3853b974f544de317" category="inline-image-macro">顯示使用特定連結之 ONTAP 檔案系統的 FSX 的畫面。</block>
-  <block id="5af12f2c23f0cd4b9ce4c693ea2d920c" category="paragraph"><block ref="5af12f2c23f0cd4b9ce4c693ea2d920c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="65ded7963c0209145c9b1f65dff784c8" category="list-text">如果您需要連結的 Amazon 資源名稱（ ARN ）、您可以選取 ARN 欄位旁的 _COPY_ 圖示。</block>
   <block id="f064e98f22242b4e367a92a4c8074692" category="section-title">將連結與 ONTAP 檔案系統的 FSX 建立關聯</block>
   <block id="a1b577d6c7996f2c9b8010f9149a836f" category="paragraph">建立連結之後、即可將其與適用於 ONTAP 檔案系統的 FSX 建立關聯。每個檔案系統只能與單一 NetApp 帳戶中的一個連結建立關聯、但連結可以與許多檔案系統建立關聯。</block>
@@ -825,7 +815,6 @@
   <block id="03fc743c74b7e7511aa1eeb9bf490f14" category="paragraph">請注意、此連結僅會從 Workload Factory 刪除、不會從 AWS 環境中刪除。移除 Workload Factory 中的連結後、您必須從 AWS 帳戶刪除 Lambda 功能。</block>
   <block id="1b2e63262991497e4aba5a1a22e4e55d" category="list-text">從「連結」頁面中、選取功能表按鈕、然後選取 * 移除 * 。</block>
   <block id="f1ce091ae1a5a535ceceb1b8895c7620" category="inline-image-macro">顯示如何從 Workload Factory 移除連結的螢幕擷取畫面。</block>
-  <block id="6e948316181888568ead053008b0536c" category="paragraph"><block ref="6e948316181888568ead053008b0536c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="39d7d9e85c32f2e7a66207533ef4a3a9" category="list-text">如果您確定、請再次選取 * 移除 * 。</block>
   <block id="0978bfc9ea0b38f88360973d41319547" category="inline-link-macro">刪除 Lambda 函數</block>
   <block id="0cfc72f205d571b960431be39a5d413e" category="paragraph">請參閱 AWS 文件 <block ref="00813965c876b66bf6a0f1cc3b46a3b0" category="inline-link-macro-rx"></block>。</block>
@@ -860,7 +849,6 @@
   <block id="f7598943d19e0d869abf49ffa1bf32a4" category="paragraph">選擇 _basive_ 和 _自動化 _ <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
   <block id="fad2f7a49be756f98f3e7a34ef811e09" category="paragraph">如果您選擇以 _basive_ 模式操作、就不需要再繼續操作。您可以開始使用 ONTAP 適用的 Workload Factory 來複製部分完成的程式碼範例。</block>
   <block id="ce8e7e98b5597e78e8fd7d6bc94729cb" category="inline-link-macro">手動新增認證至帳戶</block>
-  <block id="8d978025b56e8eaec9aef9b2bfa2332d" category="paragraph">如果您以 _ 自動化 _ 模式運作、則需要 <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> 選擇工作負載功能、例如資料庫和 AI 、並建立 IAM 原則、以確保您擁有以 _ 自動化 _ 模式運作的正確權限。</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">三</block>
   <block id="8c163240a45cebe17c44b7359252c96a" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 建立檔案系統</block>
   <block id="8fd935558171bd50056871ef9ee7bd05" category="inline-link-macro">Workload Factory 主控台</block>
@@ -891,8 +879,6 @@
   <block id="ec88e771c940eedbefed6c00bb8e1f84" category="paragraph">視需要重設 fsxadmin 密碼。</block>
   <block id="b5e97b863d5bcb1ef930fb33fb04b071" category="list-text">在 * 適用於 ONTAP * 的 FSX 索引標籤中、按一下檔案系統的三點功能表以重設的 fsxadmin 密碼、然後選取 * 管理 * 。</block>
   <block id="6cd3d3b0b9a988575f764ddd5a8e9bee" category="list-text">從檔案系統總覽中、按一下「三點」功能表。</block>
-  <block id="ecf290d89b3f8701b6b2f051be3341b9" category="inline-image-macro">檔案系統概觀索引標籤中三點功能表的螢幕擷取畫面</block>
-  <block id="3a16c62a2a0a1a7a116661e5e75484cd" category="paragraph"><block ref="3a16c62a2a0a1a7a116661e5e75484cd" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ff40dc19143c531bc7b8a932c148a848" category="list-text">選取 * 重設 fsxadmin 密碼 * 。</block>
   <block id="edacd360980e63a5f2e01df2fa59b050" category="list-text">在「重設 fsxadmin 密碼」對話方塊中、輸入新的 fsxadmin 密碼、然後重新輸入以確認。</block>
   <block id="279e520d9175d8e5591ed2ca3fc5acab" category="summary">必要時重設儲存 VM 密碼。</block>
@@ -1090,4 +1076,38 @@
   <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">疑難排解</block>
   <block id="1feb39b44e4fcef3d4be063a2f0c0c2c" category="list-text">登入 <block ref="372504cb6bb48559009ff8f8cdb9a245" category="inline-link-macro-rx"></block></block>
   <block id="b39f472a8f42e6a145c20b290f2c0f7b" category="paragraph">當您自動 <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> 使用檔案系統時、每增加 1 GiB 的 SSD 容量、 IOPS 就會增加 3 IOPS 。</block>
+  <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">瞭解如何使用 Codebox 進行自動化</block>
+  <block id="672d0efbe9223ef23c5fd7d2c7cd4a95" category="paragraph">您可以使用 _Quick creity_ 或 _Advanced creity_ 、為 ONTAP 檔案系統建立 FSX 。您也可以使用 Codebox 中的下列工具： REST API 、 CloudForformation 和 Terraform 。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>。</block>
+  <block id="11e2fb5025fdb2cb91fd04c343163328" category="admonition">從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 和<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 密碼。執行程式碼時、您需要重新輸入密碼。</block>
+  <block id="176a501864ff4c70a2c1b132289ccad0" category="paragraph">您可以從 Workload Factory 主控台建立儲存 VM 。您也可以使用 Codebox 中的下列工具： REST API 、 CloudForformation 和 Terraform 。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>。</block>
+  <block id="b3028e0c6912bbb0c93b59dff7fa9ba5" category="paragraph">Auto 是使用使用者介面建立磁碟區時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> AWS FSX for NetApp ONTAP 文件中的。</block>
+  <block id="9376aafc358c7dd83094603f26235eb3" category="paragraph">磁碟區建立已啟動。建立後、新的 Volume 就會出現在 Volumes （磁碟區）標籤中。</block>
+  <block id="21e6ab9737790ab1abc18e49091d3c18" category="paragraph">下圖顯示使用快照、跨區域複寫、以及備份至物件儲存設備的 ONTAP 儲存設備之 FSX 資料保護的視覺化呈現。</block>
+  <block id="90388f794d575e628df271470a4b766e" category="inline-image-macro">螢幕擷取畫面顯示使用快照、跨區域複寫、以及備份至物件儲存設備的 ONTAP 儲存設備之 FSX 資料保護。</block>
+  <block id="29bed1477f8a04f4f702564c7e6bb224" category="paragraph"><block ref="29bed1477f8a04f4f702564c7e6bb224" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d9c70344ba40b88fdb8c4d8e5b34884e" category="list-text">在「刪除 Volume 」對話方塊中、輸入「刪除」以刪除磁碟區。</block>
+  <block id="afc55fe26a4a4d38cb013803df05c70e" category="paragraph"><block ref="afc55fe26a4a4d38cb013803df05c70e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c45c1ca6034a192f20806fbb0fc110d9" category="paragraph"><block ref="c45c1ca6034a192f20806fbb0fc110d9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0d9b99cb00c934d1cd88332ae901fc26" category="section-title">使用 Workload Factory 的工具</block>
+  <block id="76737aecf42a629e0422271332fcc5a3" category="paragraph">您可以搭配下列工具使用 BlueXP Workload Factory ：</block>
+  <block id="0fc51b33bbeafc6425a9bd19ec449966" category="list-text">* 工作負載工廠主控台 * ：工作負載工廠主控台提供視覺化介面、可讓您全面檢視應用程式和專案</block>
+  <block id="3c4460cb8836c21a60d304d5640b4ea7" category="list-text">* REST API* ：工作負載原廠 REST API 可讓您部署及管理適用於 ONTAP 檔案系統和其他 AWS 資源的 FSX</block>
+  <block id="fb2bf23fd8d69c944827de16f09d3bb7" category="list-text">* CloudForgi38* ： AWS CloudForgation 程式碼可讓您執行在 Workload Factory 主控台中定義的動作、以建構、配置及管理 AWS 帳戶中 CloudForgation 堆疊中的 AWS 和第三方資源。</block>
+  <block id="887582b3338810bdcfbc9b5a8ff6b6d7" category="list-text">* Terraform BlueXP 工作負載工廠供應商 * ： Terraform 可讓您建置及管理在 Workload Factory 主控台中產生的基礎架構工作流程。</block>
+  <block id="d527a24e3cd3e2df59c9ec57fb8383de" category="inline-image-macro">顯示使用特定連結之 ONTAP 檔案系統的 FSX 的螢幕擷取畫面。</block>
+  <block id="8153258b50418b6ebcd06d64da06a5bc" category="paragraph"><block ref="8153258b50418b6ebcd06d64da06a5bc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8d0a9b10b0feb1fbeb54874e4db30c45" category="paragraph"><block ref="8d0a9b10b0feb1fbeb54874e4db30c45" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6b6bb5bfce611b62621235836da5c8a9" category="paragraph">如果您以 _ 自動化 _ 模式運作、則需要 <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> 選擇工作負載功能、例如資料庫和 AI 、並建立 IAM 原則、以確保您擁有以 _ 自動化 _ 模式運作的正確權限。</block>
+  <block id="e5a41f95a3cb9b200664e28fdab1a637" category="inline-image-macro">檔案系統概觀索引標籤中三點功能表的螢幕擷取畫面。</block>
+  <block id="b32bfe90ed6acc2544026bb974e2ffc9" category="paragraph"><block ref="b32bfe90ed6acc2544026bb974e2ffc9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b9e7249a649dc92913cae3cb18a805ea" category="section-title">8 月 4 日</block>
+  <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Terraform 支援</block>
+  <block id="7f67d234b28766a76903424b29245652" category="paragraph">您現在可以使用 Codebox 中的 Terraform 來部署和管理檔案系統和儲存 VM 。</block>
+  <block id="75086276ae6b7e370f36c7fc49383216" category="inline-link-macro">建立檔案系統</block>
+  <block id="9e0421bb729ebed0fb12b88c1fc5b0e9" category="list-text"><block ref="9e0421bb729ebed0fb12b88c1fc5b0e9" category="inline-link-macro-rx"></block></block>
+  <block id="70fd00aea099407eb4046da5efc04198" category="list-text"><block ref="70fd00aea099407eb4046da5efc04198" category="inline-link-macro-rx"></block></block>
+  <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">使用 CodeBox 的 Terraform</block>
+  <block id="11cb17d1b990bbf37a24337d5692efa1" category="list-text"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
+  <block id="a0d5836b9915a7e404d529a2ee0d2af5" category="section-title">儲存計算機中的處理量和 IOPS 建議</block>
+  <block id="b48a7422f4f1f71c3ef03d7a8291f43f" category="paragraph">儲存計算機會根據 AWS 最佳實務做法、針對處理量和 IOPS 、為 ONTAP 檔案系統設定 FSX 提供建議、為您的選擇提供最佳指引。</block>
 </blocks>

@@ -27,7 +27,10 @@ summary: 使用 Workload Factory 、您可以為 ONTAP 檔案系統建立 FSX �
 
 == 為 ONTAP 檔案系統建立 FSX
 
-您可以使用 _Quick creity_ 或 _Advanced creity_ 、為 ONTAP 檔案系統建立 FSX 。
+您可以使用 _Quick creity_ 或 _Advanced creity_ 、為 ONTAP 檔案系統建立 FSX 。您也可以使用 Codebox 中的下列工具： REST API 、 CloudForformation 和 Terraform 。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["瞭解如何使用 Codebox 進行自動化"^]。
+
+
+NOTE: 從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏 `fsxadmin` 和 `vsadmin` 密碼。執行程式碼時、您需要重新輸入密碼。
 
 [role="tabbed-block"]
 ====
@@ -106,7 +109,7 @@ summary: 使用 Workload Factory 、您可以為 ONTAP 檔案系統建立 FSX �
 使用 Advanced create 、您可以設定所有組態選項、包括可用度、安全性、備份和維護。
 
 .步驟
-. 前往 Workload Factory 主控台。
+. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
 . 在儲存設備中、選取 * 為 ONTAP * 建立 FSX 。
 . 在 Create FSX for （為 ONTAP 建立 FSX ）頁面上、選取 * Advanced create* （進階建立 * ）。
 +

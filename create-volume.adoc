@@ -133,7 +133,7 @@ NOTE: 快照時間以檔案系統的時區為基礎、其預設為協調世界�
 
 .. * 分層原則 * ：選取儲存在磁碟區中資料的分層原則。
 +
-Auto 是使用 ONTAP 使用者介面的 Workload Factory FSX 建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^] AWS FSX for NetApp ONTAP 文件中的。
+Auto 是使用使用者介面建立磁碟區時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^] AWS FSX for NetApp ONTAP 文件中的。
 
 
 
@@ -146,3 +146,6 @@ Auto 是使用 ONTAP 使用者介面的 Workload Factory FSX 建立 Volume 時�
 
 . 按一下「 * 建立 * 」。
 
+
+.結果
+磁碟區建立已啟動。建立後、新的 Volume 就會出現在 Volumes （磁碟區）標籤中。
