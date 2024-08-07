@@ -13,35 +13,23 @@ summary: 探索 Amazon Elastic Block Store （ EBS ）儲存設備、 Elastic Fi
 [role="lead"]
 探索使用 Amazon Elastic Block Store （ EBS ）、 Elastic File System （ EFS ）和適用於 Windows 檔案伺服器的 FSX 與適用於 NetApp ONTAP 的 FSX 之儲存工作負載的節約效益。
 
-.關於這項工作
-Workload Factory 提供儲存計算機、可讓您將 ONTAP 檔案系統的 FSX 儲存成本與彈性區塊存放區（ EBS ）、彈性檔案系統（ EFS ）和適用於 Windows 檔案伺服器儲存設備的 FSX 進行比較。根據您的儲存需求、您可能會發現 ONTAP 檔案系統的 FSX 最符合成本效益。
+Workload Factory 內建儲存節約計算機、可讓您將 Amazon 儲存環境與 ONTAP 的 FSX 進行比較。您可以使用或不提供 AWS 認證來探索節約效益、並自訂儲存環境的組態設定。當您提供 AWS 認證時、您可以選取一或多個 Amazon Elastic Block Store 執行個體、然後讓 Workload Factory 自動進行比較。無論是手動或自動、計算機都會判斷哪種儲存服務能為您的儲存需求提供最低成本。
 
-您可以使用儲存計算機、探索特定儲存系統或特定磁碟區的節約效益。儲存計算機會顯示、如果您使用適用於 ONTAP 檔案系統的 FSX 、這些儲存系統上的工作負載儲存設備是否會降低成本。
-
-如果 Workload Factory 確定您可以在適用於 ONTAP 檔案系統的 FSX 上執行這些工作負載、以節省成本、您可以直接從 Workload Factory 的計算機部署檔案系統。在某些情況下、 Workload Factory 可能會建議您根據目前使用的儲存容量、並根據工作負載的效能特性來部署多個檔案系統。
+如果儲存計算機判斷最具成本效益的儲存設備是適用於 ONTAP 的 FSX 、您可以建立或儲存適用於 ONTAP 組態的 FSX 、並使用 Codebox 產生基礎架構即程式碼範本、無論您授予工作負載工廠的權限為何。
 
 
 
-== 提供您的系統需求
+== 計算機選項
 
-如果您已將 AWS 認證新增至 Workload Factory 帳戶、以啟用 _ 自動化 _ 模式（link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["深入瞭解模式"]）、則 Workload Factory 可以識別 AWS 帳戶中可用的所有儲存系統、並在儲存設備清查頁面中顯示這些系統上的磁碟區特性。所搜尋的 AWS 帳戶是根據您在 Workload Factory 帳戶中定義的認證而定。
+有兩種計算機選項可供您比較系統與適用於 ONTAP 的 FSX 之間的成本、這些選項可為您的 Amazon 儲存環境自訂及自動偵測。
 
-此圖顯示已在 AWS 帳戶中探索的適用於 Windows 檔案伺服器系統的 FSX 上的磁碟區。
+透過自訂功能探索節約效益：您可為儲存環境提供組態設定、包括使用案例、區域、磁碟區或檔案系統數量、儲存容量、快照頻率、每個快照變更的數量、已配置的 IOPS 、處理量等。
 
-image:screenshot-storage-inventory.png["顯示適用於 Windows 檔案伺服器的 FSX 上目前磁碟區庫存的儲存設備詳細目錄頁面。"]
-
-如果您尚未新增認證來將 Workload Factory 帳戶與 AWS 帳戶連結（稱為 _basive_ 模式）、您可以手動輸入要部署的儲存系統所需的特性、而儲存計算機則會根據成本來判斷最佳的檔案系統。您可以使用此方法來為 ONTAP 檔案系統範圍內的新 FSX 、同時也使用 _DE自動化 _ 模式。
-
-此圖顯示儲存計算機頁面、並比較適用於 ONTAP 和 EBS 儲存設備的 FSX 。
-
-image:screenshot-ebs-calculator.png["儲存計算機頁面、其中比較了 ONTAP 的 FSX 和彈性區塊存放區儲存設備。"]
-
-.開始之前
-若要讓 Workload Factory 在 AWS 帳戶中偵測適用於 Windows 檔案伺服器儲存環境的 Amazon Elastic Block Store （ EBS ）、 Elastic File System （ EFS ）和 FSX 、請確定您 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _ 自動化 _ 權限"^] 在 AWS 帳戶中。
+探索偵測到的儲存環境節約效益：工作負載工廠連結至您現有的 AWS 儲存環境、並將詳細資料擷取至計算機以進行自動比較。您必須授予自動化權限、才能使用自動模式。您可以變更使用案例、但計算中會自動決定所有其他詳細資料。
 
 
 
-== 探索節約效益
+== 透過自訂功能探索節約效益
 
 請依照儲存設備選項卡下的步驟操作。
 
@@ -54,15 +42,15 @@ image:screenshot-ebs-calculator.png["儲存計算機頁面、其中比較了 ONT
 . 在 Storage 中、選擇 * Explore 節約 * 、然後選擇 * Amazon Elastic Block Store （ EBS ） * 。
 . 在儲存節約計算機中、提供下列詳細資料：
 +
-.. * 使用案例 * ：從下拉式功能表中選取使用案例。所選的使用案例會決定 ONTAP 檔案系統特性的 FSX 、以供比較。
-.. * 區域 * ：從下拉式功能表中選取 EBS 組態的區域。
-.. * 選取 EBS Volume 類型 * ：選取用於組態的 EBS Volume 類型。
-.. * 磁碟區數量 * ：輸入 EBS 組態中的磁碟區數量。
-.. * 每個磁碟區的儲存容量（ TiB ） * ：在 TiB 中輸入每個磁碟區的儲存容量。
-.. * Snapshot 頻率 * ：選擇 EBS 組態的快照頻率。
-.. * 每個快照變更的數量（ GiB ） * ：僅適用於快照儲存。在 GiB 中輸入每個快照變更的數量。
-.. * 每個磁碟區的已配置 IOPS * ：適用於 GP3 、 IO1 和 IO2 磁碟區。輸入每個磁碟區的已配置 IOPS 。
-.. * 傳輸量（ MIB/s ） * ：僅適用於 GP3 磁碟區。以每個磁碟區的 MIB/s 為單位輸入處理量。
+.. * 使用案例 * ：必要。從下拉式功能表中選取使用案例。所選的使用案例會決定 ONTAP 檔案系統特性的 FSX 、以供比較。
+.. * 地區 * ：選用。從下拉式功能表中選取 EBS 組態的區域。
+.. * 選擇 EBS Volume 類型 * ：選用。選取用於組態的 EBS 磁碟區類型。
+.. * 磁碟區數量 * ：選用。輸入 EBS 組態中的磁碟區數量。
+.. * 每個磁碟區的儲存容量（ TiB ） * ：選用。在 TiB 中輸入每個磁碟區的儲存容量。
+.. * Snapshot 頻率 * ：選用。選擇 EBS 組態的快照頻率。
+.. * 每個快照變更的數量（ GiB ） * ：選用。僅適用於快照儲存。在 GiB 中輸入每個快照變更的數量。
+.. * 每個磁碟區的已配置 IOPS * ：選用。適用於 GP3 、 IO1 和 IO2 磁碟區。輸入每個磁碟區的已配置 IOPS 。
+.. * 處理量（ MIB/s ） * ：選用。僅限 GP3 磁碟區。以每個磁碟區的 MIB/s 為單位輸入處理量。
 
 
 
@@ -75,16 +63,16 @@ image:screenshot-ebs-calculator.png["儲存計算機頁面、其中比較了 ONT
 . 在 Storage 中、選擇 * Explore 節約 * 、然後選擇 * Amazon FSX for Windows File Server* 。
 . 在儲存節約計算機中、提供下列詳細資料：
 +
-.. * 使用案例 * ：從下拉式功能表中選取使用案例。所選的使用案例會決定 ONTAP 檔案系統特性的 FSX 、以供比較。
-.. * 區域 * ：從下拉式功能表中選取適用於 Windows 檔案伺服器組態的 FSX 區域。
-.. * 部署類型 * ：選擇 * 單一可用區域 * 或 * 多重可用區域 * 。
+.. * 使用案例 * ：必要。從下拉式功能表中選取使用案例。所選的使用案例會決定 ONTAP 檔案系統特性的 FSX 、以供比較。
+.. * 地區 * ：選用。從下拉式功能表中選取適用於 Windows 檔案伺服器組態的 FSX 區域。
+.. * 部署類型 * ：選用。選取 * 單一可用區域 * 或 * 多重可用區域 * 。
 .. * 儲存類型 * ：預設會選取 SSD 儲存類型。
-.. * 儲存容量（ TiB ） * ：輸入組態的儲存容量。
-.. * 重複資料刪除節省率（ % ） * ：輸入重複資料刪除所需的容量節約百分比。
-.. * Snapshot frequency * ：選擇您組態的快照頻率。
-.. * 每個快照變更的數量（ GiB ） * ：僅適用於快照儲存。在 GiB 中輸入每個快照變更的數量。
-.. * 已配置的 SSD IOP* ：輸入已配置的 SSD IOPS 。
-.. * 處理量（ MIB/s ） * ：以 MIB/s 輸入處理量
+.. * 儲存容量（ TiB ） * ：選用。輸入組態的儲存容量。
+.. * 重複資料刪除節省率（ % ） * ：選用。輸入您預期的重複資料刪除所節省的容量百分比。
+.. * Snapshot 頻率 * ：選用。選取您組態的快照頻率。
+.. * 每個快照變更的數量（ GiB ） * ：選用。僅適用於快照儲存。在 GiB 中輸入每個快照變更的數量。
+.. * 已配置的 SSD IOP* ：可選。輸入已配置的 SSD IOPS 。
+.. * 處理量（ MIB/s ） * ：選用。以 MIB/s 輸入處理量
 
 
 
@@ -97,13 +85,92 @@ image:screenshot-ebs-calculator.png["儲存計算機頁面、其中比較了 ONT
 . 在「儲存空間」中、選擇 * 「探索節約 * 」、然後選擇 * 「 Amazon Elastic File System （ EFS ） * 」。
 . 在儲存節約計算機中、提供下列詳細資料：
 +
-.. * 使用案例 * ：從下拉式功能表中選取使用案例。所選的使用案例會決定 ONTAP 檔案系統特性的 FSX 、以供比較。
-.. * 區域 * ：從下拉式功能表中選取適用於 Windows 檔案伺服器組態的 FSX 區域。
-.. * 檔案系統類型 * ：選取 * 區域 * 或 * 單一區域 * 。
-.. * 儲存容量（ TiB ） * ：輸入 EFS 組態的儲存容量。
-.. * 經常存取的資料（ % ） * ：輸入經常存取的資料百分比。
-.. * 輸送量模式 * ：選取 * 供應的輸送量 * 或 * 彈性輸送量 * 。
-.. * 處理量（ MIB/s ） * ：以 MIB/s 輸入處理量
+.. * 使用案例 * ：必要。從下拉式功能表中選取使用案例。所選的使用案例會決定 ONTAP 檔案系統特性的 FSX 、以供比較。
+.. * 地區 * ：選用。從下拉式功能表中選取適用於 Windows 檔案伺服器組態的 FSX 區域。
+.. * 檔案系統類型 * ：選用。選擇 * 區域 * 或 * 一個區域 * 。
+.. * 儲存容量（ TiB ） * ：選用。輸入 EFS 組態的儲存容量。
+.. * 經常存取的資料（ % ） * ：選用。輸入經常存取的資料百分比。
+.. * 處理量模式 * ：選用。選取 * 已配置的處理量 * 或 * 彈性處理量 * 。
+.. * 處理量（ MIB/s ） * ：選用。以 MIB/s 輸入處理量
+
+
+
+
+--
+====
+在您提供儲存系統組態的詳細資料之後、請檢閱頁面上提供的計算和建議。
+
+此外、向下捲動至頁面底部、以 * 匯出 PDF* 或 * 檢視計算 * 。
+
+若要切換至適用於 ONTAP 的 FSX 、請遵循的指示 <<為 ONTAP 檔案系統部署 FSX,為 ONTAP 檔案系統部署 FSX>>進行。
+
+
+
+== 探索偵測到的儲存環境的節約效益
+
+.開始之前
+若要讓 Workload Factory 在 AWS 帳戶中偵測適用於 Windows 檔案伺服器儲存環境的 Amazon Elastic Block Store （ EBS ）、 Elastic File System （ EFS ）和 FSX 、請確定您 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _ 自動化 _ 權限"^] 在 AWS 帳戶中。
+
+
+NOTE: 此計算機選項不支援 EBS 快照和適用於 Windows 檔案伺服器陰影複製的 FSX 的計算。透過自訂功能探索節約效益時、您可以提供適用於 Windows File Server 快照的 EBS 和 FSX 詳細資料。
+
+請依照儲存設備選項卡下的步驟操作。
+
+[role="tabbed-block"]
+====
+.Amazon彈性區塊儲存區（EBS）
+--
+.步驟
+. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在儲存設備詳細目錄中、選取 * 彈性區塊儲存（ EBS ） * 標籤。
+. 選取要與適用於 ONTAP 的 FSX 比較的執行個體、然後按一下 * 「 Explore 節約 * 」。
+. 儲存節約計算機隨即出現。下列儲存系統特性會根據您選取的執行個體預先填入：
++
+.. * 使用案例 * ：組態的使用案例。您可以視需要變更使用案例。
+.. * 所選卷 * ： EBS 配置中的卷數
+.. * 總儲存容量（ TiB ） * ： TiB 中每個磁碟區的儲存容量
+.. * 配置的 IOPS 總計 * ：適用於 GP3 、 IO1 和 IO2 磁碟區
+.. * 總處理量（ MIB/s ） * ：僅限 GP3 磁碟區
+
+
+
+
+--
+.Amazon FSX for Windows File Server
+--
+.步驟
+. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 Storage （儲存）清單中、選取 *FSX for Windows File Server* （ Windows 檔案伺服器 * ）標籤。
+. 選取要與適用於 ONTAP 的 FSX 比較的執行個體、然後按一下 * 「 Explore 節約 * 」。
+. 儲存節約計算機隨即出現。根據您所選執行個體的部署類型、預先填入下列儲存系統特性：
++
+.. * 使用案例 * ：組態的使用案例。您可以視需要變更使用案例。
+.. * 所選檔案系統
+.. * 總儲存容量（ TiB ） *
+.. * 已配置的 SSD IOP*
+.. * 傳輸量（ MIB/s ） *
+
+
+
+
+--
+.Amazon Elastic File System （ EFS ）
+--
+.步驟
+. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在儲存設備詳細目錄中、選取 * 彈性檔案系統（ EFS ） * 標籤。
+. 選取要與適用於 ONTAP 的 FSX 比較的執行個體、然後按一下 * 「 Explore 節約 * 」。
+. 儲存節約計算機隨即出現。下列儲存系統特性會根據您選取的執行個體預先填入：
++
+.. * 使用案例 * ：組態的使用案例。您可以視需要變更使用案例。
+.. * 檔案系統總數 *
+.. * 總儲存容量（ TiB ） *
+.. * 配置的總處理量（ MIB/s ） *
+.. * 總彈性處理量 - 讀取（ GiB ） *
+.. * 總彈性處理量–寫入（ GiB ） *
 
 
 
