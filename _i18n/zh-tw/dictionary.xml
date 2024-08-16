@@ -1126,4 +1126,8 @@
   <block id="1d949c7c5600289e10795f178278edd1" category="section-title">2024 年 7 月 7 日</block>
   <block id="ed54fefae379fac8157c0d466e30a150" category="section-title">Workload Factory for Databases 的初始版本</block>
   <block id="7737adcb101b7285a3a8567ae4d22021" category="paragraph">初始版本包含以下功能：利用 Amazon FSX for NetApp ONTAP 做為資料庫工作負載的儲存環境、探索節省成本、偵測、管理及部署 Microsoft SQL Server 、部署及複製資料庫、以及在 Workload Factory 中監控這些工作。</block>
+  <block id="76d820a16128270adf6a061b253cca06" category="inline-link-macro">瞭解資料庫</block>
+  <block id="c8b559206fbe2064f93b1a567d84e637" category="paragraph"><block ref="eda6f6881c0c5cc5180d85b417e4f376" category="inline-link-macro-rx"></block>。</block>
+  <block id="b067c9e642b13c36b2c53da10c676c3e" category="paragraph">&lt;stdin&gt; 中未解決的指令 - 包括：： _whatsnew/2024-08-04.adoc []</block>
+  <block id="63407573d31f484ae46757dbe98044c7" category="paragraph">&lt;stdin&gt; 中未解決的指令 - 包括：： _whatsnew/2024-07-07.adoc []</block>
 </blocks>
