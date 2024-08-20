@@ -1,21 +1,6 @@
----
-sidebar: sidebar 
-permalink: whats-new.html 
-keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, workload factory, amazon fsx' 
-summary: 瞭解 Amazon FSX for NetApp ONTAP 的新功能。 
----
-= 新功能
+= Terraform 支援
 :allow-uri-read: 
-:icons: font
-:imagesdir: ./media/
 
-
-[role="lead"]
-瞭解 Amazon FSX for NetApp ONTAP 的新功能。
-
-
-
-== 2024 年 8 月 4 日
 
 
 
@@ -33,13 +18,3 @@ summary: 瞭解 Amazon FSX for NetApp ONTAP 的新功能。
 === 儲存計算機中的處理量和 IOPS 建議
 
 儲存計算機會根據 AWS 最佳實務做法、針對處理量和 IOPS 、為 ONTAP 檔案系統設定 FSX 提供建議、為您的選擇提供最佳指引。
-
-
-
-== 2024 年 7 月 7 日
-
-
-
-=== 適用於 Amazon FSX for NetApp ONTAP 的工作負載工廠初始版本
-
-Amazon FSX for NetApp ONTAP 現在已正式推出 Workload Factory 。
