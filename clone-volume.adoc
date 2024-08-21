@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: clone-volume.html 
-keywords: clone volume 
+keywords: clone volume, clone, clone data 
 summary: 複製磁碟區、以建立原始磁碟區的讀寫磁碟區以進行測試。 
 ---
 = 複製磁碟區
