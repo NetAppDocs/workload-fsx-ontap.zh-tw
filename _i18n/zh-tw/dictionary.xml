@@ -1063,7 +1063,6 @@
   <block id="e5a41f95a3cb9b200664e28fdab1a637" category="inline-image-macro">檔案系統概觀索引標籤中三點功能表的螢幕擷取畫面。</block>
   <block id="b32bfe90ed6acc2544026bb974e2ffc9" category="paragraph"><block ref="b32bfe90ed6acc2544026bb974e2ffc9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Terraform 支援</block>
-  <block id="7f67d234b28766a76903424b29245652" category="paragraph">您現在可以使用 Codebox 中的 Terraform 來部署和管理檔案系統和儲存 VM 。</block>
   <block id="75086276ae6b7e370f36c7fc49383216" category="inline-link-macro">建立檔案系統</block>
   <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">使用 CodeBox 的 Terraform</block>
   <block id="11cb17d1b990bbf37a24337d5692efa1" category="list-text"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
@@ -1126,4 +1125,5 @@
   <block id="03b2cfc949418819e16b1dc5fa3660ae" category="list-text"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block></block>
   <block id="3b915cd68add8a6cdac4cd1adeb5f100" category="list-text"><block ref="3b915cd68add8a6cdac4cd1adeb5f100" category="inline-link-macro-rx"></block></block>
   <block id="bbccc2f370efe6824018b613b1dd5839" category="paragraph">Amazon FSX for NetApp ONTAP 現在已正式推出 Workload Factory 。</block>
+  <block id="0fd886acd6700c343d655429665d7e6a" category="paragraph">您現在可以使用 Codebox 中的 Terraform 來部署檔案系統和儲存 VM 。</block>
 </blocks>
