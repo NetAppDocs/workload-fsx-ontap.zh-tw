@@ -1123,7 +1123,7 @@
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">2024 年 8 月 4 日</block>
   <block id="1d949c7c5600289e10795f178278edd1" category="section-title">2024 年 7 月 7 日</block>
   <block id="b18d7ec0ad964d10af97254ea8b0612d" category="doc">適用於 Amazon FSX for NetApp ONTAP 的工作負載工廠初始版本</block>
-  <block id="29ce9ccbd99b7025e6ea173d882fd07a" category="paragraph">Amazon FSX for NetApp ONTAP 通常在工作負載工廠提供。</block>
   <block id="03b2cfc949418819e16b1dc5fa3660ae" category="list-text"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block></block>
   <block id="3b915cd68add8a6cdac4cd1adeb5f100" category="list-text"><block ref="3b915cd68add8a6cdac4cd1adeb5f100" category="inline-link-macro-rx"></block></block>
+  <block id="bbccc2f370efe6824018b613b1dd5839" category="paragraph">Amazon FSX for NetApp ONTAP 現在已正式推出 Workload Factory 。</block>
 </blocks>
