@@ -1049,7 +1049,6 @@
   <block id="21e6ab9737790ab1abc18e49091d3c18" category="paragraph">下圖顯示使用快照、跨區域複寫、以及備份至物件儲存設備的 ONTAP 儲存設備之 FSX 資料保護的視覺化呈現。</block>
   <block id="90388f794d575e628df271470a4b766e" category="inline-image-macro">螢幕擷取畫面顯示使用快照、跨區域複寫、以及備份至物件儲存設備的 ONTAP 儲存設備之 FSX 資料保護。</block>
   <block id="29bed1477f8a04f4f702564c7e6bb224" category="paragraph"><block ref="29bed1477f8a04f4f702564c7e6bb224" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d9c70344ba40b88fdb8c4d8e5b34884e" category="list-text">在「刪除 Volume 」對話方塊中、輸入「刪除」以刪除磁碟區。</block>
   <block id="0d9b99cb00c934d1cd88332ae901fc26" category="section-title">使用 Workload Factory 的工具</block>
   <block id="76737aecf42a629e0422271332fcc5a3" category="paragraph">您可以搭配下列工具使用 BlueXP Workload Factory ：</block>
   <block id="0fc51b33bbeafc6425a9bd19ec449966" category="list-text">* 工作負載工廠主控台 * ：工作負載工廠主控台提供視覺化介面、可讓您全面檢視應用程式和專案</block>
@@ -1126,4 +1125,17 @@
   <block id="3b915cd68add8a6cdac4cd1adeb5f100" category="list-text"><block ref="3b915cd68add8a6cdac4cd1adeb5f100" category="inline-link-macro-rx"></block></block>
   <block id="bbccc2f370efe6824018b613b1dd5839" category="paragraph">Amazon FSX for NetApp ONTAP 現在已正式推出 Workload Factory 。</block>
   <block id="0fd886acd6700c343d655429665d7e6a" category="paragraph">您現在可以使用 Codebox 中的 Terraform 來部署檔案系統和儲存 VM 。</block>
+  <block id="f0881d896f399a09e86122a09c00b74d" category="doc">儲存管理的讀取模式支援</block>
+  <block id="8db376980442524a58ebd917532846d7" category="paragraph">在 Workload Factory 中、讀取模式可用於儲存管理。讀取模式可新增唯讀權限、讓「基礎架構即程式碼」範本填入您的特定變數、藉此提升基本模式的使用體驗。您可以直接從 AWS 帳戶執行「基礎架構即程式碼」範本、而無需提供任何工作負載工廠的修改權限。</block>
+  <block id="06fdd4e2a129920e1eda56425068ba01" category="inline-link-macro">深入瞭解讀取模式</block>
+  <block id="2d68ad2bd6b1f5ddb456706e84602c5e" category="paragraph"><block ref="2d68ad2bd6b1f5ddb456706e84602c5e" category="inline-link-macro-rx"></block></block>
+  <block id="fc30083e7a76ed4c8eb6167ea377c198" category="section-title">支援磁碟區刪除之前的備份</block>
+  <block id="8b97ffb47ece0280994594aa00a04a55" category="paragraph">您現在可以在刪除之前備份磁碟區。備份將保留在檔案系統中、直到刪除為止。</block>
+  <block id="8fb924f94cef9a4615d9910253ac7353" category="paragraph"><block ref="8fb924f94cef9a4615d9910253ac7353" category="inline-link-macro-rx"></block></block>
+  <block id="7dd9587dbbaf30e59e9c0550bb88b5cd" category="list-text">在刪除 Volume 對話方塊中、執行下列步驟：</block>
+  <block id="ad3bbbefb363832c16c692a050c01cc8" category="list-text">或者、按一下 * 備份 Volume * 、在刪除之前備份磁碟區。</block>
+  <block id="54ae4e9761548739e1dcb7a7a20751ad" category="paragraph">備份將保留在檔案系統中、直到您手動刪除為止。</block>
+  <block id="26983a904e0717c520032a2178795368" category="list-text">按一下 * 繼續 * 。</block>
+  <block id="b1bb1fd299d4d0d5a0bcf89deacb85de" category="list-text">輸入「 delete 」刪除磁碟區。</block>
+  <block id="b5cef683aab00353096b98823a237e69" category="section-title">2024 年 9 月 1 日</block>
 </blocks>
