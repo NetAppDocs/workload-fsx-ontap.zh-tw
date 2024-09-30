@@ -130,7 +130,6 @@
   <block id="e9198457278be1c95b85e05535cb9f65" category="list-text">* 組織單位（ OU ） * ：輸入組織單位。</block>
   <block id="7a2e6aa7ec8c0baa05c10c56e0f96e77" category="paragraph">OU 是您要加入檔案系統之組織單位的辨別路徑名稱。</block>
   <block id="ef13ae21eedaa1ecccd02fb7ddd30bb1" category="list-text">* 委派系統管理員群組 * ：選擇性地輸入委派的檔案系統管理員群組。</block>
-  <block id="e78e0461224b8a8fb358504cea15161d" category="paragraph">刪除的系統管理員群組是 Active Directory 中可管理檔案系統的群組名稱。</block>
   <block id="85912990c5413ea32362225e50fc2629" category="paragraph">如果您使用的是 AWS 託管的 Microsoft AD 、則必須指定群組、例如 AWS 委派的 FSX 管理員、 AWS 委派管理員、或是具有 OU 委派權限的自訂群組。</block>
   <block id="3fd21f2222285241b7bbfebc4759ab56" category="paragraph">如果您要加入自我管理的 AD 、請使用 AD 中的群組名稱。預設群組為<block ref="746c2ea920930b61350130daa63e23e5" prefix=" " category="inline-code"></block>。</block>
   <block id="feee2b77515a5dc7c8021b28aff315e8" category="summary">在定期排程的備份之外、建立磁碟區的手動備份。</block>
@@ -224,8 +223,6 @@
   <block id="89a62ddcc9759060d903ef8b7aee42c3" category="list-text">* 連結名稱 * ：輸入您要用於此連結的名稱。名稱在您的帳戶中必須是唯一的。</block>
   <block id="68d5729d2a63e62a04de68bac212b9ab" category="list-text">* 標記 * ：您也可以選擇新增任何標記來與此連結建立關聯、以便更輕鬆地將資源分類。例如、您可以新增一個標記、將此連結識別為由 FSX 用於 ONTAP 檔案系統。</block>
   <block id="c54e90f3916f294bec1f9be7d938fba1" category="paragraph">AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔案系統的 FSX 自動擷取。</block>
-  <block id="96e4942093191178179c76019581eee0" category="list-text">選取 * 重新導向至 CloudForgi狀態 * 。</block>
-  <block id="d1b173de03b05ec6a5b1a04a0c72d5d0" category="paragraph">隨即會顯示一個對話方塊、說明如何從 AWS CloudForgation 服務建立連結。</block>
   <block id="c602cdf8533ce956e9f326890f6d8723" category="list-text">選取 * 繼續 * 以開啟 AWS 管理主控台、然後登入此 ONTAP 檔案系統的 AWS 帳戶。</block>
   <block id="ab44f988398acb833af7b9b2bc6c26b9" category="list-text">在「快速建立堆疊」頁面的「功能」下、選取 * 我瞭解 AWS CloudForgation 可能會建立 IAM 資源 * 。</block>
   <block id="687e9c397e4fb6b561e735147b5af100" category="paragraph">請注意、當您啟動 CloudForgation 範本時、 Lambda 會獲得三個權限。Workload Factory 在使用連結時會使用這些權限。</block>
@@ -1121,8 +1118,6 @@
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">2024 年 8 月 4 日</block>
   <block id="1d949c7c5600289e10795f178278edd1" category="section-title">2024 年 7 月 7 日</block>
   <block id="b18d7ec0ad964d10af97254ea8b0612d" category="doc">適用於 Amazon FSX for NetApp ONTAP 的工作負載工廠初始版本</block>
-  <block id="03b2cfc949418819e16b1dc5fa3660ae" category="list-text"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block></block>
-  <block id="3b915cd68add8a6cdac4cd1adeb5f100" category="list-text"><block ref="3b915cd68add8a6cdac4cd1adeb5f100" category="inline-link-macro-rx"></block></block>
   <block id="bbccc2f370efe6824018b613b1dd5839" category="paragraph">Amazon FSX for NetApp ONTAP 現在已正式推出 Workload Factory 。</block>
   <block id="0fd886acd6700c343d655429665d7e6a" category="paragraph">您現在可以使用 Codebox 中的 Terraform 來部署檔案系統和儲存 VM 。</block>
   <block id="f0881d896f399a09e86122a09c00b74d" category="doc">儲存管理的讀取模式支援</block>
@@ -1138,4 +1133,28 @@
   <block id="26983a904e0717c520032a2178795368" category="list-text">按一下 * 繼續 * 。</block>
   <block id="b1bb1fd299d4d0d5a0bcf89deacb85de" category="list-text">輸入「 delete 」刪除磁碟區。</block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">2024 年 9 月 1 日</block>
+  <block id="a384088a79fca35da6b697720f2ddd66" category="list-text"><block ref="a384088a79fca35da6b697720f2ddd66" category="inline-link-macro-rx"></block></block>
+  <block id="a9803c91b8fa40d3fdc106b005fdb16c" category="list-text"><block ref="a9803c91b8fa40d3fdc106b005fdb16c" category="inline-link-macro-rx"></block></block>
+  <block id="cd1df627bd8e5b96916530ffbf4664f6" category="doc">連結建立更新</block>
+  <block id="15f127e6d8c5111ce85f47eff68232a7" category="list-text">CodeBox 檢視器： CodeBox 現在已整合至連結建立程序中。您可以在工作負載工廠的 Codebox 中檢視並複製 CloudForgation 範本、然後重新導向至 AWS 以執行作業。</block>
+  <block id="8efc4e00ac03374d3e1dc5d19c40016b" category="list-text">必要權限：現在可以從 Workload Factory 的 Create Link 精靈中檢視及複製 AWS CloudForgation 中執行連結建立所需的權限。</block>
+  <block id="3721bd571f4111dad2c363436de34c51" category="list-text">支援手動建立連結：此功能可在 AWS CloudForgation 中以手動註冊連結 ARN 的方式獨立建立。當安全團隊或 DevOps 團隊協助建立連結時、這項功能非常實用。</block>
+  <block id="27f80dd01569e18971f783f257cc7294" category="paragraph"><block ref="27f80dd01569e18971f783f257cc7294" category="inline-link-macro-rx"></block></block>
+  <block id="652227e30bf6d77e12a5c024de7bc6d6" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中、按一下要更新儲存 VM 的檔案系統三點功能表、然後選取 * 管理 * 。</block>
+  <block id="37bb8b5cad0754acdd2d9ed1e9d36928" category="paragraph">委派的系統管理員群組是 Active Directory 中可管理檔案系統的群組名稱。</block>
+  <block id="1ffab80b063e5f05f25ab6681156237d" category="paragraph">如果您要連線至自我管理的 AD 、請使用 AD 中的群組名稱。預設群組為<block ref="746c2ea920930b61350130daa63e23e5" prefix=" " category="inline-code"></block>。</block>
+  <block id="e359c45e41079948637e3625aa645ee6" category="paragraph">您有兩個選項可以自動或手動建立連結。</block>
+  <block id="5f430c8ea369f8788a9d32bc5ddef4f4" category="list-text">自動：透過 Workload Factory 建立自動登錄的連結。自動建立的連結需要工作負載工廠自動化的權杖、而 CloudForgation 程式碼則很短。最多只能使用 6 小時。</block>
+  <block id="f35d0bfc59b397e2ee196c7e6b0d33d7" category="list-text">手動：建立具有手動登錄的連結。CloudForgation 程式碼持續提供您更多時間來完成作業。這在與安全性和 DevOps 等不同團隊合作時很有用、因為他們可能需要先授予完成連結建立所需的權限。</block>
+  <block id="758ce486f132a2978be7ecfbcd518afa" category="list-text">您應該考慮要使用哪個連結建立選項。</block>
+  <block id="6903e2b3a86228f4d258e423fb6b913a" category="open-title">自動建立</block>
+  <block id="e07190df7367fb116bdd913bfce43fbe" category="paragraph">使用 CloudForgation 自動建立並註冊 Workload Factory 中的連結。</block>
+  <block id="6a97c44fefe95ac9ca6fe05e50d1729f" category="paragraph">此時會出現重新導向至 CloudForgation 對話方塊、並說明如何從 AWS CloudForgation 服務建立連結。</block>
+  <block id="a85b3f8e5456d47e8056e0372aeccb2a" category="open-title">手動建立</block>
+  <block id="6f19769f7ee87f4c55c249bc3849c48a" category="paragraph">使用此選項、您可以從 AWS CloudForgation 擷取連結的 ARN 、並在此處報告。Workload Factory 會手動為您登錄連結。</block>
+  <block id="9f7d5c71d756492e276c5460cc778424" category="list-text">* 連結註冊 * ：按一下下拉式箭頭、展開如何從 AWS CloudForgation 服務註冊連結的指示。請依照指示進行。</block>
+  <block id="c3b24be1571207cf6200f2d8b54ee7c0" category="paragraph">成功建立堆疊後、將 Lambda ARN 貼到文字方塊中。</block>
+  <block id="80cda6d0b485a6d7ad08bec0e4e1e512" category="list-text">登入 Workload Factory 主控台。</block>
+  <block id="c7f0e7c4e7e9f76582f27e34058deaa6" category="paragraph">將複製的 FlexVol volume 從其父磁碟區分割成正常的讀寫 FlexVol volume 。</block>
+  <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">2024 年 9 月 29 日</block>
 </blocks>

@@ -11,7 +11,7 @@ summary: 將複製的 FlexVol Volume 從其父磁碟區分割成正常的讀寫 
 
 
 [role="lead"]
-將複製的 FlexVol Volume 從其父磁碟區分割成正常的讀寫 FlexVol 磁碟區。
+將複製的 FlexVol volume 從其父磁碟區分割成正常的讀寫 FlexVol volume 。
 
 分割期間、可在複本和父實體上存取資料。分割程序只會更新中繼資料、而且需要最少的 IO 。不會複製任何資料區塊。
 

@@ -22,7 +22,14 @@ link:links-overview.html["深入瞭解連結"]。
 
 您必須在 AWS 帳戶中啟動 AWS CloudForgation 堆疊、才能建立連結。
 
+您有兩個選項可以自動或手動建立連結。
+
+* 自動：透過 Workload Factory 建立自動登錄的連結。自動建立的連結需要工作負載工廠自動化的權杖、而 CloudForgation 程式碼則很短。最多只能使用 6 小時。
+* 手動：建立具有手動登錄的連結。CloudForgation 程式碼持續提供您更多時間來完成作業。這在與安全性和 DevOps 等不同團隊合作時很有用、因為他們可能需要先授予完成連結建立所需的權限。
+
+
 .開始之前
+* 您應該考慮要使用哪個連結建立選項。
 * 您必須擁有認證才能登入 AWS 帳戶。
 * 使用 CloudFormation 堆疊新增連結時、 AWS 帳戶必須具有下列權限：
 +
@@ -64,6 +71,12 @@ link:links-overview.html["深入瞭解連結"]。
 ====
 
 
+[role="tabbed-block"]
+====
+.自動建立
+--
+使用 CloudForgation 自動建立並註冊 Workload Factory 中的連結。
+
 .步驟
 . 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
@@ -79,9 +92,9 @@ AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔
 
 
 
-. 選取 * 重新導向至 CloudForgi狀態 * 。
+. 按一下「 * 建立 * 」。
 +
-隨即會顯示一個對話方塊、說明如何從 AWS CloudForgation 服務建立連結。
+此時會出現重新導向至 CloudForgation 對話方塊、並說明如何從 AWS CloudForgation 服務建立連結。
 
 . 選取 * 繼續 * 以開啟 AWS 管理主控台、然後登入此 ONTAP 檔案系統的 AWS 帳戶。
 . 在「快速建立堆疊」頁面的「功能」下、選取 * 我瞭解 AWS CloudForgation 可能會建立 IAM 資源 * 。
@@ -102,5 +115,46 @@ AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔
 . 返回 Workload Factory 介面、您會看到連結與 ONTAP 檔案系統的 FSX 相關聯。
 
 
+--
+.手動建立
+--
+使用此選項、您可以從 AWS CloudForgation 擷取連結的 ARN 、並在此處報告。Workload Factory 會手動為您登錄連結。
+
+.步驟
+. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 *FSX for ONTAP * 標籤中、選取檔案系統的三點功能表以建立連結的關聯、然後選取 * 管理 * 。
+. 在檔案系統總覽中、選取 * 關聯連結 * 。
+. 在關聯連結對話方塊中、選取 * 建立新連結 * 、然後選取 * 繼續 * 。
+. 在「建立連結」頁面上、提供下列項目：
++
+.. * 連結名稱 * ：輸入您要用於此連結的名稱。名稱在您的帳戶中必須是唯一的。
+.. * 標記 * ：您也可以選擇新增任何標記來與此連結建立關聯、以便更輕鬆地將資源分類。例如、您可以新增一個標記、將此連結識別為由 FSX 用於 ONTAP 檔案系統。
+.. * 連結註冊 * ：按一下下拉式箭頭、展開如何從 AWS CloudForgation 服務註冊連結的指示。請依照指示進行。
++
+請注意、當您啟動 CloudForgation 範本時、 Lambda 會獲得三個權限。Workload Factory 在使用連結時會使用這些權限。
+
++
+[source, json]
+----
+"lambda:InvokeFunction",
+"lambda:GetFunction",
+"lambda:UpdateFunctionCode"
+----
++
+成功建立堆疊後、將 Lambda ARN 貼到文字方塊中。
+
+.. AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔案系統的 FSX 自動擷取。
+
+
+. 按一下「 * 建立 * 」。
++
+您可以從「事件」頁面監控連結建立狀態。這不應超過 5 分鐘。
+
+. 返回 Workload Factory 介面、您會看到連結與 ONTAP 檔案系統的 FSX 相關聯。
+
+
+--
+====
 .結果
 您建立的連結會與適用於 ONTAP 檔案系統的 FSX 相關聯。
