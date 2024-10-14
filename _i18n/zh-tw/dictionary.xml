@@ -647,7 +647,6 @@
   <block id="b1c8cb58e124bead4ca2e09fa1c20c9b" category="paragraph">如需每個檔案系統的 SVM 最大數量、請參閱 <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> AWS 文件中的。</block>
   <block id="3a448e496404b548627a97fc00da8e23" category="section-title">iSCSI 傳輸協定支援</block>
   <block id="33060a985f3ea357dedca3b638c9dedc" category="list-text">iSCSI 傳輸協定僅支援橫向擴充部署。^1^</block>
-  <block id="37ea650652be756727cc05f929ac982b" category="list-text">iSCSI 傳輸協定僅適用於 FlexGroup 磁碟區。^1^</block>
   <block id="53c858a11ae23c19aee107fb913f096a" category="list-text">每個磁碟區只能設定單一 LUN 。</block>
   <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">區域支援</block>
   <block id="1bf3a4f06c8408a2ff436e0b847ca3a3" category="list-text">目前不支援 Canada West （ Calgary ）地區。</block>
@@ -1157,4 +1156,5 @@
   <block id="80cda6d0b485a6d7ad08bec0e4e1e512" category="list-text">登入 Workload Factory 主控台。</block>
   <block id="c7f0e7c4e7e9f76582f27e34058deaa6" category="paragraph">將複製的 FlexVol volume 從其父磁碟區分割成正常的讀寫 FlexVol volume 。</block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">2024 年 9 月 29 日</block>
+  <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">iSCSI 傳輸協定僅適用於 FlexVol 磁碟區。^1^</block>
 </blocks>
