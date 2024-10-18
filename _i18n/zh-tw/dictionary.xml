@@ -438,8 +438,6 @@
   <block id="c4037415f2f0cfbaf2d8633bef548eca" category="paragraph">刪除磁碟區之前、請先考慮下列事項：</block>
   <block id="7ba3b681b508a24c70a973831af6f1ad" category="list-text">本機快照：將永久刪除與此 FSX for ONTAP 檔案系統相關的所有快照。</block>
   <block id="4d07a6e16a1c8ad6e621cc84eb969e7e" category="list-text">適用於 ONTAP 備份的 FSX ：適用於 ONTAP 備份複本的 FSX 將會保留、您仍然可以使用這些備份複本。</block>
-  <block id="257f4990e0b233436c87d843d19bde86" category="inline-link-macro">刪除任何現有的複寫關係</block>
-  <block id="dc3d3cc2dd8fe8ca34129b7367abba17" category="list-text">複寫關係：我們建議您 <block ref="507a7d95f37121fd7920ef201528352a" category="inline-link-macro-rx"></block> 在刪除磁碟區之前、先建立此磁碟區的關係、以免關係中斷。</block>
   <block id="524193967bbe3f8da7683435e0a28ea4" category="list-text">在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要刪除的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。</block>
   <block id="b0498e030069e9d348b276238c375c45" category="list-text">從 Volumes （磁碟區）索引標籤中、選取要刪除的磁碟區的三點功能表。</block>
   <block id="c54ab0793e326deff351b944ad70d29c" category="list-text">選擇 * 基本動作 * 、然後 * 刪除 Volume * 。</block>
@@ -1157,4 +1155,6 @@
   <block id="c7f0e7c4e7e9f76582f27e34058deaa6" category="paragraph">將複製的 FlexVol volume 從其父磁碟區分割成正常的讀寫 FlexVol volume 。</block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">2024 年 9 月 29 日</block>
   <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">iSCSI 傳輸協定僅適用於 FlexVol 磁碟區。^1^</block>
+  <block id="e6816f159adf84ca7c085ce0702311af" category="inline-link-macro">刪除所有現有的複寫關係</block>
+  <block id="da13b22f351bd4b981038bd55ca5d3ab" category="list-text">複寫關係：刪除磁碟區之前、您必須<block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block>先建立此磁碟區的關係、才能維持不變的關係。</block>
 </blocks>
