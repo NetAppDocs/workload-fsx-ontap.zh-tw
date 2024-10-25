@@ -808,7 +808,6 @@
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">二</block>
   <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 新增認證和權限</block>
   <block id="ba8b072b83c1e6db56e40bf48ddb0871" category="inline-link-macro">作業模式</block>
-  <block id="f7598943d19e0d869abf49ffa1bf32a4" category="paragraph">選擇 _basive_ 和 _自動化 _ <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
   <block id="fad2f7a49be756f98f3e7a34ef811e09" category="paragraph">如果您選擇以 _basive_ 模式操作、就不需要再繼續操作。您可以開始使用 ONTAP 適用的 Workload Factory 來複製部分完成的程式碼範例。</block>
   <block id="ce8e7e98b5597e78e8fd7d6bc94729cb" category="inline-link-macro">手動新增認證至帳戶</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">三</block>
@@ -1052,7 +1051,6 @@
   <block id="d527a24e3cd3e2df59c9ec57fb8383de" category="inline-image-macro">顯示使用特定連結之 ONTAP 檔案系統的 FSX 的螢幕擷取畫面。</block>
   <block id="8153258b50418b6ebcd06d64da06a5bc" category="paragraph"><block ref="8153258b50418b6ebcd06d64da06a5bc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8d0a9b10b0feb1fbeb54874e4db30c45" category="paragraph"><block ref="8d0a9b10b0feb1fbeb54874e4db30c45" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="6b6bb5bfce611b62621235836da5c8a9" category="paragraph">如果您以 _ 自動化 _ 模式運作、則需要 <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> 選擇工作負載功能、例如資料庫和 AI 、並建立 IAM 原則、以確保您擁有以 _ 自動化 _ 模式運作的正確權限。</block>
   <block id="e5a41f95a3cb9b200664e28fdab1a637" category="inline-image-macro">檔案系統概觀索引標籤中三點功能表的螢幕擷取畫面。</block>
   <block id="b32bfe90ed6acc2544026bb974e2ffc9" category="paragraph"><block ref="b32bfe90ed6acc2544026bb974e2ffc9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Terraform 支援</block>
@@ -1157,4 +1155,6 @@
   <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">iSCSI 傳輸協定僅適用於 FlexVol 磁碟區。^1^</block>
   <block id="e6816f159adf84ca7c085ce0702311af" category="inline-link-macro">刪除所有現有的複寫關係</block>
   <block id="da13b22f351bd4b981038bd55ca5d3ab" category="list-text">複寫關係：刪除磁碟區之前、您必須<block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block>先建立此磁碟區的關係、才能維持不變的關係。</block>
+  <block id="f14fbd72eb1c8ba39f23e290779d3ac7" category="paragraph">您可以在 _basive_ 、 _read_ 和 _自動化 _ 之間進行選擇 <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
+  <block id="9b0784be448bb1dc8f08485434f9a91a" category="paragraph">如果您以 _Read_ 或 _AIL_ 模式操作、則需要 <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> 選擇工作負載功能、例如資料庫和 AI 、並建立 IAM 原則、以確保您擁有正確的權限、可以在 _Read_ 或 _AIL_ 模式下操作。</block>
 </blocks>
