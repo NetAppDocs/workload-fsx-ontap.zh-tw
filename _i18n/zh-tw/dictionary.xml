@@ -68,7 +68,6 @@
   <block id="6c25e6a6da95b3d583c6ec4c3f82ed4d" category="list-text">每週</block>
   <block id="d8977131f7da0505ccdd8e33f901bb75" category="summary">隨時更新磁碟區的快照原則。</block>
   <block id="340f8dee912ac16b4fb008726d3ee88f" category="doc">變更磁碟區的快照原則</block>
-  <block id="98a71d4244a8d2bc70cdcddc5cb64af6" category="paragraph">此作業會更新磁碟區所拍攝快照的頻率、或停用自動快照。</block>
   <block id="53e6e67988f9acb9f1aab8ccad2c0340" category="paragraph">需要連結才能顯示現有的快照原則。若要建立連結的關聯、請按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。然後返回此作業。</block>
   <block id="6e1473c0de5b054e5e9236bbe796cc32" category="list-text">選擇 * Volumes （卷） * 選項卡。</block>
   <block id="b7896e81066533818c46cd2b875eb7bf" category="list-text">在 * Volumes （卷） * 選項卡中，選擇要更改其快照策略的卷的三點菜單。</block>
@@ -844,7 +843,6 @@
   <block id="edacd360980e63a5f2e01df2fa59b050" category="list-text">在「重設 fsxadmin 密碼」對話方塊中、輸入新的 fsxadmin 密碼、然後重新輸入以確認。</block>
   <block id="279e520d9175d8e5591ed2ca3fc5acab" category="summary">必要時重設儲存 VM 密碼。</block>
   <block id="217c9f6fe263e655130a845fd58ccebe" category="doc">重設儲存 VM 的密碼</block>
-  <block id="eda74f1b1bef1d5fd22f162e31e3f4c5" category="list-text">選取 * 儲存 VMS* 標籤。</block>
   <block id="a22a424f6f09fb9aab17350b24d152ce" category="list-text">在 Storage VMs （儲存 VM ）標籤中、選取儲存 VM 的三點功能表、以重設密碼。</block>
   <block id="3930015dcc2810869591e35a2b5d714b" category="list-text">選擇*重設密碼*。</block>
   <block id="0828ddc896996b7d41cc9ceb1e453764" category="list-text">在「重設密碼」對話方塊中、提供下列資訊：</block>
@@ -1091,7 +1089,6 @@
   <block id="c0c6f43c72d4131a3142969ee1f93961" category="paragraph">若要切換至適用於 ONTAP 的 FSX 、請遵循的指示 <block ref="d4d3e2c1446af85f31cda9e1ddaf30d7" category="inline-xref-macro-rx"></block>進行。</block>
   <block id="b531032648e600a642b682616d2a0bdd" category="section-title">探索偵測到的儲存環境的節約效益</block>
   <block id="cb10bf47866edd2ac9fb6586867bd1f6" category="admonition">此計算機選項不支援 EBS 快照和適用於 Windows 檔案伺服器陰影複製的 FSX 的計算。透過自訂功能探索節約效益時、您可以提供適用於 Windows File Server 快照的 EBS 和 FSX 詳細資料。</block>
-  <block id="9f9100c91adcf9dad4883f822e09cda9" category="list-text">在儲存設備詳細目錄中、選取 * 彈性區塊儲存（ EBS ） * 標籤。</block>
   <block id="4e6bb917970bfdc851c5092e11272217" category="list-text">選取要與適用於 ONTAP 的 FSX 比較的執行個體、然後按一下 * 「 Explore 節約 * 」。</block>
   <block id="f59ef66ff04b00cacb36ef4c77c51958" category="list-text">儲存節約計算機隨即出現。下列儲存系統特性會根據您選取的執行個體預先填入：</block>
   <block id="bca9e850c916e20118ab9da7a15e1ab7" category="list-text">* 使用案例 * ：組態的使用案例。您可以視需要變更使用案例。</block>
@@ -1099,13 +1096,11 @@
   <block id="6c52ebf14450d045b355a868931e1164" category="list-text">* 總儲存容量（ TiB ） * ： TiB 中每個磁碟區的儲存容量</block>
   <block id="304b6d4108ca48d891db9c471488358b" category="list-text">* 配置的 IOPS 總計 * ：適用於 GP3 、 IO1 和 IO2 磁碟區</block>
   <block id="8f5e9660dd3425492cf59bc6e12606d8" category="list-text">* 總處理量（ MIB/s ） * ：僅限 GP3 磁碟區</block>
-  <block id="2da38d4eab31e419f29bebc00eb3d264" category="list-text">在 Storage （儲存）清單中、選取 *FSX for Windows File Server* （ Windows 檔案伺服器 * ）標籤。</block>
   <block id="15fc70bd68494b595c2e5441312916e5" category="list-text">儲存節約計算機隨即出現。根據您所選執行個體的部署類型、預先填入下列儲存系統特性：</block>
   <block id="a32ffe6360aa9a89cb9696c19f828d91" category="list-text">* 所選檔案系統</block>
   <block id="148f511d9c35e6ff4cb92ebc25a1c9cf" category="list-text">* 總儲存容量（ TiB ） *</block>
   <block id="9dbb3393e470b57796b7ec491b66bdea" category="list-text">* 已配置的 SSD IOP*</block>
   <block id="22706a4c75c6b61679dc073e45ec6e08" category="list-text">* 傳輸量（ MIB/s ） *</block>
-  <block id="ff878267bfd97975ad2ec503878325c1" category="list-text">在儲存設備詳細目錄中、選取 * 彈性檔案系統（ EFS ） * 標籤。</block>
   <block id="a765aa8369baa37d4241f37483d8954c" category="list-text">* 檔案系統總數 *</block>
   <block id="9285022230e927d788a11d636f2a52c4" category="list-text">* 配置的總處理量（ MIB/s ） *</block>
   <block id="6aae74300e54ee6bdcfadde9a88345f6" category="list-text">* 總彈性處理量 - 讀取（ GiB ） *</block>
@@ -1157,4 +1152,21 @@
   <block id="da13b22f351bd4b981038bd55ca5d3ab" category="list-text">複寫關係：刪除磁碟區之前、您必須<block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block>先建立此磁碟區的關係、才能維持不變的關係。</block>
   <block id="f14fbd72eb1c8ba39f23e290779d3ac7" category="paragraph">您可以在 _basive_ 、 _read_ 和 _自動化 _ 之間進行選擇 <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
   <block id="9b0784be448bb1dc8f08485434f9a91a" category="paragraph">如果您以 _Read_ 或 _AIL_ 模式操作、則需要 <block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block> 選擇工作負載功能、例如資料庫和 AI 、並建立 IAM 原則、以確保您擁有正確的權限、可以在 _Read_ 或 _AIL_ 模式下操作。</block>
+  <block id="31139fb3d548620b7d82f880e4660606" category="doc">儲存庫存中的索引標籤檢視</block>
+  <block id="d4aa654cea4681dd5ca03650594006c6" category="paragraph">儲存庫存已更新為雙索引標籤檢視：</block>
+  <block id="71083868a2ec5abfee9a2647a74612c0" category="list-text">適用於 ONTAP 的 FSX 標籤：顯示您目前擁有的 ONTAP 檔案系統的 FSX 。</block>
+  <block id="1113c9108b3e58789456954d1c2ea9c2" category="list-text">瀏覽節約標籤：顯示 Elastic Block Store 、適用於 Windows 檔案伺服器的 FSX 、以及 Elastic File Systems 儲存系統。從這裡、您可以將這些系統與適用於 ONTAP 的 FSX 進行比較、以探索這些系統的節約效益。</block>
+  <block id="62cf721f97d39a9aaf1ac7786071551c" category="paragraph">更新磁碟區的快照頻率、或隨時停用自動快照。</block>
+  <block id="110f1585246a580402f0c6b34d42e65a" category="list-text">在 *FSX for ONTAP * 標籤中、選取適用於 ONTAP 檔案系統的 FSX 的三點功能表、其中包含要更新快照原則的磁碟區、然後選取 * 管理 * 。</block>
+  <block id="fa8dc6e67f45bcde58853510e56ce6a1" category="list-text">從檔案系統的「總覽」標籤中、選取 * Volumes （磁碟區） * 標籤。</block>
+  <block id="74e854d4ac135e193bafa7dfdf343efe" category="list-text">從儲存設備中、選取 * 移至儲存設備庫存 * 。</block>
+  <block id="9df0f8cc7fbb70153a71c3d1657c3d81" category="list-text">在 *FSX for ONTAP * 標籤中、選取包含要複製之磁碟區的 ONTAP 檔案系統 FSX 的三點功能表、然後選取 * 管理 * 。</block>
+  <block id="80ad1fda17ca981880509b63f91591c9" category="list-text">在儲存設備詳細目錄中、選擇 * 瀏覽省錢方案 * 標籤。</block>
+  <block id="a1e5470290e2e47a8295d8ae0b1e78af" category="list-text">在 *Elastic Block Store （ EBS ） * 標籤中、選取要與 ONTAP 的 FSX 比較的執行個體、然後按一下 * 「 Explore 節約 * 」。</block>
+  <block id="69664318bb60fdf05cfe25fa2b5a7242" category="list-text">選擇 *FSX for Windows File Server* 選項卡。</block>
+  <block id="5e172a101429002f6723f0f156cbd608" category="list-text">選擇 * 彈性檔案系統（ EFS ） * 標籤。</block>
+  <block id="78745d22af85f4409daf48ce5059c4c0" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中、選取要更新儲存 VM 的 ONTAP 檔案系統的 FSX 的三點功能表、然後選取 * 管理 * 。</block>
+  <block id="8c9880429b2df2018a366dbb14193026" category="list-text">從檔案系統的概觀索引標籤中、選取 * 儲存 VMS* 索引標籤。</block>
+  <block id="ca677da26b1ef83b53f1decf3bf448d0" category="list-text">在 *FSX for （用於 ONTAP ） * 標籤中，選擇包含要分割的複製卷的 ONTAP 文件系統的 FSX 的三點菜單，然後選擇 *Manage* （管理 * ）。</block>
+  <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">2024 年 11 月 3 日</block>
 </blocks>

@@ -122,9 +122,9 @@ NOTE: 此計算機選項不支援 EBS 快照和適用於 Windows 檔案伺服器
 --
 .步驟
 . 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在儲存設備詳細目錄中、選取 * 彈性區塊儲存（ EBS ） * 標籤。
-. 選取要與適用於 ONTAP 的 FSX 比較的執行個體、然後按一下 * 「 Explore 節約 * 」。
+. 從儲存設備中、選取 * 移至儲存設備庫存 * 。
+. 在儲存設備詳細目錄中、選擇 * 瀏覽省錢方案 * 標籤。
+. 在 *Elastic Block Store （ EBS ） * 標籤中、選取要與 ONTAP 的 FSX 比較的執行個體、然後按一下 * 「 Explore 節約 * 」。
 . 儲存節約計算機隨即出現。下列儲存系統特性會根據您選取的執行個體預先填入：
 +
 .. * 使用案例 * ：組態的使用案例。您可以視需要變更使用案例。
@@ -141,8 +141,9 @@ NOTE: 此計算機選項不支援 EBS 快照和適用於 Windows 檔案伺服器
 --
 .步驟
 . 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 Storage （儲存）清單中、選取 *FSX for Windows File Server* （ Windows 檔案伺服器 * ）標籤。
+. 從儲存設備中、選取 * 移至儲存設備庫存 * 。
+. 在儲存設備詳細目錄中、選擇 * 瀏覽省錢方案 * 標籤。
+. 選擇 *FSX for Windows File Server* 選項卡。
 . 選取要與適用於 ONTAP 的 FSX 比較的執行個體、然後按一下 * 「 Explore 節約 * 」。
 . 儲存節約計算機隨即出現。根據您所選執行個體的部署類型、預先填入下列儲存系統特性：
 +
@@ -160,8 +161,9 @@ NOTE: 此計算機選項不支援 EBS 快照和適用於 Windows 檔案伺服器
 --
 .步驟
 . 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在儲存設備詳細目錄中、選取 * 彈性檔案系統（ EFS ） * 標籤。
+. 從儲存設備中、選取 * 移至儲存設備庫存 * 。
+. 在儲存設備詳細目錄中、選擇 * 瀏覽省錢方案 * 標籤。
+. 選擇 * 彈性檔案系統（ EFS ） * 標籤。
 . 選取要與適用於 ONTAP 的 FSX 比較的執行個體、然後按一下 * 「 Explore 節約 * 」。
 . 儲存節約計算機隨即出現。下列儲存系統特性會根據您選取的執行個體預先填入：
 +

@@ -36,8 +36,9 @@ summary: 將複製的 FlexVol Volume 從其父磁碟區分割成正常的讀寫 
 
 .步驟
 . 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 選擇 * Volumes （卷） * 選項卡。
+. 從儲存設備中、選取 * 移至儲存設備庫存 * 。
+. 在 *FSX for （用於 ONTAP ） * 標籤中，選擇包含要分割的複製卷的 ONTAP 文件系統的 FSX 的三點菜單，然後選擇 *Manage* （管理 * ）。
+. 從檔案系統的「總覽」標籤中、選取 * Volumes （磁碟區） * 標籤。
 . 在 Volumes （磁碟區）標籤中、選取要分割複製磁碟區的磁碟區三點選單。
 . 選擇 * 資料保護動作 * 、然後 * 分割複製的 Volume * 。
 . 在分割磁碟區對話方塊中、按一下 * 刪除 * 。
