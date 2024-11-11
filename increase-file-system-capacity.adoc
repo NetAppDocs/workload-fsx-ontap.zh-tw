@@ -4,7 +4,7 @@ permalink: increase-file-system-capacity.html
 keywords: increase capacity, increase file system capacity, increase FSx capacity 
 summary: 當使用的 SSD 儲存容量超過您指定的臨界值時、手動增加 ONTAP 檔案系統的 FSX SSD 儲存容量。 
 ---
-= 增加檔案系統容量
+= 增加 BlueXP  工作負載工廠的檔案系統容量
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -13,7 +13,7 @@ summary: 當使用的 SSD 儲存容量超過您指定的臨界值時、手動增
 [role="lead"]
 當使用的 SSD 儲存容量超過您指定的臨界值時、手動增加 ONTAP 檔案系統的 FSX SSD 儲存容量。
 
-或者、您也可以 link:enable-auto-capacity-management.html["啟用自動容量管理功能"] 讓 Workload Factory 為您管理檔案系統容量。
+或者，您也可以link:enable-auto-capacity-management.html["啟用自動容量管理功能"]讓工作負載在工廠為您管理檔案系統容量。
 
 .關於這項工作
 增加檔案系統容量會影響適用於 ONTAP 檔案系統的 FSX 的 IOPS 。
@@ -28,12 +28,12 @@ summary: 當使用的 SSD 儲存容量超過您指定的臨界值時、手動增
 若要增加檔案系統的容量、您必須先 link:enable-auto-capacity-management.html["停用自動容量管理"]。
 
 .步驟
-. 登入 Workload Factory 主控台。
-. 在儲存設備中、按一下 * 移至儲存設備詳細目錄 * 。
-. 在 * 適用於 ONTAP * 的 FSX 標籤中、按一下檔案系統的三點功能表、以增加的容量。
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在 Storage （儲存設備）中、選取 * 前往 Storage inventory* （儲存設備庫存）。
+. 在 * 適用於 ONTAP * 的 FSX 標籤中，選取檔案系統的三點功能表以增加容量。
 . 選擇*管理*。
-. 按一下 [ 資訊 ] 底下 * 容量分配 * 旁邊的鉛筆圖示。當滑鼠移動到 * 容量分配 * 列上時、下拉式箭頭旁會出現鉛筆圖示。
+. 在「資訊」下，選取 * 容量分配 * 旁邊的鉛筆圖示。當滑鼠移動到 * 容量分配 * 列上時、下拉式箭頭旁會出現鉛筆圖示。
 . 在 SSD 儲存容量對話方塊中、輸入 * 已配置容量 * 的數字。
 . 選取已配置容量的單位。
-. 按一下「 * 套用 * 」。
+. 選擇*應用*。
 

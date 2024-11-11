@@ -4,14 +4,14 @@ permalink: initialize-replication.html
 keywords: initialize replication, begin replication, start replication 
 summary: 初始化來源磁碟區與目標磁碟區之間的複寫關係。 
 ---
-= 初始化複寫關係
+= 在 BlueXP  工作負載工廠中初始化複寫關係
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-初始化來源磁碟區與目標磁碟區之間的複寫關係。
+在 BlueXP  工作負載工廠中初始化來源磁碟區與目標磁碟區之間的複寫關係。
 
 .關於這項工作
 初始化會執行 _baseline 傳輸：它會建立來源磁碟區的快照、然後將快照及其參照的所有資料區塊傳輸至目標磁碟區。
@@ -20,11 +20,11 @@ summary: 初始化來源磁碟區與目標磁碟區之間的複寫關係。
 選擇完成此作業時請考慮。初始化可能會很耗時。您可能想要在非尖峰時間執行基準傳輸。
 
 .步驟
-. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 * 適用於 ONTAP * 的 FSX 標籤中、按一下要更新檔案系統的三點功能表、然後選取 * 管理 * 。
+. 在 *FSX for （用於 ONTAP ） * 選項卡中，選擇要更新的文件系統的三點菜單，然後選擇 *Manage* （管理）。
 . 從檔案系統總覽中、選取 * 複寫關係 * 索引標籤。
-. 在複寫關係索引標籤中、按一下要初始化複寫關係的三點功能表。
+. 在複寫關係索引標籤中，選取要初始化複寫關係的三點功能表。
 . 選擇 * 初始化 * 。
-. 在「初始化關係」對話方塊中、按一下 * 初始化 * 。
+. 在「初始化關係」對話方塊中，選取 * 初始化 * 。
 

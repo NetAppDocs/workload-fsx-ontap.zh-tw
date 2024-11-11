@@ -4,7 +4,7 @@ permalink: whats-new.html
 keywords: 'what"s new, features, new, release notes, enhancements, fixes, new features, workload factory, amazon fsx for netapp ontap, fsx for ontap' 
 summary: 瞭解 Amazon FSX for NetApp ONTAP 的新功能。 
 ---
-= 新功能
+= Amazon FSX for NetApp ONTAP 的新功能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -35,12 +35,12 @@ summary: 瞭解 Amazon FSX for NetApp ONTAP 的新功能。
 
 === 連結建立更新
 
-* CodeBox 檢視器： CodeBox 現在已整合至連結建立程序中。您可以在工作負載工廠的 Codebox 中檢視並複製 CloudForgation 範本、然後重新導向至 AWS 以執行作業。
-* 必要權限：現在可以從 Workload Factory 的 Create Link 精靈中檢視及複製 AWS CloudForgation 中執行連結建立所需的權限。
+* CodeBox 檢視器： CodeBox 現在已整合至連結建立程序中。您可以從工作負載工廠的 Codebox 檢視和複製 CloudForgation 範本，然後重新導向至 AWS 以執行作業。
+* 必要權限：現在可以從工作負載工廠的「建立連結」精靈中檢視及複製 AWS CloudForgation 中執行連結建立所需的權限。
 * 支援手動建立連結：此功能可在 AWS CloudForgation 中以手動註冊連結 ARN 的方式獨立建立。當安全團隊或 DevOps 團隊協助建立連結時、這項功能非常實用。
 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["建立連結"^]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["建立連結"]
 
 
 
@@ -50,9 +50,9 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["建立�
 
 === 儲存管理的讀取模式支援
 
-在 Workload Factory 中、讀取模式可用於儲存管理。讀取模式可新增唯讀權限、讓「基礎架構即程式碼」範本填入您的特定變數、藉此提升基本模式的使用體驗。您可以直接從 AWS 帳戶執行「基礎架構即程式碼」範本、而無需提供任何工作負載工廠的修改權限。
+讀取模式適用於工作負載工廠的儲存管理。讀取模式可新增唯讀權限、讓「基礎架構即程式碼」範本填入您的特定變數、藉此提升基本模式的使用體驗。您可以直接從 AWS 帳戶執行「基礎架構即程式碼」範本，而無需提供任何工作負載工廠的修改權限。
 
-link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["深入瞭解讀取模式"^]
+link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["深入瞭解讀取模式"]
 
 
 
@@ -60,7 +60,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["
 
 您現在可以在刪除之前備份磁碟區。備份將保留在檔案系統中、直到刪除為止。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/delete-volume.html["刪除 Volume"^]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/delete-volume.html["刪除 Volume"]
 
 
 
@@ -72,9 +72,9 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/delete-volume.html["刪除
 
 您現在可以使用 Codebox 中的 Terraform 來部署檔案系統和儲存 VM 。
 
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["建立檔案系統"^]
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-storage-vm.html["建立儲存VM"^]
-* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["使用 CodeBox 的 Terraform"^]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["建立檔案系統"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-storage-vm.html["建立儲存VM"]
+* link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html["使用 CodeBox 的 Terraform"]
 
 
 
@@ -89,6 +89,6 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/delete-volume.html["刪除
 
 
 
-=== 適用於 Amazon FSX for NetApp ONTAP 的工作負載工廠初始版本
+=== Amazon FSX for NetApp ONTAP 的工作負載工廠初始版本
 
-Amazon FSX for NetApp ONTAP 現在已正式推出 Workload Factory 。
+Amazon FSX for NetApp ONTAP 目前已正式推出 BlueXP  工作負載工廠。

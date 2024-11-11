@@ -4,14 +4,14 @@ permalink: split-cloned-volume.html
 keywords: split clone volume, FlexVol volume 
 summary: 將複製的 FlexVol Volume 從其父磁碟區分割成正常的讀寫 FlexVol 磁碟區。 
 ---
-= 分割複製的 Volume
+= 在 BlueXP  工作負載工廠中分割複製的磁碟區
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-將複製的 FlexVol volume 從其父磁碟區分割成正常的讀寫 FlexVol volume 。
+將複製的 FlexVol volume 從其父磁碟區分割開來，使該複製作業成為 BlueXP  工作負載工廠中的正常讀寫 FlexVol volume 。
 
 分割期間、可在複本和父實體上存取資料。分割程序只會更新中繼資料、而且需要最少的 IO 。不會複製任何資料區塊。
 
@@ -28,18 +28,20 @@ summary: 將複製的 FlexVol Volume 從其父磁碟區分割成正常的讀寫 
 .開始之前
 分割複製的磁碟區之前、請先考慮下列事項：
 
-* 若要分割複製的 Volume 、您必須 link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結、請按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。連結建立關聯後、請返回此作業。
+* 若要分割複製的 Volume 、您必須 link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。
 * 您必須是叢集管理員。
 * 當分割作業開始時、 FlexClone Volume 必須處於線上狀態。
 * 父磁碟區必須處於線上狀態、才能成功分割。
 
 
 .步驟
-. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
-. 從儲存設備中、選取 * 移至儲存設備庫存 * 。
-. 在 *FSX for （用於 ONTAP ） * 標籤中，選擇包含要分割的複製卷的 ONTAP 文件系統的 FSX 的三點菜單，然後選擇 *Manage* （管理 * ）。
-. 從檔案系統的「總覽」標籤中、選取 * Volumes （磁碟區） * 標籤。
-. 在 Volumes （磁碟區）標籤中、選取要分割複製磁碟區的磁碟區三點選單。
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 選擇 * Volumes （卷） * 選項卡。
+. 在 Volumes （磁碟區）標籤中，選取要分割之複製磁碟區的磁碟區三點功能表。
 . 選擇 * 資料保護動作 * 、然後 * 分割複製的 Volume * 。
-. 在分割磁碟區對話方塊中、按一下 * 刪除 * 。
+. 在分割磁碟區對話方塊中，選取 * 刪除 * 。
 
+
+.結果
+磁碟區複本會分割，並顯示在「 Volume 」（磁碟區）標籤中。

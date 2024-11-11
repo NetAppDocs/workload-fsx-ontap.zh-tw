@@ -2,18 +2,18 @@
 sidebar: sidebar 
 permalink: links-overview.html 
 keywords: links, accounts, lambda 
-summary: Workload Factory 連結可在 Workload Factory 帳戶與 ONTAP 檔案系統的一或多個 FSX 之間建立信任關係和連線。這可讓您直接從 ONTAP REST API 監控及管理某些檔案系統功能、這些功能無法透過 Amazon FSX for ONTAP API 取得。 
+summary: 工作負載原廠連結可在工作負載原廠帳戶和 ONTAP 檔案系統的一或多個 FSX 之間建立信任關係和連線。 
 ---
-= 瞭解 Workload Factory 連結
+= 瞭解 BlueXP  工作負載工廠連結
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Workload Factory 連結可在 Workload Factory 帳戶與 ONTAP 檔案系統的一或多個 FSX 之間建立信任關係和連線。這可讓您直接從 Amazon FSX for ONTAP API 無法使用的 ONTAP REST API 呼叫監控及管理特定檔案系統功能。
+BlueXP  工作負載原廠連結可在工作負載原廠帳戶和一或多個適用於 ONTAP 檔案系統的 FSX 之間建立信任關係和連線。這可讓您直接從 Amazon FSX for ONTAP API 無法使用的 ONTAP REST API 呼叫監控及管理特定檔案系統功能。
 
-您不需要連結即可開始使用 Workload Factory 、但在某些情況下、您需要建立連結來解除鎖定所有 Workload Factory 功能和工作負載功能。
+您不需要連結即可開始使用工作負載工廠，但在某些情況下，您需要建立連結來解除鎖定所有工作負載原廠功能和工作負載功能。
 
 
 
@@ -23,13 +23,13 @@ Workload Factory 連結可在 Workload Factory 帳戶與 ONTAP 檔案系統的�
 
 建立連結之後、您可以將其與 ONTAP 檔案系統的一個或多個 FSX 建立關聯。每個檔案系統只能與同一個 NetApp 帳戶中的一個連結建立關聯。如果您有多個 NetApp 帳戶、則單一檔案系統可以與不同 NetApp 帳戶下的其他連結建立關聯。
 
-您可以在工作負載工廠中、從適用於 ONTAP 檔案系統頁面的 FSX 建立連結。link:create-link.html["瞭解如何建立連結"] 以取得詳細資訊。
+您可以在工作負載工廠中，從適用於 ONTAP 檔案系統頁面的 FSX 建立連結。link:create-link.html["瞭解如何建立連結"] 以取得詳細資訊。
 
 
 
 == 成本
 
-Lambda 執行的每項交易都會產生費用。由於 Lambda 是兩個系統之間的代理伺服器、因此當 Lambda 將要求傳送至檔案系統上的 ONTAP REST API 、以及將回應傳回工作負載工廠時、需要付費。
+Lambda 執行的每項交易都會產生費用。由於 Lambda 是兩個系統之間的代理伺服器，因此當 Lambda 將要求傳送至檔案系統上的 ONTAP REST API ，以及將回應傳回工作負載工廠時，都會收取費用。
 
 link:https://aws.amazon.com/lambda/pricing/["深入瞭解使用 AWS Lambda 的相關成本"^]
 
@@ -37,7 +37,7 @@ link:https://aws.amazon.com/lambda/pricing/["深入瞭解使用 AWS Lambda 的�
 
 == 需要連結時
 
-Workload Factory 需要一個連結來顯示某些資訊並執行某些工作。如果您嘗試執行需要連結的作業、但尚未將連結與 ONTAP 檔案系統的 FSX 關聯、則會看到作業需要連結的訊息。您可以新增連結、或是將適用於 ONTAP 檔案系統的 FSX 與現有連結建立關聯、以便執行作業。
+工作負載工廠需要一個連結來顯示一些資訊並執行一些工作。如果您嘗試執行需要連結的作業、但尚未將連結與 ONTAP 檔案系統的 FSX 關聯、則會看到作業需要連結的訊息。您可以新增連結、或是將適用於 ONTAP 檔案系統的 FSX 與現有連結建立關聯、以便執行作業。
 
 需要連結的功能包括：
 

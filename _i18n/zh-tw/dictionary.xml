@@ -16,25 +16,16 @@
   <block id="1f31425bcf6b010386b52bde1b3a42ed" category="list-text"><block ref="1f31425bcf6b010386b52bde1b3a42ed" category="inline-link-macro-rx"></block></block>
   <block id="ca56f4eb8ce272724e91bdcba9289351" category="inline-link-macro">在 Windows 用戶端上掛載 iSCSI LUN</block>
   <block id="5e566a13383eb6798f798ddefecee8c1" category="list-text"><block ref="5e566a13383eb6798f798ddefecee8c1" category="inline-link-macro-rx"></block></block>
-  <block id="adaef061d9852715e72936d1d7c93d28" category="summary">變更使用 SMB/CIFS 通訊協定類型之磁碟區的 CIFS 共用。</block>
-  <block id="786ba8b3daee0aa3cbe50b4c7b151cbd" category="doc">變更磁碟區的 CIFS 共用</block>
-  <block id="d6ca0f4d3d6c7bbc82ace4545b618f08" category="paragraph">變更磁碟區的 CIFS 共用區、包括決定要授予存取權的使用者和群組、以及提供存取權限的類型。</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">開始之前</block>
   <block id="30780a2d5d1315bb3798040fb45df6f0" category="paragraph">決定要授予存取權限的使用者或群組、以及授予存取權限的類型。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步驟</block>
   <block id="7f855d340cfe6607ed51975896dd19da" category="list-text">在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。</block>
-  <block id="80ad238f0c32ccf7b3f91d0b7b0ea76b" category="list-text">在 *FSX for ONTAP * 標籤中、選取要更新磁碟區之檔案系統的三點功能表、然後選取 * 管理 * 。</block>
   <block id="f76864e1c2588ae3d6373b6ab95e2209" category="list-text">從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。</block>
-  <block id="a2282e9a001ddb3fe7fe2848a9c7a282" category="list-text">在 Volumes （磁碟區）索引標籤中、按一下 Volume 的三點功能表、以變更的 SMB 共用。</block>
   <block id="2ca869b68be8f2b6e678f47d25c26fb7" category="list-text">選擇 * 進階動作 * 、然後 * 編輯 CIFS 共用 * 。</block>
   <block id="736934ebc3ee8de296f3d5213e79430e" category="list-text">在「編輯 CIFS 共用」頁面上、提供下列項目：</block>
   <block id="59d0fdf4151cde9e812dd005074026a6" category="list-text">* 使用者或群組 * ：輸入有效的使用者和群組。以分號 ";" 分隔每個項目。</block>
   <block id="e57960b090437945cad74087551739a4" category="list-text">* 權限 * ：選擇 * 完全控制 * 、 * 讀取 / 寫入 * 、 * 讀取 * 或 * 無存取 * 。</block>
-  <block id="400fae8e788b3721b9ac25fe01f04f50" category="list-text">按一下「 * 套用 * 」。</block>
-  <block id="c32e02e7c0c3c9723c4eb1dcf9eb4717" category="summary">變更使用 NFSv3 或 NFSv4.1 傳輸協定類型之 Volume 的 NFS 匯出原則。</block>
-  <block id="46749798013f332536573e169cd4b79a" category="doc">變更磁碟區的 NFS 匯出原則</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">關於這項工作</block>
-  <block id="058cac1bdef6af5c1533f5b0d2491294" category="paragraph">變更 Volume 的匯出原則涉及新增匯出原則規則、其中詳細說明用戶端規格、存取控制、超級使用者存取和 NFS 版本。您可以新增多個匯出原則、並將其排定優先順序。</block>
   <block id="4c9aa322b281bc41d9f93e03b1223838" category="paragraph">判斷匯出原則規則的用戶端規格。用戶端規格的有效值如下：</block>
   <block id="1d9e509ddb93a176b7d369a91ad7deaf" category="list-text">IP位址</block>
   <block id="4237c002bd2925e58146418fa49ea1a4" category="list-text">具有子網路遮罩的 IP 位址</block>
@@ -42,7 +33,6 @@
   <block id="8d5f3ca885d82aa94d3192474cf2bddd" category="list-text">網路群組名稱前有「 @ 」字元</block>
   <block id="a92616467ff7e1e648579a3454ab2b54" category="list-text">網域名稱前面加上句點「。」</block>
   <block id="f0bb130441ee2b3c1c250070785e9d86" category="list-text">主機名稱</block>
-  <block id="847e1aebb5a5fcc69c9844d09824d9c8" category="list-text">在 Volumes （磁碟區）標籤中、按一下 Volume 的 thThree thots （三點）功能表、以變更 NFS 匯出原則。</block>
   <block id="335b05e2a41cb988997d28bb76049a9e" category="list-text">選擇 * 進階動作 * 、然後 * 編輯 NFS 匯出原則 * 。</block>
   <block id="7bed7411c0ec462bb420d1caab3788b2" category="list-text">在「編輯 NFS 匯出原則」頁面上、提供下列項目：</block>
   <block id="5c696b543627ac902a6e6e2cba7bae86" category="list-text">* 存取控制 * ：選取 * 自訂匯出原則 * 或 * 現有匯出原則 * 。</block>
@@ -53,12 +43,9 @@
   <block id="d50b7106165d02881477017d9872c060" category="list-text">* 存取控制 * ：從下拉式功能表中選取 * 讀取 / 寫入 * 、 * 唯讀 * 或 * 無存取 * 。</block>
   <block id="fe3ddf5e5bca0c7d408b6a3e98a37ad2" category="list-text">* 超級使用者存取 * ：選擇 * 是 * 或 * 否 * 。</block>
   <block id="331a0cade2a2da259e193ee55e75b1dd" category="list-text">* NFS 版本 * ：選擇 * 全部 * 、 * NFSv3* 或 * NFSv4* 。</block>
-  <block id="a3f7d0bdeefb949ee637ea7db31f4cbc" category="summary">變更複寫關係中來源磁碟區的複寫排程。</block>
   <block id="deb3789fe7e0e458b8d9b2a7d4048372" category="doc">變更來源 Volume 的複寫排程</block>
   <block id="4d35a263e38006b519001e744be28ab5" category="paragraph">選擇從來源磁碟區將快照傳輸到複寫磁碟區的頻率、以符合您所需的點目標（ RPO ）。</block>
-  <block id="ac61a476898e647353ad0d7b8ca866d7" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中、按一下要更新檔案系統的三點功能表、然後選取 * 管理 * 。</block>
   <block id="eb38ae8021803ad1eb467650a72c6ca2" category="list-text">從檔案系統總覽中、選取 * 複寫關係 * 索引標籤。</block>
-  <block id="bd2d485713ad9c123d60ce2a7daff8b1" category="list-text">在複寫關聯性索引標籤中、按一下複寫關聯排程的三點功能表以進行變更。</block>
   <block id="48d51923b119a8a5d18f14f0ece322fb" category="list-text">選取 * 編輯複寫間隔 * 。</block>
   <block id="ed1a4fb0c44e7da0773612469b7e30ca" category="list-text">在「編輯複寫間隔」對話方塊中、選取來源磁碟區的快照傳輸頻率。您可以選擇下列頻率：</block>
   <block id="e2f640bf5d42c17d4f13cea86264b277" category="list-text">每 5 分鐘一次</block>
@@ -66,20 +53,14 @@
   <block id="d575c663732894699f897600bc377c13" category="list-text">每 8 小時</block>
   <block id="c512b685438f41daa7386329a3b8f8d3" category="list-text">每日</block>
   <block id="6c25e6a6da95b3d583c6ec4c3f82ed4d" category="list-text">每週</block>
-  <block id="d8977131f7da0505ccdd8e33f901bb75" category="summary">隨時更新磁碟區的快照原則。</block>
   <block id="340f8dee912ac16b4fb008726d3ee88f" category="doc">變更磁碟區的快照原則</block>
-  <block id="53e6e67988f9acb9f1aab8ccad2c0340" category="paragraph">需要連結才能顯示現有的快照原則。若要建立連結的關聯、請按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。然後返回此作業。</block>
   <block id="6e1473c0de5b054e5e9236bbe796cc32" category="list-text">選擇 * Volumes （卷） * 選項卡。</block>
-  <block id="b7896e81066533818c46cd2b875eb7bf" category="list-text">在 * Volumes （卷） * 選項卡中，選擇要更改其快照策略的卷的三點菜單。</block>
   <block id="deb2625de46069416467be6ef82576e6" category="list-text">選擇 * 資料保護動作 * 、 * 快照 * 、然後 * 管理快照原則 * 。</block>
   <block id="f3d450e7102c8a592a9e2a2acdfb49b7" category="list-text">在「 Snapshot 原則管理」頁面上、選取 * 變更現有的快照原則 * 。</block>
   <block id="48edfc423c398e987bce9d3f63beaca4" category="list-text">在 * Snapshot 原則名稱 * 欄位中、為此磁碟區選取不同的快照原則。</block>
   <block id="088f5e36566ccf52293c1fe9f051ace2" category="paragraph">要禁用自動快照，請選擇<block ref="334c4a4c42fdb79d7ebc3e73b517e6f8" prefix=" " category="inline-code"></block>。</block>
   <block id="d856101e7a19a68220dc0bde8102de2c" category="inline-link-macro">為此磁碟區建立新的快照原則</block>
   <block id="c1b04f6c929db7a38b307b1b487c5ae3" category="paragraph">如果不存在其他快照原則 <block ref="f4fed179849f82b0031cfe5a67e50793" category="inline-link-macro-rx"></block>、。</block>
-  <block id="e3f24dfc586c71dca48fa56d30a8c7b0" category="summary">變更分層原則、將資料從高效能主儲存層重新分配至次容量集區儲存層。</block>
-  <block id="246fd4480ce3e8ad5f3657af6202d2de" category="doc">變更磁碟區的分層原則</block>
-  <block id="569eced80fedfb96cca2b22c0a9d8670" category="paragraph">變更分層原則、以自動將資料從高效能主儲存層重新分配至次容量集區儲存層。</block>
   <block id="7cdbf010bb1a9d098db5a255cd4d6b61" category="paragraph">您可以隨時變更磁碟區的分層原則。分層原則是根據每個磁碟區來定義。</block>
   <block id="9fc6aa19a53184c8aa3107a44c58215f" category="paragraph">決定資料的儲存位置會影響您的成本節約效益。</block>
   <block id="910be748e2c5441fa28e2f0439a2bf6e" category="paragraph">適用於 ONTAP 的 FSX 有兩層可儲存 Volume 資料：</block>
@@ -93,31 +74,24 @@
   <block id="c8708259fa3c27b146a11f1d525bbed3" category="list-text">* 無 * ：將所有 Volume 資料保留在主要儲存層。</block>
   <block id="e9490b5c27d3d776758f193608ccfc70" category="list-text">* 全部 * ：將所有使用者資料和快照資料標示為冷資料、並儲存在容量集區儲存層。</block>
   <block id="bc9fd7aea881fd55baf43b86ae624fd7" category="paragraph">請注意、某些分層原則具有相關的最低冷卻週期、可設定磁碟區中的使用者資料必須保持非作用中狀態、才能將資料視為「冷」、並移至容量集區儲存層。當資料寫入磁碟時、冷卻週期即開始。</block>
-  <block id="1e1e6c9cc0fd14fbdbb5c6672c6df941" category="list-text">在 Volumes （磁碟區）索引標籤中、按一下 Volume 的 thires （三點）功能表以變更分層原則。</block>
   <block id="b0377ad22f3d2823c281bddf9364eb30" category="list-text">選擇 * 進階動作 * 、然後 * 變更分層原則 * 。</block>
   <block id="c9b998e45c31726fa66ca1b0bb585e72" category="list-text">在「變更分層原則」頁面上、選取下列其中一個分層原則：</block>
   <block id="30de36019d5f8e7b87a49a1451adef8e" category="list-text">* 自動 * ：輸入冷卻天數。</block>
   <block id="2798d429ff91df1e7767a08dfd48bc50" category="list-text">* 僅限 Snapshot * ：輸入冷卻天數。</block>
   <block id="d015a34de96d3f92372df94da0f629a7" category="list-text">*無*</block>
   <block id="b7f7419550863cb97e0251545c2b5304" category="list-text">* 全部 *</block>
-  <block id="66a934c744243259a2ab4c3ecf4b242d" category="summary">複製磁碟區、以建立原始磁碟區的讀寫磁碟區以進行測試。</block>
   <block id="d50044469c0bf9ab38eff9cf7243fb25" category="doc">複製磁碟區</block>
   <block id="63bd0fb2b2b460703fbd97af05a3976c" category="paragraph">複本會反映資料目前的時間點狀態。您也可以使用複本、讓更多使用者存取資料、而不需讓他們存取正式作業資料。</block>
   <block id="9efa6a3d6da89d5d8581ec031f3a674f" category="paragraph">只有 FlexClone Volume 支援 Volume 複製。</block>
   <block id="fcf5f111cbb3441022494e12da55ed43" category="paragraph">複製磁碟區時、會建立可寫入的磁碟區、其中包含來自父磁碟區的快照參照。在幾秒內建立複本。複製的資料不會位於磁碟區複本上、而是位於父磁碟區上。在建立複本後寫入磁碟區的任何新資料都位於複本上。</block>
   <block id="a1634df52d7b4b3dbd16678e944d9f48" category="inline-link-macro">分割複本</block>
   <block id="4945da763040062c170fcba17c2fb9a3" category="paragraph">若要讓複製的 Volume 包含來自父磁碟區的所有資料、以及建立後新增至複本的任何新資料、您需要 <block ref="ffcd2dc25b4c2d14b4a79b6644efc1a6" category="inline-link-macro-rx"></block> 從父磁碟區執行。此外、如果父磁碟區有複本、則無法刪除該父磁碟區。刪除父磁碟區之前、必須先分割複本。</block>
-  <block id="83974dc1026ee374e42bc49ce1009e84" category="list-text">在 Volumes （磁碟區）標籤中、選取要複製之磁碟區的 thThree thots （三點）功能表。</block>
   <block id="c0aee0db2523a540ba66181f63809c8b" category="list-text">選取 * 資料保護動作 * 、然後選取 * 完整複製 Volume * 。</block>
   <block id="a9056a8f8a35fa168136ae9ea8b7866d" category="list-text">在 Clone Volume （複製 Volume ）對話方塊中、輸入 Volume Clone 的名稱。</block>
-  <block id="8215bd5d2f1e1b1cb3002f32795c762e" category="list-text">按一下* Clone（複製）*。</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
   <block id="85a0e511a99369efd5c47890a946947b" category="doc">設定及更新儲存 VM 的 Active Directory</block>
-  <block id="68be660005bfe3f342ce95afa918351b" category="paragraph">在適用於 ONTAP 檔案系統的 FSX 中、為儲存 VM 設定及更新 Active Directory 。</block>
   <block id="c19f2fad6f0110c3951bd583edb5371f" category="paragraph">同樣的步驟也適用於設定及更新儲存 VM 的 Active Directory 。</block>
-  <block id="dd6f7be0a3cd3c75d5ca7431b238f499" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中、選取檔案系統的三點功能表、並將儲存 VM 更新、然後選取 * 管理 * 。</block>
   <block id="3a7b10a42e70c562594e7593e84cfb0d" category="list-text">從檔案系統總覽中、選取 * 儲存 VMS* 標籤。</block>
-  <block id="e12306a2d749dcf21e33a2d94fb36e6c" category="list-text">從 Storage VMs （儲存 VM ）標籤中、選取要設定 Active Directory 的儲存 VM 的三點功能表。</block>
   <block id="584856da16c520c5370d79f390f47426" category="list-text">選取 * 管理 AD 組態 * 。</block>
   <block id="dcfecf722762bfcce19242fd2e38a2c2" category="list-text">在「管理 AD 組態」頁面上、提供下列項目：</block>
   <block id="a531f5a3e49319a6c1b23021b5a27417" category="list-text">* 要加入的 Active Directory 網域 * ：輸入 Active Directory 的完整網域名稱（ FQDN ）。</block>
@@ -131,23 +105,16 @@
   <block id="ef13ae21eedaa1ecccd02fb7ddd30bb1" category="list-text">* 委派系統管理員群組 * ：選擇性地輸入委派的檔案系統管理員群組。</block>
   <block id="85912990c5413ea32362225e50fc2629" category="paragraph">如果您使用的是 AWS 託管的 Microsoft AD 、則必須指定群組、例如 AWS 委派的 FSX 管理員、 AWS 委派管理員、或是具有 OU 委派權限的自訂群組。</block>
   <block id="3fd21f2222285241b7bbfebc4759ab56" category="paragraph">如果您要加入自我管理的 AD 、請使用 AD 中的群組名稱。預設群組為<block ref="746c2ea920930b61350130daa63e23e5" prefix=" " category="inline-code"></block>。</block>
-  <block id="feee2b77515a5dc7c8021b28aff315e8" category="summary">在定期排程的備份之外、建立磁碟區的手動備份。</block>
-  <block id="b5147d4754d704129599f142c85cb599" category="doc">建立磁碟區的手動備份</block>
   <block id="6705427f56dd0e2d84c82d8ce7b8e137" category="paragraph">ONTAP 備份的 FSX 是每個磁碟區、因此每個備份只包含特定磁碟區中的資料。</block>
   <block id="5d34cf2e67586f6adc1c52bd11363230" category="paragraph">用於 ONTAP 備份的 FSX 是遞增式、這表示只有在儲存最近的備份之後變更的磁碟區上的資料才會被儲存。如此可將建立備份和備份所需的儲存設備所需的時間減至最低、避免重複資料而節省儲存成本。</block>
   <block id="ad999f7438a6c6743b334836cd6d2765" category="paragraph">若要備份您的磁碟區、您的磁碟區和檔案系統都必須有足夠的可用 SSD 儲存容量、才能儲存備份快照。在拍攝備份快照時、快照所消耗的額外儲存容量、不會導致磁碟區超過 98% 的 SSD 儲存使用率。如果發生這種情況、備份將會失敗。</block>
-  <block id="5bc1c2677b566f37f4d149e8bdf6a4f7" category="list-text">在 *FSX for ONTAP （用於卷的 FSX ） * 選項卡中，單擊包含卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。</block>
   <block id="a7e91b4f0b8cb9a002ae712f6a8e8856" category="list-text">在檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。</block>
-  <block id="892b167a56410d21f7a60b112aaf4df7" category="list-text">在 * Volumes （磁碟區） * 標籤中、按一下要備份磁碟區的三點功能表。</block>
   <block id="c90eb480f69fa94333471c53a08ebfb9" category="list-text">選擇 * 資料保護動作 * 、 * ONTAP 備份 * 的 FSX 、然後 * 手動備份 * 。</block>
   <block id="efb6cdeb8b2e5095e65f43be813e1f3d" category="list-text">在手動備份對話方塊中、輸入備份的名稱。</block>
-  <block id="ee3b7a53a56dcd76f9d83876cf3412ee" category="list-text">按一下 * 備份 * 。</block>
-  <block id="369008d3b792d6a24783a9b3d949c854" category="summary">使用 Workload Factory 、您可以為 ONTAP 檔案系統建立 FSX 、以新增及管理磁碟區和其他資料服務。</block>
   <block id="2fdd0cbe402a8ae2149e0cdf4e1d9b9c" category="doc">為 ONTAP 檔案系統建立 FSX</block>
   <block id="1633ddc656802ead23bcb179d8c7fcad" category="paragraph">建立檔案系統時會建立儲存 VM 。</block>
   <block id="d0e7f7527c3a0ceae557c9f12bb1d5e7" category="paragraph">在為 ONTAP 檔案系統建立 FSX 之前、您需要：</block>
   <block id="bf2ef084e923ce6ebc4b57db27892de8" category="inline-link-macro">瞭解如何授予 AWS 帳戶權限</block>
-  <block id="3dea7c5f73758b891c81f43eb58f840c" category="list-text">IAM 角色的 ARN 、賦予工作負載工廠為 ONTAP 檔案系統建立 FSX 所需的權限。<block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block>。</block>
   <block id="aba4a700f63e9801b4211989fc2b559f" category="list-text">您將在其中建立FSX以利ONTAP 執行個體的區域和VPC資訊。</block>
   <block id="956eaa6186169471a13345860cad0757" category="open-title">快速建立</block>
   <block id="8fae2064aa1f6e3d97040aa274445281" category="paragraph">快速建立可讓您使用建議的最佳實務組態。您可以在為 ONTAP 檔案系統建立 FSX 之後、變更大部分的設定。</block>
@@ -155,7 +122,6 @@
   <block id="4dbf3f8143817255acc3b74b3d52a1d2" category="list-text">在 Create FSX for （為 ONTAP 建立 FSX ）頁面上、選取 * Quick create* （快速建立 * ）。</block>
   <block id="f33ee1d7e309154be1fc329fad0ad653" category="paragraph">您也可以載入儲存的組態。</block>
   <block id="7c6859274ee77ca082be3dcb424a440e" category="list-text">在「檔案系統一般組態」下、提供下列項目：</block>
-  <block id="cf8254c1af160e61f04022f6a69ab935" category="list-text">* AWS 認證 * ：選取以在 Workload Factory 中新增 AWS 認證、或在沒有認證的情況下繼續。</block>
   <block id="73834661f85b42765d73b7cd61d1475c" category="list-text">* 檔案系統名稱 * ：輸入檔案系統的名稱。</block>
   <block id="27db8fcb1cb750024f80a00d143ee777" category="list-text">* 部署拓撲 * ：選擇部署拓撲。</block>
   <block id="e1db87892ddda8bfd0cc92dbf2aa8f28" category="list-text">橫向擴充拓撲是指使用一個檔案系統來進行資料發佈、並可增加規模以因應資料增長。</block>
@@ -205,9 +171,7 @@
   <block id="2ed978d3284ec9503be973d54abd5507" category="inline-link-macro">建立 Volume</block>
   <block id="073395e7b5fc53b602884ac0aaf757fb" category="inline-link-macro">資料保護</block>
   <block id="1354abc5a9e8cbf1dfec985c57fdde11" category="paragraph">您可以在儲存設備庫存中使用檔案系統 <block ref="41a32458a6146c3b772c57ac70acc68e" category="inline-link-macro-rx"></block>、管理適用於 ONTAP 檔案系統的 FSX 、以及設定 <block ref="7fb4f81945268c9207e001bdf264dfef" category="inline-link-macro-rx"></block> 資源。</block>
-  <block id="19277e2b06cdf7c1c5c3461f0007146a" category="summary">您可以建立和管理連結、在 Workload Factory 帳戶和 ONTAP 檔案系統的一或多個 FSX 之間提供信任關係和連線能力。</block>
   <block id="8997880c88dd70fe80799ee97bb7ac0c" category="doc">建立連結</block>
-  <block id="5b950596a41f6e3cb79b4becb41766bb" category="paragraph">您可以建立和管理連結、在 Workload Factory 帳戶和 ONTAP 檔案系統的一或多個 FSX 之間提供信任關係和連線能力。這可讓您直接從適用於 ONTAP 檔案系統的 FSX 監控及管理某些功能、這些功能無法透過 AWS FSX for ONTAP API 取得。</block>
   <block id="6015cd2e9e5bc5b037ad456163cc26cb" category="inline-link-macro">深入瞭解連結</block>
   <block id="95254aef509d2d84e8ee7dd3052d1b61" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block>。</block>
   <block id="5c6789e8d71e288316c129b90f0a025e" category="paragraph">連結利用 AWS Lambda 執行程式碼來回應事件、並自動管理該程式碼所需的運算資源。您建立的連結是 NetApp 帳戶的一部分、它們與 AWS 帳戶相關聯。</block>
@@ -215,7 +179,6 @@
   <block id="78a1c148b0467eb65998431a94a38ff5" category="paragraph">您必須在 AWS 帳戶中啟動 AWS CloudForgation 堆疊、才能建立連結。</block>
   <block id="6ac610a04fb59c8b38c0c2f4e9e0e625" category="list-text">您必須擁有認證才能登入 AWS 帳戶。</block>
   <block id="22cc060f8b88cfca4c298ec0a9aae3fa" category="list-text">使用 CloudFormation 堆疊新增連結時、 AWS 帳戶必須具有下列權限：</block>
-  <block id="1f80df5756a3df6cfe2570fd3b187e1d" category="list-text">在 *FSX for ONTAP * 標籤中、選取檔案系統的三點功能表以建立連結的關聯、然後選取 * 管理 * 。</block>
   <block id="b4b73de2efcde823d62dc35a720acecd" category="list-text">在檔案系統總覽中、選取 * 關聯連結 * 。</block>
   <block id="53bee45613e420a1313f02fc8a36b1b1" category="list-text">在關聯連結對話方塊中、選取 * 建立新連結 * 、然後選取 * 繼續 * 。</block>
   <block id="b2f3a9c80071ec30919944cb6cd21a42" category="list-text">在「建立連結」頁面上、提供下列項目：</block>
@@ -224,10 +187,7 @@
   <block id="c54e90f3916f294bec1f9be7d938fba1" category="paragraph">AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔案系統的 FSX 自動擷取。</block>
   <block id="c602cdf8533ce956e9f326890f6d8723" category="list-text">選取 * 繼續 * 以開啟 AWS 管理主控台、然後登入此 ONTAP 檔案系統的 AWS 帳戶。</block>
   <block id="ab44f988398acb833af7b9b2bc6c26b9" category="list-text">在「快速建立堆疊」頁面的「功能」下、選取 * 我瞭解 AWS CloudForgation 可能會建立 IAM 資源 * 。</block>
-  <block id="687e9c397e4fb6b561e735147b5af100" category="paragraph">請注意、當您啟動 CloudForgation 範本時、 Lambda 會獲得三個權限。Workload Factory 在使用連結時會使用這些權限。</block>
-  <block id="9b65620a4612f716c396d78c03eeadb9" category="list-text">選取 * 建立堆疊 * 、然後選取 * 繼續 * 。</block>
   <block id="da0a73063a34bf5fda005c52ba51f931" category="paragraph">您可以從「事件」頁面監控連結建立狀態。這不應超過 5 分鐘。</block>
-  <block id="7580bfe7832e708a7a254e231956ba42" category="list-text">返回 Workload Factory 介面、您會看到連結與 ONTAP 檔案系統的 FSX 相關聯。</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
   <block id="317083ae6324772b013cbace3f438183" category="paragraph">您建立的連結會與適用於 ONTAP 檔案系統的 FSX 相關聯。</block>
   <block id="19b12f8ea4cd395e2a8c4f8e4dbac642" category="summary">為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免在發生無法預見的災難時遺失資料。</block>
@@ -239,11 +199,8 @@
   <block id="3188210715ec1f36a4acbadb45350bad" category="list-text">您的儲存設備庫存中必須有兩個可用的檔案系統、才能建立複寫關係。</block>
   <block id="33429c6ab13a995d68ffda0c4dc39c19" category="inline-link-macro">首先建立連結</block>
   <block id="4820ffe2fe615fd37fb7932b296c86f1" category="inline-link-macro">建立連結的關聯</block>
-  <block id="4a54e4477cecdb862ade6f4abc90d80d" category="list-text">您用於複寫關係的兩個檔案系統必須有相關的連結。如果檔案系統沒有現有的連結，請參閱 <block ref="1bb172d13e94db502d24bfc1c5a4fc0a" category="inline-link-macro-rx"></block>。<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>在檔案系統中、按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。連結在兩個檔案系統中建立關聯後、請返回此作業。</block>
   <block id="06c8b7e08cdd0ff26018bb7b51851a9f" category="paragraph">請完成下列步驟來複寫單一磁碟區或複寫檔案系統中的所有磁碟區。</block>
   <block id="4f6c910e41c00f71304d3d06714c1c38" category="open-title">複寫單一磁碟區</block>
-  <block id="8b00b085fe548a17ab41d3ad04254662" category="list-text">在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要複製的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。</block>
-  <block id="39622748d76e58d3be29eed82dc3ae85" category="list-text">從 Volumes （磁碟區）標籤中、選取要複寫的磁碟區的 thThree thots （三點）功能表。</block>
   <block id="e0498c311fd63d398b51f62c2bf97e3b" category="list-text">選取 * 資料保護動作 * 、然後 * 複寫磁碟區資料 * 。</block>
   <block id="b9a2f47b5bc4bd7fcc8d23d6721ec4c2" category="list-text">在「建立複寫」頁面的「複寫目標」下、提供下列項目：</block>
   <block id="837278414ab16e2a74dfc1b2102bcd54" category="list-text">* 適用於 ONTAP 檔案系統 * 的 FSX ：針對適用於 ONTAP 檔案系統的目標 FSX 、選取 ONTAP 檔案系統名稱的認證、區域和 FSX 。</block>
@@ -251,7 +208,6 @@
   <block id="56aeb18822215ccd01a9293a40c3b44a" category="list-text">*Volume name* ：目標 Volume 名稱會自動以下列格式產生<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。您可以使用自動產生的 Volume 名稱或輸入其他 Volume 名稱。</block>
   <block id="1855e18cb4d4786690607fabd8a55228" category="list-text">* 分層原則 * ：選取儲存在目標 Volume 中的資料分層原則。</block>
   <block id="b3e9c4cd60af78168e1dfa0923b34db0" category="inline-link-macro">Volume 儲存容量</block>
-  <block id="60de20bb9aba6d637fe2c39698d63a93" category="paragraph">_Auto_ 是使用 ONTAP 使用者介面的 Workload Factory FSX 建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>AWS FSX for NetApp ONTAP 文件中的。</block>
   <block id="c0fb38c08c1fe26c6d51d93cc15693b0" category="list-text">* 最大傳輸速率 * ：選取 * 受限 * 、然後以 MB/s 為單位輸入最大傳輸限制或者、選取 * 無限 * 。</block>
   <block id="c498491de58eb1c7c7b811d5555b1afc" category="paragraph">如果沒有限制、網路和應用程式的效能可能會下降。或者、我們建議為 ONTAP 檔案系統的關鍵工作負載（例如主要用於災難恢復的工作負載）提供不限傳輸率的 FSX 。</block>
   <block id="7edcd879f968b4375bcba0ad4e18005d" category="list-text">在複寫設定下、提供下列項目：</block>
@@ -262,15 +218,11 @@
   <block id="2014e02aa5ca6d9ea19e234ea3e516f3" category="list-text">對於 * 建立新原則 * 、請提供下列項目：</block>
   <block id="dd27fe873924b478083e77fbe107958f" category="list-text">* 原則名稱 * ：輸入原則名稱。</block>
   <block id="28ef75c94389e1f7dfa4614197978d9e" category="list-text">* Snapshot Policies * ：在表格中、選取快照原則頻率和要保留的複本數量。您可以選取多個快照原則。</block>
-  <block id="f2a42a68e067e481d094b018459ef895" category="list-text">按一下「 * 建立 * 」。</block>
   <block id="c2ca79898f24b0041abe0a50f8a67aec" category="open-title">複寫檔案系統中的所有磁碟區</block>
-  <block id="a7a8b90e1f4a7b9d9c2c44af8cc0f509" category="list-text">在 FSX for （適用於 ONTAP 的 FSX ）標籤中、按一下含有磁碟區的檔案系統的三點功能表、然後選取 * 管理 * 。</block>
   <block id="932ea72af08ac8563c34e80a7a85d205" category="list-text">從檔案系統總覽中、選取 * 建立複寫 * 。</block>
   <block id="8642bd9871818efa86fdfbc89b47d7fe" category="list-text">*Volume name* ：目標 Volume 名稱會自動以下列格式產生<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。</block>
   <block id="27178687718ce0fb69f45347b32592a7" category="paragraph">複寫關係會出現在 * 複寫關係 * 索引標籤中。</block>
-  <block id="906226607a434eebf32c40973956b83c" category="summary">為 ONTAP Volume 建立 FSX 的快照原則。Snapshot 原則定義系統如何為磁碟區建立快照。</block>
   <block id="a008632064f344e2df83272a479135d3" category="doc">為 ONTAP Volume 建立 FSX 的快照原則</block>
-  <block id="67085a4af917acc2c9ab734c4e7bbfe8" category="paragraph">為 ONTAP Volume 建立 FSX 的自訂快照原則。Snapshot 原則定義系統如何為磁碟區建立快照。</block>
   <block id="8044f667bde3c7c59b4115402b5eaf0b" category="paragraph">您可以建立與適用於 ONTAP 的 FSX 三個內建快照原則不同的自訂快照原則：</block>
   <block id="980ef1c1aa7d1456ee087df02119341e" category="list-text"><block ref="c21f969b5f03d33d43e04f8f136e7682" prefix="" category="inline-code"></block></block>
   <block id="1ec8e1ced51ca70514fb4350ad7c29e1" category="list-text"><block ref="98f7255bb829345ca7879b7a6127f250" prefix="" category="inline-code"></block></block>
@@ -281,52 +233,29 @@
   <block id="93500ef3c4b6b914f591d40fa8709533" category="list-text">對於大多數資料集而言、 20% 的額外容量足以保留快照達四週。隨著資料越來越老舊、還原的使用率也變得越來越低。</block>
   <block id="e6b293eb079603bb103c925cf228700c" category="list-text">覆寫快照中的所有資料會消耗大量容量、這會影響資源配置 Volume 容量。</block>
   <block id="0691d778f09d713a755463d05ab1033d" category="inline-link-macro">建立連結</block>
-  <block id="5d10add417d4209c6e8037dbe9b40384" category="list-text">若要建立自訂的快照原則、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結、請按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。連結建立關聯後、請返回此作業。</block>
   <block id="b8613e46a68d4b177aeb2fe1cdab9b07" category="list-text">在 * 儲存 * 中、選取 * 移至儲存設備詳細目錄 * 。</block>
-  <block id="b561a9f576dbf5d0b495cc095a822464" category="list-text">從 * Volumes （磁碟區） * 標籤中、選取要使用排程快照保護的磁碟區的三點功能表。</block>
-  <block id="d67e779675002ae52bb96db205e592f8" category="list-text">在「 Snapshot 原則管理」頁面上、選取 * 建立新的快照原則 * 。</block>
-  <block id="8197cd59767b0d487d39d4530835d10e" category="list-text">在 * Snapshot 原則名稱 * 欄位中、輸入快照原則的名稱。</block>
-  <block id="443886f68921b4853b3d9661df7a7c0f" category="list-text">選用：在 * 說明 * 欄位中、輸入快照原則的說明。</block>
-  <block id="7881dae15f35ca3fa5220cbe11bdefe2" category="list-text">在 * 排程 * 下、選取何時建立快照。例如、每分鐘或每小時。</block>
-  <block id="ed8034815557020cf5cb39ef2e1c8cea" category="paragraph">您可以選取多個頻率。</block>
-  <block id="f2361db09e678cda3613419cc1de72f2" category="list-text">在 * 份數 * 下、輸入要保留的份數。</block>
-  <block id="c610ec69c40639be95a74d6a4551c7eb" category="paragraph">最大複本數為 1,023 份。</block>
-  <block id="b6576df8ae387ace84c72b1d00479bc0" category="list-text">選用：在 * 命名慣例 * 下、輸入原則的 * 字首 * 。</block>
-  <block id="78c10834148d83801a4f716235d19c09" category="list-text">* 保留標籤 * 會自動填入。</block>
-  <block id="8a2e9f9173bc33c79f9448e05bf8e7c0" category="paragraph">此標籤是指 SnapMirror 或複寫標籤、用於僅選取指定的快照、以便從來源複寫到目標檔案系統。</block>
-  <block id="2cf539f8f9c207e925b3cd9120f3d8b6" category="summary">為 ONTAP Volume 建立 FSX 的手動快照。快照是磁碟區內容的時間點版本。</block>
   <block id="736ef7205c037a078bc461f368c6a21f" category="doc">為 ONTAP Volume 建立 FSX 的手動快照</block>
   <block id="5b10cd7d19a8a16358cb05922f38a69e" category="paragraph">快照是磁碟區的資源、是資料的即時擷取、僅會佔用修改資料的空間。由於資料會隨著時間而改變、快照通常會隨著時間變舊而佔用更多空間。</block>
   <block id="bbc11127132b3f6e8be58ad79bf66689" category="paragraph">適用於 ONTAP Volume 的 FSX 使用即時寫入複本、因此快照中任何未修改的檔案都不會佔用任何磁碟區容量。</block>
   <block id="4eb3a89899e681d1b9380bde026db85c" category="admonition">快照並非資料的複本。如果您想要複製資料、請考慮使用 FSX 進行 ONTAP 備份或 Volume 複寫功能。</block>
-  <block id="f5f4ac7da71637cd566091e172fb686f" category="paragraph">您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block> 建立快照。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結、請按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。連結建立關聯後、請返回此作業。</block>
-  <block id="5ed10bc9eacd1d8ceeb569f66b2f7ad4" category="list-text">從 *Volumes （卷） * 選項卡中，選擇要保護的卷的三點菜單。</block>
   <block id="1377f38f1ff649a51cee62f8b5e48acb" category="list-text">選擇 * 資料保護動作 * 、 * 快照 * 、然後 * 從快照建立磁碟區 * 。</block>
   <block id="6a6a7663d9d32db04967b3413cefa463" category="list-text">在「從快照建立磁碟區」對話方塊的「 * 快照名稱 * 」欄位中、輸入快照名稱。</block>
-  <block id="fd496ab365ed045b8f226bffb9ea6b3c" category="summary">您可以建立適用於 ONTAP 儲存 VM （ SVM ）的 FSX 、以便在工作負載工廠中為您的工作負載提供儲存和資料服務。</block>
   <block id="644e775d0497e56fe0475dde3829ce1e" category="doc">為 ONTAP 檔案系統的 FSX 建立儲存 VM</block>
-  <block id="1f680fbce5c67dcc84447c128e68960e" category="paragraph">為適用於 ONTAP 檔案系統的 FSX 建立儲存 VM （ SVM ）、以便在 Workload Factory 中為您的工作負載、以虛擬方式存取儲存和資料服務。</block>
-  <block id="0f54202fd3d9422accef6305efaf73a6" category="paragraph">儲存 VM 是隔離的檔案伺服器、您可以使用它來存取 Workload Factory Storage 中每個工作負載的資料。每個 SVM 都有自己的管理認證和端點、用於管理和存取資料。</block>
   <block id="bc7303a544a54859ef646aaae48578a5" category="paragraph">有了 SVM 、當您存取適用於 ONTAP 的 FSX 中的資料時、您的用戶端和工作站會使用 SVM 的端點（ IP 位址）、掛載由 SVM 託管的 Volume 、 CIFS/SMB 共享區或 iSCSI LUN 。</block>
   <block id="0be7879371b03da9f3e439c5431f1db2" category="inline-link-macro">管理 ONTAP 儲存虛擬機器的 FSX</block>
   <block id="cbddd6713cb3317df938ea4a6fd2cd84" category="paragraph">確認每個檔案系統支援的儲存 VM 數量。如需每個檔案系統的 SVM 最大數量、請參閱 <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> AWS 文件中的。</block>
-  <block id="44e91d62c07edc1c95d12191523b0e8e" category="list-text">在 FSX for （適用於 ONTAP 的 FSX ）標籤中、按一下檔案系統的三點功能表、為建立儲存 VM 、然後選取 * 管理 * 。</block>
   <block id="e65cbc1f8e84ec0a33192b999f9e9cc4" category="list-text">從檔案系統總覽中、選取 * 建立儲存 VM* 。</block>
   <block id="cdbc38b99c6a38c90c6623e1ac73a0fd" category="list-text">在「儲存 VM 」頁面的「儲存 VM 組態」下、提供下列項目：</block>
   <block id="c9f265881e56f4c52918525bdcb9205d" category="list-text">* 名稱 * ：輸入儲存 VM 的名稱。</block>
   <block id="42a49281a2c075c2004f1e73852b27e3" category="list-text">* 儲存 VM 認證 * ：提供此儲存 VM 使用者的密碼<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 、或使用檔案系統的<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 使用者認證。</block>
   <block id="34cc44a6e06f592c6033a57f8671a67a" category="list-text">* 根磁碟區安全樣式 * ：根據存取資料的用戶端類型、選取根磁碟區安全樣式： UNIX （ Linux 用戶端）、 NTFS （ Windows 用戶端）或混合。</block>
   <block id="1bc82fa8aedf24369834db8950935e12" category="doc">從快照為 ONTAP Volume 建立新的 FSX</block>
-  <block id="c8050042a6ad9b34c4e212b953fd6448" category="paragraph">從快照建立新的 ONTAP Volume FSX 、以啟用時間點還原。</block>
   <block id="94bf5ecde85890bdfbccd00fad3fbd70" category="paragraph">快照是一次擷取 ONTAP Volume 的 FSX 唯讀映像。從快照建立新磁碟區、可在數秒內建立整個磁碟區的複本、而不受磁碟區大小的影響。新建立的複本代表新的 Volume 。</block>
   <block id="dd92a94c350d15b3e750c8345c72be14" category="paragraph">從快照建立磁碟區之前、請先考慮下列限制：</block>
   <block id="aa598f48818753dcf8598b6294e34d5b" category="list-text">權限模型的變更：如果您使用此作業來切換網路附加儲存（ NAS ）傳輸協定類型、也可能會切換安全性樣式所提供的權限模型。您可能會遇到檔案存取權限問題、您只能使用 NAS 用戶端工具進行權限設定、以管理員存取的方式手動修正。</block>
   <block id="0d9c537067f7d4fbde0af7c35b682638" category="list-text">增加磁碟區使用量：從快照建立磁碟區後、您會有兩個不同的磁碟區、而且這兩個磁碟區都會從主機檔案系統消耗容量。</block>
-  <block id="bdc309c3315688707a03830e247b63f4" category="list-text">在 *FSX for ONTAP （用於卷快照） * 選項卡中，單擊包含卷快照的文件系統的三點菜單，然後選擇 *Manage* （管理）。</block>
-  <block id="4583b94850da094bf5ff139ad4e1a73a" category="list-text">在 Volumes （磁碟區）索引標籤中、按一下含有您要建立磁碟區之快照的磁碟區的三點功能表。</block>
   <block id="749bb7d7b85b238efdd51a2af6612da7" category="list-text">選取 * 資料保護動作 * 、 * 快照 * 、然後 * 從快照 * 建立磁碟區。</block>
   <block id="7703989c08fa05b728e233f271b4650e" category="list-text">在 Create volume from a snapshot （從快照創建卷）對話框中，輸入快照名稱。</block>
-  <block id="a2abb57c1564fdf0766051ecb5f4e4a9" category="summary">為 ONTAP 檔案系統設定 FSX 之後、您可以為 ONTAP Volume 建立 FSX 。</block>
   <block id="25b72c08a4a289e6b89fc38db06792a9" category="doc">為 ONTAP Volume 建立 FSX</block>
   <block id="afd1f136e7e58574d1730a6b37234e12" category="paragraph">適用於 ONTAP Volume 的 FSX 是用於分組資料、判斷資料儲存方式、以及判斷資料存取類型的虛擬資源。Volume 不會消耗檔案系統儲存容量。儲存在磁碟區中的資料主要會消耗 SSD 儲存設備。視磁碟區的分層原則而定、資料可能也會佔用容量集區儲存空間。您可以在建立磁碟區時設定磁碟區的大小、稍後也可以變更其大小。</block>
   <block id="63a2db18e99f30997c05b3ce6b5315ed" category="paragraph">您的磁碟區可能會使用下列通訊協定：</block>
@@ -334,13 +263,9 @@
   <block id="8a1e5168feb60a6391f96310159dca9a" category="list-text">NFS ：適用於 Unix 作業系統的檔案儲存傳輸協定</block>
   <block id="ec38854bd667a882fa1d0b62579b5079" category="list-text">iSCSI ：區塊儲存傳輸協定</block>
   <block id="6508673a49d08aadcbcf9f2f8ff00354" category="paragraph">建立 Volume 之前、請先檢閱下列先決條件：</block>
-  <block id="e936ac3b92a6811d54875e41ca6dc52a" category="list-text">您必須在 Workload Factory 中擁有適用於 ONTAP 檔案系統的 FSX 。</block>
   <block id="e9e39ba1ad2eaa5aa2abb4485bacab41" category="list-text">您必須擁有儲存 VM 。</block>
   <block id="00f92f962792a32fd0f6d5cdc140d0e0" category="list-text">若要存取傳輸協定、請完成下列步驟：</block>
-  <block id="a57016477634f1b141b79d40b01e4cb3" category="list-text">若要設定對磁碟區的存取權、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結、請按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。連結建立關聯後、請返回此作業。</block>
   <block id="fe9dcd57b530281968b3b6d4aabbb89a" category="list-text">您必須設定所選傳輸協定（ CIFS 、 NFS 或 iSCSI ）的存取權。</block>
-  <block id="69b59a13f7c0fc6201518705b957ec3e" category="list-text">在 *FSX for ONTAP * 標籤中、選取您要在其中建立磁碟區的檔案系統三點功能表、然後選取 * 管理 * 。</block>
-  <block id="39e118db6b7e76a7f7d8164426d8b779" category="list-text">在 * 概述 * 標籤中、按一下 * 建立 Volume * 。</block>
   <block id="f7076d08930c21fd4e8f7fb23c377f92" category="list-text">在「一般詳細資料」下的「建立 Volume 」頁面上、提供下列詳細資料：</block>
   <block id="62e91320f9cdbfe080b1002592de785b" category="list-text">* Volume 名稱 * ：輸入磁碟區的名稱。</block>
   <block id="b2e658eb3f11776899234dd87caf3823" category="list-text">* 儲存 VM 名稱 * ：選擇性地輸入儲存 VM 名稱。</block>
@@ -410,26 +335,17 @@
   <block id="06b67291d077212da85472e8f30a4f4f" category="list-text">將 Volume 備份與快照搭配使用：同時使用這兩項功能、可確保您能夠從快照還原檔案、並在使用備份的磁碟區遺失時執行完整還原。</block>
   <block id="3f7ca4080ace9483971c72653862bc81" category="list-text">定義 Volume 備份原則：確保備份原則符合貴公司備份時間和頻率的要求。我們建議每個磁碟區至少保留兩個每日備份。</block>
   <block id="ce5c05a88da6260d354a672c1c21289d" category="list-text">定義快照排程：較舊的快照較不容易用於還原資料。我們建議您定義快照排程、以考量保留較舊快照的效益、以及額外快照容量的成本。</block>
-  <block id="4eabbcebe2f9fe816c188db2e8c72d2f" category="summary">若要刪除檔案系統、您必須先刪除與檔案系統相關的任何磁碟區、儲存 VM 或複寫關係。</block>
   <block id="b6040450a269706192bbf2b9afb8f225" category="doc">刪除檔案系統</block>
-  <block id="e8de4556e02206af55f7d5fd8303ef7d" category="list-text">在 *FSX for ONTAP * 標籤中、按一下您要刪除的 ONTAP 檔案系統之 FSX 的三點功能表。</block>
   <block id="5870733e590b9892e4d7543080453ba8" category="list-text">選擇*管理*。</block>
-  <block id="ed982d27b2ac10e2bdc9f54e63066f0a" category="list-text">在 * 總覽 * 標籤中、按一下三點功能表。</block>
-  <block id="874db297b2254479eeb702a2d7fa8dab" category="list-text">按一下*刪除*。</block>
   <block id="8250f81c2a1f1cdab5b91f08852b2b4e" category="list-text">在刪除 ONTAP 檔案系統的 FSX 對話方塊中、輸入要刪除的 ONTAP 檔案系統的 FSX 名稱。</block>
-  <block id="f69a3eeced9084e9b6b66fdaf1374e91" category="summary">視需要刪除複寫關係。</block>
   <block id="39d2beed854377dcad2ea22fe9e58477" category="doc">刪除複寫關係</block>
-  <block id="e84328e50244a1c0924a6531d2760494" category="paragraph">刪除複寫關係時、會移除來源磁碟區和目標磁碟區之間的複寫關係。複寫關係刪除之後、兩個磁碟區仍會與它們所包含的目前資料保持不中斷的狀態。</block>
   <block id="17dbc1e3f36ffb5a053ab42d1fd9520c" category="paragraph">當您刪除複寫關係時、適用於 ONTAP 的 FSX 也會刪除來源和目標 Volume 的一般複寫快照。</block>
-  <block id="55c15ff5b473332257590a9168ff4a38" category="list-text">在「複寫關係」索引標籤中、按一下要刪除複寫關係的「三點」功能表。</block>
   <block id="0f024621e0673f1f4e657983682d6e72" category="list-text">選擇*刪除*。</block>
-  <block id="44852698fbd097a38e60f4c0974a0a46" category="list-text">在刪除關聯對話方塊中、按一下 * 刪除 * 。</block>
   <block id="d7ee10288d22509d8dc2c4fc3407d9b7" category="summary">刪除不再需要從 FSX 進行 ONTAP 檔案系統組態的儲存 VM （ SVM ）。</block>
   <block id="ce9c0fa786ae9e9debeb029c1c0a4c92" category="doc">刪除儲存VM</block>
   <block id="02b7187e6912769b968fea6c5b072b02" category="paragraph">刪除儲存 VM 之前、請先檢閱下列事項：</block>
   <block id="c3c09d388249b6d53e855a7b2a0c96bf" category="list-text">請確定沒有應用程式正在存取 SVM 中的資料。</block>
   <block id="8d842d300c3897225b96256a87a3535b" category="list-text">刪除所有附加至 SVM 的非根磁碟區。</block>
-  <block id="ace8b2470d9f49536b2bc2e035f69256" category="list-text">在 Storage VMs （儲存 VM ）標籤中、選取要設定 Active Directory 的儲存 VM 的三點功能表。</block>
   <block id="ecd2a8fbe72ce15477dd74abc24effe9" category="list-text">選取 * 刪除儲存 VM* 。</block>
   <block id="d56cf22b93dfca2dbb4f657bfb2646ee" category="list-text">在刪除儲存 VM 對話方塊中、輸入「 delete 」以刪除儲存 VM 。</block>
   <block id="780efb49a17e123c477d4625dfe38545" category="summary">您可以隨時刪除適用於 ONTAP 檔案系統的 FSX 中的磁碟區。此操作無法還原。</block>
@@ -437,65 +353,40 @@
   <block id="c4037415f2f0cfbaf2d8633bef548eca" category="paragraph">刪除磁碟區之前、請先考慮下列事項：</block>
   <block id="7ba3b681b508a24c70a973831af6f1ad" category="list-text">本機快照：將永久刪除與此 FSX for ONTAP 檔案系統相關的所有快照。</block>
   <block id="4d07a6e16a1c8ad6e621cc84eb969e7e" category="list-text">適用於 ONTAP 備份的 FSX ：適用於 ONTAP 備份複本的 FSX 將會保留、您仍然可以使用這些備份複本。</block>
-  <block id="524193967bbe3f8da7683435e0a28ea4" category="list-text">在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要刪除的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。</block>
-  <block id="b0498e030069e9d348b276238c375c45" category="list-text">從 Volumes （磁碟區）索引標籤中、選取要刪除的磁碟區的三點功能表。</block>
   <block id="c54ab0793e326deff351b944ad70d29c" category="list-text">選擇 * 基本動作 * 、然後 * 刪除 Volume * 。</block>
   <block id="321fbbd6f40d9b084f632750d5190dc8" category="summary">隨時新增、更新或移除儲存 VM 的儲存 VM 標籤。</block>
-  <block id="3628bd405a4cbc203f36176e9e1c0969" category="doc">編輯儲存 VM 標籤</block>
-  <block id="9b1137e2c037a2cb220c382a83325048" category="paragraph">標記可協助您分類資源。您可以隨時新增、編輯及移除儲存 VM 的標籤。</block>
-  <block id="579779de6372cbc0aaf35ba6bcdcaafb" category="list-text">從 Storage VMs 標籤中、選取要編輯標記的儲存 VM 的三點功能表。</block>
   <block id="856fd7298379e6a75a221ebc3af9cdec" category="list-text">選取 * 編輯儲存 VM 標記 * 。</block>
   <block id="14d8aa612c687d8708f6fefc5f554d22" category="list-text">在「編輯儲存 VM 標籤」頁面上、新增、編輯或移除標籤。</block>
   <block id="2d1066d1fee53e98224fefca16751fd3" category="paragraph">您可以套用至儲存 VM 的標籤數量上限為 50 個。</block>
-  <block id="c39b3cbd986af96ef05b9724f0b92e6b" category="summary">啟用 Volume 自動擴充功能、讓 Workload Factory 為您管理 Volume 容量。您可以隨時停用。</block>
-  <block id="9f1effd9ace68ca00fe9e9e3c024b362" category="doc">啟用Volume自動擴充</block>
   <block id="edd5da19d30912fca4670982f9aef531" category="inline-link-macro">增加 Volume 容量功能</block>
   <block id="f9e4840a1cf1ddb5632e031e0334acb9" category="paragraph">您也可以選擇隨時使用手動增加 Volume 的容量 <block ref="11462b2e1fd0bd94e3dc25fc7f04c4ba" category="inline-link-macro-rx"></block>。</block>
   <block id="2332ee8494d2f8246a961c95630281a2" category="admonition">iSCSI Volume 不支援 Volume 自動擴充。</block>
-  <block id="383e6be0b9535ce4599f40c8983ccb54" category="paragraph">若要啟用 Volume 自動擴充、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>：如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結、請按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。連結建立關聯後、請返回此作業。</block>
-  <block id="7d2426d70f941a810901b9ef79971d9f" category="list-text">在 FSX for ONTAP 標籤中、選取要更新磁碟區之檔案系統的三點功能表、然後選取 * 管理 * 。</block>
-  <block id="0ee5fbd390f25b13cfaf5bd20a692953" category="list-text">從 Volumes （磁碟區）索引標籤中、選取您要修改之磁碟區的三點功能表。</block>
   <block id="91bdace9adb8211a77783be051ae3e78" category="list-text">選擇 * 基本動作 * 、然後 * 編輯 Volume 自動擴充 * 。</block>
   <block id="e334870bb4631c235cfca40400daae69" category="list-text">在「編輯自動擴充」對話方塊中、啟用 Volume 自動擴充。</block>
   <block id="3d7b2807e22b58e985dfcb21a31b176e" category="summary">標記可協助您分類資源。您可以隨時為 ONTAP Volume 新增、編輯及移除 FSX 的 Volume 標籤。</block>
-  <block id="3181f892badfa0fc09ef99ba2b5d5a53" category="doc">編輯 Volume 標記</block>
-  <block id="650aa8e613c3a75207ee0cd5956c50d7" category="list-text">在 Volumes （磁碟區）標籤中、按一下要修改標記之磁碟區的 thThree thots （三點）功能表。</block>
   <block id="c966edae1d484c4f3e557d47709e08a1" category="list-text">選擇 * 基本動作 * 、然後 * 編輯 Volume 標記 * 。</block>
   <block id="9724e2d67a8b8dacb5f774fbf0309b44" category="list-text">在「編輯 Volume 標籤」頁面上、新增、編輯或移除標籤。</block>
   <block id="88ba83269635947653a5d84b3d1da8be" category="paragraph">您可以套用至 Volume 的標記數量上限為 50 個。</block>
-  <block id="209ff7e6ecbe3110db7702a1025e561e" category="summary">啟用此功能可讓 Workload Factory 自動將遞增儲存設備新增至適用於 ONTAP 檔案系統的 FSX 、以因應容量需求隨時間而異。</block>
-  <block id="4feb19148a6e766732b4a0633d3707bc" category="doc">啟用檔案系統的自動容量管理</block>
   <block id="3189fa0a6c27988e9ac820b8115f1001" category="paragraph">只有一個帳戶可以管理此功能。</block>
   <block id="fb0d8a1c841cd92afd4cb16ddedaeed5" category="inline-link-macro">配額</block>
   <block id="81b511c5e6d03d742f3a61abc3c4019a" category="paragraph">所有適用於 ONTAP 檔案系統的 FSX 的 SSD 儲存容量上限為 524,288 GiB 。若要要求增加配額、請參閱 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> AWS FSX for NetApp ONTAP 文件中的。</block>
-  <block id="5affee16b45950738d26f5c0843bdd1b" category="paragraph">您必須在 Workload Factory 中擁有 _ 自動化 _ 權限的認證、才能完成此工作。</block>
-  <block id="bcdc2de3af393fb27f45d4eac26425af" category="list-text">登入 Workload Factory 主控台。</block>
   <block id="a301bc4d160159df428e6b29eab6333e" category="list-text">在 Storage （儲存設備）中、選取 * 前往 Storage inventory* （儲存設備庫存）。</block>
-  <block id="0142ad552a515ea392b096424ae06e8b" category="list-text">在 * 適用於 ONTAP * 的 FSX 索引標籤中、按一下檔案系統的三點功能表、以啟用的自動容量管理。</block>
-  <block id="7565c76ffefc502e04bea77818a1b377" category="list-text">在 [ 資訊 ] 下，按一下 * 自動容量管理 * 旁邊的鉛筆圖示。當滑鼠移動到 * 自動容量管理 * 列上時、下拉式箭頭旁會出現鉛筆圖示。</block>
   <block id="8c197cb16511819fd1686972b919b4bd" category="list-text">在 * 自動容量管理 * 對話方塊中、提供下列項目：</block>
   <block id="811c0aa0f47faeb6a24c4abfb98d7a22" category="list-text">* 認證 * ：從下拉式功能表中選取具有 _ 自動化 _ 權限的認證。</block>
-  <block id="c7138a5313edbf841c531ab6a473a84a" category="list-text">按一下「啟用」按鈕以 * 啟用自動容量管理 * 。</block>
   <block id="3e0bdb480d66a7375d532c6c4aff035d" category="paragraph">或者、停用此功能。如果您需要增加檔案系統容量、則必須先停用自動容量管理。</block>
   <block id="b2ce8c8b67c1ce9e75a1a834e6a756d7" category="list-text">* 容量臨界值 * ：輸入 ONTAP 檔案系統的 FSX 大小上限。</block>
   <block id="c5384d1f343e28d37a573909233d561e" category="list-text">* 容量增加增量 * ：輸入百分比以遞增增加容量。</block>
   <block id="c2a6ed685a94077454f8bad592ecfa44" category="doc">啟用及編輯快照以進行長期保留</block>
-  <block id="4194ce4e3015cdc840c4554ee5d9a832" category="paragraph">啟用快照以進行長期保留、可讓您複寫特定快照以進行長期災難恢復。</block>
-  <block id="4e7e4ef08b4d592f98e51d2f8642a5fc" category="paragraph">長期保留功能可讓業務服務持續運作、即使整個站台發生故障、也能支援應用程式使用次要複本以透明方式容錯移轉。</block>
   <block id="84926cfe10c3390bcbf0d7f22bc20ed1" category="paragraph">同樣的步驟也適用於啟用和編輯快照以進行長期保留。</block>
   <block id="9c3e61915a26d815f332c75fcafffe40" category="list-text">選取 * 編輯長期保留 * 。</block>
   <block id="3a83d555d51f666c990377ce4a7e8300" category="list-text">在「編輯長期保留」對話方塊中、啟用或停用快照以進行長期保留。</block>
-  <block id="67a6de1ba73f2f7aa8771431e1e2371c" category="list-text">如果您選擇停用快照以進行長期保留、請按一下 * 套用 * 以完成此作業。</block>
   <block id="026a574d805050a947fa3b8ffb717dda" category="list-text">如果您選擇啟用快照以進行長期保留、請在選擇現有原則或建立新原則之間進行選擇。</block>
-  <block id="59a30910e9e56c612496e49c87cbd82b" category="list-text">對於現有原則、請從下拉式功能表中選取現有原則。</block>
   <block id="a0d151f84e808b2122ef1b0e7ca19ce8" category="list-text">若要建立新原則、請提供下列項目：</block>
   <block id="00c83c7330e77156c35301871a4c4199" category="list-text">* Snapshot Policies * ：選取一或多個 Snapshot 原則。</block>
   <block id="9823554a2be74ea3c8fe833a284ad50a" category="list-text">* 要保留的複本 * ：輸入要保留在目標檔案系統上的快照複本數量。</block>
   <block id="1deea867e21bd00dec42db5a9c106317" category="summary">探索 Amazon Elastic Block Store （ EBS ）儲存設備、 Elastic File System （ EFS ）和適用於 Windows 檔案伺服器的 FSX 、以及 AWS FSX for NetApp ONTAP 中儲存工作負載的節約效益。</block>
-  <block id="4d6b033ea4734bc7dabf69813bbc3e9d" category="doc">探索適用於 ONTAP 的 FSX 的節約效益</block>
   <block id="86b5b3b0e4f0ecb1a68a9f07a11bbd37" category="paragraph">探索使用 Amazon Elastic Block Store （ EBS ）、 Elastic File System （ EFS ）和適用於 Windows 檔案伺服器的 FSX 與適用於 NetApp ONTAP 的 FSX 之儲存工作負載的節約效益。</block>
   <block id="ed8b2920ddc5b14cb6c0ba24c4b6c3af" category="inline-link-macro">授予 _ 自動化 _ 權限</block>
-  <block id="87d163ac7ed334c52282a95bd5a124d9" category="paragraph">若要讓 Workload Factory 在 AWS 帳戶中偵測適用於 Windows 檔案伺服器儲存環境的 Amazon Elastic Block Store （ EBS ）、 Elastic File System （ EFS ）和 FSX 、請確定您 <block ref="d9270f60c282b5496f17a4b48a6da305" category="inline-link-macro-rx"></block> 在 AWS 帳戶中。</block>
   <block id="cf48d7891f28d92c4308fb5debb574b0" category="section-title">探索節約效益</block>
   <block id="71399ad2fbf1c89cad16b73c9e208e04" category="paragraph">請依照儲存設備選項卡下的步驟操作。</block>
   <block id="8e276a5c4eecb9cd5c1fbb0729744eb5" category="open-title">Amazon彈性區塊儲存區（EBS）</block>
@@ -509,12 +400,9 @@
   <block id="6a882e9e3ebbb1d673beb5404c763122" category="paragraph">在您提供儲存系統組態的詳細資料之後、請檢閱頁面上提供的計算和建議。</block>
   <block id="224be392ef5d5444786fa1dea246184d" category="paragraph">此外、向下捲動至頁面底部、以 * 匯出 PDF* 或 * 檢視計算 * 。</block>
   <block id="aca77c97dcf29f670f572a7129863195" category="section-title">為 ONTAP 檔案系統部署 FSX</block>
-  <block id="d41ee345c8d0261fd097678a17139b63" category="paragraph">如果您想要切換至適用於 ONTAP 的 FSX 以節省成本、請按一下 * 建立 * 、直接從「建立適用於 ONTAP 檔案系統的 FSX 」精靈建立檔案系統、或按一下 * 儲存 * 來儲存建議的組態以供稍後使用。</block>
   <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">部署方法</block>
-  <block id="11ed0b3202d6d086758a8d450bf14383" category="list-text">在 _ 自動化 _ 模式中、您可以直接從工作負載工廠部署適用於 ONTAP 檔案系統的 FSX 。您也可以從 Codebox 視窗複製內容、並使用其中一種 Codebox 方法來部署系統。</block>
   <block id="543b29a63a3d070c0ff920d687259dfc" category="paragraph">在 _basic 模式中、您可以從 Codebox 視窗複製內容、並使用其中一種 Codebox 方法部署適用於 ONTAP 檔案系統的 FSX 。</block>
   <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="summary">NetApp 以多種方式支援工作負載工廠及其雲端服務。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和社群論壇。您的支援註冊包括透過網路票證提供遠端技術支援。</block>
-  <block id="408a4f348f40acee70fae7c43f89e8ac" category="doc">取得適用於 ONTAP for Workload Factory 的 FSX 說明</block>
   <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">取得適用於 ONTAP 的 FSX 支援</block>
   <block id="4435b263dd1a35bcd8dfda050db92b3b" category="paragraph">如需與適用於 ONTAP 的 FSX 、其基礎架構或使用服務的任何解決方案相關的技術支援、請參閱該產品的工作負載工廠文件中的「取得說明」。</block>
   <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSX for ONTAP Sf</block>
@@ -592,42 +480,29 @@
   <block id="0a2f587a53fd97b6d49adac14c5ef1b6" category="summary">當使用的 SSD 儲存容量超過您指定的臨界值時、手動增加 ONTAP 檔案系統的 FSX SSD 儲存容量。</block>
   <block id="d1c1f85063b5f4742efda82442c2ddff" category="doc">增加檔案系統容量</block>
   <block id="7db52e1b6d399a07ae2a24a19f03a6ad" category="inline-link-macro">啟用自動容量管理功能</block>
-  <block id="e916aa8237833ef72c75def81e289920" category="paragraph">或者、您也可以 <block ref="2bbbc5acd5fd256837600f63916b0e57" category="inline-link-macro-rx"></block> 讓 Workload Factory 為您管理檔案系統容量。</block>
   <block id="bdccdc17ac819f178e84be61503a0de2" category="paragraph">增加檔案系統容量會影響適用於 ONTAP 檔案系統的 FSX 的 IOPS 。</block>
   <block id="11df76043d9d8bb3a76f1f7e71096a92" category="inline-link-macro">配置 IOPS</block>
   <block id="e7317a971e575aecebe43b18f10a7503" category="paragraph">手動時 <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> 、您可能需要增加 IOPS 配置、以支援增加的檔案系統容量。</block>
   <block id="ffc888e5ff626bf410d67b62a9e8a9a8" category="paragraph">如需 SSD 儲存容量限制、請參閱 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> AWS FSX for NetApp ONTAP 文件。</block>
   <block id="3fa4dafc00a14f08641efa3389891289" category="inline-link-macro">停用自動容量管理</block>
   <block id="e58acd1760f609c958f436e6f19a798d" category="paragraph">若要增加檔案系統的容量、您必須先 <block ref="8c3635bc720b3de661de28059e4ae780" category="inline-link-macro-rx"></block>。</block>
-  <block id="99544ecdd1d26dd1780e0e82ad112454" category="list-text">在儲存設備中、按一下 * 移至儲存設備詳細目錄 * 。</block>
-  <block id="754b0ee2b33c77b302da266eaedc8431" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中、按一下檔案系統的三點功能表、以增加的容量。</block>
-  <block id="59bd598780b55d31e04ea423defba349" category="list-text">按一下 [ 資訊 ] 底下 * 容量分配 * 旁邊的鉛筆圖示。當滑鼠移動到 * 容量分配 * 列上時、下拉式箭頭旁會出現鉛筆圖示。</block>
   <block id="3f43f703da21affaf8c9fe7bb0026712" category="list-text">在 SSD 儲存容量對話方塊中、輸入 * 已配置容量 * 的數字。</block>
   <block id="bb38e8f0462bc33d127ff7d217a31149" category="list-text">選取已配置容量的單位。</block>
-  <block id="d77c0d1238ed105567e1651e819d562e" category="summary">隨時手動增加 Volume 的容量。</block>
   <block id="ceadc0f7d6f2330af477eb47568a259b" category="doc">增加 Volume 容量</block>
   <block id="eacbf9150c5d9c7a7032185805a236b8" category="inline-link-macro">啟用自動擴充功能</block>
-  <block id="39b152c5585fc0bf22a04de0cc07dff1" category="paragraph">您也可以選擇 <block ref="e5ea0961d6c7f5be0b804e74d995de2b" category="inline-link-macro-rx"></block> 讓 Workload Factory 為您管理 Volume 容量。</block>
   <block id="61912f548f2af8c04ce8d9e84cdfcebf" category="paragraph">對於 iSCSI LUN 、此作業會增加主機 LUN 的大小。容量增加後、請遵循主機作業系統提供的程序、探索 LUN 的新大小、並擴充 LUN 的檔案系統。</block>
-  <block id="32b4315d6a1896b6cbba54fc2061f97e" category="paragraph">若要增加 Volume 容量、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>：如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結、請按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。連結建立關聯後、請返回此作業。</block>
-  <block id="ca982ad7b81fca6dfff5f5e884c127c8" category="list-text">從「 Volume 」（磁碟區）索引標籤中、選取要增加容量的磁碟區三點功能表。</block>
   <block id="edd00e1c6dfe245ca67fb40d38a8f612" category="list-text">選擇 * 基本動作 * 、然後 * 增加 Volume 容量 * 。</block>
   <block id="4b3ec30c73a77c948a926f5f261f219f" category="list-text">在「增加 Volume 容量」對話方塊中、提供下列項目：</block>
   <block id="8ba1ce8b4c03e2fec48c757cacb814de" category="list-text">選擇較大的尺寸。</block>
   <block id="0268e0733e81d9eec7959c020c7609fb" category="list-text">如有需要、請更換裝置。</block>
-  <block id="47e3d95a3adbde336a43e0c9f80a08f6" category="list-text">按一下*「增加*」。</block>
   <block id="26f68296f7b3ad0f394e89c82f5ea642" category="summary">初始化來源磁碟區與目標磁碟區之間的複寫關係。</block>
   <block id="45df433d6d3e94a4c9cb03d82b93e7fa" category="doc">初始化複寫關係</block>
   <block id="42812c21ac1eee37a9ac12cf59634ce6" category="paragraph">初始化會執行 _baseline 傳輸：它會建立來源磁碟區的快照、然後將快照及其參照的所有資料區塊傳輸至目標磁碟區。</block>
   <block id="8ab8abb2ddeeba17b40c9c83b7345674" category="paragraph">選擇完成此作業時請考慮。初始化可能會很耗時。您可能想要在非尖峰時間執行基準傳輸。</block>
-  <block id="2f3b6e3411ca99f6b419b5b2e19cb490" category="list-text">在複寫關係索引標籤中、按一下要初始化複寫關係的三點功能表。</block>
   <block id="18e73e557ecb75c57d1d16ca781cbfbe" category="list-text">選擇 * 初始化 * 。</block>
-  <block id="a6bb4a522340d03b3b74b34da14c1645" category="list-text">在「初始化關係」對話方塊中、按一下 * 初始化 * 。</block>
   <block id="1eba71d64e6c5e410e558530711e835b" category="summary">已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。請仔細檢閱這些限制。</block>
   <block id="482723983a4f2af954e36ff41e567451" category="doc">已知限制</block>
-  <block id="e0b6f78e01f9a479e1f512c03bb3d4fa" category="paragraph">已知的限制可識別此產品版本在 Workload Factory 中不支援的平台、裝置或功能、或是無法與產品正確互通的平台、請仔細檢閱這些限制。</block>
   <block id="97e7c9a7d06eac006a28bf05467fcc8b" category="section-title">連結</block>
-  <block id="091b1e7473941991566e0020e4b31a0d" category="paragraph">若要在 Workload Factory 使用者介面中完成複寫等作業、需要連結。</block>
   <block id="fd18465573ec21a6218982055981f6b1" category="section-title">儲存效率</block>
   <block id="573994bf2d443bf682f6d3d34a979de0" category="paragraph">磁碟區建立後、無法停用或啟用儲存效率。</block>
   <block id="488044172f20eab904aecc2827c019b4" category="section-title">處理量容量區域支援</block>
@@ -640,7 +515,6 @@
   <block id="a4f157471406b244df3c4e7727b860ce" category="list-text">當自動容量管理功能正在執行時、不允許手動增加容量。</block>
   <block id="ba4b9c977763004497f589616277865f" category="list-text">只有在啟用自動容量管理功能時、才能使用相同的權限來停用該功能。</block>
   <block id="2204b0f79985b7b0565114e8305937a5" category="section-title">儲存VM</block>
-  <block id="788b79b544c9d26ebf09e0fd37232958" category="paragraph">每個 SKU 的儲存 VM 數量有限。工作負載工廠不支援建立超出限制的儲存 VM 。 ^1^</block>
   <block id="b1c8cb58e124bead4ca2e09fa1c20c9b" category="paragraph">如需每個檔案系統的 SVM 最大數量、請參閱 <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> AWS 文件中的。</block>
   <block id="3a448e496404b548627a97fc00da8e23" category="section-title">iSCSI 傳輸協定支援</block>
   <block id="33060a985f3ea357dedca3b638c9dedc" category="list-text">iSCSI 傳輸協定僅支援橫向擴充部署。^1^</block>
@@ -659,14 +533,9 @@
   <block id="14a70db13794af7fe8fcfa30adaad268" category="list-text">彈性檔案系統（ EFS ）：突增處理量模式</block>
   <block id="fc9d3df613063ee57906c461320744e2" category="paragraph">附註：</block>
   <block id="92a4c4b1719c3bc72db060a5acc6363d" category="list-text">適用於 Amazon FSX for NetApp ONTAP</block>
-  <block id="a6ea8698bb0a2a5be6c2039333230f0d" category="summary">Amazon FSX for NetApp ONTAP 是一項完全託管的服務、可讓客戶在工作負載工廠內啟動及執行檔案系統作為工作負載的儲存後端。</block>
-  <block id="4fb5c62e4204767d56377c5d0f84a5ba" category="doc">瞭解適用於 NetApp ONTAP 的 Amazon FSX 工作負載工廠</block>
-  <block id="3ba41983dc34c454fac1062a56c9d5af" category="paragraph">Amazon FSX for NetApp ONTAP 是完全託管的雲端型資料儲存服務、可提供進階資料管理功能和高度擴充的效能。適用於 ONTAP 的 FSX 可讓您建立及管理檔案系統、做為 BlueXP Workload Factory 中所有工作負載的儲存後端。</block>
   <block id="f2ac4fe16c1c49a64a6c593ed82deecd" category="paragraph">FSX for ONTAP VMware提供NetApp客戶目前內部部署所使用的相同功能、效能和管理功能、以及原生AWS服務的簡易性、敏捷度、安全性和擴充性。</block>
-  <block id="fc08f72723043518e57ed358c9e6d9c3" category="paragraph">ONTAP 的 FSX 是工作負載工廠的 _Storage_ 元件。</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
   <block id="0498aaca99e6da8ac73ed5c2cdc77af2" category="paragraph">適用於 ONTAP 的 FSX 提供下列功能：</block>
-  <block id="284a6c24035638857b0bac1062c0bdb2" category="list-text">* 完全託管服務 * ：提供與 Workload Factory 主控台整合的全託管服務。</block>
   <block id="1252aae786a3ef33141ff6f61e500bd3" category="list-text">* 高可用度 * ：為 ONTAP 檔案系統的每個 FSX 提供高可用度、支援單一和多重可用度區域部署。</block>
   <block id="8b4170a08fe233d3f1ab1a7f2b813fe7" category="list-text">* 自動快照 * ：利用自動化、有效率的快照來保護資料、快照近乎即時、空間效率極高的時間點檔案系統或磁碟區唯讀複本。</block>
   <block id="ee3721a037ae0201585fa0f3d8524835" category="list-text">* Volume 複寫 * ：透過 Amazon Web Services 的跨區域複寫功能、提供災難恢復功能。</block>
@@ -679,19 +548,14 @@
   <block id="c0bfa18f4d4b53df41758502c7ed279b" category="list-text">* 精簡配置 * ：可預先配置容量、節省成本、直到需要更多容量為止。</block>
   <block id="dacc1efce8073cac35b2ee5a9ae52c4c" category="list-text">* 重複資料刪除與壓縮 * ：消除重複的資料區塊、壓縮資料區塊、以減少 ONTAP 檔案系統的 FSX 所需的實體儲存容量、進而節省成本。</block>
   <block id="4db5604b0bc72aea1fe7399b332f28cb" category="list-text">* 資料分層 * ：將較不常存取的資料從主要高效能 SSD 儲存層移至次要容量集區儲存層、藉此降低儲存成本。</block>
-  <block id="83e08612242214ecb1e7db2eb93df5dc" category="section-title">Workload Factory 的其他功能</block>
-  <block id="1aef323edde8102753152ae05e915dfd" category="list-text">* 儲存成本比較計算機 * ：將 Amazon Elastic Block Store （ EBS ）、 Elastic File System （ EFS ）和適用於 Windows 檔案伺服器的 FSX 儲存成本與適用於 ONTAP 的 FSX 進行比較。從計算機中、您可以檢視適用於 ONTAP 儲存組態的 FSX 如何節省成本、並規劃移轉至適用於 ONTAP 儲存設備的 FSX 。</block>
-  <block id="8206aae420024093a0178dd69e3bd2dc" category="list-text">* 工作負載工廠使用者介面 * ：提供 _ 快速建立 _ 和 _ 進階建立 _ 部署模式選項。快速建立包括 AWS 、 NetApp 、以及適用於您儲存組態的業界標準最佳實務做法。</block>
   <block id="a5a980f3518b6bdf573ccca8b4570aaa" category="list-text">* 代碼箱 * ：為開發人員提供適用於 ONTAP 作業的 FSX 程式碼檢視器、用於複製和下載的程式碼範本、以及用於重新使用程式碼的自動化目錄。</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">成本</block>
   <block id="2f00f54e8e91e47bd247b06a51824fb0" category="inline-link-macro">Amazon FSX for NetApp ONTAP 的定價</block>
-  <block id="003e6f06a90f7d13e5821fd20cb570ce" category="paragraph">您的 FSX for ONTAP 帳戶由 AWS 維護、而非由 Workload Factory 維護。請參閱 <block ref="d466c04e3dc9277f23f307f5afe7df62" category="inline-link-macro-rx"></block>。</block>
   <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">支援的地區</block>
   <block id="d5b1044cbc510048a5dac270bde89ed5" category="inline-link">檢視支援的Amazon地區。</block>
   <block id="ee9b3af8630059982f4d1dd2fd3834a3" category="paragraph"><block ref="ee9b3af8630059982f4d1dd2fd3834a3" category="inline-link-rx"></block></block>
   <block id="20c404f3ca0633629eee9b1b4ccd6737" category="section-title">取得協助</block>
   <block id="da444b283df699667b2316206972bdfe" category="paragraph">Amazon FSX for NetApp ONTAP 的功能是AWS的第一方解決方案。如需與適用於 ONTAP 檔案系統、基礎架構或任何使用此服務的解決方案的 FSX 相關的問題或技術支援問題、請使用 AWS 管理主控台的支援中心、開啟 AWS 的支援案例。選取「FSXfor ONTAP Sf1」服務和適當的類別。提供建立AWS支援案例所需的其餘資訊。</block>
-  <block id="b49c47706d393689e68481f76e8388d7" category="paragraph">如需有關 Workload Factory 或 Workload Factory 應用程式與服務的一般問題、請 <block ref="212087c74fdb398dac1262c0d5f1734c" category="inline-link-macro-rx"></block>參閱。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律聲明</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">法律聲明提供版權聲明、商標、專利等存取權限。</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版權</block>
@@ -718,30 +582,21 @@
   <block id="f38c7416013fc239c3dd3288d40a40c0" category="list-text"><block ref="f38c7416013fc239c3dd3288d40a40c0" category="inline-link-rx"></block></block>
   <block id="404a5efb62a3a3f22b02593091042608" category="inline-link">VMware 工作負載工廠</block>
   <block id="9a211183d3fa82368d76fdbab5abdeda" category="list-text"><block ref="9a211183d3fa82368d76fdbab5abdeda" category="inline-link-rx"></block></block>
-  <block id="9aaf4a862306d386531d16e3c999f652" category="summary">限制複寫關係的最大傳輸率。無限傳輸率可能會對其他應用程式和網路的效能造成負面影響。</block>
   <block id="c2afadd6bca5968317f2f7f1a7e37514" category="doc">限制複寫關係的最大傳輸率</block>
   <block id="091ab8de8bd05d3d281793c55240d887" category="paragraph">限制最大傳輸速率是選擇性的、但建議使用。如果沒有限制、網路和應用程式的效能可能會下降。</block>
   <block id="4cb1e25c015161bf2183f7f8af361d6a" category="paragraph">或者、我們建議為 ONTAP 檔案系統的關鍵工作負載（例如主要用於災難恢復的工作負載）提供不限傳輸率的 FSX 。</block>
   <block id="e4f625e812bf67c821c7b742fdaa3196" category="paragraph">請考慮要分配多少頻寬來進行複寫。</block>
-  <block id="0291e76668390d4ab0c04106bfb9384c" category="list-text">在 [ 複寫關聯性 ] 索引標籤中，按一下複寫關聯的 [ 三點 ] 功能表，以限制的最大傳輸率。</block>
   <block id="76d46f140889dce175ee00325fc5a79f" category="list-text">選取 * 編輯最大傳輸率 * 。</block>
   <block id="9666adae2ca3bb8c64ee74e40c23c7b3" category="list-text">在「編輯最大傳輸率」對話方塊中、選取 * 限制 * 、然後輸入以 MB/s 為單位的最大傳輸限制</block>
   <block id="0c2c6a9c149348bd95ea113c9e333baa" category="paragraph">或者、選取 * 無限 * 。</block>
-  <block id="6ae53be9222b53da0eb66c740a2e11e5" category="summary">Workload Factory 連結可在 Workload Factory 帳戶與 ONTAP 檔案系統的一或多個 FSX 之間建立信任關係和連線。這可讓您直接從 ONTAP REST API 監控及管理某些檔案系統功能、這些功能無法透過 Amazon FSX for ONTAP API 取得。</block>
-  <block id="e792f4d27d1dc64295baf4344c9aca49" category="doc">瞭解 Workload Factory 連結</block>
-  <block id="63fdb3a793a118cdadbab358b3fd4087" category="paragraph">Workload Factory 連結可在 Workload Factory 帳戶與 ONTAP 檔案系統的一或多個 FSX 之間建立信任關係和連線。這可讓您直接從 Amazon FSX for ONTAP API 無法使用的 ONTAP REST API 呼叫監控及管理特定檔案系統功能。</block>
-  <block id="1e2cf39904eebcbddae0fe72e0186b8b" category="paragraph">您不需要連結即可開始使用 Workload Factory 、但在某些情況下、您需要建立連結來解除鎖定所有 Workload Factory 功能和工作負載功能。</block>
   <block id="87684df341e5a7d9f280a7bdf2048a6e" category="section-title">連結的運作方式</block>
   <block id="5abd3a6ae198e27e4c8402463411560f" category="paragraph">連結運用 AWS Lambda 。Lambda 會回應事件執行程式碼、並自動管理該程式碼所需的運算資源。您建立的連結是 NetApp 帳戶的一部分、它們與 AWS 帳戶相關聯。</block>
   <block id="ff5c41103f48a7b4755ac57734036d05" category="paragraph">建立連結之後、您可以將其與 ONTAP 檔案系統的一個或多個 FSX 建立關聯。每個檔案系統只能與同一個 NetApp 帳戶中的一個連結建立關聯。如果您有多個 NetApp 帳戶、則單一檔案系統可以與不同 NetApp 帳戶下的其他連結建立關聯。</block>
   <block id="7d6d7edbcee228f35d85531a33a68076" category="inline-link-macro">瞭解如何建立連結</block>
-  <block id="9964a9a113254149806680859b9940d4" category="paragraph">您可以在工作負載工廠中、從適用於 ONTAP 檔案系統頁面的 FSX 建立連結。<block ref="e9a88ae15a9584972e43294d65e9c8ac" category="inline-link-macro-rx"></block> 以取得詳細資訊。</block>
   <block id="66096c22a6220952b7aef731ef78c167" category="section-title">成本</block>
-  <block id="f42971ab06d234b616d35c6be9beb74d" category="paragraph">Lambda 執行的每項交易都會產生費用。由於 Lambda 是兩個系統之間的代理伺服器、因此當 Lambda 將要求傳送至檔案系統上的 ONTAP REST API 、以及將回應傳回工作負載工廠時、需要付費。</block>
   <block id="0ab8cd7f04804af6d53be93ef7bd5345" category="inline-link-macro">深入瞭解使用 AWS Lambda 的相關成本</block>
   <block id="70f0040e444997fbb4beeeae8bd03d34" category="paragraph"><block ref="70f0040e444997fbb4beeeae8bd03d34" category="inline-link-macro-rx"></block></block>
   <block id="8cd69d367e2dbdfca9ec0b55ba13baec" category="section-title">需要連結時</block>
-  <block id="2965b2f938a2890f49826278c1579eb7" category="paragraph">Workload Factory 需要一個連結來顯示某些資訊並執行某些工作。如果您嘗試執行需要連結的作業、但尚未將連結與 ONTAP 檔案系統的 FSX 關聯、則會看到作業需要連結的訊息。您可以新增連結、或是將適用於 ONTAP 檔案系統的 FSX 與現有連結建立關聯、以便執行作業。</block>
   <block id="c0653b3ad30a51a0fe3228ad2877ac9d" category="paragraph">需要連結的功能包括：</block>
   <block id="ab887a13e0e43ab14f26aa4139d3931e" category="list-text">顯示安裝在適用於 ONTAP 檔案系統的 FSX 上的 ONTAP 版本</block>
   <block id="6a0bbe6ca6ca13a9f69ba22ff72d4db9" category="list-text">管理系統上的 iSCSI 磁碟區</block>
@@ -752,15 +607,11 @@
   <block id="f15997f78fd09915dc098e9c00579d74" category="list-text">在檔案系統中複製磁碟區</block>
   <block id="12f68de27d579f57f0f70762ccd96328" category="list-text">直接從 ONTAP 顯示其他指標（ Amazon CloudWatch 會收集預設指標）</block>
   <block id="1a59c94816246f9168f366b6938e1715" category="list-text">NFS 匯出原則的管理</block>
-  <block id="ae1ff0f3c3207efdd6d40f27141053cc" category="summary">您可以建立和管理連結、在 Workload Factory 帳戶和 ONTAP 檔案系統的一或多個 FSX 之間提供信任關係和連線能力。這可讓您直接從 ONTAP 檔案系統監控及管理某些功能、這些功能無法透過 AWS FSX for ONTAP API 使用。</block>
   <block id="fa1a08e2a749c9f330c9a8e60cac9cc3" category="doc">管理連結</block>
-  <block id="021a8fb66a588271a7ed3bd0296a9219" category="paragraph">管理您與 Workload Factory 帳戶相關的連結。</block>
   <block id="a4fcf9229a590e13a5a514e19c4c398e" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block> 或 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。</block>
   <block id="e32918056c538c64f6e229f2ca257e25" category="section-title">檢視與您帳戶相關的連結</block>
   <block id="a8fa4cf9dc4a62f0a1665e1500bbff0a" category="paragraph">您可以檢視目前與您帳戶相關的連結。</block>
-  <block id="01ef55b88cc18a1703556ba5787548f1" category="list-text">從「帳戶」功能表中、選取 * 連結 * 。</block>
   <block id="d1c0fce8fad9bbea3f4af6e7b074017a" category="inline-image-macro">顯示如何開啟連結頁面的螢幕擷取畫面。</block>
-  <block id="f3636be9e3c5c98f7985af1fe293ad19" category="paragraph"><block ref="f3636be9e3c5c98f7985af1fe293ad19" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f6ece838c4df65278bd8c3281de96ff5" category="list-text">如果有任何連結、概觀頁面會提供相關資訊。</block>
   <block id="c1197fb19ed4c969880f963d9b6df11f" category="list-text">若要檢視與連結相關聯的 ONTAP 檔案系統的 FSX 、請選取相關資源區段中的 * 檢視 * 按鈕。</block>
   <block id="65ded7963c0209145c9b1f65dff784c8" category="list-text">如果您需要連結的 Amazon 資源名稱（ ARN ）、您可以選取 ARN 欄位旁的 _COPY_ 圖示。</block>
@@ -769,101 +620,61 @@
   <block id="08b823c02dab45521ba0865e2f755f74" category="list-text">在「建立關聯」連結頁面中、選取 * 建立現有連結的關聯 * 、選取連結、然後選取 * 套用 * 。</block>
   <block id="76030d334bb1e561a226ecb64d46eefa" category="paragraph">此連結與適用於 ONTAP 檔案系統的 FSX 相關聯、您可以執行進階 ONTAP 作業。</block>
   <block id="93ebb8d72a0e7c1dd1418d053f7a19cd" category="section-title">編輯連結</block>
-  <block id="c4aa49062b446a9d4f1b821ea4acbe46" category="paragraph">您無法從 Workload Factory 介面編輯連結。如果您需要變更連結、則需要建立新連結、然後將該連結與檔案系統建立關聯。</block>
   <block id="191297866068665b2c5ad24b9642279b" category="admonition">您可以使用 AWS 主控台編輯 Lambda 網路組態（例如 VPC 、子網路和安全性群組）、變更會反映在連結管理 UI 中；不過、這些變更可能會導致 Lambda 和 ONTAP 之間的連線問題、不建議使用。</block>
   <block id="d1a880704664676bffdaf8c74ccfdbbc" category="section-title">移除連結</block>
   <block id="e39c068b963de97aa76b144b426e273e" category="paragraph">您可以移除不再在環境中使用的連結。移除連結後、任何適用於 ONTAP 檔案系統的 FSX 或其他使用連結的資源將無法使用特定功能。</block>
-  <block id="03fc743c74b7e7511aa1eeb9bf490f14" category="paragraph">請注意、此連結僅會從 Workload Factory 刪除、不會從 AWS 環境中刪除。移除 Workload Factory 中的連結後、您必須從 AWS 帳戶刪除 Lambda 功能。</block>
   <block id="1b2e63262991497e4aba5a1a22e4e55d" category="list-text">從「連結」頁面中、選取功能表按鈕、然後選取 * 移除 * 。</block>
-  <block id="f1ce091ae1a5a535ceceb1b8895c7620" category="inline-image-macro">顯示如何從 Workload Factory 移除連結的螢幕擷取畫面。</block>
   <block id="39d7d9e85c32f2e7a66207533ef4a3a9" category="list-text">如果您確定、請再次選取 * 移除 * 。</block>
   <block id="0978bfc9ea0b38f88360973d41319547" category="inline-link-macro">刪除 Lambda 函數</block>
   <block id="0cfc72f205d571b960431be39a5d413e" category="paragraph">請參閱 AWS 文件 <block ref="00813965c876b66bf6a0f1cc3b46a3b0" category="inline-link-macro-rx"></block>。</block>
-  <block id="d96c7a059729bb9d61acde97db61c4d8" category="summary">適用於 ONTAP 的 FSX 效能。</block>
   <block id="aa7aca7c91fd6a0597d1d445950a06f4" category="doc">適用於 ONTAP 的 FSX 效能</block>
   <block id="bc4bb24d5e702fb79be623b84e7cf47e" category="inline-link-macro">Amazon FSX提供NetApp ONTAP 的效能</block>
   <block id="635d4737dc14d283881c28be63b10bc5" category="paragraph">如需效能概觀、請參閱 <block ref="a572b0e55a3a15b7b3460602e8714ba1" category="inline-link-macro-rx"></block> 文件。</block>
   <block id="4722f461ec75d7519dda14d3801e4c77" category="summary">自動為 ONTAP 檔案系統的 FSX 配置或手動配置 SSD IOPS 。</block>
   <block id="05862a1ccb87e75b0da8c62514b38f1d" category="doc">為 ONTAP 檔案系統配置 FSX 的 SSD IOPS</block>
   <block id="4215ae214ae67c51222692ab51e15846" category="paragraph">您可以為 FSX 檔案系統啟用自動 SSD IOPS 資源配置、或手動配置 IOPS 。</block>
-  <block id="01813b7f2fc69c8cef39e5ab5ce94c22" category="paragraph">自動佈建的 IOPS 是以每 GiB 3 IOPS 計算。</block>
-  <block id="bad5772919d73bf3b17433524b58ead6" category="inline-link-macro">增加檔案系統容量</block>
-  <block id="db4a439e3bf4e41614be86cbde29b712" category="paragraph">如果您手動配置 IOPS 、可能需要先增加 IOPS 、才能進行 <block ref="e91648e5fc7cd2863569e8c9678d7b12" category="inline-link-macro-rx"></block>。</block>
-  <block id="dfe86c7515c8c0652743efbad7e9a35f" category="paragraph">如需 IOPS 限制、請參閱 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> AWS FSX for NetApp ONTAP 文件中的。</block>
-  <block id="ac9a126367786fdb2d2b97a94d3c744c" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中、按一下檔案系統的三點功能表來配置 IOPS 、然後選取 * 管理 * 。</block>
-  <block id="c2e30a9e98b6e8bf6a0fc065925cf524" category="list-text">在 [ 資訊 ] 下，按一下 [*IOPS 分配 ] 旁邊的鉛筆圖示。當滑鼠移動到 *IOPS allocation （ IOPS 分配）列上時、下拉式箭頭旁會出現鉛筆圖示。</block>
   <block id="41bcf7522348313f9855d790835cdba7" category="list-text">在 [ 已配置的 IOPS ] 對話方塊中，選取 * 自動 * 或 * 使用者已配置 * 。</block>
-  <block id="47a596fe2d532370d4229650d905eb68" category="list-text">如果您選取 * 使用者佈建 * 、請輸入 * IOPS 值 * 。</block>
-  <block id="fbda414afc779c9e1e46c45b74091adb" category="summary">只ONTAP 要幾個步驟、就能開始使用FSXfor Sfor而已。</block>
-  <block id="44b47b96b21fd4694aa49b0d3e3931fe" category="doc">Amazon FSX for NetApp ONTAP 工作負載工廠快速入門</block>
-  <block id="c1ce390a787d8a60ed4ea31ad62ca959" category="paragraph">透過適用於 Amazon FSX for NetApp ONTAP 的 Workload Factory 、您可以立即以 _basive_ 模式開始使用。</block>
-  <block id="969b8fae6f019858f311f55c46e3f82b" category="paragraph">如果您想要使用 Workload Factory 來建立檔案系統、管理資源等、只需幾個步驟即可開始使用。在這種情況下、您需要 AWS 帳戶才能開始使用。</block>
   <block id="c37e590e9c50960a15f3292676cc0c18" category="paragraph">請依照下列步驟開始使用。</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">一</block>
-  <block id="3d784fb83da69a092542ad97e84229a1" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 登入 Workload Factory</block>
-  <block id="e3f4d5b3a0d16b68c0f95c7031bbab0f" category="inline-link-macro">在 Workload Factory 中設定帳戶</block>
   <block id="0d6187a6dbf87b209ebf23f8fee502f9" category="inline-link-macro">登入</block>
-  <block id="21f5ea0bd2c3e06693357df598869216" category="paragraph">您需要 <block ref="9144f2d687cdfc71041a1a85068f8ab7" category="inline-link-macro-rx"></block> 和 <block ref="10204cc30f2f30795b6ce82a21da7b1a" category="inline-link-macro-rx"></block></block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">二</block>
   <block id="27c19be9febabd1e2fb82d7a39784f2d" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 新增認證和權限</block>
   <block id="ba8b072b83c1e6db56e40bf48ddb0871" category="inline-link-macro">作業模式</block>
-  <block id="fad2f7a49be756f98f3e7a34ef811e09" category="paragraph">如果您選擇以 _basive_ 模式操作、就不需要再繼續操作。您可以開始使用 ONTAP 適用的 Workload Factory 來複製部分完成的程式碼範例。</block>
   <block id="ce8e7e98b5597e78e8fd7d6bc94729cb" category="inline-link-macro">手動新增認證至帳戶</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">三</block>
   <block id="8c163240a45cebe17c44b7359252c96a" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 建立檔案系統</block>
-  <block id="8fd935558171bd50056871ef9ee7bd05" category="inline-link-macro">Workload Factory 主控台</block>
   <block id="1a65b15a79983b5b42d6a3158b5b81e9" category="inline-link-macro">瞭解如何建立檔案系統</block>
-  <block id="e7e26f9445bf8b303826a941ff35339e" category="paragraph">您將建立 FSX 檔案系統、開始在工作負載工廠中管理儲存設備和 ONTAP 資源的 FSX 。在的「儲存」中 <block ref="ed002915dbbbf90a20b3d8fdf4cc2390" category="inline-link-macro-rx"></block>、按一下 * 建立檔案系統 * 。<block ref="1f3b8beb11bf530a33922b2af302faf4" category="inline-link-macro-rx"></block>。</block>
   <block id="9bd1b5c2c50da3c36cba4f17c259ae08" category="inline-link-macro">使用儲存節約計算機探索節約效益。</block>
   <block id="74125d7a69a31a4c2d6c6637ca43f137" category="paragraph">您也可以從儲存節約計算機開始、比較 Amazon Elastic Block Store 、 Elastic File System 和適用於 Windows 檔案伺服器儲存環境的 FSX 與適用於 ONTAP 的 FSX 的成本。 <block ref="487bc82bdb3f9feb4b100f5bfcc33ebf" category="inline-link-macro-rx"></block></block>
   <block id="89568baf7659b31a2110d1de7f69778d" category="paragraph">您可以在儲存設備庫存中使用檔案系統 <block ref="41a32458a6146c3b772c57ac70acc68e" category="inline-link-macro-rx"></block>、管理適用於 ONTAP 檔案系統的 FSX 、以及設定資源的資料保護。</block>
   <block id="5cc3559759253562c2ea32461733d1e7" category="summary">重新平衡磁碟區的容量、以避免隨著時間而發展的不平衡現象。</block>
-  <block id="1b455dafb4119822f4ad16f2dbaaf4f8" category="doc">重新平衡磁碟區的容量</block>
   <block id="15aca40f14c29fe9e5a56d6734a1f791" category="paragraph">重新平衡磁碟區會在新增檔案和檔案成長、隨著時間的推移而產生不平衡時、重新分配容量。手動開始重新平衡作業後、我們會選取檔案、並自動且不中斷地移動。</block>
   <block id="18ad76c062a0f79a812d4e5b767d88e2" category="admonition">只有 FlexGroup 磁碟區才支援重新平衡磁碟區。</block>
-  <block id="5460f31ac92f52f3f5820cf52976fbea" category="paragraph">若要重新平衡磁碟區、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結、請按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。連結建立關聯後、請返回此作業。</block>
-  <block id="0161d1dd9229c28ce26ab0ae5cff149f" category="list-text">在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要重新平衡的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。</block>
-  <block id="ffb031ad5bcaa94ed5ecd85e3404a4b2" category="list-text">從 Volumes （磁碟區）索引標籤中、選取要重新平衡的磁碟區三點選單。</block>
   <block id="c58a14e0270c321d51e150d167496aa7" category="list-text">選擇 * 進階動作 * 、然後 * 重新平衡 Volume * 。</block>
   <block id="f648cc9da4798cb98b75d0072b51f243" category="list-text">在重新平衡體積對話方塊中、選取 * 重新平衡 * 。</block>
   <block id="a509c58d8659a3366f3053048526e6ec" category="summary">將儲存 VM 複製到另一個適用於 ONTAP 檔案系統的 FSX 、可在資料遺失時提供保護層的資料存取。</block>
   <block id="ec42d150d63ba9d69905da61ff84b59b" category="doc">將儲存 VM 複寫到另一個適用於 ONTAP 檔案系統的 FSX</block>
-  <block id="5fd1be0d2c2e8a34aea2ce8ed2d0451b" category="paragraph">將儲存 VM 複製到另一個適用於 ONTAP 檔案系統的 FSX 、可在資料遺失時提供保護層的資料存取。此作業會將一個儲存 VM 中的所有磁碟區複寫到另一個適用於 ONTAP 檔案系統的 FSX 。</block>
-  <block id="fb28fa828c96cc38ffecea1df3ded301" category="paragraph">若要將儲存 VM 複寫到另一個適用於 ONTAP 檔案系統的 FSX ，您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結、請按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。連結建立關聯後、請返回此作業。</block>
-  <block id="e5f0f5984ff50d2b07f894bc488e0089" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中、選取檔案系統的三點功能表、並將儲存 VM 複寫到其中、然後選取 * 管理 * 。</block>
-  <block id="d50fcf5d92ce46a3810829f589d3563f" category="list-text">從 Storage VMs （儲存 VM ）標籤中、選取要複寫 SVM 的儲存 VM 的三點功能表。</block>
   <block id="068ecbcf009e32427973dc04a3628cb7" category="list-text">選取 * 複寫儲存 VM* 。</block>
   <block id="0e752dc97b5515d4bd6d0ef6482c2342" category="paragraph">儲存 VM 中的所有磁碟區都會複寫到目標檔案系統。</block>
-  <block id="7c2d9daf63732fb27751bd1943a5c95a" category="summary">必要時重設 fsxadmin 密碼。</block>
-  <block id="80018b49aec9cdc805e5e02b66596b52" category="doc">重設 fsxadmin 密碼</block>
-  <block id="ec88e771c940eedbefed6c00bb8e1f84" category="paragraph">視需要重設 fsxadmin 密碼。</block>
-  <block id="b5e97b863d5bcb1ef930fb33fb04b071" category="list-text">在 * 適用於 ONTAP * 的 FSX 索引標籤中、按一下檔案系統的三點功能表以重設的 fsxadmin 密碼、然後選取 * 管理 * 。</block>
-  <block id="6cd3d3b0b9a988575f764ddd5a8e9bee" category="list-text">從檔案系統總覽中、按一下「三點」功能表。</block>
   <block id="ff40dc19143c531bc7b8a932c148a848" category="list-text">選取 * 重設 fsxadmin 密碼 * 。</block>
   <block id="edacd360980e63a5f2e01df2fa59b050" category="list-text">在「重設 fsxadmin 密碼」對話方塊中、輸入新的 fsxadmin 密碼、然後重新輸入以確認。</block>
-  <block id="279e520d9175d8e5591ed2ca3fc5acab" category="summary">必要時重設儲存 VM 密碼。</block>
-  <block id="217c9f6fe263e655130a845fd58ccebe" category="doc">重設儲存 VM 的密碼</block>
-  <block id="a22a424f6f09fb9aab17350b24d152ce" category="list-text">在 Storage VMs （儲存 VM ）標籤中、選取儲存 VM 的三點功能表、以重設密碼。</block>
   <block id="3930015dcc2810869591e35a2b5d714b" category="list-text">選擇*重設密碼*。</block>
   <block id="0828ddc896996b7d41cc9ceb1e453764" category="list-text">在「重設密碼」對話方塊中、提供下列資訊：</block>
   <block id="8d54082fcba7dd82063ffe4497f8c70d" category="list-text">* 新密碼 * ：輸入儲存 VM 的新密碼。</block>
   <block id="ebb4bf732c3ade314c393d5284af8715" category="list-text">* 確認密碼 * ：再次輸入新密碼以確認。</block>
   <block id="8b0e8407f70ad599b0ea28ad2aba3c8d" category="summary">將磁碟區從備份還原至 AWS 帳戶中任何適用於 ONTAP 檔案系統的 FSX 。</block>
   <block id="669e24f4895025d47b6321e03f0890e4" category="doc">從備份還原磁碟區</block>
-  <block id="8dab59b6315287a470cce5826c67cc29" category="list-text">在 * Volumes （磁碟區） * 標籤中、按一下要從備份還原之磁碟區的三點功能表。</block>
   <block id="04b1c243101a3b35e04f4796a82296b7" category="list-text">選擇 * 資料保護動作 * 、 * ONTAP 備份 * 的 FSX 、然後 * 從備份 * 還原。</block>
   <block id="954f91e5419aff167b9c5ff119492972" category="list-text">在從備份還原對話方塊中、提供下列項目：</block>
   <block id="1db91acefbe1be544aa103101dea1eea" category="list-text">* 目標檔案系統 * ：從下拉式功能表中選取目標檔案系統。</block>
   <block id="dce3fffc0f825635bb1abc80d4fad0d8" category="list-text">* 目標儲存虛擬機器 * ：從下拉式功能表中選取目標儲存虛擬機器。</block>
   <block id="729115b7e52442b1c882ac7f46519925" category="list-text">* 備份名稱 * ：從下拉式功能表中選取備份名稱。</block>
   <block id="c5cce99928ce0d8af5b82b7d22ea310e" category="list-text">* 恢復的 Volume 名稱 * ：輸入還原的 Volume 名稱。</block>
-  <block id="357a35aedd0c37deb3a881df778a9bb4" category="list-text">按一下 * 還原 * 。</block>
   <block id="67b0d8b6788b457b2c8385033f28756f" category="summary">當磁碟區包含刪除或毀損的檔案時、從快照中還原適用於 ONTAP Volume 的 FSX 。</block>
   <block id="c90683522eadafc05ec442d8c440363f" category="doc">從快照還原磁碟區</block>
   <block id="028c5ca154a90ad525b01ec66b26fa3f" category="paragraph">此作業會將資料從快照還原至新的磁碟區。</block>
   <block id="71fa8628af6f2038af0eab0c8ca9c4cf" category="paragraph">只有當您擁有磁碟區的現有快照複本時、才能從快照還原磁碟區。</block>
   <block id="4905114f3925ed2863baa2d94439902b" category="paragraph">請確定您有足夠的容量來完成此作業。</block>
-  <block id="aed6b791e9cebf4b02cff5460c8e093e" category="list-text">從 * Volumes （磁碟區） * 標籤中、選取要從快照還原之磁碟區的三點功能表。</block>
   <block id="3d7743d27e7346a7094199a8317979a9" category="list-text">選取 * 資料保護動作 * 、 * 快照 * 、然後 * 從快照還原磁碟區 * 。</block>
   <block id="cd311f58436ee68a7677fa7444318b66" category="list-text">在「從快照還原磁碟區」對話方塊的「 * 快照名稱 * 」欄位中、從下拉式功能表中選取要還原的快照。</block>
   <block id="dfb1565e1ec2734dcbcb24e6b43c9919" category="list-text">在 * 還原的 Volume 名稱 * 欄位中、輸入要還原的磁碟區唯一名稱。</block>
@@ -873,9 +684,7 @@
   <block id="52155fb905ceec4269b0746b7164a3f8" category="paragraph">當您反轉並恢復複寫時、它會切換磁碟區的來源和目標角色；目標磁碟區會變成新的來源磁碟區、來源磁碟區會變成新的目標磁碟區。反向操作也會以新來源磁碟區的內容覆寫新目標磁碟區的內容。如果您將複寫還原兩次、則會重新建立原始複寫方向。</block>
   <block id="c2cb48e99ca6fac7179c96de4fe80f12" category="admonition">在上次資料複寫與停用來源磁碟區之間、寫入原始來源磁碟區的任何資料都不會保留。</block>
   <block id="4d5d5951c0904aa9a8ea2bedc93d67e5" category="paragraph">請確定您知道來源磁碟區和目標磁碟區目前和未來的角色、因為新的來源磁碟區會覆寫新目標磁碟區上的變更。如果使用不當、您可能會遇到非預期的資料遺失。</block>
-  <block id="252566b7ca444caa680843062d99724f" category="list-text">在 [ 複寫關聯 ] 索引標籤中，按一下複寫關聯的 [ 三點 ] 功能表進行反向複寫。</block>
   <block id="959e06618d824368ccaf5c811014604b" category="list-text">選取 * 反轉關係 * 。</block>
-  <block id="9a7af300d1ad1a4d6ae62ca65c996978" category="list-text">在 [ 反向關聯 ] 對話方塊中，按一下 [ 反向 ] 。</block>
   <block id="1a10027458e0866494e84bce504bf19e" category="doc">適用於 ONTAP 的 FSX 安全性</block>
   <block id="dbda99037b87af8933a9fc213d9a375b" category="paragraph">Amazon FSX for NetApp ONTAP 文件提供下列安全性主題供您參考。</block>
   <block id="631e8333d26b90cee550c58d919639ae" category="inline-link-macro">Amazon FSX for NetApp ONTAP 中的資料保護</block>
@@ -894,21 +703,14 @@
   <block id="5ad71ca0af84be16f0eb4a7ae3fe9ac0" category="list-text">分割後、父 FlexVol Volume 和複本都需要由其磁碟區保證所決定的完整空間分配。</block>
   <block id="8dd061e99d373c92767f86fe7281ad2b" category="list-text">從父磁碟區分割 FlexClone 磁碟區之後、就無法重新加入這兩個磁碟區。</block>
   <block id="107cbfcddbd40cae35b91dda5e5e061c" category="paragraph">分割複製的磁碟區之前、請先考慮下列事項：</block>
-  <block id="14a2642adaa00ca81e016c7130bfea75" category="list-text">若要分割複製的 Volume 、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結、請按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。連結建立關聯後、請返回此作業。</block>
   <block id="b77db7f524ccde6f40472118970bf6e7" category="list-text">您必須是叢集管理員。</block>
   <block id="7591989c8ce2c1b3bcc16916ee9457ef" category="list-text">當分割作業開始時、 FlexClone Volume 必須處於線上狀態。</block>
   <block id="102403f0f3d778ceafbe074fd8219d2f" category="list-text">父磁碟區必須處於線上狀態、才能成功分割。</block>
-  <block id="de5fe7c238bae4ee77b6e154490d4b1d" category="list-text">在 Volumes （磁碟區）標籤中、選取要分割複製磁碟區的磁碟區三點選單。</block>
   <block id="ee58955cf84a9682824159e8019bdbef" category="list-text">選擇 * 資料保護動作 * 、然後 * 分割複製的 Volume * 。</block>
-  <block id="af9d1b64910a21b591ff8b3983776233" category="list-text">在分割磁碟區對話方塊中、按一下 * 刪除 * 。</block>
-  <block id="c4c8f5c13cd82339442cd26d3b3e05f0" category="summary">停止來源磁碟區與目標磁碟區之間的複寫關係。</block>
   <block id="5d575b4296ed2c15c936d9d11ffe4feb" category="doc">停止複寫關係</block>
-  <block id="1b4d48b8148e4912883cd767c0bfffed" category="paragraph">當您停止複寫時、排定的複寫會從來源磁碟區更新至目標磁碟區暫停。目標 Volume 會從唯讀轉換為讀寫。</block>
-  <block id="9056ba295c5bb99ce1fecba8b2b7d95d" category="list-text">在 [ 複寫關聯 ] 索引標籤中，按一下要停止複寫關聯的 [ 三點 ] 功能表。</block>
   <block id="750c75545b932eb3b3f834231bf644fa" category="list-text">選取 * 中斷 * 。</block>
   <block id="6155892ff0823c5997e8d188a29e66e2" category="list-text">在中斷複寫對話方塊中、選取 * 中斷 * 。</block>
   <block id="f42375f716d314b031447e015387fbff" category="paragraph">磁碟區的複寫狀態會變更為 * 中斷 * 。目標 Volume 變成可寫入的。</block>
-  <block id="b334128403ed60ff931947907046e1f0" category="summary">在開啟支援案例之前、 NetApp 您必須先將 NetApp 支援網站帳戶新增至工作負載工廠、然後註冊取得支援。</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">註冊以取得支援</block>
   <block id="996ad73a480311d4f86d6946935389d2" category="paragraph">需要註冊支援、才能獲得工作負載工廠及其儲存解決方案與服務專屬的技術支援。您必須從 BlueXP 主控台註冊以取得支援、該主控台是與 Workload Factory 分開的網路型主控台。</block>
   <block id="c552970fd4dc8118ba1806da596acad9" category="paragraph">註冊支援並不會啟用雲端供應商檔案服務的 NetApp 支援。如需有關雲端供應商檔案服務、其基礎架構或任何使用服務的解決方案的技術支援、請參閱該產品的 Workload Factory 文件中的「取得說明」。</block>
@@ -951,31 +753,17 @@
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">在此過程中、NetApp應與您聯絡。這是新使用者的一次性就職練習。</block>
   <block id="5cdee814e2d9ba3490a8f16d00c65759" category="paragraph">擁有 NetApp 支援網站帳戶後、請完成下的步驟、將帳戶與 BlueXP 登入建立關聯 <block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
   <block id="fa6e79d91adacad3ba5d3684079b4ea1" category="summary">Amazon FSX for NetApp ONTAP 文件會提供疑難排解主題、供您參考。</block>
-  <block id="e55fabc28b3fa7e17aa10128391d8282" category="doc">適用於 ONTAP 的 FSX 疑難排解</block>
   <block id="025110220989dd80d639c418b593cad3" category="inline-link-macro">Amazon FSX for NetApp ONTAP 疑難排解</block>
   <block id="aa3f4a232768328d892056c200f23b5f" category="paragraph">如需詳細資訊、請參閱 <block ref="39d4d71bb679e33c9314f282da47094c" category="inline-link-macro-rx"></block> 。</block>
-  <block id="49fe2e46c98636bdf49479015884752e" category="summary">視需要更新適用於 ONTAP 備份排程的 FSX 。</block>
-  <block id="2e900ec91191ba012270c35cfeec47ea" category="doc">更新 ONTAP 備份排程的 FSX</block>
-  <block id="ef93839535e18b4523908b6fc869d4c4" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中、按一下檔案系統的三點功能表以更新的備份排程、然後選取 * 管理 * 。</block>
-  <block id="caf1c12e8773f8b28a885c02402596ec" category="list-text">在 [ 資訊 ] 下，按一下 *FSX for ONTAP backup* 旁邊的鉛筆圖示。當滑鼠移動到 *FSX for ONTAP backup* 列上時、下拉式箭頭旁會出現鉛筆圖示。</block>
   <block id="c3b25a5d5a44f6b35c6e6497598499eb" category="list-text">在 *FSX for ONTAP backup* 對話框中，提供以下內容：</block>
-  <block id="14b057ec2a41a98c7274d17e63b240bb" category="list-text">* 每日自動備份 * ：啟用或停用此功能。如果停用此功能、請按一下 * 套用 * 。如果您啟用此功能、請完成下列步驟。</block>
   <block id="fb4531252f707fbda1308840e3c7d6af" category="summary">在複寫關係中、隨時手動更新在來源磁碟區和目標磁碟區之間傳輸的快照資料。</block>
   <block id="9ff8251e97123d13337c62b2b74bbe1e" category="doc">在複寫關係中更新快照資料</block>
-  <block id="0fecfb536bb401b75767e8d71d6909df" category="paragraph">複寫關係具有設定的複寫排程、但您可以視需要手動更新來源磁碟區和目標磁碟區之間傳輸的快照資料。</block>
-  <block id="441dc7376c8fa5ec7f8b4ea851fef21a" category="list-text">在「複寫關係」索引標籤中、按一下要更新的複寫關係的三點功能表。</block>
   <block id="fa0604fd5c522ae5ab642bebf836c3d0" category="list-text">選擇 * 立即更新 * 。</block>
-  <block id="820eb0675be6054013bcba3b4f181ce1" category="list-text">在「更新」對話方塊中、按一下 * 立即更新 * 。</block>
-  <block id="a331b6d53cdf49f4a55c9781e6e93e55" category="summary">視需要更新適用於 ONTAP 檔案系統的 FSX 處理量容量。</block>
   <block id="241ea6618170a92484ea213e4cade854" category="doc">更新檔案系統的處理量容量</block>
   <block id="6cc2a35072ede8f6e3bef70bce54ed8c" category="paragraph">如需處理量容量限制、請參閱 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> AWS FSX for NetApp ONTAP 文件。</block>
-  <block id="e4060dacb078dd6958610fb8e54f4d3a" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中、按一下檔案系統的三點功能表、以更新的處理量容量、然後選取 * 管理 * 。</block>
-  <block id="c132eeafe5657c26b45f614e175d4b4e" category="list-text">在 [ 資訊 ] 下，按一下 [ 處理量容量 ] 旁邊的鉛筆圖示。當滑鼠移動到 * 輸送量容量 * 列上時、下拉式箭頭旁會出現鉛筆圖示。</block>
   <block id="77fe58178c324bbc70fcb16af3bf2b46" category="list-text">在「處理量容量」對話方塊中、選取您需要的處理量容量。</block>
   <block id="885fd24663ae2a75b6cf326e1cb1c8a0" category="summary">檢視 Volume 詳細資料、配送、使用、存取和保護。</block>
-  <block id="ec4fc4cb1b37373b785aaee6062cfec7" category="doc">檢視Volume詳細資料</block>
   <block id="67fd29a6cc928abe6b6f86ff09e307f2" category="paragraph">只有在檔案系統中建立磁碟區之後、才會顯示磁碟區詳細資料。</block>
-  <block id="e74f33569f9e19ca4641ce03e5bab539" category="list-text">在 Volumes （磁碟區）標籤中、針對您要修改的磁碟區、選取三點選單。</block>
   <block id="6d861bb7f63e6cf47b5c554ee05eac67" category="list-text">選擇 * 基本動作 * 、然後 * 檢視 Volume 詳細資料 * 。</block>
   <block id="439d42a534fe0bae9413648240777bfc" category="list-text">在 * Volume details* 中、選取標籤以檢視下列 Volume 詳細資料：</block>
   <block id="3f0fcc3f124d83e05e6cc909b9289d22" category="list-text">* 一般詳細資料 * ：包括磁碟區名稱、磁碟區 UUID 、磁碟區 ID 、建立時間、狀態、 Volume 類型（讀寫 / 資料保護（ RW/DP ）或唯讀）、 Snapshot 原則名稱、託管儲存 VM （ SVM ）和標籤。</block>
@@ -984,9 +772,6 @@
   <block id="5c56dce0204190e932ff7e64632a6971" category="list-text">* 存取 * ：包括匯接路徑、安全樣式、匯出原則和 NFS 版本（適用於 NFS ）、 Active Directory 、 CIFS 共用名稱、使用者或群組、以及 SMB/CIFS 的權限、以及 iSCSI 的啟動器群組和主機 IQN 。</block>
   <block id="541f0f17fbfba6b941c5b77a421fb336" category="list-text">* 保護 * ：包括本機快照、快照原則名稱、遠端複寫、以及用於 ONTAP 備份的 FSX 。</block>
   <block id="69a94f722f40461d326d0d87f7643499" category="summary">瞭解 Amazon FSX for NetApp ONTAP 的新功能。</block>
-  <block id="490414e0366b091220802d406e52c076" category="doc">新功能</block>
-  <block id="11794ccdce960744ed043096c7dd2bd7" category="sidebar">Amazon FSX for NetApp ONTAP 功能將ONTAP 完整的功能整合至原生AWS託管服務、提供一致的混合雲體驗。本文件說明如何使用 BlueXP Workload Factory 來管理適用於 ONTAP 的 FSX 。</block>
-  <block id="cc788b7e72b2a734dd0985bd1e0e9fe3" category="sidebar">Amazon FSX for NetApp ONTAP 的支援文件</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始使用</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">版本資訊</block>
   <block id="9b52174f321d3579b4ad28ec9c136481" category="sidebar">瞭解Amazon FSX for NetApp ONTAP 的功能</block>
@@ -1015,8 +800,6 @@
   <block id="56994f1db86bfe709cbe47f96bde566f" category="sidebar">編輯 Volume 自動擴充</block>
   <block id="be6125857b11bdb69d1f89bf69787f48" category="sidebar">重新平衡磁碟區的容量</block>
   <block id="9f4aa892debf403a854859b0ca9c9ff6" category="sidebar">變更分層原則</block>
-  <block id="e1e4a24fa9307e6d11f832f580a14ad0" category="sidebar">變更 NFS 匯出原則</block>
-  <block id="8412f1aad949d91cc3442f65849a91dd" category="sidebar">變更 CIFS 共用</block>
   <block id="28b0bfb965f113c41530116951bfce50" category="sidebar">檔案系統管理</block>
   <block id="ff117b5e42f4a60dd5b7859999c4f2bd" category="sidebar">啟用自動容量管理</block>
   <block id="c7ad4dd9b2ecb508f1366110b020e001" category="sidebar">重設 fsxadmin 密碼</block>
@@ -1029,40 +812,25 @@
   <block id="ef045d17e80274aec5be009d1f13f5a2" category="sidebar">為檔案系統配置 IOPS</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">參考資料</block>
   <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">疑難排解</block>
-  <block id="1feb39b44e4fcef3d4be063a2f0c0c2c" category="list-text">登入 <block ref="372504cb6bb48559009ff8f8cdb9a245" category="inline-link-macro-rx"></block></block>
   <block id="b39f472a8f42e6a145c20b290f2c0f7b" category="paragraph">當您自動 <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> 使用檔案系統時、每增加 1 GiB 的 SSD 容量、 IOPS 就會增加 3 IOPS 。</block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">瞭解如何使用 Codebox 進行自動化</block>
   <block id="672d0efbe9223ef23c5fd7d2c7cd4a95" category="paragraph">您可以使用 _Quick creity_ 或 _Advanced creity_ 、為 ONTAP 檔案系統建立 FSX 。您也可以使用 Codebox 中的下列工具： REST API 、 CloudForformation 和 Terraform 。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>。</block>
   <block id="11e2fb5025fdb2cb91fd04c343163328" category="admonition">從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 和<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 密碼。執行程式碼時、您需要重新輸入密碼。</block>
-  <block id="176a501864ff4c70a2c1b132289ccad0" category="paragraph">您可以從 Workload Factory 主控台建立儲存 VM 。您也可以使用 Codebox 中的下列工具： REST API 、 CloudForformation 和 Terraform 。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>。</block>
   <block id="b3028e0c6912bbb0c93b59dff7fa9ba5" category="paragraph">Auto 是使用使用者介面建立磁碟區時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> AWS FSX for NetApp ONTAP 文件中的。</block>
   <block id="9376aafc358c7dd83094603f26235eb3" category="paragraph">磁碟區建立已啟動。建立後、新的 Volume 就會出現在 Volumes （磁碟區）標籤中。</block>
   <block id="21e6ab9737790ab1abc18e49091d3c18" category="paragraph">下圖顯示使用快照、跨區域複寫、以及備份至物件儲存設備的 ONTAP 儲存設備之 FSX 資料保護的視覺化呈現。</block>
   <block id="90388f794d575e628df271470a4b766e" category="inline-image-macro">螢幕擷取畫面顯示使用快照、跨區域複寫、以及備份至物件儲存設備的 ONTAP 儲存設備之 FSX 資料保護。</block>
   <block id="29bed1477f8a04f4f702564c7e6bb224" category="paragraph"><block ref="29bed1477f8a04f4f702564c7e6bb224" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0d9b99cb00c934d1cd88332ae901fc26" category="section-title">使用 Workload Factory 的工具</block>
-  <block id="76737aecf42a629e0422271332fcc5a3" category="paragraph">您可以搭配下列工具使用 BlueXP Workload Factory ：</block>
-  <block id="0fc51b33bbeafc6425a9bd19ec449966" category="list-text">* 工作負載工廠主控台 * ：工作負載工廠主控台提供視覺化介面、可讓您全面檢視應用程式和專案</block>
-  <block id="3c4460cb8836c21a60d304d5640b4ea7" category="list-text">* REST API* ：工作負載原廠 REST API 可讓您部署及管理適用於 ONTAP 檔案系統和其他 AWS 資源的 FSX</block>
-  <block id="fb2bf23fd8d69c944827de16f09d3bb7" category="list-text">* CloudForgi38* ： AWS CloudForgation 程式碼可讓您執行在 Workload Factory 主控台中定義的動作、以建構、配置及管理 AWS 帳戶中 CloudForgation 堆疊中的 AWS 和第三方資源。</block>
-  <block id="887582b3338810bdcfbc9b5a8ff6b6d7" category="list-text">* Terraform BlueXP 工作負載工廠供應商 * ： Terraform 可讓您建置及管理在 Workload Factory 主控台中產生的基礎架構工作流程。</block>
   <block id="d527a24e3cd3e2df59c9ec57fb8383de" category="inline-image-macro">顯示使用特定連結之 ONTAP 檔案系統的 FSX 的螢幕擷取畫面。</block>
   <block id="8153258b50418b6ebcd06d64da06a5bc" category="paragraph"><block ref="8153258b50418b6ebcd06d64da06a5bc" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8d0a9b10b0feb1fbeb54874e4db30c45" category="paragraph"><block ref="8d0a9b10b0feb1fbeb54874e4db30c45" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e5a41f95a3cb9b200664e28fdab1a637" category="inline-image-macro">檔案系統概觀索引標籤中三點功能表的螢幕擷取畫面。</block>
-  <block id="b32bfe90ed6acc2544026bb974e2ffc9" category="paragraph"><block ref="b32bfe90ed6acc2544026bb974e2ffc9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="efa42d5c66cb9948f402ee559611e12d" category="section-title">Terraform 支援</block>
   <block id="75086276ae6b7e370f36c7fc49383216" category="inline-link-macro">建立檔案系統</block>
   <block id="2532cd63354e6e99119077d45134b5ef" category="inline-link-macro">使用 CodeBox 的 Terraform</block>
-  <block id="11cb17d1b990bbf37a24337d5692efa1" category="list-text"><block ref="11cb17d1b990bbf37a24337d5692efa1" category="inline-link-macro-rx"></block></block>
   <block id="a0d5836b9915a7e404d529a2ee0d2af5" category="section-title">儲存計算機中的處理量和 IOPS 建議</block>
   <block id="b48a7422f4f1f71c3ef03d7a8291f43f" category="paragraph">儲存計算機會根據 AWS 最佳實務做法、針對處理量和 IOPS 、為 ONTAP 檔案系統設定 FSX 提供建議、為您的選擇提供最佳指引。</block>
-  <block id="effdadd80abed8c573c85b4a570ed377" category="paragraph">Workload Factory 內建儲存節約計算機、可讓您將 Amazon 儲存環境與 ONTAP 的 FSX 進行比較。您可以使用或不提供 AWS 認證來探索節約效益、並自訂儲存環境的組態設定。當您提供 AWS 認證時、您可以選取一或多個 Amazon Elastic Block Store 執行個體、然後讓 Workload Factory 自動進行比較。無論是手動或自動、計算機都會判斷哪種儲存服務能為您的儲存需求提供最低成本。</block>
-  <block id="0069e97fd4735ad06c52ab088603f0b7" category="paragraph">如果儲存計算機判斷最具成本效益的儲存設備是適用於 ONTAP 的 FSX 、您可以建立或儲存適用於 ONTAP 組態的 FSX 、並使用 Codebox 產生基礎架構即程式碼範本、無論您授予工作負載工廠的權限為何。</block>
   <block id="9c34331abb32017c0949af1d664fefb5" category="section-title">計算機選項</block>
   <block id="7b51e648f3a069a510d6dcf808fa286b" category="paragraph">有兩種計算機選項可供您比較系統與適用於 ONTAP 的 FSX 之間的成本、這些選項可為您的 Amazon 儲存環境自訂及自動偵測。</block>
   <block id="4964d70a58f9e266c631ca8639cc5940" category="paragraph">透過自訂功能探索節約效益：您可為儲存環境提供組態設定、包括使用案例、區域、磁碟區或檔案系統數量、儲存容量、快照頻率、每個快照變更的數量、已配置的 IOPS 、處理量等。</block>
-  <block id="9174d6c170a49a851cf523275f13d9b5" category="paragraph">探索偵測到的儲存環境節約效益：工作負載工廠連結至您現有的 AWS 儲存環境、並將詳細資料擷取至計算機以進行自動比較。您必須授予自動化權限、才能使用自動模式。您可以變更使用案例、但計算中會自動決定所有其他詳細資料。</block>
   <block id="f565eb47bc8c215541fe00205d9b37d3" category="section-title">透過自訂功能探索節約效益</block>
   <block id="ad314b06ac1a79501c701a40aceae82e" category="list-text">* 使用案例 * ：必要。從下拉式功能表中選取使用案例。所選的使用案例會決定 ONTAP 檔案系統特性的 FSX 、以供比較。</block>
   <block id="c578171963a8b6b01a894020f1eac757" category="list-text">* 地區 * ：選用。從下拉式功能表中選取 EBS 組態的區域。</block>
@@ -1089,7 +857,6 @@
   <block id="c0c6f43c72d4131a3142969ee1f93961" category="paragraph">若要切換至適用於 ONTAP 的 FSX 、請遵循的指示 <block ref="d4d3e2c1446af85f31cda9e1ddaf30d7" category="inline-xref-macro-rx"></block>進行。</block>
   <block id="b531032648e600a642b682616d2a0bdd" category="section-title">探索偵測到的儲存環境的節約效益</block>
   <block id="cb10bf47866edd2ac9fb6586867bd1f6" category="admonition">此計算機選項不支援 EBS 快照和適用於 Windows 檔案伺服器陰影複製的 FSX 的計算。透過自訂功能探索節約效益時、您可以提供適用於 Windows File Server 快照的 EBS 和 FSX 詳細資料。</block>
-  <block id="4e6bb917970bfdc851c5092e11272217" category="list-text">選取要與適用於 ONTAP 的 FSX 比較的執行個體、然後按一下 * 「 Explore 節約 * 」。</block>
   <block id="f59ef66ff04b00cacb36ef4c77c51958" category="list-text">儲存節約計算機隨即出現。下列儲存系統特性會根據您選取的執行個體預先填入：</block>
   <block id="bca9e850c916e20118ab9da7a15e1ab7" category="list-text">* 使用案例 * ：組態的使用案例。您可以視需要變更使用案例。</block>
   <block id="fbb814a12d4b444e10fc3fb95977d4ff" category="list-text">* 所選卷 * ： EBS 配置中的卷數</block>
@@ -1107,45 +874,25 @@
   <block id="7b2421f95d1133c7da8946bd2bb58d94" category="list-text">* 總彈性處理量–寫入（ GiB ） *</block>
   <block id="691e71734464aaf43017f5b033e54559" category="section-title">2024 年 8 月 4 日</block>
   <block id="1d949c7c5600289e10795f178278edd1" category="section-title">2024 年 7 月 7 日</block>
-  <block id="b18d7ec0ad964d10af97254ea8b0612d" category="doc">適用於 Amazon FSX for NetApp ONTAP 的工作負載工廠初始版本</block>
-  <block id="bbccc2f370efe6824018b613b1dd5839" category="paragraph">Amazon FSX for NetApp ONTAP 現在已正式推出 Workload Factory 。</block>
   <block id="0fd886acd6700c343d655429665d7e6a" category="paragraph">您現在可以使用 Codebox 中的 Terraform 來部署檔案系統和儲存 VM 。</block>
   <block id="f0881d896f399a09e86122a09c00b74d" category="doc">儲存管理的讀取模式支援</block>
-  <block id="8db376980442524a58ebd917532846d7" category="paragraph">在 Workload Factory 中、讀取模式可用於儲存管理。讀取模式可新增唯讀權限、讓「基礎架構即程式碼」範本填入您的特定變數、藉此提升基本模式的使用體驗。您可以直接從 AWS 帳戶執行「基礎架構即程式碼」範本、而無需提供任何工作負載工廠的修改權限。</block>
   <block id="06fdd4e2a129920e1eda56425068ba01" category="inline-link-macro">深入瞭解讀取模式</block>
-  <block id="2d68ad2bd6b1f5ddb456706e84602c5e" category="paragraph"><block ref="2d68ad2bd6b1f5ddb456706e84602c5e" category="inline-link-macro-rx"></block></block>
   <block id="fc30083e7a76ed4c8eb6167ea377c198" category="section-title">支援磁碟區刪除之前的備份</block>
   <block id="8b97ffb47ece0280994594aa00a04a55" category="paragraph">您現在可以在刪除之前備份磁碟區。備份將保留在檔案系統中、直到刪除為止。</block>
-  <block id="8fb924f94cef9a4615d9910253ac7353" category="paragraph"><block ref="8fb924f94cef9a4615d9910253ac7353" category="inline-link-macro-rx"></block></block>
   <block id="7dd9587dbbaf30e59e9c0550bb88b5cd" category="list-text">在刪除 Volume 對話方塊中、執行下列步驟：</block>
-  <block id="ad3bbbefb363832c16c692a050c01cc8" category="list-text">或者、按一下 * 備份 Volume * 、在刪除之前備份磁碟區。</block>
   <block id="54ae4e9761548739e1dcb7a7a20751ad" category="paragraph">備份將保留在檔案系統中、直到您手動刪除為止。</block>
-  <block id="26983a904e0717c520032a2178795368" category="list-text">按一下 * 繼續 * 。</block>
   <block id="b1bb1fd299d4d0d5a0bcf89deacb85de" category="list-text">輸入「 delete 」刪除磁碟區。</block>
   <block id="b5cef683aab00353096b98823a237e69" category="section-title">2024 年 9 月 1 日</block>
-  <block id="a384088a79fca35da6b697720f2ddd66" category="list-text"><block ref="a384088a79fca35da6b697720f2ddd66" category="inline-link-macro-rx"></block></block>
-  <block id="a9803c91b8fa40d3fdc106b005fdb16c" category="list-text"><block ref="a9803c91b8fa40d3fdc106b005fdb16c" category="inline-link-macro-rx"></block></block>
   <block id="cd1df627bd8e5b96916530ffbf4664f6" category="doc">連結建立更新</block>
-  <block id="15f127e6d8c5111ce85f47eff68232a7" category="list-text">CodeBox 檢視器： CodeBox 現在已整合至連結建立程序中。您可以在工作負載工廠的 Codebox 中檢視並複製 CloudForgation 範本、然後重新導向至 AWS 以執行作業。</block>
-  <block id="8efc4e00ac03374d3e1dc5d19c40016b" category="list-text">必要權限：現在可以從 Workload Factory 的 Create Link 精靈中檢視及複製 AWS CloudForgation 中執行連結建立所需的權限。</block>
   <block id="3721bd571f4111dad2c363436de34c51" category="list-text">支援手動建立連結：此功能可在 AWS CloudForgation 中以手動註冊連結 ARN 的方式獨立建立。當安全團隊或 DevOps 團隊協助建立連結時、這項功能非常實用。</block>
-  <block id="27f80dd01569e18971f783f257cc7294" category="paragraph"><block ref="27f80dd01569e18971f783f257cc7294" category="inline-link-macro-rx"></block></block>
-  <block id="652227e30bf6d77e12a5c024de7bc6d6" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中、按一下要更新儲存 VM 的檔案系統三點功能表、然後選取 * 管理 * 。</block>
   <block id="37bb8b5cad0754acdd2d9ed1e9d36928" category="paragraph">委派的系統管理員群組是 Active Directory 中可管理檔案系統的群組名稱。</block>
   <block id="1ffab80b063e5f05f25ab6681156237d" category="paragraph">如果您要連線至自我管理的 AD 、請使用 AD 中的群組名稱。預設群組為<block ref="746c2ea920930b61350130daa63e23e5" prefix=" " category="inline-code"></block>。</block>
   <block id="e359c45e41079948637e3625aa645ee6" category="paragraph">您有兩個選項可以自動或手動建立連結。</block>
-  <block id="5f430c8ea369f8788a9d32bc5ddef4f4" category="list-text">自動：透過 Workload Factory 建立自動登錄的連結。自動建立的連結需要工作負載工廠自動化的權杖、而 CloudForgation 程式碼則很短。最多只能使用 6 小時。</block>
   <block id="f35d0bfc59b397e2ee196c7e6b0d33d7" category="list-text">手動：建立具有手動登錄的連結。CloudForgation 程式碼持續提供您更多時間來完成作業。這在與安全性和 DevOps 等不同團隊合作時很有用、因為他們可能需要先授予完成連結建立所需的權限。</block>
   <block id="758ce486f132a2978be7ecfbcd518afa" category="list-text">您應該考慮要使用哪個連結建立選項。</block>
   <block id="6903e2b3a86228f4d258e423fb6b913a" category="open-title">自動建立</block>
-  <block id="e07190df7367fb116bdd913bfce43fbe" category="paragraph">使用 CloudForgation 自動建立並註冊 Workload Factory 中的連結。</block>
   <block id="6a97c44fefe95ac9ca6fe05e50d1729f" category="paragraph">此時會出現重新導向至 CloudForgation 對話方塊、並說明如何從 AWS CloudForgation 服務建立連結。</block>
   <block id="a85b3f8e5456d47e8056e0372aeccb2a" category="open-title">手動建立</block>
-  <block id="6f19769f7ee87f4c55c249bc3849c48a" category="paragraph">使用此選項、您可以從 AWS CloudForgation 擷取連結的 ARN 、並在此處報告。Workload Factory 會手動為您登錄連結。</block>
-  <block id="9f7d5c71d756492e276c5460cc778424" category="list-text">* 連結註冊 * ：按一下下拉式箭頭、展開如何從 AWS CloudForgation 服務註冊連結的指示。請依照指示進行。</block>
-  <block id="c3b24be1571207cf6200f2d8b54ee7c0" category="paragraph">成功建立堆疊後、將 Lambda ARN 貼到文字方塊中。</block>
-  <block id="80cda6d0b485a6d7ad08bec0e4e1e512" category="list-text">登入 Workload Factory 主控台。</block>
-  <block id="c7f0e7c4e7e9f76582f27e34058deaa6" category="paragraph">將複製的 FlexVol volume 從其父磁碟區分割成正常的讀寫 FlexVol volume 。</block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">2024 年 9 月 29 日</block>
   <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">iSCSI 傳輸協定僅適用於 FlexVol 磁碟區。^1^</block>
   <block id="e6816f159adf84ca7c085ce0702311af" category="inline-link-macro">刪除所有現有的複寫關係</block>
@@ -1156,17 +903,310 @@
   <block id="d4aa654cea4681dd5ca03650594006c6" category="paragraph">儲存庫存已更新為雙索引標籤檢視：</block>
   <block id="71083868a2ec5abfee9a2647a74612c0" category="list-text">適用於 ONTAP 的 FSX 標籤：顯示您目前擁有的 ONTAP 檔案系統的 FSX 。</block>
   <block id="1113c9108b3e58789456954d1c2ea9c2" category="list-text">瀏覽節約標籤：顯示 Elastic Block Store 、適用於 Windows 檔案伺服器的 FSX 、以及 Elastic File Systems 儲存系統。從這裡、您可以將這些系統與適用於 ONTAP 的 FSX 進行比較、以探索這些系統的節約效益。</block>
-  <block id="62cf721f97d39a9aaf1ac7786071551c" category="paragraph">更新磁碟區的快照頻率、或隨時停用自動快照。</block>
-  <block id="110f1585246a580402f0c6b34d42e65a" category="list-text">在 *FSX for ONTAP * 標籤中、選取適用於 ONTAP 檔案系統的 FSX 的三點功能表、其中包含要更新快照原則的磁碟區、然後選取 * 管理 * 。</block>
   <block id="fa8dc6e67f45bcde58853510e56ce6a1" category="list-text">從檔案系統的「總覽」標籤中、選取 * Volumes （磁碟區） * 標籤。</block>
   <block id="74e854d4ac135e193bafa7dfdf343efe" category="list-text">從儲存設備中、選取 * 移至儲存設備庫存 * 。</block>
-  <block id="9df0f8cc7fbb70153a71c3d1657c3d81" category="list-text">在 *FSX for ONTAP * 標籤中、選取包含要複製之磁碟區的 ONTAP 檔案系統 FSX 的三點功能表、然後選取 * 管理 * 。</block>
   <block id="80ad1fda17ca981880509b63f91591c9" category="list-text">在儲存設備詳細目錄中、選擇 * 瀏覽省錢方案 * 標籤。</block>
-  <block id="a1e5470290e2e47a8295d8ae0b1e78af" category="list-text">在 *Elastic Block Store （ EBS ） * 標籤中、選取要與 ONTAP 的 FSX 比較的執行個體、然後按一下 * 「 Explore 節約 * 」。</block>
-  <block id="69664318bb60fdf05cfe25fa2b5a7242" category="list-text">選擇 *FSX for Windows File Server* 選項卡。</block>
-  <block id="5e172a101429002f6723f0f156cbd608" category="list-text">選擇 * 彈性檔案系統（ EFS ） * 標籤。</block>
-  <block id="78745d22af85f4409daf48ce5059c4c0" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中、選取要更新儲存 VM 的 ONTAP 檔案系統的 FSX 的三點功能表、然後選取 * 管理 * 。</block>
   <block id="8c9880429b2df2018a366dbb14193026" category="list-text">從檔案系統的概觀索引標籤中、選取 * 儲存 VMS* 索引標籤。</block>
-  <block id="ca677da26b1ef83b53f1decf3bf448d0" category="list-text">在 *FSX for （用於 ONTAP ） * 標籤中，選擇包含要分割的複製卷的 ONTAP 文件系統的 FSX 的三點菜單，然後選擇 *Manage* （管理 * ）。</block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">2024 年 11 月 3 日</block>
+  <block id="5324aacfd2e000acd8835a7c5b4dd086" category="doc">Amazon FSX for NetApp ONTAP 的工作負載工廠初始版本</block>
+  <block id="ddeb24aeadcd9bd34930d38c34152c03" category="paragraph">Amazon FSX for NetApp ONTAP 目前已正式推出 BlueXP  工作負載工廠。</block>
+  <block id="03b2cfc949418819e16b1dc5fa3660ae" category="list-text"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block></block>
+  <block id="3b915cd68add8a6cdac4cd1adeb5f100" category="list-text"><block ref="3b915cd68add8a6cdac4cd1adeb5f100" category="inline-link-macro-rx"></block></block>
+  <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
+  <block id="4f75f1e69acbf2cd38f0862ac2b212c7" category="paragraph">讀取模式適用於工作負載工廠的儲存管理。讀取模式可新增唯讀權限、讓「基礎架構即程式碼」範本填入您的特定變數、藉此提升基本模式的使用體驗。您可以直接從 AWS 帳戶執行「基礎架構即程式碼」範本，而無需提供任何工作負載工廠的修改權限。</block>
+  <block id="f584ba5824f9f0b7bb3a173d45332dd3" category="paragraph"><block ref="f584ba5824f9f0b7bb3a173d45332dd3" category="inline-link-macro-rx"></block></block>
+  <block id="a0fbee91270a9c1ec1d2bc9b56f87ff3" category="paragraph"><block ref="a0fbee91270a9c1ec1d2bc9b56f87ff3" category="inline-link-macro-rx"></block></block>
+  <block id="5802490bb2e01aff3b4722eee028a516" category="list-text">CodeBox 檢視器： CodeBox 現在已整合至連結建立程序中。您可以從工作負載工廠的 Codebox 檢視和複製 CloudForgation 範本，然後重新導向至 AWS 以執行作業。</block>
+  <block id="0d2cf987b55cf15b8f1dec5a05398183" category="list-text">必要權限：現在可以從工作負載工廠的「建立連結」精靈中檢視及複製 AWS CloudForgation 中執行連結建立所需的權限。</block>
+  <block id="3874612023324fe909b90a886072b352" category="paragraph"><block ref="3874612023324fe909b90a886072b352" category="inline-link-macro-rx"></block></block>
+  <block id="0d2c81cd9ea6f82a77b580a488c5e8aa" category="doc">存取您的 FSX 以取得 ONTAP 檔案系統資料</block>
+  <block id="012640102bb0df3eaa570f213ea27a15" category="summary">變更 BlueXP  工作負載工廠複寫關係中來源 Volume 的複寫排程。</block>
+  <block id="dcafe9cce796ce855e87b270f0a5af59" category="inline-link-macro">主控台體驗</block>
+  <block id="e1e54933838bb7ba662301d01c937d2d" category="list-text">使用其中一項登<block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>入。</block>
+  <block id="c2a714b67167aae1661b248d570b356d" category="list-text">在 *FSX for （用於 ONTAP ） * 選項卡中，選擇要更新的文件系統的三點菜單，然後選擇 *Manage* （管理）。</block>
+  <block id="6d257e829bd979b1905ac4edd5b4a469" category="list-text">在複寫關係索引標籤中，選取要變更的複寫關係排程的三點功能表。</block>
+  <block id="24347b3ddf5a25cc9c27e54ae285ade1" category="list-text">選擇*應用*。</block>
+  <block id="7be5abc23ad53ad695c77a03eb7214c9" category="summary">隨時更新 BlueXP  工作負載工廠中磁碟區的快照原則。</block>
+  <block id="9c35dc6b069b6a95cb6819e3959eb977" category="doc">變更 BlueXP  工作負載工廠中磁碟區的快照原則</block>
+  <block id="d567a5c19f9cca95f4739c35028367b6" category="paragraph">更新磁碟區的快照頻率，或在 BlueXP  工作負載工廠中隨時停用自動快照。</block>
+  <block id="f2a6898f5e2a659b0a4e936d2179af7b" category="paragraph">若要顯示現有的快照原則，您需要建立連結的關聯。若要建立連結的關聯，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。然後返回此作業。</block>
+  <block id="23fd5f8d36c1c5c8fb7a03a0e3032596" category="list-text">在 *FSX for ONTAP * 標籤中，選取適用於 ONTAP 檔案系統的 FSX 的三點功能表，其中包含要更新快照原則的磁碟區，然後選取 * 管理 * 。</block>
+  <block id="372b7375695f4a2648579256818d2d0e" category="list-text">在 * Volumes （卷） * 選項卡中，選擇要更改其快照策略的卷的三點菜單。</block>
+  <block id="af215976e40a730a67c8637d4caae8f6" category="list-text">選取 * 套用 * 以儲存變更。</block>
+  <block id="8cb5ce6df0f7a83b17c0640431645fbe" category="summary">變更 BlueXP  工作負載工廠的分層原則，將資料從高效能主儲存層重新分配至次容量集區儲存層。</block>
+  <block id="6e342a0f88f597871307e39e9b4d00f4" category="doc">變更 BlueXP  工作負載工廠中磁碟區的分層原則</block>
+  <block id="c4fd230e0a883356d07ecc8aa57a1408" category="paragraph">在 BlueXP  工作負載工廠中，您可以變更分層原則，以自動將資料從高效能主要儲存層重新分配至次要容量集區儲存層。</block>
+  <block id="fe5187438e2ab675d9a19928dd40ea31" category="list-text">在 *FSX for ONTAP * 標籤中，選取要更新磁碟區之檔案系統的三點功能表，然後選取 * 管理 * 。</block>
+  <block id="cf85f41b48d74de17d9ad6aec327fcc7" category="list-text">從 Volumes （磁碟區）索引標籤中，選取要變更分層原則的磁碟區三點功能表。</block>
+  <block id="303558e4a397de6362e02f36b29e52e2" category="summary">在 BlueXP  工作負載原廠中複製一個 Volume ，以建立原始 Volume 的讀寫磁碟區以進行測試。</block>
+  <block id="528d7c15fdf4463dd61cddf39e8e7abf" category="doc">在 BlueXP  工作負載工廠中複製 Volume</block>
+  <block id="200d51c026656f479a6f4c6ec3536b64" category="list-text">在 *FSX for ONTAP * 標籤中，選取包含要複製之磁碟區的 ONTAP 檔案系統 FSX 的三點功能表，然後選取 * 管理 * 。</block>
+  <block id="8646e0bbc26f59aa853dc93d48061b77" category="list-text">在 Volumes （磁碟區）標籤中，選取要複製的磁碟區的三點功能表。</block>
+  <block id="9de0e2b17d7e1e2da6c0ce7e9dc6e377" category="list-text">選擇* Clone（克隆）*。</block>
+  <block id="437e4ddabe957848edf9ad55a4d16a34" category="summary">在 BlueXP  工作負載工廠中，為適用於 ONTAP 檔案系統的 FSX 中的儲存 VM 設定及更新 Active Directory 。</block>
+  <block id="51f1f12681563351c4220777e7598d9f" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中，選取要更新儲存 VM 的檔案系統的三點功能表，然後選取 * 管理 * 。</block>
+  <block id="d085bb2bb1a3a891e6e1e1be6b3acd57" category="list-text">從 Storage VMs （儲存 VM ）標籤中，選取要設定 Active Directory 的儲存 VM 的三點功能表。</block>
+  <block id="20af03cd6e32932b6373aa89cb76c3a7" category="summary">在 BlueXP  工作負載工廠中，在定期排程的備份之外，建立磁碟區的手動備份。</block>
+  <block id="21c84d66c788a8b9cd00b0d70f1dbcaf" category="doc">在 BlueXP  工作負載工廠中建立磁碟區的手動備份</block>
+  <block id="38fdcf84ea88cef570769e20e3dccc82" category="paragraph">在 BlueXP  工作負載工廠中，針對定期排程備份以外的磁碟區建立手動備份。</block>
+  <block id="3962123eee9d900a0ee600f152540fd3" category="list-text">在 *FSX for ONTAP （用於卷的 FSX ） * 選項卡中，選擇包含卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。</block>
+  <block id="97efc413a90b5682f246b3ba0cd40a49" category="list-text">從 *Volumes （卷） * 選項卡中，選擇要備份的卷的三點菜單。</block>
+  <block id="ff4d762e1ab6dd75731a4f97e66ec902" category="list-text">選取 * 備份 * 。</block>
+  <block id="fd9f7dde4833939961eaee07155ed2ab" category="summary">使用 BlueXP  工作負載工廠，您可以為 ONTAP 檔案系統建立 FSX ，以新增及管理磁碟區和其他資料服務。</block>
+  <block id="88ece72bda0e38c0bdca32d19f42a979" category="doc">在 BlueXP  工作負載工廠中為 ONTAP 檔案系統建立 FSX</block>
+  <block id="2d4f09b2326100d67136e61d8ae96763" category="list-text">IAM 角色的 ARN ，賦予工作負載工廠為 ONTAP 檔案系統建立 FSX 所需的權限。<block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block>。</block>
+  <block id="d056dc11fccff40a11f4c59d2254d887" category="list-text">* AWS 認證 * ：選取以在工作負載工廠中新增 AWS 認證，或在沒有認證的情況下繼續。</block>
+  <block id="7d7910ac46765b911b27c9c2083854bd" category="summary">您可以建立及管理連結，以在 BlueXP  工作負載工廠帳戶和一或多個適用於 ONTAP 檔案系統的 FSX 之間提供信任關係和連線能力。</block>
+  <block id="a5a4b7a68e3e1941c36e80f4f74df45d" category="doc">在 BlueXP  工作負載工廠建立連結</block>
+  <block id="a93321ba62072a8d18fc71a4f192358a" category="paragraph">您可以建立及管理連結，在 BlueXP  工作負載工廠的工作負載工廠帳戶和 ONTAP 檔案系統的一個或多個 FSX 之間提供信任關係和連線。這可讓您直接從適用於 ONTAP 檔案系統的 FSX 監控及管理某些功能、這些功能無法透過 AWS FSX for ONTAP API 取得。</block>
+  <block id="c5e5ca53fa52186f7add37b295184791" category="list-text">自動：透過工作負載工廠建立自動登錄的連結。自動建立的連結需要工作負載工廠自動化的權杖， CloudForgation 程式碼也很短。最多只能使用 6 小時。</block>
+  <block id="1c04ed7ac6ae9dcde52b75daba3d1612" category="paragraph">使用 CloudForgation 在工作負載工廠內自動建立並註冊連結。</block>
+  <block id="043b13da46aed51663f89927fa38d1bc" category="list-text">在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以建立連結的關聯，然後選取 * 管理 * 。</block>
+  <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">選擇* Create *（建立*）。</block>
+  <block id="8c5d091eb8bf13bd59184903f020f95c" category="paragraph">請注意、當您啟動 CloudForgation 範本時、 Lambda 會獲得三個權限。工作負載工廠在使用連結時會使用這些權限。</block>
+  <block id="4d4e41a17abafe417449016add2ee0bd" category="list-text">選取 * 建立堆疊 * ，然後選取 * 繼續 * 。</block>
+  <block id="e5942758c1bbae9768e2935841e7ca7a" category="list-text">返回工作負載原廠介面，您會看到連結與 ONTAP 檔案系統的 FSX 相關聯。</block>
+  <block id="9d1d72e4ac9c59d5a464cfdbfae095f3" category="paragraph">使用此選項、您可以從 AWS CloudForgation 擷取連結的 ARN 、並在此處報告。工作負載工廠會手動為您登錄連結。</block>
+  <block id="36ea5b76eb0d14486f711085746752fd" category="paragraph">使用其中一項登<block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>入。。在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。。在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以建立連結的關聯，然後選取 * 管理 * 。。在檔案系統總覽中、選取 * 關聯連結 * 。。在關聯連結對話方塊中、選取 * 建立新連結 * 、然後選取 * 繼續 * 。。在「建立連結」頁面上，提供下列資訊： ...* 連結名稱 * ：輸入您要用於此連結的名稱。名稱在您的帳戶中必須是唯一的。...* 標記 * ：您也可以選擇新增任何標記來與此連結建立關聯、以便更輕鬆地將資源分類。例如、您可以新增一個標記、將此連結識別為由 FSX 用於 ONTAP 檔案系統。...* 連結註冊 * ：在下拉式箭頭上選取，展開如何從 AWS CloudForgation 服務註冊連結的指示。請依照指示進行。</block>
+  <block id="cd98e4742e383c73a9017cf37048dab3" category="paragraph">+ 請注意，當您啟動 CloudForgation 範本時， Lambda 會獲得三個權限。工作負載工廠在使用連結時會使用這些權限。</block>
+  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
+  <block id="03cbb5aa17b11dd165e99ea851de8fd1" category="paragraph">+ 成功建立堆疊後，將 Lambda ARN 貼到文字方塊中。...AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔案系統的 FSX 自動擷取。。選擇* Create *（建立*）。</block>
+  <block id="6afe6ad4a6402f747574f4ee51966b0c" category="paragraph">+ 您可以從「事件」頁面監控連結建立狀態。這不應超過 5 分鐘。。返回工作負載原廠介面，您會看到連結與 ONTAP 檔案系統的 FSX 相關聯。</block>
+  <block id="7607cf6a75040d1b9bf8fde1cfaecf12" category="doc">在 BlueXP  工作負載工廠建立複寫關係</block>
+  <block id="161fc7b1d67184a50e10e19fb2489263" category="paragraph">在 BlueXP  工作負載工廠中為適用於 ONTAP 檔案系統的 FSX 建立複寫關係，以避免發生無法預見的災難時發生資料遺失。</block>
+  <block id="cf2d4a66ab67f86354f74f9c2cd68326" category="list-text">您用於複寫關係的兩個檔案系統必須有相關的連結。如果檔案系統沒有現有的連結，請參閱 <block ref="1bb172d13e94db502d24bfc1c5a4fc0a" category="inline-link-macro-rx"></block>。<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>在檔案系統中，在 * 帳戶名稱 * 下選擇 * 關聯連結 * 。連結在兩個檔案系統中建立關聯後、請返回此作業。</block>
+  <block id="d3c14843d08cf463d9ea9a6b94804262" category="list-text">在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要複製的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。</block>
+  <block id="089bd3378d1656ee1710bccf951f8421" category="list-text">從 Volumes （磁碟區）標籤中，選取要複寫的磁碟區的三點功能表。</block>
+  <block id="215ff1ada74bcc801bd4be406a4760b9" category="paragraph">_Auto_ 是使用 ONTAP 使用者介面的工作負載原廠 FSX 建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>AWS FSX for NetApp ONTAP 文件中的。</block>
+  <block id="1d1c040daca4e036fc6766de8bee1a0d" category="list-text">在 FSX for （適用於 ONTAP 的 FSX ）索引標籤中，選取含有磁碟區的檔案系統的三點功能表，然後選取 * 管理 * 。</block>
+  <block id="26aa14a56cb65f177e49de0f78d28f50" category="summary">為 BlueXP  工作負載工廠中的 ONTAP Volume 建立 FSX 的快照原則。Snapshot 原則定義系統如何為磁碟區建立快照。</block>
+  <block id="845e00b5325a1fed5014a20ed341a698" category="paragraph">為 BlueXP  工作負載工廠中的 ONTAP Volume 建立 FSX 的自訂快照原則。Snapshot 原則定義系統如何為磁碟區建立快照。</block>
+  <block id="9b5cb8f49e83e342d48c95385ebf43e7" category="list-text">若要建立自訂的快照原則、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
+  <block id="bde64956326818fe8b0667c56ca96cb2" category="paragraph">使用其中一項登<block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>入。。在 * 儲存 * 中、選取 * 移至儲存設備詳細目錄 * 。。在 *FSX for ONTAP （用於卷的 FSX ） * 選項卡中，選擇包含卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。。在檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。。從 * Volumes （磁碟區） * 標籤中，選取要使用排程快照保護的磁碟區的三點功能表。。選擇 * 資料保護動作 * 、 * 快照 * 、然後 * 管理快照原則 * 。。在「 Snapshot 原則管理」頁面上、選取 * 建立新的快照原則 * 。。在 * Snapshot 原則名稱 * 欄位中、輸入快照原則的名稱。。選用：在 * 說明 * 欄位中、輸入快照原則的說明。。在 * 排程 * 下、選取何時建立快照。例如、每分鐘或每小時。</block>
+  <block id="fc44d0b301d97eb155695e7e98d13195" category="paragraph">+ 您可以選擇多個頻率。。在 * 份數 * 下、輸入要保留的份數。</block>
+  <block id="e30313f4b4ec8d88a97bc809eb25a275" category="paragraph">+ 最大複本數為 1,023 份。。選用：在 * 命名慣例 * 下、輸入原則的 * 字首 * 。。* 保留標籤 * 會自動填入。</block>
+  <block id="404cc58e2d73e238e13299d652231d3e" category="paragraph">+ 此標籤指的是 SnapMirror 或複寫標籤，僅用於選取指定的快照，以便從來源複寫到目標檔案系統。。選擇*應用*。</block>
+  <block id="475db696847724a8e496eba7476bc2ce" category="summary">在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX 的手動快照。快照是磁碟區內容的時間點版本。</block>
+  <block id="512defc52682eb6b6d9585f8d5494603" category="paragraph">您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block> 建立快照。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
+  <block id="8e835d5a49d273fb898a556146f8b52c" category="list-text">從 *Volumes （卷） * 選項卡中，選擇要保護的卷的三點菜單。</block>
+  <block id="d0b0eb066206fa50f3ebee39a541bb7c" category="summary">您可以為 ONTAP 儲存 VM （ SVM ）建立 FSX ，為 BlueXP  工作負載工廠的工作負載提供儲存和資料服務。</block>
+  <block id="4da97157b6693eaf9968b187d7b8259c" category="paragraph">為適用於 ONTAP 檔案系統的 FSX 建立儲存 VM （ SVM ），以便在 BlueXP  工作負載工廠中，為您的工作負載，以虛擬方式存取儲存和資料服務。</block>
+  <block id="54f16768a20bbfb09d736f2fa0a731aa" category="paragraph">儲存 VM 是隔離的檔案伺服器，您可以使用它來存取工作負載原廠儲存設備中每個工作負載的資料。每個 SVM 都有自己的管理認證和端點、用於管理和存取資料。</block>
+  <block id="08e2fd9fd4dc9adfe3d5f817b3499842" category="paragraph">您可以從工作負載原廠主控台建立儲存 VM 。您也可以使用 Codebox 中的下列工具： REST API 、 CloudForformation 和 Terraform 。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>。</block>
+  <block id="76e3f0d82963df25a63cb0c98b73397d" category="list-text">在 FSX for （適用於 ONTAP 的 FSX ）標籤中，選取檔案系統的三點功能表以建立儲存 VM ，然後選取 * 管理 * 。</block>
+  <block id="55a23b72fe4aee5e2f0024c790d7eaba" category="paragraph">從 BlueXP  工作負載工廠的快照建立適用於 ONTAP Volume 的全新 FSX ，以啟用時間點還原。</block>
+  <block id="8d34a33f34659b0ea11833ac0b8fac52" category="list-text">在 *FSX for ONTAP * 標籤中，選取含有 Volume Snapshot 的檔案系統三點功能表，然後選取 * 管理 * 。</block>
+  <block id="3ce528a1818baf0bbf2f6b362b1f7d58" category="list-text">在 Volumes （磁碟區）索引標籤中，選取含有您要建立磁碟區之快照的磁碟區的三點功能表。</block>
+  <block id="949524c655289917241748aa79f7ac90" category="summary">在 BlueXP  工作負載工廠中設定適用於 ONTAP 檔案系統的 FSX 之後，您可以為 ONTAP Volume 建立 FSX 。</block>
+  <block id="3f069fcb238357ca598d1a4d611a62de" category="doc">在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX</block>
+  <block id="70e17a61e26a90f517dba1b053b0c09e" category="paragraph">為 ONTAP 檔案系統設定 FSX 之後，您可以在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX 。</block>
+  <block id="d5d682292e122fa36db263f49a714cc7" category="list-text">您必須在工作負載工廠中擁有適用於 ONTAP 檔案系統的 FSX 。</block>
+  <block id="60911d8c5f41bf949378c3bec9fe03b7" category="list-text">若要設定對磁碟區的存取權、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
+  <block id="27403aa4066ffea03bd15fd0fd4e5e67" category="list-text">在 *FSX for ONTAP * 標籤中，選取您要在其中建立磁碟區的檔案系統三點功能表，然後選取 * 管理 * 。</block>
+  <block id="892eff425e1d1bcf86736ccfc7447322" category="list-text">從 * Overview （總覽） * 選項卡中，選擇 * Create Volume （創建卷） * 。</block>
+  <block id="72ce63a6bef6ec13ef74a7eab0012469" category="summary">適用於 ONTAP 的 FSX 支援 BlueXP  工作負載工廠的快照，磁碟區備份和磁碟區複寫。</block>
+  <block id="d041ab32e01d968ecc286a807158f8b3" category="doc">BlueXP  工作負載工廠的資料保護</block>
+  <block id="96a5899d90dd9b81319f168f67bcb5ae" category="summary">若要在 BlueXP  工作負載工廠中刪除檔案系統，您必須先刪除與檔案系統相關的任何磁碟區，儲存 VM 或複寫關係。</block>
+  <block id="378213b58b31bfb9d173e8b2ad3c0968" category="doc">在 BlueXP  工作負載工廠中刪除檔案系統</block>
+  <block id="a3101c3638d17143df93e5cfcc3c3a0a" category="list-text">在 *FSX for （用於 ONTAP ） * 標籤中，選擇要刪除的 ONTAP 文件系統的 FSX 的三點菜單。</block>
+  <block id="b029765a217bab95a5c385e33dd87eb2" category="list-text">在 * 總覽 * 標籤中，選取三點選單。</block>
+  <block id="224abcc19ea992463777ed7e26bf304c" category="summary">視需要刪除 BlueXP  工作負載工廠中的複寫關係。</block>
+  <block id="788419e37fb2ea7e0393d07c48d61090" category="doc">刪除 BlueXP  工作負載工廠中的複寫關係</block>
+  <block id="f1d2051a009c0ff0041191a0fafffb9f" category="paragraph">刪除 BlueXP  工作負載工廠中的複寫關係。刪除複寫關係時、會移除來源磁碟區和目標磁碟區之間的複寫關係。複寫關係刪除之後、兩個磁碟區仍會與它們所包含的目前資料保持不中斷的狀態。</block>
+  <block id="2ac770c73979c18c00902e28df99c4a0" category="list-text">在「複寫關係」索引標籤中，選取要刪除複寫關係的三點功能表。</block>
+  <block id="c853397a437814fc2251c95bdf57909f" category="list-text">在刪除關係對話方塊中，選取 * 刪除 * 。</block>
+  <block id="dc6069994191a3fe57542d41ef35a8a1" category="doc">在 BlueXP  工作負載工廠中刪除儲存 VM</block>
+  <block id="bfca7a55c9d1c7deb6b6b0a1f6f7f08b" category="list-text">在 Storage VMs （儲存 VM ）標籤中，選取要設定 Active Directory 的儲存 VM 的三點功能表。</block>
+  <block id="d0db20e3cb88e1b0500d7f3b879619f6" category="doc">在 BlueXP  工作負載工廠中刪除 Volume</block>
+  <block id="5fd5e23862fc5b1910c2568915297120" category="list-text">在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要刪除的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。</block>
+  <block id="21ffc1d60d910e1796100ec0f0e054bf" category="list-text">從 Volumes （磁碟區）標籤中，選取要刪除的磁碟區的三點功能表。</block>
+  <block id="ad1d6a18c0d830b44dfe2e6a96d2807d" category="list-text">（可選）選擇 * 備份卷 * 以在刪除之前備份卷。</block>
+  <block id="136dc09835924029e4299fa28f17233d" category="list-text">選擇*繼續*。</block>
+  <block id="f7f2169256b833e4b912b12eeb380c4e" category="summary">啟用 Volume 自動擴充功能，讓 BlueXP  工作負載在出廠時能夠為您管理 Volume 容量。您可以隨時停用。</block>
+  <block id="5d6c153f1e4ed3eaf701b67f0de4cee6" category="doc">在 BlueXP  工作負載工廠中啟用 Volume 自動擴充</block>
+  <block id="49d3064815a18006405df55cc92d66d0" category="paragraph">若要啟用 Volume 自動擴充、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>：如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
+  <block id="442b64cea00e2efaa2cb2cb89dba4ab3" category="list-text">在 FSX for ONTAP 標籤中，選取要更新之 Volume 的檔案系統三點功能表，然後選取 * 管理 * 。</block>
+  <block id="a0b96ee62d98191f36ed547bccb7babd" category="list-text">從 Volumes （磁碟區）標籤中，選取您要修改之磁碟區的三點選單。</block>
+  <block id="a4fc5c253ce09fe4825f0474ddb3368c" category="summary">啟用此功能可讓工作負載原廠自動將遞增儲存設備新增至適用於 ONTAP 檔案系統的 FSX ，以因應容量需求隨時間變化。</block>
+  <block id="bd0cd4a796621f54f57afed7ce044b14" category="doc">為 ONTAP 檔案系統啟用 FSX 的自動容量管理</block>
+  <block id="86699015e319e1f0d9764f4cc8296e22" category="paragraph">啟用此功能可讓 BlueXP  工作負載在出廠時自動將遞增儲存設備新增至適用於 ONTAP 檔案系統的 FSX ，以因應容量需求隨時間變化。</block>
+  <block id="dfee49f6e7d939f9d77bcc58a66381b0" category="paragraph">您必須在工作負載工廠擁有 _ 自動化 _ 權限的認證，才能完成此工作。</block>
+  <block id="d473b237e9c91fd6e196904b26b4c56c" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中，選取檔案系統的三點功能表，以啟用的自動容量管理。</block>
+  <block id="37315e43d6c90fe6798b7397bf15ebae" category="list-text">在「資訊」下，選取 * 自動容量管理 * 旁的鉛筆圖示。當滑鼠移動到 * 自動容量管理 * 列上時、下拉式箭頭旁會出現鉛筆圖示。</block>
+  <block id="c5c6c97593c886ac31454d1f10313b78" category="list-text">選取啟用按鈕以 * 啟用自動容量管理 * 。</block>
+  <block id="759c5ad2620497fe90dc2bc5e085c8c0" category="summary">啟用快照以進行長期保留，可讓您複寫特定快照以進行長期災難恢復。</block>
+  <block id="141c06eb90111f96ad88fba407d4f622" category="paragraph">在 BlueXP  工作負載工廠中，您可以啟用快照進行長期保留，以便複寫特定快照以進行長期災難恢復。</block>
+  <block id="37873c6c78867be44aa0676105354543" category="paragraph">長期保留功能可讓企業服務即使在整個站台發生故障時仍能繼續運作，支援使用次要複本的應用程式透明容錯移轉。</block>
+  <block id="8107582f3eb31967f7b5b6bdc4826ea0" category="list-text">如果您選擇停用快照以進行長期保留，請選取 * 套用 * 以完成此作業。</block>
+  <block id="66ca66124b69024cef94c671dc4b97bf" category="list-text">若要使用現有原則，請從下拉式功能表中選取該原則。</block>
+  <block id="dd0818ef84ecf338be3c795b4a57e5c4" category="doc">在 BlueXP  工作負載工廠中探索適用於 ONTAP 的 FSX 所帶來的節約效益</block>
+  <block id="9ce81c8939619bb16315ccf3c3c9f052" category="paragraph">工作負載工廠內建儲存節約計算機，可讓您將 Amazon 儲存環境與 ONTAP 的 FSX 進行比較。您可以使用或不提供 AWS 認證來探索節約效益、並自訂儲存環境的組態設定。當您提供 AWS 認證時，您可以選取一或多個 Amazon Elastic Block Store 執行個體，並讓工作負載工廠自動進行比較。無論是手動或自動、計算機都會判斷哪種儲存服務能為您的儲存需求提供最低成本。</block>
+  <block id="26852699cf6fe74856b51ba453d4c0ac" category="paragraph">如果儲存計算機判斷最具成本效益的儲存設備是適用於 ONTAP 的 FSX ，您可以建立或儲存適用於 ONTAP 組態的 FSX ，並使用 Codebox 產生基礎架構即程式碼範本，無論您授予工作負載工廠的權限為何。</block>
+  <block id="798944cb742e35be45b885ba05ab898c" category="paragraph">探索偵測到的儲存環境的節約效益：工作負載原廠連結至您現有的 AWS 儲存環境，並將詳細資料擷取至計算機以進行自動比較。您必須授予自動化權限、才能使用自動模式。您可以變更使用案例、但計算中會自動決定所有其他詳細資料。</block>
+  <block id="b86c5bb2dd8e6c760c8bbfff2ddf0923" category="paragraph">為了讓工作負載工廠在 AWS 帳戶中偵測適用於 Windows 檔案伺服器儲存環境的 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和 FSX ，請確定您<block ref="d9270f60c282b5496f17a4b48a6da305" category="inline-link-macro-rx"></block>在 AWS 帳戶中。</block>
+  <block id="2d83cd56bca59e576fa64b1541748a03" category="list-text">在 * 彈性區塊存放區（ EBS ） * 標籤中，選取要與 ONTAP 的 FSX 比較的執行個體，然後選取 * 探索節約 * 。</block>
+  <block id="f900c4b34e11b02792e1333279ad7266" category="list-text">在 *Amazon FSX for Windows File Server* （適用於 Windows 檔案伺服器 * ）標籤中，選取要與 ONTAP 的 FSX 比較的執行個體，然後選取 * Explore 節約 * 。</block>
+  <block id="44db8262955279888fe6689ae1925444" category="list-text">在 * 彈性檔案系統（ EFS ） * 標籤中，選取要與 ONTAP 的 FSX 比較的執行個體，然後選取 * 探索節約 * 。</block>
+  <block id="d7b5ef3710c50092f6633bb1e66a1561" category="paragraph">如果您想要切換至適用於 ONTAP 的 FSX 以節省成本，請選取 * 建立 * ，直接從「建立適用於 ONTAP 檔案系統的 FSX 」精靈建立檔案系統，或選取 * 儲存 * 來儲存建議的組態以供稍後使用。</block>
+  <block id="b136689ec8046bd4fb76df787393258d" category="list-text">在 _ 自動化 _ 模式中，您可以直接從工作負載工廠部署適用於 ONTAP 檔案系統的 FSX 。您也可以從 Codebox 視窗複製內容、並使用其中一種 Codebox 方法來部署系統。</block>
+  <block id="42342e81c625fd1c1141771fe2b6b202" category="summary">NetApp 以多種方式支援工作負載工廠及其雲端服務。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和社群論壇。您的支援註冊包括透過網路票證提供遠端技術支援。</block>
+  <block id="cf0e6c8d239f09812e12102f2415bb94" category="doc">取得 ONTAP for Workload Factory 的 FSX 說明</block>
+  <block id="4788b71d4c5e86a9696627d3c900127a" category="doc">增加 BlueXP  工作負載工廠的檔案系統容量</block>
+  <block id="9d5344a986b0470d38d0c3e88e507b26" category="paragraph">或者，您也可以<block ref="2bbbc5acd5fd256837600f63916b0e57" category="inline-link-macro-rx"></block>讓工作負載在工廠為您管理檔案系統容量。</block>
+  <block id="1eacd22d13fd6fa8174d7a166e0e9e6b" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中，選取檔案系統的三點功能表以增加容量。</block>
+  <block id="b809bcb34d202de3370d7e6db448a949" category="list-text">在「資訊」下，選取 * 容量分配 * 旁邊的鉛筆圖示。當滑鼠移動到 * 容量分配 * 列上時、下拉式箭頭旁會出現鉛筆圖示。</block>
+  <block id="56878af0f0856af0f2eb7d58b284ec98" category="summary">隨時手動增加 BlueXP  工作負載工廠中的 Volume 容量。</block>
+  <block id="9a043b713e882184d11ad1a7919816bc" category="doc">增加 BlueXP  工作負載工廠的 Volume 容量</block>
+  <block id="9aebf119a4043534b3bad38302a5a426" category="paragraph">在 BlueXP  工作負載工廠中，隨時手動增加 Volume 容量。</block>
+  <block id="37af5d3c1fc55c4c592c9e25262e33e0" category="paragraph">或者，您也可以<block ref="e5ea0961d6c7f5be0b804e74d995de2b" category="inline-link-macro-rx"></block>讓工作負載在工廠內為您管理 Volume 容量。</block>
+  <block id="4b393875b5b045103675a2b1cafadea3" category="paragraph">若要增加 Volume 容量、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>：如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
+  <block id="eb5b43fd3063e7e7d316d276274f9cdf" category="list-text">從 Volumes （磁碟區）標籤中，選取要增加容量的磁碟區三點選單。</block>
+  <block id="fff3d9f088697aebfe71e7b67e73d713" category="list-text">選取 * 增加 * 。</block>
+  <block id="91dba10e04f0058a3a870602dfa68322" category="doc">在 BlueXP  工作負載工廠中初始化複寫關係</block>
+  <block id="e7468956ee9dd1bea83fcdcd24d2fcda" category="paragraph">在 BlueXP  工作負載工廠中初始化來源磁碟區與目標磁碟區之間的複寫關係。</block>
+  <block id="9d766b6178ad56fec4d1320aa17e387b" category="list-text">在複寫關係索引標籤中，選取要初始化複寫關係的三點功能表。</block>
+  <block id="0e42938784ca54b8dc455284578841f0" category="list-text">在「初始化關係」對話方塊中，選取 * 初始化 * 。</block>
+  <block id="478b776fc28a60e8545a858eb7ca9a3e" category="summary">已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。</block>
+  <block id="bd2e4cb8c94783198db1a525a87ae34a" category="doc">Amazon FSX for NetApp ONTAP 的已知限制</block>
+  <block id="ebb8834ddc064318ec8eb05605b0880f" category="paragraph">需要連結才能完成工作負載原廠使用者介面中的複寫作業。</block>
+  <block id="aa75e9d89ef77ba0164dfacff4eadc7c" category="paragraph">每個 SKU 的儲存 VM 數量有限。工作負載工廠不支援建立超出限制的儲存 VM 。 ^1^</block>
+  <block id="26ed02718973e705cd69ee6e109400e0" category="section-title">系統管理員</block>
+  <block id="9ee31cf2622a4d1606ccae84e2ba0742" category="paragraph">System Manager 不支援用於 ONTAP 連線的 FSX 連結。</block>
+  <block id="4bbd07bb2f839cd80cfef36f8f06e1f1" category="summary">Amazon FSX for NetApp ONTAP 是一項完全託管的服務，可讓客戶在工作負載工廠內啟動及執行檔案系統作為工作負載的儲存後端。</block>
+  <block id="dcdcc3b1adda4b81360d26a9e731eaab" category="doc">瞭解 BlueXP  工作負載工廠的 Amazon FSX for NetApp ONTAP</block>
+  <block id="c02aa36d9abffd3bcd7e0a36fc6efc67" category="paragraph">Amazon FSX for NetApp ONTAP 是完全託管的雲端型資料儲存服務、可提供進階資料管理功能和高度擴充的效能。適用於 ONTAP 的 FSX 可讓您建立及管理檔案系統，做為 BlueXP  工作負載工廠內所有工作負載的儲存後端。</block>
+  <block id="ea8ecb6dcd671b9043715f27622e4933" category="paragraph">適用於 ONTAP 的 FSX 是工作負載工廠中的 _Storage_ 元件。</block>
+  <block id="fac8a7170be45405e9aaa6561616bfd9" category="list-text">* 完全託管服務 * ：提供與工作負載原廠主控台整合的全託管服務。</block>
+  <block id="c3cd430120c5efa4c196521ed9efef38" category="section-title">工作負載工廠的其他功能</block>
+  <block id="384c5c520d0877aaaaed76d75d973d99" category="list-text">* 儲存成本比較計算機 * ：將 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和適用於 Windows 檔案伺服器的 FSX 儲存成本與適用於 ONTAP 的 FSX 進行比較。從計算機中、您可以檢視適用於 ONTAP 儲存組態的 FSX 如何節省成本、並規劃移轉至適用於 ONTAP 儲存設備的 FSX 。</block>
+  <block id="f6858e5eadd0ed940450d85121838545" category="list-text">* 工作負載工廠使用者介面 * ：提供 _ 快速建立 _ 和 _ 進階建立 _ 部署模式選項。快速建立包括 AWS 、 NetApp 、以及適用於您儲存組態的業界標準最佳實務做法。</block>
+  <block id="200e3179449390bdf5f3f8d9a199630c" category="section-title">使用工作負載工廠的工具</block>
+  <block id="b5a374f3f5b31b5057808689d26fe2c4" category="paragraph">您可以搭配下列工具使用 BlueXP  工作負載工廠：</block>
+  <block id="d5688c5bf16d0126d5b27759385bd41e" category="list-text">* 工作負載原廠主控台 * ：工作負載原廠主控台提供視覺化介面，可讓您全面檢視應用程式和專案</block>
+  <block id="38f4e563ea70a0c42a140783a152e82f" category="list-text">* BlueXP  console* ： BlueXP  主控台提供混合式介面體驗，讓您可以將 BlueXP  工作負載工廠與其他 BlueXP  服務一起使用</block>
+  <block id="a3ee2d6d4606b21bc131c4389e63413b" category="list-text">* REST API* ：工作負載原廠 REST API 可讓您部署及管理適用於 ONTAP 檔案系統和其他 AWS 資源的 FSX</block>
+  <block id="35507c73673fd91f2b540f5ac22435e2" category="list-text">* CloudForgi38* ： AWS CloudForgation 程式碼可讓您執行工作負載原廠主控台中定義的動作，以建構，配置及管理 AWS 帳戶中 CloudForgation 堆疊中的 AWS 和第三方資源</block>
+  <block id="2b796a233d6b48fb3e49b8c71a2addb1" category="list-text">* Terraform BlueXP  工作負載工廠供應商 * ： Terraform 可讓您建置及管理在工作負載工廠主控台產生的基礎架構工作流程</block>
+  <block id="8c643102fad13c593e1b977fbd4541d0" category="paragraph">您的 FSX for ONTAP 帳戶由 AWS 維護，而非由工作負載工廠維護。請參閱 <block ref="d466c04e3dc9277f23f307f5afe7df62" category="inline-link-macro-rx"></block>。</block>
+  <block id="652598e6fd9da9bdc98db0ef4a093ddd" category="paragraph">有關工作負載工廠或工作負載工廠應用程式與服務的一般問題，請<block ref="b4c96257ecccde997612582bfecaef76" category="inline-link-macro-rx"></block>參閱。</block>
+  <block id="1dde4a08beb94964c3432a2fc7fdc3fc" category="doc">BlueXP  工作負載工廠的法律聲明</block>
+  <block id="ac09047fc1cd6bf09a117141110f48d7" category="summary">限制 BlueXP  工作負載工廠中複寫關係的最大傳輸率。</block>
+  <block id="762b3359899f8310afcce0d1d39002bd" category="paragraph">限制 BlueXP  工作負載工廠中複寫關係的最大傳輸率。無限傳輸率可能會對其他應用程式和網路的效能造成負面影響。</block>
+  <block id="56bedf2f5cbe25c231ae59482adc0fe2" category="list-text">在 [ 複寫關係 ] 索引標籤中，選取複寫關係的三點功能表，以限制的最大傳輸速率。</block>
+  <block id="de401cd5994804b12e8c1734d1ee027c" category="summary">工作負載原廠連結可在工作負載原廠帳戶和 ONTAP 檔案系統的一或多個 FSX 之間建立信任關係和連線。</block>
+  <block id="12565ed510f1f762365915b3fa807454" category="doc">瞭解 BlueXP  工作負載工廠連結</block>
+  <block id="55981a57e653c44a83666d6d6bf1a27d" category="paragraph">BlueXP  工作負載原廠連結可在工作負載原廠帳戶和一或多個適用於 ONTAP 檔案系統的 FSX 之間建立信任關係和連線。這可讓您直接從 Amazon FSX for ONTAP API 無法使用的 ONTAP REST API 呼叫監控及管理特定檔案系統功能。</block>
+  <block id="691199ddecf65c4783496c94612dd07f" category="paragraph">您不需要連結即可開始使用工作負載工廠，但在某些情況下，您需要建立連結來解除鎖定所有工作負載原廠功能和工作負載功能。</block>
+  <block id="c1dad4a74a18053a2db1d6f5da393921" category="paragraph">您可以在工作負載工廠中，從適用於 ONTAP 檔案系統頁面的 FSX 建立連結。<block ref="e9a88ae15a9584972e43294d65e9c8ac" category="inline-link-macro-rx"></block> 以取得詳細資訊。</block>
+  <block id="73e5c2c2b839cfd3116941a00923fc5c" category="paragraph">Lambda 執行的每項交易都會產生費用。由於 Lambda 是兩個系統之間的代理伺服器，因此當 Lambda 將要求傳送至檔案系統上的 ONTAP REST API ，以及將回應傳回工作負載工廠時，都會收取費用。</block>
+  <block id="895a7d895aa3866c9188fcd255af1541" category="paragraph">工作負載工廠需要一個連結來顯示一些資訊並執行一些工作。如果您嘗試執行需要連結的作業、但尚未將連結與 ONTAP 檔案系統的 FSX 關聯、則會看到作業需要連結的訊息。您可以新增連結、或是將適用於 ONTAP 檔案系統的 FSX 與現有連結建立關聯、以便執行作業。</block>
+  <block id="20cbf23ff8204cff465470ae4144d936" category="summary">視需要在 BlueXP  工作負載工廠中管理適用於 ONTAP 檔案系統的 FSX 備份排程。</block>
+  <block id="53fe87832fd05bf7a8e9f1e1bad4aa86" category="doc">管理適用於 ONTAP 檔案系統的 FSX 備份排程</block>
+  <block id="e8333245618d8dbca5436b9e71370d58" category="paragraph">在 BlueXP  工作負載工廠中管理適用於 ONTAP 檔案系統的 FSX 備份排程。</block>
+  <block id="ec41fd2038827f9fac3984d545d03cc0" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中，選取檔案系統的三點功能表以更新的備份排程，然後選取 * 管理 * 。</block>
+  <block id="4a74309dc15865035b8b93cec28f2a96" category="list-text">在 [ 資訊 ] 下，選取 *FSX for ONTAP backup* 旁邊的鉛筆圖示。當滑鼠移動到 *FSX for ONTAP backup* 列上時、下拉式箭頭旁會出現鉛筆圖示。</block>
+  <block id="9f16bb4c9cbb656a02f2d0ac20ae70a8" category="list-text">* 每日自動備份 * ：啟用或停用此功能。如果您停用此功能，請選取 * 套用 * 。如果您啟用此功能、請完成下列步驟。</block>
+  <block id="1b7732fda3ed237c994a5ac55fb150ea" category="list-text">* 每日自動備份時段 * ：選擇 * 無偏好設定 * （為您選擇每日備份開始時間）或 * 選擇每日備份開始時間 * ，並指定開始時間。</block>
+  <block id="9267ce1924a6f0548efc234c84461fa8" category="summary">變更 BlueXP  工作負載工廠中使用 SMB/CIFS 通訊協定類型的磁碟區 CIFS 共用。</block>
+  <block id="5bdcc5d3e4e631055e0153df468f21d6" category="doc">在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用</block>
+  <block id="17c44173e4e9c50b2859e1925d7af336" category="paragraph">在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用，包括判斷要授予存取權的使用者和群組，以及提供存取權限的類型。</block>
+  <block id="3d158aba7d5d233ad247917999b7f8f9" category="list-text">從 Volumes （磁碟區）索引標籤中，選取要變更 SMB 共用的磁碟區三點功能表。</block>
+  <block id="20ce09b74b6e0e3f084a81d605cc8f77" category="summary">您可以在 BlueXP  工作負載工廠中檢視與您帳戶相關的連結，建立連結的關聯，以及移除連結。</block>
+  <block id="2083481ef56023982330c4d1cbedcd07" category="doc">管理 BlueXP  工作負載原廠連結</block>
+  <block id="239ad8ad0a1e3c62675449c7c312ff33" category="paragraph">管理您與 BlueXP  工作負載原廠帳戶相關的連結。</block>
+  <block id="3e0b9b190a3e069bed44756ddb118289" category="list-text">從主頁中，從菜單中選擇 * 鏈接 * 。</block>
+  <block id="cc26ff728c1b9844af11d5c6831287a6" category="paragraph"><block ref="cc26ff728c1b9844af11d5c6831287a6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a91b1be003fc8ddd1b9b9c2667168d69" category="paragraph">您無法從工作負載原廠介面編輯連結。如果您需要變更連結、則需要建立新連結、然後將該連結與檔案系統建立關聯。</block>
+  <block id="aec8f4de9ee2d507963d8cb78dcb3fa1" category="paragraph">請注意、此連結僅會從 Workload Factory 刪除、不會從 AWS 環境中刪除。移除工作負載工廠中的連結後，您必須從 AWS 帳戶刪除 Lambda 功能。</block>
+  <block id="e29581d34ba86e96a25a94e983e710ad" category="inline-image-macro">顯示如何從工作負載工廠移除連結的螢幕擷取畫面。</block>
+  <block id="1165cd760ac241cf9b13fc44c28d6b24" category="paragraph"><block ref="1165cd760ac241cf9b13fc44c28d6b24" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5b9288dd513e4ad0d5f06df075069a08" category="summary">在 BlueXP  工作負載工廠中，管理使用 NFSv3 或 NFSv4.1 傳輸協定類型之 Volume 的 NFS 匯出原則。</block>
+  <block id="2a18f1bf3376d6496c74dcddd35d9f18" category="doc">管理 BlueXP  工作負載工廠中某個 Volume 的 NFS 匯出原則</block>
+  <block id="252f635ce0e02569bc7f4824220027fb" category="paragraph">管理 Volume 的匯出原則包括新增匯出原則規則，其中詳細說明用戶端規格，存取控制，超級使用者存取和 NFS 版本。您可以新增多個匯出原則、並將其排定優先順序。</block>
+  <block id="d9947fb691dd22ea8a1d462ee67cb7d8" category="list-text">從 Volumes （磁碟區）索引標籤中，選取要變更 NFS 匯出原則之磁碟區的三點功能表。</block>
+  <block id="91b382ba4d85ee3a4830cb39b5070557" category="doc">在 BlueXP  工作負載工廠中管理儲存 VM 標籤</block>
+  <block id="208cbe9257272bd35a854a8389f07d99" category="paragraph">標記可協助您分類資源。您可以隨時在 BlueXP  工作負載工廠中新增，編輯及移除儲存 VM 的標籤。</block>
+  <block id="a55fe3dc2e0cd49661f3ba8757363b64" category="list-text">從 Storage VMs 標籤中，選取要編輯標記的儲存 VM 的三點功能表。</block>
+  <block id="db3073cca73139dcb0a3338783133cbf" category="doc">在 BlueXP  工作負載工廠中管理 Volume 標記</block>
+  <block id="d2b01c88f64bb159d965d525ff57385f" category="paragraph">標記可協助您分類資源。您可以隨時在 BlueXP  工作負載工廠中為 ONTAP Volume 新增，編輯及移除 FSX 的 Volume 標籤。</block>
+  <block id="23b53d3568af43f1993db1e4a0b5b539" category="list-text">從 Volumes （磁碟區）索引標籤中，選取要修改標記之磁碟區的三點功能表。</block>
+  <block id="10592ebe37a7e3117136f2d8cface935" category="summary">效能參考資料是針對 BlueXP  工作負載工廠中的 ONTAP 適用的 FSX 。</block>
+  <block id="c317ab6f4d236615fdd0149ad3e2d27f" category="doc">BlueXP  工作負載工廠中適用於 ONTAP 的 FSX 效能</block>
+  <block id="62f6d5ab5287069375e2b4fe49fd674d" category="paragraph">在 BlueXP  工作負載工廠中，自動為 ONTAP 檔案系統的 FSX 配置或手動配置 SSD IOPS 。</block>
+  <block id="6279733ae5fa09a4c693b345e6259618" category="paragraph">自動佈建的 IOPS 會以每 GiB 3 IOPS 計算。</block>
+  <block id="eeba2ebb020e2a04f72c79660c1af4c0" category="inline-link-macro">增加檔案系統容量</block>
+  <block id="53ff04abd2d50962417acb562ee2071b" category="paragraph">如果您手動配置 IOPS ，可能需要在之前增加 IOPS <block ref="94a3285243f3705d6ad038b61125cb2f" category="inline-link-macro-rx"></block>。</block>
+  <block id="c0e7e25823412689ce1766213ff693a9" category="paragraph">如需 IOPS 限制的相關資訊，請參閱 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block>AWS FSX for NetApp ONTAP 文件。</block>
+  <block id="d768b5419e467ed9a94738eddae95578" category="list-text">在 * 適用於 ONTAP * 的 FSX 索引標籤中，選取要為其配置 IOPS 的檔案系統三點功能表，然後選取 * 管理 * 。</block>
+  <block id="b110ae22e3b6b4051be0372bbeb02ea7" category="list-text">在「資訊」下，選取當滑鼠移到 *IOPS allocation （ IOPS 分配）列上時，出現在下拉式箭頭旁的鉛筆圖示。</block>
+  <block id="9fd6ceb9420dc61c8d088b1e2218b5cd" category="list-text">如果您選取 * 使用者佈建 * ，請輸入所需的 * IOPS 值 * 。</block>
+  <block id="0cb5a5b32fbf2331b49fa68894dd20e7" category="summary">只需幾個步驟，就能在 BlueXP  工作負載工廠開始使用適用於 ONTAP 的 FSX 。</block>
+  <block id="e3e9342db3fc58346ff82a47e3a157a1" category="doc">在 BlueXP  工作負載工廠中快速啟動 Amazon FSX for NetApp ONTAP</block>
+  <block id="0e73abac525ebedc013e38e9851f45c4" category="paragraph">在 BlueXP  工作負載工廠中使用 Amazon FSX for NetApp ONTAP ，您可以立即以 _basive_ 模式開始使用。</block>
+  <block id="6832b737f5df59943aab5e42369bdaf0" category="paragraph">如果您想要使用工作負載工廠來建立檔案系統，管理資源等，只需幾個步驟即可開始使用。在這種情況下，您需要 AWS 帳戶和認證才能開始使用。</block>
+  <block id="2fd605c5fdf1d57ba01b68838e68dc27" category="paragraph-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block>登入工作負載工廠</block>
+  <block id="d9eebdefd5feceb309eadc305ce81e6f" category="inline-link-macro">在工作負載工廠設定帳戶</block>
+  <block id="12b661ed43bc8482598b32a96010dbaa" category="paragraph">您需要 <block ref="782deaad814daa4f2ae09237c9394f09" category="inline-link-macro-rx"></block> 和 <block ref="10204cc30f2f30795b6ce82a21da7b1a" category="inline-link-macro-rx"></block></block>
+  <block id="2cadb9b6b8dd7d35ff0aa90d81d0e9f1" category="paragraph">如果您選擇以 _basive_ 模式操作、就不需要再繼續操作。您可以開始使用 FSX for ONTAP 的工作負載原廠來複製部分完成的程式碼範例。</block>
+  <block id="e5d3c7248ff4540f88c13fbf9252d0a3" category="inline-link-macro">工作負載原廠主控台</block>
+  <block id="4e3446d47d185e690e48c92eec422d48" category="paragraph">您將建立一個 FSX 檔案系統，開始在工作負載工廠中管理您的儲存設備和 ONTAP 資源的 FSX 。在的<block ref="fe6e1b2479e1125e03c713ad62b5343f" category="inline-link-macro-rx"></block>儲存區中，選取 * 建立檔案系統 * 。<block ref="1f3b8beb11bf530a33922b2af302faf4" category="inline-link-macro-rx"></block>。</block>
+  <block id="892d96c1ea1d0d5c15f1753543473053" category="doc">在 BlueXP  工作負載工廠中重新平衡磁碟區的容量</block>
+  <block id="fd56bc312829573216004c1f13094ba1" category="paragraph">重新平衡 BlueXP  工作負載工廠中的磁碟區容量，以避免隨著時間而產生的不平衡現象。</block>
+  <block id="2d014d35b29e17b05c626e8bae085896" category="paragraph">若要重新平衡磁碟區、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
+  <block id="4d63cdce7e101414c4de73486d63848d" category="list-text">在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要重新平衡的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。</block>
+  <block id="91d9e9f75e88d6dd3c5e8243febefc5c" category="list-text">從 Volumes （磁碟區）標籤中，選取要重新平衡的磁碟區的三點選單。</block>
+  <block id="dce2b73a361987bf4b1c310d93bedcb4" category="paragraph">在 BlueXP  工作負載工廠中，將儲存 VM 複製到另一個適用於 ONTAP 檔案系統的 FSX ，可在資料遺失時提供保護層的資料存取。此作業會將一個儲存 VM 中的所有磁碟區複寫到另一個適用於 ONTAP 檔案系統的 FSX 。</block>
+  <block id="55b2a15f20b69e21fedf18aaf44231dc" category="paragraph">若要將儲存 VM 複寫到另一個適用於 ONTAP 檔案系統的 FSX ，您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
+  <block id="32c800656566b827842f290b45bbf1ca" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中，選取檔案系統的三點功能表，並將儲存 VM 複寫到其中，然後選取 * 管理 * 。</block>
+  <block id="3ed4d57a718312d39dfbeecf23d4628d" category="list-text">從 Storage VMs （儲存 VM ）標籤中，選取要複寫 SVM 的儲存 VM 的三點功能表。</block>
+  <block id="2040ece547336d41d3854efddb8f1fbe" category="summary">必要時，在 BlueXP  工作負載工廠中重設 fsxadmin 密碼。</block>
+  <block id="b50cd49211475d2b8348048afb15aca7" category="doc">在 BlueXP  工作負載原廠中重設 fsxadmin 密碼</block>
+  <block id="0e263e59a4a9e35e1a238896fcc4932c" category="list-text">在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以重設的 fsxadmin 密碼，然後選取 * 管理 * 。</block>
+  <block id="09ea1c86504bd2ddb7a10879283e1b06" category="list-text">從檔案系統總覽中，選取三點功能表。</block>
+  <block id="20a0342945e2c5576f8c3f66c3f16f14" category="inline-image-macro">檔案系統概觀索引標籤中三點功能表的螢幕擷取畫面。</block>
+  <block id="35bd361b07dbf8bf82e77c1654d6f04d" category="paragraph"><block ref="35bd361b07dbf8bf82e77c1654d6f04d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="51f394f547bca1b4551c579ea06fe911" category="summary">必要時，在 BlueXP  工作負載工廠中重設儲存 VM 的密碼。</block>
+  <block id="9ca86c80f03a70444a78ab2d137b7416" category="doc">在 BlueXP  工作負載原廠中重設儲存 VM 密碼</block>
+  <block id="2f757d13dba942f9302952466394ba23" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中，選取要更新儲存 VM 的 ONTAP 檔案系統的 FSX 三點功能表，然後選取 * 管理 * 。</block>
+  <block id="c4608cf0f7bec40953be458786074092" category="list-text">在 Storage VMs （儲存 VM ）標籤中，選取儲存 VM 的三點功能表，以重設密碼。</block>
+  <block id="2d72dc66bec242fe8a8ec77fe9ec78ce" category="doc">從 BlueXP  工作負載工廠的備份還原磁碟區</block>
+  <block id="a961210a0ba733961532745ff6f57f44" category="paragraph">在 BlueXP  工作負載工廠中，您可以將磁碟區從備份還原至 AWS 帳戶中任何適用於 ONTAP 檔案系統的 FSX 。</block>
+  <block id="81d97c35dd4fb198942dc29738189b53" category="list-text">從 * Volumes （磁碟區） * 標籤中，選取要從備份還原之磁碟區的三點功能表。</block>
+  <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">選擇*還原*。</block>
+  <block id="c044800449646a715ebe323cce453c98" category="doc">從 BlueXP  工作負載工廠的快照還原磁碟區</block>
+  <block id="52f33bacfd6c28493dc1bdae553bb3cd" category="paragraph">在 BlueXP  工作負載工廠中，當磁碟區包含已刪除或毀損的檔案時，您可以從快照中還原適用於 ONTAP Volume 的 FSX 。</block>
+  <block id="e17e241599862dc1177ef32c2eeba1d6" category="list-text">從 *Volumes （卷） * 選項卡中，選擇要從快照恢復的卷的三點菜單。</block>
+  <block id="ce4e51fb870a92120876371d3bddc3aa" category="doc">反轉 BlueXP  工作負載工廠的複寫關係</block>
+  <block id="b3c4745e4516364034e0070ca832f670" category="paragraph">反轉 BlueXP  工作負載工廠中的複寫關係，使目標 Volume 成為來源 Volume 。</block>
+  <block id="c54880bf3b139e3285b0762bbd862186" category="list-text">在「複寫關係」索引標籤中，選取要反轉複寫關係的三點功能表。</block>
+  <block id="c093c61eee4ba610a36be21124590c57" category="list-text">在反轉關係對話方塊中，選取 * 反轉 * 。</block>
+  <block id="ca2703d1ec923670ae7d47a759f6c653" category="doc">BlueXP  工作負載工廠中適用於 ONTAP 的 FSX 安全性</block>
+  <block id="e59b1d3ff9ef6335d3eb89e26e51c113" category="doc">在 BlueXP  工作負載工廠中分割複製的磁碟區</block>
+  <block id="ed336fe8167ba465de69843674f2bb8b" category="paragraph">將複製的 FlexVol volume 從其父磁碟區分割開來，使該複製作業成為 BlueXP  工作負載工廠中的正常讀寫 FlexVol volume 。</block>
+  <block id="4221c4f70e20ff2b0cb4f924427fa492" category="list-text">若要分割複製的 Volume 、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
+  <block id="3822ebb0123ce3a0855c69b2ad2f5dde" category="list-text">在 Volumes （磁碟區）標籤中，選取要分割之複製磁碟區的磁碟區三點功能表。</block>
+  <block id="d774297729b342ccb9c4096a5382bba3" category="list-text">在分割磁碟區對話方塊中，選取 * 刪除 * 。</block>
+  <block id="70d5997237e2a666a80612de57a49652" category="paragraph">磁碟區複本會分割，並顯示在「 Volume 」（磁碟區）標籤中。</block>
+  <block id="9008567922abb01808940c72d9c40865" category="summary">在 BlueXP  工作負載工廠中停止來源和目標磁碟區之間的複寫關係。</block>
+  <block id="783c3c542a27863fe48da0a9aac34b59" category="doc">停止 BlueXP  工作負載工廠的複寫關係</block>
+  <block id="ce8af3e8124546d72e99ab485387a943" category="paragraph">停止 BlueXP  工作負載工廠的複寫關係。當您停止複寫關係時，排程複寫會從來源磁碟區更新至目標磁碟區，並暫停。目標 Volume 會從唯讀轉換為讀寫。</block>
+  <block id="ff10894647d9b5fe392476cdda757297" category="list-text">在複寫關係索引標籤中，選取要停止複寫關係的三點功能表。</block>
+  <block id="056634bec4a153903ebb9b769277f4d7" category="summary">您必須先將 NetApp 支援網站帳戶新增至工作負載工廠，然後註冊取得支援，才能使用 NetApp 技術支援開啟支援案例。</block>
+  <block id="464833b57975baf081537d1958478560" category="doc">BlueXP  工作負載工廠中適用於 ONTAP 的 FSX 疑難排解</block>
+  <block id="96a4e1621461ade42db030a4a98bd7e6" category="paragraph">複寫關係具有設定的複寫排程，但您可以隨時手動更新 BlueXP  工作負載工廠中來源和目標磁碟區之間傳輸的快照資料。</block>
+  <block id="acf50e858317a99ea6501040a4f7387f" category="list-text">在複寫關係索引標籤中，選取要更新複寫關係的三點功能表。</block>
+  <block id="b9b78a2cdecb3bd26c37a14ed10de7ef" category="list-text">在「更新」對話方塊中，選取 * 立即更新 * 。</block>
+  <block id="cc534401f89abec5c5be4bc337e1ee82" category="summary">視需要在 BlueXP  工作負載工廠中更新適用於 ONTAP 檔案系統的 FSX 處理量容量。</block>
+  <block id="6ca68c35233f34bff800a641d31bb034" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中，選取檔案系統的三點功能表以更新的處理量容量，然後選取 * 管理 * 。</block>
+  <block id="cd43e974556791a860739b829b9f2fb5" category="list-text">在「資訊」下，選取「 * 輸送量容量 * 」旁邊的鉛筆圖示。當滑鼠移動到 * 輸送量容量 * 列上時、下拉式箭頭旁會出現鉛筆圖示。</block>
+  <block id="d195b6f2b63b20c1aed1cf7ef05e5493" category="doc">在 BlueXP  工作負載工廠中檢視 Volume 詳細資料</block>
+  <block id="fc569c4bb382a5bd993208c2c2a7ea5d" category="list-text">在 Volumes （磁碟區）標籤中，針對您要修改的磁碟區選取三點選單。</block>
+  <block id="1bab530ca9dd117d24aa1c1510692003" category="doc">Amazon FSX for NetApp ONTAP 的新功能</block>
+  <block id="a5707c7f948a436824cd06775026c409" category="sidebar">Amazon FSX for NetApp ONTAP 功能將ONTAP 完整的功能整合至原生AWS託管服務、提供一致的混合雲體驗。本文件說明如何使用 BlueXP  工作負載工廠來管理適用於 ONTAP 的 FSX 。</block>
+  <block id="788881725a778e76ae58ef03f1dd4d7e" category="sidebar">Amazon FSX for NetApp ONTAP for BlueXP  工作負載原廠文件</block>
+  <block id="d151342d67a639e871ca8c57524ca7f8" category="sidebar">管理 Volume 標記</block>
+  <block id="3a1a7312146508132d80f244521968ee" category="sidebar">管理 NFS 匯出原則</block>
+  <block id="baae6cbba4c997ef4c9035394e7dbd9e" category="sidebar">管理 CIFS 共用</block>
+  <block id="11c0aa7596d4f4521c9a98f708c34cc4" category="sidebar">管理儲存 VM 標籤</block>
+  <block id="e4b304b6d81189c09bd7e999a18522e8" category="sidebar">管理 ONTAP 備份排程的 FSX</block>
 </blocks>

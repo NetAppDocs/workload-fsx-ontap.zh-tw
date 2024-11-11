@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: data-protection-overview.html 
 keywords: overview 
-summary:  
+summary: 適用於 ONTAP 的 FSX 支援 BlueXP  工作負載工廠的快照，磁碟區備份和磁碟區複寫。 
 ---
-= 資料保護總覽
+= BlueXP  工作負載工廠的資料保護
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

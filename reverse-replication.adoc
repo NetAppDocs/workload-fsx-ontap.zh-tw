@@ -4,14 +4,14 @@ permalink: reverse-replication.html
 keywords: reverse replication, change replication 
 summary: 反轉複寫關係、使目標磁碟區成為來源磁碟區。 
 ---
-= 反轉複寫關係
+= 反轉 BlueXP  工作負載工廠的複寫關係
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-反轉複寫關係、使目標磁碟區成為來源磁碟區。
+反轉 BlueXP  工作負載工廠中的複寫關係，使目標 Volume 成為來源 Volume 。
 
 停止複寫並變更目標 Volume 之後、您可以將這些變更複寫回來源 Volume 。在災難恢復案例中、此程序很常見、您可以在目標磁碟區上操作一段時間、並想要切換磁碟區的角色。
 
@@ -25,11 +25,11 @@ NOTE: 在上次資料複寫與停用來源磁碟區之間、寫入原始來源�
 請確定您知道來源磁碟區和目標磁碟區目前和未來的角色、因為新的來源磁碟區會覆寫新目標磁碟區上的變更。如果使用不當、您可能會遇到非預期的資料遺失。
 
 .步驟
-. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 * 適用於 ONTAP * 的 FSX 標籤中、按一下要更新檔案系統的三點功能表、然後選取 * 管理 * 。
+. 在 *FSX for （用於 ONTAP ） * 選項卡中，選擇要更新的文件系統的三點菜單，然後選擇 *Manage* （管理）。
 . 從檔案系統總覽中、選取 * 複寫關係 * 索引標籤。
-. 在 [ 複寫關聯 ] 索引標籤中，按一下複寫關聯的 [ 三點 ] 功能表進行反向複寫。
+. 在「複寫關係」索引標籤中，選取要反轉複寫關係的三點功能表。
 . 選取 * 反轉關係 * 。
-. 在 [ 反向關聯 ] 對話方塊中，按一下 [ 反向 ] 。
+. 在反轉關係對話方塊中，選取 * 反轉 * 。
 

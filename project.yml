@@ -86,16 +86,16 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: 增加 Volume 容量
         url: "/increase-volume-capacity.html"
-      - title: 編輯 Volume 標記
-        url: "/edit-volume-tags.html"
+      - title: 管理 Volume 標記
+        url: "/manage-volume-tags.html"
       - title: 重新平衡磁碟區的容量
         url: "/rebalance-volume.html"
       - title: 變更分層原則
         url: "/change-tiering-policy.html"
-      - title: 變更 NFS 匯出原則
-        url: "/change-nfs-export-policy.html"
-      - title: 變更 CIFS 共用
-        url: "/change-cifs-share.html"
+      - title: 管理 NFS 匯出原則
+        url: "/manage-nfs-export-policy.html"
+      - title: 管理 CIFS 共用
+        url: "/manage-cifs-share.html"
       - title: 分割複製的 Volume
         url: split-cloned-volume.html
       - title: 刪除 Volume
@@ -116,8 +116,8 @@ sidebar:
         url: "/replicate-svm-to-file-system.html"
       - title: 設定及更新儲存 VM 的 Active Directory
         url: "/configure-active-directory.html"
-      - title: 編輯儲存 VM 標籤
-        url: "/edit-svm-tags.html"
+      - title: 管理儲存 VM 標籤
+        url: "/manage-svm-tags.html"
       - title: 重設儲存 VM 密碼
         url: reset-svm-password.html
       - title: 刪除儲存VM
@@ -126,8 +126,8 @@ sidebar:
       entries:
       - title: 變更磁碟區的快照原則
         url: change-snapshot-policy.html
-      - title: 更新 ONTAP 備份排程的 FSX
-        url: "/update-backup-schedule.html"
+      - title: 管理 ONTAP 備份排程的 FSX
+        url: "/manage-backup-schedule.html"
       - title: 啟用及編輯快照以進行長期保留
         url: "/enable-snapshots-long-term.html"
       - title: 反轉複寫關係
@@ -165,5 +165,5 @@ sidebar:
   - title: 法律聲明
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP Workload Factory for AWS
+  name: BlueXP workload factory
   repo: workload-family

@@ -4,7 +4,7 @@ permalink: troubleshooting.html
 keywords: troubleshooting, troubleshoot, help, issues 
 summary: Amazon FSX for NetApp ONTAP 文件會提供疑難排解主題、供您參考。 
 ---
-= 適用於 ONTAP 的 FSX 疑難排解
+= BlueXP  工作負載工廠中適用於 ONTAP 的 FSX 疑難排解
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

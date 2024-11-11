@@ -2,24 +2,24 @@
 sidebar: sidebar 
 permalink: change-snapshot-policy.html 
 keywords: snapshot policy, snapshot schedule, modify snapshot policy, edit snapshot policy, change snapshot policy 
-summary: 隨時更新磁碟區的快照原則。 
+summary: 隨時更新 BlueXP  工作負載工廠中磁碟區的快照原則。 
 ---
-= 變更磁碟區的快照原則
+= 變更 BlueXP  工作負載工廠中磁碟區的快照原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-更新磁碟區的快照頻率、或隨時停用自動快照。
+更新磁碟區的快照頻率，或在 BlueXP  工作負載工廠中隨時停用自動快照。
 
 .開始之前
-需要連結才能顯示現有的快照原則。若要建立連結的關聯、請按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。然後返回此作業。
+若要顯示現有的快照原則，您需要建立連結的關聯。若要建立連結的關聯，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。然後返回此作業。
 
 .步驟
-. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for ONTAP * 標籤中、選取適用於 ONTAP 檔案系統的 FSX 的三點功能表、其中包含要更新快照原則的磁碟區、然後選取 * 管理 * 。
+. 在 *FSX for ONTAP * 標籤中，選取適用於 ONTAP 檔案系統的 FSX 的三點功能表，其中包含要更新快照原則的磁碟區，然後選取 * 管理 * 。
 . 從檔案系統的「總覽」標籤中、選取 * Volumes （磁碟區） * 標籤。
 . 選擇 * Volumes （卷） * 選項卡。
 . 在 * Volumes （卷） * 選項卡中，選擇要更改其快照策略的卷的三點菜單。
@@ -32,5 +32,5 @@ summary: 隨時更新磁碟區的快照原則。
 +
 如果不存在其他快照原則 link:create-snapshot-policy.html["為此磁碟區建立新的快照原則"]、。
 
-. 按一下「 * 套用 * 」。
+. 選取 * 套用 * 以儲存變更。
 

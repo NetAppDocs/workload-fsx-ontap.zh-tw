@@ -4,7 +4,7 @@ permalink: access-data.html
 keywords: access data, mount clients, on-premises 
 summary: 您可以從內部部署的內部部署來存取適用於 ONTAP 檔案系統的 FSX 、方法是為 NAS 用戶端安裝磁碟區、以及為 SAN 用戶端安裝 iSCSI LUN 。 
 ---
-= 存取您的資料
+= 存取您的 FSX 以取得 ONTAP 檔案系統資料
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

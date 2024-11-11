@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-volume-from-snapshot.html 
 keywords: create volume from snapshot, new volume 
-summary: 為 ONTAP Volume 建立 FSX 的手動快照。快照是磁碟區內容的時間點版本。 
+summary: 在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX 的手動快照。快照是磁碟區內容的時間點版本。 
 ---
 = 從快照為 ONTAP Volume 建立新的 FSX
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 為 ONTAP Volume 建立 FSX 的手動快照。快照是磁碟區內容�
 
 
 [role="lead"]
-從快照建立新的 ONTAP Volume FSX 、以啟用時間點還原。
+從 BlueXP  工作負載工廠的快照建立適用於 ONTAP Volume 的全新 FSX ，以啟用時間點還原。
 
 .關於這項工作
 快照是一次擷取 ONTAP Volume 的 FSX 唯讀映像。從快照建立新磁碟區、可在數秒內建立整個磁碟區的複本、而不受磁碟區大小的影響。新建立的複本代表新的 Volume 。
@@ -24,12 +24,12 @@ summary: 為 ONTAP Volume 建立 FSX 的手動快照。快照是磁碟區內容�
 
 
 .步驟
-. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for ONTAP （用於卷快照） * 選項卡中，單擊包含卷快照的文件系統的三點菜單，然後選擇 *Manage* （管理）。
+. 在 *FSX for ONTAP * 標籤中，選取含有 Volume Snapshot 的檔案系統三點功能表，然後選取 * 管理 * 。
 . 在檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
-. 在 Volumes （磁碟區）索引標籤中、按一下含有您要建立磁碟區之快照的磁碟區的三點功能表。
+. 在 Volumes （磁碟區）索引標籤中，選取含有您要建立磁碟區之快照的磁碟區的三點功能表。
 . 選取 * 資料保護動作 * 、 * 快照 * 、然後 * 從快照 * 建立磁碟區。
 . 在 Create volume from a snapshot （從快照創建卷）對話框中，輸入快照名稱。
-. 按一下「 * 建立 * 」。
+. 選擇* Create *（建立*）。
 

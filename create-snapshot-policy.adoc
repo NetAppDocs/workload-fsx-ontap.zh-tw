@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: 為 ONTAP Volume 建立 FSX 的快照原則。Snapshot 原則定義系統如何為磁碟區建立快照。 
+summary: 為 BlueXP  工作負載工廠中的 ONTAP Volume 建立 FSX 的快照原則。Snapshot 原則定義系統如何為磁碟區建立快照。 
 ---
 = 為 ONTAP Volume 建立 FSX 的快照原則
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 為 ONTAP Volume 建立 FSX 的快照原則。Snapshot 原則定義系�
 
 
 [role="lead"]
-為 ONTAP Volume 建立 FSX 的自訂快照原則。Snapshot 原則定義系統如何為磁碟區建立快照。
+為 BlueXP  工作負載工廠中的 ONTAP Volume 建立 FSX 的自訂快照原則。Snapshot 原則定義系統如何為磁碟區建立快照。
 
 .關於這項工作
 您可以建立與適用於 ONTAP 的 FSX 三個內建快照原則不同的自訂快照原則：
@@ -32,31 +32,14 @@ summary: 為 ONTAP Volume 建立 FSX 的快照原則。Snapshot 原則定義系�
 ** 覆寫快照中的所有資料會消耗大量容量、這會影響資源配置 Volume 容量。
 
 
-* 若要建立自訂的快照原則、您必須 link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結、請按一下 * 帳戶名稱 * 下的 * 關聯連結 * 。連結建立關聯後、請返回此作業。
+* 若要建立自訂的快照原則、您必須 link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。
 
 
 .步驟
-. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
-. 在 * 儲存 * 中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for ONTAP （用於卷的 FSX ） * 選項卡中，單擊包含卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。
-. 在檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
-. 從 * Volumes （磁碟區） * 標籤中、選取要使用排程快照保護的磁碟區的三點功能表。
-. 選擇 * 資料保護動作 * 、 * 快照 * 、然後 * 管理快照原則 * 。
-. 在「 Snapshot 原則管理」頁面上、選取 * 建立新的快照原則 * 。
-. 在 * Snapshot 原則名稱 * 欄位中、輸入快照原則的名稱。
-. 選用：在 * 說明 * 欄位中、輸入快照原則的說明。
-. 在 * 排程 * 下、選取何時建立快照。例如、每分鐘或每小時。
-+
-您可以選取多個頻率。
+使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。。在 * 儲存 * 中、選取 * 移至儲存設備詳細目錄 * 。。在 *FSX for ONTAP （用於卷的 FSX ） * 選項卡中，選擇包含卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。。在檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。。從 * Volumes （磁碟區） * 標籤中，選取要使用排程快照保護的磁碟區的三點功能表。。選擇 * 資料保護動作 * 、 * 快照 * 、然後 * 管理快照原則 * 。。在「 Snapshot 原則管理」頁面上、選取 * 建立新的快照原則 * 。。在 * Snapshot 原則名稱 * 欄位中、輸入快照原則的名稱。。選用：在 * 說明 * 欄位中、輸入快照原則的說明。。在 * 排程 * 下、選取何時建立快照。例如、每分鐘或每小時。
 
-. 在 * 份數 * 下、輸入要保留的份數。
-+
-最大複本數為 1,023 份。
++ 您可以選擇多個頻率。。在 * 份數 * 下、輸入要保留的份數。
 
-. 選用：在 * 命名慣例 * 下、輸入原則的 * 字首 * 。
-. * 保留標籤 * 會自動填入。
-+
-此標籤是指 SnapMirror 或複寫標籤、用於僅選取指定的快照、以便從來源複寫到目標檔案系統。
++ 最大複本數為 1,023 份。。選用：在 * 命名慣例 * 下、輸入原則的 * 字首 * 。。* 保留標籤 * 會自動填入。
 
-. 按一下「 * 套用 * 」。
-
++ 此標籤指的是 SnapMirror 或複寫標籤，僅用於選取指定的快照，以便從來源複寫到目標檔案系統。。選擇*應用*。

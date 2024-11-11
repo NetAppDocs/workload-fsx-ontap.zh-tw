@@ -2,22 +2,22 @@
 sidebar: sidebar 
 permalink: known-limitations.html 
 keywords: limitations, fsx, ontap 
-summary: 已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。請仔細檢閱這些限制。 
+summary: 已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。 
 ---
-= 已知限制
+= Amazon FSX for NetApp ONTAP 的已知限制
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-已知的限制可識別此產品版本在 Workload Factory 中不支援的平台、裝置或功能、或是無法與產品正確互通的平台、請仔細檢閱這些限制。
+已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。請仔細檢閱這些限制。
 
 
 
 == 連結
 
-若要在 Workload Factory 使用者介面中完成複寫等作業、需要連結。
+需要連結才能完成工作負載原廠使用者介面中的複寫作業。
 
 
 
@@ -94,6 +94,12 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 * 彈性區塊存放區（ EBS ）： ST1 、 SC1 和標準 Volume 類型
 * 彈性檔案系統（ EFS ）：突增處理量模式
 
+
+
+
+== 系統管理員
+
+System Manager 不支援用於 ONTAP 連線的 FSX 連結。
 
 附註：
 

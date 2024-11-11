@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: manage-backup-schedule.html 
+keywords: backup schedule, backup policy, update backups, update backup schedule, FSx for ONTAP backup 
+summary: 視需要在 BlueXP  工作負載工廠中管理適用於 ONTAP 檔案系統的 FSX 備份排程。 
+---
+= 管理適用於 ONTAP 檔案系統的 FSX 備份排程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 BlueXP  工作負載工廠中管理適用於 ONTAP 檔案系統的 FSX 備份排程。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在 Storage （儲存設備）中、選取 * 前往 Storage inventory* （儲存設備庫存）。
+. 在 * 適用於 ONTAP * 的 FSX 標籤中，選取檔案系統的三點功能表以更新的備份排程，然後選取 * 管理 * 。
+. 在 [ 資訊 ] 下，選取 *FSX for ONTAP backup* 旁邊的鉛筆圖示。當滑鼠移動到 *FSX for ONTAP backup* 列上時、下拉式箭頭旁會出現鉛筆圖示。
+. 在 *FSX for ONTAP backup* 對話框中，提供以下內容：
++
+.. * 每日自動備份 * ：啟用或停用此功能。如果您停用此功能，請選取 * 套用 * 。如果您啟用此功能、請完成下列步驟。
+.. * 自動備份保留期間 * ：輸入保留自動備份的天數。
+.. * 每日自動備份時段 * ：選擇 * 無偏好設定 * （為您選擇每日備份開始時間）或 * 選擇每日備份開始時間 * ，並指定開始時間。
+.. * 每週維護時段 * ：選擇 * 無偏好設定 * （為您選擇每週維護時段開始時間）或 * 選擇每週 30 分鐘維護時段的開始時間 * 、並指定開始時間。
+
+
+. 選擇*應用*。
+

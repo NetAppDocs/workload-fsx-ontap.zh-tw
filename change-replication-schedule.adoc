@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: change-replication-schedule.html 
 keywords: change replication schedule, update replication schedule, edit replication schedule 
-summary: 變更複寫關係中來源磁碟區的複寫排程。 
+summary: 變更 BlueXP  工作負載工廠複寫關係中來源 Volume 的複寫排程。 
 ---
 = 變更來源 Volume 的複寫排程
 :allow-uri-read: 
@@ -11,16 +11,16 @@ summary: 變更複寫關係中來源磁碟區的複寫排程。
 
 
 [role="lead"]
-變更複寫關係中來源磁碟區的複寫排程。
+變更 BlueXP  工作負載工廠複寫關係中來源 Volume 的複寫排程。
 
 選擇從來源磁碟區將快照傳輸到複寫磁碟區的頻率、以符合您所需的點目標（ RPO ）。
 
 .步驟
-. 登入 link:https://console.workloads.netapp.com/["Workload Factory 主控台"^]
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 * 適用於 ONTAP * 的 FSX 標籤中、按一下要更新檔案系統的三點功能表、然後選取 * 管理 * 。
+. 在 *FSX for （用於 ONTAP ） * 選項卡中，選擇要更新的文件系統的三點菜單，然後選擇 *Manage* （管理）。
 . 從檔案系統總覽中、選取 * 複寫關係 * 索引標籤。
-. 在複寫關聯性索引標籤中、按一下複寫關聯排程的三點功能表以進行變更。
+. 在複寫關係索引標籤中，選取要變更的複寫關係排程的三點功能表。
 . 選取 * 編輯複寫間隔 * 。
 . 在「編輯複寫間隔」對話方塊中、選取來源磁碟區的快照傳輸頻率。您可以選擇下列頻率：
 +
@@ -31,5 +31,5 @@ summary: 變更複寫關係中來源磁碟區的複寫排程。
 ** 每週
 
 
-. 按一下「 * 套用 * 」。
+. 選擇*應用*。
 
