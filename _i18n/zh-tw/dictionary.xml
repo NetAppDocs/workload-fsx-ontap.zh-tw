@@ -23,8 +23,6 @@
   <block id="f76864e1c2588ae3d6373b6ab95e2209" category="list-text">從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。</block>
   <block id="2ca869b68be8f2b6e678f47d25c26fb7" category="list-text">選擇 * 進階動作 * 、然後 * 編輯 CIFS 共用 * 。</block>
   <block id="736934ebc3ee8de296f3d5213e79430e" category="list-text">在「編輯 CIFS 共用」頁面上、提供下列項目：</block>
-  <block id="59d0fdf4151cde9e812dd005074026a6" category="list-text">* 使用者或群組 * ：輸入有效的使用者和群組。以分號 ";" 分隔每個項目。</block>
-  <block id="e57960b090437945cad74087551739a4" category="list-text">* 權限 * ：選擇 * 完全控制 * 、 * 讀取 / 寫入 * 、 * 讀取 * 或 * 無存取 * 。</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">關於這項工作</block>
   <block id="4c9aa322b281bc41d9f93e03b1223838" category="paragraph">判斷匯出原則規則的用戶端規格。用戶端規格的有效值如下：</block>
   <block id="1d9e509ddb93a176b7d369a91ad7deaf" category="list-text">IP位址</block>
@@ -221,7 +219,6 @@
   <block id="c2ca79898f24b0041abe0a50f8a67aec" category="open-title">複寫檔案系統中的所有磁碟區</block>
   <block id="932ea72af08ac8563c34e80a7a85d205" category="list-text">從檔案系統總覽中、選取 * 建立複寫 * 。</block>
   <block id="8642bd9871818efa86fdfbc89b47d7fe" category="list-text">*Volume name* ：目標 Volume 名稱會自動以下列格式產生<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。</block>
-  <block id="27178687718ce0fb69f45347b32592a7" category="paragraph">複寫關係會出現在 * 複寫關係 * 索引標籤中。</block>
   <block id="a008632064f344e2df83272a479135d3" category="doc">為 ONTAP Volume 建立 FSX 的快照原則</block>
   <block id="8044f667bde3c7c59b4115402b5eaf0b" category="paragraph">您可以建立與適用於 ONTAP 的 FSX 三個內建快照原則不同的自訂快照原則：</block>
   <block id="980ef1c1aa7d1456ee087df02119341e" category="list-text"><block ref="c21f969b5f03d33d43e04f8f136e7682" prefix="" category="inline-code"></block></block>
@@ -284,8 +281,6 @@
   <block id="60d0b377e23eff27c022e227c86f5dd8" category="paragraph">如果您選取自訂匯出原則、請從下拉式功能表中選取現有的原則名稱。</block>
   <block id="2c55176e07be69c565e1c2c03d514cf2" category="paragraph">如果您選取現有的匯出原則、請輸入新的原則名稱。</block>
   <block id="6925697406a52f10c0897464bf6b8ce9" category="list-text">* 新增匯出原則規則 * ：您也可以針對自訂匯出原則新增匯出原則規則至原則。</block>
-  <block id="88d72087f7214769d97c6467f6f5c337" category="list-text">*CIFS 共享 * ：輸入 CIFS 共享名稱以提供 SMB 存取。</block>
-  <block id="002f70daceb1af048541c69bc0b3c655" category="list-text">* 區塊存取 * ：允許執行關鍵業務應用程式的主機使用 iSCSI 傳輸協定存取磁碟區。</block>
   <block id="40519cf86659d77977d5ff7930ae23e0" category="paragraph">請填寫下列欄位、以設定對磁碟區的區塊存取。</block>
   <block id="03ddda000e99a192f6ff8b3f46b455d2" category="list-text">*iSCSI 組態 * ：提供下列詳細資料、以設定 iSCSI 以進行磁碟區的區塊存取。</block>
   <block id="15a68f4c283396b684880bba6f9b33b2" category="list-text">選取 * 建立新的啟動器群組 * 或 * 對應現有的啟動器群組 * 。</block>
@@ -398,7 +393,6 @@
   <block id="d2a6652ddeb631da029d1f2806e11fdc" category="open-title">Amazon Elastic File System （ EFS ）</block>
   <block id="7a81b7e66c9f8ac505d461aa77e680ed" category="list-text">在「儲存空間」中、選擇 * 「探索節約 * 」、然後選擇 * 「 Amazon Elastic File System （ EFS ） * 」。</block>
   <block id="6a882e9e3ebbb1d673beb5404c763122" category="paragraph">在您提供儲存系統組態的詳細資料之後、請檢閱頁面上提供的計算和建議。</block>
-  <block id="224be392ef5d5444786fa1dea246184d" category="paragraph">此外、向下捲動至頁面底部、以 * 匯出 PDF* 或 * 檢視計算 * 。</block>
   <block id="aca77c97dcf29f670f572a7129863195" category="section-title">為 ONTAP 檔案系統部署 FSX</block>
   <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">部署方法</block>
   <block id="543b29a63a3d070c0ff920d687259dfc" category="paragraph">在 _basic 模式中、您可以從 Codebox 視窗複製內容、並使用其中一種 Codebox 方法部署適用於 ONTAP 檔案系統的 FSX 。</block>
@@ -502,9 +496,6 @@
   <block id="18e73e557ecb75c57d1d16ca781cbfbe" category="list-text">選擇 * 初始化 * 。</block>
   <block id="1eba71d64e6c5e410e558530711e835b" category="summary">已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。請仔細檢閱這些限制。</block>
   <block id="482723983a4f2af954e36ff41e567451" category="doc">已知限制</block>
-  <block id="97e7c9a7d06eac006a28bf05467fcc8b" category="section-title">連結</block>
-  <block id="fd18465573ec21a6218982055981f6b1" category="section-title">儲存效率</block>
-  <block id="573994bf2d443bf682f6d3d34a979de0" category="paragraph">磁碟區建立後、無法停用或啟用儲存效率。</block>
   <block id="488044172f20eab904aecc2827c019b4" category="section-title">處理量容量區域支援</block>
   <block id="0a27e957ebaf89bce02c66c147da7966" category="section-title">橫向擴充部署</block>
   <block id="24aa3b91eee064e4bbffa941e071bd95" category="paragraph">下列地區支援最高每秒 4 Gb 的最大處理量容量、可進行橫向擴充部署：美國東部（俄亥俄州）地區、美國東部（北維吉尼亞州）地區、美國西部（俄勒岡州）地區和歐洲（愛爾蘭）。</block>
@@ -517,7 +508,6 @@
   <block id="2204b0f79985b7b0565114e8305937a5" category="section-title">儲存VM</block>
   <block id="b1c8cb58e124bead4ca2e09fa1c20c9b" category="paragraph">如需每個檔案系統的 SVM 最大數量、請參閱 <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> AWS 文件中的。</block>
   <block id="3a448e496404b548627a97fc00da8e23" category="section-title">iSCSI 傳輸協定支援</block>
-  <block id="33060a985f3ea357dedca3b638c9dedc" category="list-text">iSCSI 傳輸協定僅支援橫向擴充部署。^1^</block>
   <block id="53c858a11ae23c19aee107fb913f096a" category="list-text">每個磁碟區只能設定單一 LUN 。</block>
   <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">區域支援</block>
   <block id="1bf3a4f06c8408a2ff436e0b847ca3a3" category="list-text">目前不支援 Canada West （ Calgary ）地區。</block>
@@ -574,14 +564,6 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">開放原始碼</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知檔案提供有關 NetApp 軟體所使用之協力廠商版權與授權的資訊。</block>
-  <block id="22e5a7336ebe77138f0282cedcb069ab" category="inline-link">工作負載工廠</block>
-  <block id="7ffcbeca3b450b8d05f9cf0eedb617f8" category="list-text"><block ref="7ffcbeca3b450b8d05f9cf0eedb617f8" category="inline-link-rx"></block></block>
-  <block id="887f800d53dc2cd5a7894464a6f60a6b" category="inline-link">適用於資料庫的 Workload Factory</block>
-  <block id="7e505d4c691d86e5bd415f9ccb849966" category="list-text"><block ref="7e505d4c691d86e5bd415f9ccb849966" category="inline-link-rx"></block></block>
-  <block id="9591e2d54c998ae1c9d48fd5be7762e9" category="inline-link">GenAI 的工作負載工廠</block>
-  <block id="f38c7416013fc239c3dd3288d40a40c0" category="list-text"><block ref="f38c7416013fc239c3dd3288d40a40c0" category="inline-link-rx"></block></block>
-  <block id="404a5efb62a3a3f22b02593091042608" category="inline-link">VMware 工作負載工廠</block>
-  <block id="9a211183d3fa82368d76fdbab5abdeda" category="list-text"><block ref="9a211183d3fa82368d76fdbab5abdeda" category="inline-link-rx"></block></block>
   <block id="c2afadd6bca5968317f2f7f1a7e37514" category="doc">限制複寫關係的最大傳輸率</block>
   <block id="091ab8de8bd05d3d281793c55240d887" category="paragraph">限制最大傳輸速率是選擇性的、但建議使用。如果沒有限制、網路和應用程式的效能可能會下降。</block>
   <block id="4cb1e25c015161bf2183f7f8af361d6a" category="paragraph">或者、我們建議為 ONTAP 檔案系統的關鍵工作負載（例如主要用於災難恢復的工作負載）提供不限傳輸率的 FSX 。</block>
@@ -1209,4 +1191,111 @@
   <block id="baae6cbba4c997ef4c9035394e7dbd9e" category="sidebar">管理 CIFS 共用</block>
   <block id="11c0aa7596d4f4521c9a98f708c34cc4" category="sidebar">管理儲存 VM 標籤</block>
   <block id="e4b304b6d81189c09bd7e999a18522e8" category="sidebar">管理 ONTAP 備份排程的 FSX</block>
+  <block id="c4f10a04f7aa75535a8a0475261393eb" category="doc">ONTAP 檔案系統橫向擴充 FSX 的區塊儲存設備</block>
+  <block id="152983842f852ef5bae46ac675caec95" category="paragraph">現在，您可以透過適用於 ONTAP 的 FSX 配置區塊儲存設備，以使用橫向擴充的檔案系統部署，最多可配置 6 個 HA 配對。</block>
+  <block id="8cce6f6c21973d5dff1898076cddb209" category="paragraph"><block ref="8cce6f6c21973d5dff1898076cddb209" category="inline-link-macro-rx"></block></block>
+  <block id="609b2d9256f15ecb9d57d3f545d91174" category="section-title">可使用 mount 命令</block>
+  <block id="67ba5d91692276a76737790f2df885ec" category="paragraph">現在可以使用掛載命令來存取 NFS 和 CIFS 來存取磁碟區。您可以在 ONTAP 檔案系統的 FSX 內取得磁碟區的掛載點，方法是選取 * 基本動作 * ，然後選取 * 檢視掛載命令 * 。</block>
+  <block id="f12470a0bbf95a722b70847640bd40c9" category="inline-image-macro">螢幕擷取畫面會顯示，若要檢視 mount 命令，請前往適用於 ONTAP 檔案系統的 FSX ，選取 Volume 功能表，選取基本動作，然後選取 View mount 命令。掛載命令對話方塊隨即出現，並顯示 CIFS 或 NFS 存取的掛載命令。</block>
+  <block id="21817bf964617ea4f875252102707119" category="paragraph"><block ref="21817bf964617ea4f875252102707119" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0087bca38db021c2b14c65d5893a9339" category="inline-link-macro">用於磁碟區的 View mount 命令</block>
+  <block id="41cd808fdcb8411a8a73071649aca98e" category="paragraph"><block ref="41cd808fdcb8411a8a73071649aca98e" category="inline-link-macro-rx"></block></block>
+  <block id="70bf70871888ae321ee591627f1f149f" category="section-title">建立磁碟區之後，請更新儲存效率</block>
+  <block id="4b1987aeb3ee9f5859457d872de9697a" category="paragraph">您現在可以在建立磁碟區之後，啟用或停用 FlexVol 磁碟區的儲存效率。儲存效率包括重複資料刪除，資料壓縮及資料壓縮。啟用儲存效率有助於您在 FlexVol volume 上實現最佳空間節約效益。</block>
+  <block id="b8ae90ddbb68f3303ee755cd1d9b5819" category="inline-link-macro">更新磁碟區的儲存效率</block>
+  <block id="d26d51c8a86d1db1cfe8dd0317cc6274" category="paragraph"><block ref="d26d51c8a86d1db1cfe8dd0317cc6274" category="inline-link-macro-rx"></block></block>
+  <block id="aadb8a2a44b75c1333f5a52c2ceb1516" category="section-title">內部部署 ONTAP 叢集探索與複寫</block>
+  <block id="490a30e9496a9d55f2cfdb934812658b" category="paragraph">探索內部部署的 ONTAP 叢集資料，並將其複寫至適用於 ONTAP 檔案系統的 FSX ，以便用於豐富 AI 知識庫。所有內部部署探索和複寫工作流程都可以從儲存設備詳細目錄中的全新 * 內部部署 ONTAP （ * ）標籤中進行。</block>
+  <block id="c6f905e067bdaa7ba33a58a907e59477" category="inline-link-macro">探索內部部署 ONTAP 的叢集</block>
+  <block id="b169507cd10826b5a52f573e2f75ad2c" category="paragraph"><block ref="b169507cd10826b5a52f573e2f75ad2c" category="inline-link-macro-rx"></block></block>
+  <block id="67e962050c9494ada1eab84c21826e3c" category="section-title">AWS 認證可改善儲蓄計算機分析</block>
+  <block id="81e738c909aeee7a4a781716391eae27" category="paragraph">您現在可以選擇從節約計算機新增 AWS 認證。新增認證可提升 Amazon Elastic Block Store ， Elastic File Systems 和適用於 Windows 檔案伺服器儲存環境的 FSX 的節約計算機分析準確度，相較於適用於 ONTAP 的 FSX 。</block>
+  <block id="f98d47c0920e02232d981da56f082627" category="paragraph"><block ref="f98d47c0920e02232d981da56f082627" category="inline-link-macro-rx"></block></block>
+  <block id="9d16201337a7183b0ef0f80fcb36b5c2" category="paragraph">您也可以在 BlueXP  工作負載工廠中取得磁碟區的裝載點。</block>
+  <block id="81433468b8608aba73a2350afe41ac5a" category="section-title">取得 BlueXP  工作負載工廠中磁碟區的裝載點</block>
+  <block id="06e52dae2c3e09e69a906c2fba89ed66" category="paragraph">取得磁碟區的掛載點，以便在 CIFS 共用或 NFS 用戶端上掛載共用區。</block>
+  <block id="4a6574ab96645d28cf548ed8372c655c" category="list-text">從 Volumes （卷）選項卡中，選擇該卷的三點菜單，然後選擇 *Basic actions* ，再選擇 *View mount 命令 * 。</block>
+  <block id="bd95ac5b25f35af153096a48803b03b4" category="list-text">在掛載命令對話框中，選擇 *Copy* 複製命令。您將在終端機中輸入複製的命令。</block>
+  <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">選擇*關閉*。</block>
+  <block id="0206587910cd5147f80c048ba00193af" category="paragraph">若要在檔案系統上佈建 iSCSI 區塊磁碟區，請選取不超過 6 個 HA 配對。</block>
+  <block id="f3b270238d8c3f46a0b10d724c916e7d" category="list-text">* 最大傳輸速率 * ：選取 * 受限 * ，然後在 MIB/s 中輸入最大傳輸限制或者、選取 * 無限 * 。</block>
+  <block id="5ef8b0a1c66a4b2210971848d2ce9752" category="paragraph">複寫關係會出現在 ONTAP 檔案系統的目標 FSX 的 * 複寫關係 * 索引標籤中。</block>
+  <block id="c866bd28f46aae4b063d835d59832e65" category="list-text">* CIFS 共享 * ：提供下列項目：</block>
+  <block id="fbd8f4b666e0f634caa63d615cae9514" category="list-text">* 名稱 * ：輸入 CIFS 共用名稱以提供 SMB 存取。</block>
+  <block id="a0eaddecd9cba85df3eb61984ad9d41b" category="list-text">* 權限 * ：選取 [ 完全控制 ] ， [ 讀取 / 寫入 ] ， [ 讀取 ] 或 [ 無存取權 ] ，然後輸入以分號（ ; ）分隔的使用者或群組。使用者或群組區分大小寫，使用者的網域必須使用「網域 \ 使用者名稱」格式。</block>
+  <block id="a1e344db18a7a956afd7ebcb57bcefa2" category="list-text">* 區塊存取 * ：允許執行關鍵業務應用程式的主機使用 iSCSI 傳輸協定存取磁碟區。區塊存取僅在檔案系統橫向擴充部署具有 6 個或更少 HA 配對時可用。</block>
+  <block id="388660e21a97a90db2571da848fc61df" category="inline-link-macro">新增 AWS 認證</block>
+  <block id="df33a8a514c43741a17399e9c12a0427" category="paragraph">此外，您還可以<block ref="10c34fa86244e9acc4f29a59fb8b09f7" category="inline-link-macro-rx"></block>提高計算機分析的準確度。選擇 * 根據現有資源計算節約 * 。系統會將您重新導向至「新增認證」頁面。新增認證之後，請選取要與適用於 ONTAP 的 FSX 比較的現有資源，然後選取 * 探索節約效益 * 。</block>
+  <block id="914666cc05a2f50a3cbff56ab4c0d87c" category="paragraph">此外，請向下捲動至頁面底部，選取下列其中一項以檢視報告：</block>
+  <block id="037fbb0239239f2168489bba99e09b67" category="list-text">* 匯出 PDF*</block>
+  <block id="10acfa1cd5e4b3b5f4da60bba2257672" category="list-text">* 以電子郵件傳送 *</block>
+  <block id="3902a76bb589f831b404ce1ec9865654" category="list-text">* 檢視計算 *</block>
+  <block id="01887ff057face34cde00a98753d7347" category="section-title">進階 ONTAP 作業所需的連結</block>
+  <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">BlueXP  工作負載工廠</block>
+  <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
+  <block id="a32b59044667570495820281f09cfa10" category="list-text">* 名稱 * ：輸入 CIFS 共用的名稱。</block>
+  <block id="a983c99827c51cfd1ffcfd3882536018" category="list-text">選取套用。</block>
+  <block id="aa6a9af5d2170a7e2225e0d97aefef52" category="paragraph">變更可能會導致目前使用者或群組失去對 CIFS 共用的存取權。</block>
+  <block id="e58fa167b6770841b720711ad8a12b1a" category="list-text">選擇 * 繼續 * 以儲存變更。</block>
+  <block id="f6db14d0bad35a9b610208b53b06c1ca" category="paragraph">將套用對 CIFS 共用區的變更。</block>
+  <block id="8772abd9ec2ca5593300708cb88b5426" category="summary">在 BlueXP  工作負載工廠中，您可以在建立磁碟區後更新儲存效率設定。</block>
+  <block id="b31795226510baf520db5a5e2287b56e" category="doc">更新磁碟區的儲存效率設定</block>
+  <block id="07834469705cb1cae603dc37fac50539" category="paragraph">儲存效率功能包括重複資料刪除，資料壓縮及資料壓縮，可在 FlexVol volume 上達到最佳的空間節約效益。重複資料刪除技術可消除重複的資料區塊資料壓縮會壓縮資料區塊、以減少所需的實體儲存容量。資料壓縮可在較少空間中儲存更多資料、以提升儲存效率。</block>
+  <block id="6949ed855da826654fa3e3a2e2a18279" category="paragraph">如果您在建立磁碟區時選擇不啟用儲存效率，您可以隨時啟用設定，以節省可能的空間和成本。</block>
+  <block id="3561512c31eaec9705db4d98de971d93" category="paragraph">無論您啟用或停用儲存效率， Volume 都會使用精簡配置。</block>
+  <block id="b3f2ba455947e37d7a336d7b339ee3cf" category="list-text">選擇 * 進階動作 * ，然後 * 設定儲存效率 * 。</block>
+  <block id="fc86913f9636c03cbcbb4e3e03d4b332" category="list-text">選擇啟用或停用 Volume 儲存效率。</block>
+  <block id="b755b7c9e5db773b9578d24d7b40b61d" category="list-text">選取 * 套用 * 以儲存變更。</block>
+  <block id="4b5106453aabbf759975ebe8415f9dca" category="summary">在 BlueXP  工作負載工廠中探索及複寫內部部署的 ONTAP 資料，以便用於豐富 AI 知識庫。</block>
+  <block id="bbe131cae781cb02f20f1bff02911991" category="doc">在 BlueXP  工作負載工廠中使用內部部署的 ONTAP 叢集資料</block>
+  <block id="124cb3fd3d0a35a1abf1c0f90f37e8a9" category="paragraph">若要使用內部部署 ONTAP 叢集的資料，您必須先探索內部部署 ONTAP 叢集。發現內部部署 ONTAP 叢集之後，您可以將資料用於下列任何一種使用案例。</block>
+  <block id="2a3b399798aa16ecfbc1425cc560bfad" category="list-text">使用案例</block>
+  <block id="ef63a3d009f11deff50f4dc327b32173" category="list-text">請注意， GenAI 工作負載的主要使用案例是這一系列工作的重點。</block>
+  <block id="809c357d304bbfa1cd4446574b270af8" category="inline-link-macro">豐富 AI 知識庫</block>
+  <block id="9cce19ad5b8f6c533905f11c61df97c8" category="list-text">* GenAI 工作負載 * ：將內部部署的 ONTAP Volume 資料複寫至適用於 ONTAP 檔案系統的 FSX ，以便將資料用於<block ref="f591db1a99ea9ae06218a2a67c7815b6" category="inline-link-macro-rx"></block>。</block>
+  <block id="f15192f8afdcf438f7b1ccf0cda2b436" category="list-text">* 備份與移轉至雲端 * ：將內部部署 ONTAP Volume 資料複寫至適用於 ONTAP 檔案系統的 FSX ，可作為雲端的備份。</block>
+  <block id="5b5a84720ff8905504e8a45fbc52fb73" category="list-text">* 資料分層 * ：複寫後，不常存取的內部部署 ONTAP Volume 資料可從 SSD 儲存層分層，移至容量集區儲存層。</block>
+  <block id="0fd8af6af12775b851e6156334372818" category="paragraph">在 BlueXP  工作負載工廠中探索內部部署的 ONTAP 叢集，以便將資料複寫到 Amazon FSX for NetApp ONTAP 檔案系統。</block>
+  <block id="4185f116d64b1130e6f9ba4250b147fa" category="paragraph">開始之前，請確定您擁有下列項目：</block>
+  <block id="7e496dd07644d2f06f315e4fa164cc69" category="list-text">用於 ONTAP 檔案系統進行複寫的 FSX 。</block>
+  <block id="165a2e236f1aabd383e31c0b94f74338" category="inline-link-macro">建立一個</block>
+  <block id="96c11fa75af4ee186742d94b8c4312d1" category="list-text">與探索到的內部部署叢集相關聯的連線連結。如果您沒有連結，則需要執行<block ref="fde76afbe668994cedb59a1786140b8f" category="inline-link-macro-rx"></block>。</block>
+  <block id="d9475c746638e60d2b7ab26ca255f52c" category="list-text">具有必要權限的 ONTAP 使用者認證。</block>
+  <block id="08964fe3be5deba1b9687a253e630608" category="list-text">內部部署 ONTAP 9.8 版及更新版本。</block>
+  <block id="23850e6cb293edf3ae576c2cd44e4966" category="list-text">連線能力如下圖所示。</block>
+  <block id="83e32e548e13c6454cf00928e1e27eec" category="inline-image-macro">顯示內部部署 ONTAP 叢集應如何連線至 Amazon Web Services Cloud 的管理路徑和資料路徑的螢幕擷取畫面</block>
+  <block id="ee8491e0fa59a945f11048b87d7cde35" category="paragraph"><block ref="ee8491e0fa59a945f11048b87d7cde35" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9528f87db447698374dc42a5acad7283" category="list-text">選取 * 內部部署 ONTAP * 標籤。</block>
+  <block id="6717014f0e48b7ab08c9846925b42c93" category="list-text">選擇* Discover（探索）*。</block>
+  <block id="4df09781d0339837ee9af988af1317c6" category="list-text">檢閱先決條件，然後選取 * 下一步 * 。</block>
+  <block id="a94ba7c755ae23b126e888fda5f83d7b" category="list-text">在「探索 ONTAP 內部部署」頁面上，於 * 叢集組態 * 下提供下列項目：</block>
+  <block id="a256638e063d95d3879716a329eda540" category="list-text">* 連結 * ：選取連結。此連結將與內部部署叢集相關聯，以在叢集和工作負載工廠之間建立連線。</block>
+  <block id="db442d2f15cc5ca62b25c302ecc39e4d" category="paragraph">如果您尚未建立連結，請依照指示操作，然後返回此作業並選取連結。</block>
+  <block id="d6c619de487035b86fe99726a4142c96" category="list-text">* 叢集 IP 位址 * ：提供內部部署 ONTAP 叢集的 IP 位址以進行複寫。</block>
+  <block id="5284e36227d3576d0531d813669d810f" category="list-text">* ONTAP 認證 * ：輸入內部部署 ONTAP 叢集的 ONTAP 認證。確定使用者擁有所需的權限。</block>
+  <block id="10f4ba1588812227f6775ff4cdd8731a" category="list-text">選取 * 探索 * 以開始探索程序。</block>
+  <block id="9107799f71b772409d2dda6a954c2b55" category="paragraph">內部部署 ONTAP 叢集已被探索到，現在會出現在 * 內部部署 ONTAP * 標籤中。</block>
+  <block id="c0bb7503a06a72052adfacae53dc8968" category="inline-xref">將資料複寫至適用於 ONTAP 檔案系統的 FSX</block>
+  <block id="d8656001c9a7903c7967c4f00f9dd267" category="paragraph">您現在可以檢視內部部署 ONTAP 叢集和<block ref="21efd3440e5c8575cf2acdff77601bf0" category="inline-xref-macro-rx"></block>中的資料。</block>
+  <block id="f4a663f98fdbf7294b4d7065fe81028d" category="section-title">從內部部署的 ONTAP 叢集複寫 Volume 資料</block>
+  <block id="99f4cb77b09904f65d27606598e1d1d2" category="paragraph">將 Volume 資料從內部部署 ONTAP 叢集複寫到適用於 ONTAP 檔案系統的 FSX 。複寫後，資料可用於豐富 AI 知識庫。</block>
+  <block id="a979d07ec6790355c195ac942aac0f7a" category="list-text">您必須探索內部部署的 ONTAP 叢集，才能複寫其 Volume 資料。</block>
+  <block id="bbaf3e2bb6ee0562252678dc510975b4" category="list-text">您必須有可用的 FSX ， ONTAP 檔案系統才能做為複寫的目標。</block>
+  <block id="5fc398b3211d605127c144291f3eda23" category="list-text">內部部署 ONTAP 叢集和用於複寫關係的 ONTAP 檔案系統的 FSX 都必須具有相關的連結。如果 ONTAP 叢集的內部和 FSX 上有一個或兩個都沒有現有的連結，請參閱<block ref="1bb172d13e94db502d24bfc1c5a4fc0a" category="inline-link-macro-rx"></block>。<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>在檔案系統中，在 * 帳戶名稱 * 下選擇 * 關聯連結 * 。一旦內部部署 ONTAP 叢集和 ONTAP 檔案系統的 FSX 連結後，請返回此作業。</block>
+  <block id="aea1c4ebf571d37a1b92fbbf08a1d97c" category="list-text">若要依儲存 VM 尋找磁碟區，您可以從下拉式清單中 * 選取儲存 VM* 。</block>
+  <block id="e03b6f62981f4a86c7a1c627e22e63e8" category="list-text">選取一個或多個要複寫的磁碟區，然後選取 * Replicate * 。</block>
+  <block id="72106a023ea21862c78ae92b6102ff34" category="list-text">*Tiering data* ：為儲存在目標 Volume 中的資料選取分層原則。</block>
+  <block id="5f80f89e32023b75a946369589efc7db" category="list-text">* 自動 * ：使用 ONTAP 使用者介面的工作負載原廠 FSX 建立磁碟區時，預設的分層原則。將所有冷資料分層，包括在特定時間段內，將使用者資料和快照傳送至容量集區儲存層。</block>
+  <block id="606156d99b6306c9a4135ba1dbe3f5e8" category="paragraph">如需磁碟區分層原則的詳細資訊、請參閱 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>AWS FSX for NetApp ONTAP 文件中的。</block>
+  <block id="4814d993ecb870a2261a2819e47b0371" category="list-text">對於現有原則，請選取 * 選擇現有原則 * ，然後從下拉式功能表中選取現有原則。</block>
+  <block id="a4f4dcbfc1fe91a36caaac04506e0179" category="list-text">對於新原則，請選取 * 建立新原則 * ，並提供下列項目：</block>
+  <block id="6ec6b573aef4b43427215b26f7b1db91" category="section-title">從 BlueXP  工作負載工廠移除內部部署 ONTAP 叢集</block>
+  <block id="f2b13eb0b412655e8697e5140bff3b74" category="paragraph">視需要從 BlueXP  工作負載工廠移除內部部署 ONTAP 叢集。</block>
+  <block id="3b1c3bad959c6c151d464eb6b626f56f" category="paragraph">移除叢集之前，您必須<block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block>先移除內部部署 ONTAP 叢集中的任何磁碟區，才能避免關係中斷。</block>
+  <block id="78ce280a4b77e37298d71642a4457c0a" category="list-text">選取要移除的內部部署 ONTAP 叢集。</block>
+  <block id="5b4dad1d897213eb27b108cb47f3a75d" category="list-text">選取「三點」功能表，然後選取 * 從工作負載原廠移除 * 。</block>
+  <block id="a8cf8ae4f9fef4837824fb9409537e5d" category="paragraph">內部部署 ONTAP 叢集已從 BlueXP  工作負載工廠移除。</block>
+  <block id="6ad17d07338dffda7982d8efdad3a276" category="section-title">2024 年 12 月 01 日</block>
+  <block id="aab28bb522b1a572add493963001b88d" category="sidebar">使用內部部署 ONTAP 資料</block>
+  <block id="5d831b6559b5decf8f758715856498b9" category="sidebar">更新儲存效率</block>
 </blocks>

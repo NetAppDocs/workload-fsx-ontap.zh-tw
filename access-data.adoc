@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: access-data.html 
-keywords: access data, mount clients, on-premises 
+keywords: access data, mount point, mount volumes, mount clients, on-premises 
 summary: 您可以從內部部署的內部部署來存取適用於 ONTAP 檔案系統的 FSX 、方法是為 NAS 用戶端安裝磁碟區、以及為 SAN 用戶端安裝 iSCSI LUN 。 
 ---
 = 存取您的 FSX 以取得 ONTAP 檔案系統資料
@@ -14,6 +14,24 @@ summary: 您可以從內部部署的內部部署來存取適用於 ONTAP 檔案�
 您可以從內部部署的內部部署來存取適用於 ONTAP 檔案系統的 FSX 、方法是為 NAS 用戶端安裝磁碟區、以及為 SAN 用戶端安裝 iSCSI LUN 。
 
 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["存取資料"^] 在 Amazon FSX for NetApp ONTAP 文件中、提供如何存取資料以供參考的主題。
+
+您也可以在 BlueXP  工作負載工廠中取得磁碟區的裝載點。
+
+
+
+== 取得 BlueXP  工作負載工廠中磁碟區的裝載點
+
+取得磁碟區的掛載點，以便在 CIFS 共用或 NFS 用戶端上掛載共用區。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 從儲存設備中、選取 * 移至儲存設備庫存 * 。
+. 在 *FSX for ONTAP （用於卷的 FSX ） * 選項卡中，選擇包含卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 從 Volumes （卷）選項卡中，選擇該卷的三點菜單，然後選擇 *Basic actions* ，再選擇 *View mount 命令 * 。
+. 在掛載命令對話框中，選擇 *Copy* 複製命令。您將在終端機中輸入複製的命令。
+. 選擇*關閉*。
+
 
 
 

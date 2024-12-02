@@ -11,7 +11,7 @@ settings:
   rss_page: whats-new.html
   release_notes_autogen:
     release_notes_repo: workload-relnotes
-  langs: zh-tw,us-en,ja-jp,ko-kr,zh-cn,de-de,es-es,fr-fr,it-it
+  langs: zh-tw,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn
 sidebar:
   entries:
   - title: Amazon FSX for NetApp ONTAP 的文件
@@ -78,6 +78,8 @@ sidebar:
           url: "/initialize-replication.html"
       - title: 複製磁碟區
         url: clone-volume.html
+      - title: 使用內部部署 ONTAP 資料
+        url: "/use-onprem-data.html"
   - title: 管理與監控
     entries:
     - title: Volume管理
@@ -92,6 +94,8 @@ sidebar:
         url: "/rebalance-volume.html"
       - title: 變更分層原則
         url: "/change-tiering-policy.html"
+      - title: 更新儲存效率
+        url: "/update-storage-efficiency.html"
       - title: 管理 NFS 匯出原則
         url: "/manage-nfs-export-policy.html"
       - title: 管理 CIFS 共用

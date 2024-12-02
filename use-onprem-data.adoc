@@ -1,0 +1,159 @@
+---
+sidebar: sidebar 
+permalink: use-onprem-data.html 
+keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
+summary: 在 BlueXP  工作負載工廠中探索及複寫內部部署的 ONTAP 資料，以便用於豐富 AI 知識庫。 
+---
+= 在 BlueXP  工作負載工廠中使用內部部署的 ONTAP 叢集資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 BlueXP  工作負載工廠中探索及複寫內部部署的 ONTAP 資料，以便用於豐富 AI 知識庫。
+
+.關於這項工作
+若要使用內部部署 ONTAP 叢集的資料，您必須先探索內部部署 ONTAP 叢集。發現內部部署 ONTAP 叢集之後，您可以將資料用於下列任何一種使用案例。
+
+使用案例:: 請注意， GenAI 工作負載的主要使用案例是這一系列工作的重點。
++
+--
+* * GenAI 工作負載 * ：將內部部署的 ONTAP Volume 資料複寫至適用於 ONTAP 檔案系統的 FSX ，以便將資料用於link:https://docs.netapp.com/us-en/workload-genai/create-knowledgebase.html["豐富 AI 知識庫"^]。
+* * 備份與移轉至雲端 * ：將內部部署 ONTAP Volume 資料複寫至適用於 ONTAP 檔案系統的 FSX ，可作為雲端的備份。
+* * 資料分層 * ：複寫後，不常存取的內部部署 ONTAP Volume 資料可從 SSD 儲存層分層，移至容量集區儲存層。
+
+
+--
+
+
+
+
+== 探索內部部署 ONTAP 的叢集
+
+在 BlueXP  工作負載工廠中探索內部部署的 ONTAP 叢集，以便將資料複寫到 Amazon FSX for NetApp ONTAP 檔案系統。
+
+.開始之前
+開始之前，請確定您擁有下列項目：
+
+* 用於 ONTAP 檔案系統進行複寫的 FSX 。
+* 與探索到的內部部署叢集相關聯的連線連結。如果您沒有連結，則需要執行link:create-link.html["建立一個"]。
+* 具有必要權限的 ONTAP 使用者認證。
+* 內部部署 ONTAP 9.8 版及更新版本。
+* 連線能力如下圖所示。
++
+image:screenshot-on-prem-connectivity.png["顯示內部部署 ONTAP 叢集應如何連線至 Amazon Web Services Cloud 的管理路徑和資料路徑的螢幕擷取畫面"]
+
+
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 選取 * 內部部署 ONTAP * 標籤。
+. 選擇* Discover（探索）*。
+. 檢閱先決條件，然後選取 * 下一步 * 。
+. 在「探索 ONTAP 內部部署」頁面上，於 * 叢集組態 * 下提供下列項目：
++
+.. * 連結 * ：選取連結。此連結將與內部部署叢集相關聯，以在叢集和工作負載工廠之間建立連線。
++
+如果您尚未建立連結，請依照指示操作，然後返回此作業並選取連結。
+
+.. * 叢集 IP 位址 * ：提供內部部署 ONTAP 叢集的 IP 位址以進行複寫。
+.. * ONTAP 認證 * ：輸入內部部署 ONTAP 叢集的 ONTAP 認證。確定使用者擁有所需的權限。
+
+
+. 選取 * 探索 * 以開始探索程序。
+
+
+.結果
+內部部署 ONTAP 叢集已被探索到，現在會出現在 * 內部部署 ONTAP * 標籤中。
+
+您現在可以檢視內部部署 ONTAP 叢集和<<從內部部署的 ONTAP 叢集複寫 Volume 資料,將資料複寫至適用於 ONTAP 檔案系統的 FSX>>中的資料。
+
+
+
+== 從內部部署的 ONTAP 叢集複寫 Volume 資料
+
+將 Volume 資料從內部部署 ONTAP 叢集複寫到適用於 ONTAP 檔案系統的 FSX 。複寫後，資料可用於豐富 AI 知識庫。
+
+.開始之前
+* 您必須探索內部部署的 ONTAP 叢集，才能複寫其 Volume 資料。
+* 您必須有可用的 FSX ， ONTAP 檔案系統才能做為複寫的目標。
+* 內部部署 ONTAP 叢集和用於複寫關係的 ONTAP 檔案系統的 FSX 都必須具有相關的連結。如果 ONTAP 叢集的內部和 FSX 上有一個或兩個都沒有現有的連結，請參閱link:create-link.html["首先建立連結"]。link:manage-links.html["建立連結的關聯"]在檔案系統中，在 * 帳戶名稱 * 下選擇 * 關聯連結 * 。一旦內部部署 ONTAP 叢集和 ONTAP 檔案系統的 FSX 連結後，請返回此作業。
+
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 選取 * 內部部署 ONTAP * 標籤。
+. 若要依儲存 VM 尋找磁碟區，您可以從下拉式清單中 * 選取儲存 VM* 。
+. 選取一個或多個要複寫的磁碟區，然後選取 * Replicate * 。
+. 在「建立複寫」頁面的「複寫目標」下、提供下列項目：
++
+.. * 適用於 ONTAP 檔案系統 * 的 FSX ：針對適用於 ONTAP 檔案系統的目標 FSX 、選取 ONTAP 檔案系統名稱的認證、區域和 FSX 。
+.. * 儲存 VM 名稱 * ：從下拉式功能表中選取儲存 VM 。
+.. *Volume name* ：目標 Volume 名稱會自動以下列格式產生 `{OriginalVolumeName}_copy`。您可以使用自動產生的 Volume 名稱或輸入其他 Volume 名稱。
+.. *Tiering data* ：為儲存在目標 Volume 中的資料選取分層原則。
++
+*** * 自動 * ：使用 ONTAP 使用者介面的工作負載原廠 FSX 建立磁碟區時，預設的分層原則。將所有冷資料分層，包括在特定時間段內，將使用者資料和快照傳送至容量集區儲存層。
+*** * 僅限 Snapshot * ：將僅限階層的快照資料傳送至容量集區儲存層。
+*** * 無 * ：將所有 Volume 資料保留在主要儲存層。
+*** * 全部 * ：將所有使用者資料和快照資料標示為冷資料、並儲存在容量集區儲存層。
++
+請注意、某些分層原則具有相關的最低冷卻週期、可設定磁碟區中的使用者資料必須保持非作用中狀態、才能將資料視為「冷」、並移至容量集區儲存層。當資料寫入磁碟時、冷卻週期即開始。
+
++
+如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^]AWS FSX for NetApp ONTAP 文件中的。
+
+
+
+.. * 最大傳輸速率 * ：選取 * 受限 * ，然後在 MIB/s 中輸入最大傳輸限制或者、選取 * 無限 * 。
++
+如果沒有限制、網路和應用程式的效能可能會下降。或者、我們建議為 ONTAP 檔案系統的關鍵工作負載（例如主要用於災難恢復的工作負載）提供不限傳輸率的 FSX 。
+
+
+
+. 在複寫設定下、提供下列項目：
++
+.. * 複寫間隔 * ：選取快照從來源磁碟區傳輸到目標磁碟區的頻率。
+.. * 長期保留 * ：可選擇啟用快照以進行長期保留。
++
+如果您啟用長期保留、請選取現有原則或建立新原則、以定義要複寫的快照和要保留的數量。
+
++
+*** 對於現有原則，請選取 * 選擇現有原則 * ，然後從下拉式功能表中選取現有原則。
+*** 對於新原則，請選取 * 建立新原則 * ，並提供下列項目：
++
+**** * 原則名稱 * ：輸入原則名稱。
+**** * Snapshot Policies * ：在表格中、選取快照原則頻率和要保留的複本數量。您可以選取多個快照原則。
+
+
+
+
+
+
+. 選擇* Create *（建立*）。
+
+
+.結果
+複寫關係會出現在 ONTAP 檔案系統的目標 FSX 的 * 複寫關係 * 索引標籤中。
+
+
+
+== 從 BlueXP  工作負載工廠移除內部部署 ONTAP 叢集
+
+視需要從 BlueXP  工作負載工廠移除內部部署 ONTAP 叢集。
+
+.開始之前
+移除叢集之前，您必須link:delete-replication.html["刪除所有現有的複寫關係"]先移除內部部署 ONTAP 叢集中的任何磁碟區，才能避免關係中斷。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 選取 * 內部部署 ONTAP * 標籤。
+. 選取要移除的內部部署 ONTAP 叢集。
+. 選取「三點」功能表，然後選取 * 從工作負載原廠移除 * 。
+
+
+.結果
+內部部署 ONTAP 叢集已從 BlueXP  工作負載工廠移除。

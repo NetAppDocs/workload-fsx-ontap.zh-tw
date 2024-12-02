@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: change-tiering-policy.html 
-keywords:  
+keywords: tiering policy, change tier, change tiers, tier policy update 
 summary: 變更 BlueXP  工作負載工廠的分層原則，將資料從高效能主儲存層重新分配至次容量集區儲存層。 
 ---
 = 變更 BlueXP  工作負載工廠中磁碟區的分層原則
