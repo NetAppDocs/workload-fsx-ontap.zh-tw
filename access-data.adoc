@@ -29,7 +29,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.htm
 . 在 *FSX for ONTAP （用於卷的 FSX ） * 選項卡中，選擇包含卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
 . 從 Volumes （卷）選項卡中，選擇該卷的三點菜單，然後選擇 *Basic actions* ，再選擇 *View mount 命令 * 。
-. 在掛載命令對話框中，選擇 *Copy* 複製命令。您將在終端機中輸入複製的命令。
+. 在 Mount 命令對話方塊中，選取 * Copy* 來複製 NFS 掛載點或 CIFS 共用的命令。您將在終端機中輸入複製的命令。
 . 選擇*關閉*。
 
 

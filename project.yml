@@ -47,7 +47,7 @@ sidebar:
       - title: 建立Volume
         url: "/create-volume.html"
       - title: 存取您的資料
-        url: access-data.html
+        url: "/access-data.html"
     - title: 建立儲存VM
       url: "/create-storage-vm.html"
     - title: 保護您的資料
@@ -77,7 +77,7 @@ sidebar:
         - title: 初始化複寫關係
           url: "/initialize-replication.html"
       - title: 複製磁碟區
-        url: clone-volume.html
+        url: "/clone-volume.html"
       - title: 使用內部部署 ONTAP 資料
         url: "/use-onprem-data.html"
   - title: 管理與監控
@@ -96,12 +96,12 @@ sidebar:
         url: "/change-tiering-policy.html"
       - title: 更新儲存效率
         url: "/update-storage-efficiency.html"
-      - title: 管理 NFS 匯出原則
+      - title: 管理NFS匯出原則
         url: "/manage-nfs-export-policy.html"
-      - title: 管理 CIFS 共用
+      - title: 管理CIFS共用區
         url: "/manage-cifs-share.html"
       - title: 分割複製的 Volume
-        url: split-cloned-volume.html
+        url: "/split-cloned-volume.html"
       - title: 刪除 Volume
         url: "/delete-volume.html"
     - title: 檔案系統管理
@@ -123,13 +123,13 @@ sidebar:
       - title: 管理儲存 VM 標籤
         url: "/manage-svm-tags.html"
       - title: 重設儲存 VM 密碼
-        url: reset-svm-password.html
+        url: "/reset-svm-password.html"
       - title: 刪除儲存VM
         url: "/delete-svm.html"
     - title: 資料保護管理
       entries:
       - title: 變更磁碟區的快照原則
-        url: change-snapshot-policy.html
+        url: "/change-snapshot-policy.html"
       - title: 管理 ONTAP 備份排程的 FSX
         url: "/manage-backup-schedule.html"
       - title: 啟用及編輯快照以進行長期保留

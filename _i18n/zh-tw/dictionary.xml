@@ -21,8 +21,6 @@
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步驟</block>
   <block id="7f855d340cfe6607ed51975896dd19da" category="list-text">在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。</block>
   <block id="f76864e1c2588ae3d6373b6ab95e2209" category="list-text">從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。</block>
-  <block id="2ca869b68be8f2b6e678f47d25c26fb7" category="list-text">選擇 * 進階動作 * 、然後 * 編輯 CIFS 共用 * 。</block>
-  <block id="736934ebc3ee8de296f3d5213e79430e" category="list-text">在「編輯 CIFS 共用」頁面上、提供下列項目：</block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="paragraph-title">關於這項工作</block>
   <block id="4c9aa322b281bc41d9f93e03b1223838" category="paragraph">判斷匯出原則規則的用戶端規格。用戶端規格的有效值如下：</block>
   <block id="1d9e509ddb93a176b7d369a91ad7deaf" category="list-text">IP位址</block>
@@ -396,28 +394,21 @@
   <block id="aca77c97dcf29f670f572a7129863195" category="section-title">為 ONTAP 檔案系統部署 FSX</block>
   <block id="f31ed490fd3768dff2a1121a0a06095c" category="list-text">部署方法</block>
   <block id="543b29a63a3d070c0ff920d687259dfc" category="paragraph">在 _basic 模式中、您可以從 Codebox 視窗複製內容、並使用其中一種 Codebox 方法部署適用於 ONTAP 檔案系統的 FSX 。</block>
-  <block id="3c6efe0ce159fb5b8ee4882bcf3ad973" category="summary">NetApp 以多種方式支援工作負載工廠及其雲端服務。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和社群論壇。您的支援註冊包括透過網路票證提供遠端技術支援。</block>
   <block id="6a7b2c9c4cec65ad972b108fa0a1192b" category="section-title">取得適用於 ONTAP 的 FSX 支援</block>
-  <block id="4435b263dd1a35bcd8dfda050db92b3b" category="paragraph">如需與適用於 ONTAP 的 FSX 、其基礎架構或使用服務的任何解決方案相關的技術支援、請參閱該產品的工作負載工廠文件中的「取得說明」。</block>
   <block id="18cf072964a583150dd247485ba75b92" category="inline-link-macro">Amazon FSX for ONTAP Sf</block>
   <block id="9d06990508d25d367d9158c6558eb9c8" category="paragraph"><block ref="9d06990508d25d367d9158c6558eb9c8" category="inline-link-macro-rx"></block></block>
   <block id="35f9849ffdd809bda11d0fc56e1e3583" category="paragraph">若要獲得工作負載工廠及其儲存解決方案與服務的專屬技術支援、請使用下列支援選項。</block>
   <block id="edd15fbeb7b2dffa163336ecd4f3e80c" category="section-title">使用自我支援選項</block>
   <block id="5e4b821a1a82558dead1ef6961e90666" category="paragraph">這些選項可供免費使用、一天24小時、一週7天：</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">文件</block>
-  <block id="d935525f4850c4638cbf48ae53fb4686" category="paragraph">您目前正在檢視的 Workload Factory 文件。</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">知識庫</block>
   <block id="436f63b446dba5a418c698d49bd39718" category="list-text"><block ref="436f63b446dba5a418c698d49bd39718" category="inline-link-rx"></block></block>
-  <block id="ba6274b9c9d1f81bb3a648fa289986b8" category="paragraph">搜尋 Workload Factory 知識庫、尋找有助於疑難排解問題的文章。</block>
   <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">社群</block>
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
-  <block id="7faef90df03399696ba9d4815b37171a" category="paragraph">加入 Workload Factory 社群、追蹤後續的討論或建立新的討論。</block>
   <block id="d88bacf2a9fdcbbc844edcba97c34e30" category="section-title">利用NetApp支援建立案例</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">除了上述的自我支援選項、您也可以在啟動支援之後、與NetApp支援專家合作解決任何問題。</block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">開始之前</block>
   <block id="e2a733504c4088b809813bbb35a3ddfd" category="inline-link-macro">瞭解如何註冊以取得支援</block>
-  <block id="a12ea39ddf1c98adfd7f751299705efa" category="paragraph">若要使用 * 建立案例 * 功能、您必須先註冊以取得支援。 將您的 NetApp 支援網站認證與工作負載工廠登入建立關聯。<block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>。</block>
-  <block id="356c88ac4b0ec3f7689cc91f54701fef" category="list-text">在 Workload Factory 主控台的右上角、選取 * 說明 &gt; Support* 。</block>
   <block id="aadd86a3fadf19221852692c6e4adc2f" category="paragraph">選取此選項會開啟 BlueXP 主控台新的瀏覽器索引標籤、並載入支援儀表板。</block>
   <block id="08d96fdd1a845d80db99e6e1dffb8bc7" category="list-text">在「*資源*」頁面上、選擇「技術支援」下的其中一個可用選項：</block>
   <block id="6a1b74969231967ed071d465206b15c7" category="list-text">如果您想與電話上的某人通話、請選取 * 致電 * 。您將會被導向netapp.com上的頁面、其中列出您可以撥打的電話號碼。</block>
@@ -498,7 +489,6 @@
   <block id="482723983a4f2af954e36ff41e567451" category="doc">已知限制</block>
   <block id="488044172f20eab904aecc2827c019b4" category="section-title">處理量容量區域支援</block>
   <block id="0a27e957ebaf89bce02c66c147da7966" category="section-title">橫向擴充部署</block>
-  <block id="24aa3b91eee064e4bbffa941e071bd95" category="paragraph">下列地區支援最高每秒 4 Gb 的最大處理量容量、可進行橫向擴充部署：美國東部（俄亥俄州）地區、美國東部（北維吉尼亞州）地區、美國西部（俄勒岡州）地區和歐洲（愛爾蘭）。</block>
   <block id="2e8bf528a9bc28508b7cf3ffef710f1c" category="section-title">橫向擴充部署</block>
   <block id="3e14c6b63ec31128bf81a140eecbaeb0" category="paragraph">下列地區支援每秒高達 3 GB 和 6 GB 的最大處理量容量、可進行橫向擴充部署：美國東部（北美維吉尼亞州）、美國東部（俄亥俄州）、美國西部（俄勒岡州）、歐洲（愛爾蘭）和亞太地區（悉尼）。</block>
   <block id="1d19e21de0f93b11f5ceb8b535a3afc2" category="section-title">容量管理</block>
@@ -509,13 +499,9 @@
   <block id="b1c8cb58e124bead4ca2e09fa1c20c9b" category="paragraph">如需每個檔案系統的 SVM 最大數量、請參閱 <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> AWS 文件中的。</block>
   <block id="3a448e496404b548627a97fc00da8e23" category="section-title">iSCSI 傳輸協定支援</block>
   <block id="53c858a11ae23c19aee107fb913f096a" category="list-text">每個磁碟區只能設定單一 LUN 。</block>
-  <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">區域支援</block>
-  <block id="1bf3a4f06c8408a2ff436e0b847ca3a3" category="list-text">目前不支援 Canada West （ Calgary ）地區。</block>
   <block id="7e7397a7b79323762c61941fc0e6b5f9" category="section-title">資料保護</block>
   <block id="3625bed0ef82516150cc87137582e2b5" category="list-text">無法刪除快照。</block>
-  <block id="720a8000a7c475fdd307a99cc1a79ac7" category="list-text">僅支援在適用於 ONTAP 檔案系統的 FSX 之間進行複寫。</block>
   <block id="fa0b5078a184e3a9f13892acdade9375" category="list-text">當您複寫檔案系統時、檔案系統中的所有磁碟區都會使用相同的複寫原則。</block>
-  <block id="2755e2232e7c57beeec07b1f327577b9" category="list-text">只有最後一個快照可供還原。</block>
   <block id="6868a45b7f86e5379e5d85b2d762b844" category="section-title">儲存節約計算機</block>
   <block id="b243e9d890e3c0d1d9ba32de03c0eb00" category="paragraph">儲存節約計算機無法計算下列組態的成本節約效益：</block>
   <block id="9049888f2f272bf903633de4a685ba6a" category="list-text">適用於 Windows 檔案伺服器的 FSX ： HDD 儲存類型</block>
@@ -580,15 +566,6 @@
   <block id="70f0040e444997fbb4beeeae8bd03d34" category="paragraph"><block ref="70f0040e444997fbb4beeeae8bd03d34" category="inline-link-macro-rx"></block></block>
   <block id="8cd69d367e2dbdfca9ec0b55ba13baec" category="section-title">需要連結時</block>
   <block id="c0653b3ad30a51a0fe3228ad2877ac9d" category="paragraph">需要連結的功能包括：</block>
-  <block id="ab887a13e0e43ab14f26aa4139d3931e" category="list-text">顯示安裝在適用於 ONTAP 檔案系統的 FSX 上的 ONTAP 版本</block>
-  <block id="6a0bbe6ca6ca13a9f69ba22ff72d4db9" category="list-text">管理系統上的 iSCSI 磁碟區</block>
-  <block id="f713a1eba4a310a7dee6e6148031ac90" category="list-text">啟用和停用 Volume 的自動擴充功能</block>
-  <block id="b688472ba5c5b20a13e35de55bbd243e" category="list-text">建立及管理快照原則</block>
-  <block id="607207d543b313ae2d9720c777e7a286" category="list-text">設定複寫關係、並在檔案系統之間複寫磁碟區</block>
-  <block id="f39a1ae39e9d73b3a9aa6c431f9fb9d4" category="list-text">設定備份關係、並將 Volume 資料備份至雲端儲存設備</block>
-  <block id="f15997f78fd09915dc098e9c00579d74" category="list-text">在檔案系統中複製磁碟區</block>
-  <block id="12f68de27d579f57f0f70762ccd96328" category="list-text">直接從 ONTAP 顯示其他指標（ Amazon CloudWatch 會收集預設指標）</block>
-  <block id="1a59c94816246f9168f366b6938e1715" category="list-text">NFS 匯出原則的管理</block>
   <block id="fa1a08e2a749c9f330c9a8e60cac9cc3" category="doc">管理連結</block>
   <block id="a4fcf9229a590e13a5a514e19c4c398e" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block> 或 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。</block>
   <block id="e32918056c538c64f6e229f2ca257e25" category="section-title">檢視與您帳戶相關的連結</block>
@@ -694,8 +671,6 @@
   <block id="6155892ff0823c5997e8d188a29e66e2" category="list-text">在中斷複寫對話方塊中、選取 * 中斷 * 。</block>
   <block id="f42375f716d314b031447e015387fbff" category="paragraph">磁碟區的複寫狀態會變更為 * 中斷 * 。目標 Volume 變成可寫入的。</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">註冊以取得支援</block>
-  <block id="996ad73a480311d4f86d6946935389d2" category="paragraph">需要註冊支援、才能獲得工作負載工廠及其儲存解決方案與服務專屬的技術支援。您必須從 BlueXP 主控台註冊以取得支援、該主控台是與 Workload Factory 分開的網路型主控台。</block>
-  <block id="c552970fd4dc8118ba1806da596acad9" category="paragraph">註冊支援並不會啟用雲端供應商檔案服務的 NetApp 支援。如需有關雲端供應商檔案服務、其基礎架構或任何使用服務的解決方案的技術支援、請參閱該產品的 Workload Factory 文件中的「取得說明」。</block>
   <block id="0b0e252af8897fbe981ec6682d2aa33b" category="section-title">支援登錄總覽</block>
   <block id="d7e4bb081bf4ec4814d83edcfbdb8b96" category="paragraph">註冊您的帳戶 ID 支援訂閱（您的 20 位數 960xxxxxxxxx 序號位於 BlueXP 的「支援資源」頁面）、即為您的單一支援訂閱 ID 。每個BlueXP帳戶層級的支援訂閱都必須註冊。</block>
   <block id="f9e05c2b383e3f11e3b4bebbe8952225" category="paragraph">註冊可提供開啟支援服務單和自動產生個案等功能。如下列所述、將 NetApp 支援網站 （ NSS ）帳戶新增至 BlueXP 即可完成登錄。</block>
@@ -781,7 +756,6 @@
   <block id="8cf9dbe17cb44a10f0622b63961c131d" category="sidebar">Volume管理</block>
   <block id="56994f1db86bfe709cbe47f96bde566f" category="sidebar">編輯 Volume 自動擴充</block>
   <block id="be6125857b11bdb69d1f89bf69787f48" category="sidebar">重新平衡磁碟區的容量</block>
-  <block id="9f4aa892debf403a854859b0ca9c9ff6" category="sidebar">變更分層原則</block>
   <block id="28b0bfb965f113c41530116951bfce50" category="sidebar">檔案系統管理</block>
   <block id="ff117b5e42f4a60dd5b7859999c4f2bd" category="sidebar">啟用自動容量管理</block>
   <block id="c7ad4dd9b2ecb508f1366110b020e001" category="sidebar">重設 fsxadmin 密碼</block>
@@ -1089,9 +1063,7 @@
   <block id="4a74309dc15865035b8b93cec28f2a96" category="list-text">在 [ 資訊 ] 下，選取 *FSX for ONTAP backup* 旁邊的鉛筆圖示。當滑鼠移動到 *FSX for ONTAP backup* 列上時、下拉式箭頭旁會出現鉛筆圖示。</block>
   <block id="9f16bb4c9cbb656a02f2d0ac20ae70a8" category="list-text">* 每日自動備份 * ：啟用或停用此功能。如果您停用此功能，請選取 * 套用 * 。如果您啟用此功能、請完成下列步驟。</block>
   <block id="1b7732fda3ed237c994a5ac55fb150ea" category="list-text">* 每日自動備份時段 * ：選擇 * 無偏好設定 * （為您選擇每日備份開始時間）或 * 選擇每日備份開始時間 * ，並指定開始時間。</block>
-  <block id="9267ce1924a6f0548efc234c84461fa8" category="summary">變更 BlueXP  工作負載工廠中使用 SMB/CIFS 通訊協定類型的磁碟區 CIFS 共用。</block>
   <block id="5bdcc5d3e4e631055e0153df468f21d6" category="doc">在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用</block>
-  <block id="17c44173e4e9c50b2859e1925d7af336" category="paragraph">在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用，包括判斷要授予存取權的使用者和群組，以及提供存取權限的類型。</block>
   <block id="3d158aba7d5d233ad247917999b7f8f9" category="list-text">從 Volumes （磁碟區）索引標籤中，選取要變更 SMB 共用的磁碟區三點功能表。</block>
   <block id="20ce09b74b6e0e3f084a81d605cc8f77" category="summary">您可以在 BlueXP  工作負載工廠中檢視與您帳戶相關的連結，建立連結的關聯，以及移除連結。</block>
   <block id="2083481ef56023982330c4d1cbedcd07" category="doc">管理 BlueXP  工作負載原廠連結</block>
@@ -1187,8 +1159,6 @@
   <block id="a5707c7f948a436824cd06775026c409" category="sidebar">Amazon FSX for NetApp ONTAP 功能將ONTAP 完整的功能整合至原生AWS託管服務、提供一致的混合雲體驗。本文件說明如何使用 BlueXP  工作負載工廠來管理適用於 ONTAP 的 FSX 。</block>
   <block id="788881725a778e76ae58ef03f1dd4d7e" category="sidebar">Amazon FSX for NetApp ONTAP for BlueXP  工作負載原廠文件</block>
   <block id="d151342d67a639e871ca8c57524ca7f8" category="sidebar">管理 Volume 標記</block>
-  <block id="3a1a7312146508132d80f244521968ee" category="sidebar">管理 NFS 匯出原則</block>
-  <block id="baae6cbba4c997ef4c9035394e7dbd9e" category="sidebar">管理 CIFS 共用</block>
   <block id="11c0aa7596d4f4521c9a98f708c34cc4" category="sidebar">管理儲存 VM 標籤</block>
   <block id="e4b304b6d81189c09bd7e999a18522e8" category="sidebar">管理 ONTAP 備份排程的 FSX</block>
   <block id="c4f10a04f7aa75535a8a0475261393eb" category="doc">ONTAP 檔案系統橫向擴充 FSX 的區塊儲存設備</block>
@@ -1215,7 +1185,6 @@
   <block id="81433468b8608aba73a2350afe41ac5a" category="section-title">取得 BlueXP  工作負載工廠中磁碟區的裝載點</block>
   <block id="06e52dae2c3e09e69a906c2fba89ed66" category="paragraph">取得磁碟區的掛載點，以便在 CIFS 共用或 NFS 用戶端上掛載共用區。</block>
   <block id="4a6574ab96645d28cf548ed8372c655c" category="list-text">從 Volumes （卷）選項卡中，選擇該卷的三點菜單，然後選擇 *Basic actions* ，再選擇 *View mount 命令 * 。</block>
-  <block id="bd95ac5b25f35af153096a48803b03b4" category="list-text">在掛載命令對話框中，選擇 *Copy* 複製命令。您將在終端機中輸入複製的命令。</block>
   <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">選擇*關閉*。</block>
   <block id="0206587910cd5147f80c048ba00193af" category="paragraph">若要在檔案系統上佈建 iSCSI 區塊磁碟區，請選取不超過 6 個 HA 配對。</block>
   <block id="f3b270238d8c3f46a0b10d724c916e7d" category="list-text">* 最大傳輸速率 * ：選取 * 受限 * ，然後在 MIB/s 中輸入最大傳輸限制或者、選取 * 無限 * 。</block>
@@ -1234,10 +1203,7 @@
   <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">BlueXP  工作負載工廠</block>
   <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
   <block id="a32b59044667570495820281f09cfa10" category="list-text">* 名稱 * ：輸入 CIFS 共用的名稱。</block>
-  <block id="a983c99827c51cfd1ffcfd3882536018" category="list-text">選取套用。</block>
   <block id="aa6a9af5d2170a7e2225e0d97aefef52" category="paragraph">變更可能會導致目前使用者或群組失去對 CIFS 共用的存取權。</block>
-  <block id="e58fa167b6770841b720711ad8a12b1a" category="list-text">選擇 * 繼續 * 以儲存變更。</block>
-  <block id="f6db14d0bad35a9b610208b53b06c1ca" category="paragraph">將套用對 CIFS 共用區的變更。</block>
   <block id="8772abd9ec2ca5593300708cb88b5426" category="summary">在 BlueXP  工作負載工廠中，您可以在建立磁碟區後更新儲存效率設定。</block>
   <block id="b31795226510baf520db5a5e2287b56e" category="doc">更新磁碟區的儲存效率設定</block>
   <block id="07834469705cb1cae603dc37fac50539" category="paragraph">儲存效率功能包括重複資料刪除，資料壓縮及資料壓縮，可在 FlexVol volume 上達到最佳的空間節約效益。重複資料刪除技術可消除重複的資料區塊資料壓縮會壓縮資料區塊、以減少所需的實體儲存容量。資料壓縮可在較少空間中儲存更多資料、以提升儲存效率。</block>
@@ -1295,7 +1261,63 @@
   <block id="78ce280a4b77e37298d71642a4457c0a" category="list-text">選取要移除的內部部署 ONTAP 叢集。</block>
   <block id="5b4dad1d897213eb27b108cb47f3a75d" category="list-text">選取「三點」功能表，然後選取 * 從工作負載原廠移除 * 。</block>
   <block id="a8cf8ae4f9fef4837824fb9409537e5d" category="paragraph">內部部署 ONTAP 叢集已從 BlueXP  工作負載工廠移除。</block>
-  <block id="6ad17d07338dffda7982d8efdad3a276" category="section-title">2024 年 12 月 01 日</block>
   <block id="aab28bb522b1a572add493963001b88d" category="sidebar">使用內部部署 ONTAP 資料</block>
   <block id="5d831b6559b5decf8f758715856498b9" category="sidebar">更新儲存效率</block>
+  <block id="442b133d7d895a50d67d2f8514b6fc0a" category="doc">Volume CIFS 共用增強功能</block>
+  <block id="c67048e1717263df3fc8ffc894f40785" category="paragraph">下列增強功能可用於管理 BlueXP  工作負載工廠中 Amazon FSX for ONTAP 檔案系統中磁碟區的 CIFS 共用：</block>
+  <block id="28ee2134fc1275e4f2052b7bd91a9f8d" category="list-text">支援一個磁碟區上的多個 CIFS 共用</block>
+  <block id="aa8a0747da321d7501a2f34bb5326b65" category="list-text">隨時更新使用者和群組的選項</block>
+  <block id="a85d37847efda31b7b7b0ee3ee3cd2ab" category="list-text">隨時更新使用者和群組權限的選項</block>
+  <block id="0c05c06c8c5abf5cf4956491502d212a" category="list-text">刪除 CIFS 共用</block>
+  <block id="1122186beaf8563a5f76bdc23dfd22a5" category="inline-link-macro">管理CIFS共用區</block>
+  <block id="f59eead66ce9829f954d28d72a4e99b1" category="paragraph"><block ref="f59eead66ce9829f954d28d72a4e99b1" category="inline-link-macro-rx"></block></block>
+  <block id="2898ec90c27f1541e38a1849b4b9923a" category="list-text">在 Mount 命令對話方塊中，選取 * Copy* 來複製 NFS 掛載點或 CIFS 共用的命令。您將在終端機中輸入複製的命令。</block>
+  <block id="b6a4501cc05e54e2e5a513c3b552183a" category="paragraph">NetApp 以多種方式支援 BlueXP  工作負載工廠及其雲端服務。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和社群論壇。您的支援註冊包括透過網路票證提供遠端技術支援。</block>
+  <block id="261966eaf033c38f6934f2c8fc36d79c" category="paragraph">如需與適用於 ONTAP 的 FSX ，其基礎架構或使用服務的任何解決方案相關的技術支援，請參閱該產品工作負載原廠文件中的「取得說明」。</block>
+  <block id="5b49df4e58e2a4750acd8bfa8687ccd6" category="paragraph">您目前正在檢視的工作負載原廠文件。</block>
+  <block id="ba51332e265e54eb4295d6e7d057bad8" category="paragraph">搜尋工作負載原廠知識庫，找出有助於疑難排解問題的文章。</block>
+  <block id="fc3e8f3c2017c33d444d483913a485ba" category="paragraph">加入工作負載工廠社群，追蹤後續討論或建立新討論。</block>
+  <block id="ffa18fada5deeeb1e533786297855e7d" category="paragraph">若要使用 * 建立案例 * 功能，您必須先註冊以取得支援。將您的 NetApp 支援網站認證與工作負載原廠登入建立關聯。<block ref="d9fea24984986beabae03291c4b721de" category="inline-link-macro-rx"></block>。</block>
+  <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">在工作負載原廠主控台的右上角，選取 * 說明 &gt; 支援 * 。</block>
+  <block id="42236277fa3913ec4d1fd1e17b26874c" category="paragraph">所有地區均支援最高每秒 2 Gb 的橫向擴充組態。下列地區支援最高每秒 4 Gb 的最大處理量容量、可進行橫向擴充部署：美國東部（俄亥俄州）地區、美國東部（北維吉尼亞州）地區、美國西部（俄勒岡州）地區和歐洲（愛爾蘭）。</block>
+  <block id="f23f9e699754fa9634675e68ddb2477a" category="list-text">對於長期保留複寫關係，只有最後一個快照可供還原。</block>
+  <block id="3566e30d1125b1cc489403b83380b16e" category="list-text">顯示安裝在適用於 ONTAP 檔案系統的 FSX 上的 ONTAP 版本</block>
+  <block id="70b71b7616d1607e66f58defc9384bf3" category="list-text">在適用於 ONTAP 檔案系統的 FSX 上管理 iSCSI 磁碟區</block>
+  <block id="dd7d7ae00fef8de94b69aa7b5b540cb1" category="list-text">Volume 的自動擴充功能</block>
+  <block id="3351e8dc51e33708d3280516a366bf4f" category="list-text">建立及管理快照原則</block>
+  <block id="bc405b20c5dce6dc67910950f2591510" category="list-text">複寫關係組態</block>
+  <block id="900f24520b234a239d52bc47e673bdd5" category="list-text">在 ONTAP 檔案系統的 FSX 之間進行 Volume 複寫</block>
+  <block id="2886577fc59b2d9df21dd1d41704de71" category="list-text">備份關係組態</block>
+  <block id="ab8c429c03a3887588677f966f3e8c48" category="list-text">將 Volume 資料備份至雲端儲存設備</block>
+  <block id="0fb8fbbbeb74e2e76be7a39d75ecdcda" category="list-text">在適用於 ONTAP 檔案系統的 FSX 內建立 Volume 複本</block>
+  <block id="981bc65604544a529c511adc06cb441f" category="list-text">直接從 ONTAP 顯示其他指標（ Amazon CloudWatch 會收集預設指標）</block>
+  <block id="310e8bd2aa0fbf766664a8fadbb86083" category="list-text">NFS 匯出原則的管理</block>
+  <block id="9d19d65b5c0b11e65c72a68e686c8efc" category="list-text">管理 CIFS 共用</block>
+  <block id="5b4240cc70ef93fd3963a5a4a1489114" category="summary">在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用，包括建立，判斷使用者和群組存取權，以及刪除。</block>
+  <block id="5917a5ef86ec0bb832a8231c1ca2e1df" category="paragraph">在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用包括建立 CIFS 共用，決定授予存取權的使用者和群組，以及授予存取權的存取類型，以及刪除 CIFS 共用。</block>
+  <block id="ed2b1c265309f7d9a2006128f317479e" category="paragraph">開始之前，請執行下列步驟：</block>
+  <block id="1832295f4669cf4c232bd0b7e1d64a4b" category="list-text">若要管理 CIFS 共用<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>，您必須：如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
+  <block id="0162ca60ba3c63c1058d5815f318b75b" category="section-title">為磁碟區建立 CIFS 共用區</block>
+  <block id="cbbe8730f4012f0727071442d89615d6" category="paragraph">請依照步驟為磁碟區建立 CIFS 共用。</block>
+  <block id="7b83ec4f9189886fea5cbe593c19e290" category="list-text">選擇 * 進階動作 * ，然後 * 管理 CIFS 共用 * 。</block>
+  <block id="212dea300359fc96977228999150178c" category="list-text">在「管理 CIFS 共用」頁面上，選取 * 建立 CIFS 共用 * 。</block>
+  <block id="5844bed8558487b50b554f8e08c11861" category="list-text">在「建立 CIFS 共用」對話方塊中，提供下列項目：</block>
+  <block id="e8a8f2eb5b946d837e542d5a63fad375" category="paragraph">磁碟區的 CIFS 共用即會建立。</block>
+  <block id="e72636c845db0954868fedab8b9039a9" category="section-title">變更磁碟區的 CIFS 共用</block>
+  <block id="1865d8e00fbb6200e9726e5afde71e2d" category="paragraph">請依照步驟變更磁碟區的 CIFS 共用設定。</block>
+  <block id="ca8738e363c21866f7099ffaef924318" category="list-text">在「管理 CIFS 共用」頁面上，將游標移至 CIFS 共用區，然後選取鉛筆圖示進行變更。</block>
+  <block id="5a299cf518ea7257993d2714505b5ff2" category="list-text">變更 CIFS 存取權限，或是要授予權限的使用者或群組。</block>
+  <block id="84779d2a2e99170bfbb6261853aee8d0" category="paragraph">磁碟區的 CIFS 共用已更新。</block>
+  <block id="bb806e2102217ea2d3a0c758e03eb23c" category="section-title">刪除磁碟區的 CIFS 共用</block>
+  <block id="7fe3781e49adf652332e06e0cf96f9ca" category="paragraph">請依照步驟刪除磁碟區的 CIFS 共用。</block>
+  <block id="2385aa1bb13246d1508cfe232ff59c2f" category="list-text">在「管理 CIFS 共用」頁面上，將游標移至 CIFS 共用上，然後選取垃圾桶圖示加以刪除。</block>
+  <block id="db881e47b9137977356b0d30938ec851" category="paragraph">刪除 CIFS 共用會讓任何想要掛載的使用者無法使用或無法存取。</block>
+  <block id="6b7a52834d577f2e4ac4d587036728f4" category="list-text">選擇 * 刪除 * 以確認刪除。</block>
+  <block id="8c880a68f0285449b1f44d4fdeca7cae" category="paragraph">磁碟區的 CIFS 共用即會刪除。</block>
+  <block id="ce638fcfafd4d79a49524062225d7fbc" category="paragraph">需要註冊支援，才能獲得 BlueXP  工作負載工廠及其儲存解決方案與服務的專屬技術支援。您必須向 BlueXP  主控台註冊以取得支援，該主控台是獨立於工作負載工廠的網路型主控台。</block>
+  <block id="2cbcc262b0a39ec19c5f69bffccb70fb" category="paragraph">註冊支援並不會啟用雲端供應商檔案服務的 NetApp 支援。如需雲端供應商檔案服務，其基礎架構或任何使用服務的解決方案的相關技術支援，請參閱該產品工作負載原廠文件中的「取得說明」。</block>
+  <block id="37b8354fe553b0151888468751ea8eb0" category="section-title">2025 年 1 月 05 日</block>
+  <block id="5c8df45cbe01191b205c30373b7e5739" category="section-title">2024 年 1 月 12 日</block>
+  <block id="d83aca6cf65672d392d39e7c76942a11" category="sidebar">變更分層原則</block>
+  <block id="07b434b23f63ca6490df33b213599320" category="sidebar">管理NFS匯出原則</block>
 </blocks>

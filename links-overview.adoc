@@ -42,12 +42,15 @@ link:https://aws.amazon.com/lambda/pricing/["深入瞭解使用 AWS Lambda 的�
 需要連結的功能包括：
 
 * 顯示安裝在適用於 ONTAP 檔案系統的 FSX 上的 ONTAP 版本
-* 管理系統上的 iSCSI 磁碟區
-* 啟用和停用 Volume 的自動擴充功能
+* 在適用於 ONTAP 檔案系統的 FSX 上管理 iSCSI 磁碟區
+* Volume 的自動擴充功能
 * 建立及管理快照原則
-* 設定複寫關係、並在檔案系統之間複寫磁碟區
-* 設定備份關係、並將 Volume 資料備份至雲端儲存設備
-* 在檔案系統中複製磁碟區
+* 複寫關係組態
+* 在 ONTAP 檔案系統的 FSX 之間進行 Volume 複寫
+* 備份關係組態
+* 將 Volume 資料備份至雲端儲存設備
+* 在適用於 ONTAP 檔案系統的 FSX 內建立 Volume 複本
 * 直接從 ONTAP 顯示其他指標（ Amazon CloudWatch 會收集預設指標）
 * NFS 匯出原則的管理
+* 管理 CIFS 共用
 
