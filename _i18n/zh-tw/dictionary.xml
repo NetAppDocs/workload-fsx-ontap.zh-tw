@@ -17,7 +17,6 @@
   <block id="ca56f4eb8ce272724e91bdcba9289351" category="inline-link-macro">在 Windows 用戶端上掛載 iSCSI LUN</block>
   <block id="5e566a13383eb6798f798ddefecee8c1" category="list-text"><block ref="5e566a13383eb6798f798ddefecee8c1" category="inline-link-macro-rx"></block></block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="paragraph-title">開始之前</block>
-  <block id="30780a2d5d1315bb3798040fb45df6f0" category="paragraph">決定要授予存取權限的使用者或群組、以及授予存取權限的類型。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">步驟</block>
   <block id="7f855d340cfe6607ed51975896dd19da" category="list-text">在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。</block>
   <block id="f76864e1c2588ae3d6373b6ab95e2209" category="list-text">從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。</block>
@@ -1294,7 +1293,6 @@
   <block id="310e8bd2aa0fbf766664a8fadbb86083" category="list-text">NFS 匯出原則的管理</block>
   <block id="9d19d65b5c0b11e65c72a68e686c8efc" category="list-text">管理 CIFS 共用</block>
   <block id="5b4240cc70ef93fd3963a5a4a1489114" category="summary">在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用，包括建立，判斷使用者和群組存取權，以及刪除。</block>
-  <block id="5917a5ef86ec0bb832a8231c1ca2e1df" category="paragraph">在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用包括建立 CIFS 共用，決定授予存取權的使用者和群組，以及授予存取權的存取類型，以及刪除 CIFS 共用。</block>
   <block id="ed2b1c265309f7d9a2006128f317479e" category="paragraph">開始之前，請執行下列步驟：</block>
   <block id="1832295f4669cf4c232bd0b7e1d64a4b" category="list-text">若要管理 CIFS 共用<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>，您必須：如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
   <block id="0162ca60ba3c63c1058d5815f318b75b" category="section-title">為磁碟區建立 CIFS 共用區</block>
@@ -1320,4 +1318,6 @@
   <block id="5c8df45cbe01191b205c30373b7e5739" category="section-title">2024 年 1 月 12 日</block>
   <block id="d83aca6cf65672d392d39e7c76942a11" category="sidebar">變更分層原則</block>
   <block id="07b434b23f63ca6490df33b213599320" category="sidebar">管理NFS匯出原則</block>
+  <block id="6026d035efbb2d0fc978d9ab5bb5b084" category="paragraph">在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用包括建立 CIFS 共用，決定授予存取權的使用者和群組，以及授予存取權的權限等級，以及刪除 CIFS 共用。</block>
+  <block id="34e81b46b7f1e5e087ae28a3b95e81fb" category="list-text">決定要授予存取權的使用者或群組，以及授予他們的權限等級。</block>
 </blocks>
