@@ -937,10 +937,6 @@
   <block id="26aa14a56cb65f177e49de0f78d28f50" category="summary">為 BlueXP  工作負載工廠中的 ONTAP Volume 建立 FSX 的快照原則。Snapshot 原則定義系統如何為磁碟區建立快照。</block>
   <block id="845e00b5325a1fed5014a20ed341a698" category="paragraph">為 BlueXP  工作負載工廠中的 ONTAP Volume 建立 FSX 的自訂快照原則。Snapshot 原則定義系統如何為磁碟區建立快照。</block>
   <block id="9b5cb8f49e83e342d48c95385ebf43e7" category="list-text">若要建立自訂的快照原則、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
-  <block id="bde64956326818fe8b0667c56ca96cb2" category="paragraph">使用其中一項登<block ref="68ceec76279c6913cdee16884c2d813a" category="inline-link-macro-rx"></block>入。。在 * 儲存 * 中、選取 * 移至儲存設備詳細目錄 * 。。在 *FSX for ONTAP （用於卷的 FSX ） * 選項卡中，選擇包含卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。。在檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。。從 * Volumes （磁碟區） * 標籤中，選取要使用排程快照保護的磁碟區的三點功能表。。選擇 * 資料保護動作 * 、 * 快照 * 、然後 * 管理快照原則 * 。。在「 Snapshot 原則管理」頁面上、選取 * 建立新的快照原則 * 。。在 * Snapshot 原則名稱 * 欄位中、輸入快照原則的名稱。。選用：在 * 說明 * 欄位中、輸入快照原則的說明。。在 * 排程 * 下、選取何時建立快照。例如、每分鐘或每小時。</block>
-  <block id="fc44d0b301d97eb155695e7e98d13195" category="paragraph">+ 您可以選擇多個頻率。。在 * 份數 * 下、輸入要保留的份數。</block>
-  <block id="e30313f4b4ec8d88a97bc809eb25a275" category="paragraph">+ 最大複本數為 1,023 份。。選用：在 * 命名慣例 * 下、輸入原則的 * 字首 * 。。* 保留標籤 * 會自動填入。</block>
-  <block id="404cc58e2d73e238e13299d652231d3e" category="paragraph">+ 此標籤指的是 SnapMirror 或複寫標籤，僅用於選取指定的快照，以便從來源複寫到目標檔案系統。。選擇*應用*。</block>
   <block id="475db696847724a8e496eba7476bc2ce" category="summary">在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX 的手動快照。快照是磁碟區內容的時間點版本。</block>
   <block id="512defc52682eb6b6d9585f8d5494603" category="paragraph">您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block> 建立快照。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
   <block id="8e835d5a49d273fb898a556146f8b52c" category="list-text">從 *Volumes （卷） * 選項卡中，選擇要保護的卷的三點菜單。</block>
@@ -1320,4 +1316,15 @@
   <block id="07b434b23f63ca6490df33b213599320" category="sidebar">管理NFS匯出原則</block>
   <block id="6026d035efbb2d0fc978d9ab5bb5b084" category="paragraph">在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用包括建立 CIFS 共用，決定授予存取權的使用者和群組，以及授予存取權的權限等級，以及刪除 CIFS 共用。</block>
   <block id="34e81b46b7f1e5e087ae28a3b95e81fb" category="list-text">決定要授予存取權的使用者或群組，以及授予他們的權限等級。</block>
+  <block id="3b3e8444b249018f7cabe035d36fb53b" category="list-text">從 * Volumes （磁碟區） * 標籤中，選取要使用排程快照保護的磁碟區的三點功能表。</block>
+  <block id="d67e779675002ae52bb96db205e592f8" category="list-text">在「 Snapshot 原則管理」頁面上、選取 * 建立新的快照原則 * 。</block>
+  <block id="8197cd59767b0d487d39d4530835d10e" category="list-text">在 * Snapshot 原則名稱 * 欄位中、輸入快照原則的名稱。</block>
+  <block id="443886f68921b4853b3d9661df7a7c0f" category="list-text">選用：在 * 說明 * 欄位中、輸入快照原則的說明。</block>
+  <block id="7881dae15f35ca3fa5220cbe11bdefe2" category="list-text">在 * 排程 * 下、選取何時建立快照。例如、每分鐘或每小時。</block>
+  <block id="ed8034815557020cf5cb39ef2e1c8cea" category="paragraph">您可以選取多個頻率。</block>
+  <block id="f2361db09e678cda3613419cc1de72f2" category="list-text">在 * 份數 * 下、輸入要保留的份數。</block>
+  <block id="c610ec69c40639be95a74d6a4551c7eb" category="paragraph">最大複本數為 1,023 份。</block>
+  <block id="b6576df8ae387ace84c72b1d00479bc0" category="list-text">選用：在 * 命名慣例 * 下、輸入原則的 * 字首 * 。</block>
+  <block id="78c10834148d83801a4f716235d19c09" category="list-text">* 保留標籤 * 會自動填入。</block>
+  <block id="8a2e9f9173bc33c79f9448e05bf8e7c0" category="paragraph">此標籤是指 SnapMirror 或複寫標籤、用於僅選取指定的快照、以便從來源複寫到目標檔案系統。</block>
 </blocks>
