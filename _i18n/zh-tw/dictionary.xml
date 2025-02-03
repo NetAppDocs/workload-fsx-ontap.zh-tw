@@ -196,7 +196,6 @@
   <block id="4820ffe2fe615fd37fb7932b296c86f1" category="inline-link-macro">建立連結的關聯</block>
   <block id="06c8b7e08cdd0ff26018bb7b51851a9f" category="paragraph">請完成下列步驟來複寫單一磁碟區或複寫檔案系統中的所有磁碟區。</block>
   <block id="4f6c910e41c00f71304d3d06714c1c38" category="open-title">複寫單一磁碟區</block>
-  <block id="e0498c311fd63d398b51f62c2bf97e3b" category="list-text">選取 * 資料保護動作 * 、然後 * 複寫磁碟區資料 * 。</block>
   <block id="b9a2f47b5bc4bd7fcc8d23d6721ec4c2" category="list-text">在「建立複寫」頁面的「複寫目標」下、提供下列項目：</block>
   <block id="837278414ab16e2a74dfc1b2102bcd54" category="list-text">* 適用於 ONTAP 檔案系統 * 的 FSX ：針對適用於 ONTAP 檔案系統的目標 FSX 、選取 ONTAP 檔案系統名稱的認證、區域和 FSX 。</block>
   <block id="c8ad1bd40ad1f2f7011877a43d0904aa" category="list-text">* 儲存 VM 名稱 * ：從下拉式功能表中選取儲存 VM 。</block>
@@ -238,7 +237,6 @@
   <block id="bc7303a544a54859ef646aaae48578a5" category="paragraph">有了 SVM 、當您存取適用於 ONTAP 的 FSX 中的資料時、您的用戶端和工作站會使用 SVM 的端點（ IP 位址）、掛載由 SVM 託管的 Volume 、 CIFS/SMB 共享區或 iSCSI LUN 。</block>
   <block id="0be7879371b03da9f3e439c5431f1db2" category="inline-link-macro">管理 ONTAP 儲存虛擬機器的 FSX</block>
   <block id="cbddd6713cb3317df938ea4a6fd2cd84" category="paragraph">確認每個檔案系統支援的儲存 VM 數量。如需每個檔案系統的 SVM 最大數量、請參閱 <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> AWS 文件中的。</block>
-  <block id="e65cbc1f8e84ec0a33192b999f9e9cc4" category="list-text">從檔案系統總覽中、選取 * 建立儲存 VM* 。</block>
   <block id="cdbc38b99c6a38c90c6623e1ac73a0fd" category="list-text">在「儲存 VM 」頁面的「儲存 VM 組態」下、提供下列項目：</block>
   <block id="c9f265881e56f4c52918525bdcb9205d" category="list-text">* 名稱 * ：輸入儲存 VM 的名稱。</block>
   <block id="42a49281a2c075c2004f1e73852b27e3" category="list-text">* 儲存 VM 認證 * ：提供此儲存 VM 使用者的密碼<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 、或使用檔案系統的<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 使用者認證。</block>
@@ -930,8 +928,6 @@
   <block id="7607cf6a75040d1b9bf8fde1cfaecf12" category="doc">在 BlueXP  工作負載工廠建立複寫關係</block>
   <block id="161fc7b1d67184a50e10e19fb2489263" category="paragraph">在 BlueXP  工作負載工廠中為適用於 ONTAP 檔案系統的 FSX 建立複寫關係，以避免發生無法預見的災難時發生資料遺失。</block>
   <block id="cf2d4a66ab67f86354f74f9c2cd68326" category="list-text">您用於複寫關係的兩個檔案系統必須有相關的連結。如果檔案系統沒有現有的連結，請參閱 <block ref="1bb172d13e94db502d24bfc1c5a4fc0a" category="inline-link-macro-rx"></block>。<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>在檔案系統中，在 * 帳戶名稱 * 下選擇 * 關聯連結 * 。連結在兩個檔案系統中建立關聯後、請返回此作業。</block>
-  <block id="d3c14843d08cf463d9ea9a6b94804262" category="list-text">在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要複製的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。</block>
-  <block id="089bd3378d1656ee1710bccf951f8421" category="list-text">從 Volumes （磁碟區）標籤中，選取要複寫的磁碟區的三點功能表。</block>
   <block id="215ff1ada74bcc801bd4be406a4760b9" category="paragraph">_Auto_ 是使用 ONTAP 使用者介面的工作負載原廠 FSX 建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>AWS FSX for NetApp ONTAP 文件中的。</block>
   <block id="1d1c040daca4e036fc6766de8bee1a0d" category="list-text">在 FSX for （適用於 ONTAP 的 FSX ）索引標籤中，選取含有磁碟區的檔案系統的三點功能表，然後選取 * 管理 * 。</block>
   <block id="26aa14a56cb65f177e49de0f78d28f50" category="summary">為 BlueXP  工作負載工廠中的 ONTAP Volume 建立 FSX 的快照原則。Snapshot 原則定義系統如何為磁碟區建立快照。</block>
@@ -944,7 +940,6 @@
   <block id="4da97157b6693eaf9968b187d7b8259c" category="paragraph">為適用於 ONTAP 檔案系統的 FSX 建立儲存 VM （ SVM ），以便在 BlueXP  工作負載工廠中，為您的工作負載，以虛擬方式存取儲存和資料服務。</block>
   <block id="54f16768a20bbfb09d736f2fa0a731aa" category="paragraph">儲存 VM 是隔離的檔案伺服器，您可以使用它來存取工作負載原廠儲存設備中每個工作負載的資料。每個 SVM 都有自己的管理認證和端點、用於管理和存取資料。</block>
   <block id="08e2fd9fd4dc9adfe3d5f817b3499842" category="paragraph">您可以從工作負載原廠主控台建立儲存 VM 。您也可以使用 Codebox 中的下列工具： REST API 、 CloudForformation 和 Terraform 。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>。</block>
-  <block id="76e3f0d82963df25a63cb0c98b73397d" category="list-text">在 FSX for （適用於 ONTAP 的 FSX ）標籤中，選取檔案系統的三點功能表以建立儲存 VM ，然後選取 * 管理 * 。</block>
   <block id="55a23b72fe4aee5e2f0024c790d7eaba" category="paragraph">從 BlueXP  工作負載工廠的快照建立適用於 ONTAP Volume 的全新 FSX ，以啟用時間點還原。</block>
   <block id="8d34a33f34659b0ea11833ac0b8fac52" category="list-text">在 *FSX for ONTAP * 標籤中，選取含有 Volume Snapshot 的檔案系統三點功能表，然後選取 * 管理 * 。</block>
   <block id="3ce528a1818baf0bbf2f6b362b1f7d58" category="list-text">在 Volumes （磁碟區）索引標籤中，選取含有您要建立磁碟區之快照的磁碟區的三點功能表。</block>
@@ -953,8 +948,6 @@
   <block id="70e17a61e26a90f517dba1b053b0c09e" category="paragraph">為 ONTAP 檔案系統設定 FSX 之後，您可以在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX 。</block>
   <block id="d5d682292e122fa36db263f49a714cc7" category="list-text">您必須在工作負載工廠中擁有適用於 ONTAP 檔案系統的 FSX 。</block>
   <block id="60911d8c5f41bf949378c3bec9fe03b7" category="list-text">若要設定對磁碟區的存取權、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
-  <block id="27403aa4066ffea03bd15fd0fd4e5e67" category="list-text">在 *FSX for ONTAP * 標籤中，選取您要在其中建立磁碟區的檔案系統三點功能表，然後選取 * 管理 * 。</block>
-  <block id="892eff425e1d1bcf86736ccfc7447322" category="list-text">從 * Overview （總覽） * 選項卡中，選擇 * Create Volume （創建卷） * 。</block>
   <block id="72ce63a6bef6ec13ef74a7eab0012469" category="summary">適用於 ONTAP 的 FSX 支援 BlueXP  工作負載工廠的快照，磁碟區備份和磁碟區複寫。</block>
   <block id="d041ab32e01d968ecc286a807158f8b3" category="doc">BlueXP  工作負載工廠的資料保護</block>
   <block id="96a5899d90dd9b81319f168f67bcb5ae" category="summary">若要在 BlueXP  工作負載工廠中刪除檔案系統，您必須先刪除與檔案系統相關的任何磁碟區，儲存 VM 或複寫關係。</block>
@@ -1327,4 +1320,131 @@
   <block id="b6576df8ae387ace84c72b1d00479bc0" category="list-text">選用：在 * 命名慣例 * 下、輸入原則的 * 字首 * 。</block>
   <block id="78c10834148d83801a4f716235d19c09" category="list-text">* 保留標籤 * 會自動填入。</block>
   <block id="8a2e9f9173bc33c79f9448e05bf8e7c0" category="paragraph">此標籤是指 SnapMirror 或複寫標籤、用於僅選取指定的快照、以便從來源複寫到目標檔案系統。</block>
+  <block id="ed2a329d6f9bf2181ff23014cff23ba5" category="doc">BlueXP  工作負載原廠主控台的 CloudShell</block>
+  <block id="5eaddd0f57f7eaddd8610d939876ec8d" category="paragraph">CloudShell 是 BlueXP  儲存工作負載原廠提供的內嵌 CLI 功能。您可以使用 CloudShell 從工作負載原廠主控台內的 Shell 環境中，從多個工作階段建立，共用及執行 ONTAP 或 AWS CLI 命令。</block>
+  <block id="09a780ee2763ed81ce7dcd3480b57fe4" category="inline-link-macro">深入瞭解 BlueXP  工作負載工廠的 CloudShell</block>
+  <block id="feff74472562237513e0ca0c55cd4e38" category="paragraph"><block ref="feff74472562237513e0ca0c55cd4e38" category="inline-link-macro-rx"></block></block>
+  <block id="9be163b55bb1cb61b0ccee4ea40ae6ee" category="section-title">庫存資料下載</block>
+  <block id="e61fb273c97526db97c128ce9bfc04a9" category="paragraph">您現在可以從 BlueXP  工作負載工廠的儲存設備，將適用於 ONTAP 的 FSX 庫存資料下載到 Microsoft Excel 或 CSV 檔案中。</block>
+  <block id="1d242bf1e7b71fd8602570478aa1bdc8" category="inline-image-macro">BlueXP  工作負載工廠儲存設備的螢幕擷取畫面，顯示新的下載按鈕，可下載適用於 ONTAP 檔案系統庫存資料的 FSX 。</block>
+  <block id="b8040f0b8b5eff64bb15c9fc0fbc96d6" category="paragraph"><block ref="b8040f0b8b5eff64bb15c9fc0fbc96d6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="eae91301e6256990d5311778eafea0e5" category="section-title">適用於 ONTAP 檔案系統的 FSX 其他功能表選項</block>
+  <block id="0ad83f6b2d6e8bf103be3683c0c87ef9" category="paragraph">我們已從「儲存」的「適用於 ONTAP 的 FSX 」索引標籤，為適用於 ONTAP 檔案系統的 FSX 簡化下列作業。</block>
+  <block id="8221d5fcbb1b8ef8a3fa535553679b44" category="list-text">複寫 Volume 資料</block>
+  <block id="bb8210b8fea9fd35bf14070e9b9f7cf9" category="inline-image-macro">Storage 中的 FSX for ONTAP 標籤螢幕快照，顯示新功能表選項可建立儲存 VM ，建立 Volume 及複寫 Volume 資料。</block>
+  <block id="2a10a5b76871c42edb3807a0dec574ae" category="paragraph"><block ref="2a10a5b76871c42edb3807a0dec574ae" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2f72c2c06d295d3f5420254934ac77b1" category="section-title">Terraform 支援建立 Volume</block>
+  <block id="7f28d622584eb6b05ee5ce1609e2de38" category="paragraph">您現在可以使用 Codebox 中的 Terraform 來建立 Volume 。</block>
+  <block id="d3156376048c94102c97709d5ff05e75" category="paragraph"><block ref="d3156376048c94102c97709d5ff05e75" category="inline-link-macro-rx"></block></block>
+  <block id="eb139dd9cb815e502d04047858e7c930" category="section-title">使用不可變檔案功能鎖定檔案</block>
+  <block id="849a110e76510a6394e4b27714d0bc20" category="paragraph">當您為 ONTAP 檔案系統建立 FSX 磁碟區時，現在可以使用不可變檔案功能鎖定檔案。檔案鎖定可協助您和其他人在指定期間內防止意外或刻意刪除檔案。</block>
+  <block id="ea3d4df6f8aff21b2dfe549c5ecf9775" category="section-title">Tracker 可用於監控及追蹤作業</block>
+  <block id="c016252819aa3f6ede2b315b76b5c5b2" category="paragraph">Tracker ， Storage 提供全新的監控功能。您可以使用 Tracker 來監控和追蹤認證，儲存和連結作業的進度和狀態，檢閱作業工作和子任務的詳細資料，診斷任何問題或失敗，編輯失敗作業的參數，以及重試失敗的作業。</block>
+  <block id="7512718e82771ab0f98e51652a2e97c6" category="inline-link-macro">瞭解如何使用 Tracker 監控及追蹤作業</block>
+  <block id="30babb51ab17a107228fe65a4e65418b" category="paragraph"><block ref="30babb51ab17a107228fe65a4e65418b" category="inline-link-macro-rx"></block></block>
+  <block id="c1c23b72df9b53434f3c5ef6963cd2c1" category="section-title">支援第二代 Amazon FSX for NetApp ONTAP 檔案系統</block>
+  <block id="327da4942931ea47a06f556d15726878" category="paragraph">您現在可以在 BlueXP  工作負載工廠中，將 Amazon FSX 用於 NetApp ONTAP 第二代檔案系統。適用於 ONTAP 第二代單一 AZ 檔案系統的 FSX 搭載多達 12 個 HA 配對，可提供高達 72 Gbps 的處理量容量和 2 ， 400,000 個 SSD IOPS 。適用於 ONTAP 第二代 Multi-AZ 檔案系統的 FSX 採用單一 HA 配對，提供 6 Gbps 的處理量容量和 20 ， 000 SSD IOPS 。</block>
+  <block id="a22d0116b85624117006e75d98d659db" category="inline-link-macro">新增高可用度配對</block>
+  <block id="8a34eb45ca4cf03ce0d5e71fbfafb73a" category="list-text"><block ref="8a34eb45ca4cf03ce0d5e71fbfafb73a" category="inline-link-macro-rx"></block></block>
+  <block id="eeb5242f698ac9fda34591a326f4c0a3" category="inline-link-macro">Amazon FSX for NetApp ONTAP 的配額與限制</block>
+  <block id="94f917accd36ed25f8a73175e8d4cdfb" category="list-text"><block ref="94f917accd36ed25f8a73175e8d4cdfb" category="inline-link-macro-rx"></block></block>
+  <block id="872fb30847d0e2ca8bac3e52054013c7" category="summary">將高可用度配對新增至 BlueXP  工作負載工廠的檔案系統，以橫向擴充檔案系統。</block>
+  <block id="310011ba5387c43c841355394cd8cb9a" category="doc">將 HA 配對新增至 BlueXP  工作負載工廠中的檔案系統</block>
+  <block id="304724e8759230c609bf9c333dfd2870" category="paragraph">在 BlueXP  工作負載工廠中新增高可用度（ HA ）配對，以橫向擴充適用於 ONTAP 第二代單一 AZ 檔案系統的 FSX ，以提升效能和容量。這項擴充可讓您比第一代檔案系統更具效能擴充性和靈活度。</block>
+  <block id="a9a9a7c9ee5a38cb1e35ca4b8cce7276" category="paragraph">新的 HA 配對會使用相同的 SKU 和每個 HA 配對相同的容量來新增。</block>
+  <block id="c34a6e94bb77f8d46f8d1f9ca5d1c2b9" category="paragraph">下列項目不支援新增 HA 配對：</block>
+  <block id="78d560615a8adc2f32fa3ecd80e33fd1" category="list-text">適用於 ONTAP 檔案系統的多 AZ HA 部署或第一代 FSX</block>
+  <block id="d1360a44b7e5113c71c2bccc4ade5ce8" category="list-text">適用於具有 5 個以上儲存 VM 的 ONTAP 檔案系統的 FSX</block>
+  <block id="943393d8598620d656ed3221b72683cf" category="list-text">適用於具有 iSCSI LUN 的 ONTAP 檔案系統的 FSX</block>
+  <block id="7d37b0d4d8c2c037db887ba2ef4befd8" category="list-text">具有最大或接近最大 SSD 容量或已達到 IO 分配限制的組態</block>
+  <block id="d87c9129ec2537bcf3c1a19ef369663c" category="paragraph">請考量以下有關新增 HA 配對的資訊：</block>
+  <block id="bee7f2516cfc11bd1d783c9a0abddcfc" category="list-text">HA 配對移除：將 HA 配對新增至檔案系統後，便無法移除 HA 配對。</block>
+  <block id="3bb5813303893f4fbd1a3c16e489c6b2" category="list-text">作業時間與限制：新增 HA 配對可能需要約 30 分鐘。請考慮在維護期間或低活動期間新增 HA 配對。此外，新增 HA 配對可限制其他作業，例如新增更多 HA 配對，配置 IOPS ，增加 SSD 容量，以及更新處理量容量。</block>
+  <block id="ea59a490db5f0dbf4a08a12fc8ad506b" category="list-text">IO 分配：自動 IO 分配取決於總儲存容量。使用者設定的 IO 分配會乘以新增的 HA 配對數量。</block>
+  <block id="7e1da5f0b87a5f6fa454d36b488af717" category="list-text">NVMe 快取：新增 HA 配對時，預設會啟用 NVMe 快取。我們建議您針對繁重的工作負載關閉 NVMe 快取。</block>
+  <block id="ad8dcf096cb2afb4a235df61b29f9698" category="list-text">HA 配對數：建議您將檔案系統擴充至偶數個 HA 配對，以便在 HA 配對之間平衡分配資料。</block>
+  <block id="a918312e36a786ad734780ce0938389b" category="list-text">LUN 建立：只有在新增 HA 配對時，檔案系統上不存在 LUN ，才能在第二代單一 AZ 檔案系統上建立 LUN 。只有具有 6 個或更少 HA 配對的檔案系統才支援建立 LUN 。</block>
+  <block id="df909e03d10a14950b92a8e5633d9123" category="paragraph">將 HA 配對新增至檔案系統之前，請先執行下列步驟：</block>
+  <block id="4173fb9932d53246098b25db51af2252" category="list-text">移除所有 iSCSI LUN 以橫向擴充檔案系統。</block>
+  <block id="fefe421f31fcb913ee3602de627b2aad" category="list-text">確定檔案系統不超過 5 個儲存 VM 。</block>
+  <block id="f4f11e4d478a467a240d18f498921150" category="list-text">在 *FSX for ONTAP * 標籤的 * 資訊 * 下，選取 * HA 配對 * 旁的鉛筆圖示。</block>
+  <block id="9d8f80ba2bc026694d1d454d46507e1a" category="list-text">在 * 新增 HA 配對 * 對話方塊中，選取要新增至檔案系統的 HA 配對數。</block>
+  <block id="03d260b6edf74eab2f53976254758a17" category="list-text">選取 * 新增 * 以確認新增 HA 配對。</block>
+  <block id="379ea21065ee4862014742fa5a258e93" category="paragraph">工作負載工廠會開始將 HA 配對新增至檔案系統的程序。除非新增 HA 配對，否則檔案系統無法用於其他作業，例如建立磁碟區。您可以在 * Tracker * 標籤中監控作業進度。</block>
+  <block id="d290c400d30f537f28b8084fbc091982" category="list-text">在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要複製的卷的文件系統的三點菜單，然後選擇 *Replicate Volume data* 。</block>
+  <block id="9c02b82df4be281c41318d376be29cf9" category="list-text">在 FSX for （適用於 ONTAP 的 FSX ）標籤中，選取檔案系統的三點功能表以建立儲存 VM ，然後選取 * 建立儲存 VM* 。</block>
+  <block id="70975b8c8f6b12169d193367442b573d" category="paragraph">您可以使用 Codebox 中提供的下列工具來建立 Volume ： REST API ， CloudForformation 和 Terraform 。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>。</block>
+  <block id="7bedae719019136090a7c4c373312767" category="list-text">在 *FSX for ONTAP * 標籤中，選取您要在其中建立 Volume 的檔案系統三點功能表，然後選取 * 建立 Volume * 。</block>
+  <block id="5cc952f284466929d6b64c6a769f954d" category="inline-link-macro">SnapLock 的運作方式</block>
+  <block id="4f607bc8b085931c8b1fac489fd24290" category="list-text">* 可匯入的檔案 * ：此功能（也稱為 SnapLock ）預設為停用。啟用不可變的檔案可防止資料在指定的時間內遭到刪除或覆寫。只有在磁碟區建立期間，才能啟用此功能。一旦啟用，此功能就無法停用。這是適用於 ONTAP 的 FSX 的優質功能，需要額外付費。如需詳細資訊，請參閱 <block ref="e334cd66539db07681f218968c17aeb4" category="inline-link-macro-rx"></block>Amazon FSX for NetApp ONTAP 文件中的。</block>
+  <block id="f348514dc345ce9c1d9ad82ae7129779" category="paragraph">啟用「不可變檔案」功能會將此磁碟區中的檔案永久認可為不可變的 WORM （一次寫入多次讀取）狀態。</block>
+  <block id="d1004c5cd3614165a3675cc9bcefd0ff" category="list-text">保留模式</block>
+  <block id="bf037d2be2988cb003e5473abb7458ad" category="list-text">您可以選擇兩種保留模式： _ 企業 _ 或 _ 法規遵循 _ 。</block>
+  <block id="2c7186fdcb22214f6a80f0c4bf830b01" category="list-text">在 _Enterprise_ 模式中，不可變的檔案或 SnapLock ，管理員可以在檔案保留期間刪除檔案。</block>
+  <block id="056049eeec9d03d44ee8b82656eddd56" category="list-text">在 _ Compliance _ 模式中， WORM 檔案無法在其保留期限到期之前刪除。同樣地，在磁碟區內所有檔案的保留期間到期之前，無法刪除不可變的磁碟區。</block>
+  <block id="2dee9b3212ded01b0c388d81a6f5aec3" category="list-text">保留期間</block>
+  <block id="103d1ff0c19e1c2f05d0e9237137a1dd" category="list-text">保留期間有兩種設定： _ 保留原則 _ 和 _ 保留期間 _ 。_ 保留原則 _ 定義在不可變 WORM 狀態下保留檔案的時間長度。您可以指定自己的保留原則，或使用 30 年的預設保留原則（未指定）。最小和最大保留期間 _ 定義鎖定檔案所允許的時間範圍。</block>
+  <block id="10de4bc81f754b19b0d27246a0589c05" category="list-text">附註</block>
+  <block id="1e6fe3169d6df99dc6e4d89c3f0ca701" category="list-text">即使在保留期限到期之後，您仍無法修改 WORM 檔案。您只能刪除或設定新的保留期間，才能再次開啟 WORM 保護。</block>
+  <block id="00c161f0779702fcc736833a90e1c117" category="list-text">AUTOCOMMIT</block>
+  <block id="0710e9c5903cc398ef1a22a38cbb4666" category="list-text">您可以選擇啟用自動認可功能。如果檔案在自動認可期間內未變更，則自動認可功能會將檔案提交至 SnapLock 磁碟區的 WORM 狀態。自動提交功能預設為停用。您想要自動提交的檔案必須位於SnapLock 一個流通於一個不流通的資料冊上。</block>
+  <block id="f84002cfa8aafdd6963aef9819f03cbe" category="list-text">Volume 附加模式</block>
+  <block id="73085bf5d4b4c2626026794741768c09" category="inline-link-macro">深入瞭解 Volume 附加模式</block>
+  <block id="f70318a7f623a49e77262fc2b382b062" category="list-text">您無法修改受 WORM 保護檔案中的現有資料。不過，不可變的檔案可讓您使用 WORM 可擴充檔案來維護現有資料的保護。例如，您可以產生記錄檔，或是保留音訊或視訊串流資料，同時逐步將資料寫入記錄檔。<block ref="d363aab3c17dd7b08ef55d9ecb5c0afa" category="inline-link-macro-rx"></block>Amazon FSX for NetApp ONTAP 文件。</block>
+  <block id="dfb689231a842f04569410625d60363d" category="list-title">不可變檔案的步驟</block>
+  <block id="44ba7526f1340d677cb6220be4b1b823" category="list-text">選取以啟用 * 由 SnapLock * 提供的可匯入檔案。</block>
+  <block id="4f7680fa283bf52aaa8ee2edfd564db8" category="list-text">按一下方塊以同意並繼續。</block>
+  <block id="909d8cdc7c100d1834d4de10094f43ca" category="list-text">按一下「*啟用*」。</block>
+  <block id="088bb2d18ad8fbec398c29306e127221" category="list-text">* 保留模式 * ：選擇 * 企業 * 或 * 法規遵循 * 模式。</block>
+  <block id="77b42ba4805daabc49114b9ab89a4177" category="list-text">* 保留期間 * ：</block>
+  <block id="f35564204209083a652f147df603888c" category="list-text">選取保留原則：</block>
+  <block id="504152708cd9de44bb9cb86c2f924f58" category="list-text">* 未指定 * ：將保留政策設為 30 年。</block>
+  <block id="d52522aeac6c98a12810dc096d055647" category="list-text">* 指定期間 * ：輸入設定您自己的保留原則所需的秒數，分鐘數，小時數，天，月數或年數。</block>
+  <block id="6c174e94dd8ddcd5d81962e78326f53a" category="list-text">選擇最小和最大保留期間：</block>
+  <block id="16358ae23c4e09a6d211bde0bb1d5944" category="list-text">* 最小 * ：輸入秒數，分鐘數，小時數，天數，月數或年數，以設定最小保留期。</block>
+  <block id="0e5cb121a1c7b4c59daf6285123d8e75" category="list-text">* 最大 * ：輸入秒數，分鐘數，小時數，天數，月數或年數，以設定最大保留期。</block>
+  <block id="9ddc08dbc82d9bea34f1dc4c5b59e6e7" category="list-text">*AUTOCOMMIT* ：禁用或啓用自動提交。如果啟用自動提交，請設定自動提交期間。</block>
+  <block id="f8688d8b01dc38763ec2b1f2b373aacc" category="list-text">* Volume 附加模式 * ：停用或啟用。可讓您將新內容新增至 WORM 檔案。</block>
+  <block id="4d039a03e23e55926708d85c8977d521" category="list-text">不可變更的檔案：包含由 SnapLock 提供的不可變更檔案的磁碟區在保留期間到期之前無法刪除。</block>
+  <block id="d39be15ae050d8e613043b0ac15e302b" category="section-title">新增 HA 配對限制</block>
+  <block id="5efa36685932e62e6fc20327cd980750" category="list-text">此作業可能需要約 30 分鐘的時間才能完成。</block>
+  <block id="a51a5c7e9ccc4724703a6ad204303926" category="list-text">新增 HA 配對會限制下列作業：新增更多 HA 配對，配置 IOPS ，增加 SSD 容量，以及更新處理量容量。</block>
+  <block id="0499cc2d877c04e04bec267579a95697" category="summary">追蹤 ONTAP 的 FSX ，認證和連結作業，並使用 BlueXP  儲存工作負載工廠的 Tracker 來監控工作進度。</block>
+  <block id="dc58214807820bc923ac22555f97fd7a" category="doc">使用 BlueXP  工作負載工廠中的 Tracker 監控儲存作業</block>
+  <block id="a1351d61b85cd866d5c412c6e3220b98" category="paragraph">使用 BlueXP  工作負載工廠的 Tracker ，監控和追蹤 ONTAP 的 FSX ，認證和連結作業的執行，並監控工作進度。</block>
+  <block id="d57581d19f1047da33c24e46abd88cd4" category="paragraph">工作負載工廠提供追蹤器這項監控功能，可讓您監控和追蹤 ONTAP 的 FSX ，認證和連結作業的進度和狀態，檢閱作業工作和子任務的詳細資料，診斷任何問題或失敗，編輯失敗作業的參數，以及重試失敗的作業。您可以依類型和狀態篩選工作，使用搜尋功能尋找工作，然後下載工作表。</block>
+  <block id="5cc85b66adf3d2a6e3eb745a827cf4e0" category="paragraph">Tracker 最多可支援三種監控層級，視作業而定。每項工作（例如檔案系統部署）都會顯示工作說明，狀態，開始時間，工作持續時間，使用者，區域， Proxy 資源，工作 ID 及所有相關的子工作。</block>
+  <block id="5cdbeb1c4cc65e8f551e161828701113" category="list-text">以範例追蹤工作層級</block>
+  <block id="6db8f73f40a9c238922a375a008fda96" category="list-text">層級 1 （父工作）：追蹤檔案系統部署。</block>
+  <block id="4848a390cc9141e051b33cd55dc40d06" category="list-text">層級 2 （子工作）：追蹤與檔案系統部署相關的子工作。</block>
+  <block id="df942ff3756f5cbd24f42b521acc64f8" category="list-text">層級 3 （工作）：列出在每個資源上所採取的動作順序。</block>
+  <block id="88ebc1f479e6de47fd711c4be81c4d26" category="list-text">作業狀態</block>
+  <block id="afcc9733e2e2e0ce70f1ecee29c8f008" category="list-text">Tracker 中的作業狀態如下： _ 進行中 _ ， _ 成功 _ 及 _ 失敗 _ 。</block>
+  <block id="de32977622108a1960ab0fcf45adaf80" category="list-text">操作頻率</block>
+  <block id="a9853b6069302c4152781f48222c3541" category="list-text">作業頻率是根據工作類型和工作排程而定。</block>
+  <block id="01b0a4fcc33bdafd6e65537f24f463de" category="list-text">事件保留</block>
+  <block id="b3c382e94f4b4abcc049ce95e85dc998" category="list-text">事件會保留在使用者介面上 30 天。</block>
+  <block id="cfd98e00a6e308c04ab9f76a854b6989" category="section-title">追蹤及監控作業</block>
+  <block id="c82c26735f08b789c8bf574ab4962fcc" category="paragraph">使用 Tracker 追蹤和監控 BlueXP  中的作業。</block>
+  <block id="48acd3e9d69adfbf7f5941961e95f6de" category="list-text">從儲存設備庫存中，選取帳戶設定功能表，然後選取 * Tracker * 。</block>
+  <block id="1c575ed3e5dce0a1d77706830609b278" category="inline-image-macro">帳戶設定功能表的螢幕擷取畫面，並反白顯示 Tracker 選項。</block>
+  <block id="7478b5abe2869b21138fe88cbd4d66da" category="paragraph"><block ref="7478b5abe2869b21138fe88cbd4d66da" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e443a93c9da9763cd15656814a7e0c2e" category="list-text">在 Tracker 標籤中，使用篩選器或搜尋來縮小工作結果範圍。您也可以下載工作報告。</block>
+  <block id="aa2a2cd452f8a71b2f2dcdae68114732" category="section-title">檢視 API 要求</block>
+  <block id="68538d555ae12c680ea428aaa850d90f" category="paragraph">在 Codebox 中檢視 Tracker 工作的 API 要求。</block>
+  <block id="968877018213bf42962084001c210472" category="list-text">在 Tracker 中，選取工作。</block>
+  <block id="2e6179b36329b65c38a5ca113ba0c81c" category="list-text">選取三點功能表，然後選取 * 檢視 API 要求 * 。</block>
+  <block id="1448fba076a066622a9f93a25ab170a2" category="section-title">重試失敗的作業</block>
+  <block id="89f1070b2ef1ba678a8cb4823fa74cb2" category="paragraph">在 Tracker 中重試失敗的作業。您也可以複製失敗作業的錯誤訊息。</block>
+  <block id="2d7556f00012ad460e93441b51cce6ea" category="admonition">失敗的作業只允許重試 x 次。</block>
+  <block id="b866b632b7f32ded2a0a0907100641bf" category="list-text">在 Tracker 中，選取失敗的作業。</block>
+  <block id="5d0eaa0ad00baabb57cbc22969070918" category="list-text">選擇三點選單，然後選擇 * 重試 * 。</block>
+  <block id="121145d60db2324903b129ae74d6c0a9" category="paragraph">作業將重新啟動。</block>
+  <block id="bde5076ae2a993de9042a7e1dd4dc445" category="section-title">編輯並重試失敗的作業</block>
+  <block id="2ae5a8ae85adca2aebf16aa81130c9c5" category="paragraph">編輯失敗作業的參數，然後在 Tracker 外重試作業。</block>
+  <block id="524ab960a72817bd7f9f107dc357d1bd" category="list-text">選取三點選單，然後選取 * 編輯並重試 * 。</block>
+  <block id="a071e4310b0dbc18ec326c217f47692f" category="paragraph">系統會將您重新導向至作業頁面，您可以在其中編輯參數，然後重試作業。</block>
+  <block id="49814788ce382c87a117a40e54ae858b" category="paragraph">作業將重新啟動。前往 Tracker 以檢視作業狀態。</block>
+  <block id="986aee2caba870111e5ce3c5571c82de" category="section-title">2025 年 02 月 2 日</block>
+  <block id="2e0c4c64c2671f5575eb184e577dcdae" category="sidebar">使用 Tracker 監控作業</block>
 </blocks>

@@ -36,9 +36,7 @@ summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免�
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要複製的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。
-. 從 Volumes （磁碟區）標籤中，選取要複寫的磁碟區的三點功能表。
-. 選取 * 資料保護動作 * 、然後 * 複寫磁碟區資料 * 。
+. 在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要複製的卷的文件系統的三點菜單，然後選擇 *Replicate Volume data* 。
 . 在「建立複寫」頁面的「複寫目標」下、提供下列項目：
 +
 .. * 適用於 ONTAP 檔案系統 * 的 FSX ：針對適用於 ONTAP 檔案系統的目標 FSX 、選取 ONTAP 檔案系統名稱的認證、區域和 FSX 。

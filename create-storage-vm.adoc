@@ -33,8 +33,7 @@ NOTE: 從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 FSX for （適用於 ONTAP 的 FSX ）標籤中，選取檔案系統的三點功能表以建立儲存 VM ，然後選取 * 管理 * 。
-. 從檔案系統總覽中、選取 * 建立儲存 VM* 。
+. 在 FSX for （適用於 ONTAP 的 FSX ）標籤中，選取檔案系統的三點功能表以建立儲存 VM ，然後選取 * 建立儲存 VM* 。
 . 在「儲存 VM 」頁面的「儲存 VM 組態」下、提供下列項目：
 +
 .. * 名稱 * ：輸入儲存 VM 的名稱。

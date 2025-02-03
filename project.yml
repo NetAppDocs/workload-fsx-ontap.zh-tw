@@ -82,6 +82,8 @@ sidebar:
         url: "/use-onprem-data.html"
   - title: 管理與監控
     entries:
+    - title: 使用 Tracker 監控作業
+      url: "/monitor-operations.html"
     - title: Volume管理
       entries:
       - title: 編輯 Volume 自動擴充

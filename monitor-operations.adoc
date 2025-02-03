@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: monitor-operations.html 
+keywords: monitor databases, monitor jobs, track database jobs 
+summary: 追蹤 ONTAP 的 FSX ，認證和連結作業，並使用 BlueXP  儲存工作負載工廠的 Tracker 來監控工作進度。 
+---
+= 使用 BlueXP  工作負載工廠中的 Tracker 監控儲存作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用 BlueXP  工作負載工廠的 Tracker ，監控和追蹤 ONTAP 的 FSX ，認證和連結作業的執行，並監控工作進度。
+
+.關於這項工作
+工作負載工廠提供追蹤器這項監控功能，可讓您監控和追蹤 ONTAP 的 FSX ，認證和連結作業的進度和狀態，檢閱作業工作和子任務的詳細資料，診斷任何問題或失敗，編輯失敗作業的參數，以及重試失敗的作業。您可以依類型和狀態篩選工作，使用搜尋功能尋找工作，然後下載工作表。
+
+Tracker 最多可支援三種監控層級，視作業而定。每項工作（例如檔案系統部署）都會顯示工作說明，狀態，開始時間，工作持續時間，使用者，區域， Proxy 資源，工作 ID 及所有相關的子工作。
+
+以範例追蹤工作層級::
++
+--
+* 層級 1 （父工作）：追蹤檔案系統部署。
+* 層級 2 （子工作）：追蹤與檔案系統部署相關的子工作。
+* 層級 3 （工作）：列出在每個資源上所採取的動作順序。
+
+
+--
+作業狀態:: Tracker 中的作業狀態如下： _ 進行中 _ ， _ 成功 _ 及 _ 失敗 _ 。
++
+--
+操作頻率:: 作業頻率是根據工作類型和工作排程而定。
+
+
+--
+事件保留:: 事件會保留在使用者介面上 30 天。
+
+
+
+
+== 追蹤及監控作業
+
+使用 Tracker 追蹤和監控 BlueXP  中的作業。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在 Storage （儲存設備）中、選取 * 前往 Storage inventory* （儲存設備庫存）。
+. 從儲存設備庫存中，選取帳戶設定功能表，然後選取 * Tracker * 。
++
+image:screenshot-menu-tracker-option.png["帳戶設定功能表的螢幕擷取畫面，並反白顯示 Tracker 選項。"]
+
+. 在 Tracker 標籤中，使用篩選器或搜尋來縮小工作結果範圍。您也可以下載工作報告。
+
+
+
+
+== 檢視 API 要求
+
+在 Codebox 中檢視 Tracker 工作的 API 要求。
+
+.步驟
+. 在 Tracker 中，選取工作。
+. 選取三點功能表，然後選取 * 檢視 API 要求 * 。
+
+
+
+
+== 重試失敗的作業
+
+在 Tracker 中重試失敗的作業。您也可以複製失敗作業的錯誤訊息。
+
+
+NOTE: 失敗的作業只允許重試 x 次。
+
+.步驟
+. 在 Tracker 中，選取失敗的作業。
+. 選擇三點選單，然後選擇 * 重試 * 。
+
+
+.結果
+作業將重新啟動。
+
+
+
+== 編輯並重試失敗的作業
+
+編輯失敗作業的參數，然後在 Tracker 外重試作業。
+
+.步驟
+. 在 Tracker 中，選取失敗的作業。
+. 選取三點選單，然後選取 * 編輯並重試 * 。
++
+系統會將您重新導向至作業頁面，您可以在其中編輯參數，然後重試作業。
+
+
+
+.結果
+作業將重新啟動。前往 Tracker 以檢視作業狀態。
