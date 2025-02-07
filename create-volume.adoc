@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-volume.html 
 keywords: create volume, FSx for ONTAP volume 
-summary: 在 BlueXP  工作負載工廠中設定適用於 ONTAP 檔案系統的 FSX 之後，您可以為 ONTAP Volume 建立 FSX 。 
+summary: 為 ONTAP 檔案系統設定 FSX 之後，請在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX 。 
 ---
 = 在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 在 BlueXP  工作負載工廠中設定適用於 ONTAP 檔案系統的
 
 
 [role="lead"]
-為 ONTAP 檔案系統設定 FSX 之後，您可以在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX 。
+為 ONTAP 檔案系統設定 FSX 之後，請在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX 。
 
 .關於這項工作
 適用於 ONTAP Volume 的 FSX 是用於分組資料、判斷資料儲存方式、以及判斷資料存取類型的虛擬資源。Volume 不會消耗檔案系統儲存容量。儲存在磁碟區中的資料主要會消耗 SSD 儲存設備。視磁碟區的分層原則而定、資料可能也會佔用容量集區儲存空間。您可以在建立磁碟區時設定磁碟區的大小、稍後也可以變更其大小。

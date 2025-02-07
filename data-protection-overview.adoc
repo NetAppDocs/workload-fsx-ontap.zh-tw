@@ -4,14 +4,14 @@ permalink: data-protection-overview.html
 keywords: overview 
 summary: 適用於 ONTAP 的 FSX 支援 BlueXP  工作負載工廠的快照，磁碟區備份和磁碟區複寫。 
 ---
-= BlueXP  工作負載工廠的資料保護
+= BlueXP  工作負載工廠中的資料保護類型
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-適用於 ONTAP 的 FSX 支援快照、可建立磁碟區的唯讀時間點映像、可建立離線備份、並可長時間保留磁碟區、以及可在不同區域建立磁碟區的非同步鏡像複寫磁碟區。
+適用於 ONTAP 的 FSX 支援快照，備份和複寫功能，以保護資料。我們建議您使用資料保護類型的組合，為不可避免的資料做好準備，並保護資料安全。
 
 
 

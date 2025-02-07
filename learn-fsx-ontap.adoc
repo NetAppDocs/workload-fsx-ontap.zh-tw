@@ -27,14 +27,14 @@ FSX for ONTAP VMware提供NetApp客戶目前內部部署所使用的相同功能
 * * 高可用度 * ：為 ONTAP 檔案系統的每個 FSX 提供高可用度、支援單一和多重可用度區域部署。
 * * 自動快照 * ：利用自動化、有效率的快照來保護資料、快照近乎即時、空間效率極高的時間點檔案系統或磁碟區唯讀複本。
 * * Volume 複寫 * ：透過 Amazon Web Services 的跨區域複寫功能、提供災難恢復功能。
-* * 高效備份 * ：以另一個區域的資料複本、提供更高的保護。如此可在發生緊急情況時提供額外的保護層級。
+* * 高效備份 * ：在發生緊急情況時，在另一個區域中使用資料複本，增加額外的保護層。
 * * 快速複製 * ：以快速複製加速應用程式開發。
 * * 多重傳輸協定支援 * ：支援網路檔案系統（ NFS ）、伺服器訊息區塊（ SMB ）和網際網路小型電腦系統介面（ iSCSI ）通訊協定。
 * * 高處理量 * ：提供高處理量效能、以確保在 ONTAP 檔案系統的 FSX 上執行的工作負載、能維持低延遲。
-* * 記憶體內快取和 NVMe 快取 * ：整合獨特的記憶體內快取和 NVMe 快取、進一步提升常用資料的效能。
+* * 記憶體內快取和 NVMe 快取 * ：包含獨特的記憶體內快取和 NVMe 快取，可提升常用資料的效能。
 * * 數十萬 IOPS * ： SSD 磁碟可提供數十萬個 IOPS 、確保您的儲存設備和工作負載能及時獲得成果。
 * * 精簡配置 * ：可預先配置容量、節省成本、直到需要更多容量為止。
-* * 重複資料刪除與壓縮 * ：消除重複的資料區塊、壓縮資料區塊、以減少 ONTAP 檔案系統的 FSX 所需的實體儲存容量、進而節省成本。
+* * 重複資料刪除與壓縮 * ：移除重複資料並壓縮資料，以減少 ONTAP 檔案系統的 FSX 所需的實體儲存容量，進而節省成本。
 * * 資料分層 * ：將較不常存取的資料從主要高效能 SSD 儲存層移至次要容量集區儲存層、藉此降低儲存成本。
 
 
@@ -64,7 +64,7 @@ FSX for ONTAP VMware提供NetApp客戶目前內部部署所使用的相同功能
 
 == 成本
 
-您的 FSX for ONTAP 帳戶由 AWS 維護，而非由工作負載工廠維護。請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Amazon FSX for NetApp ONTAP 的定價"^]。
+AWS 維護您的 FSX for ONTAP 帳戶，而非工作負載工廠。請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Amazon FSX for NetApp ONTAP 的定價"^]。
 
 
 
