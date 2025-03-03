@@ -19,7 +19,7 @@ summary: 啟用 Volume 自動擴充功能，讓 BlueXP  工作負載在出廠�
 NOTE: iSCSI Volume 不支援 Volume 自動擴充。
 
 .開始之前
-若要啟用 Volume 自動擴充、您必須 link:manage-links.html["建立連結的關聯"]：如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。
+若要啟用 Volume 自動擴充、您必須 link:manage-links.html["建立連結的關聯"]：如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。

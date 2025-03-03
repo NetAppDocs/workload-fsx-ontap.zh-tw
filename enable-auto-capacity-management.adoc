@@ -14,12 +14,16 @@ summary: 啟用此功能可讓工作負載原廠自動將遞增儲存設備新�
 啟用此功能可讓 BlueXP  工作負載在出廠時自動將遞增儲存設備新增至適用於 ONTAP 檔案系統的 FSX ，以因應容量需求隨時間變化。
 
 .關於這項工作
+每 30 分鐘掃描一次 ONTAP 檔案系統的 FSX ，以判斷是否需要新增遞增儲存設備，以及檢查可用的 Volume inode ，或是磁碟區中的檔案和資料夾數目上限，以便根據設定的自動容量管理臨界值來增加其數量。
+
 只有一個帳戶可以管理此功能。
 
 所有適用於 ONTAP 檔案系統的 FSX 的 SSD 儲存容量上限為 524,288 GiB 。若要要求增加配額、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配額"^] AWS FSX for NetApp ONTAP 文件中的。
 
 .開始之前
 您必須在工作負載工廠擁有 _ 自動化 _ 權限的認證，才能完成此工作。
+
+要確保卷 inode 隨着存儲容量的增加而增加link:manage-links.html["建立連結的關聯"]，您必須。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
@@ -40,3 +44,6 @@ summary: 啟用此功能可讓工作負載原廠自動將遞增儲存設備新�
 
 . 選擇*應用*。
 
+
+.結果
+每 30 分鐘進行一次檔案系統掃描，以判斷檔案系統是否需要額外容量。

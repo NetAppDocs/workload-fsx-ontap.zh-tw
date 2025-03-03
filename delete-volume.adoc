@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: delete-volume.html 
 keywords: delete volume, volume deletion 
-summary: 您可以隨時刪除適用於 ONTAP 檔案系統的 FSX 中的磁碟區。此操作無法還原。 
+summary: 刪除 FSX for ONTAP 檔案系統中不再需要的 Volume ，並釋放空間。此操作無法還原。 
 ---
 = 在 BlueXP  工作負載工廠中刪除 Volume
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 您可以隨時刪除適用於 ONTAP 檔案系統的 FSX 中的磁碟�
 
 
 [role="lead"]
-您可以隨時刪除適用於 ONTAP 檔案系統的 FSX 中的磁碟區。此操作無法還原。
+刪除 FSX for ONTAP 檔案系統中不再需要的 Volume ，並釋放空間。此操作無法還原。
 
 .開始之前
 刪除磁碟區之前、請先考慮下列事項：
@@ -19,7 +19,7 @@ summary: 您可以隨時刪除適用於 ONTAP 檔案系統的 FSX 中的磁碟�
 * 複寫關係：刪除磁碟區之前、您必須link:delete-replication.html["刪除所有現有的複寫關係"]先建立此磁碟區的關係、才能維持不變的關係。
 * 本機快照：將永久刪除與此 FSX for ONTAP 檔案系統相關的所有快照。
 * 適用於 ONTAP 備份的 FSX ：適用於 ONTAP 備份複本的 FSX 將會保留、您仍然可以使用這些備份複本。
-* 不可變更的檔案：包含由 SnapLock 提供的不可變更檔案的磁碟區在保留期間到期之前無法刪除。
+* 不可變的檔案和快照：包含不可變檔案和快照的磁碟區必須等到保留期間結束後才能刪除。
 
 
 .步驟

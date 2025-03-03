@@ -2,25 +2,61 @@
 sidebar: sidebar 
 permalink: rebalance-volume.html 
 keywords: rebalance capacity, volume capacity, redistribute capacity 
-summary: 重新平衡磁碟區的容量、以避免隨著時間而發展的不平衡現象。 
+summary: 檢查並重新平衡磁碟區的容量，以避免隨著時間而產生的不平衡現象。 
 ---
-= 在 BlueXP  工作負載工廠中重新平衡磁碟區的容量
+= 檢查並重新平衡磁碟區的容量
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-重新平衡 BlueXP  工作負載工廠中的磁碟區容量，以避免隨著時間而產生的不平衡現象。
+檢查 FlexGroup Volume 容量的平衡，並重新平衡磁碟區容量，以便將檔案平均分散到所有組成區，讓所有節點都能參與單一 Flex Group Volume 的工作負載。
 
 .關於這項工作
+FlexGroup Volume 容量分散在橫向擴充的 FSX 中，適用於具有兩個或更多高可用度（ HA ）配對的 ONTAP 檔案系統。每個組成都是指定最大單一檔案大小的容器。適用於 ONTAP 的 FSX 會以均勻的方式跨所有成員分散檔案，讓所有節點都能參與單一 FlexGroup Volume 的工作負載。
+
+當組成要素未平均分散於所有節點時， FlexGroup Volume 效能會降低。
+
+檢查 FlexGroup Volume 容量的平衡，包括評估組成的目前配置。當您重新平衡磁碟區的容量時， BlueXP  工作負載工廠會設計一個新的組成配置，其中包含偶數個組成成分，以便在所有 HA 配對之間平均分散資料。服務會執行重新平衡計畫，進而改善讀寫作業。
+
 重新平衡磁碟區會在新增檔案和檔案成長、隨著時間的推移而產生不平衡時、重新分配容量。手動開始重新平衡作業後、我們會選取檔案、並自動且不中斷地移動。
 
 
 NOTE: 只有 FlexGroup 磁碟區才支援重新平衡磁碟區。
 
+
+
+== 檢查 FlexGroup Volume 的平衡
+
+檢查作用中 FlexGroup Volume 的平衡。
+
 .開始之前
-若要重新平衡磁碟區、您必須 link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。
+* FlexGroup Volume Balance 僅適用於使用橫向擴充部署且至少有兩個 HA 配對的 ONTAP 檔案系統。
+* Volume 樣式必須是 FlexGroup Volume 。
+* 若要檢查 FlexGroup Volume 的平衡，您必須link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
+
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在 * 儲存 * 中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要重新平衡的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 從 Volumes （卷）選項卡中，選擇表頂部的 *Check Balance* （檢查 FlexGroup 平衡）。
+. 在 Balance （ FlexGroup 平衡）視窗中，檢閱適用於 ONTAP 檔案系統的 FSX 中所有 FlexGroup Volume 的平衡狀態。
++
+當 FlexGroup Volume 不平衡時，請考慮<<重新平衡 FlexGroup Volume,重新平衡>>。
+
+
+
+
+
+== 重新平衡 FlexGroup Volume
+
+<<檢查 FlexGroup Volume 的平衡,檢查 FlexGroup Volume 的平衡>>重新平衡磁碟區之前。
+
+.開始之前
+若要重新平衡磁碟區、您必須 link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
@@ -31,3 +67,6 @@ NOTE: 只有 FlexGroup 磁碟區才支援重新平衡磁碟區。
 . 選擇 * 進階動作 * 、然後 * 重新平衡 Volume * 。
 . 在重新平衡體積對話方塊中、選取 * 重新平衡 * 。
 
+
+.結果
+FlexGroup Volume 的容量會重新平衡。

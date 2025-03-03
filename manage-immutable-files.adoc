@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: manage-immutable-files.html 
+keywords: enable immutable files, disable immutable files, lock files, unlock files 
+summary: 啟用此功能時，您可以更新某些不可變更的檔案設定。 
+---
+= 在 BlueXP  工作負載工廠中管理磁碟區的不可變檔案
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+啟用此功能時，您可以更新磁碟區的某些不可變更檔案設定，例如保留原則和期間，自動認可期間和磁碟區附加模式。
+
+請注意，只有在期間才能啟用不可變link:create-volume.html["Volume 建立"]的檔案。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 選擇 * Volumes （卷） * 選項卡。
+. 在 Volumes （磁碟區）標籤中、選取要複製之磁碟區的 thThree thots （三點）功能表。
+. 選擇 * 資料保護動作 * ，然後 * 管理不可變的檔案 * 。
+. 在「管理不可修改的檔案」頁面上，您可以更新下列項目：
++
+** * 保留期間 * ：選擇 * 未指定 * 或 * 指定期間 * 。
++
+*** * 未指定 * ：預設最短期間為「 0 」年，預設最長期間為「 30 年」。
+*** * 指定期間 * ：可定義保留原則，最短和最長期間，自動認可功能及 Volume 附加模式功能的選項。提供下列詳細資料：
++
+**** * 保留政策 * ：此期間必須大於或等於最短保留期，且小於或等於最長保留期。
+**** * 最短與最長期間 * ：將此磁碟區中的檔案提交至不可變 WORM 狀態的最短與最長期間數設定為。
+
+
+
+
+** *AUTOCOMMIT* ：啟用或停用自動將檔案提交至 WORM 的功能，但此功能在 AUTOCOMMIT 期間尚未修改。
+** * Volume 附加模式 * ：啟用或停用此功能。啟用 Volume 附加模式可讓您將新內容新增至 WORM 檔案。
+
+
+. 按一下「 * 套用 * 」。
+
+
+.結果
+現在，這些更新會套用至磁碟區。

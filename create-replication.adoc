@@ -18,7 +18,7 @@ summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免�
 
 此作業會為適用於 ONTAP 檔案系統的 FSX 中的一或所有來源磁碟區建立複寫關係。
 
-目標檔案系統中的複寫磁碟區遵循下列命名格式 `{OriginalVolumeName}_copy`：。
+目標檔案系統中的複寫磁碟區為資料保護（ DP ）磁碟區，並遵循命名格式： `{OriginalVolumeName}_copy`。
 
 .開始之前
 開始之前、請確定您符合下列先決條件。
@@ -33,18 +33,20 @@ summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免�
 ====
 .複寫單一磁碟區
 --
+您可以複寫一個來源（讀取 / 寫入）磁碟區或一個資料保護（ DP ）磁碟區。您無法建立 DP Volume 的第二個複本。
+
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
 . 在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要複製的卷的文件系統的三點菜單，然後選擇 *Replicate Volume data* 。
-. 在「建立複寫」頁面的「複寫目標」下、提供下列項目：
+. 在「複寫資料」頁面的「複寫目標」下，提供下列項目：
 +
 .. * 適用於 ONTAP 檔案系統 * 的 FSX ：針對適用於 ONTAP 檔案系統的目標 FSX 、選取 ONTAP 檔案系統名稱的認證、區域和 FSX 。
 .. * 儲存 VM 名稱 * ：從下拉式功能表中選取儲存 VM 。
 .. *Volume name* ：目標 Volume 名稱會自動以下列格式產生 `{OriginalVolumeName}_copy`。您可以使用自動產生的 Volume 名稱或輸入其他 Volume 名稱。
 .. * 分層原則 * ：選取儲存在目標 Volume 中的資料分層原則。
 +
-_Auto_ 是使用 ONTAP 使用者介面的工作負載原廠 FSX 建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^]AWS FSX for NetApp ONTAP 文件中的。
+_Auto_ 是使用 ONTAP 使用者介面的工作負載原廠 FSX 建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^] AWS FSX for NetApp ONTAP 文件中的。
 
 .. * 最大傳輸速率 * ：選取 * 受限 * 、然後以 MB/s 為單位輸入最大傳輸限制或者、選取 * 無限 * 。
 +
@@ -60,10 +62,16 @@ _Auto_ 是使用 ONTAP 使用者介面的工作負載原廠 FSX 建立 Volume �
 如果您啟用長期保留、請選取現有原則或建立新原則、以定義要複寫的快照和要保留的數量。
 
 +
-*** 若為 * 選擇現有原則 * 、請從下拉式功能表中選取現有原則。
-*** 對於 * 建立新原則 * 、請提供下列項目：
+*** * 選擇現有的原則 * ：從下拉式功能表中選取現有的原則。
+*** * 建立新原則 * ：提供下列項目：
 +
 **** * 原則名稱 * ：輸入原則名稱。
+**** 選用：啟用不可變快照。
++
+***** 選取 * 啟用不可變快照 * ，以防止在保留期間刪除在此原則中拍攝的快照。
+***** 將 * 保留期間 * 設定為小時數，天數，月數或年數。
+
+
 **** * Snapshot Policies * ：在表格中、選取快照原則頻率和要保留的複本數量。您可以選取多個快照原則。
 
 
@@ -77,12 +85,17 @@ _Auto_ 是使用 ONTAP 使用者介面的工作負載原廠 FSX 建立 Volume �
 --
 .複寫檔案系統中的所有磁碟區
 --
+您可以在檔案系統中複寫所有來源（讀取 / 寫入）和資料保護（ DP ）磁碟區。
+
+
+NOTE: 支援一次複寫資料保護磁碟區。
+
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
 . 在 FSX for （適用於 ONTAP 的 FSX ）索引標籤中，選取含有磁碟區的檔案系統的三點功能表，然後選取 * 管理 * 。
-. 從檔案系統總覽中、選取 * 建立複寫 * 。
-. 在「建立複寫」頁面的「複寫目標」下、提供下列項目：
+. 從檔案系統總覽中，選取 * 複寫資料 * 。
+. 在「複寫資料」頁面的「複寫目標」下，提供下列項目：
 +
 .. * 適用於 ONTAP 檔案系統 * 的 FSX ：針對適用於 ONTAP 檔案系統的目標 FSX 、選取 ONTAP 檔案系統名稱的認證、區域和 FSX 。
 .. * 儲存 VM 名稱 * ：從下拉式功能表中選取儲存 VM 。
@@ -105,8 +118,8 @@ _Auto_ 是使用 ONTAP 使用者介面的工作負載原廠 FSX 建立 Volume �
 如果您啟用長期保留、請選取現有原則或建立新原則、以定義要複寫的快照和要保留的數量。
 
 +
-*** 若為 * 選擇現有原則 * 、請從下拉式功能表中選取現有原則。
-*** 對於 * 建立新原則 * 、請提供下列項目：
+*** * 選擇現有的原則 * ：從下拉式功能表中選取現有的原則。
+*** * 建立新原則 * ：提供下列項目：
 +
 **** * 原則名稱 * ：輸入原則名稱。
 **** * Snapshot Policies * ：在表格中、選取快照原則頻率和要保留的複本數量。您可以選取多個快照原則。
@@ -116,7 +129,7 @@ _Auto_ 是使用 ONTAP 使用者介面的工作負載原廠 FSX 建立 Volume �
 
 
 
-. 選擇* Create *（建立*）。
+. 選取 * Replicate * 。
 
 
 --

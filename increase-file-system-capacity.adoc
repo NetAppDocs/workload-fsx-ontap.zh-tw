@@ -20,7 +20,7 @@ summary: 當使用的 SSD 儲存容量超過您指定的臨界值時、手動增
 
 當您自動 link:provision-iops.html["配置 IOPS"] 使用檔案系統時、每增加 1 GiB 的 SSD 容量、 IOPS 就會增加 3 IOPS 。
 
-手動時 link:provision-iops.html["配置 IOPS"] 、您可能需要增加 IOPS 配置、以支援增加的檔案系統容量。
+手動時link:provision-iops.html["配置 IOPS"]，您可能需要增加 IOPS 配置，以支援增加的檔案系統容量。
 
 如需 SSD 儲存容量限制、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配額"^] AWS FSX for NetApp ONTAP 文件。
 

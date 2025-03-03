@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: split-cloned-volume.html 
 keywords: split clone volume, FlexVol volume 
-summary: 將複製的 FlexVol Volume 從其父磁碟區分割成正常的讀寫 FlexVol 磁碟區。 
+summary: 將複本 FlexVol volume 從其父磁碟區分割成正常的讀寫 FlexVol volume 。 
 ---
 = 在 BlueXP  工作負載工廠中分割複製的磁碟區
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 將複製的 FlexVol Volume 從其父磁碟區分割成正常的讀寫 
 
 
 [role="lead"]
-將複製的 FlexVol volume 從其父磁碟區分割開來，使該複製作業成為 BlueXP  工作負載工廠中的正常讀寫 FlexVol volume 。
+將複製的 FlexVol volume 從其父磁碟區分割開來，使複製作業成為 BlueXP  工作負載工廠中的正常讀寫 FlexVol volume 。
 
 分割期間、可在複本和父實體上存取資料。分割程序只會更新中繼資料、而且需要最少的 IO 。不會複製任何資料區塊。
 
@@ -28,7 +28,7 @@ summary: 將複製的 FlexVol Volume 從其父磁碟區分割成正常的讀寫 
 .開始之前
 分割複製的磁碟區之前、請先考慮下列事項：
 
-* 若要分割複製的 Volume 、您必須 link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。
+* 若要分割複製的 Volume 、您必須 link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
 * 您必須是叢集管理員。
 * 當分割作業開始時、 FlexClone Volume 必須處於線上狀態。
 * 父磁碟區必須處於線上狀態、才能成功分割。

@@ -11,7 +11,7 @@ summary: 探索 Amazon Elastic Block Store （ EBS ）儲存設備、 Elastic Fi
 
 
 [role="lead"]
-探索使用 Amazon Elastic Block Store （ EBS ）、 Elastic File System （ EFS ）和適用於 Windows 檔案伺服器的 FSX 與適用於 NetApp ONTAP 的 FSX 之儲存工作負載的節約效益。
+探索使用 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和適用於 Windows 檔案伺服器的 FSX 與適用於 NetApp ONTAP 的 FSX 之儲存工作負載的節約效益。
 
 BlueXP  工作負載工廠內有儲存節約計算機，可將 Amazon 儲存環境與適用於 ONTAP 的 FSX 進行比較。您可以使用或不提供 AWS 認證來探索節約效益、並自訂儲存環境的組態設定。當您提供 AWS 認證時，您可以選取一或多個 Amazon Elastic Block Store 執行個體，並讓工作負載工廠自動進行比較。無論是手動或自動、計算機都會判斷哪種儲存服務能為您的儲存需求提供最低成本。
 

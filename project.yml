@@ -90,6 +90,8 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: 增加 Volume 容量
         url: "/increase-volume-capacity.html"
+      - title: 管理不可變的檔案
+        url: "/manage-immutable-files.html"
       - title: 管理 Volume 標記
         url: "/manage-volume-tags.html"
       - title: 重新平衡磁碟區的容量
@@ -130,24 +132,34 @@ sidebar:
         url: "/delete-svm.html"
     - title: 資料保護管理
       entries:
-      - title: 變更磁碟區的快照原則
-        url: "/change-snapshot-policy.html"
-      - title: 管理 ONTAP 備份排程的 FSX
-        url: "/manage-backup-schedule.html"
-      - title: 啟用及編輯快照以進行長期保留
-        url: "/enable-snapshots-long-term.html"
-      - title: 反轉複寫關係
-        url: "/reverse-replication.html"
-      - title: 變更來源 Volume 的複寫排程
-        url: "/change-replication-schedule.html"
-      - title: 限制複寫關係的最大傳輸率
-        url: "/limit-transfer-rate.html"
-      - title: 在複寫關係中手動更新快照資料
-        url: "/update-snapshot-replication.html"
-      - title: 停止複寫關係
-        url: "/stop-replication.html"
-      - title: 刪除複寫關係
-        url: "/delete-replication.html"
+      - title: 快照
+        entries:
+        - title: 管理快照原則
+          url: "/manage-snapshot-policy.html"
+        - title: 啟用及編輯快照以進行長期保留
+          url: "/enable-snapshots-long-term.html"
+      - title: 備份
+        entries:
+        - title: 管理 ONTAP 備份排程的 FSX
+          url: "/manage-backup-schedule.html"
+      - title: 複寫
+        entries:
+        - title: 反轉複寫關係
+          url: "/reverse-replication.html"
+        - title: 變更來源 Volume 的複寫排程
+          url: "/change-replication-schedule.html"
+        - title: 限制複寫關係的最大傳輸率
+          url: "/limit-transfer-rate.html"
+        - title: 在複寫關係中手動更新快照資料
+          url: "/update-snapshot-replication.html"
+        - title: 複寫資料保護磁碟區
+          url: "/cascade-replication.html"
+        - title: 暫停並恢復複寫關係
+          url: "/pause-resume-replication.html"
+        - title: 停止複寫關係
+          url: "/stop-replication.html"
+        - title: 刪除複寫關係
+          url: "/delete-replication.html"
     - title: 效能管理
       entries:
       - title: 為檔案系統配置 IOPS

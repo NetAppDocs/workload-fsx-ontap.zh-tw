@@ -16,7 +16,7 @@ summary: 自動為 ONTAP 檔案系統的 FSX 配置或手動配置 SSD IOPS 。
 .關於這項工作
 您可以為 FSX 檔案系統啟用自動 SSD IOPS 資源配置、或手動配置 IOPS 。
 
-自動佈建的 IOPS 會以每 GiB 3 IOPS 計算。
+自動佈建的 IOPS 是以每 GiB 三個 IOPS 計算。
 
 如果您手動配置 IOPS ，可能需要在之前增加 IOPS link:increase-file-system-capacity.html["增加檔案系統容量"]。
 

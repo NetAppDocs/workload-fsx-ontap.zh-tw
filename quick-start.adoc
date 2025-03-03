@@ -29,7 +29,7 @@ summary: 只需幾個步驟，就能在 BlueXP  工作負載工廠開始使用�
 如果您選擇以 _basive_ 模式操作、就不需要再繼續操作。您可以開始使用 FSX for ONTAP 的工作負載原廠來複製部分完成的程式碼範例。
 
 [role="quick-margin-para"]
-如果您以 _Read_ 或 _AIL_ 模式操作、則需要 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手動新增認證至帳戶"^] 選擇工作負載功能、例如資料庫和 AI 、並建立 IAM 原則、以確保您擁有正確的權限、可以在 _Read_ 或 _AIL_ 模式下操作。
+如果您以 _Read_ 或 _AIL_ 模式操作，則必須link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手動新增認證至帳戶"^]選擇工作負載功能，例如資料庫和 AI ，並建立 IAM 原則，以確保您擁有正確的權限，可以在 _Read_ 或 _AIL_ 模式下操作。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 建立檔案系統
 [role="quick-margin-para"]
