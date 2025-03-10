@@ -152,8 +152,6 @@ sidebar:
           url: "/limit-transfer-rate.html"
         - title: 在複寫關係中手動更新快照資料
           url: "/update-snapshot-replication.html"
-        - title: 複寫資料保護磁碟區
-          url: "/cascade-replication.html"
         - title: 暫停並恢復複寫關係
           url: "/pause-resume-replication.html"
         - title: 停止複寫關係
