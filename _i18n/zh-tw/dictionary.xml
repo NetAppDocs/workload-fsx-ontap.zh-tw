@@ -204,7 +204,6 @@
   <block id="dd27fe873924b478083e77fbe107958f" category="list-text">* 原則名稱 * ：輸入原則名稱。</block>
   <block id="28ef75c94389e1f7dfa4614197978d9e" category="list-text">* Snapshot Policies * ：在表格中、選取快照原則頻率和要保留的複本數量。您可以選取多個快照原則。</block>
   <block id="c2ca79898f24b0041abe0a50f8a67aec" category="open-title">複寫檔案系統中的所有磁碟區</block>
-  <block id="932ea72af08ac8563c34e80a7a85d205" category="list-text">從檔案系統總覽中、選取 * 建立複寫 * 。</block>
   <block id="8642bd9871818efa86fdfbc89b47d7fe" category="list-text">*Volume name* ：目標 Volume 名稱會自動以下列格式產生<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。</block>
   <block id="8044f667bde3c7c59b4115402b5eaf0b" category="paragraph">您可以建立與適用於 ONTAP 的 FSX 三個內建快照原則不同的自訂快照原則：</block>
   <block id="980ef1c1aa7d1456ee087df02119341e" category="list-text"><block ref="c21f969b5f03d33d43e04f8f136e7682" prefix="" category="inline-code"></block></block>
@@ -1340,9 +1339,6 @@
   <block id="d57581d19f1047da33c24e46abd88cd4" category="paragraph">工作負載工廠提供追蹤器這項監控功能，可讓您監控和追蹤 ONTAP 的 FSX ，認證和連結作業的進度和狀態，檢閱作業工作和子任務的詳細資料，診斷任何問題或失敗，編輯失敗作業的參數，以及重試失敗的作業。您可以依類型和狀態篩選工作，使用搜尋功能尋找工作，然後下載工作表。</block>
   <block id="5cc85b66adf3d2a6e3eb745a827cf4e0" category="paragraph">Tracker 最多可支援三種監控層級，視作業而定。每項工作（例如檔案系統部署）都會顯示工作說明，狀態，開始時間，工作持續時間，使用者，區域， Proxy 資源，工作 ID 及所有相關的子工作。</block>
   <block id="5cdbeb1c4cc65e8f551e161828701113" category="list-text">以範例追蹤工作層級</block>
-  <block id="6db8f73f40a9c238922a375a008fda96" category="list-text">層級 1 （父工作）：追蹤檔案系統部署。</block>
-  <block id="4848a390cc9141e051b33cd55dc40d06" category="list-text">層級 2 （子工作）：追蹤與檔案系統部署相關的子工作。</block>
-  <block id="df942ff3756f5cbd24f42b521acc64f8" category="list-text">層級 3 （工作）：列出在每個資源上所採取的動作順序。</block>
   <block id="88ebc1f479e6de47fd711c4be81c4d26" category="list-text">作業狀態</block>
   <block id="afcc9733e2e2e0ce70f1ecee29c8f008" category="list-text">Tracker 中的作業狀態如下： _ 進行中 _ ， _ 成功 _ 及 _ 失敗 _ 。</block>
   <block id="de32977622108a1960ab0fcf45adaf80" category="list-text">操作頻率</block>
@@ -1383,7 +1379,6 @@
   <block id="4baeabf837f67f70aeb93e0dfea60d36" category="paragraph">管理您與 BlueXP  工作負載原廠帳戶相關的連結。您可以檢視與適用於 ONTAP 檔案系統的 FSX 相關的連結，將連結與適用於 ONTAP 檔案系統的 FSX 關聯，編輯連結，以及移除連結。</block>
   <block id="4a922c367b35639ecb9d911b81fdb458" category="doc">自動容量管理改善</block>
   <block id="5868fd5ebf39f0f3dce9bd4ba23dcb6f" category="paragraph">啟用自動容量管理時， BlueXP  工作負載工廠現在會檢查檔案系統是否每 30 分鐘達到容量臨界值，而非每 2 小時。</block>
-  <block id="b8f4f574565ae3f9b004976be6075660" category="paragraph">工作負載工廠也會掃描磁碟區中的可用 inode ，並根據設定的自動容量管理臨界值來增加其計數。</block>
   <block id="410d677b6db33c7f47c30b3d219c4846" category="paragraph">當達到容量臨界值時，已配置的 IOPS 設定就不再受到影響。</block>
   <block id="c21bf517f636f8492b01232a674a8d2e" category="section-title">不可變的快照</block>
   <block id="525386f4531b9b4bbd2b84ae92c59c07" category="paragraph">現在您可以鎖定快照，使其在特定保留期間內不可變。鎖定可防止未經授權的存取和惡意刪除快照。您可以在快照原則建立期間，手動建立快照時，以及建立快照之後，啟用不可變的快照。</block>
@@ -1392,38 +1387,11 @@
   <block id="a864feef5272f034d55e1119c5495be8" category="inline-link-macro">管理不可變的檔案</block>
   <block id="2915f18b56c3e4e3c1ef137551d9a65d" category="section-title">資料複寫增強功能</block>
   <block id="114e60d7d0f811f597761cf833328a96" category="list-text">跨帳戶複寫： BlueXP  工作負載原廠主控台支援兩個 AWS 帳戶之間的複寫，以及複寫管理。</block>
-  <block id="6fa19d46a9961be1aeabe428c8550d2f" category="list-text">資料保護磁碟區複寫：當磁碟區從複寫磁碟區時，資料保護磁碟區現在支援串聯複寫。</block>
-  <block id="699cadf384181ae5970ed8c0de60e0ff" category="inline-link-macro">複寫資料保護磁碟區</block>
-  <block id="f4ae9aa33f99746ec1459126f50c3db7" category="paragraph"><block ref="f4ae9aa33f99746ec1459126f50c3db7" category="inline-link-macro-rx"></block></block>
   <block id="0348e63af5ee6958b15125648a1ecae7" category="list-text">暫停及恢復複寫：您可以暫停（停止）從來源磁碟區到目的地磁碟區的排程複寫更新，然後在準備好時恢復複寫排程。暫停期間，來源和目的地磁碟區會變得不受限，而目的地磁碟區會從唯讀轉換為讀寫。</block>
   <block id="38485996f06c5e13eed5605901b52530" category="inline-link-macro">暫停並恢復複寫關係</block>
   <block id="fc81b1e4233a48b719520033e56b4194" category="paragraph"><block ref="fc81b1e4233a48b719520033e56b4194" category="inline-link-macro-rx"></block></block>
   <block id="fd8693cf8f6802fd1c7d50d5742a4c71" category="section-title">Tracker 中的 CloudShell 事件</block>
   <block id="e7a6197673267c30b5dc86e0d5f6c536" category="paragraph">現在您可以在 Tracker 中追蹤 CloudShell 事件。</block>
-  <block id="17f03194826a802587b82edd13d7ac95" category="summary">複寫資料保護磁碟區，或串聯磁碟區資料的複寫，將資料保護延伸至第三系統或移轉資料。</block>
-  <block id="70b72bd626a098817ae0ea2c2270cbcf" category="doc">在 BlueXP  工作負載工廠中複寫資料保護磁碟區</block>
-  <block id="92c9c52844cb226e2b3234f5acfbd4a8" category="paragraph">BlueXP  工作負載工廠支援複寫資料保護磁碟區。在 ONTAP 中，複寫資料保護磁碟區被視為鏡射鏡射串聯部署 _ 。鏡射鏡射鏡射串聯部署包含一系列關係、其中來源磁碟區會鏡射至次要磁碟區、而次要磁碟區則會鏡射至第三個磁碟區。如果次要Volume無法使用、您可以在不執行新的基礎傳輸的情況下、同步主要和第三個Volume之間的關係。</block>
-  <block id="7652817ee4e140c39bef87f9905461f3" category="inline-link-macro">相容 ONTAP 版本的 ONTAP 文件</block>
-  <block id="96931212d5287ed1b328f78b0384b98d" category="paragraph">適用於 ONTAP 9.6 版及更新版本 ONTAP 檔案系統的 FSX 支援此功能。請參閱 <block ref="645fdc124f317ebe54966e1f8afbb990" category="inline-link-macro-rx"></block>。</block>
-  <block id="69d48e6ee6f4d25e240641aa5e451ba6" category="admonition">如果關係的來源 Volume 是資料保護磁碟區，而且是另一個關係的目標，則不支援反轉複寫關係。</block>
-  <block id="38560383963343c333f3627cb6870516" category="paragraph">請注意，屬於串聯組態一部分的磁碟區可能需要較長時間才能重新同步。</block>
-  <block id="13a7709a927165a14ae05ef8395921bd" category="paragraph">您可以複寫資料保護（ DP ）磁碟區。</block>
-  <block id="b6465b889ea3f6dce46bfc3720bd65be" category="admonition">支援資料保護磁碟區的一個複本。您無法建立 DP Volume 的第二個複本。</block>
-  <block id="e698a18ce9b5d160600af63e05302271" category="list-text">在 Storage 中，選取 Go to storage inventory 。</block>
-  <block id="b4c7f647802ebd00adeea4321d3094c4" category="list-text">在 FSX for ONTAP 標籤中，選取要更新之檔案系統的三點功能表，然後選取管理。</block>
-  <block id="05c0eed2abbd9c20871b6af0eb7b1e38" category="list-text">選取Volume（磁碟區）索引標籤。</block>
-  <block id="2025c60fe6cbb0b8f566aedde84249b3" category="list-text">選取資料保護磁碟區的三點功能表（ DP / 複寫磁碟區），然後選取 * 複寫磁碟區資料 * 。</block>
-  <block id="c9213b34d634cd52f1bdd6f79a305263" category="list-text">* 使用案例 * ：選取下列其中一個複寫使用案例。</block>
-  <block id="257ce4bae137964f3625a1e1d6f1369b" category="list-text">移轉：將資料傳輸至 ONTAP 檔案系統的目標 FSX</block>
-  <block id="30940cba2bad8606f971a78b21b2ec59" category="list-text">熱災難恢復：確保關鍵工作負載的高可用度和快速災難恢復</block>
-  <block id="4479dbc11cc7245a39dd940a6a86b3a5" category="list-text">冷災難恢復或歸檔災難恢復：</block>
-  <block id="a7683152ac8a3322afd2ab0f568eb7ab" category="list-text">冷災難恢復：使用較長的恢復時間目標（ RTO ）和恢復點物件（ RPO ）來降低成本</block>
-  <block id="24249670ae7cb490931a0cfb669e35fb" category="list-text">歸檔：複寫資料以供長期儲存和法規遵循</block>
-  <block id="6311ae17c1ee52b36e68aaf4ad066387" category="list-text">其他</block>
-  <block id="b0535a5a3845dff314d063755ccd7db6" category="list-text">* 分層原則 * ：選取儲存在目標 Volume 中的資料分層原則。根據您選取的使用案例，分層原則預設為使用案例的建議分層原則。</block>
-  <block id="eb78d95f0e39e6c6d43b610047113a9b" category="paragraph">平衡（自動） _ 是使用 ONTAP 使用者介面的工作負載原廠 FSX 建立磁碟區時，預設的分層原則。如需磁碟區分層原則的詳細資訊、請參閱 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> AWS FSX for NetApp ONTAP 文件中的。</block>
-  <block id="df6ed69179c65d0ae683b9ebfb3119be" category="paragraph">您可以複寫檔案系統中的所有資料保護（ DP ）磁碟區。</block>
-  <block id="2b88e1e87621ef2c158ac9491970ddf8" category="paragraph">複寫的磁碟區會複寫，並顯示在 ONTAP 檔案系統的目標 FSX 的 * 複寫關係 * 標籤中。</block>
   <block id="8b6bca394ded2ad4bd57d5b7e1b13873" category="paragraph">若要在檔案系統上佈建 iSCSI 區塊磁碟區，請選取不超過六個 HA 配對。</block>
   <block id="cf5df8345ca5f203e0f805460b558155" category="list-text">單一可用性區域（單一 AZ ）部署：監控硬體故障並在發生故障時自動更換基礎架構元件，藉此提供可用度。在可用性區域內自動複寫資料、以保護資料免於元件故障、進而達到高耐用度。</block>
   <block id="65122529e27ab1e34a08fc55d0f38a93" category="list-text">自動：透過工作負載工廠建立自動登錄的連結。自動建立的連結需要工作負載工廠自動化的權杖， CloudForgation 程式碼也很短。最多只能使用六小時。</block>
@@ -1593,4 +1561,6 @@
   <block id="2d5a4b914acb6c2f03d312067c73ce32" category="section-title">2025 年 3 月 02 日</block>
   <block id="95712b1074d83e6727c42aa16be5af5a" category="paragraph"><block ref="95712b1074d83e6727c42aa16be5af5a" category="inline-link-macro-rx"></block></block>
   <block id="815e02f013485997d1d56438f0bf1505" category="paragraph"><block ref="815e02f013485997d1d56438f0bf1505" category="inline-link-macro-rx"></block></block>
+  <block id="21a1f3fb63f8e2b67d072b29080f89f9" category="list-text">層級 1 （工作）：追蹤檔案系統部署。</block>
+  <block id="5517abda6821fee1e969e9d59498b33e" category="list-text">層級 2 （子工作）：追蹤與檔案系統部署相關的子工作。</block>
 </blocks>
