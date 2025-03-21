@@ -1502,7 +1502,6 @@
   <block id="ac01830d09cb9d4a6364700c03ac9a48" category="paragraph">Volume 快照現在已鎖定。</block>
   <block id="07d4b0619f50f6f95ed7b83a046239a5" category="section-title">刪除快照原則</block>
   <block id="696434880f5851290eaa4b1ba9f80d85" category="paragraph">當您不再需要快照原則時，請將其刪除。</block>
-  <block id="122929b907900af2bcf3e5bace6a2385" category="paragraph">您無法刪除指派給多個磁碟區的快照原則。</block>
   <block id="df5ac48f314a037eb80499fa07b659ad" category="list-text">從 * 儲存 VMS* 索引標籤中，選擇儲存 VM 的三點功能表，並選擇要刪除的快照原則，然後選擇 * 進階動作 * ，再選擇 * 管理快照原則 * 。</block>
   <block id="a406d236bad23526e469ee1e5b111d14" category="list-text">在「 Snapshot 原則管理」頁面上，選取要刪除之快照原則的三點功能表，然後選取 * 刪除 * 。</block>
   <block id="6a89139e7be9bba144081cf61352e3c2" category="list-text">在刪除對話方塊中，選取 * 刪除 * 以刪除原則。</block>
@@ -1567,4 +1566,23 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp社群</block>
   <block id="abd0fe91ce589ecf3c7bad0543ccad16" category="sidebar">BlueXP部落格</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">雲端網路研討會</block>
+  <block id="bf453f792f281dc877c5d1e809edc5dc" category="list-text">建立快照原則後，就無法修改其與儲存 VM 的關聯，但您可以隨時從 Volume 新增或移除原則。</block>
+  <block id="5ba1bedcea9a8eb833a1e739064fb440" category="list-text">不可變快照不支援下列功能：</block>
+  <block id="6165c4352e1504dbaeef34d0cc50c187" category="list-text">一致性群組</block>
+  <block id="55449fd175613962d882ab450cfc5f3c" category="list-text">FabricPool</block>
+  <block id="098a9352bab68d0361bda3b31e3eaf76" category="list-text">資料量FlexCache</block>
+  <block id="699d8f5d3b7e2d1c55958f4a396e8a2e" category="list-text">SMtape</block>
+  <block id="c0b79db5f258f0c991a383cbdbf001dd" category="list-text">SnapMirror 主動同步</block>
+  <block id="1e769eb49609f668beaad20993434cae" category="list-text">使用 -schedule 參數的 SnapMirror 原則規則</block>
+  <block id="403490259ca485564378615496f0d12e" category="list-text">SnapMirror 同步</block>
+  <block id="2846fa2cc87d39181cb096c418a258e9" category="list-text">SVM 資料移動性（用於將 SVM 從來源叢集移轉或重新定位至目的地叢集）</block>
+  <block id="19b8f390095f155d76eaa34c5d8f5d20" category="section-title">從磁碟區移除快照原則</block>
+  <block id="29708169ed62ce48a3c9b4614e316be4" category="inline-xref">刪除快照原則</block>
+  <block id="fce714b45eae0b2db843a127811c7dfa" category="paragraph">因為您不再需要磁碟區的快照，或是想要刪除指派給多個磁碟區的快照原則，所以請從磁碟區移除快照原則。若要<block ref="fe803bef0fbadbb3c4f9d940b9fdfdb7" category="inline-xref-macro-rx"></block>將其指派給多個 Volume ，您必須手動將其從所有 Volume 中移除。</block>
+  <block id="41a5b9bb16fef0a6d96c008d7a310dc7" category="paragraph">您必須<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>移除快照原則。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
+  <block id="5b37f5e2e1d22ef188736327699e7d83" category="list-text">在 Assign snapshot policy （分配快照策略）對話框中，選擇 *None* （無）以刪除快照策略。</block>
+  <block id="a7f4573e8d9f9cb2323d7ca62fa2b33e" category="paragraph">快照原則會從磁碟區中移除。</block>
+  <block id="c767b489e8017a2255cc2520d048debc" category="inline-xref">將其移除</block>
+  <block id="8a56213a87eaeeacb994e03d5159956f" category="inline-xref">指派不同的快照原則</block>
+  <block id="3b3794d46a127b883871123c6319af47" category="paragraph">將快照原則指派給多個磁碟區時，您必須手動<block ref="65129050bfb27f4fbe34192e54c5d427" category="inline-xref-macro-rx"></block>從所有磁碟區中刪除快照原則。或者，您也可以<block ref="bcabdc7ed5212cdefb2de947daf28c6a" category="inline-xref-macro-rx"></block>移至磁碟區。</block>
 </blocks>
