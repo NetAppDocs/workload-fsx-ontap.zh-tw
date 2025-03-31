@@ -198,7 +198,7 @@ NOTE: 快照時間以檔案系統的時區為基礎、其預設為協調世界�
 
 .. * 分層原則 * ：選取儲存在磁碟區中資料的分層原則。
 +
-Auto 是使用使用者介面建立磁碟區時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^] AWS FSX for NetApp ONTAP 文件中的。
+平衡（自動） _ 是使用工作負載原廠主控台建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^] AWS FSX for NetApp ONTAP 文件中的。請注意，工作負載工廠會在工作負載原廠主控台中使用以使用案例為基礎的名稱來分層原則，並在括弧中包含適用於 ONTAP 分層原則名稱的 FSX 。
 
 
 

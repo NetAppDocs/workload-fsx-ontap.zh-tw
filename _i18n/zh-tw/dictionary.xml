@@ -56,18 +56,12 @@
   <block id="39a3f8d31ec380cdb5ca4ececc3fb091" category="list-text">* 容量集區儲存層 * ：此次儲存層用於歸檔資料或不常存取的資料、也稱為 _cold 資料。</block>
   <block id="12fa6703fd5b2a66b1251d09d2e43ae0" category="inline-link-macro">管理儲存容量</block>
   <block id="7a205a79cbbaeb0f7ced8b7674174b67" category="paragraph">如需儲存層的詳細資訊、請參閱 <block ref="2816fe46f04db216f4e3ba5898a5519a" category="inline-link-macro-rx"></block> AWS for FSX for NetApp ONTAP 文件中的。</block>
-  <block id="71227ec189a04b8c0e4b23f526c11e74" category="paragraph">變更分層原則之前、請先檢閱四個可用的分層原則。</block>
-  <block id="8483425bb0bb26bc11233622564a2bca" category="list-text">* 自動 * ：將所有冷資料（包括使用者資料和快照）分層儲存至容量集區儲存層（在特定時間段內）。</block>
   <block id="00cb9991d0309c15645d8450d4025960" category="list-text">* 僅限 Snapshot * ：將僅限階層的快照資料傳送至容量集區儲存層。</block>
   <block id="c8708259fa3c27b146a11f1d525bbed3" category="list-text">* 無 * ：將所有 Volume 資料保留在主要儲存層。</block>
   <block id="e9490b5c27d3d776758f193608ccfc70" category="list-text">* 全部 * ：將所有使用者資料和快照資料標示為冷資料、並儲存在容量集區儲存層。</block>
   <block id="bc9fd7aea881fd55baf43b86ae624fd7" category="paragraph">請注意、某些分層原則具有相關的最低冷卻週期、可設定磁碟區中的使用者資料必須保持非作用中狀態、才能將資料視為「冷」、並移至容量集區儲存層。當資料寫入磁碟時、冷卻週期即開始。</block>
   <block id="b0377ad22f3d2823c281bddf9364eb30" category="list-text">選擇 * 進階動作 * 、然後 * 變更分層原則 * 。</block>
-  <block id="c9b998e45c31726fa66ca1b0bb585e72" category="list-text">在「變更分層原則」頁面上、選取下列其中一個分層原則：</block>
-  <block id="30de36019d5f8e7b87a49a1451adef8e" category="list-text">* 自動 * ：輸入冷卻天數。</block>
-  <block id="2798d429ff91df1e7767a08dfd48bc50" category="list-text">* 僅限 Snapshot * ：輸入冷卻天數。</block>
   <block id="d015a34de96d3f92372df94da0f629a7" category="list-text">*無*</block>
-  <block id="b7f7419550863cb97e0251545c2b5304" category="list-text">* 全部 *</block>
   <block id="d50044469c0bf9ab38eff9cf7243fb25" category="doc">複製磁碟區</block>
   <block id="63bd0fb2b2b460703fbd97af05a3976c" category="paragraph">複本會反映資料目前的時間點狀態。您也可以使用複本、讓更多使用者存取資料、而不需讓他們存取正式作業資料。</block>
   <block id="9efa6a3d6da89d5d8581ec031f3a674f" category="paragraph">只有 FlexClone Volume 支援 Volume 複製。</block>
@@ -348,8 +342,6 @@
   <block id="8c197cb16511819fd1686972b919b4bd" category="list-text">在 * 自動容量管理 * 對話方塊中、提供下列項目：</block>
   <block id="811c0aa0f47faeb6a24c4abfb98d7a22" category="list-text">* 認證 * ：從下拉式功能表中選取具有 _ 自動化 _ 權限的認證。</block>
   <block id="3e0bdb480d66a7375d532c6c4aff035d" category="paragraph">或者、停用此功能。如果您需要增加檔案系統容量、則必須先停用自動容量管理。</block>
-  <block id="b2ce8c8b67c1ce9e75a1a834e6a756d7" category="list-text">* 容量臨界值 * ：輸入 ONTAP 檔案系統的 FSX 大小上限。</block>
-  <block id="c5384d1f343e28d37a573909233d561e" category="list-text">* 容量增加增量 * ：輸入百分比以遞增增加容量。</block>
   <block id="c2a6ed685a94077454f8bad592ecfa44" category="doc">啟用及編輯快照以進行長期保留</block>
   <block id="84926cfe10c3390bcbf0d7f22bc20ed1" category="paragraph">同樣的步驟也適用於啟用和編輯快照以進行長期保留。</block>
   <block id="9c3e61915a26d815f332c75fcafffe40" category="list-text">選取 * 編輯長期保留 * 。</block>
@@ -743,7 +735,6 @@
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">瞭解如何使用 Codebox 進行自動化</block>
   <block id="672d0efbe9223ef23c5fd7d2c7cd4a95" category="paragraph">您可以使用 _Quick creity_ 或 _Advanced creity_ 、為 ONTAP 檔案系統建立 FSX 。您也可以使用 Codebox 中的下列工具： REST API 、 CloudForformation 和 Terraform 。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>。</block>
   <block id="11e2fb5025fdb2cb91fd04c343163328" category="admonition">從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 和<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 密碼。執行程式碼時、您需要重新輸入密碼。</block>
-  <block id="b3028e0c6912bbb0c93b59dff7fa9ba5" category="paragraph">Auto 是使用使用者介面建立磁碟區時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> AWS FSX for NetApp ONTAP 文件中的。</block>
   <block id="9376aafc358c7dd83094603f26235eb3" category="paragraph">磁碟區建立已啟動。建立後、新的 Volume 就會出現在 Volumes （磁碟區）標籤中。</block>
   <block id="21e6ab9737790ab1abc18e49091d3c18" category="paragraph">下圖顯示使用快照、跨區域複寫、以及備份至物件儲存設備的 ONTAP 儲存設備之 FSX 資料保護的視覺化呈現。</block>
   <block id="90388f794d575e628df271470a4b766e" category="inline-image-macro">螢幕擷取畫面顯示使用快照、跨區域複寫、以及備份至物件儲存設備的 ONTAP 儲存設備之 FSX 資料保護。</block>
@@ -1399,7 +1390,6 @@
   <block id="99f375ee1d56d1983309c071fe9cb69a" category="paragraph">目標檔案系統中的複寫磁碟區為資料保護（ DP ）磁碟區，並遵循命名格式：<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。</block>
   <block id="02d60b2752d9739923230b4d901add35" category="paragraph">您可以複寫一個來源（讀取 / 寫入）磁碟區或一個資料保護（ DP ）磁碟區。您無法建立 DP Volume 的第二個複本。</block>
   <block id="df4c98f43132ebd68d92a0c9822984df" category="list-text">在「複寫資料」頁面的「複寫目標」下，提供下列項目：</block>
-  <block id="ff1d02000e266ba203887393d4fcef27" category="paragraph">_Auto_ 是使用 ONTAP 使用者介面的工作負載原廠 FSX 建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> AWS FSX for NetApp ONTAP 文件中的。</block>
   <block id="0cbe076a4ce5208b10cdb81c9e175006" category="list-text">* 選擇現有的原則 * ：從下拉式功能表中選取現有的原則。</block>
   <block id="b9a658e63ae9e8d9a604efb8acd930e6" category="list-text">* 建立新原則 * ：提供下列項目：</block>
   <block id="78c187892204fa9a888a00a5635447c9" category="list-text">選用：啟用不可變快照。</block>
@@ -1585,4 +1575,44 @@
   <block id="c767b489e8017a2255cc2520d048debc" category="inline-xref">將其移除</block>
   <block id="8a56213a87eaeeacb994e03d5159956f" category="inline-xref">指派不同的快照原則</block>
   <block id="3b3794d46a127b883871123c6319af47" category="paragraph">將快照原則指派給多個磁碟區時，您必須手動<block ref="65129050bfb27f4fbe34192e54c5d427" category="inline-xref-macro-rx"></block>從所有磁碟區中刪除快照原則。或者，您也可以<block ref="bcabdc7ed5212cdefb2de947daf28c6a" category="inline-xref-macro-rx"></block>移至磁碟區。</block>
+  <block id="e2becee7c382badfb02490cd30d53c6a" category="doc">橫向擴充系統的自動容量管理</block>
+  <block id="5f7d427820d14cb172d0390463b259c4" category="paragraph">工作負載工廠現在會掃描磁碟區中的可用 inode ，並根據設定的自動容量管理臨界值來增加其計數。此功能支援橫向擴充系統的自動容量管理。您可以在自動容量管理中啟用 inode 管理。</block>
+  <block id="85729d1984aee9281a3cc017500ff795" category="paragraph"><block ref="85729d1984aee9281a3cc017500ff795" category="inline-link-macro-rx"></block></block>
+  <block id="d0405304bf4b7c3f042b05203316ddd5" category="section-title">FlexGroup 重新平衡 API</block>
+  <block id="90f7c93b8d9614f0fd7cc2ee87f199c1" category="paragraph">BlueXP  工作負載原廠發行的 FlexGroup 重新平衡 API 可讓您執行計畫，以重新平衡 FlexGroup 中的資料。重新平衡會將資料平均地重新分配給成員磁碟區。</block>
+  <block id="1a256f86b88647f213e637c9cab0ed8b" category="inline-link-macro">BlueXP  工作負載原廠 API 文件</block>
+  <block id="9f2e2c38a7baafe56307fced13716496" category="paragraph"><block ref="9f2e2c38a7baafe56307fced13716496" category="inline-link-macro-rx"></block></block>
+  <block id="40f45c6ac2dbe2255c8ef062d007653f" category="section-title">Replicate 資料表單包含使用案例</block>
+  <block id="d3a1df9d08a100116ee8f443f56f895d" category="paragraph">複寫資料表單現在包含使用案例，讓您更容易完成表單。您可以選擇下列其中一種資料複寫使用案例：移轉，熱災難恢復，冷災難恢復，歸檔或其他。選擇使用案例後， Workload Factory 會根據最佳實務做法建議值。您可以接受預先選取的值，或自訂表單中的值。</block>
+  <block id="37fa21b7ca602fd8fe055b26a1de7d8b" category="inline-link-macro">複寫資料</block>
+  <block id="0c09136cc5ea602bb57eff7c2432239d" category="paragraph"><block ref="0c09136cc5ea602bb57eff7c2432239d" category="inline-link-macro-rx"></block></block>
+  <block id="9425459482ebc84a43dc550767dd3e0f" category="section-title">資料分層原則術語變更</block>
+  <block id="ac41e4be5fb8d94814ca592ccb928b7c" category="paragraph">現在，當您在磁碟區建立，資料複寫或現有分層原則的更新期間選取分層原則時，您會發現新的術語來說明分層原則。</block>
+  <block id="1680d9abb7a22a23c44b7a4b6381f160" category="list-text">平衡（自動） _</block>
+  <block id="ba8ad03a370d66806f12b2e607ea29c7" category="list-text">成本最佳化（全部） _</block>
+  <block id="c9c6a4f8a60589f93e4860841bc03333" category="list-text">_ 效能最佳化（僅限快照） _</block>
+  <block id="a6fcdc1d4500a732bf90fecba61d743f" category="paragraph">變更分層原則之前，請先檢閱可用的分層原則。</block>
+  <block id="e84817a9fe20b81cf24dd658855e9fc7" category="list-text">* 平衡（自動） * ：使用使用使用者介面建立磁碟區時，預設分層原則。在冷卻期間結束後，將經常存取的資料保留在 SSD 儲存層和不常存取的階層中，並將資料和快照保留到容量池儲存層。建議用於一般主要工作負載。</block>
+  <block id="da76ce854b187b083336e89b84bad3c1" category="list-text">* 成本最佳化（全部） * ：將所有快照和資料分層至容量集區儲存層。建議用於次要目標。</block>
+  <block id="ab70a861a0bf8910a4c86c6b152856f9" category="list-text">* 效能最佳化（僅限快照） * ：將僅限階層的快照資料傳送至容量集區儲存層。建議用於低延遲工作負載，例如關鍵任務資料庫。</block>
+  <block id="520d469a2d88715ae341e1304b5dc54c" category="list-text">* 無 * ：將磁碟區資料保留在 SSD 儲存層中，避免移至容量集區儲存層。</block>
+  <block id="c0cd3022b47264d5aa8c40e5868253f4" category="list-text">在「變更分層原則」頁面上，選取以複製來源磁碟區的分層原則，或選取下列其中一個分層原則：</block>
+  <block id="747aa537268cce89af37f6ccfe778eba" category="list-text">* 平衡（自動） * ：輸入冷卻天數。</block>
+  <block id="9b36aeed42df15feeee43371d884c2d0" category="list-text">* 成本最佳化（全部） *</block>
+  <block id="abd229fc1eceaa762a4af4c2554c3253" category="list-text">* 效能最佳化（僅限快照） * ：輸入冷卻天數。</block>
+  <block id="22965065ba7ae1409232e37abbbb066f" category="list-text">* 使用案例 * ：選取下列其中一個複寫使用案例。視所選的使用案例而定，工作負載工廠會根據最佳實務做法，以建議的值填入表單。您可以接受建議的值，或在完成表單時進行變更。</block>
+  <block id="257ce4bae137964f3625a1e1d6f1369b" category="list-text">移轉：將資料傳輸至 ONTAP 檔案系統的目標 FSX</block>
+  <block id="30940cba2bad8606f971a78b21b2ec59" category="list-text">熱災難恢復：確保關鍵工作負載的高可用度和快速災難恢復</block>
+  <block id="4479dbc11cc7245a39dd940a6a86b3a5" category="list-text">冷災難恢復或歸檔災難恢復：</block>
+  <block id="a7683152ac8a3322afd2ab0f568eb7ab" category="list-text">冷災難恢復：使用較長的恢復時間目標（ RTO ）和恢復點物件（ RPO ）來降低成本</block>
+  <block id="24249670ae7cb490931a0cfb669e35fb" category="list-text">歸檔：複寫資料以供長期儲存和法規遵循</block>
+  <block id="6311ae17c1ee52b36e68aaf4ad066387" category="list-text">其他</block>
+  <block id="181b737a36ca59661f38fe5373437f6a" category="list-text">* 分層原則 * ：選取儲存在目標 Volume 中的資料分層原則。分層原則預設為您所選使用案例的建議分層原則。</block>
+  <block id="a477f639de1e54cd01d24b4d8302b5ff" category="paragraph">平衡（自動） _ 是使用工作負載原廠主控台建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> AWS FSX for NetApp ONTAP 文件中的。請注意，工作負載工廠會在工作負載原廠主控台中使用以使用案例為基礎的名稱來分層原則，並在括弧中包含適用於 ONTAP 分層原則名稱的 FSX 。</block>
+  <block id="960f25577dd51f8946d9ce933ec7dd9d" category="paragraph">如果您選取移轉使用案例，工作負載工廠會自動選擇將來源 Volume 的分層原則複製到目標 Volume 。您可以取消選取以複製分層原則，並選取適用於所選複寫磁碟區的分層原則。</block>
+  <block id="f5d7c3fe6307c9200b4306b913e03daa" category="paragraph">如果您選取移轉使用案例，工作負載工廠會自動選擇將來源磁碟區的分層原則複製到檔案系統中的目標磁碟區。您可以取消選取以複製分層原則，並選取適用於目標檔案系統中磁碟區的分層原則以進行複寫。</block>
+  <block id="70790f6319078f7b58ce5d5adf8b27ed" category="list-text">* 增加閾值 * ：輸入 ONTAP 檔案系統的 FSX 大小上限。</block>
+  <block id="83b9d06ffc256e2f2bbc40862d118517" category="list-text">* 遞增增加 * ：輸入遞增容量的百分比。</block>
+  <block id="67cfcc957e64e9b21fe6f9036930ba34" category="list-text">選用：啟用自動 inode 管理，以確保每個 Volume 的檔案容量會增加，方法是將 inode （檔案）數量增加到允許的上限。</block>
+  <block id="db54384248c75c5896f34bcb0879b66c" category="section-title">2025 年 3 月 30 日</block>
 </blocks>

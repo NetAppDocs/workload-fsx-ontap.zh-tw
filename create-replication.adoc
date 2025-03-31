@@ -44,9 +44,25 @@ summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免�
 .. * 適用於 ONTAP 檔案系統 * 的 FSX ：針對適用於 ONTAP 檔案系統的目標 FSX 、選取 ONTAP 檔案系統名稱的認證、區域和 FSX 。
 .. * 儲存 VM 名稱 * ：從下拉式功能表中選取儲存 VM 。
 .. *Volume name* ：目標 Volume 名稱會自動以下列格式產生 `{OriginalVolumeName}_copy`。您可以使用自動產生的 Volume 名稱或輸入其他 Volume 名稱。
-.. * 分層原則 * ：選取儲存在目標 Volume 中的資料分層原則。
+.. * 使用案例 * ：選取下列其中一個複寫使用案例。視所選的使用案例而定，工作負載工廠會根據最佳實務做法，以建議的值填入表單。您可以接受建議的值，或在完成表單時進行變更。
 +
-_Auto_ 是使用 ONTAP 使用者介面的工作負載原廠 FSX 建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^] AWS FSX for NetApp ONTAP 文件中的。
+*** 移轉：將資料傳輸至 ONTAP 檔案系統的目標 FSX
+*** 熱災難恢復：確保關鍵工作負載的高可用度和快速災難恢復
+*** 冷災難恢復或歸檔災難恢復：
++
+**** 冷災難恢復：使用較長的恢復時間目標（ RTO ）和恢復點物件（ RPO ）來降低成本
+**** 歸檔：複寫資料以供長期儲存和法規遵循
+
+
+*** 其他
+
+
+.. * 分層原則 * ：選取儲存在目標 Volume 中的資料分層原則。分層原則預設為您所選使用案例的建議分層原則。
++
+平衡（自動） _ 是使用工作負載原廠主控台建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^] AWS FSX for NetApp ONTAP 文件中的。請注意，工作負載工廠會在工作負載原廠主控台中使用以使用案例為基礎的名稱來分層原則，並在括弧中包含適用於 ONTAP 分層原則名稱的 FSX 。
+
++
+如果您選取移轉使用案例，工作負載工廠會自動選擇將來源 Volume 的分層原則複製到目標 Volume 。您可以取消選取以複製分層原則，並選取適用於所選複寫磁碟區的分層原則。
 
 .. * 最大傳輸速率 * ：選取 * 受限 * 、然後以 MB/s 為單位輸入最大傳輸限制或者、選取 * 無限 * 。
 +
@@ -100,9 +116,25 @@ NOTE: 支援一次複寫資料保護磁碟區。
 .. * 適用於 ONTAP 檔案系統 * 的 FSX ：針對適用於 ONTAP 檔案系統的目標 FSX 、選取 ONTAP 檔案系統名稱的認證、區域和 FSX 。
 .. * 儲存 VM 名稱 * ：從下拉式功能表中選取儲存 VM 。
 .. *Volume name* ：目標 Volume 名稱會自動以下列格式產生 `{OriginalVolumeName}_copy`。
-.. * 分層原則 * ：選取儲存在目標 Volume 中的資料分層原則。
+.. * 使用案例 * ：選取下列其中一個複寫使用案例。視所選的使用案例而定，工作負載工廠會根據最佳實務做法，以建議的值填入表單。您可以接受建議的值，或在完成表單時進行變更。
 +
-_Auto_ 是使用 ONTAP 使用者介面的工作負載原廠 FSX 建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^]AWS FSX for NetApp ONTAP 文件中的。
+*** 移轉：將資料傳輸至 ONTAP 檔案系統的目標 FSX
+*** 熱災難恢復：確保關鍵工作負載的高可用度和快速災難恢復
+*** 冷災難恢復或歸檔災難恢復：
++
+**** 冷災難恢復：使用較長的恢復時間目標（ RTO ）和恢復點物件（ RPO ）來降低成本
+**** 歸檔：複寫資料以供長期儲存和法規遵循
+
+
+*** 其他
+
+
+.. * 分層原則 * ：選取儲存在目標 Volume 中的資料分層原則。分層原則預設為您所選使用案例的建議分層原則。
++
+平衡（自動） _ 是使用工作負載原廠主控台建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^] AWS FSX for NetApp ONTAP 文件中的。請注意，工作負載工廠會在工作負載原廠主控台中使用以使用案例為基礎的名稱來分層原則，並在括弧中包含適用於 ONTAP 分層原則名稱的 FSX 。
+
++
+如果您選取移轉使用案例，工作負載工廠會自動選擇將來源磁碟區的分層原則複製到檔案系統中的目標磁碟區。您可以取消選取以複製分層原則，並選取適用於目標檔案系統中磁碟區的分層原則以進行複寫。
 
 .. * 最大傳輸速率 * ：選取 * 受限 * ，然後在 MIB/s 中輸入最大傳輸限制或者、選取 * 無限 * 。
 +
