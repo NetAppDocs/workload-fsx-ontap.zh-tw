@@ -94,7 +94,6 @@
   <block id="c90eb480f69fa94333471c53a08ebfb9" category="list-text">選擇 * 資料保護動作 * 、 * ONTAP 備份 * 的 FSX 、然後 * 手動備份 * 。</block>
   <block id="efb6cdeb8b2e5095e65f43be813e1f3d" category="list-text">在手動備份對話方塊中、輸入備份的名稱。</block>
   <block id="2fdd0cbe402a8ae2149e0cdf4e1d9b9c" category="doc">為 ONTAP 檔案系統建立 FSX</block>
-  <block id="1633ddc656802ead23bcb179d8c7fcad" category="paragraph">建立檔案系統時會建立儲存 VM 。</block>
   <block id="d0e7f7527c3a0ceae557c9f12bb1d5e7" category="paragraph">在為 ONTAP 檔案系統建立 FSX 之前、您需要：</block>
   <block id="bf2ef084e923ce6ebc4b57db27892de8" category="inline-link-macro">瞭解如何授予 AWS 帳戶權限</block>
   <block id="aba4a700f63e9801b4211989fc2b559f" category="list-text">您將在其中建立FSX以利ONTAP 執行個體的區域和VPC資訊。</block>
@@ -1615,4 +1614,59 @@
   <block id="83b9d06ffc256e2f2bbc40862d118517" category="list-text">* 遞增增加 * ：輸入遞增容量的百分比。</block>
   <block id="67cfcc957e64e9b21fe6f9036930ba34" category="list-text">選用：啟用自動 inode 管理，以確保每個 Volume 的檔案容量會增加，方法是將 inode （檔案）數量增加到允許的上限。</block>
   <block id="db54384248c75c5896f34bcb0879b66c" category="section-title">2025 年 3 月 30 日</block>
+  <block id="4992f7a0d7d6ee4776bb87ff9118642c" category="section-title">檔案系統建立的安全性群組詳細資料</block>
+  <block id="b7cc50bb665bb63168fb8d2e9eebaedc" category="paragraph">安全性群組是作為 ONTAP 檔案系統建立程序的 FSX 一部分所建立。安全性群組詳細資料，包括通訊協定，連接埠和角色，現在已可供使用。</block>
+  <block id="c01337184cb4ac9f93392756fbda21b2" category="paragraph">儲存 VM 和安全性群組是建立檔案系統的一部分。</block>
+  <block id="4f1bd0ace83aba374b7ff69066a53c58" category="inline-xref">安全性群組詳細資料</block>
+  <block id="e41bac724f43b475f854e3aa1664b8de" category="paragraph">如需新的安全性群組，請參閱<block ref="592b894db662c6a6a8229aea3f9a37fa" category="inline-xref-macro-rx"></block>以取得安全性群組通訊協定，連接埠和角色的說明。</block>
+  <block id="a9113545432d09ba8c980e33a353098c" category="section-title">安全性群組詳細資料</block>
+  <block id="b75818945df7ef497c1bc036f0755e80" category="paragraph">下表提供安全性群組的詳細資料，包括通訊協定，連接埠和角色。</block>
+  <block id="888a77f5ac0748b6c8001822417df8b6" category="cell">傳輸協定</block>
+  <block id="60aaf44d4b562252c04db7f98497e9aa" category="cell">連接埠</block>
+  <block id="bbbabdbe1b262f75d99d62880b953be1" category="cell">角色</block>
+  <block id="765553e6c7ac8592c389acb9878a050a" category="cell">SSH</block>
+  <block id="b6d767d2f8ed5d21a44b0e5886680cb9" category="cell">22</block>
+  <block id="68e68bb8029eb3e7ed079fea7b679d99" category="paragraph">SSH 存取叢集管理 LIF 的 IP 位址或節點管理 LIF</block>
+  <block id="b136ef5f6a01d816991fe3cf7a6ac763" category="cell">TCP</block>
+  <block id="f033ab37c30201f73f142449d037028d" category="cell">80</block>
+  <block id="fca3da53e0b9248c897fe36ae278304b" category="paragraph">網頁存取叢集管理 LIF 的 IP 位址</block>
+  <block id="8962b8350728e2f6eb9cbbb07ca70d86" category="cell">TCP/UDP</block>
+  <block id="698d51a19d8a121ce581499d7b701668" category="cell">111</block>
+  <block id="42309a274997c44da61b489d9df7edc8" category="paragraph">遠端程序需要 NFS</block>
+  <block id="7f1de29e6da19d22b51c68001e7e0e54" category="cell">135</block>
+  <block id="4a6fc78f32cc0bb0470474e87efa7921" category="paragraph">遠端程序需要 CIFS</block>
+  <block id="f5ef036b4d8b630721e51fe23489fbc9" category="cell">UDP</block>
+  <block id="3988c7f88ebcb58c6ce932b957b6f332" category="cell">137</block>
+  <block id="27565dd036f8d2af75026159f4a268d9" category="paragraph">CIFS 的 NetBIOS 名稱解析</block>
+  <block id="e00da03b685a0dd18fb6a08af0923de0" category="cell">139</block>
+  <block id="f578101933ae5aa506411a00b33b06ec" category="paragraph">CIFS 的 NetBios 服務工作階段</block>
+  <block id="13f3cf8c531952d72e5847c4183e6910" category="cell">443</block>
+  <block id="9a5cd41d624e3fa2b53ce5d176a286ee" category="paragraph">ONTAP REST API 存取叢集管理 LIF 或 SVM 管理 LIF 的 IP 位址</block>
+  <block id="67f7fb873eaf29526a11a9b7ac33bfac" category="cell">445</block>
+  <block id="100c97ce556d60c86e5d8b424c3ed3ad" category="paragraph">Microsoft SMB/CIFS over TCP 搭配 NetBios 架構</block>
+  <block id="6a10bbd480e4c5573d8f3af73ae0454b" category="cell">635</block>
+  <block id="718b3fb251c2987c99ce9d2d23eb38b6" category="paragraph">NFS 掛載</block>
+  <block id="b056eb1587586b71e2da9acfe4fbd19e" category="cell">749</block>
+  <block id="87b3695bfd6f672e2c7c4da7ca2b46a8" category="paragraph">Kerberos</block>
+  <block id="06b1338ba02add2b5d2da67663b19ebe" category="cell">2049</block>
+  <block id="02c69a3a7485c8d2f899c2eb58f8be50" category="paragraph">NFS 伺服器精靈</block>
+  <block id="d54ce9de9df77c579775a7b6b1a4bdc0" category="cell">3260</block>
+  <block id="decc72453fd5881c6144ead65577abe0" category="paragraph">透過 iSCSI 資料 LIF 存取 iSCSI</block>
+  <block id="ee0e95249268b86ff2053bef214bfeda" category="cell">4045</block>
+  <block id="3efa34cc491e9e34264231984db1c224" category="paragraph">NFS 鎖定精靈</block>
+  <block id="354ac345fd8c6d7ef634d9a8e3d47b83" category="cell">4046</block>
+  <block id="6e1768e34172523fffe5e878d95f0f1a" category="paragraph">NFS 的網路狀態監控</block>
+  <block id="89a4779d3836ea432f7ea074e522a17e" category="cell">4049</block>
+  <block id="1e1381cbb01d72cf7be1c2036ab5e8ea" category="paragraph">NFS 配額傳輸協定</block>
+  <block id="b7a782741f667201b54880c925faec4b" category="cell">10000</block>
+  <block id="b093682e25d4e8962a08631ae7ae99fc" category="paragraph">網路資料管理傳輸協定（ NDMP ）和 NetApp SnapMirror 叢集間通訊</block>
+  <block id="bf03faf089665754a8af5dce381a42ca" category="cell">11104</block>
+  <block id="67e1ed40020a35348b4319bca17e25fa" category="paragraph">管理 NetApp SnapMirror 叢集間通訊</block>
+  <block id="f0f07e680de407b0f12abf15bd520097" category="cell">11105</block>
+  <block id="d03bcbb93f8e29ffb08772b43b55d234" category="paragraph">使用叢集間生命體進行 SnapMirror 資料傳輸</block>
+  <block id="ff86b94aeb68e2de5387c9dbf865b3b9" category="cell">161-162</block>
+  <block id="a0efde43ffba66184a5c31319245ffda" category="paragraph">簡易網路管理傳輸協定（ SNMP ）</block>
+  <block id="d4b4ed7579a4f9267cc7dff8a948018e" category="cell">所有 ICMP</block>
+  <block id="b1c94ca2fbc3e78fc30069c8d0f01680" category="cell">全部</block>
+  <block id="fbabb5b35538d91f91e0e1d4f56ff5a4" category="paragraph">Ping 執行個體</block>
 </blocks>
