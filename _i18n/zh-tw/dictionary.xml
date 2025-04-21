@@ -350,7 +350,6 @@
   <block id="00c83c7330e77156c35301871a4c4199" category="list-text">* Snapshot Policies * ：選取一或多個 Snapshot 原則。</block>
   <block id="9823554a2be74ea3c8fe833a284ad50a" category="list-text">* 要保留的複本 * ：輸入要保留在目標檔案系統上的快照複本數量。</block>
   <block id="1deea867e21bd00dec42db5a9c106317" category="summary">探索 Amazon Elastic Block Store （ EBS ）儲存設備、 Elastic File System （ EFS ）和適用於 Windows 檔案伺服器的 FSX 、以及 AWS FSX for NetApp ONTAP 中儲存工作負載的節約效益。</block>
-  <block id="ed8b2920ddc5b14cb6c0ba24c4b6c3af" category="inline-link-macro">授予 _ 自動化 _ 權限</block>
   <block id="cf48d7891f28d92c4308fb5debb574b0" category="section-title">探索節約效益</block>
   <block id="71399ad2fbf1c89cad16b73c9e208e04" category="paragraph">請依照儲存設備選項卡下的步驟操作。</block>
   <block id="8e276a5c4eecb9cd5c1fbb0729744eb5" category="open-title">Amazon彈性區塊儲存區（EBS）</block>
@@ -935,7 +934,6 @@
   <block id="dd0818ef84ecf338be3c795b4a57e5c4" category="doc">在 BlueXP  工作負載工廠中探索適用於 ONTAP 的 FSX 所帶來的節約效益</block>
   <block id="26852699cf6fe74856b51ba453d4c0ac" category="paragraph">如果儲存計算機判斷最具成本效益的儲存設備是適用於 ONTAP 的 FSX ，您可以建立或儲存適用於 ONTAP 組態的 FSX ，並使用 Codebox 產生基礎架構即程式碼範本，無論您授予工作負載工廠的權限為何。</block>
   <block id="798944cb742e35be45b885ba05ab898c" category="paragraph">探索偵測到的儲存環境的節約效益：工作負載原廠連結至您現有的 AWS 儲存環境，並將詳細資料擷取至計算機以進行自動比較。您必須授予自動化權限、才能使用自動模式。您可以變更使用案例、但計算中會自動決定所有其他詳細資料。</block>
-  <block id="b86c5bb2dd8e6c760c8bbfff2ddf0923" category="paragraph">為了讓工作負載工廠在 AWS 帳戶中偵測適用於 Windows 檔案伺服器儲存環境的 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和 FSX ，請確定您<block ref="d9270f60c282b5496f17a4b48a6da305" category="inline-link-macro-rx"></block>在 AWS 帳戶中。</block>
   <block id="2d83cd56bca59e576fa64b1541748a03" category="list-text">在 * 彈性區塊存放區（ EBS ） * 標籤中，選取要與 ONTAP 的 FSX 比較的執行個體，然後選取 * 探索節約 * 。</block>
   <block id="f900c4b34e11b02792e1333279ad7266" category="list-text">在 *Amazon FSX for Windows File Server* （適用於 Windows 檔案伺服器 * ）標籤中，選取要與 ONTAP 的 FSX 比較的執行個體，然後選取 * Explore 節約 * 。</block>
   <block id="44db8262955279888fe6689ae1925444" category="list-text">在 * 彈性檔案系統（ EFS ） * 標籤中，選取要與 ONTAP 的 FSX 比較的執行個體，然後選取 * 探索節約 * 。</block>
@@ -1669,4 +1667,6 @@
   <block id="d4b4ed7579a4f9267cc7dff8a948018e" category="cell">所有 ICMP</block>
   <block id="b1c94ca2fbc3e78fc30069c8d0f01680" category="cell">全部</block>
   <block id="fbabb5b35538d91f91e0e1d4f56ff5a4" category="paragraph">Ping 執行個體</block>
+  <block id="70b2c09de9e176a879c840cb014b8c20" category="inline-link-macro">授與 _ 讀取 _ 權限</block>
+  <block id="e395c91c5c84949d52ffb229805b2f5f" category="paragraph">為了讓工作負載工廠在 AWS 帳戶中偵測適用於 Windows 檔案伺服器儲存環境的 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和 FSX ，請確定您<block ref="aa999e6a1b84a9d79249d89f4acbbea1" category="inline-link-macro-rx"></block>在 AWS 帳戶中。</block>
 </blocks>
