@@ -1669,4 +1669,9 @@
   <block id="fbabb5b35538d91f91e0e1d4f56ff5a4" category="paragraph">Ping 執行個體</block>
   <block id="70b2c09de9e176a879c840cb014b8c20" category="inline-link-macro">授與 _ 讀取 _ 權限</block>
   <block id="e395c91c5c84949d52ffb229805b2f5f" category="paragraph">為了讓工作負載工廠在 AWS 帳戶中偵測適用於 Windows 檔案伺服器儲存環境的 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和 FSX ，請確定您<block ref="aa999e6a1b84a9d79249d89f4acbbea1" category="inline-link-macro-rx"></block>在 AWS 帳戶中。</block>
+  <block id="c09b5be4c2da04f4040eef1878f258aa" category="inline-link-macro">部分9文件ONTAP</block>
+  <block id="3611f3afb9bd4ea20ff757fe165aa678" category="paragraph">此外，使用案例選項會決定複寫原則或 SnapMirror 原則（ ONTAP ）。用於描述複寫原則的術語來自<block ref="20dfa0e16eac8597602ade67a04436fd" category="inline-link-macro-rx"></block>。</block>
+  <block id="b5b213ff8da55d939d5b26b2acad4e23" category="list-text">對於移轉和其他作業，複寫原則稱為 _MirrorAllSnapshots_ 。_MirrorAllSnapshots_ 是用於鏡射所有快照和最新作用中檔案系統的非同步原則。</block>
+  <block id="5fc1e1e4cb63004511e44d8fbb5b04a2" category="list-text">對於熱災難恢復，冷災難恢復或歸檔災難恢復，複製策略稱爲 _MirrorAndVault_ 。_MirrorAndVault_ 是一種非同步和資料保險箱原則，可用於鏡射最新的作用中檔案系統，以及每日和每週快照。</block>
+  <block id="a1eefe5e0a806535abe58cb68a54c9d1" category="paragraph">在所有使用案例中，如果您啟用快照以進行長期保留，則預設複寫原則為 _MirrorAndVault_ 。</block>
 </blocks>

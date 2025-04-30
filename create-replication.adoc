@@ -55,6 +55,17 @@ summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免�
 
 
 *** 其他
++
+此外，使用案例選項會決定複寫原則或 SnapMirror 原則（ ONTAP ）。用於描述複寫原則的術語來自link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["部分9文件ONTAP"^]。
+
++
+**** 對於移轉和其他作業，複寫原則稱為 _MirrorAllSnapshots_ 。_MirrorAllSnapshots_ 是用於鏡射所有快照和最新作用中檔案系統的非同步原則。
+**** 對於熱災難恢復，冷災難恢復或歸檔災難恢復，複製策略稱爲 _MirrorAndVault_ 。_MirrorAndVault_ 是一種非同步和資料保險箱原則，可用於鏡射最新的作用中檔案系統，以及每日和每週快照。
++
+在所有使用案例中，如果您啟用快照以進行長期保留，則預設複寫原則為 _MirrorAndVault_ 。
+
+
+
 
 
 .. * 分層原則 * ：選取儲存在目標 Volume 中的資料分層原則。分層原則預設為您所選使用案例的建議分層原則。
@@ -127,6 +138,17 @@ NOTE: 支援一次複寫資料保護磁碟區。
 
 
 *** 其他
++
+此外，使用案例選項會決定複寫原則或 SnapMirror 原則（ ONTAP ）。用於描述複寫原則的術語來自link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["部分9文件ONTAP"^]。
+
++
+**** 對於移轉和其他作業，複寫原則稱為 _MirrorAllSnapshots_ 。_MirrorAllSnapshots_ 是用於鏡射所有快照和最新作用中檔案系統的非同步原則。
+**** 對於熱災難恢復，冷災難恢復或歸檔災難恢復，複製策略稱爲 _MirrorAndVault_ 。_MirrorAndVault_ 是一種非同步和資料保險箱原則，可用於鏡射最新的作用中檔案系統，以及每日和每週快照。
++
+在所有使用案例中，如果您啟用快照以進行長期保留，則預設複寫原則為 _MirrorAndVault_ 。
+
+
+
 
 
 .. * 分層原則 * ：選取儲存在目標 Volume 中的資料分層原則。分層原則預設為您所選使用案例的建議分層原則。
