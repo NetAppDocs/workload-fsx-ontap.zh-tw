@@ -38,7 +38,7 @@ sidebar:
       entries:
       - title: 連結總覽
         url: "/links-overview.html"
-      - title: 建立連結
+      - title: 使用連結連線至檔案系統
         url: "/create-link.html"
       - title: 管理連結
         url: "/manage-links.html"
@@ -76,6 +76,8 @@ sidebar:
           url: "/create-replication.html"
         - title: 初始化複寫關係
           url: "/initialize-replication.html"
+      - title: 利用自動勒索軟體保護來保護資料
+        url: "/ransomware-protection.html"
       - title: 複製磁碟區
         url: "/clone-volume.html"
       - title: 使用內部部署 ONTAP 資料
@@ -84,6 +86,12 @@ sidebar:
     entries:
     - title: 使用 Tracker 監控作業
       url: "/monitor-operations.html"
+    - title: 實作檔案系統最佳實務做法
+      entries:
+      - title: 適用於 ONTAP 的 FSX 組態分析
+        url: "/configuration-analysis.html"
+      - title: 實作架構良好的檔案系統組態
+        url: "/improve-configurations.html"
     - title: Volume管理
       entries:
       - title: 編輯 Volume 自動擴充
@@ -144,6 +152,8 @@ sidebar:
           url: "/manage-backup-schedule.html"
       - title: 複寫
         entries:
+        - title: 複寫資料保護磁碟區
+          url: "/cascade-replication.html"
         - title: 反轉複寫關係
           url: "/reverse-replication.html"
         - title: 變更來源 Volume 的複寫排程

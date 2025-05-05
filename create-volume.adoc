@@ -95,6 +95,7 @@ FlexGroup Volume 大小取決於組成數量。每個成分需要 100 GiB 。
 ..... * 權限 * ：選取 [ 完全控制 ] ， [ 讀取 / 寫入 ] ， [ 讀取 ] 或 [ 無存取權 ] ，然後輸入以分號（ ; ）分隔的使用者或群組。使用者或群組區分大小寫，使用者的網域必須使用「網域 \ 使用者名稱」格式。
 
 
+.... * 安全樣式 * ：對於雙協議卷，請選擇 UNIX 或 NTFS 安全樣式。UNIX 是雙協定磁碟區的預設安全樣式。有關此上下文中用戶映射的詳細指導，請參閱 AWS 博客文章link:https://aws.amazon.com/blogs/storage/enabling-multiprotocol-workloads-with-amazon-fsx-for-netapp-ontap["使用 Amazon FSX for NetApp ONTAP 啟用多重傳輸協定工作負載"^]。
 
 
 *** * 區塊存取 * ：允許執行關鍵業務應用程式的主機使用 iSCSI 傳輸協定存取磁碟區。區塊存取僅在檔案系統橫向擴充部署具有六個或更少 HA 配對時可用。

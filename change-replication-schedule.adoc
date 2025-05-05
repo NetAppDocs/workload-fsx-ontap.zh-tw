@@ -15,6 +15,8 @@ summary: 變更 BlueXP  工作負載工廠複寫關係中來源 Volume 的複�
 
 選擇從來源磁碟區將快照傳輸到複寫磁碟區的頻率、以符合您所需的點目標（ RPO ）。
 
+當內部部署 ONTAP 叢集是複寫關係的目標時，不支援變更複寫排程。
+
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。

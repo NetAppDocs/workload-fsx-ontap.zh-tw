@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: improve-configurations.html 
+keywords: implement best practices, well-architected file system, Amazon FSx for NetApp ONTAP, FSx for ONTAP 
+summary: 資料庫的 BlueXP  工作負載工廠會掃描 Microsoft SQL Server 組態，提供深入分析和建議，協助您達到卓越營運績效。 
+---
+= 實作架構良好的檔案系統組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+利用組態分析洞見和建議，利用 BlueXP  工作負載工廠為您的 ONTAP 檔案系統執行 FSX 的最佳實務做法。您可以輕鬆找到問題，並採取行動，改善任何未針對可靠性，安全性，效率，效能和成本進行最佳化的系統架構。
+
+.關於這項工作
+BlueXP  每天分析 Amazon FSX for NetApp ONTAP 檔案系統部署組態。每日分析提供深入分析和建議，並提供可自動修正組態問題的選項，讓您的檔案系統符合最佳實務做法。
+
+您可以選擇檢閱檔案系統組態問題的建議，並從工作負載原廠主控台的儲存設備庫存中修正這些問題。
+
+分析內容:: 工作負載工廠會針對適用於 ONTAP 檔案系統的 FSX ，分析下列組態的架構良好狀態：
++
+--
+* SSD 容量臨界值
+* 資料分層
+* 排程的本機快照
+* 適用於 ONTAP 備份的 FSX ，以及
+* 遠端資料複寫
+
+
+--
+
+
+.開始之前
+* 您必須擁有具有唯讀或讀寫權限的認證。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["瞭解如何在 AWS 帳戶中授予權限"^]。
+* 在選擇修正設定或組態之前，請務必仔細檢閱每項建議。
+
+
+
+NOTE: 補救程序可能會導致執行個體停機或服務中斷。在您選擇修正組態問題之前，請務必仔細檢閱建議內容。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在「資料庫」方塊中，選取 * 移至「儲存設備詳細目錄」 * 。
+. 在 *FSX for ONTAP * 標籤中，瀏覽至 * 架構良好的狀態 * 欄，然後選取要修正的檔案系統問題。
+. 在檔案系統架構良好的儀表板中，依類別，子類別，狀態，嚴重性和標記來篩選組態問題。
+. 選取下拉式箭頭以檢視任何組態的建議。請務必仔細檢閱建議內容。
++
+本建議說明未最佳化組態的最佳實務做法和潛在陷阱。
+
+. 選擇 * 修復 * 。
++
+當 * 檢視與修正 * 為選項時，請選取要修正的受影響磁碟區。
+
+. 檢閱對話方塊中顯示的摘要和行動項目，瞭解如果您選擇修正問題，會發生什麼情況。某些作業可能會導致執行個體停機或服務中斷。
+. 選取 * 繼續 * 以修正組態問題。
+
+
+.結果
+修正問題的程序即會啟動。選取 * 工作監控 * 標籤以檢視作業狀態。

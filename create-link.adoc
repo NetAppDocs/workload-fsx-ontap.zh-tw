@@ -1,28 +1,37 @@
 ---
 sidebar: sidebar 
 permalink: create-link.html 
-keywords: links, add, add links, add link, create link 
+keywords: connect, connection, link, lambda link, associate link, create link, authenticate link 
 summary: 您可以建立及管理連結，以在 BlueXP  工作負載工廠帳戶和一或多個適用於 ONTAP 檔案系統的 FSX 之間提供信任關係和連線能力。 
 ---
-= 在 BlueXP  工作負載工廠建立連結
+= 使用 Lambda 連結連線至適用於 ONTAP 檔案系統的 FSX
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-您可以建立及管理連結，在 BlueXP  工作負載工廠的工作負載工廠帳戶和 ONTAP 檔案系統的一個或多個 FSX 之間提供信任關係和連線。這可讓您直接從適用於 ONTAP 檔案系統的 FSX 監控及管理某些功能、這些功能無法透過 AWS FSX for ONTAP API 取得。
+若要執行進階 ONTAP 管理作業，您必須在工作負載原廠帳戶和一或多個適用於 ONTAP 檔案系統的 FSX 之間建立連線。建立連線包括建立新的和現有的 Lambda 連結，以及驗證連結。連結關聯可讓您直接從適用於 ONTAP 檔案系統的 FSX 監控及管理某些功能，這些功能無法透過 AWS FSX for ONTAP API 取得。
 
 link:links-overview.html["深入瞭解連結"]。
 
 .關於這項工作
 連結利用 AWS Lambda 執行程式碼來回應事件、並自動管理該程式碼所需的運算資源。您建立的連結是 NetApp 帳戶的一部分、它們與 AWS 帳戶相關聯。
 
-定義 ONTAP 檔案系統的 FSX 時、您可以在帳戶中建立連結。該連結將用於該檔案系統、其他的 FSX 可用於 ONTAP 檔案系統。
+定義 ONTAP 檔案系統的 FSX 時、您可以在帳戶中建立連結。該連結將用於該檔案系統、其他的 FSX 可用於 ONTAP 檔案系統。您也可以稍後建立檔案系統的連結。
 
-您必須在 AWS 帳戶中啟動 AWS CloudForgation 堆疊、才能建立連結。
+連結需要驗證。您可以使用儲存在工作負載原廠認證服務中的認證資料，或是儲存在 AWS Secrets Manager 中的認證資料，來建立可靠的連結。每個連結只支援一種驗證方法。例如，如果您選取連結驗證與 AWS Secrets Manager ，則之後就無法變更驗證方法。
 
-您有兩個選項可以自動或手動建立連結。
+
+NOTE: 使用 Connector 時不支援 AWS Secrets Manager 。
+
+
+
+== 建立新連結的關聯
+
+建立新連結的關聯包括連結建立和關聯。
+
+您有兩個選項可以自動或手動建立連結。您必須在 AWS 帳戶中啟動 AWS CloudForgation 堆疊、才能建立連結。
 
 * 自動：透過工作負載工廠建立自動登錄的連結。自動建立的連結需要工作負載工廠自動化的權杖， CloudForgation 程式碼也很短。最多只能使用六小時。
 * 手動：建立具有手動登錄的連結。CloudForgation 程式碼持續提供您更多時間來完成作業。這在與安全和 DevOps 等不同團隊合作時很有用，因為他們可能需要先授予完成連結建立所需的權限。
@@ -30,7 +39,7 @@ link:links-overview.html["深入瞭解連結"]。
 
 .開始之前
 * 您應該考慮要使用哪個連結建立選項。
-* 您必須擁有認證才能登入 AWS 帳戶。
+* 您必須在工作負載工廠中至少有一個適用於 ONTAP 檔案系統的 FSX 。若要探索或建立適用於 ONTAP 檔案系統的 FSX ，您必須擁有 AWS 帳戶，具有適用於 ONTAP 執行個體的 FSX 權限，以及link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["在工作負載工廠新增認證"^]儲存管理的唯讀或讀寫權限。
 * 使用 CloudFormation 堆疊新增連結時、 AWS 帳戶必須具有下列權限：
 +
 [%collapsible]
@@ -80,12 +89,21 @@ link:links-overview.html["深入瞭解連結"]。
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以建立連結的關聯，然後選取 * 管理 * 。
-. 在檔案系統總覽中、選取 * 關聯連結 * 。
+. 在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以建立連結，然後選取 * 建立連結 * 。
 . 在關聯連結對話方塊中、選取 * 建立新連結 * 、然後選取 * 繼續 * 。
 . 在「建立連結」頁面上、提供下列項目：
 +
 .. * 連結名稱 * ：輸入您要用於此連結的名稱。名稱在您的帳戶中必須是唯一的。
+.. * AWS Secrets Manager* ：選用。允許工作負載工廠從 AWS Secrets Manager 擷取適用於 ONTAP 存取認證的 FSX 。
++
+連結部署堆疊會將下列預設密碼管理程式 ARN regex 新增至 Lambda 權限原則 `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`：。
+
++
+您可以根據預設權限建立機密，或為連結原則指派自訂權限。
+
++
+* 將 VPC 私有端點設定為 AWS Secrets Manager* 預設為停用。選取此選項會使用 VPC 私有端點儲存機密，而非儲存在本機。
+
 .. * 標記 * ：您也可以選擇新增任何標記來與此連結建立關聯、以便更輕鬆地將資源分類。例如、您可以新增一個標記、將此連結識別為由 FSX 用於 ONTAP 檔案系統。
 +
 AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔案系統的 FSX 自動擷取。
@@ -121,23 +139,118 @@ AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔
 使用此選項、您可以從 AWS CloudForgation 擷取連結的 ARN 、並在此處報告。工作負載工廠會手動為您登錄連結。
 
 .步驟
-使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。。在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。。在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以建立連結的關聯，然後選取 * 管理 * 。。在檔案系統總覽中、選取 * 關聯連結 * 。。在關聯連結對話方塊中、選取 * 建立新連結 * 、然後選取 * 繼續 * 。。在「建立連結」頁面上，提供下列資訊： ...* 連結名稱 * ：輸入您要用於此連結的名稱。名稱在您的帳戶中必須是唯一的。...* 標記 * ：您也可以選擇新增任何標記來與此連結建立關聯、以便更輕鬆地將資源分類。例如、您可以新增一個標記、將此連結識別為由 FSX 用於 ONTAP 檔案系統。...* 連結註冊 * ：在下拉式箭頭上選取，展開如何從 AWS CloudForgation 服務註冊連結的指示。請依照指示進行。
-
-+ 請注意，當您啟動 CloudForgation 範本時， Lambda 會獲得三個權限。工作負載工廠在使用連結時會使用這些權限。
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以建立連結，然後選取 * 建立連結 * 。
+. 在關聯連結對話方塊中、選取 * 建立新連結 * 、然後選取 * 繼續 * 。
+. 在「建立連結」頁面上、提供下列項目：
++
+.. * 連結名稱 * ：輸入您要用於此連結的名稱。名稱在您的帳戶中必須是唯一的。
+.. * AWS Secrets Manager* ：選用。允許工作負載工廠從 AWS Secrets Manager 擷取適用於 ONTAP 存取認證的 FSX 。
++
+連結部署堆疊會將下列預設密碼管理程式 ARN regex 新增至 Lambda 權限原則 `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`：。
 
 +
+您可以根據預設權限建立機密，或為連結原則指派自訂權限。
 
++
+* 將 VPC 私有端點設定為 AWS Secrets Manager* 預設為停用。選取此選項會使用 VPC 私有端點儲存機密，而非儲存在本機。
+
+.. * 標記 * ：您也可以選擇新增任何標記來與此連結建立關聯、以便更輕鬆地將資源分類。例如、您可以新增一個標記、將此連結識別為由 FSX 用於 ONTAP 檔案系統。
+.. * 連結註冊 * ：在下拉式箭頭上選取，展開如何從 AWS CloudForgation 服務註冊連結的指示。請依照指示進行。
++
+請注意、當您啟動 CloudForgation 範本時、 Lambda 會獲得三個權限。工作負載工廠在使用連結時會使用這些權限。
+
++
 [source, json]
 ----
 "lambda:InvokeFunction",
 "lambda:GetFunction",
 "lambda:UpdateFunctionCode"
 ----
-+ 成功建立堆疊後，將 Lambda ARN 貼到文字方塊中。...AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔案系統的 FSX 自動擷取。。選擇* Create *（建立*）。
++
+成功建立堆疊後、將 Lambda ARN 貼到文字方塊中。
 
-+ 您可以從「事件」頁面監控連結建立狀態。這不應超過 5 分鐘。。返回工作負載原廠介面，您會看到連結與 ONTAP 檔案系統的 FSX 相關聯。
+.. AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔案系統的 FSX 自動擷取。
+
+
+. 選擇* Create *（建立*）。
++
+您可以從「事件」頁面監控連結建立狀態。這不應超過 5 分鐘。
+
+. 返回工作負載原廠介面，您會看到連結與 ONTAP 檔案系統的 FSX 相關聯。
+
 
 --
 ====
 .結果
-您建立的連結會與適用於 ONTAP 檔案系統的 FSX 相關聯。
+您建立的連結會與適用於 ONTAP 檔案系統的 FSX 相關聯。您可以執行進階 ONTAP 作業。
+
+
+
+== 將現有連結與適用於 ONTAP 檔案系統的 FSX 建立關聯
+
+建立連結之後，請將其與 ONTAP 檔案系統的一或多個 FSX 建立關聯。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以建立連結，然後選取 * 建立連結 * 。
+. 在「建立關聯」連結頁面中，選取 * 建立現有連結的關聯 * ，選取連結，然後選取 * 繼續 * 。
+. 選取驗證模式。
++
+** Workload Factory ：輸入密碼兩次。
+** AWS Secrets Manager ：輸入機密 ARN 。
++
+秘密 ARN 必須包含下列金鑰有效配對：
+
++
+*** filesystemID = fsx_filesystem_id
+*** 使用者 = FSx_user
+*** 密碼 = user_password
+
+
+
+
+. 選擇*應用*。
+
+
+.結果
+此連結與適用於 ONTAP 檔案系統的 FSX 相關聯。您可以執行進階 ONTAP 作業。
+
+
+
+== 疑難排解 AWS Secrets Manager 連結驗證的問題
+
+問題:: 連結缺少擷取機密的權限。
++
+--
+* 解析度 * ：在連結啟用後新增權限。登入 AWS 主控台，找到 Lambda 連結，然後編輯附加的權限原則。
+
+--
+問題:: 找不到機密。
++
+--
+* 解決方法 * ：提供正確的秘密 ARN 。
+
+--
+問題:: 機密格式不正確。
++
+--
+* 解析度 * ：前往 AWS Secrets Manager 並編輯格式。
+
+密碼應包含下列金鑰有效配對：
+
+* filesystemID = fsx_filesystem_id
+* 使用者 = FSx_user
+* 密碼 = user_password
+
+
+--
+問題:: 機密不包含用於檔案系統驗證的有效 ONTAP 認證。
++
+--
+* 解析度 * ：提供認證，可在 AWS Secrets Manager 中驗證 ONTAP 檔案系統的 FSX 。
+
+--
+

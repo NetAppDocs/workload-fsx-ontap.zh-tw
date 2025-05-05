@@ -37,29 +37,58 @@ image:screenshot-view-link-details.png["顯示使用特定連結之 ONTAP 檔案
 
 
 
-== 將連結與 ONTAP 檔案系統的 FSX 建立關聯
-
-建立連結之後、即可將其與適用於 ONTAP 檔案系統的 FSX 建立關聯。每個檔案系統只能與單一 NetApp 帳戶中的一個連結建立關聯、但連結可以與許多檔案系統建立關聯。
-
-.步驟
-. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以建立連結的關聯，然後選取 * 管理 * 。
-. 在檔案系統總覽中、選取 * 關聯連結 * 。
-. 在「建立關聯」連結頁面中、選取 * 建立現有連結的關聯 * 、選取連結、然後選取 * 套用 * 。
-
-
-.結果
-此連結與適用於 ONTAP 檔案系統的 FSX 相關聯、您可以執行進階 ONTAP 作業。
-
-
-
 == 編輯連結
 
 您無法從工作負載原廠介面編輯連結。如果您需要變更連結、則需要建立新連結、然後將該連結與檔案系統建立關聯。
 
 
 NOTE: 您可以使用 AWS 主控台編輯 Lambda 網路組態（例如 VPC 、子網路和安全性群組）、變更會反映在連結管理 UI 中；不過、這些變更可能會導致 Lambda 和 ONTAP 之間的連線問題、不建議使用。
+
+
+
+== 驗證連結
+
+提供工作負載原廠認證的管理使用者密碼，或是 AWS Secrets Manager 機密 ARN ，將連結連線至 ONTAP 檔案系統的 FSX 。
+
+使用 Connector 時不支援 AWS Secrets Manager 。
+
+
+NOTE: 每個連結只支援一種驗證方法。例如，如果您選取連結驗證與 AWS Secrets Manager ，則之後就無法變更驗證方法。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以建立連結的關聯，然後選取 * 管理 * 。
+. 在檔案系統總覽中，選取 * 驗證連結 * 。
+. 在驗證連結頁面中，選取驗證模式：
++
+** Workload Factory ：輸入密碼兩次。
+** AWS Secrets Manager ：輸入機密 ARN 。
+
+
+. 選擇*應用*。
+
+
+.結果
+連結已驗證，您可以執行進階 ONTAP 作業
+
+
+
+== 更新連結驗證的密碼
+
+當管理密碼無效時，請更新密碼，將連結連線至 ONTAP 檔案系統的 FSX 。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以建立連結的關聯，然後選取 * 管理 * 。
+. 在檔案系統總覽中，選取 * 更新密碼 * 。
+. 在驗證連結頁面中，輸入兩次新密碼。
+. 選擇*應用*。
+
+
+.結果
+密碼已更新，且連結現在已連線至適用於 ONTAP 檔案系統的 FSX 。
 
 
 

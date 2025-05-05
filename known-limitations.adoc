@@ -106,6 +106,12 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 System Manager 不支援用於 ONTAP 連線的 FSX 連結。
 
+
+
+== AWS Secrets Manager 支援
+
+使用 Connector 時不支援 AWS Secrets Manager 。
+
 附註：
 
 . 適用於 Amazon FSX for NetApp ONTAP

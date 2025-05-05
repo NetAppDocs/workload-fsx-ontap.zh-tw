@@ -1,49 +1,39 @@
 ---
 sidebar: sidebar 
-permalink: create-replication.html 
-keywords: replication, replicate 
-summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免在發生無法預見的災難時遺失資料。 
+permalink: cascade-replication.html 
+keywords: replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume 
+summary: 複寫資料保護磁碟區，或串聯磁碟區資料的複寫，將資料保護延伸至第三系統或移轉資料。 
 ---
-= 在 BlueXP  工作負載工廠建立複寫關係
+= 在 BlueXP  工作負載工廠中複寫資料保護磁碟區
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在 BlueXP  工作負載工廠中為適用於 ONTAP 檔案系統的 FSX 建立複寫關係，以避免發生無法預見的災難時發生資料遺失。
+複寫資料保護磁碟區，或串聯磁碟區資料的複寫，將資料保護延伸至第三系統或移轉資料。
 
 .關於這項工作
-複寫是新增的資料保護層、在資料所在的區域發生災難時、這是不可或缺的。如果您使用跨區域複寫、則可避免資料遺失。
+BlueXP  工作負載工廠支援複寫資料保護磁碟區，也稱為串聯部署。層疊式部署由一系列關係組成，其中來源 Volume 會鏡射至次要 Volume （第一跳），次要 Volume 則鏡射至第三個 Volume （第二跳）。如果次要Volume無法使用、您可以在不執行新的基礎傳輸的情況下、同步主要和第三個Volume之間的關係。
 
-此作業會為適用於 ONTAP 檔案系統的 FSX 中的一或所有來源磁碟區建立複寫關係。
+適用於 ONTAP 9.6 版及更新版本 ONTAP 檔案系統的 FSX 支援此功能。請參閱 link:https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html#snapmirror-disaster-recovery-relationships["相容 ONTAP 版本的 ONTAP 文件"^]。
 
-目標檔案系統中的複寫磁碟區為資料保護（ DP ）磁碟區，並遵循命名格式： `{OriginalVolumeName}_copy`。
+深入瞭解 link:https://docs.netapp.com/us-en/ontap/data-protection/supported-deployment-config-concept.html#how-cascade-deployments-work["串聯部署的運作方式"^]。
 
 .開始之前
-開始之前、請確定您符合下列先決條件。
+開始之前請先考慮下列事項：
 
-* 您的儲存設備庫存中必須有兩個可用的檔案系統、才能建立複寫關係。
-* 您用於複寫關係的兩個檔案系統必須有相關的連結。如果檔案系統沒有現有的連結，請參閱 link:create-link.html["首先建立連結"]。link:manage-links.html["建立連結的關聯"]在檔案系統中，在 * 帳戶名稱 * 下選擇 * 關聯連結 * 。連結在兩個檔案系統中建立關聯後、請返回此作業。
+* 請注意，屬於串聯組態一部分的磁碟區可能需要較長時間才能重新同步。
+* 如果關係的來源 Volume 是資料保護磁碟區，而且是另一個關係的目標，則不支援反轉複寫關係。
+* 支援資料保護磁碟區的一個複本（或第二個躍點）。建立資料保護磁碟區（或第三跳）的第二個複本並不視為最佳實務做法。
 
-
-請完成下列步驟來複寫選取的磁碟區，或複寫檔案系統中的所有磁碟區。
-
-您可以複寫一個來源（讀取 / 寫入）磁碟區或一個資料保護（ DP ）磁碟區。支援串聯複寫，但不支援第三個躍點。深入瞭解 link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["串聯複寫"^]。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
 . 在 *FSX for ONTAP * 標籤中，選取包含要複寫之磁碟區的檔案系統三點功能表，然後選取 * 管理 * 。
-. 可複寫檔案系統中的所有磁碟區，或複寫選取的磁碟區。
-+
-** 若要複寫檔案系統中的所有磁碟區：從檔案系統總覽選取 * 複寫資料 * 。
-** 若要複寫選取的磁碟區：從檔案系統總覽中選取 * Volumes （磁碟區） * 標籤。
-+
-在 Volumes （卷）表中，選擇一個或多個卷，然後選擇 *Replicate data* 。
-
-
-
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 在 Volumes （磁碟區）表格中，選取一或多個資料保護磁碟區（ DP / 複寫磁碟區），然後選取 * Replicate data* 。
 . 在「複寫資料」頁面的「複寫目標」下，提供下列項目：
 +
 .. * 適用於 ONTAP 檔案系統 * 的 FSX ：針對適用於 ONTAP 檔案系統的目標 FSX 、選取 ONTAP 檔案系統名稱的認證、區域和 FSX 。
@@ -60,17 +50,6 @@ summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免�
 
 
 *** 其他
-+
-此外，使用案例選項會決定複寫原則或 SnapMirror 原則（ ONTAP ）。用於描述複寫原則的術語來自link:https://docs.netapp.com/us-en/ontap/data-protection/default-protection-policies-concept.html["部分9文件ONTAP"^]。
-
-+
-**** 對於移轉和其他作業，複寫原則稱為 _MirrorAllSnapshots_ 。_MirrorAllSnapshots_ 是用於鏡射所有快照和最新作用中檔案系統的非同步原則。
-**** 對於熱災難恢復，冷災難恢復或歸檔災難恢復，複製策略稱爲 _MirrorAndVault_ 。_MirrorAndVault_ 是一種非同步和資料保險箱原則，可用於鏡射最新的作用中檔案系統，以及每日和每週快照。
-+
-在所有使用案例中，如果您啟用快照以進行長期保留，則預設複寫原則為 _MirrorAndVault_ 。
-
-
-
 
 
 .. * 分層原則 * ：選取儲存在目標 Volume 中的資料分層原則。分層原則預設為您所選使用案例的建議分層原則。
@@ -119,4 +98,4 @@ NOTE: 長期保留需要相符的來源和目標標籤。如有需要，工作�
 
 
 .結果
-複寫關係會出現在 ONTAP 檔案系統的目標 FSX 的 * 複寫關係 * 索引標籤中。
+複寫的磁碟區會複寫，並顯示在 ONTAP 檔案系統的目標 FSX 的 * 複寫關係 * 標籤中。

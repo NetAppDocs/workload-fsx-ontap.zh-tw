@@ -17,6 +17,8 @@ summary: 啟用快照以進行長期保留，可讓您複寫特定快照以進�
 
 同樣的步驟也適用於啟用和編輯快照以進行長期保留。
 
+當內部部署 ONTAP 叢集是複寫關係的目標時，不支援變更快照以進行長期保留。
+
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。

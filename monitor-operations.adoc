@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: monitor-operations.html 
-keywords: monitor databases, monitor jobs, track database jobs 
+keywords: monitor databases, monitor jobs, track storage jobs, track jobs 
 summary: 追蹤 ONTAP 的 FSX ，認證和連結作業，並使用 BlueXP  儲存工作負載工廠的 Tracker 來監控工作進度。 
 ---
 = 使用 BlueXP  工作負載工廠中的 Tracker 監控儲存作業
@@ -14,9 +14,11 @@ summary: 追蹤 ONTAP 的 FSX ，認證和連結作業，並使用 BlueXP  儲�
 使用 BlueXP  工作負載工廠的 Tracker ，監控和追蹤 ONTAP 的 FSX ，認證和連結作業的執行，並監控工作進度。
 
 .關於這項工作
-工作負載工廠提供追蹤器這項監控功能，可讓您監控和追蹤 ONTAP 的 FSX ，認證和連結作業的進度和狀態，檢閱作業工作和子任務的詳細資料，診斷任何問題或失敗，編輯失敗作業的參數，以及重試失敗的作業。您可以依類型和狀態篩選工作，使用搜尋功能尋找工作，然後下載工作表。
+工作負載工廠提供追蹤器這項監控功能，可讓您監控和追蹤 ONTAP 的 FSX ，認證和連結作業的進度和狀態，檢閱操作工作和子任務的詳細資料，以及診斷任何問題或故障。
 
-Tracker 最多可支援三種監控層級，視作業而定。每項工作（例如檔案系統部署）都會顯示工作說明，狀態，開始時間，工作持續時間，使用者，區域， Proxy 資源，工作 ID 及所有相關的子工作。
+Tracker 中有幾個動作可供使用。您可以依時間範圍（過去 24 小時， 7 天， 14 天或 30 天），工作負載，狀態和使用者來篩選工作；使用搜尋功能尋找工作；並將工作表下載為 CSV 檔案。您可以隨時重新整理 Tracker 。您也可以快速重試失敗的作業，或編輯失敗作業的參數，然後再試一次。
+
+Tracker 支援兩種監控層級，視作業而定。每項工作（例如檔案系統部署）都會顯示工作說明，狀態，開始時間，工作持續時間，使用者，區域， Proxy 資源，工作 ID 及所有相關的子工作。您可以檢視 API 回應，瞭解作業期間發生的情況。
 
 以範例追蹤工作層級::
 +

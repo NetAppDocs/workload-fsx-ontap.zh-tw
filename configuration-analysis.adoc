@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: configuration-analysis.html 
+keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
+summary: BlueXP  工作負載工廠會定期分析 Amazon FSX for NetApp ONTAP 檔案系統組態，以判斷是否有任何問題。 
+---
+= 適用於 ONTAP 檔案系統的 FSX 組態分析
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+BlueXP  工作負載工廠會定期分析 Amazon FSX for NetApp ONTAP 檔案系統組態，以判斷是否有任何問題。發現問題時，工作負載工廠會向您說明問題所在，並說明需要變更哪些項目，以確保檔案系統儲存設備達到尖峰效能，成本效益，並符合最佳實務做法。
+
+主要功能包括：
+
+* 每日組態分析
+* 自動最佳實務驗證
+* 主動觀察
+* 行動洞見
+* AWS 架構良好的架構顧問
+
+
+
+
+== 架構良好的狀態
+
+在檔案系統層級的工作負載原廠主控台中，所有適用於 ONTAP 檔案系統的 FSX 都會列出架構良好的狀態。架構良好的狀態可歸類為「問題」，「未分析」或「架構良好」。選擇架構良好的狀態會將您重新導向至檔案系統內架構良好的狀態索引標籤，您可以在其中找到架構良好的分數，組態類別，檔案系統的所有組態。
+
+架構良好的分數:: 分數包括所有目前分析的組態，並以百分比顯示。25% 的分數表示 25% 的檔案系統組態架構良好。
+組態類別:: 檔案系統組態分為幾類，符合 AWS 架構良好的架構架構的下列五大支柱。
++
+--
+* _ 可靠性 _ ：確保工作負載能正確且一致地執行其預期功能，即使發生中斷也沒問題。ONTAP 備份的範例組態為 FSX 。
+* _ 安全 _ ：強調透過風險評估和緩解策略來保護資料，系統和資產。
+* 營運卓越 _ ：專注於提供最理想的架構和商業價值。
+* 成本最佳化 _ ：旨在提供商業價值，同時將成本降至最低。
+* _ 效能效率 _ ：專注於有效運用資源來滿足系統需求，並在需求改變時維持最佳效能。
+
+
+--
+
+
+
+
+== 分析需求
+
+若要進行完整的檔案系統分析，您必須建立連結的關聯。連結連線功能可讓工作負載在工廠中分析所有檔案系統組態，例如資料保護和效能。
+
+link:create-link.html["瞭解如何建立連結。"]
+
+.下一步
+link:improve-configurations.html["改善適用於 ONTAP 部署的 FSX 組態"]
