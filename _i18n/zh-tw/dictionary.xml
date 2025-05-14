@@ -944,11 +944,6 @@
   <block id="f6858e5eadd0ed940450d85121838545" category="list-text">* 工作負載工廠使用者介面 * ：提供 _ 快速建立 _ 和 _ 進階建立 _ 部署模式選項。快速建立包括 AWS 、 NetApp 、以及適用於您儲存組態的業界標準最佳實務做法。</block>
   <block id="200e3179449390bdf5f3f8d9a199630c" category="section-title">使用工作負載工廠的工具</block>
   <block id="b5a374f3f5b31b5057808689d26fe2c4" category="paragraph">您可以搭配下列工具使用 BlueXP  工作負載工廠：</block>
-  <block id="d5688c5bf16d0126d5b27759385bd41e" category="list-text">* 工作負載原廠主控台 * ：工作負載原廠主控台提供視覺化介面，可讓您全面檢視應用程式和專案</block>
-  <block id="38f4e563ea70a0c42a140783a152e82f" category="list-text">* BlueXP  console* ： BlueXP  主控台提供混合式介面體驗，讓您可以將 BlueXP  工作負載工廠與其他 BlueXP  服務一起使用</block>
-  <block id="a3ee2d6d4606b21bc131c4389e63413b" category="list-text">* REST API* ：工作負載原廠 REST API 可讓您部署及管理適用於 ONTAP 檔案系統和其他 AWS 資源的 FSX</block>
-  <block id="35507c73673fd91f2b540f5ac22435e2" category="list-text">* CloudForgi38* ： AWS CloudForgation 程式碼可讓您執行工作負載原廠主控台中定義的動作，以建構，配置及管理 AWS 帳戶中 CloudForgation 堆疊中的 AWS 和第三方資源</block>
-  <block id="2b796a233d6b48fb3e49b8c71a2addb1" category="list-text">* Terraform BlueXP  工作負載工廠供應商 * ： Terraform 可讓您建置及管理在工作負載工廠主控台產生的基礎架構工作流程</block>
   <block id="652598e6fd9da9bdc98db0ef4a093ddd" category="paragraph">有關工作負載工廠或工作負載工廠應用程式與服務的一般問題，請<block ref="b4c96257ecccde997612582bfecaef76" category="inline-link-macro-rx"></block>參閱。</block>
   <block id="1dde4a08beb94964c3432a2fc7fdc3fc" category="doc">BlueXP  工作負載工廠的法律聲明</block>
   <block id="ac09047fc1cd6bf09a117141110f48d7" category="summary">限制 BlueXP  工作負載工廠中複寫關係的最大傳輸率。</block>
@@ -1904,4 +1899,11 @@
   <block id="897bea1a5ca479178427004f773ee72e" category="list-text">您也可以在重新平衡之前下載磁碟區移動清單。</block>
   <block id="703547df715082455f8920d78fe90a30" category="list-text">選擇 * 重新平衡 * 。</block>
   <block id="dc3d2b1db09a8cee9576c2df34eba7b1" category="paragraph">視 FlexGroup 新增的 FlexGroup 成員磁碟區數量而定，一次只會執行一個 FlexGroup 磁碟區成員移動作業。當作業完成時，檔案系統將會被節流回原始值。</block>
+  <block id="4b50901597179fa075617d96ccf51901" category="list-text">* 工作負載原廠主控台 * ：工作負載原廠主控台可提供應用程式與專案的視覺化整體檢視。</block>
+  <block id="590410b3a112ba2f531f9aae44e29ed1" category="list-text">* BlueXP  console* ： BlueXP  主控台提供混合式介面體驗，讓您可以將 BlueXP  工作負載工廠與其他 BlueXP  服務一起使用。</block>
+  <block id="62c5120220d244bd5e611d7c4459b5c5" category="list-text">* 詢問我 * ：使用「詢問我 AI 」助理來詢問問題，並深入瞭解工作負載工廠，而無需離開工作負載工廠的網路 UI 。從工作負載原廠說明功能表存取 Ask me 。</block>
+  <block id="e234d079cc2fccaeed8041a81e1e8122" category="list-text">* CloudShell CL1* ：工作負載工廠包含 CloudShell CLI ，可透過單一瀏覽器型 CLI ，跨帳戶管理及操作 AWS 和 NetApp 環境。從工作負載原廠主控台的頂端列存取 CloudShell 。</block>
+  <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">* REST API* ：使用工作負載原廠 REST API 來部署及管理適用於 ONTAP 檔案系統和其他 AWS 資源的 FSX 。</block>
+  <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">* CloudForgius* ：使用 AWS CloudForgation 程式碼來執行您在工作負載工廠主控台中定義的動作，以便在 AWS 帳戶中建構，配置及管理 CloudForgation 堆疊中的 AWS 和第三方資源。</block>
+  <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">* Terraform BlueXP  工作負載工廠供應商 * ：使用 Terraform 建置及管理工作負載工廠主控台所產生的基礎架構工作流程。</block>
 </blocks>
