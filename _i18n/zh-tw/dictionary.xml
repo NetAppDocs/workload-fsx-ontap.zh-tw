@@ -557,9 +557,6 @@
   <block id="9bd1b5c2c50da3c36cba4f17c259ae08" category="inline-link-macro">使用儲存節約計算機探索節約效益。</block>
   <block id="74125d7a69a31a4c2d6c6637ca43f137" category="paragraph">您也可以從儲存節約計算機開始、比較 Amazon Elastic Block Store 、 Elastic File System 和適用於 Windows 檔案伺服器儲存環境的 FSX 與適用於 ONTAP 的 FSX 的成本。 <block ref="487bc82bdb3f9feb4b100f5bfcc33ebf" category="inline-link-macro-rx"></block></block>
   <block id="89568baf7659b31a2110d1de7f69778d" category="paragraph">您可以在儲存設備庫存中使用檔案系統 <block ref="41a32458a6146c3b772c57ac70acc68e" category="inline-link-macro-rx"></block>、管理適用於 ONTAP 檔案系統的 FSX 、以及設定資源的資料保護。</block>
-  <block id="15aca40f14c29fe9e5a56d6734a1f791" category="paragraph">重新平衡磁碟區會在新增檔案和檔案成長、隨著時間的推移而產生不平衡時、重新分配容量。手動開始重新平衡作業後、我們會選取檔案、並自動且不中斷地移動。</block>
-  <block id="c58a14e0270c321d51e150d167496aa7" category="list-text">選擇 * 進階動作 * 、然後 * 重新平衡 Volume * 。</block>
-  <block id="f648cc9da4798cb98b75d0072b51f243" category="list-text">在重新平衡體積對話方塊中、選取 * 重新平衡 * 。</block>
   <block id="a509c58d8659a3366f3053048526e6ec" category="summary">將儲存 VM 複製到另一個適用於 ONTAP 檔案系統的 FSX 、可在資料遺失時提供保護層的資料存取。</block>
   <block id="ec42d150d63ba9d69905da61ff84b59b" category="doc">將儲存 VM 複寫到另一個適用於 ONTAP 檔案系統的 FSX</block>
   <block id="068ecbcf009e32427973dc04a3628cb7" category="list-text">選取 * 複寫儲存 VM* 。</block>
@@ -1007,7 +1004,6 @@
   <block id="e5d3c7248ff4540f88c13fbf9252d0a3" category="inline-link-macro">工作負載原廠主控台</block>
   <block id="4e3446d47d185e690e48c92eec422d48" category="paragraph">您將建立一個 FSX 檔案系統，開始在工作負載工廠中管理您的儲存設備和 ONTAP 資源的 FSX 。在的<block ref="fe6e1b2479e1125e03c713ad62b5343f" category="inline-link-macro-rx"></block>儲存區中，選取 * 建立檔案系統 * 。<block ref="1f3b8beb11bf530a33922b2af302faf4" category="inline-link-macro-rx"></block>。</block>
   <block id="4d63cdce7e101414c4de73486d63848d" category="list-text">在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要重新平衡的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。</block>
-  <block id="91d9e9f75e88d6dd3c5e8243febefc5c" category="list-text">從 Volumes （磁碟區）標籤中，選取要重新平衡的磁碟區的三點選單。</block>
   <block id="dce2b73a361987bf4b1c310d93bedcb4" category="paragraph">在 BlueXP  工作負載工廠中，將儲存 VM 複製到另一個適用於 ONTAP 檔案系統的 FSX ，可在資料遺失時提供保護層的資料存取。此作業會將一個儲存 VM 中的所有磁碟區複寫到另一個適用於 ONTAP 檔案系統的 FSX 。</block>
   <block id="32c800656566b827842f290b45bbf1ca" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中，選取檔案系統的三點功能表，並將儲存 VM 複寫到其中，然後選取 * 管理 * 。</block>
   <block id="3ed4d57a718312d39dfbeecf23d4628d" category="list-text">從 Storage VMs （儲存 VM ）標籤中，選取要複寫 SVM 的儲存 VM 的三點功能表。</block>
@@ -1485,9 +1481,7 @@
   <block id="8083bd6761abe4735ad26f9c18899032" category="doc">檢查並重新平衡磁碟區的容量</block>
   <block id="270753bb6aea2d40b94194b021e500ae" category="paragraph">檢查 FlexGroup Volume 容量的平衡，並重新平衡磁碟區容量，以便將檔案平均分散到所有組成區，讓所有節點都能參與單一 Flex Group Volume 的工作負載。</block>
   <block id="8d52048ef57a4217559a7ca3e0deeefa" category="paragraph">FlexGroup Volume 容量分散在橫向擴充的 FSX 中，適用於具有兩個或更多高可用度（ HA ）配對的 ONTAP 檔案系統。每個組成都是指定最大單一檔案大小的容器。適用於 ONTAP 的 FSX 會以均勻的方式跨所有成員分散檔案，讓所有節點都能參與單一 FlexGroup Volume 的工作負載。</block>
-  <block id="3e614bee780ca4f239b415605468630f" category="paragraph">當組成要素未平均分散於所有節點時， FlexGroup Volume 效能會降低。</block>
   <block id="04533b4edf31c61772ef483585fb29cf" category="paragraph">檢查 FlexGroup Volume 容量的平衡，包括評估組成的目前配置。當您重新平衡磁碟區的容量時， BlueXP  工作負載工廠會設計一個新的組成配置，其中包含偶數個組成成分，以便在所有 HA 配對之間平均分散資料。服務會執行重新平衡計畫，進而改善讀寫作業。</block>
-  <block id="f6dc3e9c7132f490eeec938c03027a06" category="admonition">只有 FlexGroup 磁碟區才支援重新平衡磁碟區。</block>
   <block id="d394f348c0b6fbd4e88b415bafdbea68" category="section-title">檢查 FlexGroup Volume 的平衡</block>
   <block id="1cc1dda63f89374c05c8b8f5c8126341" category="paragraph">檢查作用中 FlexGroup Volume 的平衡。</block>
   <block id="eeaecacdda76be13c8594ef17a7c395c" category="list-text">FlexGroup Volume Balance 僅適用於使用橫向擴充部署且至少有兩個 HA 配對的 ONTAP 檔案系統。</block>
@@ -1500,7 +1494,6 @@
   <block id="1fd02848e48f953c62155cbb42dd331b" category="section-title">重新平衡 FlexGroup Volume</block>
   <block id="64de3f9223f666126336ac4c9a3aa94d" category="paragraph"><block ref="1f11182db84cfb1742cc746fa76f8fe6" category="inline-xref-macro-rx"></block>重新平衡磁碟區之前。</block>
   <block id="af7202b99122b0c2ef1b703335afeef9" category="paragraph">若要重新平衡磁碟區、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
-  <block id="a7f82ab64c2423d5bfd6e7a3852441cc" category="paragraph">FlexGroup Volume 的容量會重新平衡。</block>
   <block id="9c633958a5d66a1547197d5b123c8c3c" category="paragraph">若要將儲存 VM 複寫到另一個適用於 ONTAP 檔案系統的 FSX ，您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
   <block id="ceb833d216db0e056b9ab7d22ba4f023" category="paragraph">如果沒有限制，網路和應用程式的效能可能會下降。或者、我們建議為 ONTAP 檔案系統的關鍵工作負載（例如主要用於災難恢復的工作負載）提供不限傳輸率的 FSX 。</block>
   <block id="c4ee13228c56b3c8a94bcef6d8d6d357" category="summary">將複本 FlexVol volume 從其父磁碟區分割成正常的讀寫 FlexVol volume 。</block>
@@ -1892,4 +1885,23 @@
   <block id="636ce0dc4b81c78698b769c07d69f35c" category="sidebar">利用自動勒索軟體保護來保護資料</block>
   <block id="ce812f613f07996b313f45414329b88e" category="sidebar">實作檔案系統最佳實務做法</block>
   <block id="e6dcf40c0e3ce889fc9c5c061867f960" category="sidebar">適用於 ONTAP 的 FSX 組態分析</block>
+  <block id="77aaaafa70c293a92472a80015bece8b" category="paragraph">當組成要素未平均分散於所有節點時， FlexGroup Volume 效能會降低。</block>
+  <block id="ae622e3b9df5d2fe3f644c0dba928e66" category="paragraph">重新平衡磁碟區會在新增檔案和檔案成長、隨著時間的推移而產生不平衡時、重新分配容量。手動開始重新平衡作業後、我們會選取檔案、並自動且不中斷地移動。Volume 傳輸作業會消耗檔案系統資源。</block>
+  <block id="8a348b83eb54b8869c9afef29caffc5e" category="admonition">只有 FlexGroup 磁碟區才支援重新平衡，但 iSCSI 或 NVMe FlexGroup 磁碟區則不支援重新平衡。</block>
+  <block id="dea985c157083fcf289f38e7ab4aede0" category="paragraph">重新平衡一個或多個非平衡的磁碟區。資料會在成員磁碟區之間重新分配，以重新平衡 FlexGroup 磁碟區。根據您偏好的資料發佈配置，重新平衡作業可能會新增 FlexGroup 成員磁碟區，並增加已佈建磁碟區的大小。</block>
+  <block id="6a0d7c16b4c559c5dc9c875e37641a9c" category="admonition">工作負載原廠管理員可在作業期間停止重新平衡。</block>
+  <block id="5fdec390c6be629fa932553e2fe5cb25" category="list-text">請注意，您重新平衡的磁碟區上現有的快照會變成部分快照，無法用來還原磁碟區資料，但重新平衡之後所拍攝的新快照可以用來還原磁碟區資料。</block>
+  <block id="930dade8556383009e0018f93aeb74bc" category="list-text">在 Balance （ FlexGroup 平衡）視窗中，選取 * Rebalanc* （重新平衡）以重新平衡一個或多個非平衡的磁碟區。</block>
+  <block id="48d59fcf4b8606ffc1ea7c49fae9c2b9" category="list-text">在重新平衡精靈中，選取您偏好的資料發佈配置。</block>
+  <block id="d2759013b04b9118f16fe5b617dd7975" category="list-text">* 效能最佳化 * （建議使用）：增加 FlexGroup 成員磁碟區的數量和磁碟區的資源配置大小。遵循 NetApp 最佳實務做法。</block>
+  <block id="782a0e1598a5b037c74d5a726a398869" category="list-text">* 限制 * ：支援複寫關係中的磁碟區。FlexGroup 成員磁碟區的數量和已佈建磁碟區的大小維持不變。如果所有選取的磁碟區都參與複寫關係，則預設會選取此選項。</block>
+  <block id="bbf2c701b4183e96081700fbc871fa76" category="list-text">* 手冊 * ：選取每個 HA 配對所需的 FlexGroup 成員磁碟區數量。視您的選擇而定， FlexGroup 成員磁碟區的數量和已配置的磁碟區大小可能會增加。</block>
+  <block id="d8b3ea3fc3957a87e42e4b5e3257d192" category="list-text">* 節流 * ：選用。預設為停用。啟用節流以限制磁碟區在檔案系統上移動的頻寬，並減緩傳出的磁碟區複寫流量。</block>
+  <block id="401ed2c14f82092756a797059818f59d" category="paragraph">以 MB/s 為單位輸入節流值</block>
+  <block id="3117f7777a863eeec7887ce7461f4d67" category="list-text">選取版面配置比較檢視，然後選取 * 下一步 * 。</block>
+  <block id="81d9477d2a350f3be114cdcb17416f29" category="list-text">Volume 配置比較</block>
+  <block id="5ad2de3bf91266caa9759e836ce832b5" category="list-text">ONTAP 配置比較的 FSX</block>
+  <block id="897bea1a5ca479178427004f773ee72e" category="list-text">您也可以在重新平衡之前下載磁碟區移動清單。</block>
+  <block id="703547df715082455f8920d78fe90a30" category="list-text">選擇 * 重新平衡 * 。</block>
+  <block id="dc3d2b1db09a8cee9576c2df34eba7b1" category="paragraph">視 FlexGroup 新增的 FlexGroup 成員磁碟區數量而定，一次只會執行一個 FlexGroup 磁碟區成員移動作業。當作業完成時，檔案系統將會被節流回原始值。</block>
 </blocks>
