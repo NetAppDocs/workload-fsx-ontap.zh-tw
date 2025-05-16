@@ -1101,7 +1101,6 @@
   <block id="2a3b399798aa16ecfbc1425cc560bfad" category="list-text">使用案例</block>
   <block id="ef63a3d009f11deff50f4dc327b32173" category="list-text">請注意， GenAI 工作負載的主要使用案例是這一系列工作的重點。</block>
   <block id="809c357d304bbfa1cd4446574b270af8" category="inline-link-macro">豐富 AI 知識庫</block>
-  <block id="9cce19ad5b8f6c533905f11c61df97c8" category="list-text">* GenAI 工作負載 * ：將內部部署的 ONTAP Volume 資料複寫至適用於 ONTAP 檔案系統的 FSX ，以便將資料用於<block ref="f591db1a99ea9ae06218a2a67c7815b6" category="inline-link-macro-rx"></block>。</block>
   <block id="f15192f8afdcf438f7b1ccf0cda2b436" category="list-text">* 備份與移轉至雲端 * ：將內部部署 ONTAP Volume 資料複寫至適用於 ONTAP 檔案系統的 FSX ，可作為雲端的備份。</block>
   <block id="5b5a84720ff8905504e8a45fbc52fb73" category="list-text">* 資料分層 * ：複寫後，不常存取的內部部署 ONTAP Volume 資料可從 SSD 儲存層分層，移至容量集區儲存層。</block>
   <block id="4185f116d64b1130e6f9ba4250b147fa" category="paragraph">開始之前，請確定您擁有下列項目：</block>
@@ -1719,8 +1718,6 @@
   <block id="8f1eb02f728d9f5ee9934382b0494f93" category="paragraph">若要進行完整的檔案系統分析，您必須建立連結的關聯。連結連線功能可讓工作負載在工廠中分析所有檔案系統組態，例如資料保護和效能。</block>
   <block id="fcc3e7348faefdb90df77848c11a3cd2" category="inline-link-macro">瞭解如何建立連結。</block>
   <block id="d1d2547b7ef1924a459a05adb0445929" category="paragraph"><block ref="d1d2547b7ef1924a459a05adb0445929" category="inline-link-macro-rx"></block></block>
-  <block id="03ed34f82c3cbad618294be6c94ca447" category="inline-link-macro">改善適用於 ONTAP 部署的 FSX 組態</block>
-  <block id="906102ec8d33b9c800e95c6b9ee1bbdf" category="paragraph"><block ref="906102ec8d33b9c800e95c6b9ee1bbdf" category="inline-link-macro-rx"></block></block>
   <block id="02f2e108af721f7fc825883d8811e77a" category="list-text">* ONTAP 認證 * ：選用。輸入您的 ONTAP 使用者名稱和密碼。您可以立即或稍後設定密碼。</block>
   <block id="824994853534784eb4495b892e13b1c6" category="paragraph">如果您所提供的使用者不是 fsxadmin 使用者，稍後您需要重設 fsxadmin 密碼，您就可以從 AWS 主控台執行此動作。</block>
   <block id="dd34b811cd079417f985f8f56a4f1dca" category="list-text">* 儲存 VM 認證 * ：選用。輸入您的使用者名稱。密碼可以是此檔案系統的特定密碼，也可以使用輸入的相同密碼來取得 ONTAP 認證。您可以立即或稍後設定密碼。</block>
@@ -1906,4 +1903,6 @@
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">* REST API* ：使用工作負載原廠 REST API 來部署及管理適用於 ONTAP 檔案系統和其他 AWS 資源的 FSX 。</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">* CloudForgius* ：使用 AWS CloudForgation 程式碼來執行您在工作負載工廠主控台中定義的動作，以便在 AWS 帳戶中建構，配置及管理 CloudForgation 堆疊中的 AWS 和第三方資源。</block>
   <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">* Terraform BlueXP  工作負載工廠供應商 * ：使用 Terraform 建置及管理工作負載工廠主控台所產生的基礎架構工作流程。</block>
+  <block id="eaaaf380859de755a58a543fbffc3d8a" category="paragraph"><block ref="eaaaf380859de755a58a543fbffc3d8a" category="inline-link-macro-rx"></block></block>
+  <block id="1418bddde60a7d4a1fbd71041ef29d36" category="list-text">* GenAI 工作負載 * ：將內部部署的 ONTAP Volume 資料複寫至適用於 ONTAP 檔案系統的 FSX ，以便將資料用於<block ref="8b94b70e10f0f6c7944c9419ec9922bc" category="inline-link-macro-rx"></block>。</block>
 </blocks>

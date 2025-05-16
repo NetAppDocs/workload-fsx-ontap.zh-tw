@@ -51,4 +51,4 @@ BlueXP  工作負載工廠會定期分析 Amazon FSX for NetApp ONTAP 檔案系
 link:create-link.html["瞭解如何建立連結。"]
 
 .下一步
-link:improve-configurations.html["改善適用於 ONTAP 部署的 FSX 組態"]
+link:improve-configurations.html["實作架構良好的檔案系統組態"]
