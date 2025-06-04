@@ -116,7 +116,7 @@ BlueXP  工作負載工廠內有儲存節約計算機，可將 Amazon 儲存環
 == 探索偵測到的儲存環境的節約效益
 
 .開始之前
-為了讓工作負載工廠在 AWS 帳戶中偵測適用於 Windows 檔案伺服器儲存環境的 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和 FSX ，請確定您link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授與 _ 讀取 _ 權限"^]在 AWS 帳戶中。
+為了讓工作負載工廠在 AWS 帳戶中偵測適用於 Windows 檔案伺服器儲存環境的 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和 FSX ，請確定您link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予唯讀權限"^]在 AWS 帳戶中。
 
 
 NOTE: 此計算機選項不支援 EBS 快照和適用於 Windows 檔案伺服器陰影複製的 FSX 的計算。透過自訂功能探索節約效益時、您可以提供適用於 Windows File Server 快照的 EBS 和 FSX 詳細資料。

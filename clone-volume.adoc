@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: clone-volume.html 
 keywords: clone volume, clone, clone data 
-summary: 在 BlueXP  工作負載原廠中複製一個 Volume ，以建立原始 Volume 的讀寫磁碟區以進行測試。 
+summary: 在 BlueXP 工作負載工廠中克隆一個卷，以製作原始卷的讀/寫卷進行測試。 
 ---
 = 在 BlueXP  工作負載工廠中複製 Volume
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 在 BlueXP  工作負載原廠中複製一個 Volume ，以建立原�
 
 
 [role="lead"]
-在 BlueXP  工作負載原廠中複製一個 Volume ，以建立原始 Volume 的讀寫磁碟區以進行測試。
+在 BlueXP 工作負載工廠中克隆一個卷，以製作原始卷的讀/寫卷進行測試。
 
 複本會反映資料目前的時間點狀態。您也可以使用複本、讓更多使用者存取資料、而不需讓他們存取正式作業資料。
 

@@ -39,7 +39,7 @@ NOTE: 使用 Connector 時不支援 AWS Secrets Manager 。
 
 .開始之前
 * 您應該考慮要使用哪個連結建立選項。
-* 您必須在工作負載工廠中至少有一個適用於 ONTAP 檔案系統的 FSX 。若要探索或建立適用於 ONTAP 檔案系統的 FSX ，您必須擁有 AWS 帳戶，具有適用於 ONTAP 執行個體的 FSX 權限，以及link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["在工作負載工廠新增認證"^]儲存管理的唯讀或讀寫權限。
+* 您必須在工作負載工廠中至少有一個適用於 ONTAP 檔案系統的 FSX 。若要發現或建立 FSx for ONTAP 檔案系統，您必須擁有一個具有 FSx for ONTAP 執行個體權限的 AWS 帳戶，且link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["在工作負載工廠新增認證"^]具有儲存管理的_唯讀_或_讀/寫_權限。
 * 使用 CloudFormation 堆疊新增連結時、 AWS 帳戶必須具有下列權限：
 +
 [%collapsible]

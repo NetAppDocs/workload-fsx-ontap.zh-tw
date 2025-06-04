@@ -33,7 +33,7 @@ BlueXP  每天分析 Amazon FSX for NetApp ONTAP 檔案系統部署組態。每
 
 
 .開始之前
-* 您必須擁有具有唯讀或讀寫權限的認證。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["瞭解如何在 AWS 帳戶中授予權限"^]。
+* 您必須擁有具有_唯讀_或_讀/寫_權限的憑證。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["瞭解如何在 AWS 帳戶中授予權限"^]。
 * 在選擇修正設定或組態之前，請務必仔細檢閱每項建議。
 
 

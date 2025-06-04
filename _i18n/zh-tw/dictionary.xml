@@ -789,7 +789,6 @@
   <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">iSCSI 傳輸協定僅適用於 FlexVol 磁碟區。^1^</block>
   <block id="e6816f159adf84ca7c085ce0702311af" category="inline-link-macro">刪除所有現有的複寫關係</block>
   <block id="da13b22f351bd4b981038bd55ca5d3ab" category="list-text">複寫關係：刪除磁碟區之前、您必須<block ref="fa9c4758a74309c74eff4644a0675063" category="inline-link-macro-rx"></block>先建立此磁碟區的關係、才能維持不變的關係。</block>
-  <block id="f14fbd72eb1c8ba39f23e290779d3ac7" category="paragraph">您可以在 _basive_ 、 _read_ 和 _自動化 _ 之間進行選擇 <block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
   <block id="31139fb3d548620b7d82f880e4660606" category="doc">儲存庫存中的索引標籤檢視</block>
   <block id="d4aa654cea4681dd5ca03650594006c6" category="paragraph">儲存庫存已更新為雙索引標籤檢視：</block>
   <block id="71083868a2ec5abfee9a2647a74612c0" category="list-text">適用於 ONTAP 的 FSX 標籤：顯示您目前擁有的 ONTAP 檔案系統的 FSX 。</block>
@@ -824,7 +823,6 @@
   <block id="c4fd230e0a883356d07ecc8aa57a1408" category="paragraph">在 BlueXP  工作負載工廠中，您可以變更分層原則，以自動將資料從高效能主要儲存層重新分配至次要容量集區儲存層。</block>
   <block id="fe5187438e2ab675d9a19928dd40ea31" category="list-text">在 *FSX for ONTAP * 標籤中，選取要更新磁碟區之檔案系統的三點功能表，然後選取 * 管理 * 。</block>
   <block id="cf85f41b48d74de17d9ad6aec327fcc7" category="list-text">從 Volumes （磁碟區）索引標籤中，選取要變更分層原則的磁碟區三點功能表。</block>
-  <block id="303558e4a397de6362e02f36b29e52e2" category="summary">在 BlueXP  工作負載原廠中複製一個 Volume ，以建立原始 Volume 的讀寫磁碟區以進行測試。</block>
   <block id="528d7c15fdf4463dd61cddf39e8e7abf" category="doc">在 BlueXP  工作負載工廠中複製 Volume</block>
   <block id="200d51c026656f479a6f4c6ec3536b64" category="list-text">在 *FSX for ONTAP * 標籤中，選取包含要複製之磁碟區的 ONTAP 檔案系統 FSX 的三點功能表，然後選取 * 管理 * 。</block>
   <block id="8646e0bbc26f59aa853dc93d48061b77" category="list-text">在 Volumes （磁碟區）標籤中，選取要複製的磁碟區的三點功能表。</block>
@@ -1325,7 +1323,6 @@
   <block id="a864feef5272f034d55e1119c5495be8" category="inline-link-macro">管理不可變的檔案</block>
   <block id="2915f18b56c3e4e3c1ef137551d9a65d" category="section-title">資料複寫增強功能</block>
   <block id="114e60d7d0f811f597761cf833328a96" category="list-text">跨帳戶複寫： BlueXP  工作負載原廠主控台支援兩個 AWS 帳戶之間的複寫，以及複寫管理。</block>
-  <block id="0348e63af5ee6958b15125648a1ecae7" category="list-text">暫停及恢復複寫：您可以暫停（停止）從來源磁碟區到目的地磁碟區的排程複寫更新，然後在準備好時恢復複寫排程。暫停期間，來源和目的地磁碟區會變得不受限，而目的地磁碟區會從唯讀轉換為讀寫。</block>
   <block id="38485996f06c5e13eed5605901b52530" category="inline-link-macro">暫停並恢復複寫關係</block>
   <block id="fc81b1e4233a48b719520033e56b4194" category="paragraph"><block ref="fc81b1e4233a48b719520033e56b4194" category="inline-link-macro-rx"></block></block>
   <block id="fd8693cf8f6802fd1c7d50d5742a4c71" category="section-title">Tracker 中的 CloudShell 事件</block>
@@ -1440,9 +1437,7 @@
   <block id="3e2144322d0c83071684bb1ffb11338d" category="paragraph">快照原則即會刪除。</block>
   <block id="7aea6efc0dbafc8802c9399b1e3f6754" category="summary">暫停並恢復複寫關係，使目標 Volume 成為來源 Volume 。</block>
   <block id="5dd762d4ab72b7f0d07d15a60666a191" category="doc">在 BlueXP  工作負載工廠暫停並恢復複寫關係</block>
-  <block id="9fe4e8e61dcc40a52fe579f0f61b5261" category="paragraph">暫停複寫關係，以停止從來源磁碟區到目標磁碟區的排程複寫更新。目標 Volume 會從唯讀轉換為讀寫。這兩個磁碟區會繼續共用最新的複寫快照，作為日後重新同步的新基準。</block>
   <block id="76540d9eea5e27790a75dc0204324995" category="paragraph">暫停時，來源磁碟區和目標磁碟區之間的複寫關係會繼續存在。資料傳輸會暫停，而且磁碟區會變得不再是問題。若要重新啟用變更從來源磁碟區傳輸至目的地磁碟區的功能，請繼續複寫。</block>
-  <block id="fc8a23c186b506791d82b21a875d3180" category="paragraph">當您恢復複寫時，目標 Volume 的所有變更都會復原，而 BlueXP  工作負載原廠會重新啟用複寫。目標 Volume 會從讀寫轉換為唯讀，並在排程的複寫間隔期間，再次從來源 Volume 接收更新。當您恢復複寫關係時，目標磁碟區會恢復為最新的初始複寫快照，此時磁碟區複寫程序就會重新開始。</block>
   <block id="9eef2cd11da6de70c97fb30475ecd676" category="paragraph">如果您在傳輸進行時暫停，傳輸將不會受到影響，而且在傳輸完成之前，關係會變成「靜止」。如果目前傳輸中斷，現在是未來傳輸，不會重新啟動。</block>
   <block id="a252d0c2ed77d353301a08614eb0500e" category="section-title">暫停複寫關係</block>
   <block id="5d4b7fc2e52dde05ac8cda99a07dc088" category="list-text">在「複寫關係」索引標籤中，選取要暫停的複寫關係的三點功能表。</block>
@@ -1457,7 +1452,6 @@
   <block id="a79cee1f678331ce4a5e786550999b02" category="paragraph">關係隨即恢復，其狀態顯示為「已複寫」。</block>
   <block id="26da52f61184b82e14aa7b1fa701a979" category="paragraph">自動佈建的 IOPS 是以每 GiB 三個 IOPS 計算。</block>
   <block id="924b3daa7ecef370ff9a603b3208772b" category="paragraph">如果您手動配置 IOPS ，可能需要在之前增加 IOPS <block ref="94a3285243f3705d6ad038b61125cb2f" category="inline-link-macro-rx"></block>。</block>
-  <block id="47442843c99a1990c6f90a2c7e4055a9" category="paragraph">如果您以 _Read_ 或 _AIL_ 模式操作，則必須<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>選擇工作負載功能，例如資料庫和 AI ，並建立 IAM 原則，以確保您擁有正確的權限，可以在 _Read_ 或 _AIL_ 模式下操作。</block>
   <block id="3a3c8188eae554af0e7f07bfef2e124b" category="summary">檢查並重新平衡磁碟區的容量，以避免隨著時間而產生的不平衡現象。</block>
   <block id="8083bd6761abe4735ad26f9c18899032" category="doc">檢查並重新平衡磁碟區的容量</block>
   <block id="270753bb6aea2d40b94194b021e500ae" category="paragraph">檢查 FlexGroup Volume 容量的平衡，並重新平衡磁碟區容量，以便將檔案平均分散到所有組成區，讓所有節點都能參與單一 Flex Group Volume 的工作負載。</block>
@@ -1607,8 +1601,6 @@
   <block id="d4b4ed7579a4f9267cc7dff8a948018e" category="cell">所有 ICMP</block>
   <block id="b1c94ca2fbc3e78fc30069c8d0f01680" category="cell">全部</block>
   <block id="fbabb5b35538d91f91e0e1d4f56ff5a4" category="paragraph">Ping 執行個體</block>
-  <block id="70b2c09de9e176a879c840cb014b8c20" category="inline-link-macro">授與 _ 讀取 _ 權限</block>
-  <block id="e395c91c5c84949d52ffb229805b2f5f" category="paragraph">為了讓工作負載工廠在 AWS 帳戶中偵測適用於 Windows 檔案伺服器儲存環境的 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和 FSX ，請確定您<block ref="aa999e6a1b84a9d79249d89f4acbbea1" category="inline-link-macro-rx"></block>在 AWS 帳戶中。</block>
   <block id="c09b5be4c2da04f4040eef1878f258aa" category="inline-link-macro">部分9文件ONTAP</block>
   <block id="3611f3afb9bd4ea20ff757fe165aa678" category="paragraph">此外，使用案例選項會決定複寫原則或 SnapMirror 原則（ ONTAP ）。用於描述複寫原則的術語來自<block ref="20dfa0e16eac8597602ade67a04436fd" category="inline-link-macro-rx"></block>。</block>
   <block id="b5b213ff8da55d939d5b26b2acad4e23" category="list-text">對於移轉和其他作業，複寫原則稱為 _MirrorAllSnapshots_ 。_MirrorAllSnapshots_ 是用於鏡射所有快照和最新作用中檔案系統的非同步原則。</block>
@@ -1662,7 +1654,6 @@
   <block id="2bbce7d3d059871083eb12013b7bc70d" category="section-title">支援替代的 ONTAP 使用者認證</block>
   <block id="21fe54f48c52f1924f6b2b74751f1611" category="paragraph">工作負載工廠現在支援替代的 ONTAP 認證集，可用來建立檔案系統，將安全風險降至最低。您可以選擇不同的 ONTAP 認證集，或選擇不為 fsxadmin 和 vsaadmin 使用者提供密碼，而不只使用 fsxadmin 使用者。</block>
   <block id="514f1fc0ac0ff6e4200d3637146367f1" category="section-title">更新的權限術語</block>
-  <block id="a7b97ab7d88b015e92ed51ef4bee9c25" category="paragraph">工作負載原廠使用者介面與文件現在使用「唯讀」來指稱讀取權限，而「讀取寫入」則指自動化權限。</block>
   <block id="17f03194826a802587b82edd13d7ac95" category="summary">複寫資料保護磁碟區，或串聯磁碟區資料的複寫，將資料保護延伸至第三系統或移轉資料。</block>
   <block id="70b72bd626a098817ae0ea2c2270cbcf" category="doc">在 BlueXP  工作負載工廠中複寫資料保護磁碟區</block>
   <block id="7022ef39a3ec93cac3dc3468cb63623d" category="paragraph">BlueXP  工作負載工廠支援複寫資料保護磁碟區，也稱為串聯部署。層疊式部署由一系列關係組成，其中來源 Volume 會鏡射至次要 Volume （第一跳），次要 Volume 則鏡射至第三個 Volume （第二跳）。如果次要Volume無法使用、您可以在不執行新的基礎傳輸的情況下、同步主要和第三個Volume之間的關係。</block>
@@ -1716,7 +1707,6 @@
   <block id="05a2e668e80fd3ace12e9585ebc06578" category="paragraph">建立新連結的關聯包括連結建立和關聯。</block>
   <block id="ec19cf5bb597b8c81392ce26e30276fe" category="paragraph">您有兩個選項可以自動或手動建立連結。您必須在 AWS 帳戶中啟動 AWS CloudForgation 堆疊、才能建立連結。</block>
   <block id="695199449ad50832d8cff3be92e812b3" category="inline-link-macro">在工作負載工廠新增認證</block>
-  <block id="f1eaaab14536c4d820d0472133fd3c45" category="list-text">您必須在工作負載工廠中至少有一個適用於 ONTAP 檔案系統的 FSX 。若要探索或建立適用於 ONTAP 檔案系統的 FSX ，您必須擁有 AWS 帳戶，具有適用於 ONTAP 執行個體的 FSX 權限，以及<block ref="bc6de13f807f280fdd09c86a039f3f7c" category="inline-link-macro-rx"></block>儲存管理的唯讀或讀寫權限。</block>
   <block id="2f1cd483ab7b6144b733f5155b2026c6" category="list-text">在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以建立連結，然後選取 * 建立連結 * 。</block>
   <block id="29abae1dabc3d83e30cbe456ae214256" category="list-text">* AWS Secrets Manager* ：選用。允許工作負載工廠從 AWS Secrets Manager 擷取適用於 ONTAP 存取認證的 FSX 。</block>
   <block id="13ecd4f9bb62f6c0730c8f136a58fb36" category="paragraph">連結部署堆疊會將下列預設密碼管理程式 ARN regex 新增至 Lambda 權限原則<block ref="218d5bbe44642244cc57db37477be310" prefix=" " category="inline-code"></block>：。</block>
@@ -1775,7 +1765,6 @@
   <block id="aff279b636a9024db3b44375d88e80eb" category="list-text">排程的本機快照</block>
   <block id="887673b402c7bbc141e56321e277605f" category="list-text">遠端資料複寫</block>
   <block id="2f5c8a4d7476b305dbc46e2886046e37" category="inline-link-macro">瞭解如何在 AWS 帳戶中授予權限</block>
-  <block id="3d4d7dfea7b3c8e6611f1b6c46261c79" category="list-text">您必須擁有具有唯讀或讀寫權限的認證。<block ref="2022cabf257ab03f558a69fe97667e91" category="inline-link-macro-rx"></block>。</block>
   <block id="ec18319549282942e8c5b076a25d2f8e" category="list-text">在選擇修正設定或組態之前，請務必仔細檢閱每項建議。</block>
   <block id="47df3bf0f7ade58852082d72bcde28c6" category="admonition">補救程序可能會導致執行個體停機或服務中斷。在您選擇修正組態問題之前，請務必仔細檢閱建議內容。</block>
   <block id="d74f751ba3d9c20ce8b684f638c03719" category="list-text">在「資料庫」方塊中，選取 * 移至「儲存設備詳細目錄」 * 。</block>
@@ -1929,4 +1918,15 @@
   <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">* Terraform BlueXP  工作負載工廠供應商 * ：使用 Terraform 建置及管理在工作負載工廠主控台產生的基礎架構工作流程。</block>
   <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">2025 年 6 月 03 日</block>
   <block id="3f704fe76e8b9e4bf51184f82c064656" category="paragraph"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block> == 2025年3月2日</block>
+  <block id="0592779b8245b0df30d4f675dd276086" category="list-text">暫停及恢復複寫：您可以暫停（停止）從來源磁碟區到目的地磁碟區的排程複寫更新，然後在準備好時恢復複寫排程。在暫停期間，來源捲和目標磁碟區變得獨立，目標磁碟區從唯讀轉換為讀取/寫入。</block>
+  <block id="4ead5e435cb4f2c7cf627b1d1e84c333" category="paragraph">工作負載工廠使用者介面和文件現在使用“只讀”來指讀取權限，使用“讀取/寫入”來指稱自動化權限。</block>
+  <block id="bf1eae05016a3b136059039ae18136f1" category="summary">在 BlueXP 工作負載工廠中克隆一個卷，以製作原始卷的讀/寫卷進行測試。</block>
+  <block id="ee3553e6baa58a561bf979cf7ae15053" category="list-text">您必須在工作負載工廠中至少有一個適用於 ONTAP 檔案系統的 FSX 。若要發現或建立 FSx for ONTAP 檔案系統，您必須擁有一個具有 FSx for ONTAP 執行個體權限的 AWS 帳戶，且<block ref="bc6de13f807f280fdd09c86a039f3f7c" category="inline-link-macro-rx"></block>具有儲存管理的_唯讀_或_讀/寫_權限。</block>
+  <block id="20f8a84eb910bbd8af91b95f380d163c" category="inline-link-macro">授予唯讀權限</block>
+  <block id="3dc74e0841fa831cf5cd20ac04ed6651" category="paragraph">為了讓工作負載工廠在 AWS 帳戶中偵測適用於 Windows 檔案伺服器儲存環境的 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和 FSX ，請確定您<block ref="13ae78c09f3df6bcab328a886064dd51" category="inline-link-macro-rx"></block>在 AWS 帳戶中。</block>
+  <block id="4548f94159b489b0c24b45e3a301c68c" category="list-text">您必須擁有具有_唯讀_或_讀/寫_權限的憑證。<block ref="2022cabf257ab03f558a69fe97667e91" category="inline-link-macro-rx"></block>。</block>
+  <block id="896d6bec42b8c83090c4e03345712729" category="paragraph">暫停複寫關係，以停止從來源磁碟區到目標磁碟區的排程複寫更新。目標 Volume 會從唯讀轉換為讀寫。這兩個磁碟區會繼續共用最新的複寫快照，作為日後重新同步的新基準。</block>
+  <block id="30e57761ad37a97249e7a0876abdd7cc" category="paragraph">當您恢復複寫時，目標 Volume 的所有變更都會復原，而 BlueXP  工作負載原廠會重新啟用複寫。目標磁碟區從讀取/寫入轉換為唯讀，並再次按照計劃的複製間隔從來源磁碟區接收更新。當您恢復複寫關係時，目標磁碟區會恢復為最新的初始複寫快照，此時磁碟區複寫程序就會重新開始。</block>
+  <block id="b91aff97cc4dadbca9539fae72dedecc" category="paragraph">在 _basic_、_read-only_ 和 _read/write_ 之間進行選擇<block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
+  <block id="b31987b3ffb35fe02be38fe9d8e701f1" category="paragraph">如果您在「唯讀」或「讀取/寫入」模式下操作，則需要<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>其中包括選擇工作負載功能（例如資料庫和 AI）以及建立 IAM 策略以確保您擁有以_唯讀_或_讀/寫_模式操作的正確權限。</block>
 </blocks>
