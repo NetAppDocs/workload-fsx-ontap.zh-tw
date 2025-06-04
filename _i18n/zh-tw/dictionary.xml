@@ -219,7 +219,6 @@
   <block id="749bb7d7b85b238efdd51a2af6612da7" category="list-text">選取 * 資料保護動作 * 、 * 快照 * 、然後 * 從快照 * 建立磁碟區。</block>
   <block id="7703989c08fa05b728e233f271b4650e" category="list-text">在 Create volume from a snapshot （從快照創建卷）對話框中，輸入快照名稱。</block>
   <block id="25b72c08a4a289e6b89fc38db06792a9" category="doc">為 ONTAP Volume 建立 FSX</block>
-  <block id="afd1f136e7e58574d1730a6b37234e12" category="paragraph">適用於 ONTAP Volume 的 FSX 是用於分組資料、判斷資料儲存方式、以及判斷資料存取類型的虛擬資源。Volume 不會消耗檔案系統儲存容量。儲存在磁碟區中的資料主要會消耗 SSD 儲存設備。視磁碟區的分層原則而定、資料可能也會佔用容量集區儲存空間。您可以在建立磁碟區時設定磁碟區的大小、稍後也可以變更其大小。</block>
   <block id="80f199570ae102e9c62f81fcbfd159eb" category="list-text">CIFS ：適用於 Windows 作業系統的檔案儲存傳輸協定</block>
   <block id="8a1e5168feb60a6391f96310159dca9a" category="list-text">NFS ：適用於 Unix 作業系統的檔案儲存傳輸協定</block>
   <block id="ec38854bd667a882fa1d0b62579b5079" category="list-text">iSCSI ：區塊儲存傳輸協定</block>
@@ -252,7 +251,6 @@
   <block id="d7452a3655b7342c92f5b56d0b8526ed" category="list-text">輸入新啟動器群組的 * 啟動器群組名稱 * 。</block>
   <block id="9b990db2de543eb2fd38454ae899ab11" category="list-text">在主機啟動器下、新增一或多個 iSCSI 合格名稱（ IQN ）主機啟動器。</block>
   <block id="8cc48e7c3f902d1b7dd7d0ecb40ade52" category="list-text">在效率與保護之下、提供下列詳細資料：</block>
-  <block id="693c76b9e50b1968a91a20939d11fb98" category="list-text">* 儲存效率 * ：停用或啟用儲存效率。</block>
   <block id="4f16f68a6d9522c0d097a900978f6f0d" category="paragraph">利用 ONTAP 的重複資料刪除和壓縮功能、即可提高儲存效率。重複資料刪除技術可消除重複的資料區塊資料壓縮會壓縮資料區塊、以減少所需的實體儲存容量。</block>
   <block id="f03207e238654d36cb2c88950bf22d84" category="list-text">* Snapshot polic*: 選擇快照策略以指定快照的頻率和保留。</block>
   <block id="84e947d0a820262a46013852b1928efd" category="paragraph">以下是 AWS 的預設原則。對於自訂快照原則、您必須建立連結的關聯。</block>
@@ -318,8 +316,6 @@
   <block id="edd5da19d30912fca4670982f9aef531" category="inline-link-macro">增加 Volume 容量功能</block>
   <block id="f9e4840a1cf1ddb5632e031e0334acb9" category="paragraph">您也可以選擇隨時使用手動增加 Volume 的容量 <block ref="11462b2e1fd0bd94e3dc25fc7f04c4ba" category="inline-link-macro-rx"></block>。</block>
   <block id="2332ee8494d2f8246a961c95630281a2" category="admonition">iSCSI Volume 不支援 Volume 自動擴充。</block>
-  <block id="91bdace9adb8211a77783be051ae3e78" category="list-text">選擇 * 基本動作 * 、然後 * 編輯 Volume 自動擴充 * 。</block>
-  <block id="e334870bb4631c235cfca40400daae69" category="list-text">在「編輯自動擴充」對話方塊中、啟用 Volume 自動擴充。</block>
   <block id="3d7b2807e22b58e985dfcb21a31b176e" category="summary">標記可協助您分類資源。您可以隨時為 ONTAP Volume 新增、編輯及移除 FSX 的 Volume 標籤。</block>
   <block id="c966edae1d484c4f3e557d47709e08a1" category="list-text">選擇 * 基本動作 * 、然後 * 編輯 Volume 標記 * 。</block>
   <block id="9724e2d67a8b8dacb5f774fbf0309b44" category="list-text">在「編輯 Volume 標籤」頁面上、新增、編輯或移除標籤。</block>
@@ -449,7 +445,6 @@
   <block id="488044172f20eab904aecc2827c019b4" category="section-title">處理量容量區域支援</block>
   <block id="0a27e957ebaf89bce02c66c147da7966" category="section-title">橫向擴充部署</block>
   <block id="2e8bf528a9bc28508b7cf3ffef710f1c" category="section-title">橫向擴充部署</block>
-  <block id="3e14c6b63ec31128bf81a140eecbaeb0" category="paragraph">下列地區支援每秒高達 3 GB 和 6 GB 的最大處理量容量、可進行橫向擴充部署：美國東部（北美維吉尼亞州）、美國東部（俄亥俄州）、美國西部（俄勒岡州）、歐洲（愛爾蘭）和亞太地區（悉尼）。</block>
   <block id="1d19e21de0f93b11f5ceb8b535a3afc2" category="section-title">容量管理</block>
   <block id="80f7abc9fbb9a7fcbc94b93ffe8883fa" category="list-text">iSCSI 傳輸協定目前不支援 Volume 自動擴充功能。</block>
   <block id="a4f157471406b244df3c4e7727b860ce" category="list-text">當自動容量管理功能正在執行時、不允許手動增加容量。</block>
@@ -870,7 +865,6 @@
   <block id="55a23b72fe4aee5e2f0024c790d7eaba" category="paragraph">從 BlueXP  工作負載工廠的快照建立適用於 ONTAP Volume 的全新 FSX ，以啟用時間點還原。</block>
   <block id="8d34a33f34659b0ea11833ac0b8fac52" category="list-text">在 *FSX for ONTAP * 標籤中，選取含有 Volume Snapshot 的檔案系統三點功能表，然後選取 * 管理 * 。</block>
   <block id="3ce528a1818baf0bbf2f6b362b1f7d58" category="list-text">在 Volumes （磁碟區）索引標籤中，選取含有您要建立磁碟區之快照的磁碟區的三點功能表。</block>
-  <block id="3f069fcb238357ca598d1a4d611a62de" category="doc">在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX</block>
   <block id="d5d682292e122fa36db263f49a714cc7" category="list-text">您必須在工作負載工廠中擁有適用於 ONTAP 檔案系統的 FSX 。</block>
   <block id="72ce63a6bef6ec13ef74a7eab0012469" category="summary">適用於 ONTAP 的 FSX 支援 BlueXP  工作負載工廠的快照，磁碟區備份和磁碟區複寫。</block>
   <block id="96a5899d90dd9b81319f168f67bcb5ae" category="summary">若要在 BlueXP  工作負載工廠中刪除檔案系統，您必須先刪除與檔案系統相關的任何磁碟區，儲存 VM 或複寫關係。</block>
@@ -889,14 +883,10 @@
   <block id="21ffc1d60d910e1796100ec0f0e054bf" category="list-text">從 Volumes （磁碟區）標籤中，選取要刪除的磁碟區的三點功能表。</block>
   <block id="ad1d6a18c0d830b44dfe2e6a96d2807d" category="list-text">（可選）選擇 * 備份卷 * 以在刪除之前備份卷。</block>
   <block id="136dc09835924029e4299fa28f17233d" category="list-text">選擇*繼續*。</block>
-  <block id="f7f2169256b833e4b912b12eeb380c4e" category="summary">啟用 Volume 自動擴充功能，讓 BlueXP  工作負載在出廠時能夠為您管理 Volume 容量。您可以隨時停用。</block>
-  <block id="5d6c153f1e4ed3eaf701b67f0de4cee6" category="doc">在 BlueXP  工作負載工廠中啟用 Volume 自動擴充</block>
   <block id="442b64cea00e2efaa2cb2cb89dba4ab3" category="list-text">在 FSX for ONTAP 標籤中，選取要更新之 Volume 的檔案系統三點功能表，然後選取 * 管理 * 。</block>
   <block id="a0b96ee62d98191f36ed547bccb7babd" category="list-text">從 Volumes （磁碟區）標籤中，選取您要修改之磁碟區的三點選單。</block>
   <block id="a4fc5c253ce09fe4825f0474ddb3368c" category="summary">啟用此功能可讓工作負載原廠自動將遞增儲存設備新增至適用於 ONTAP 檔案系統的 FSX ，以因應容量需求隨時間變化。</block>
   <block id="bd0cd4a796621f54f57afed7ce044b14" category="doc">為 ONTAP 檔案系統啟用 FSX 的自動容量管理</block>
-  <block id="86699015e319e1f0d9764f4cc8296e22" category="paragraph">啟用此功能可讓 BlueXP  工作負載在出廠時自動將遞增儲存設備新增至適用於 ONTAP 檔案系統的 FSX ，以因應容量需求隨時間變化。</block>
-  <block id="dfee49f6e7d939f9d77bcc58a66381b0" category="paragraph">您必須在工作負載工廠擁有 _ 自動化 _ 權限的認證，才能完成此工作。</block>
   <block id="d473b237e9c91fd6e196904b26b4c56c" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中，選取檔案系統的三點功能表，以啟用的自動容量管理。</block>
   <block id="37315e43d6c90fe6798b7397bf15ebae" category="list-text">在「資訊」下，選取 * 自動容量管理 * 旁的鉛筆圖示。當滑鼠移動到 * 自動容量管理 * 列上時、下拉式箭頭旁會出現鉛筆圖示。</block>
   <block id="c5c6c97593c886ac31454d1f10313b78" category="list-text">選取啟用按鈕以 * 啟用自動容量管理 * 。</block>
@@ -930,7 +920,6 @@
   <block id="0e42938784ca54b8dc455284578841f0" category="list-text">在「初始化關係」對話方塊中，選取 * 初始化 * 。</block>
   <block id="478b776fc28a60e8545a858eb7ca9a3e" category="summary">已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。</block>
   <block id="bd2e4cb8c94783198db1a525a87ae34a" category="doc">Amazon FSX for NetApp ONTAP 的已知限制</block>
-  <block id="ebb8834ddc064318ec8eb05605b0880f" category="paragraph">需要連結才能完成工作負載原廠使用者介面中的複寫作業。</block>
   <block id="aa75e9d89ef77ba0164dfacff4eadc7c" category="paragraph">每個 SKU 的儲存 VM 數量有限。工作負載工廠不支援建立超出限制的儲存 VM 。 ^1^</block>
   <block id="26ed02718973e705cd69ee6e109400e0" category="section-title">系統管理員</block>
   <block id="9ee31cf2622a4d1606ccae84e2ba0742" category="paragraph">System Manager 不支援用於 ONTAP 連線的 FSX 連結。</block>
@@ -1084,7 +1073,6 @@
   <block id="037fbb0239239f2168489bba99e09b67" category="list-text">* 匯出 PDF*</block>
   <block id="10acfa1cd5e4b3b5f4da60bba2257672" category="list-text">* 以電子郵件傳送 *</block>
   <block id="3902a76bb589f831b404ce1ec9865654" category="list-text">* 檢視計算 *</block>
-  <block id="01887ff057face34cde00a98753d7347" category="section-title">進階 ONTAP 作業所需的連結</block>
   <block id="428b0b39be2352757edeb5f9f12a7bdd" category="inline-link">BlueXP  工作負載工廠</block>
   <block id="7cf449620aa459bc5c449db69b07e507" category="paragraph"><block ref="7cf449620aa459bc5c449db69b07e507" category="inline-link-rx"></block></block>
   <block id="a32b59044667570495820281f09cfa10" category="list-text">* 名稱 * ：輸入 CIFS 共用的名稱。</block>
@@ -1319,7 +1307,6 @@
   <block id="49814788ce382c87a117a40e54ae858b" category="paragraph">作業將重新啟動。前往 Tracker 以檢視作業狀態。</block>
   <block id="986aee2caba870111e5ce3c5571c82de" category="section-title">2025 年 02 月 2 日</block>
   <block id="2e0c4c64c2671f5575eb184e577dcdae" category="sidebar">使用 Tracker 監控作業</block>
-  <block id="b1fe1919850819316de56e436737f1d9" category="summary">為 ONTAP 檔案系統設定 FSX 之後，請在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX 。</block>
   <block id="62e770531a6a6f3e80ca57b3b83bb3db" category="doc">BlueXP  工作負載工廠中的資料保護類型</block>
   <block id="9da70164a8dd044e50707cfb202de218" category="paragraph">適用於 ONTAP 的 FSX 支援快照，備份和複寫功能，以保護資料。我們建議您使用資料保護類型的組合，為不可避免的資料做好準備，並保護資料安全。</block>
   <block id="fa7cdd584b5bc6a975df18dc4ebe5895" category="paragraph">BlueXP  工作負載工廠內有儲存節約計算機，可將 Amazon 儲存環境與適用於 ONTAP 的 FSX 進行比較。您可以使用或不提供 AWS 認證來探索節約效益、並自訂儲存環境的組態設定。當您提供 AWS 認證時，您可以選取一或多個 Amazon Elastic Block Store 執行個體，並讓工作負載工廠自動進行比較。無論是手動或自動、計算機都會判斷哪種儲存服務能為您的儲存需求提供最低成本。</block>
@@ -1499,7 +1486,6 @@
   <block id="dde14eef9b53344c34a3e3e63830d29e" category="paragraph">將 Volume 資料從內部部署 ONTAP 叢集複寫到適用於 ONTAP 檔案系統的 FSX 。複寫後，資料可用於豐富 AI 知識庫。</block>
   <block id="b04f4fce1228aa8dc3f0ae05daa48cd7" category="list-text">* 自動 * ：使用 ONTAP 使用者介面的工作負載原廠 FSX 建立磁碟區時，預設的分層原則。在特定時間段內，將包含使用者資料和快照的所有冷資料分層至容量集區儲存層。</block>
   <block id="8b02e3f5a15bae20358e2221cac45d83" category="list-text">* 一般詳細資料 * ：包括磁碟區名稱，磁碟區 UUID ，磁碟區 ID ，建立時間，狀態，磁碟區類型（讀取 / 寫入 / 資料保護（ RWDP ）或唯讀），快照原則名稱，託管儲存 VM （ SVM ）和標籤。</block>
-  <block id="2d5a4b914acb6c2f03d312067c73ce32" category="section-title">2025 年 3 月 02 日</block>
   <block id="95712b1074d83e6727c42aa16be5af5a" category="paragraph"><block ref="95712b1074d83e6727c42aa16be5af5a" category="inline-link-macro-rx"></block></block>
   <block id="815e02f013485997d1d56438f0bf1505" category="paragraph"><block ref="815e02f013485997d1d56438f0bf1505" category="inline-link-macro-rx"></block></block>
   <block id="21a1f3fb63f8e2b67d072b29080f89f9" category="list-text">層級 1 （工作）：追蹤檔案系統部署。</block>
@@ -1787,7 +1773,6 @@
   <block id="9d0e9f5c0aa1e38cfaa8e64e155bc5a8" category="list-text">SSD 容量臨界值</block>
   <block id="396928510e06818ef017921022cce2af" category="list-text">資料分層</block>
   <block id="aff279b636a9024db3b44375d88e80eb" category="list-text">排程的本機快照</block>
-  <block id="70846b7105b6028169209033aae31a0c" category="list-text">適用於 ONTAP 備份的 FSX ，以及</block>
   <block id="887673b402c7bbc141e56321e277605f" category="list-text">遠端資料複寫</block>
   <block id="2f5c8a4d7476b305dbc46e2886046e37" category="inline-link-macro">瞭解如何在 AWS 帳戶中授予權限</block>
   <block id="3d4d7dfea7b3c8e6611f1b6c46261c79" category="list-text">您必須擁有具有唯讀或讀寫權限的認證。<block ref="2022cabf257ab03f558a69fe97667e91" category="inline-link-macro-rx"></block>。</block>
@@ -1802,7 +1787,6 @@
   <block id="fe5f70c74405942514095d724e090b64" category="paragraph">當 * 檢視與修正 * 為選項時，請選取要修正的受影響磁碟區。</block>
   <block id="579feafb828551ab15b2e4f1aad57afc" category="list-text">檢閱對話方塊中顯示的摘要和行動項目，瞭解如果您選擇修正問題，會發生什麼情況。某些作業可能會導致執行個體停機或服務中斷。</block>
   <block id="45b5dce37159255d07342e3102124571" category="list-text">選取 * 繼續 * 以修正組態問題。</block>
-  <block id="b24e2a5a00274660f4537c173554dd06" category="paragraph">修正問題的程序即會啟動。選取 * 工作監控 * 標籤以檢視作業狀態。</block>
   <block id="20086b220eeb33caf74bd6e628cfcd8c" category="section-title">AWS Secrets Manager 支援</block>
   <block id="ffe2f2a5c6f5c2a7a4d95da829cd5cb4" category="paragraph">BlueXP  工作負載原廠連結可在工作負載原廠帳戶和一或多個適用於 ONTAP 檔案系統的 FSX 之間建立信任關係和連線。這可讓您直接從 Amazon FSX for ONTAP API 無法使用的 ONTAP REST API 呼叫監控及管理特定檔案系統功能。</block>
   <block id="8f30a77efbeaeec8415337994a976197" category="paragraph">您可以使用儲存在工作負載原廠認證服務中的認證資料，或是儲存在 AWS Secrets Manager 中的認證資料，來建立可靠的連結。工作負載工廠不支援變更驗證模式。</block>
@@ -1902,7 +1886,47 @@
   <block id="e234d079cc2fccaeed8041a81e1e8122" category="list-text">* CloudShell CL1* ：工作負載工廠包含 CloudShell CLI ，可透過單一瀏覽器型 CLI ，跨帳戶管理及操作 AWS 和 NetApp 環境。從工作負載原廠主控台的頂端列存取 CloudShell 。</block>
   <block id="dfbf98e5a4263fb93c5b851bfc384ae3" category="list-text">* REST API* ：使用工作負載原廠 REST API 來部署及管理適用於 ONTAP 檔案系統和其他 AWS 資源的 FSX 。</block>
   <block id="57f4ce64453b6cd8aa398c4f88d38c2e" category="list-text">* CloudForgius* ：使用 AWS CloudForgation 程式碼來執行您在工作負載工廠主控台中定義的動作，以便在 AWS 帳戶中建構，配置及管理 CloudForgation 堆疊中的 AWS 和第三方資源。</block>
-  <block id="06c2e2277da374dd2cc7b735a1d1e848" category="list-text">* Terraform BlueXP  工作負載工廠供應商 * ：使用 Terraform 建置及管理工作負載工廠主控台所產生的基礎架構工作流程。</block>
   <block id="eaaaf380859de755a58a543fbffc3d8a" category="paragraph"><block ref="eaaaf380859de755a58a543fbffc3d8a" category="inline-link-macro-rx"></block></block>
   <block id="1418bddde60a7d4a1fbd71041ef29d36" category="list-text">* GenAI 工作負載 * ：將內部部署的 ONTAP Volume 資料複寫至適用於 ONTAP 檔案系統的 FSX ，以便將資料用於<block ref="8b94b70e10f0f6c7944c9419ec9922bc" category="inline-link-macro-rx"></block>。</block>
+  <block id="7583f12b4559f6687c67d8588da1e2f7" category="doc">磁碟區自動增長增強</block>
+  <block id="b57fe4f5ee65a0e01f61993297811ebf" category="paragraph">現在，您可以設定磁碟區的自動成長大小，以便磁碟區大小可以超出業務需求和應用程式要求的預先配置大小。</block>
+  <block id="9f1effd9ace68ca00fe9e9e3c024b362" category="inline-link-macro">啟用Volume自動擴充</block>
+  <block id="0177289fb77b50bdfc34ab44aa432a21" category="paragraph"><block ref="0177289fb77b50bdfc34ab44aa432a21" category="inline-link-macro-rx"></block></block>
+  <block id="159687e1c95e32f1dcb6c9c1624ba327" category="section-title">架構完善的分析更新</block>
+  <block id="8500b95246538dfef049532751c1e9f5" category="paragraph">工作負載工廠現在會分析您的 FSx for ONTAP 檔案系統，以檢查是否正在利用儲存效率，包括資料壓縮、壓縮和重複資料刪除。儲存效率衡量檔案系統利用可用空間的效率。</block>
+  <block id="26e5625f54c5c47a57293d23260101c7" category="inline-link-macro">查看儲存效率的良好架構狀態</block>
+  <block id="80378f8a6a0c86610258fa79cd78497b" category="paragraph"><block ref="80378f8a6a0c86610258fa79cd78497b" category="inline-link-macro-rx"></block></block>
+  <block id="e4b0d36f0e7c4f3745520d8f27ed510b" category="section-title">儲存儀表板增強功能</block>
+  <block id="47586d678be72b51ea7ac193f83c19b2" category="paragraph">從今天開始，當您從工作負載工廠控制台開啟儲存工作負載時，您將看到「儀表板」。全新設計的儀表板提供 FSx for ONTAP 系統的整體視圖，包括檔案系統數量、SSD 總容量、架構完善的狀態概覽、資料保護概覽以及複製關係的運作狀況。</block>
+  <block id="74d3ed8321cbdac2928290eee4795cef" category="section-title">磁碟區選項卡增強功能</block>
+  <block id="0d25e8e0a888c31329b48ed4a33f98f6" category="paragraph">儲存工作負載對工作負載工廠控制台中 FSx for ONTAP 檔案系統內的「磁碟區」標籤進行了增強。增強功能包括：</block>
+  <block id="90a8a55f34e9e967f8619ecc5b0ba92a" category="list-text">*新卡*：SSD 容量、容量池和自主勒索軟體防護 (ARP)</block>
+  <block id="f80c9595c105a10d312aac80217ebb84" category="list-text">*新列*：容量分佈、已使用 SSD 容量、已使用容量池和 SSD 效率</block>
+  <block id="92eacda944854c6bfa8676c60aaa4c96" category="section-title">磁碟區所建立的儲存效率更新</block>
+  <block id="af1e7fa29b343a7d9bd55952a334e8c9" category="paragraph">建立新磁碟區時，預設啟用儲存效率，包括資料壓縮、壓縮和重複資料刪除。</block>
+  <block id="55321b0c9d5d13d71a60766806796f90" category="inline-link-macro">在工作負載工廠中建立新卷</block>
+  <block id="9257e0b60b0f1cd3867c62713d3370aa" category="paragraph"><block ref="9257e0b60b0f1cd3867c62713d3370aa" category="inline-link-macro-rx"></block></block>
+  <block id="70fc7bb591b365ee183f47900503df43" category="paragraph">未啟用長期保留的複製將使用 _MirrorAllSnapshots_ 策略。啟用長期保留會將 _MirrorAndVault_ 策略指派給複製。</block>
+  <block id="2057c4b03e98bbdb86c44c6ec3eec31d" category="summary">設定 FSx for ONTAP 檔案系統後，在工作負載工廠中建立 FSx for ONTAP 磁碟區。</block>
+  <block id="bb8606f4a66c1f0354653ba69a9e1256" category="doc">在工作負載工廠中建立 FSx for ONTAP 卷</block>
+  <block id="60f5b412bf1c0bf652e02bf44be5dc6f" category="paragraph">設定 FSx for ONTAP 檔案系統後，在工作負載工廠中建立 FSx for ONTAP 磁碟區作為用於對資料進行分組的虛擬資源。</block>
+  <block id="0456e4c2545668177705b8072e1b93ba" category="paragraph">FSx for ONTAP 磁碟區以虛擬方式將資料分組，決定資料的儲存方式，並決定資料的存取類型。Volume 不會消耗檔案系統儲存容量。儲存在磁碟區中的資料主要會消耗 SSD 儲存設備。視磁碟區的分層原則而定、資料可能也會佔用容量集區儲存空間。您可以在建立磁碟區時設定磁碟區的大小、稍後也可以變更其大小。</block>
+  <block id="51d89d2baec646eb989c0ff4fd38d651" category="list-text">磁碟區自動成長：選配啟用磁碟區自動成長功能，自動擴充磁碟區容量，直到達到最大容量。此功能可適應不斷增長的數據使用量，確保運作不會中斷。</block>
+  <block id="746dd2fcf8e89b32c19195b26ac96dbf" category="paragraph">指定卷的最大增長大小和單位。最大增長大小不能小於目前磁碟區大小。</block>
+  <block id="67e50725d2f9318432dc7449280446c3" category="list-text">*儲存效率*：預設啟用。選擇此項目可停用該功能。</block>
+  <block id="b796f9c9a5e3021f08d8f0e74890007d" category="summary">啟用卷自動增長以讓工作負載工廠為您管理磁碟區容量。您可以隨時停用。</block>
+  <block id="2753f972110374eb67c560eb5ff6266c" category="doc">在工作負載工廠中啟用卷自動增長</block>
+  <block id="870bfc0407fd21936b0eda7ce98ea951" category="list-text">選擇*基本操作*，然後選擇*設定磁碟區自動增長*。</block>
+  <block id="6f11493010276b8e782926f7cd8ee493" category="list-text">在「設定自動成長」對話方塊中，啟用磁碟區自動成長功能，以自動擴充磁碟區容量，直到達到最大大小。此功能可適應不斷增長的數據使用量，確保操作不間斷。</block>
+  <block id="6fd69dde99b8a0114b3c69839bb5f201" category="paragraph">啟用自動容量管理後，BlueXP 工作負載工廠可根據容量需求隨時間變化自動為 FSx for ONTAP 檔案系統新增增量儲存。此外，啟用此功能無需手動監控容量，並降低了影響應用程式資料讀寫的風險。</block>
+  <block id="a0ddf9e17030c7c21387932426a4defa" category="list-text">您必須擁有工作負載工廠中具有讀取/寫入權限的憑證才能完成此任務。</block>
+  <block id="2063734e5b01a934d73b02ba309a34e6" category="list-text">您不應在資料遷移期間啟用此功能，因為 AWS 規定 SSD 容量增加之間至少需要六小時的冷卻期。此限制可能會延遲調整，因此請做好相應的規劃。</block>
+  <block id="667bda9d5b08fe1666f3fe061ce424aa" category="list-text">FSx for ONTAP 備份</block>
+  <block id="af20abc7154e9ee224c54b48b6ec7d63" category="list-text">儲存效率</block>
+  <block id="8d5352cda3351c4fe9fe9f49933c852b" category="paragraph">修正問題的程序即會啟動。選擇帳戶設定選單，然後選擇*Tracker*查看操作狀態。</block>
+  <block id="4957b29fcffeec300ed417debafed722" category="paragraph">以下區域支援高達 6 GB/s 的最大吞吐容量，以進行橫向擴展部署：美國東部（弗吉尼亞北部和俄亥俄）、美國西部（加利福尼亞北部和俄勒岡）、歐洲（法蘭克福、愛爾蘭和斯德哥爾摩）以及亞太地區（新加坡和雪梨）。</block>
+  <block id="58107709be0f763204df69a361ef7fe0" category="list-text">當啟用自動容量管理時，需要一個連結來確保磁碟區 inode 隨著儲存容量一起增加。</block>
+  <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">* Terraform BlueXP  工作負載工廠供應商 * ：使用 Terraform 建置及管理在工作負載工廠主控台產生的基礎架構工作流程。</block>
+  <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">2025 年 6 月 03 日</block>
+  <block id="3f704fe76e8b9e4bf51184f82c064656" category="paragraph"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block> == 2025年3月2日</block>
 </blocks>

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: edit-volume-autogrow.html 
 keywords: volume autogrow, increase volume capacity, enable autogrow 
-summary: 啟用 Volume 自動擴充功能，讓 BlueXP  工作負載在出廠時能夠為您管理 Volume 容量。您可以隨時停用。 
+summary: 啟用卷自動增長以讓工作負載工廠為您管理磁碟區容量。您可以隨時停用。 
 ---
-= 在 BlueXP  工作負載工廠中啟用 Volume 自動擴充
+= 在工作負載工廠中啟用卷自動增長
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-啟用 Volume 自動擴充功能，讓 BlueXP  工作負載在出廠時能夠為您管理 Volume 容量。您可以隨時停用。
+啟用卷自動增長以讓工作負載工廠為您管理磁碟區容量。您可以隨時停用。
 
 您也可以選擇隨時使用手動增加 Volume 的容量 link:increase-volume-capacity.html["增加 Volume 容量功能"]。
 
@@ -27,7 +27,10 @@ NOTE: iSCSI Volume 不支援 Volume 自動擴充。
 . 在 FSX for ONTAP 標籤中，選取要更新之 Volume 的檔案系統三點功能表，然後選取 * 管理 * 。
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
 . 從 Volumes （磁碟區）標籤中，選取您要修改之磁碟區的三點選單。
-. 選擇 * 基本動作 * 、然後 * 編輯 Volume 自動擴充 * 。
-. 在「編輯自動擴充」對話方塊中、啟用 Volume 自動擴充。
+. 選擇*基本操作*，然後選擇*設定磁碟區自動增長*。
+. 在「設定自動成長」對話方塊中，啟用磁碟區自動成長功能，以自動擴充磁碟區容量，直到達到最大大小。此功能可適應不斷增長的數據使用量，確保操作不間斷。
++
+指定卷的最大增長大小和單位。最大增長大小不能小於目前磁碟區大小。
+
 . 選擇*應用*。
 

@@ -2,19 +2,19 @@
 sidebar: sidebar 
 permalink: create-volume.html 
 keywords: create volume, FSx for ONTAP volume 
-summary: 為 ONTAP 檔案系統設定 FSX 之後，請在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX 。 
+summary: 設定 FSx for ONTAP 檔案系統後，在工作負載工廠中建立 FSx for ONTAP 磁碟區。 
 ---
-= 在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX
+= 在工作負載工廠中建立 FSx for ONTAP 卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-為 ONTAP 檔案系統設定 FSX 之後，請在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX 。
+設定 FSx for ONTAP 檔案系統後，在工作負載工廠中建立 FSx for ONTAP 磁碟區作為用於對資料進行分組的虛擬資源。
 
 .關於這項工作
-適用於 ONTAP Volume 的 FSX 是用於分組資料、判斷資料儲存方式、以及判斷資料存取類型的虛擬資源。Volume 不會消耗檔案系統儲存容量。儲存在磁碟區中的資料主要會消耗 SSD 儲存設備。視磁碟區的分層原則而定、資料可能也會佔用容量集區儲存空間。您可以在建立磁碟區時設定磁碟區的大小、稍後也可以變更其大小。
+FSx for ONTAP 磁碟區以虛擬方式將資料分組，決定資料的儲存方式，並決定資料的存取類型。Volume 不會消耗檔案系統儲存容量。儲存在磁碟區中的資料主要會消耗 SSD 儲存設備。視磁碟區的分層原則而定、資料可能也會佔用容量集區儲存空間。您可以在建立磁碟區時設定磁碟區的大小、稍後也可以變更其大小。
 
 您的磁碟區可能會使用下列通訊協定：
 
@@ -63,6 +63,10 @@ FlexGroup Volume 大小取決於組成數量。每個成分需要 100 GiB 。
 .. * Volume Size* ：輸入 Volume 大小和單位。
 +
 也可以啟用 Volume 自動擴充。當您選擇 * 檔案存取 * 作為磁碟區存取類型時、即可使用此選項。
+
+.. 磁碟區自動成長：選配啟用磁碟區自動成長功能，自動擴充磁碟區容量，直到達到最大容量。此功能可適應不斷增長的數據使用量，確保運作不會中斷。
++
+指定卷的最大增長大小和單位。最大增長大小不能小於目前磁碟區大小。
 
 .. * 標記 * ：您可以選擇性地新增最多 50 個標記。
 
@@ -119,7 +123,7 @@ FlexGroup Volume 大小取決於組成數量。每個成分需要 100 GiB 。
 
 . 在效率與保護之下、提供下列詳細資料：
 +
-.. * 儲存效率 * ：停用或啟用儲存效率。
+.. *儲存效率*：預設啟用。選擇此項目可停用該功能。
 +
 利用 ONTAP 的重複資料刪除和壓縮功能、即可提高儲存效率。重複資料刪除技術可消除重複的資料區塊資料壓縮會壓縮資料區塊、以減少所需的實體儲存容量。
 
