@@ -1917,7 +1917,6 @@
   <block id="58107709be0f763204df69a361ef7fe0" category="list-text">當啟用自動容量管理時，需要一個連結來確保磁碟區 inode 隨著儲存容量一起增加。</block>
   <block id="af06e2a95bd9706f705a4480e8f40846" category="list-text">* Terraform BlueXP  工作負載工廠供應商 * ：使用 Terraform 建置及管理在工作負載工廠主控台產生的基礎架構工作流程。</block>
   <block id="4aa37f4d9a391345e9a54c68333e2503" category="section-title">2025 年 6 月 03 日</block>
-  <block id="3f704fe76e8b9e4bf51184f82c064656" category="paragraph"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block> == 2025年3月2日</block>
   <block id="0592779b8245b0df30d4f675dd276086" category="list-text">暫停及恢復複寫：您可以暫停（停止）從來源磁碟區到目的地磁碟區的排程複寫更新，然後在準備好時恢復複寫排程。在暫停期間，來源捲和目標磁碟區變得獨立，目標磁碟區從唯讀轉換為讀取/寫入。</block>
   <block id="4ead5e435cb4f2c7cf627b1d1e84c333" category="paragraph">工作負載工廠使用者介面和文件現在使用“只讀”來指讀取權限，使用“讀取/寫入”來指稱自動化權限。</block>
   <block id="bf1eae05016a3b136059039ae18136f1" category="summary">在 BlueXP 工作負載工廠中克隆一個卷，以製作原始卷的讀/寫卷進行測試。</block>
@@ -1929,4 +1928,12 @@
   <block id="30e57761ad37a97249e7a0876abdd7cc" category="paragraph">當您恢復複寫時，目標 Volume 的所有變更都會復原，而 BlueXP  工作負載原廠會重新啟用複寫。目標磁碟區從讀取/寫入轉換為唯讀，並再次按照計劃的複製間隔從來源磁碟區接收更新。當您恢復複寫關係時，目標磁碟區會恢復為最新的初始複寫快照，此時磁碟區複寫程序就會重新開始。</block>
   <block id="b91aff97cc4dadbca9539fae72dedecc" category="paragraph">在 _basic_、_read-only_ 和 _read/write_ 之間進行選擇<block ref="a1a436caedec06006ef5b76c82a83b04" category="inline-link-macro-rx"></block></block>
   <block id="b31987b3ffb35fe02be38fe9d8e701f1" category="paragraph">如果您在「唯讀」或「讀取/寫入」模式下操作，則需要<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>其中包括選擇工作負載功能（例如資料庫和 AI）以及建立 IAM 策略以確保您擁有以_唯讀_或_讀/寫_模式操作的正確權限。</block>
+  <block id="2423cc9c7b9124d70e9fba7ab98b53df" category="doc">全新精心設計的分析和問題修復支持</block>
+  <block id="b03b65ae167fa7999b9020739117ae19" category="paragraph">FSx for ONTAP 檔案系統的自動容量管理現在作為配置分析包含在精心設計的狀態儀表板中。</block>
+  <block id="5a5b21f778da0dbaf4794873b0deb067" category="paragraph">此外，工作負載工廠現在支援修復以下配置問題：</block>
+  <block id="f2be69b635c39988351f6636a52c66bd" category="list-text">自動容量管理</block>
+  <block id="6745decee5065276cebd3695be1fb7bd" category="inline-link-macro">修復配置問題</block>
+  <block id="347dbce3139b58110904a187913fc7e1" category="paragraph"><block ref="347dbce3139b58110904a187913fc7e1" category="inline-link-macro-rx"></block></block>
+  <block id="5a7cf4155ebaa9aec1f33318c7c4cf82" category="section-title">2025 年 6 月 08 日</block>
+  <block id="2d5a4b914acb6c2f03d312067c73ce32" category="section-title">2025 年 3 月 02 日</block>
 </blocks>

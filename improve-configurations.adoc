@@ -27,6 +27,7 @@ BlueXP  每天分析 Amazon FSX for NetApp ONTAP 檔案系統部署組態。每
 * FSx for ONTAP 備份
 * 遠端資料複寫
 * 儲存效率
+* 自動容量管理
 
 
 --
