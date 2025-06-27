@@ -79,7 +79,7 @@ image:screenshot-on-prem-connectivity.png["顯示內部部署 ONTAP 叢集應如
 .開始之前
 * 您必須探索內部部署的 ONTAP 叢集，才能複寫其 Volume 資料。
 * 您必須有可用的 FSX ， ONTAP 檔案系統才能做為複寫的目標。
-* 內部部署 ONTAP 叢集和用於複寫關係的 ONTAP 檔案系統的 FSX 都必須具有相關的連結。如果 ONTAP 叢集的內部和 FSX 上有一個或兩個都沒有現有的連結，請參閱link:create-link.html["首先建立連結"]。link:manage-links.html["建立連結的關聯"]在檔案系統中，在 * 帳戶名稱 * 下選擇 * 關聯連結 * 。一旦內部部署 ONTAP 叢集和 ONTAP 檔案系統的 FSX 連結後，請返回此作業。
+* 內部部署 ONTAP 叢集和用於複寫關係的 ONTAP 檔案系統的 FSX 都必須具有相關的連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
 
 
 .步驟

@@ -34,7 +34,7 @@ NOTE: 只有 FlexGroup 磁碟區才支援重新平衡，但 iSCSI 或 NVMe FlexG
 .開始之前
 * FlexGroup Volume Balance 僅適用於使用橫向擴充部署且至少有兩個 HA 配對的 ONTAP 檔案系統。
 * Volume 樣式必須是 FlexGroup Volume 。
-* 若要檢查 FlexGroup Volume 的平衡，您必須link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
+* 要檢查 FlexGroup 磁碟區的餘額，您必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
 
 
 .步驟
@@ -60,7 +60,7 @@ NOTE: 工作負載原廠管理員可在作業期間停止重新平衡。
 
 .開始之前
 * <<檢查 FlexGroup Volume 的平衡,檢查 FlexGroup Volume 的平衡>>重新平衡磁碟區之前。
-* 若要重新平衡磁碟區、您必須 link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
+* 要重新平衡卷，您必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
 * 請注意，您重新平衡的磁碟區上現有的快照會變成部分快照，無法用來還原磁碟區資料，但重新平衡之後所拍攝的新快照可以用來還原磁碟區資料。
 
 

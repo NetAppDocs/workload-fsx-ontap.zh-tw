@@ -19,7 +19,7 @@ summary: 隨時手動增加 BlueXP  工作負載工廠中的 Volume 容量。
 對於 iSCSI LUN 、此作業會增加主機 LUN 的大小。容量增加後、請遵循主機作業系統提供的程序、探索 LUN 的新大小、並擴充 LUN 的檔案系統。
 
 .開始之前
-若要增加 Volume 容量、您必須 link:manage-links.html["建立連結的關聯"]：如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
+若要增加磁碟區容量，必須關聯連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。

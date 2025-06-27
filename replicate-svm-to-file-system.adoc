@@ -14,7 +14,7 @@ summary: 將儲存 VM 複製到另一個適用於 ONTAP 檔案系統的 FSX 、�
 在 BlueXP  工作負載工廠中，將儲存 VM 複製到另一個適用於 ONTAP 檔案系統的 FSX ，可在資料遺失時提供保護層的資料存取。此作業會將一個儲存 VM 中的所有磁碟區複寫到另一個適用於 ONTAP 檔案系統的 FSX 。
 
 .開始之前
-若要將儲存 VM 複寫到另一個適用於 ONTAP 檔案系統的 FSX ，您必須 link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
+若要將儲存虛擬機器複製到另一個 FSx for ONTAP 檔案系統，您必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。

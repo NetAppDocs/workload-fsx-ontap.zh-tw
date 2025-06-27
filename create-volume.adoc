@@ -30,7 +30,7 @@ FSx for ONTAP 磁碟區以虛擬方式將資料分組，決定資料的儲存方
 * 您必須擁有儲存 VM 。
 * 若要存取傳輸協定、請完成下列步驟：
 +
-** 若要設定對磁碟區的存取權、您必須 link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
+** 要配置對卷的訪問，您必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
 ** 您必須設定所選傳輸協定（ CIFS 、 NFS 或 iSCSI ）的存取權。
 
 
@@ -181,7 +181,7 @@ Volume 附加模式:: 您無法修改受 WORM 保護檔案中的現有資料。�
 
 .. * Snapshot polic*: 選擇快照策略以指定快照的頻率和保留。
 +
-以下是 AWS 的預設原則。對於自訂快照原則、您必須建立連結的關聯。
+以下是 AWS 的預設原則。對於自訂快照策略，您必須link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["建立連結的關聯"] 。
 
 +
 `default`:: 此原則會根據下列排程自動建立快照、並刪除最舊的快照複本、以便為較新的複本提供空間：

@@ -48,7 +48,7 @@ BlueXP  工作負載工廠會定期分析 Amazon FSX for NetApp ONTAP 檔案系
 
 若要進行完整的檔案系統分析，您必須建立連結的關聯。連結連線功能可讓工作負載在工廠中分析所有檔案系統組態，例如資料保護和效能。
 
-link:create-link.html["瞭解如何建立連結。"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。
 
 .下一步
 link:improve-configurations.html["實作架構良好的檔案系統組態"]

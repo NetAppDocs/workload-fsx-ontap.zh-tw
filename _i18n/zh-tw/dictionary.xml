@@ -169,7 +169,6 @@
   <block id="e9cb9ef1f5a746f51fcf4a92869ed58c" category="paragraph">此作業會為適用於 ONTAP 檔案系統的 FSX 中的一或所有來源磁碟區建立複寫關係。</block>
   <block id="584e3ee876c862f377d3d9b7080d32d9" category="paragraph">開始之前、請確定您符合下列先決條件。</block>
   <block id="3188210715ec1f36a4acbadb45350bad" category="list-text">您的儲存設備庫存中必須有兩個可用的檔案系統、才能建立複寫關係。</block>
-  <block id="33429c6ab13a995d68ffda0c4dc39c19" category="inline-link-macro">首先建立連結</block>
   <block id="4820ffe2fe615fd37fb7932b296c86f1" category="inline-link-macro">建立連結的關聯</block>
   <block id="b9a2f47b5bc4bd7fcc8d23d6721ec4c2" category="list-text">在「建立複寫」頁面的「複寫目標」下、提供下列項目：</block>
   <block id="837278414ab16e2a74dfc1b2102bcd54" category="list-text">* 適用於 ONTAP 檔案系統 * 的 FSX ：針對適用於 ONTAP 檔案系統的目標 FSX 、選取 ONTAP 檔案系統名稱的認證、區域和 FSX 。</block>
@@ -197,7 +196,6 @@
   <block id="dbdb6569199d0b92d1e8203557e17927" category="list-text">在使用快照之前、請考量以下有關快照容量的資訊：</block>
   <block id="93500ef3c4b6b914f591d40fa8709533" category="list-text">對於大多數資料集而言、 20% 的額外容量足以保留快照達四週。隨著資料越來越老舊、還原的使用率也變得越來越低。</block>
   <block id="e6b293eb079603bb103c925cf228700c" category="list-text">覆寫快照中的所有資料會消耗大量容量、這會影響資源配置 Volume 容量。</block>
-  <block id="0691d778f09d713a755463d05ab1033d" category="inline-link-macro">建立連結</block>
   <block id="b8613e46a68d4b177aeb2fe1cdab9b07" category="list-text">在 * 儲存 * 中、選取 * 移至儲存設備詳細目錄 * 。</block>
   <block id="736ef7205c037a078bc461f368c6a21f" category="doc">為 ONTAP Volume 建立 FSX 的手動快照</block>
   <block id="5b10cd7d19a8a16358cb05922f38a69e" category="paragraph">快照是磁碟區的資源、是資料的即時擷取、僅會佔用修改資料的空間。由於資料會隨著時間而改變、快照通常會隨著時間變舊而佔用更多空間。</block>
@@ -253,7 +251,6 @@
   <block id="8cc48e7c3f902d1b7dd7d0ecb40ade52" category="list-text">在效率與保護之下、提供下列詳細資料：</block>
   <block id="4f16f68a6d9522c0d097a900978f6f0d" category="paragraph">利用 ONTAP 的重複資料刪除和壓縮功能、即可提高儲存效率。重複資料刪除技術可消除重複的資料區塊資料壓縮會壓縮資料區塊、以減少所需的實體儲存容量。</block>
   <block id="f03207e238654d36cb2c88950bf22d84" category="list-text">* Snapshot polic*: 選擇快照策略以指定快照的頻率和保留。</block>
-  <block id="84e947d0a820262a46013852b1928efd" category="paragraph">以下是 AWS 的預設原則。對於自訂快照原則、您必須建立連結的關聯。</block>
   <block id="20d2ce456e91b2afd45084ee06baab95" category="list-text">此原則會根據下列排程自動建立快照、並刪除最舊的快照複本、以便為較新的複本提供空間：</block>
   <block id="4cd6a004e8e70008213c7c1917f36c49" category="list-text">每小時最多六個快照、每小時五分鐘拍攝一次。</block>
   <block id="17ed200290d04c66b0c31c18233bd5c1" category="list-text">每週一至週六、午夜後 10 分鐘、最多可拍攝兩個每日快照。</block>
@@ -517,7 +514,6 @@
   <block id="8cd69d367e2dbdfca9ec0b55ba13baec" category="section-title">需要連結時</block>
   <block id="c0653b3ad30a51a0fe3228ad2877ac9d" category="paragraph">需要連結的功能包括：</block>
   <block id="fa1a08e2a749c9f330c9a8e60cac9cc3" category="doc">管理連結</block>
-  <block id="a4fcf9229a590e13a5a514e19c4c398e" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block> 或 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。</block>
   <block id="e32918056c538c64f6e229f2ca257e25" category="section-title">檢視與您帳戶相關的連結</block>
   <block id="a8fa4cf9dc4a62f0a1665e1500bbff0a" category="paragraph">您可以檢視目前與您帳戶相關的連結。</block>
   <block id="d1c0fce8fad9bbea3f4af6e7b074017a" category="inline-image-macro">顯示如何開啟連結頁面的螢幕擷取畫面。</block>
@@ -602,7 +598,6 @@
   <block id="5ad71ca0af84be16f0eb4a7ae3fe9ac0" category="list-text">分割後、父 FlexVol Volume 和複本都需要由其磁碟區保證所決定的完整空間分配。</block>
   <block id="8dd061e99d373c92767f86fe7281ad2b" category="list-text">從父磁碟區分割 FlexClone 磁碟區之後、就無法重新加入這兩個磁碟區。</block>
   <block id="107cbfcddbd40cae35b91dda5e5e061c" category="paragraph">分割複製的磁碟區之前、請先考慮下列事項：</block>
-  <block id="b77db7f524ccde6f40472118970bf6e7" category="list-text">您必須是叢集管理員。</block>
   <block id="7591989c8ce2c1b3bcc16916ee9457ef" category="list-text">當分割作業開始時、 FlexClone Volume 必須處於線上狀態。</block>
   <block id="102403f0f3d778ceafbe074fd8219d2f" category="list-text">父磁碟區必須處於線上狀態、才能成功分割。</block>
   <block id="ee58955cf84a9682824159e8019bdbef" category="list-text">選擇 * 資料保護動作 * 、然後 * 分割複製的 Volume * 。</block>
@@ -816,7 +811,6 @@
   <block id="c2a714b67167aae1661b248d570b356d" category="list-text">在 *FSX for （用於 ONTAP ） * 選項卡中，選擇要更新的文件系統的三點菜單，然後選擇 *Manage* （管理）。</block>
   <block id="6d257e829bd979b1905ac4edd5b4a469" category="list-text">在複寫關係索引標籤中，選取要變更的複寫關係排程的三點功能表。</block>
   <block id="24347b3ddf5a25cc9c27e54ae285ade1" category="list-text">選擇*應用*。</block>
-  <block id="f2a6898f5e2a659b0a4e936d2179af7b" category="paragraph">若要顯示現有的快照原則，您需要建立連結的關聯。若要建立連結的關聯，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。然後返回此作業。</block>
   <block id="af215976e40a730a67c8637d4caae8f6" category="list-text">選取 * 套用 * 以儲存變更。</block>
   <block id="8cb5ce6df0f7a83b17c0640431645fbe" category="summary">變更 BlueXP  工作負載工廠的分層原則，將資料從高效能主儲存層重新分配至次容量集區儲存層。</block>
   <block id="6e342a0f88f597871307e39e9b4d00f4" category="doc">變更 BlueXP  工作負載工廠中磁碟區的分層原則</block>
@@ -850,11 +844,8 @@
   <block id="9d1d72e4ac9c59d5a464cfdbfae095f3" category="paragraph">使用此選項、您可以從 AWS CloudForgation 擷取連結的 ARN 、並在此處報告。工作負載工廠會手動為您登錄連結。</block>
   <block id="7607cf6a75040d1b9bf8fde1cfaecf12" category="doc">在 BlueXP  工作負載工廠建立複寫關係</block>
   <block id="161fc7b1d67184a50e10e19fb2489263" category="paragraph">在 BlueXP  工作負載工廠中為適用於 ONTAP 檔案系統的 FSX 建立複寫關係，以避免發生無法預見的災難時發生資料遺失。</block>
-  <block id="cf2d4a66ab67f86354f74f9c2cd68326" category="list-text">您用於複寫關係的兩個檔案系統必須有相關的連結。如果檔案系統沒有現有的連結，請參閱 <block ref="1bb172d13e94db502d24bfc1c5a4fc0a" category="inline-link-macro-rx"></block>。<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>在檔案系統中，在 * 帳戶名稱 * 下選擇 * 關聯連結 * 。連結在兩個檔案系統中建立關聯後、請返回此作業。</block>
   <block id="215ff1ada74bcc801bd4be406a4760b9" category="paragraph">_Auto_ 是使用 ONTAP 使用者介面的工作負載原廠 FSX 建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>AWS FSX for NetApp ONTAP 文件中的。</block>
-  <block id="9b5cb8f49e83e342d48c95385ebf43e7" category="list-text">若要建立自訂的快照原則、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
   <block id="475db696847724a8e496eba7476bc2ce" category="summary">在 BlueXP  工作負載工廠中為 ONTAP Volume 建立 FSX 的手動快照。快照是磁碟區內容的時間點版本。</block>
-  <block id="512defc52682eb6b6d9585f8d5494603" category="paragraph">您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block> 建立快照。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
   <block id="8e835d5a49d273fb898a556146f8b52c" category="list-text">從 *Volumes （卷） * 選項卡中，選擇要保護的卷的三點菜單。</block>
   <block id="d0b0eb066206fa50f3ebee39a541bb7c" category="summary">您可以為 ONTAP 儲存 VM （ SVM ）建立 FSX ，為 BlueXP  工作負載工廠的工作負載提供儲存和資料服務。</block>
   <block id="4da97157b6693eaf9968b187d7b8259c" category="paragraph">為適用於 ONTAP 檔案系統的 FSX 建立儲存 VM （ SVM ），以便在 BlueXP  工作負載工廠中，為您的工作負載，以虛擬方式存取儲存和資料服務。</block>
@@ -950,8 +941,6 @@
   <block id="1b7732fda3ed237c994a5ac55fb150ea" category="list-text">* 每日自動備份時段 * ：選擇 * 無偏好設定 * （為您選擇每日備份開始時間）或 * 選擇每日備份開始時間 * ，並指定開始時間。</block>
   <block id="5bdcc5d3e4e631055e0153df468f21d6" category="doc">在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用</block>
   <block id="3d158aba7d5d233ad247917999b7f8f9" category="list-text">從 Volumes （磁碟區）索引標籤中，選取要變更 SMB 共用的磁碟區三點功能表。</block>
-  <block id="20ce09b74b6e0e3f084a81d605cc8f77" category="summary">您可以在 BlueXP  工作負載工廠中檢視與您帳戶相關的連結，建立連結的關聯，以及移除連結。</block>
-  <block id="2083481ef56023982330c4d1cbedcd07" category="doc">管理 BlueXP  工作負載原廠連結</block>
   <block id="3e0b9b190a3e069bed44756ddb118289" category="list-text">從主頁中，從菜單中選擇 * 鏈接 * 。</block>
   <block id="cc26ff728c1b9844af11d5c6831287a6" category="paragraph"><block ref="cc26ff728c1b9844af11d5c6831287a6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a91b1be003fc8ddd1b9b9c2667168d69" category="paragraph">您無法從工作負載原廠介面編輯連結。如果您需要變更連結、則需要建立新連結、然後將該連結與檔案系統建立關聯。</block>
@@ -1113,7 +1102,6 @@
   <block id="f4a663f98fdbf7294b4d7065fe81028d" category="section-title">從內部部署的 ONTAP 叢集複寫 Volume 資料</block>
   <block id="a979d07ec6790355c195ac942aac0f7a" category="list-text">您必須探索內部部署的 ONTAP 叢集，才能複寫其 Volume 資料。</block>
   <block id="bbaf3e2bb6ee0562252678dc510975b4" category="list-text">您必須有可用的 FSX ， ONTAP 檔案系統才能做為複寫的目標。</block>
-  <block id="5fc398b3211d605127c144291f3eda23" category="list-text">內部部署 ONTAP 叢集和用於複寫關係的 ONTAP 檔案系統的 FSX 都必須具有相關的連結。如果 ONTAP 叢集的內部和 FSX 上有一個或兩個都沒有現有的連結，請參閱<block ref="1bb172d13e94db502d24bfc1c5a4fc0a" category="inline-link-macro-rx"></block>。<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>在檔案系統中，在 * 帳戶名稱 * 下選擇 * 關聯連結 * 。一旦內部部署 ONTAP 叢集和 ONTAP 檔案系統的 FSX 連結後，請返回此作業。</block>
   <block id="aea1c4ebf571d37a1b92fbbf08a1d97c" category="list-text">若要依儲存 VM 尋找磁碟區，您可以從下拉式清單中 * 選取儲存 VM* 。</block>
   <block id="e03b6f62981f4a86c7a1c627e22e63e8" category="list-text">選取一個或多個要複寫的磁碟區，然後選取 * Replicate * 。</block>
   <block id="72106a023ea21862c78ae92b6102ff34" category="list-text">*Tiering data* ：為儲存在目標 Volume 中的資料選取分層原則。</block>
@@ -1312,7 +1300,6 @@
   <block id="669fb0eb9744dc9a4caa9500aa2efdd0" category="list-text">* 記憶體內快取和 NVMe 快取 * ：包含獨特的記憶體內快取和 NVMe 快取，可提升常用資料的效能。</block>
   <block id="8e011e1c010d6b411d584ecf79e79304" category="list-text">* 重複資料刪除與壓縮 * ：移除重複資料並壓縮資料，以減少 ONTAP 檔案系統的 FSX 所需的實體儲存容量，進而節省成本。</block>
   <block id="acf29f0fa117accd6f0be38d23e9b566" category="paragraph">AWS 維護您的 FSX for ONTAP 帳戶，而非工作負載工廠。請參閱 <block ref="d466c04e3dc9277f23f307f5afe7df62" category="inline-link-macro-rx"></block>。</block>
-  <block id="4baeabf837f67f70aeb93e0dfea60d36" category="paragraph">管理您與 BlueXP  工作負載原廠帳戶相關的連結。您可以檢視與適用於 ONTAP 檔案系統的 FSX 相關的連結，將連結與適用於 ONTAP 檔案系統的 FSX 關聯，編輯連結，以及移除連結。</block>
   <block id="4a922c367b35639ecb9d911b81fdb458" category="doc">自動容量管理改善</block>
   <block id="5868fd5ebf39f0f3dce9bd4ba23dcb6f" category="paragraph">啟用自動容量管理時， BlueXP  工作負載工廠現在會檢查檔案系統是否每 30 分鐘達到容量臨界值，而非每 2 小時。</block>
   <block id="410d677b6db33c7f47c30b3d219c4846" category="paragraph">當達到容量臨界值時，已配置的 IOPS 設定就不再受到影響。</block>
@@ -1361,7 +1348,6 @@
   <block id="6612ee3812a7ecc1b61dc6f585b1c26f" category="list-text">接受關於不可變快照的聲明。</block>
   <block id="a07e25b28678b53fe808a082369fda80" category="paragraph">磁碟區有快照複本。</block>
   <block id="86ee35c0029c920dce9ef56d88935e8e" category="paragraph">您的磁碟區可能會使用下列通訊協定：</block>
-  <block id="f9c23d0688e853bcefd0a1c9f4247f62" category="list-text">若要設定對磁碟區的存取權、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
   <block id="8feb9be2f7d30e723f1c8aa899250dae" category="list-text">* 區塊存取 * ：允許執行關鍵業務應用程式的主機使用 iSCSI 傳輸協定存取磁碟區。區塊存取僅在檔案系統橫向擴充部署具有六個或更少 HA 配對時可用。</block>
   <block id="ad5ae1649d193a804147218da52fd8ad" category="list-text">* 可匯入的檔案 * ：此功能（也稱為 SnapLock ）預設為停用。啟用不可變的檔案可防止資料在指定的時間內遭到刪除或覆寫。只有在磁碟區建立期間，才能啟用此功能。啟用此功能後，便無法停用此功能。這是適用於 ONTAP 的 FSX 的優質功能，需要額外付費。如需詳細資訊，請參閱 <block ref="e334cd66539db07681f218968c17aeb4" category="inline-link-macro-rx"></block>Amazon FSX for NetApp ONTAP 文件中的。</block>
   <block id="f122287653386d74229199bd670f4990" category="list-text">保留期間有兩種設定： _ 保留原則 _ 和 _ 保留期間 _ 。_ 保留原則 _ 定義在不可變 WORM 狀態下保留檔案的時間長度。您可以指定自己的保留原則，或使用預設保留原則（未指定），即 30 年。最小和最大保留期間 _ 定義鎖定檔案所允許的時間範圍。</block>
@@ -1369,18 +1355,14 @@
   <block id="71377237946a16cc4981e8007b83be9b" category="list-text">選取 * 啟用 * 。</block>
   <block id="427c298c7e18f9930012cc8fc9c01fcd" category="summary">刪除 FSX for ONTAP 檔案系統中不再需要的 Volume ，並釋放空間。此操作無法還原。</block>
   <block id="c6e676032b22d8e639d8347f2bfe87d5" category="list-text">不可變的檔案和快照：包含不可變檔案和快照的磁碟區必須等到保留期間結束後才能刪除。</block>
-  <block id="857724ecf757b1bcd8495bdca7e9031a" category="paragraph">若要啟用 Volume 自動擴充、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>：如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
   <block id="c8b905c92d0173f2a57027886d96ccda" category="paragraph">每 30 分鐘掃描一次 ONTAP 檔案系統的 FSX ，以判斷是否需要新增遞增儲存設備，以及檢查可用的 Volume inode ，或是磁碟區中的檔案和資料夾數目上限，以便根據設定的自動容量管理臨界值來增加其數量。</block>
-  <block id="063db47ee02fdc9a25f24c45a2f07d88" category="paragraph">要確保卷 inode 隨着存儲容量的增加而增加<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>，您必須。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
   <block id="c19ec77905390b48637066dbfe338f41" category="paragraph">每 30 分鐘進行一次檔案系統掃描，以判斷檔案系統是否需要額外容量。</block>
   <block id="db95f08d46f6135faf16036ec8d0bee1" category="paragraph">探索使用 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和適用於 Windows 檔案伺服器的 FSX 與適用於 NetApp ONTAP 的 FSX 之儲存工作負載的節約效益。</block>
   <block id="40042d0ee93698f3f63a7f8a3f2c9c1f" category="paragraph">手動時<block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block>，您可能需要增加 IOPS 配置，以支援增加的檔案系統容量。</block>
-  <block id="58d1dabb2d9059ce86ad3732b8fdce6d" category="paragraph">若要增加 Volume 容量、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>：如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
   <block id="4a2b234996b70a9f17edaef6ad63c683" category="paragraph">初始化來源磁碟區與目標磁碟區之間的複寫關係，以傳輸 BlueXP  工作負載工廠中的快照與所有資料區塊。</block>
   <block id="d2a2f0e04d26b7123eb9c705ec13e758" category="list-text">此作業可能需要約 30 分鐘的時間才能完成。</block>
   <block id="1e0df4591e77aee403bcdd8f97b71ee5" category="paragraph">限制最大傳輸速率是選擇性的、但建議使用。如果沒有限制，網路和應用程式的效能可能會下降。</block>
   <block id="def5ef91837644047b00e3f35f6d9fde" category="paragraph">Lambda 執行的每項交易都會產生費用。由於 Lambda 在兩個系統之間扮演代理的角色，因此 Lambda 在檔案系統上傳送要求給 ONTAP REST API ，以及將回應傳回工作負載工廠時，都會收取費用。</block>
-  <block id="40d8be3de1697aeb13e210a5a2adc870" category="list-text">若要管理 CIFS 共用<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>，您必須：如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
   <block id="427e6edb85323a6bc01bcb3b7cc04394" category="paragraph">變更可能會導致目前使用者或群組失去對 CIFS 共用的存取權。</block>
   <block id="8deecf84343cc455d4c3c3eea19e99e4" category="summary">啟用此功能時，您可以更新某些不可變更的檔案設定。</block>
   <block id="b7461c37ab24fcaeffe8427333f04775" category="doc">在 BlueXP  工作負載工廠中管理磁碟區的不可變檔案</block>
@@ -1400,10 +1382,8 @@
   <block id="400fae8e788b3721b9ac25fe01f04f50" category="list-text">按一下「 * 套用 * 」。</block>
   <block id="0040dd329c12b8e069f111ec942d89fd" category="paragraph">現在，這些更新會套用至磁碟區。</block>
   <block id="750bccba0d1370cdcf80e381531ccf20" category="paragraph">管理 Volume 的匯出原則包括新增匯出原則規則，詳述用戶端規格，存取控制，超級使用者存取和 NFS 版本。您可以新增多個匯出原則、並將其排定優先順序。</block>
-  <block id="ce9febcc7ffbadd58aed913f41d83102" category="summary">在 BlueXP  工作負載工廠中管理適用於 ONTAP Volume 的 FSX 快照原則。Snapshot 原則定義系統如何為磁碟區建立快照。</block>
   <block id="4867c217eac62c97b182966f57c83e8f" category="doc">管理快照原則</block>
   <block id="491d37c735073b9ba15b69c580439021" category="paragraph">在 ONTAP 檔案系統的 FSX 中指派，變更及刪除磁碟區的快照管理作業，都是在儲存 VM 層級進行管理。Snapshot 原則可與單一儲存 VM 或所有儲存 VM 共用。</block>
-  <block id="dfcdbd589e3208b5fc1db45a90025691" category="paragraph">有些管理工作需要您<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>前往適用於 ONTAP 檔案系統的 FSX 。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。</block>
   <block id="67366ad19b5e2e9e027ed804f4af5cd5" category="section-title">變更快照原則</block>
   <block id="497d50d3f3c01373e9ac618dc8d7762e" category="paragraph">您可以變更要保留的快照原則名稱，排程和複本數量，以及啟用或停用不可變快照。無法啟用或停用跨儲存 VM 的原則共用。此選項僅在建立快照原則時可用。</block>
   <block id="9ea7c3b914bc2e35b22018cf6a394157" category="list-text">在 *FSX for （用於 ONTAP ） * 選項卡中，選擇文件系統的三點菜單，然後選擇 *Manag* （管理）。</block>
@@ -1413,7 +1393,6 @@
   <block id="14f87882e6a43eb538fc1c6aa4ea44de" category="paragraph">快照原則已更新。</block>
   <block id="6e1d84f2f9e9a9941b445952f6b20cf9" category="section-title">將快照原則指派給磁碟區</block>
   <block id="d88e3ecb2bebd33ebfaa42eb01224df4" category="paragraph">您可以將快照原則指派給單一磁碟區，為該磁碟區建立排程快照。</block>
-  <block id="ca3948c35bce5a01ff818d8165bc9432" category="paragraph">您必須<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>指派快照原則。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
   <block id="4eec9d8605d9286e4625ff2e2cf81a8e" category="list-text">在 *FSX for ONTAP * 標籤中，選取包含要指派快照原則之磁碟區的檔案系統三點功能表，然後選取 * 管理 * 。</block>
   <block id="2e0f47563683dde9235309ef305c18bd" category="list-text">在「 Snapshot 原則管理」頁面上，選取快照原則的三點功能表，然後選取 * 將原則指派給 Volume * 。</block>
   <block id="f6a4c9bb30fd5cd61b4fb4f8ab626585" category="list-text">在指派快照原則對話方塊中，選取要指派給磁碟區的快照原則，然後檢閱原則排程。</block>
@@ -1422,7 +1401,6 @@
   <block id="3a7afc12c5189a91a9f3ff461538baee" category="paragraph">快照原則會指派給磁碟區。</block>
   <block id="cd7d7ecbb8f81d67254037fc1073255b" category="section-title">啟用不可變快照</block>
   <block id="e299611a9963740ce6eae50818e11e01" category="paragraph">鎖定快照，防止在保留期間刪除快照。</block>
-  <block id="48b71084b80ec0f51cf2f98eb22f3529" category="paragraph">您必須<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>啟用不可變快照。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。</block>
   <block id="c86b5e8cb1615df74bbfa38f4ad243e7" category="list-text">在 *FSX for ONTAP * 標籤中，選取包含要鎖定快照之磁碟區的檔案系統三點功能表，然後選取 * 管理 * 。</block>
   <block id="8950e37ceffb542d0cd61122c2d8200b" category="list-text">選擇 * 資料保護動作 * ， * 快照 * ，然後 * 建立不可變的快照 * 。</block>
   <block id="600034d3e50968f487a1ad55349b4df4" category="list-text">在「製作不可變的快照」對話方塊中，執行下列步驟：</block>
@@ -1461,19 +1439,15 @@
   <block id="1cc1dda63f89374c05c8b8f5c8126341" category="paragraph">檢查作用中 FlexGroup Volume 的平衡。</block>
   <block id="eeaecacdda76be13c8594ef17a7c395c" category="list-text">FlexGroup Volume Balance 僅適用於使用橫向擴充部署且至少有兩個 HA 配對的 ONTAP 檔案系統。</block>
   <block id="480a98de796f5eb054e749dedf2dbce3" category="list-text">Volume 樣式必須是 FlexGroup Volume 。</block>
-  <block id="4c61a2a51509658d891bb7416dad5238" category="list-text">若要檢查 FlexGroup Volume 的平衡，您必須<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
   <block id="a0c24c81835ca446fe958b4abdb6c08c" category="list-text">從 Volumes （卷）選項卡中，選擇表頂部的 *Check Balance* （檢查 FlexGroup 平衡）。</block>
   <block id="8b7b54e191e5f6ab54dc9475259af500" category="list-text">在 Balance （ FlexGroup 平衡）視窗中，檢閱適用於 ONTAP 檔案系統的 FSX 中所有 FlexGroup Volume 的平衡狀態。</block>
   <block id="1997a93792e2a8be597c246f39ee9fd5" category="inline-xref">重新平衡</block>
   <block id="6b59c2a4df281550186d4d3fc75ba6d5" category="paragraph">當 FlexGroup Volume 不平衡時，請考慮<block ref="59031c1bf074b0ee450445a716c796e8" category="inline-xref-macro-rx"></block>。</block>
   <block id="1fd02848e48f953c62155cbb42dd331b" category="section-title">重新平衡 FlexGroup Volume</block>
   <block id="64de3f9223f666126336ac4c9a3aa94d" category="paragraph"><block ref="1f11182db84cfb1742cc746fa76f8fe6" category="inline-xref-macro-rx"></block>重新平衡磁碟區之前。</block>
-  <block id="af7202b99122b0c2ef1b703335afeef9" category="paragraph">若要重新平衡磁碟區、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
-  <block id="9c633958a5d66a1547197d5b123c8c3c" category="paragraph">若要將儲存 VM 複寫到另一個適用於 ONTAP 檔案系統的 FSX ，您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
   <block id="ceb833d216db0e056b9ab7d22ba4f023" category="paragraph">如果沒有限制，網路和應用程式的效能可能會下降。或者、我們建議為 ONTAP 檔案系統的關鍵工作負載（例如主要用於災難恢復的工作負載）提供不限傳輸率的 FSX 。</block>
   <block id="c4ee13228c56b3c8a94bcef6d8d6d357" category="summary">將複本 FlexVol volume 從其父磁碟區分割成正常的讀寫 FlexVol volume 。</block>
   <block id="c04185e8791b4a9dde9952d191aff02c" category="paragraph">將複製的 FlexVol volume 從其父磁碟區分割開來，使複製作業成為 BlueXP  工作負載工廠中的正常讀寫 FlexVol volume 。</block>
-  <block id="7a40cb07bf6252b24e9c2d81b57fca8d" category="list-text">若要分割複製的 Volume 、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
   <block id="652949a64c85ee3404c2f8c9537d8046" category="paragraph">停止 BlueXP  工作負載工廠的複寫關係。當您停止複寫關係時，排程複寫會從來源磁碟區更新至目標磁碟區，並暫停。目標 Volume 會從唯讀轉換為讀寫。</block>
   <block id="c24db838f46fefcbb09e7501c8ce667f" category="doc">在 BlueXP  工作負載工廠中使用內部部署的 ONTAP 叢集資料</block>
   <block id="db4ad8d47d4bcafdb0edef9931836b31" category="paragraph">探索 BlueXP  工作負載工廠中的內部部署 ONTAP 叢集，以便將資料複寫到 Amazon FSX for NetApp ONTAP 檔案系統。</block>
@@ -1501,7 +1475,6 @@
   <block id="19b8f390095f155d76eaa34c5d8f5d20" category="section-title">從磁碟區移除快照原則</block>
   <block id="29708169ed62ce48a3c9b4614e316be4" category="inline-xref">刪除快照原則</block>
   <block id="fce714b45eae0b2db843a127811c7dfa" category="paragraph">因為您不再需要磁碟區的快照，或是想要刪除指派給多個磁碟區的快照原則，所以請從磁碟區移除快照原則。若要<block ref="fe803bef0fbadbb3c4f9d940b9fdfdb7" category="inline-xref-macro-rx"></block>將其指派給多個 Volume ，您必須手動將其從所有 Volume 中移除。</block>
-  <block id="41a5b9bb16fef0a6d96c008d7a310dc7" category="paragraph">您必須<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>移除快照原則。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
   <block id="5b37f5e2e1d22ef188736327699e7d83" category="list-text">在 Assign snapshot policy （分配快照策略）對話框中，選擇 *None* （無）以刪除快照策略。</block>
   <block id="a7f4573e8d9f9cb2323d7ca62fa2b33e" category="paragraph">快照原則會從磁碟區中移除。</block>
   <block id="c767b489e8017a2255cc2520d048debc" category="inline-xref">將其移除</block>
@@ -1693,8 +1666,6 @@
   <block id="49c47aadfeff1e01313108c157d381b4" category="list-text">_ 效能效率 _ ：專注於有效運用資源來滿足系統需求，並在需求改變時維持最佳效能。</block>
   <block id="3f6f8b4e204fd3aa39cac35661de164d" category="section-title">分析需求</block>
   <block id="8f1eb02f728d9f5ee9934382b0494f93" category="paragraph">若要進行完整的檔案系統分析，您必須建立連結的關聯。連結連線功能可讓工作負載在工廠中分析所有檔案系統組態，例如資料保護和效能。</block>
-  <block id="fcc3e7348faefdb90df77848c11a3cd2" category="inline-link-macro">瞭解如何建立連結。</block>
-  <block id="d1d2547b7ef1924a459a05adb0445929" category="paragraph"><block ref="d1d2547b7ef1924a459a05adb0445929" category="inline-link-macro-rx"></block></block>
   <block id="02f2e108af721f7fc825883d8811e77a" category="list-text">* ONTAP 認證 * ：選用。輸入您的 ONTAP 使用者名稱和密碼。您可以立即或稍後設定密碼。</block>
   <block id="824994853534784eb4495b892e13b1c6" category="paragraph">如果您所提供的使用者不是 fsxadmin 使用者，稍後您需要重設 fsxadmin 密碼，您就可以從 AWS 主控台執行此動作。</block>
   <block id="dd34b811cd079417f985f8f56a4f1dca" category="list-text">* 儲存 VM 認證 * ：選用。輸入您的使用者名稱。密碼可以是此檔案系統的特定密碼，也可以使用輸入的相同密碼來取得 ONTAP 認證。您可以立即或稍後設定密碼。</block>
@@ -1723,7 +1694,6 @@
   <block id="b9000423f3d632810a4d8c3550eb4119" category="list-text">AWS Secrets Manager ：輸入機密 ARN 。</block>
   <block id="0481a079b29497027474b2f22074dd5a" category="paragraph">秘密 ARN 必須包含下列金鑰有效配對：</block>
   <block id="91a73bc4f293d9fc4712c2770316ae08" category="list-text">filesystemID = fsx_filesystem_id</block>
-  <block id="508e0beab9fc0c907eb4adcaa7a736f7" category="list-text">使用者 = FSx_user</block>
   <block id="db1e2f706f83d7a3a9a03793db05422a" category="list-text">密碼 = user_password</block>
   <block id="3179fc8078925ef0503270fd907af44c" category="paragraph">此連結與適用於 ONTAP 檔案系統的 FSX 相關聯。您可以執行進階 ONTAP 作業。</block>
   <block id="db9a0ca8d6bb6376ddaad7f254b049aa" category="section-title">疑難排解 AWS Secrets Manager 連結驗證的問題</block>
@@ -1815,7 +1785,6 @@
   <block id="2db718f1067d6b6b7d7127f5fc9e8961" category="section-title">為檔案系統啟用自主勒索軟體保護</block>
   <block id="49c0eb2938f477a73ea61ab289f6cb49" category="paragraph">啟用檔案系統的 ARP 可自動為所有現有的 NAS 和新建立的 NAS 磁碟區提供保護。</block>
   <block id="8464fc56103a4fee1df5080fdac69d95" category="paragraph">啟用 ARP 之後，如果發生攻擊且您發現攻擊是真實的， BlueXP  工作負載工廠會自動設定快照原則，每四小時最多需要六個快照。每個快照都會鎖定 2-5 天。</block>
-  <block id="838e01c36b2564848649c61e5353e23a" category="paragraph">要爲文件系統啓用 ARP ，您必須<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
   <block id="39980722ce96f89bf4e3f86789582133" category="list-text">在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以啟用 ARP ，然後選取 * 管理 * 。</block>
   <block id="79ebb9debc31f904c653eeee675e0311" category="list-text">在「資訊」下，選取 * 自主勒索軟體保護 * 旁的鉛筆圖示。當滑鼠移動到 *Autosomware Protection* 資料列上時，下拉式箭頭旁會出現鉛筆圖示。</block>
   <block id="45b371382285a51683a79f111c8ba635" category="list-text">在「自主勒索軟體保護」對話方塊中，啟用或停用此功能。</block>
@@ -1936,4 +1905,37 @@
   <block id="347dbce3139b58110904a187913fc7e1" category="paragraph"><block ref="347dbce3139b58110904a187913fc7e1" category="inline-link-macro-rx"></block></block>
   <block id="5a7cf4155ebaa9aec1f33318c7c4cf82" category="section-title">2025 年 6 月 08 日</block>
   <block id="2d5a4b914acb6c2f03d312067c73ce32" category="section-title">2025 年 3 月 02 日</block>
+  <block id="be8334e3a8f0885af8e03ba816b24537" category="inline-link-macro">了解如何關聯現有連結或建立並關聯新連結</block>
+  <block id="3b1785543fb9e9ab18e56f4cf89f47d9" category="paragraph"><block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。</block>
+  <block id="d7a33a9350fbc2bb6f775eabf85866de" category="list-text">必須在與 FSx for ONTAP 檔案系統關聯的安全性群組中開啟下列連接埠以實現連結連線。</block>
+  <block id="7c27ef4b070814b5ad00a89f2114b712" category="list-text">對於工作負載工廠控制台：連接埠 443 (HTTPS)</block>
+  <block id="90ead46e5d824c4081637d976f92fc96" category="list-text">對於 CloudShell：連接埠 22 (SSH)</block>
+  <block id="316509fcb5a8d1b5e1280f3f64c594f2" category="list-text">使用者名稱 = FSx_user</block>
+  <block id="b1882f9c170c4d334f1f12e72456f0c6" category="list-text">您用於複寫關係的兩個檔案系統必須有相關的連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="3cb1fda07c1d6b96bda1c65f1996fc1f" category="list-text">若要建立自訂快照策略，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="d49502975428f953533ab14ab9c02a5b" category="paragraph">您必須關聯一個連結才能建立磁碟區的手動快照。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="6234e99ad9e8c051d4afaa47c5d4ff82" category="list-text">要配置對卷的訪問，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="0152fea6b73cbe86540a93515bf61029" category="paragraph">以下是 AWS 的預設原則。對於自訂快照策略，您必須<block ref="6ac03ad394740d642419d1159fa121ff" category="inline-link-macro-rx"></block> 。</block>
+  <block id="2b34fc0bead4dcf64099078fdaf86d69" category="paragraph">要啟用卷自動增長，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="f8e03e36604030c79d6107b800f61804" category="list-text">為了確保磁碟區 inode 隨著儲存容量的增加而增加，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="837d97ffb35ee510b7ad737132bf4645" category="paragraph">若要增加磁碟區容量，必須關聯連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="516d1f2096bea0b3e53975d694dd15b4" category="list-text">要管理 CIFS 共享，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="67147bded21b5d35cd1c472eb37c2b10" category="summary">您可以查看與您的帳戶關聯的連結、更新連結驗證的密碼以及刪除 BlueXP 工作負載工廠中的連結。</block>
+  <block id="173477cd8f978bba4e49c820cc9340cf" category="doc">管理工作負載工廠鏈接</block>
+  <block id="bb886f585ca35b437be939f27b5ed296" category="paragraph">管理與工作負載工廠帳戶關聯的連結。您可以查看與 FSx for ONTAP 檔案系統關聯的連結、提供用於連結驗證的密碼，以及從工作負載工廠控制台移除連結。</block>
+  <block id="2c793b5b15ea565983390f5625f7b85b" category="inline-link-macro">建立並關聯連結</block>
+  <block id="d2daf1f2c560c48cb1e86e38214b4f9f" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block> 或 <block ref="cd9ae14bef62d063a73930ad8837c0cf" category="inline-link-macro-rx"></block>。</block>
+  <block id="79fd533382080d6fa0f2c0bb9a4a7c87" category="summary">在工作負載工廠中管理 FSx for ONTAP 磁碟區的快照策略。Snapshot 原則定義系統如何為磁碟區建立快照。</block>
+  <block id="d7d6498d8a28cd2a003b0cb80a404f25" category="inline-link-macro">了解工作負載工廠鏈接</block>
+  <block id="40dae9a6d648fd84a17ba1763d5aadc5" category="paragraph">某些管理任務要求您將連結與 FSx for ONTAP 檔案系統關聯。<block ref="680b8873085fb75628dcdd179c5039ae" category="inline-link-macro-rx"></block>。</block>
+  <block id="facdbacecd0a382dee80b9b865bb8503" category="paragraph">若要顯示現有的快照策略，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="934b00a26e238802a369f0478947166f" category="paragraph">您必須關聯一個連結才能啟用不可變快照。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="00c1c06957f8f476507e7c8eab416ca3" category="paragraph">您必須關聯一個連結才能指派快照策略。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="f25575fb26d63d8bebf4c5a568518443" category="paragraph">您必須關聯一個連結才能刪除快照策略。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="aef6ece6593a117983fcd0b9e27b2a94" category="paragraph">若要為檔案系統啟用 ARP，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="1f217123f7d99348330184951007bc1c" category="list-text">要檢查 FlexGroup 磁碟區的餘額，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="44b1a8a590c7561bdb240a720d2d9aaa" category="list-text">要重新平衡卷，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="2ccb6b87f6c03ced811ff29d2a5f5ede" category="paragraph">若要將儲存虛擬機器複製到另一個 FSx for ONTAP 檔案系統，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="99ae6104ba82455197d215357b50f2f1" category="list-text">要分割克隆卷，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="21bd8c562c1d6ae4caf8a36f6d06c516" category="list-text">內部部署 ONTAP 叢集和用於複寫關係的 ONTAP 檔案系統的 FSX 都必須具有相關的連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
 </blocks>

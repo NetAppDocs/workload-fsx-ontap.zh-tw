@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-snapshot-policy.html 
 keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
-summary: 在 BlueXP  工作負載工廠中管理適用於 ONTAP Volume 的 FSX 快照原則。Snapshot 原則定義系統如何為磁碟區建立快照。 
+summary: 在工作負載工廠中管理 FSx for ONTAP 磁碟區的快照策略。Snapshot 原則定義系統如何為磁碟區建立快照。 
 ---
 = 管理快照原則
 :allow-uri-read: 
@@ -11,12 +11,12 @@ summary: 在 BlueXP  工作負載工廠中管理適用於 ONTAP Volume 的 FSX 
 
 
 [role="lead"]
-在 BlueXP  工作負載工廠中管理適用於 ONTAP Volume 的 FSX 快照原則。Snapshot 原則定義系統如何為磁碟區建立快照。
+在工作負載工廠中管理 FSx for ONTAP 磁碟區的快照策略。Snapshot 原則定義系統如何為磁碟區建立快照。
 
 .關於這項工作
 在 ONTAP 檔案系統的 FSX 中指派，變更及刪除磁碟區的快照管理作業，都是在儲存 VM 層級進行管理。Snapshot 原則可與單一儲存 VM 或所有儲存 VM 共用。
 
-有些管理工作需要您link:manage-links.html["建立連結的關聯"]前往適用於 ONTAP 檔案系統的 FSX 。如果您沒有現有的連結、 link:create-link.html["建立連結"]。
+某些管理任務要求您將連結與 FSx for ONTAP 檔案系統關聯。link:https://docs.netapp.com/us-en/workload-fsx-ontap/links-overview.html["了解工作負載工廠鏈接"]。
 
 根據預設、每個磁碟區都會與檔案系統的快照原則相關聯 `default` 。我們建議大多數工作負載都使用此原則。
 
@@ -27,7 +27,7 @@ summary: 在 BlueXP  工作負載工廠中管理適用於 ONTAP Volume 的 FSX 
 您可以變更要保留的快照原則名稱，排程和複本數量，以及啟用或停用不可變快照。無法啟用或停用跨儲存 VM 的原則共用。此選項僅在建立快照原則時可用。
 
 .開始之前
-若要顯示現有的快照原則，您需要建立連結的關聯。若要建立連結的關聯，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。然後返回此作業。
+若要顯示現有的快照策略，您必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
@@ -50,7 +50,7 @@ summary: 在 BlueXP  工作負載工廠中管理適用於 ONTAP Volume 的 FSX 
 鎖定快照，防止在保留期間刪除快照。
 
 .開始之前
-您必須link:manage-links.html["建立連結的關聯"]啟用不可變快照。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後、請返回此作業。
+您必須關聯一個連結才能啟用不可變快照。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
@@ -79,7 +79,7 @@ Volume 快照現在已鎖定。
 您可以將快照原則指派給單一磁碟區，為該磁碟區建立排程快照。
 
 .開始之前
-您必須link:manage-links.html["建立連結的關聯"]指派快照原則。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
+您必須關聯一個連結才能指派快照策略。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
@@ -105,7 +105,7 @@ Volume 快照現在已鎖定。
 因為您不再需要磁碟區的快照，或是想要刪除指派給多個磁碟區的快照原則，所以請從磁碟區移除快照原則。若要<<刪除快照原則,刪除快照原則>>將其指派給多個 Volume ，您必須手動將其從所有 Volume 中移除。
 
 .開始之前
-您必須link:manage-links.html["建立連結的關聯"]移除快照原則。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
+您必須關聯一個連結才能刪除快照策略。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。

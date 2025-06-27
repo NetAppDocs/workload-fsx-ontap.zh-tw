@@ -2,18 +2,18 @@
 sidebar: sidebar 
 permalink: manage-links.html 
 keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
-summary: 您可以在 BlueXP  工作負載工廠中檢視與您帳戶相關的連結，建立連結的關聯，以及移除連結。 
+summary: 您可以查看與您的帳戶關聯的連結、更新連結驗證的密碼以及刪除 BlueXP 工作負載工廠中的連結。 
 ---
-= 管理 BlueXP  工作負載原廠連結
+= 管理工作負載工廠鏈接
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-管理您與 BlueXP  工作負載原廠帳戶相關的連結。您可以檢視與適用於 ONTAP 檔案系統的 FSX 相關的連結，將連結與適用於 ONTAP 檔案系統的 FSX 關聯，編輯連結，以及移除連結。
+管理與工作負載工廠帳戶關聯的連結。您可以查看與 FSx for ONTAP 檔案系統關聯的連結、提供用於連結驗證的密碼，以及從工作負載工廠控制台移除連結。
 
-link:links-overview.html["深入瞭解連結"] 或 link:create-link.html["建立連結"]。
+link:links-overview.html["深入瞭解連結"] 或 link:create-link.html["建立並關聯連結"]。
 
 
 

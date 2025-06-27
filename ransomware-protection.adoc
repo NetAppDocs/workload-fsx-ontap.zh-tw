@@ -61,7 +61,7 @@ ARP 功能會根據 Amazon FSX for NetApp ONTAP 執行的 ONTAP 版本自動更�
 啟用 ARP 之後，如果發生攻擊且您發現攻擊是真實的， BlueXP  工作負載工廠會自動設定快照原則，每四小時最多需要六個快照。每個快照都會鎖定 2-5 天。
 
 .開始之前
-要爲文件系統啓用 ARP ，您必須link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
+若要為檔案系統啟用 ARP，您必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。

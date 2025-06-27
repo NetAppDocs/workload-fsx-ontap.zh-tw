@@ -28,8 +28,7 @@ summary: 將複本 FlexVol volume 從其父磁碟區分割成正常的讀寫 Fle
 .開始之前
 分割複製的磁碟區之前、請先考慮下列事項：
 
-* 若要分割複製的 Volume 、您必須 link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
-* 您必須是叢集管理員。
+* 要分割克隆卷，您必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
 * 當分割作業開始時、 FlexClone Volume 必須處於線上狀態。
 * 父磁碟區必須處於線上狀態、才能成功分割。
 
