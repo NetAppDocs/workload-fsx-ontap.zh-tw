@@ -104,16 +104,8 @@
   <block id="f33ee1d7e309154be1fc329fad0ad653" category="paragraph">您也可以載入儲存的組態。</block>
   <block id="7c6859274ee77ca082be3dcb424a440e" category="list-text">在「檔案系統一般組態」下、提供下列項目：</block>
   <block id="73834661f85b42765d73b7cd61d1475c" category="list-text">* 檔案系統名稱 * ：輸入檔案系統的名稱。</block>
-  <block id="27db8fcb1cb750024f80a00d143ee777" category="list-text">* 部署拓撲 * ：選擇部署拓撲。</block>
-  <block id="e1db87892ddda8bfd0cc92dbf2aa8f28" category="list-text">橫向擴充拓撲是指使用一個檔案系統來進行資料發佈、並可增加規模以因應資料增長。</block>
-  <block id="8dc86ca9377774615a191074143b0f0f" category="list-text">橫向擴充拓撲是指用於資料發佈的多個檔案系統。</block>
-  <block id="a27de2368abb354633f8d50b9ea7e0a2" category="list-text">* HA 配對 * ：輸入 HA 配對數。</block>
-  <block id="6aad0d457607a641d63a0daca3a0529a" category="list-text">對於橫向擴充部署、您只能有一個 HA 配對。</block>
-  <block id="56dcdb97483e2b91ea46d0e3aed1e819" category="list-text">對於橫向擴充部署、您可以有兩對到十二對 HA 。</block>
   <block id="f22c148b111a19f2c93bf5b1c1cbb2a6" category="list-text">* 部署類型 * ：選擇部署類型。</block>
-  <block id="8860331ce66022dce5b0f67e6c8398ab" category="list-text">多個可用性區域（ Multi-AZ ）部署：即使可用性區域不可用、仍可持續提供資料可用度。多 AZ 檔案系統支援單一 AZ 檔案系統的所有可用度與耐用度功能。多 AZ 檔案系統是專為業務關鍵的正式作業工作負載所設計、這些工作負載需要高可用度的共享 ONTAP 檔案資料、而且需要跨可用性區域內建複寫的儲存設備。</block>
   <block id="a578dfdba57cca5b9cde80a5e42544c6" category="list-text">* 標記 * ：您可以選擇性地新增最多 50 個標記。</block>
-  <block id="2d65a0ce899e5ca708d5a1002a8d0a1d" category="list-text">在 * 網路與安全 * 下的 * 區域與 VPC* 欄位中、選取檔案系統的區域和 VPC 。</block>
   <block id="fced9e440363d93f4173eeec105848ba" category="list-text">在 * 檔案系統詳細資料 * 下、提供下列資訊：</block>
   <block id="6157c9c13988e3cea6397632d4ceff7e" category="list-text">* SSD 儲存容量 * ：輸入儲存容量並選擇儲存容量單位。</block>
   <block id="7966c6503cb79e36fabb3ff4e34bd3b0" category="list-text">*SMB/CIFS 設定 * ：選用。如果您打算使用 SMB/CIFS 通訊協定來存取磁碟區、則必須在建立檔案系統時、為儲存 VM 設定 Active Directory 。針對為此檔案系統建立的儲存 VM 、提供下列詳細資料。</block>
@@ -138,8 +130,6 @@
   <block id="b98009df13b6a9c0bd5b540c1d2df378" category="list-text">* 端點 IP 位址範圍 * ：選取 * VPC* 以外的浮動 IP 位址範圍、或 * 輸入 IP 位址範圍 * 並輸入 IP 位址範圍。</block>
   <block id="adf3b9421185cf4dc6b3d80fb9c26d9b" category="list-text">* 加密 * ：從下拉式清單中選取加密金鑰名稱。</block>
   <block id="909443f15178d32af4981d109af80748" category="list-text">在「檔案系統詳細資料」下、提供下列資訊：</block>
-  <block id="7af916ceff85ab2f29ca490366228701" category="list-text">* 已配置的 IOPS * ：選擇 * 自動 * 或 * 使用者已配置 * 。</block>
-  <block id="67d537df4a9c97aa749f6724139522f5" category="list-text">* 每個 HA 配對的處理量容量 * ：每個 HA 配對的選取處理量容量。</block>
   <block id="31846199ab330eacea22764e7bc1ab7a" category="list-text">在「備份與維護」下、提供下列項目：</block>
   <block id="5a7b83bad76b38a063667e0b80bd78d6" category="list-text">*FSX for ONTAP Backup* ：預設會啟用每日自動備份。視需要停用。</block>
   <block id="f009614070b8aab7ff6edcea9473b3dc" category="list-text">* 自動備份保留期間 * ：輸入保留自動備份的天數。</block>
@@ -229,7 +219,6 @@
   <block id="b2e658eb3f11776899234dd87caf3823" category="list-text">* 儲存 VM 名稱 * ：選擇性地輸入儲存 VM 名稱。</block>
   <block id="71a8fe56183b62227c11ca4ce811f166" category="list-text">* Volume 樣式 * ：選擇 * FlexVol * 或 * FlexGroup * Volume 。</block>
   <block id="cb69a576eebf4d27436ae39122a9562c" category="paragraph">FlexVol Volume 樣式預設為選取。</block>
-  <block id="266af8c58e652263ed6f4ef9fc36cbbd" category="paragraph">FlexGroup Volume 大小取決於組成數量。每個成分需要 100 GiB 。</block>
   <block id="ffe3253d848af0e44a26ba39fba69329" category="list-text">* Volume Size* ：輸入 Volume 大小和單位。</block>
   <block id="b46ad6f5a61764c118c979f2583ab630" category="paragraph">也可以啟用 Volume 自動擴充。當您選擇 * 檔案存取 * 作為磁碟區存取類型時、即可使用此選項。</block>
   <block id="53ebc36ae845935202fde349f39b2e17" category="list-text">在 Access （僅適用於具有相關連結的檔案系統）下、提供下列詳細資料：</block>
@@ -249,7 +238,6 @@
   <block id="d7452a3655b7342c92f5b56d0b8526ed" category="list-text">輸入新啟動器群組的 * 啟動器群組名稱 * 。</block>
   <block id="9b990db2de543eb2fd38454ae899ab11" category="list-text">在主機啟動器下、新增一或多個 iSCSI 合格名稱（ IQN ）主機啟動器。</block>
   <block id="8cc48e7c3f902d1b7dd7d0ecb40ade52" category="list-text">在效率與保護之下、提供下列詳細資料：</block>
-  <block id="4f16f68a6d9522c0d097a900978f6f0d" category="paragraph">利用 ONTAP 的重複資料刪除和壓縮功能、即可提高儲存效率。重複資料刪除技術可消除重複的資料區塊資料壓縮會壓縮資料區塊、以減少所需的實體儲存容量。</block>
   <block id="f03207e238654d36cb2c88950bf22d84" category="list-text">* Snapshot polic*: 選擇快照策略以指定快照的頻率和保留。</block>
   <block id="20d2ce456e91b2afd45084ee06baab95" category="list-text">此原則會根據下列排程自動建立快照、並刪除最舊的快照複本、以便為較新的複本提供空間：</block>
   <block id="4cd6a004e8e70008213c7c1917f36c49" category="list-text">每小時最多六個快照、每小時五分鐘拍攝一次。</block>
@@ -706,7 +694,6 @@
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">瞭解如何使用 Codebox 進行自動化</block>
   <block id="672d0efbe9223ef23c5fd7d2c7cd4a95" category="paragraph">您可以使用 _Quick creity_ 或 _Advanced creity_ 、為 ONTAP 檔案系統建立 FSX 。您也可以使用 Codebox 中的下列工具： REST API 、 CloudForformation 和 Terraform 。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>。</block>
   <block id="11e2fb5025fdb2cb91fd04c343163328" category="admonition">從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 和<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 密碼。執行程式碼時、您需要重新輸入密碼。</block>
-  <block id="9376aafc358c7dd83094603f26235eb3" category="paragraph">磁碟區建立已啟動。建立後、新的 Volume 就會出現在 Volumes （磁碟區）標籤中。</block>
   <block id="21e6ab9737790ab1abc18e49091d3c18" category="paragraph">下圖顯示使用快照、跨區域複寫、以及備份至物件儲存設備的 ONTAP 儲存設備之 FSX 資料保護的視覺化呈現。</block>
   <block id="90388f794d575e628df271470a4b766e" category="inline-image-macro">螢幕擷取畫面顯示使用快照、跨區域複寫、以及備份至物件儲存設備的 ONTAP 儲存設備之 FSX 資料保護。</block>
   <block id="29bed1477f8a04f4f702564c7e6bb224" category="paragraph"><block ref="29bed1477f8a04f4f702564c7e6bb224" category="inline-image-macro-rx" type="image"></block></block>
@@ -841,7 +828,6 @@
   <block id="8c5d091eb8bf13bd59184903f020f95c" category="paragraph">請注意、當您啟動 CloudForgation 範本時、 Lambda 會獲得三個權限。工作負載工廠在使用連結時會使用這些權限。</block>
   <block id="4d4e41a17abafe417449016add2ee0bd" category="list-text">選取 * 建立堆疊 * ，然後選取 * 繼續 * 。</block>
   <block id="e5942758c1bbae9768e2935841e7ca7a" category="list-text">返回工作負載原廠介面，您會看到連結與 ONTAP 檔案系統的 FSX 相關聯。</block>
-  <block id="9d1d72e4ac9c59d5a464cfdbfae095f3" category="paragraph">使用此選項、您可以從 AWS CloudForgation 擷取連結的 ARN 、並在此處報告。工作負載工廠會手動為您登錄連結。</block>
   <block id="7607cf6a75040d1b9bf8fde1cfaecf12" category="doc">在 BlueXP  工作負載工廠建立複寫關係</block>
   <block id="161fc7b1d67184a50e10e19fb2489263" category="paragraph">在 BlueXP  工作負載工廠中為適用於 ONTAP 檔案系統的 FSX 建立複寫關係，以避免發生無法預見的災難時發生資料遺失。</block>
   <block id="215ff1ada74bcc801bd4be406a4760b9" category="paragraph">_Auto_ 是使用 ONTAP 使用者介面的工作負載原廠 FSX 建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>AWS FSX for NetApp ONTAP 文件中的。</block>
@@ -854,7 +840,6 @@
   <block id="55a23b72fe4aee5e2f0024c790d7eaba" category="paragraph">從 BlueXP  工作負載工廠的快照建立適用於 ONTAP Volume 的全新 FSX ，以啟用時間點還原。</block>
   <block id="8d34a33f34659b0ea11833ac0b8fac52" category="list-text">在 *FSX for ONTAP * 標籤中，選取含有 Volume Snapshot 的檔案系統三點功能表，然後選取 * 管理 * 。</block>
   <block id="3ce528a1818baf0bbf2f6b362b1f7d58" category="list-text">在 Volumes （磁碟區）索引標籤中，選取含有您要建立磁碟區之快照的磁碟區的三點功能表。</block>
-  <block id="d5d682292e122fa36db263f49a714cc7" category="list-text">您必須在工作負載工廠中擁有適用於 ONTAP 檔案系統的 FSX 。</block>
   <block id="72ce63a6bef6ec13ef74a7eab0012469" category="summary">適用於 ONTAP 的 FSX 支援 BlueXP  工作負載工廠的快照，磁碟區備份和磁碟區複寫。</block>
   <block id="96a5899d90dd9b81319f168f67bcb5ae" category="summary">若要在 BlueXP  工作負載工廠中刪除檔案系統，您必須先刪除與檔案系統相關的任何磁碟區，儲存 VM 或複寫關係。</block>
   <block id="378213b58b31bfb9d173e8b2ad3c0968" category="doc">在 BlueXP  工作負載工廠中刪除檔案系統</block>
@@ -1048,7 +1033,6 @@
   <block id="06e52dae2c3e09e69a906c2fba89ed66" category="paragraph">取得磁碟區的掛載點，以便在 CIFS 共用或 NFS 用戶端上掛載共用區。</block>
   <block id="4a6574ab96645d28cf548ed8372c655c" category="list-text">從 Volumes （卷）選項卡中，選擇該卷的三點菜單，然後選擇 *Basic actions* ，再選擇 *View mount 命令 * 。</block>
   <block id="4a553bf9ebe9a32a6743c78be912cfbc" category="list-text">選擇*關閉*。</block>
-  <block id="0206587910cd5147f80c048ba00193af" category="paragraph">若要在檔案系統上佈建 iSCSI 區塊磁碟區，請選取不超過 6 個 HA 配對。</block>
   <block id="f3b270238d8c3f46a0b10d724c916e7d" category="list-text">* 最大傳輸速率 * ：選取 * 受限 * ，然後在 MIB/s 中輸入最大傳輸限制或者、選取 * 無限 * 。</block>
   <block id="5ef8b0a1c66a4b2210971848d2ce9752" category="paragraph">複寫關係會出現在 ONTAP 檔案系統的目標 FSX 的 * 複寫關係 * 索引標籤中。</block>
   <block id="c866bd28f46aae4b063d835d59832e65" category="list-text">* CIFS 共享 * ：提供下列項目：</block>
@@ -1242,7 +1226,6 @@
   <block id="10de4bc81f754b19b0d27246a0589c05" category="list-text">附註</block>
   <block id="1e6fe3169d6df99dc6e4d89c3f0ca701" category="list-text">即使在保留期限到期之後，您仍無法修改 WORM 檔案。您只能刪除或設定新的保留期間，才能再次開啟 WORM 保護。</block>
   <block id="00c161f0779702fcc736833a90e1c117" category="list-text">AUTOCOMMIT</block>
-  <block id="0710e9c5903cc398ef1a22a38cbb4666" category="list-text">您可以選擇啟用自動認可功能。如果檔案在自動認可期間內未變更，則自動認可功能會將檔案提交至 SnapLock 磁碟區的 WORM 狀態。自動提交功能預設為停用。您想要自動提交的檔案必須位於SnapLock 一個流通於一個不流通的資料冊上。</block>
   <block id="f84002cfa8aafdd6963aef9819f03cbe" category="list-text">Volume 附加模式</block>
   <block id="73085bf5d4b4c2626026794741768c09" category="inline-link-macro">深入瞭解 Volume 附加模式</block>
   <block id="f70318a7f623a49e77262fc2b382b062" category="list-text">您無法修改受 WORM 保護檔案中的現有資料。不過，不可變的檔案可讓您使用 WORM 可擴充檔案來維護現有資料的保護。例如，您可以產生記錄檔，或是保留音訊或視訊串流資料，同時逐步將資料寫入記錄檔。<block ref="d363aab3c17dd7b08ef55d9ecb5c0afa" category="inline-link-macro-rx"></block>Amazon FSX for NetApp ONTAP 文件。</block>
@@ -1314,10 +1297,8 @@
   <block id="fc81b1e4233a48b719520033e56b4194" category="paragraph"><block ref="fc81b1e4233a48b719520033e56b4194" category="inline-link-macro-rx"></block></block>
   <block id="fd8693cf8f6802fd1c7d50d5742a4c71" category="section-title">Tracker 中的 CloudShell 事件</block>
   <block id="e7a6197673267c30b5dc86e0d5f6c536" category="paragraph">現在您可以在 Tracker 中追蹤 CloudShell 事件。</block>
-  <block id="8b6bca394ded2ad4bd57d5b7e1b13873" category="paragraph">若要在檔案系統上佈建 iSCSI 區塊磁碟區，請選取不超過六個 HA 配對。</block>
   <block id="cf5df8345ca5f203e0f805460b558155" category="list-text">單一可用性區域（單一 AZ ）部署：監控硬體故障並在發生故障時自動更換基礎架構元件，藉此提供可用度。在可用性區域內自動複寫資料、以保護資料免於元件故障、進而達到高耐用度。</block>
   <block id="65122529e27ab1e34a08fc55d0f38a93" category="list-text">自動：透過工作負載工廠建立自動登錄的連結。自動建立的連結需要工作負載工廠自動化的權杖， CloudForgation 程式碼也很短。最多只能使用六小時。</block>
-  <block id="b1a94bb6f0b93b26134ff88823a75e78" category="list-text">手動：建立具有手動登錄的連結。CloudForgation 程式碼持續提供您更多時間來完成作業。這在與安全和 DevOps 等不同團隊合作時很有用，因為他們可能需要先授予完成連結建立所需的權限。</block>
   <block id="99f375ee1d56d1983309c071fe9cb69a" category="paragraph">目標檔案系統中的複寫磁碟區為資料保護（ DP ）磁碟區，並遵循命名格式：<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。</block>
   <block id="df4c98f43132ebd68d92a0c9822984df" category="list-text">在「複寫資料」頁面的「複寫目標」下，提供下列項目：</block>
   <block id="0cbe076a4ce5208b10cdb81c9e175006" category="list-text">* 選擇現有的原則 * ：從下拉式功能表中選取現有的原則。</block>
@@ -1349,7 +1330,6 @@
   <block id="a07e25b28678b53fe808a082369fda80" category="paragraph">磁碟區有快照複本。</block>
   <block id="86ee35c0029c920dce9ef56d88935e8e" category="paragraph">您的磁碟區可能會使用下列通訊協定：</block>
   <block id="8feb9be2f7d30e723f1c8aa899250dae" category="list-text">* 區塊存取 * ：允許執行關鍵業務應用程式的主機使用 iSCSI 傳輸協定存取磁碟區。區塊存取僅在檔案系統橫向擴充部署具有六個或更少 HA 配對時可用。</block>
-  <block id="ad5ae1649d193a804147218da52fd8ad" category="list-text">* 可匯入的檔案 * ：此功能（也稱為 SnapLock ）預設為停用。啟用不可變的檔案可防止資料在指定的時間內遭到刪除或覆寫。只有在磁碟區建立期間，才能啟用此功能。啟用此功能後，便無法停用此功能。這是適用於 ONTAP 的 FSX 的優質功能，需要額外付費。如需詳細資訊，請參閱 <block ref="e334cd66539db07681f218968c17aeb4" category="inline-link-macro-rx"></block>Amazon FSX for NetApp ONTAP 文件中的。</block>
   <block id="f122287653386d74229199bd670f4990" category="list-text">保留期間有兩種設定： _ 保留原則 _ 和 _ 保留期間 _ 。_ 保留原則 _ 定義在不可變 WORM 狀態下保留檔案的時間長度。您可以指定自己的保留原則，或使用預設保留原則（未指定），即 30 年。最小和最大保留期間 _ 定義鎖定檔案所允許的時間範圍。</block>
   <block id="35728d1f4ec13c002da573ba8e7069f7" category="list-text">選取方塊以同意並繼續。</block>
   <block id="71377237946a16cc4981e8007b83be9b" category="list-text">選取 * 啟用 * 。</block>
@@ -1432,19 +1412,10 @@
   <block id="924b3daa7ecef370ff9a603b3208772b" category="paragraph">如果您手動配置 IOPS ，可能需要在之前增加 IOPS <block ref="94a3285243f3705d6ad038b61125cb2f" category="inline-link-macro-rx"></block>。</block>
   <block id="3a3c8188eae554af0e7f07bfef2e124b" category="summary">檢查並重新平衡磁碟區的容量，以避免隨著時間而產生的不平衡現象。</block>
   <block id="8083bd6761abe4735ad26f9c18899032" category="doc">檢查並重新平衡磁碟區的容量</block>
-  <block id="270753bb6aea2d40b94194b021e500ae" category="paragraph">檢查 FlexGroup Volume 容量的平衡，並重新平衡磁碟區容量，以便將檔案平均分散到所有組成區，讓所有節點都能參與單一 Flex Group Volume 的工作負載。</block>
-  <block id="8d52048ef57a4217559a7ca3e0deeefa" category="paragraph">FlexGroup Volume 容量分散在橫向擴充的 FSX 中，適用於具有兩個或更多高可用度（ HA ）配對的 ONTAP 檔案系統。每個組成都是指定最大單一檔案大小的容器。適用於 ONTAP 的 FSX 會以均勻的方式跨所有成員分散檔案，讓所有節點都能參與單一 FlexGroup Volume 的工作負載。</block>
   <block id="04533b4edf31c61772ef483585fb29cf" category="paragraph">檢查 FlexGroup Volume 容量的平衡，包括評估組成的目前配置。當您重新平衡磁碟區的容量時， BlueXP  工作負載工廠會設計一個新的組成配置，其中包含偶數個組成成分，以便在所有 HA 配對之間平均分散資料。服務會執行重新平衡計畫，進而改善讀寫作業。</block>
-  <block id="d394f348c0b6fbd4e88b415bafdbea68" category="section-title">檢查 FlexGroup Volume 的平衡</block>
-  <block id="1cc1dda63f89374c05c8b8f5c8126341" category="paragraph">檢查作用中 FlexGroup Volume 的平衡。</block>
   <block id="eeaecacdda76be13c8594ef17a7c395c" category="list-text">FlexGroup Volume Balance 僅適用於使用橫向擴充部署且至少有兩個 HA 配對的 ONTAP 檔案系統。</block>
-  <block id="480a98de796f5eb054e749dedf2dbce3" category="list-text">Volume 樣式必須是 FlexGroup Volume 。</block>
   <block id="a0c24c81835ca446fe958b4abdb6c08c" category="list-text">從 Volumes （卷）選項卡中，選擇表頂部的 *Check Balance* （檢查 FlexGroup 平衡）。</block>
-  <block id="8b7b54e191e5f6ab54dc9475259af500" category="list-text">在 Balance （ FlexGroup 平衡）視窗中，檢閱適用於 ONTAP 檔案系統的 FSX 中所有 FlexGroup Volume 的平衡狀態。</block>
   <block id="1997a93792e2a8be597c246f39ee9fd5" category="inline-xref">重新平衡</block>
-  <block id="6b59c2a4df281550186d4d3fc75ba6d5" category="paragraph">當 FlexGroup Volume 不平衡時，請考慮<block ref="59031c1bf074b0ee450445a716c796e8" category="inline-xref-macro-rx"></block>。</block>
-  <block id="1fd02848e48f953c62155cbb42dd331b" category="section-title">重新平衡 FlexGroup Volume</block>
-  <block id="64de3f9223f666126336ac4c9a3aa94d" category="paragraph"><block ref="1f11182db84cfb1742cc746fa76f8fe6" category="inline-xref-macro-rx"></block>重新平衡磁碟區之前。</block>
   <block id="ceb833d216db0e056b9ab7d22ba4f023" category="paragraph">如果沒有限制，網路和應用程式的效能可能會下降。或者、我們建議為 ONTAP 檔案系統的關鍵工作負載（例如主要用於災難恢復的工作負載）提供不限傳輸率的 FSX 。</block>
   <block id="c4ee13228c56b3c8a94bcef6d8d6d357" category="summary">將複本 FlexVol volume 從其父磁碟區分割成正常的讀寫 FlexVol volume 。</block>
   <block id="c04185e8791b4a9dde9952d191aff02c" category="paragraph">將複製的 FlexVol volume 從其父磁碟區分割開來，使複製作業成為 BlueXP  工作負載工廠中的正常讀寫 FlexVol volume 。</block>
@@ -1676,14 +1647,12 @@
   <block id="3909315ab3cc8353eec0cd02ce0845da" category="admonition">使用 Connector 時不支援 AWS Secrets Manager 。</block>
   <block id="2c1b9e7969c6e96f38bd871fc9f26ae1" category="section-title">建立新連結的關聯</block>
   <block id="05a2e668e80fd3ace12e9585ebc06578" category="paragraph">建立新連結的關聯包括連結建立和關聯。</block>
-  <block id="ec19cf5bb597b8c81392ce26e30276fe" category="paragraph">您有兩個選項可以自動或手動建立連結。您必須在 AWS 帳戶中啟動 AWS CloudForgation 堆疊、才能建立連結。</block>
   <block id="695199449ad50832d8cff3be92e812b3" category="inline-link-macro">在工作負載工廠新增認證</block>
   <block id="2f1cd483ab7b6144b733f5155b2026c6" category="list-text">在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以建立連結，然後選取 * 建立連結 * 。</block>
   <block id="29abae1dabc3d83e30cbe456ae214256" category="list-text">* AWS Secrets Manager* ：選用。允許工作負載工廠從 AWS Secrets Manager 擷取適用於 ONTAP 存取認證的 FSX 。</block>
   <block id="13ecd4f9bb62f6c0730c8f136a58fb36" category="paragraph">連結部署堆疊會將下列預設密碼管理程式 ARN regex 新增至 Lambda 權限原則<block ref="218d5bbe44642244cc57db37477be310" prefix=" " category="inline-code"></block>：。</block>
   <block id="de786693aed7955f1cb538f51e25f7d6" category="paragraph">您可以根據預設權限建立機密，或為連結原則指派自訂權限。</block>
   <block id="49af4dcead2678507453b9bff6c332f1" category="paragraph">* 將 VPC 私有端點設定為 AWS Secrets Manager* 預設為停用。選取此選項會使用 VPC 私有端點儲存機密，而非儲存在本機。</block>
-  <block id="c1123c7a8501a00beea0820a4f4b2f90" category="list-text">* 連結註冊 * ：在下拉式箭頭上選取，展開如何從 AWS CloudForgation 服務註冊連結的指示。請依照指示進行。</block>
   <block id="c3b24be1571207cf6200f2d8b54ee7c0" category="paragraph">成功建立堆疊後、將 Lambda ARN 貼到文字方塊中。</block>
   <block id="91744aea42b1e1eb3b5b0f486498fe3c" category="paragraph">您建立的連結會與適用於 ONTAP 檔案系統的 FSX 相關聯。您可以執行進階 ONTAP 作業。</block>
   <block id="48457d7f94975228307244f863f96fee" category="section-title">將現有連結與適用於 ONTAP 檔案系統的 FSX 建立關聯</block>
@@ -1820,10 +1789,6 @@
   <block id="ce812f613f07996b313f45414329b88e" category="sidebar">實作檔案系統最佳實務做法</block>
   <block id="e6dcf40c0e3ce889fc9c5c061867f960" category="sidebar">適用於 ONTAP 的 FSX 組態分析</block>
   <block id="77aaaafa70c293a92472a80015bece8b" category="paragraph">當組成要素未平均分散於所有節點時， FlexGroup Volume 效能會降低。</block>
-  <block id="ae622e3b9df5d2fe3f644c0dba928e66" category="paragraph">重新平衡磁碟區會在新增檔案和檔案成長、隨著時間的推移而產生不平衡時、重新分配容量。手動開始重新平衡作業後、我們會選取檔案、並自動且不中斷地移動。Volume 傳輸作業會消耗檔案系統資源。</block>
-  <block id="8a348b83eb54b8869c9afef29caffc5e" category="admonition">只有 FlexGroup 磁碟區才支援重新平衡，但 iSCSI 或 NVMe FlexGroup 磁碟區則不支援重新平衡。</block>
-  <block id="dea985c157083fcf289f38e7ab4aede0" category="paragraph">重新平衡一個或多個非平衡的磁碟區。資料會在成員磁碟區之間重新分配，以重新平衡 FlexGroup 磁碟區。根據您偏好的資料發佈配置，重新平衡作業可能會新增 FlexGroup 成員磁碟區，並增加已佈建磁碟區的大小。</block>
-  <block id="6a0d7c16b4c559c5dc9c875e37641a9c" category="admonition">工作負載原廠管理員可在作業期間停止重新平衡。</block>
   <block id="5fdec390c6be629fa932553e2fe5cb25" category="list-text">請注意，您重新平衡的磁碟區上現有的快照會變成部分快照，無法用來還原磁碟區資料，但重新平衡之後所拍攝的新快照可以用來還原磁碟區資料。</block>
   <block id="930dade8556383009e0018f93aeb74bc" category="list-text">在 Balance （ FlexGroup 平衡）視窗中，選取 * Rebalanc* （重新平衡）以重新平衡一個或多個非平衡的磁碟區。</block>
   <block id="48d59fcf4b8606ffc1ea7c49fae9c2b9" category="list-text">在重新平衡精靈中，選取您偏好的資料發佈配置。</block>
@@ -1837,7 +1802,6 @@
   <block id="5ad2de3bf91266caa9759e836ce832b5" category="list-text">ONTAP 配置比較的 FSX</block>
   <block id="897bea1a5ca479178427004f773ee72e" category="list-text">您也可以在重新平衡之前下載磁碟區移動清單。</block>
   <block id="703547df715082455f8920d78fe90a30" category="list-text">選擇 * 重新平衡 * 。</block>
-  <block id="dc3d2b1db09a8cee9576c2df34eba7b1" category="paragraph">視 FlexGroup 新增的 FlexGroup 成員磁碟區數量而定，一次只會執行一個 FlexGroup 磁碟區成員移動作業。當作業完成時，檔案系統將會被節流回原始值。</block>
   <block id="4b50901597179fa075617d96ccf51901" category="list-text">* 工作負載原廠主控台 * ：工作負載原廠主控台可提供應用程式與專案的視覺化整體檢視。</block>
   <block id="590410b3a112ba2f531f9aae44e29ed1" category="list-text">* BlueXP  console* ： BlueXP  主控台提供混合式介面體驗，讓您可以將 BlueXP  工作負載工廠與其他 BlueXP  服務一起使用。</block>
   <block id="62c5120220d244bd5e611d7c4459b5c5" category="list-text">* 詢問我 * ：使用「詢問我 AI 」助理來詢問問題，並深入瞭解工作負載工廠，而無需離開工作負載工廠的網路 UI 。從工作負載原廠說明功能表存取 Ask me 。</block>
@@ -1933,9 +1897,129 @@
   <block id="00c1c06957f8f476507e7c8eab416ca3" category="paragraph">您必須關聯一個連結才能指派快照策略。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
   <block id="f25575fb26d63d8bebf4c5a568518443" category="paragraph">您必須關聯一個連結才能刪除快照策略。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
   <block id="aef6ece6593a117983fcd0b9e27b2a94" category="paragraph">若要為檔案系統啟用 ARP，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
-  <block id="1f217123f7d99348330184951007bc1c" category="list-text">要檢查 FlexGroup 磁碟區的餘額，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
-  <block id="44b1a8a590c7561bdb240a720d2d9aaa" category="list-text">要重新平衡卷，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
   <block id="2ccb6b87f6c03ced811ff29d2a5f5ede" category="paragraph">若要將儲存虛擬機器複製到另一個 FSx for ONTAP 檔案系統，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
   <block id="99ae6104ba82455197d215357b50f2f1" category="list-text">要分割克隆卷，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
   <block id="21bd8c562c1d6ae4caf8a36f6d06c516" category="list-text">內部部署 ONTAP 叢集和用於複寫關係的 ONTAP 檔案系統的 FSX 都必須具有相關的連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="562c87a680d962135f8e44bc0d159259" category="list-text">* 儲存 VM 名稱 * ：從下拉式功能表中選取儲存 VM 。您選擇的儲存虛擬機器是此複製關係中所有選定磁碟區的目標。</block>
+  <block id="11f24c2a8c13499208f4d69098436bd2" category="paragraph">如果沒有限制、網路和應用程式的效能可能會下降。或者、我們建議為 ONTAP 檔案系統的關鍵工作負載（例如主要用於災難恢復的工作負載）提供不限傳輸率的 FSX 。。在複寫設定下、提供下列項目：</block>
+  <block id="fca40712560cec2d2b7a47110cfecda1" category="list-text">*建立新策略*：輸入*策略名稱*。</block>
+  <block id="0546ab198c101c424e412d1355272bcd" category="list-text">*不可變快照*：可選。選取 * 啟用不可變快照 * ，以防止在保留期間刪除在此原則中拍攝的快照。</block>
+  <block id="64c17706e0528a5c44c7beee628cc101" category="doc">BlueXP 工作負載工廠通知服務支持</block>
+  <block id="c0ae6f0ec7cb1322a1c6b72f77e783f2" category="paragraph">BlueXP 工作負載工廠通知服務支援工作負載工廠向 BlueXP 警報服務或 Amazon SNS 主題發送通知。發送到 BlueXP 警報的通知會顯示在 BlueXP 警報面板中。當工作負載工廠向 Amazon SNS 主題發布通知時，該主題的訂閱者（例如人員或其他應用程式）會在為該主題配置的終端節點上收到通知（例如電子郵件或簡訊）。</block>
+  <block id="76490568879e4523bb6bd6d8263472a9" category="inline-link-macro">配置 BlueXP 工作負載工廠通知</block>
+  <block id="a10c281531128badfefa7086b353ead0" category="paragraph"><block ref="a10c281531128badfefa7086b353ead0" category="inline-link-macro-rx"></block></block>
+  <block id="16608889ffd4210e3527b28d2cabeee1" category="paragraph">工作負載工廠控制台中的儲存控制面板新增了節省機會卡。控制面板頂部的卡片顯示在 Amazon Elastic Block Store (EBS)、Amazon FSx for Windows File Server 和 Amazon Elastic File Systems (EFS) 上執行的儲存環境的節省機會數。控制台底部新增了三張卡片，按 Amazon 儲存服務（EBS、FSx for Windows File Server 和 EFS）顯示節省機會。您可以從所有卡片中更詳細地了解節省機會。</block>
+  <block id="e2fc557edefb4b2854999f60dbd0d379" category="paragraph">透過 FSx for ONTAP 保護覆蓋率卡和複製關係健康卡，您可以調查 FSx for ONTAP 檔案系統中是否存在任何部分受保護的捲，以及調查複製關係的問題。在這兩種情況下，您都可以採取措施來解決問題。</block>
+  <block id="34ccfe489231e34890602e4f0419b843" category="section-title">音量選項卡增強功能</block>
+  <block id="f659fbcb502240d4138a6337d4da17d5" category="paragraph">工作負載工廠控制台中的「磁碟區」標籤已增強，可提供更全面的 FSx for ONTAP 檔案系統視圖。增強功能包括新增 SSD 容量、容量池以及 NetApp 自主勒索軟體防護 AI (ARP/AI) 卡。這些卡片匯總了檔案系統中所有磁碟區的容量利用率和 ARP/AI 防護功能。</block>
+  <block id="7efd44dd06c377a68f3fc78abf7d91fb" category="paragraph">工作負載工廠現已支援第二代 Amazon FSx for NetApp ONTAP 檔案系統。您可以在工作負載工廠控制台中建立、管理和監控第二代檔案系統。所有新的商業區域均受支援。</block>
+  <block id="cd0ce691a9b616ae8983f22db2fb8a6d" category="inline-link-macro">在工作負載工廠中建立第二代檔案系統</block>
+  <block id="f784f74601a71805db546f7b6842f0e5" category="paragraph"><block ref="f784f74601a71805db546f7b6842f0e5" category="inline-link-macro-rx"></block></block>
+  <block id="094caa4bbbbdba779d6ef8c57b995856" category="section-title">FlexVol 磁碟區支援重新平衡磁碟區容量</block>
+  <block id="ab0d60978b39ce0cb886ec1fbf91bad8" category="paragraph">FlexVol 磁碟區可在工作負載工廠控制台中發現。您可以檢查 FlexVol 磁碟區的平衡情況，並在新檔案的新增和檔案成長導致不平衡時重新平衡 FlexVol 磁碟區以重新分配容量。</block>
+  <block id="226bb141f0b474b8b8d4e55bfe659a94" category="inline-link-macro">重新平衡 FlexVol 卷的容量</block>
+  <block id="7f11a5de29d58c93cc212be8cf51b761" category="paragraph"><block ref="7f11a5de29d58c93cc212be8cf51b761" category="inline-link-macro-rx"></block></block>
+  <block id="d7581ee541e7cfa51fd2f75f93b7e64e" category="section-title">術語更新</block>
+  <block id="6e0c2d8cb551de024f6700ca0407257e" category="paragraph">在工作負載工廠控制台中，「自主勒索軟體防護」(ARP) 一詞已更新為「具有 AI 的 NetApp 自主勒索軟體防護」(ARP/AI)。</block>
+  <block id="d474538a7c98b462c08197d24f7c1c60" category="section-title">新磁碟區預設啟用 ARP/AI</block>
+  <block id="6a3bf8c141dbbeed37af8236f412b19a" category="paragraph">在工作負載工廠控制台中建立新磁碟區時，如果檔案系統具有 ARP/AI 策略，則 NetApp 自主勒索軟體防護 AI (ARP/AI) 將預設為啟用。這意味著該卷將使用 AI 驅動的偵測和回應功能自動防禦勒索軟體攻擊。</block>
+  <block id="7e0b28b27ce3985a4a8d693330a04cb7" category="inline-link-macro">在工作負載工廠中創建卷</block>
+  <block id="3bf76f3556904b928c43201c04108364" category="paragraph"><block ref="3bf76f3556904b928c43201c04108364" category="inline-link-macro-rx"></block></block>
+  <block id="442d07125b5c2363eae9c33039172225" category="section-title">對不可變文件的複製支持</block>
+  <block id="6250cd311debe5758acc69f81921ab78" category="paragraph">工作負載工廠支援將不可變磁碟區從一個 FSx for ONTAP 系統複製到另一個 FSx for ONTAP 檔案系統，以保護關鍵資料免遭意外刪除或勒索軟體等惡意攻擊。目標磁碟區及其主機檔案系統將處於不可變狀態（即鎖定狀態），且在保留期結束之前，目標檔案系統中的任何資料都無法修改或刪除。</block>
+  <block id="b6fc33d7434bb860ad528753113881b1" category="inline-link-macro">了解如何建立複製關係</block>
+  <block id="d3dbddfb353eaaa957947efb04ca7013" category="paragraph"><block ref="d3dbddfb353eaaa957947efb04ca7013" category="inline-link-macro-rx"></block></block>
+  <block id="d836bf4f72557e9399ce062e72ef15f6" category="section-title">連結建立增強功能</block>
+  <block id="1f8ca754f0193efb8fdc1c63a4d96672" category="paragraph">工作負載工廠控制台中的連結建立過程進行了以下增強。</block>
+  <block id="bdd7f454c54673987f53c40f8e5b8072" category="paragraph"><block ref="bdd7f454c54673987f53c40f8e5b8072" category="inline-link-macro-rx"></block></block>
+  <block id="5c44c7d986372ccb1d679985b5416b64" category="section-title">在連結建立期間管理 IAM 執行角色和權限</block>
+  <block id="43f8bec3c8d83ff27c8f5d629cd49d4d" category="paragraph">現在，您可以在工作負載工廠控制台中建立鏈接，從而管理 IAM 執行角色及其附加的權限策略。連結會在您的工作負載工廠帳戶與一個或多個 FSx for ONTAP 檔案系統之間建立連線。您可以透過兩種方式指派 IAM 執行角色和連結權限：自動指派或使用者指派。在工作負載工廠中管理執行角色及其附加的權限策略意味著您無需再使用第三方程式碼。</block>
+  <block id="f83708b425052a7f19c02dfd5c3d0688" category="section-title">Terraform 支援連結創建</block>
+  <block id="d993aa63b5e96ec8db4090bd87d5c850" category="paragraph">現在您可以使用 Codebox 中的 Terraform 建立與 FSx for ONTAP 檔案系統關聯的連結。此功能適用於手動建立連結的使用者。</block>
+  <block id="2cb3ea55d484ee81bd75e230c32b7fcd" category="paragraph">第二代 FSx for ONTAP 檔案系統是預設部署類型。當區域不支援第二代 FSx for ONTAP 檔案系統時，部署類型將切換為第一代。</block>
+  <block id="cc7023e1e70f83f63ba0c94135b83c2d" category="paragraph">對於高效能工作負載，或當工作負載從小規模開始並逐步擴展到 72 GB/s 的吞吐量和 240 萬 IOPS 時，建議使用此配置。</block>
+  <block id="ce920fde7af8f67cbfd1ca3e8efd6b91" category="list-text">多個可用性區域（ Multi-AZ ）部署：即使可用性區域不可用、仍可持續提供資料可用度。多 AZ 檔案系統是專為業務關鍵的正式作業工作負載所設計、這些工作負載需要高可用度的共享 ONTAP 檔案資料、而且需要跨可用性區域內建複寫的儲存設備。</block>
+  <block id="fc22ff32bfac4486f50da9af2033830e" category="paragraph">對於需要高達 6 GB/s 吞吐量或 200,000 IOPS 的工作負載，建議使用此單 HA 對配置。</block>
+  <block id="87839b96284704d104c8e445d0cfb887" category="list-text">對於第一代部署，您無法在建立檔案系統後減少容量。</block>
+  <block id="8d4ad9a0aaca41b1aa7122cb909588a7" category="list-text">對於第二代部署，您可以在建立檔案系統後增加容量。</block>
+  <block id="a2841b4c7bc0c058832e81b45f756892" category="list-text">*部署類型*：選擇部署類型和檔案系統產生。</block>
+  <block id="d790be978976d563ba38a969cce78e04" category="paragraph">*檔案系統代數*：選擇以下選項之一：** *第二代*：此配置適用於高效能工作負載，或工作負載從小規模開始，逐步擴展到 72 GB/s 吞吐量和 240 萬 IOPS 的情況。** *第一代*：此配置非常適合需要高達 4 GB/s 吞吐量或 16 萬 IOPS 的工作負載。第一代檔案系統只能增加容量。</block>
+  <block id="0db3110a95d1dfd82b55d5dde656871c" category="paragraph">+ 第二代檔案系統的可用性取決於所選區域。如果所選區域不支援第二代 FSx for ONTAP 檔案系統，則部署類型將切換為第一代。</block>
+  <block id="5ee057335585da70af1caca368e4e422" category="list-text">*第二代*：對於需要高達 6 GB/s 吞吐量或 200,000 IOPS 的工作負載，建議使用此單 HA 對配置。在多可用區和第二代檔案系統中，容量可以根據工作負載需求增加或減少。</block>
+  <block id="272021095e67d1fdf73f94aa211e4e56" category="list-text">*第一代*：此配置非常適合需要高達 4 GB/s 或 160,000 IOPS 的工作負載。第一代檔案系統只能增加容量。</block>
+  <block id="912e83b52cf2a4421217bf96185e618a" category="paragraph">第二代檔案系統的可用性取決於所選區域。如果所選區域不支援第二代 FSx for ONTAP 檔案系統，則部署類型將切換為第一代。</block>
+  <block id="7ef603b4e7f8efb6252e42ef0745f9cc" category="list-text">對於第二代部署，您可以調整容量。</block>
+  <block id="6eb76be6a5409fb6f547e3cf3944cfe6" category="list-text">*每個 HA 對的吞吐容量*：選擇每個 HA 對的吞吐容量。第一代檔案系統僅支援一個 HA 對。</block>
+  <block id="ee6e43b0904c4672da5651009001b259" category="list-text">*預先配置 IOPS*：選擇下列選項之一：</block>
+  <block id="2c8c409e84df8a5368e9fc203dacd0e0" category="list-text">*自動*：對於自動操作，每建立 1 GiB，就會新增 3 IOPS。</block>
+  <block id="080138c9fde9abc63b7003839106198b" category="list-text">*使用者配置*：對於使用者配置，輸入 IOPS 值。</block>
+  <block id="7392fd7ce1aac825ec2bdccdf93b5ad8" category="paragraph">在此工作流程中，您有兩個建立連結的選項 - 自動或手動。您必須在 AWS 帳戶中啟動 AWS CloudForgation 堆疊、才能建立連結。</block>
+  <block id="228b634c3bcbb5ddb0e529d6144522f7" category="list-text">手動：使用 Codebox 中的 CloudFormation 或 Terraform 建立手動註冊的連結。程式碼會保留，以便您有更多時間完成操作。這在與安全和 DevOps 等不同團隊合作時很有用，因為他們可能需要先授予完成連結建立所需的權限。</block>
+  <block id="2f33e5a4fe58163ac0df8f3b097df4db" category="list-text">*連結權限*：選擇以下連結權限選項之一：</block>
+  <block id="4c0e4494d278c08e2a1d6707604575a3" category="list-text">*自動*：選擇此選項，以便 AWS CloudFormation 或 Terraform 程式碼自動建立 Lambda 權限原則和執行角色。</block>
+  <block id="dd9c72ad3bbeb047b573638ce62d0cc6" category="list-text">*使用者提供*：選擇此選項可將指定的 Lambda 執行角色及其附加的策略指派給 Lambda 連結。 Lambda需要以下權限。<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block>僅當您啟用 AWS Secrets Manager 時才需要權限。</block>
+  <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">在文字方塊中輸入 Lambda 執行角色 ARN。</block>
+  <block id="cc5c21be990be307574e5fa4cb773c44" category="paragraph">使用此選項，您可以提取連結的 ARN 並在此處報告。工作負載工廠會手動為您登錄連結。您可以使用 Codebox 中的兩個基礎架構即程式碼 (IaC) 工具建立連結：CloudFormation 或 Terraform。</block>
+  <block id="e151c7c26f691694d417720f8986d3fa" category="list-text">*連結註冊*：選擇下拉箭頭以展開有關如何從 AWS CloudFormation 服務或使用 Terraform 註冊連結的說明。請依照指示進行。</block>
+  <block id="38adbad92c37166c4ce64da1eb51513b" category="inline-link-macro">創建卷</block>
+  <block id="32c902b48618ff09c74311dc0eadacf8" category="paragraph">複製包含不可變檔案的來源磁碟區時，目標磁碟區和檔案系統將被鎖定，直到來源磁碟區中不可變檔案的保留期結束。不可變文件功能在以下情況下可用： <block ref="40da211f809bc6c9e6163aa605349c18" category="inline-link-macro-rx"></block>用於 FSx for ONTAP 檔案系統。</block>
+  <block id="5001625507c3b9f08fdabbe789030cf8" category="list-text">您必須在工作負載工廠控制台中擁有 FSx for ONTAP 檔案系統。</block>
+  <block id="1626bc194a1c6fb76d8a47eba39add09" category="paragraph">FlexGroup 磁碟區大小取決於組成部分的數量，每個組成部分需要 100 GiB。</block>
+  <block id="f80d67f0a6951b3f6c1185e7c7f39c30" category="paragraph">指定卷的最大增長大小和單位。不能將最大成長大小設定為小於目前磁碟區大小</block>
+  <block id="d932719afe063ca8fcfe0eb63f1b6ec9" category="paragraph">ONTAP 使用重複資料刪除和壓縮功能實現儲存效率。重複資料刪除技術可消除重複的資料區塊資料壓縮會壓縮資料區塊、以減少所需的實體儲存容量。</block>
+  <block id="6952a6e9eef7bbc8ef4fe836a4a3851a" category="list-text">* 可匯入的檔案 * ：此功能（也稱為 SnapLock ）預設為停用。啟用不可變檔案可防止在一定時期內刪除或覆蓋資料。只有在磁碟區建立期間，才能啟用此功能。啟用此功能後，便無法停用此功能。這是適用於 ONTAP 的 FSX 的優質功能，需要額外付費。如需詳細資訊，請參閱 <block ref="e334cd66539db07681f218968c17aeb4" category="inline-link-macro-rx"></block>Amazon FSX for NetApp ONTAP 文件中的。</block>
+  <block id="7d10dca5001535e91f75cecae3291907" category="list-text">您可以選擇啟用自動認可功能。如果檔案在自動認可期間內未變更，則自動認可功能會將檔案提交至 SnapLock 磁碟區的 WORM 狀態。自動提交功能預設為停用。您必須確保要自動提交的文件位於 SnapLock 磁碟區上。</block>
+  <block id="9d083d8cac2f7524236aec0400de23bf" category="inline-link-macro">了解有關 ARP/AI 的更多信息</block>
+  <block id="cb0b32de8b019bb1df747d59de75707b" category="list-text">*ARP/AI*：當連結與檔案系統關聯時，NetApp 自主勒索軟體保護與 AI (ARP/AI) 預設為啟用。<block ref="c4c4beca7d4846b88f49bf491b5261f6" category="inline-link-macro-rx"></block>。接受聲明以繼續。</block>
+  <block id="f6f1c3f8f0f62507f18da1fcf460ade4" category="paragraph">如果該功能不可用，則可能是由於以下原因之一：</block>
+  <block id="9e46846308a6940deed12bb97a4f8290" category="list-text">連結與檔案系統無關聯。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
+  <block id="7c3e31cda0e937f8fa1edeeb89e9fe70" category="list-text">ARP/AI 不支援具有不可變檔案的磁碟區以及具有 iSCSI 和 NVMe 協定的磁碟區。</block>
+  <block id="df1195db43983cb33962d0fe23f28da4" category="list-text">檔案系統已具有 ARP/AI 策略。</block>
+  <block id="0bce1227be581635db9bb209f22cf4e6" category="paragraph">工作負載工廠啟動卷創建。建立完成後，系統會在「磁碟區」標籤中顯示新磁碟區。</block>
+  <block id="817a91472106a30911a7a081b0284ff7" category="paragraph">檢查 FlexVol 或 FlexGroup 卷容量的平衡，並重新平衡磁碟區容量，以將檔案均勻分佈在節點中的所有 FlexVol 磁碟區或所有組成部分之間，以便所有節點都參與單一 FlexGroup 磁碟區的工作負載。</block>
+  <block id="46119f30376fd007e4806359f116810d" category="paragraph">FlexVol 捲和 FlexGroup 磁碟區支援重新平衡磁碟區容量。重新平衡磁碟區會在新增檔案和檔案成長、隨著時間的推移而產生不平衡時、重新分配容量。手動開始重新平衡作業後、我們會選取檔案、並自動且不中斷地移動。Volume 傳輸作業會消耗檔案系統資源。</block>
+  <block id="bbf6fdac51a56da72339e09ef6a7537c" category="paragraph">每種磁碟區類型和重新平衡操作均有不同，如下所示。</block>
+  <block id="7d98517078b732298ebd050c16b0fdc2" category="list-text">資料量FlexVol</block>
+  <block id="31af9ccdfe896bb37c979ba564b11fea" category="list-text">FlexVol 卷是一種邏輯容器，能夠靈活地管理數據，支援擴展、收縮、移動和高效複製。它們適用於 NAS 和 SAN 環境。</block>
+  <block id="0a29aedc128f13168b556b842596de7a" category="paragraph">在 FSx for ONTAP 檔案系統中，一個 FlexVol 磁碟區可以與一個節點內的其他 FlexVol 磁碟區進行平衡。如果檔案系統只有一個 FlexVol 卷，則無法進行重新平衡。當檔案系統每個節點有多個 FlexVol 磁碟區並且選擇了單一 FlexVol 磁碟區時，該 FlexVol 磁碟區會在所有 FlexVol 磁碟區的上下文中進行平衡，但只允許移動選取的磁碟區。</block>
+  <block id="ee1ef6cf0f3971b44eb2abcac958fb8d" category="list-text">資料量FlexGroup</block>
+  <block id="86b9c6b8527a6bfd7d511bcbb627ca68" category="list-text">另一方面，FlexGroup 磁碟區是可擴充的 NAS 容器，旨在實現高效能和自動負載分配。它們由多個成員卷（組成部分）組成，這些成員卷透明地共享流量。 FlexGroup卷提供海量容量，超越 FlexVol 的限制，最高可達 60PB 容量和 4000 億個檔案。它們透過提供單一命名空間容器來簡化管理。</block>
+  <block id="a1d763e9c6395bb77325bcad5657ce9e" category="paragraph">容量分佈在具有兩個或更多高可用性 (HA) 對的橫向擴展 FSx for ONTAP 檔案系統的多個組成部分中。每個組成都是指定最大單一檔案大小的容器。適用於 ONTAP 的 FSX 會以均勻的方式跨所有成員分散檔案，讓所有節點都能參與單一 FlexGroup Volume 的工作負載。</block>
+  <block id="d3ba2e7d0644f59c9834f36ad9a37bd9" category="admonition">iSCSI 和 NVMe 等 SAN 磁碟區不支援重新平衡。</block>
+  <block id="287fd51e17b8ed83911f0acd39496c50" category="section-title">檢查您的交易量餘額</block>
+  <block id="7e42e168316583c933d50f5311ce6477" category="paragraph">檢查 FSx for ONTAP 檔案系統中 FlexVol 或 FlexGroup 磁碟區的平衡。</block>
+  <block id="0691d778f09d713a755463d05ab1033d" category="inline-link-macro">建立連結</block>
+  <block id="53e6259fd019f47a663995e674152f8b" category="list-text">要檢查卷的餘額，您必須<block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block> 。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
+  <block id="45e5ba6ed73eebcebdfec708c137cf22" category="list-text">在 *FSx for ONTAP* 標籤中，選擇包含要重新平衡的磁碟區的檔案系統的三點選單，然後選擇 *管理*。</block>
+  <block id="267c95738d47a09a9b509ffdd48c24b0" category="list-text">從「卷」標籤中，選擇表格頂部的「檢查卷餘額」。</block>
+  <block id="c9784b38284a9b2506bc92daf5caada4" category="list-text">在「交易量平衡」視窗中，查看以下平衡狀態：</block>
+  <block id="9a3d2d6c726db403f30b520ca6d8d906" category="paragraph">當音量不平衡時，請考慮<block ref="25db360314c219183817d2ed1029436b" category="inline-xref-macro-rx"></block> 。</block>
+  <block id="ba51913935bc9e57b04a0e373c7e87f1" category="section-title">重新平衡磁碟區容量</block>
+  <block id="81ac132d7a72ac8930eac72f996dc39f" category="paragraph">重新平衡一個或多個非平衡的磁碟區。</block>
+  <block id="3df496910d7ade34c46b7c3c46f516a9" category="inline-xref">停止重新平衡</block>
+  <block id="f47b90b03a7f25fd35e2825621faa855" category="admonition">工作負載工廠管理員可以<block ref="6089e6bc679073f1388a01bc136ad00e" category="inline-xref-macro-rx"></block>在操作過程中。</block>
+  <block id="6884c9c0713962c7d0a4fabd1cf49a6d" category="inline-xref">檢查卷的餘額</block>
+  <block id="63acfaf1d07db652bff37bddaa4ba8bc" category="list-text"><block ref="65ac8887e886c8e0446817b3710e8cbe" category="inline-xref-macro-rx"></block>重新平衡磁碟區之前。</block>
+  <block id="af7202b99122b0c2ef1b703335afeef9" category="list-text">若要重新平衡磁碟區、您必須 <block ref="02bfea9ec9af8a75e921abb4371bb623" category="inline-link-macro-rx"></block>。如果您沒有現有的連結、 <block ref="4a4cf61bbc0937b0bea7aa35d3b9fb8e" category="inline-link-macro-rx"></block>。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。</block>
+  <block id="dfaf4c319f7d24ec55b76a7ae4393e62" category="list-text">最好將 FlexVol 磁碟區全部重新平衡，以便均勻平衡所有捲資源。取消選定的磁碟區不會主動參與平衡過程。</block>
+  <block id="934baa9ec98e8fc4a616d393737537e5" category="open-title">流通量FlexVol</block>
+  <block id="8b101e32193fcbdd503f49081b4a7e4b" category="paragraph">在 FSx for ONTAP 檔案系統中，一個 FlexVol 磁碟區可以與同一節點內的其他 FlexVol 磁碟區進行平衡。當檔案系統每個節點有多個 FlexVol 磁碟區且選擇了單一 FlexVol 磁碟區時，此 FlexVol 磁碟區會在所有 FlexVol 磁碟區的上下文中進行平衡，但只允許移動選取的磁碟區。</block>
+  <block id="6f661bbcda098033b451092f4a6ad605" category="list-text">在磁碟區平衡視窗中，可以選擇 FlexVol 平衡摘要中的「*資料分佈*」來查看每個聚合的已使用容量。</block>
+  <block id="9388053fc7637e1b4eeafe0e5f530ed9" category="list-text">選擇“*重新平衡*”以重新平衡一個或多個不平衡的捲。</block>
+  <block id="55a113edd3b1fddca38ad33867469ee2" category="list-text">在重新平衡精靈中，請依照下列步驟操作。</block>
+  <block id="1b6fa01b1905bacdf0b0c88ed8c711a5" category="list-text">*最大傳輸速率*：可選。預設為停用。啟用節流以限制磁碟區在檔案系統上移動的頻寬，並減緩傳出的磁碟區複寫流量。</block>
+  <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="paragraph">選擇*下一步*。</block>
+  <block id="914a13175eb38a00a409b234495d1ead" category="list-text">查看所有 FlexVol 卷的當前和建議佈局，然後選擇*下一步*。</block>
+  <block id="33b8c7e1b045d53ac3c40b2eb179b423" category="list-text">在開始重新平衡操作之前，請仔細檢查將會發生什麼以及注意事項。</block>
+  <block id="42562a733c7eca9d2d470234bf796a63" category="paragraph">FlexVol 卷已重新平衡。當作業完成時，檔案系統將會被節流回原始值。</block>
+  <block id="e9db3004828d9514fafc57881dfbdbd2" category="open-title">流通量FlexGroup</block>
+  <block id="5b1fc9c914ecf6dbfaba061abccfa814" category="paragraph">資料會在成員磁碟區之間重新分配，以重新平衡 FlexGroup 磁碟區。根據您選擇的佈局，重新平衡操作可能會新增 FlexGroup 成員磁碟區並增加已配置磁碟區的大小。</block>
+  <block id="e0bdf1ac64eadae8c51a5f7d28c4ec5e" category="paragraph">在重新平衡期間，FlexGroup 成員磁碟區一次移動一個。當作業完成時，檔案系統將會被節流回原始值。</block>
+  <block id="394c3cbc7af42de2232348150c226506" category="section-title">停止磁碟區重新平衡操作</block>
+  <block id="c371881847612e2caaaab71efa80ae17" category="paragraph">隨時停止重新平衡操作；這不會造成中斷。停止操作會中止正在進行的磁碟區移動。</block>
+  <block id="8ad4014ece1ab12d9aff2e57b1c1f323" category="paragraph">您可以稍後開始另一個重新平衡操作。</block>
+  <block id="9e37c13416b5ae00943c0a3e0a5515e1" category="list-text">開始重新平衡操作後，從卷平衡頁面選擇*停止重新平衡*。</block>
+  <block id="e1c8bb61c19d6ae0db6ae5e69616299c" category="list-text">在停止重新平衡對話方塊中，選擇*停止*。</block>
+  <block id="dacae3a3d22c24a7e5e2a28664e1043d" category="paragraph">磁碟區重新平衡操作停止並且活動磁碟區移動中止。</block>
+  <block id="7454fc4c14df2a987637928e569efe3a" category="section-title">2025 年 6 月 29 日</block>
 </blocks>

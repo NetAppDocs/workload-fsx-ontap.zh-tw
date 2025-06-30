@@ -26,7 +26,7 @@ FSx for ONTAP 磁碟區以虛擬方式將資料分組，決定資料的儲存方
 .開始之前
 建立 Volume 之前、請先檢閱下列先決條件：
 
-* 您必須在工作負載工廠中擁有適用於 ONTAP 檔案系統的 FSX 。
+* 您必須在工作負載工廠控制台中擁有 FSx for ONTAP 檔案系統。
 * 您必須擁有儲存 VM 。
 * 若要存取傳輸協定、請完成下列步驟：
 +
@@ -58,7 +58,7 @@ NOTE: 從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏
 FlexVol Volume 樣式預設為選取。
 
 +
-FlexGroup Volume 大小取決於組成數量。每個成分需要 100 GiB 。
+FlexGroup 磁碟區大小取決於組成部分的數量，每個組成部分需要 100 GiB。
 
 .. * Volume Size* ：輸入 Volume 大小和單位。
 +
@@ -66,7 +66,7 @@ FlexGroup Volume 大小取決於組成數量。每個成分需要 100 GiB 。
 
 .. 磁碟區自動成長：選配啟用磁碟區自動成長功能，自動擴充磁碟區容量，直到達到最大容量。此功能可適應不斷增長的數據使用量，確保運作不會中斷。
 +
-指定卷的最大增長大小和單位。最大增長大小不能小於目前磁碟區大小。
+指定卷的最大增長大小和單位。不能將最大成長大小設定為小於目前磁碟區大小
 
 .. * 標記 * ：您可以選擇性地新增最多 50 個標記。
 
@@ -125,9 +125,35 @@ FlexGroup Volume 大小取決於組成數量。每個成分需要 100 GiB 。
 +
 .. *儲存效率*：預設啟用。選擇此項目可停用該功能。
 +
-利用 ONTAP 的重複資料刪除和壓縮功能、即可提高儲存效率。重複資料刪除技術可消除重複的資料區塊資料壓縮會壓縮資料區塊、以減少所需的實體儲存容量。
+ONTAP 使用重複資料刪除和壓縮功能實現儲存效率。重複資料刪除技術可消除重複的資料區塊資料壓縮會壓縮資料區塊、以減少所需的實體儲存容量。
 
-.. * 可匯入的檔案 * ：此功能（也稱為 SnapLock ）預設為停用。啟用不可變的檔案可防止資料在指定的時間內遭到刪除或覆寫。只有在磁碟區建立期間，才能啟用此功能。啟用此功能後，便無法停用此功能。這是適用於 ONTAP 的 FSX 的優質功能，需要額外付費。如需詳細資訊，請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["SnapLock 的運作方式"^]Amazon FSX for NetApp ONTAP 文件中的。
+.. * Snapshot polic*: 選擇快照策略以指定快照的頻率和保留。
++
+以下是 AWS 的預設原則。對於自訂快照策略，您必須link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["建立連結的關聯"] 。
+
++
+`default`:: 此原則會根據下列排程自動建立快照、並刪除最舊的快照複本、以便為較新的複本提供空間：
++
+--
+*** 每小時最多六個快照、每小時五分鐘拍攝一次。
+*** 每週一至週六、午夜後 10 分鐘、最多可拍攝兩個每日快照。
+*** 每個星期日午夜後 15 分鐘、最多拍攝兩個每週快照。
++
+
+NOTE: 快照時間以檔案系統的時區為基礎、其預設為協調世界時間（ UTC ）。如需變更時區的相關資訊、請參閱 link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html["顯示及設定系統時區"^] NetApp 支援文件中的。
+
+
+
+--
+`default-1weekly`:: 此原則的運作方式與原則相同、 `default` 只是它只會從每週排程中保留一個快照。
+`none`:: 此原則不會擷取任何快照。您可以將此原則指派給磁碟區、以防止自動擷取快照。
+
+
+.. * 分層原則 * ：選取儲存在磁碟區中資料的分層原則。
++
+平衡（自動） _ 是使用工作負載原廠主控台建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^] AWS FSX for NetApp ONTAP 文件中的。請注意，工作負載工廠會在工作負載原廠主控台中使用以使用案例為基礎的名稱來分層原則，並在括弧中包含適用於 ONTAP 分層原則名稱的 FSX 。
+
+.. * 可匯入的檔案 * ：此功能（也稱為 SnapLock ）預設為停用。啟用不可變檔案可防止在一定時期內刪除或覆蓋資料。只有在磁碟區建立期間，才能啟用此功能。啟用此功能後，便無法停用此功能。這是適用於 ONTAP 的 FSX 的優質功能，需要額外付費。如需詳細資訊，請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["SnapLock 的運作方式"^]Amazon FSX for NetApp ONTAP 文件中的。
 +
 啟用「不可變檔案」功能會將此磁碟區中的檔案永久認可為不可變的 WORM （一次寫入多次讀取）狀態。
 
@@ -147,7 +173,7 @@ FlexGroup Volume 大小取決於組成數量。每個成分需要 100 GiB 。
 
 
 --
-AUTOCOMMIT:: 您可以選擇啟用自動認可功能。如果檔案在自動認可期間內未變更，則自動認可功能會將檔案提交至 SnapLock 磁碟區的 WORM 狀態。自動提交功能預設為停用。您想要自動提交的檔案必須位於SnapLock 一個流通於一個不流通的資料冊上。
+AUTOCOMMIT:: 您可以選擇啟用自動認可功能。如果檔案在自動認可期間內未變更，則自動認可功能會將檔案提交至 SnapLock 磁碟區的 WORM 狀態。自動提交功能預設為停用。您必須確保要自動提交的文件位於 SnapLock 磁碟區上。
 Volume 附加模式:: 您無法修改受 WORM 保護檔案中的現有資料。不過，不可變的檔案可讓您使用 WORM 可擴充檔案來維護現有資料的保護。例如，您可以產生記錄檔，或是保留音訊或視訊串流資料，同時逐步將資料寫入記錄檔。link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["深入瞭解 Volume 附加模式"^]Amazon FSX for NetApp ONTAP 文件。
 +
 --
@@ -179,31 +205,15 @@ Volume 附加模式:: 您無法修改受 WORM 保護檔案中的現有資料。�
 --
 
 
-.. * Snapshot polic*: 選擇快照策略以指定快照的頻率和保留。
+.. *ARP/AI*：當連結與檔案系統關聯時，NetApp 自主勒索軟體保護與 AI (ARP/AI) 預設為啟用。link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["了解有關 ARP/AI 的更多信息"]。接受聲明以繼續。
 +
-以下是 AWS 的預設原則。對於自訂快照策略，您必須link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["建立連結的關聯"] 。
+如果該功能不可用，則可能是由於以下原因之一：
 
 +
-`default`:: 此原則會根據下列排程自動建立快照、並刪除最舊的快照複本、以便為較新的複本提供空間：
-+
---
-*** 每小時最多六個快照、每小時五分鐘拍攝一次。
-*** 每週一至週六、午夜後 10 分鐘、最多可拍攝兩個每日快照。
-*** 每個星期日午夜後 15 分鐘、最多拍攝兩個每週快照。
-+
+*** 連結與檔案系統無關聯。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
+*** ARP/AI 不支援具有不可變檔案的磁碟區以及具有 iSCSI 和 NVMe 協定的磁碟區。
+*** 檔案系統已具有 ARP/AI 策略。
 
-NOTE: 快照時間以檔案系統的時區為基礎、其預設為協調世界時間（ UTC ）。如需變更時區的相關資訊、請參閱 link:https://library.netapp.com/ecmdocs/ECMP1155684/html/GUID-E26E4C94-DF74-4E31-A6E8-1D2D2287A9A1.html["顯示及設定系統時區"^] NetApp 支援文件中的。
-
-
-
---
-`default-1weekly`:: 此原則的運作方式與原則相同、 `default` 只是它只會從每週排程中保留一個快照。
-`none`:: 此原則不會擷取任何快照。您可以將此原則指派給磁碟區、以防止自動擷取快照。
-
-
-.. * 分層原則 * ：選取儲存在磁碟區中資料的分層原則。
-+
-平衡（自動） _ 是使用工作負載原廠主控台建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^] AWS FSX for NetApp ONTAP 文件中的。請注意，工作負載工廠會在工作負載原廠主控台中使用以使用案例為基礎的名稱來分層原則，並在括弧中包含適用於 ONTAP 分層原則名稱的 FSX 。
 
 
 
@@ -218,4 +228,4 @@ NOTE: 快照時間以檔案系統的時區為基礎、其預設為協調世界�
 
 
 .結果
-磁碟區建立已啟動。建立後、新的 Volume 就會出現在 Volumes （磁碟區）標籤中。
+工作負載工廠啟動卷創建。建立完成後，系統會在「磁碟區」標籤中顯示新磁碟區。
