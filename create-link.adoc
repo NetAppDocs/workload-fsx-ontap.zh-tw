@@ -34,7 +34,7 @@ NOTE: 使用 Connector 時不支援 AWS Secrets Manager 。
 在此工作流程中，您有兩個建立連結的選項 - 自動或手動。您必須在 AWS 帳戶中啟動 AWS CloudForgation 堆疊、才能建立連結。
 
 * 自動：透過工作負載工廠建立自動登錄的連結。自動建立的連結需要工作負載工廠自動化的權杖， CloudForgation 程式碼也很短。最多只能使用六小時。
-* 手動：使用 Codebox 中的 CloudFormation 或 Terraform 建立手動註冊的連結。程式碼會保留，以便您有更多時間完成操作。這在與安全和 DevOps 等不同團隊合作時很有用，因為他們可能需要先授予完成連結建立所需的權限。
+* 手動：建立具有手動登錄的連結。CloudForgation 程式碼持續提供您更多時間來完成作業。這在與安全和 DevOps 等不同團隊合作時很有用，因為他們可能需要先授予完成連結建立所需的權限。
 
 
 .開始之前
@@ -161,7 +161,7 @@ AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔
 --
 .手動建立
 --
-使用此選項，您可以提取連結的 ARN 並在此處報告。工作負載工廠會手動為您登錄連結。您可以使用 Codebox 中的兩個基礎架構即程式碼 (IaC) 工具建立連結：CloudFormation 或 Terraform。
+使用此選項、您可以從 AWS CloudForgation 擷取連結的 ARN 、並在此處報告。工作負載工廠會手動為您登錄連結。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
@@ -183,7 +183,7 @@ AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔
 
 .. *連結權限*：選擇以下連結權限選項之一：
 +
-*** *自動*：選擇此選項，以便 AWS CloudFormation 或 Terraform 程式碼自動建立 Lambda 權限原則和執行角色。
+*** *自動*：選擇此選項，以便 AWS CloudFormation 程式碼自動建立 Lambda 權限原則和執行角色。
 *** *使用者提供*：選擇此選項可將指定的 Lambda 執行角色及其附加的策略指派給 Lambda 連結。 Lambda需要以下權限。 `secretsmanager:GetSecretValue`僅當您啟用 AWS Secrets Manager 時才需要權限。
 +
 [source, json]

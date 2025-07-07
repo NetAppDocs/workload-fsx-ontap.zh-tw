@@ -1929,13 +1929,9 @@
   <block id="6250cd311debe5758acc69f81921ab78" category="paragraph">工作負載工廠支援將不可變磁碟區從一個 FSx for ONTAP 系統複製到另一個 FSx for ONTAP 檔案系統，以保護關鍵資料免遭意外刪除或勒索軟體等惡意攻擊。目標磁碟區及其主機檔案系統將處於不可變狀態（即鎖定狀態），且在保留期結束之前，目標檔案系統中的任何資料都無法修改或刪除。</block>
   <block id="b6fc33d7434bb860ad528753113881b1" category="inline-link-macro">了解如何建立複製關係</block>
   <block id="d3dbddfb353eaaa957947efb04ca7013" category="paragraph"><block ref="d3dbddfb353eaaa957947efb04ca7013" category="inline-link-macro-rx"></block></block>
-  <block id="d836bf4f72557e9399ce062e72ef15f6" category="section-title">連結建立增強功能</block>
-  <block id="1f8ca754f0193efb8fdc1c63a4d96672" category="paragraph">工作負載工廠控制台中的連結建立過程進行了以下增強。</block>
   <block id="bdd7f454c54673987f53c40f8e5b8072" category="paragraph"><block ref="bdd7f454c54673987f53c40f8e5b8072" category="inline-link-macro-rx"></block></block>
   <block id="5c44c7d986372ccb1d679985b5416b64" category="section-title">在連結建立期間管理 IAM 執行角色和權限</block>
   <block id="43f8bec3c8d83ff27c8f5d629cd49d4d" category="paragraph">現在，您可以在工作負載工廠控制台中建立鏈接，從而管理 IAM 執行角色及其附加的權限策略。連結會在您的工作負載工廠帳戶與一個或多個 FSx for ONTAP 檔案系統之間建立連線。您可以透過兩種方式指派 IAM 執行角色和連結權限：自動指派或使用者指派。在工作負載工廠中管理執行角色及其附加的權限策略意味著您無需再使用第三方程式碼。</block>
-  <block id="f83708b425052a7f19c02dfd5c3d0688" category="section-title">Terraform 支援連結創建</block>
-  <block id="d993aa63b5e96ec8db4090bd87d5c850" category="paragraph">現在您可以使用 Codebox 中的 Terraform 建立與 FSx for ONTAP 檔案系統關聯的連結。此功能適用於手動建立連結的使用者。</block>
   <block id="2cb3ea55d484ee81bd75e230c32b7fcd" category="paragraph">第二代 FSx for ONTAP 檔案系統是預設部署類型。當區域不支援第二代 FSx for ONTAP 檔案系統時，部署類型將切換為第一代。</block>
   <block id="cc7023e1e70f83f63ba0c94135b83c2d" category="paragraph">對於高效能工作負載，或當工作負載從小規模開始並逐步擴展到 72 GB/s 的吞吐量和 240 萬 IOPS 時，建議使用此配置。</block>
   <block id="ce920fde7af8f67cbfd1ca3e8efd6b91" category="list-text">多個可用性區域（ Multi-AZ ）部署：即使可用性區域不可用、仍可持續提供資料可用度。多 AZ 檔案系統是專為業務關鍵的正式作業工作負載所設計、這些工作負載需要高可用度的共享 ONTAP 檔案資料、而且需要跨可用性區域內建複寫的儲存設備。</block>
@@ -1954,12 +1950,10 @@
   <block id="2c8c409e84df8a5368e9fc203dacd0e0" category="list-text">*自動*：對於自動操作，每建立 1 GiB，就會新增 3 IOPS。</block>
   <block id="080138c9fde9abc63b7003839106198b" category="list-text">*使用者配置*：對於使用者配置，輸入 IOPS 值。</block>
   <block id="7392fd7ce1aac825ec2bdccdf93b5ad8" category="paragraph">在此工作流程中，您有兩個建立連結的選項 - 自動或手動。您必須在 AWS 帳戶中啟動 AWS CloudForgation 堆疊、才能建立連結。</block>
-  <block id="228b634c3bcbb5ddb0e529d6144522f7" category="list-text">手動：使用 Codebox 中的 CloudFormation 或 Terraform 建立手動註冊的連結。程式碼會保留，以便您有更多時間完成操作。這在與安全和 DevOps 等不同團隊合作時很有用，因為他們可能需要先授予完成連結建立所需的權限。</block>
   <block id="2f33e5a4fe58163ac0df8f3b097df4db" category="list-text">*連結權限*：選擇以下連結權限選項之一：</block>
   <block id="4c0e4494d278c08e2a1d6707604575a3" category="list-text">*自動*：選擇此選項，以便 AWS CloudFormation 或 Terraform 程式碼自動建立 Lambda 權限原則和執行角色。</block>
   <block id="dd9c72ad3bbeb047b573638ce62d0cc6" category="list-text">*使用者提供*：選擇此選項可將指定的 Lambda 執行角色及其附加的策略指派給 Lambda 連結。 Lambda需要以下權限。<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block>僅當您啟用 AWS Secrets Manager 時才需要權限。</block>
   <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">在文字方塊中輸入 Lambda 執行角色 ARN。</block>
-  <block id="cc5c21be990be307574e5fa4cb773c44" category="paragraph">使用此選項，您可以提取連結的 ARN 並在此處報告。工作負載工廠會手動為您登錄連結。您可以使用 Codebox 中的兩個基礎架構即程式碼 (IaC) 工具建立連結：CloudFormation 或 Terraform。</block>
   <block id="e151c7c26f691694d417720f8986d3fa" category="list-text">*連結註冊*：選擇下拉箭頭以展開有關如何從 AWS CloudFormation 服務或使用 Terraform 註冊連結的說明。請依照指示進行。</block>
   <block id="38adbad92c37166c4ce64da1eb51513b" category="inline-link-macro">創建卷</block>
   <block id="32c902b48618ff09c74311dc0eadacf8" category="paragraph">複製包含不可變檔案的來源磁碟區時，目標磁碟區和檔案系統將被鎖定，直到來源磁碟區中不可變檔案的保留期結束。不可變文件功能在以下情況下可用： <block ref="40da211f809bc6c9e6163aa605349c18" category="inline-link-macro-rx"></block>用於 FSx for ONTAP 檔案系統。</block>
@@ -1993,7 +1987,6 @@
   <block id="45e5ba6ed73eebcebdfec708c137cf22" category="list-text">在 *FSx for ONTAP* 標籤中，選擇包含要重新平衡的磁碟區的檔案系統的三點選單，然後選擇 *管理*。</block>
   <block id="267c95738d47a09a9b509ffdd48c24b0" category="list-text">從「卷」標籤中，選擇表格頂部的「檢查卷餘額」。</block>
   <block id="c9784b38284a9b2506bc92daf5caada4" category="list-text">在「交易量平衡」視窗中，查看以下平衡狀態：</block>
-  <block id="9a3d2d6c726db403f30b520ca6d8d906" category="paragraph">當音量不平衡時，請考慮<block ref="25db360314c219183817d2ed1029436b" category="inline-xref-macro-rx"></block> 。</block>
   <block id="ba51913935bc9e57b04a0e373c7e87f1" category="section-title">重新平衡磁碟區容量</block>
   <block id="81ac132d7a72ac8930eac72f996dc39f" category="paragraph">重新平衡一個或多個非平衡的磁碟區。</block>
   <block id="3df496910d7ade34c46b7c3c46f516a9" category="inline-xref">停止重新平衡</block>
@@ -2022,4 +2015,8 @@
   <block id="e1c8bb61c19d6ae0db6ae5e69616299c" category="list-text">在停止重新平衡對話方塊中，選擇*停止*。</block>
   <block id="dacae3a3d22c24a7e5e2a28664e1043d" category="paragraph">磁碟區重新平衡操作停止並且活動磁碟區移動中止。</block>
   <block id="7454fc4c14df2a987637928e569efe3a" category="section-title">2025 年 6 月 29 日</block>
+  <block id="b1a94bb6f0b93b26134ff88823a75e78" category="list-text">手動：建立具有手動登錄的連結。CloudForgation 程式碼持續提供您更多時間來完成作業。這在與安全和 DevOps 等不同團隊合作時很有用，因為他們可能需要先授予完成連結建立所需的權限。</block>
+  <block id="9d1d72e4ac9c59d5a464cfdbfae095f3" category="paragraph">使用此選項、您可以從 AWS CloudForgation 擷取連結的 ARN 、並在此處報告。工作負載工廠會手動為您登錄連結。</block>
+  <block id="80b014e5654af87ea5edcdf6ec223a6d" category="list-text">*自動*：選擇此選項，以便 AWS CloudFormation 程式碼自動建立 Lambda 權限原則和執行角色。</block>
+  <block id="ff1dfe8b36206663d4bf870113dc19d6" category="paragraph">當音量不平衡時，請考慮<block ref="ef2b4a1f9f61a730aafc8bb66fd04b9b" category="inline-xref-macro-rx"></block> 。</block>
 </blocks>

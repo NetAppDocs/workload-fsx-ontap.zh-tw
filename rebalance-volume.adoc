@@ -61,7 +61,7 @@ NOTE: iSCSI 和 NVMe 等 SAN 磁碟區不支援重新平衡。
 ** 資料量FlexGroup
 ** 資料量FlexVol
 +
-當音量不平衡時，請考慮<<Rebalance a volume,重新平衡>> 。
+當音量不平衡時，請考慮<<重新平衡磁碟區容量,重新平衡>> 。
 
 
 
