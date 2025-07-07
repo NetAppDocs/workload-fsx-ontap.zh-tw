@@ -677,7 +677,6 @@
   <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">管理與監控</block>
   <block id="8cf9dbe17cb44a10f0622b63961c131d" category="sidebar">Volume管理</block>
   <block id="56994f1db86bfe709cbe47f96bde566f" category="sidebar">編輯 Volume 自動擴充</block>
-  <block id="be6125857b11bdb69d1f89bf69787f48" category="sidebar">重新平衡磁碟區的容量</block>
   <block id="28b0bfb965f113c41530116951bfce50" category="sidebar">檔案系統管理</block>
   <block id="ff117b5e42f4a60dd5b7859999c4f2bd" category="sidebar">啟用自動容量管理</block>
   <block id="c7ad4dd9b2ecb508f1366110b020e001" category="sidebar">重設 fsxadmin 密碼</block>
@@ -1410,8 +1409,6 @@
   <block id="a79cee1f678331ce4a5e786550999b02" category="paragraph">關係隨即恢復，其狀態顯示為「已複寫」。</block>
   <block id="26da52f61184b82e14aa7b1fa701a979" category="paragraph">自動佈建的 IOPS 是以每 GiB 三個 IOPS 計算。</block>
   <block id="924b3daa7ecef370ff9a603b3208772b" category="paragraph">如果您手動配置 IOPS ，可能需要在之前增加 IOPS <block ref="94a3285243f3705d6ad038b61125cb2f" category="inline-link-macro-rx"></block>。</block>
-  <block id="3a3c8188eae554af0e7f07bfef2e124b" category="summary">檢查並重新平衡磁碟區的容量，以避免隨著時間而產生的不平衡現象。</block>
-  <block id="8083bd6761abe4735ad26f9c18899032" category="doc">檢查並重新平衡磁碟區的容量</block>
   <block id="04533b4edf31c61772ef483585fb29cf" category="paragraph">檢查 FlexGroup Volume 容量的平衡，包括評估組成的目前配置。當您重新平衡磁碟區的容量時， BlueXP  工作負載工廠會設計一個新的組成配置，其中包含偶數個組成成分，以便在所有 HA 配對之間平均分散資料。服務會執行重新平衡計畫，進而改善讀寫作業。</block>
   <block id="eeaecacdda76be13c8594ef17a7c395c" category="list-text">FlexGroup Volume Balance 僅適用於使用橫向擴充部署且至少有兩個 HA 配對的 ONTAP 檔案系統。</block>
   <block id="a0c24c81835ca446fe958b4abdb6c08c" category="list-text">從 Volumes （卷）選項卡中，選擇表頂部的 *Check Balance* （檢查 FlexGroup 平衡）。</block>
@@ -1932,18 +1929,13 @@
   <block id="bdd7f454c54673987f53c40f8e5b8072" category="paragraph"><block ref="bdd7f454c54673987f53c40f8e5b8072" category="inline-link-macro-rx"></block></block>
   <block id="5c44c7d986372ccb1d679985b5416b64" category="section-title">在連結建立期間管理 IAM 執行角色和權限</block>
   <block id="43f8bec3c8d83ff27c8f5d629cd49d4d" category="paragraph">現在，您可以在工作負載工廠控制台中建立鏈接，從而管理 IAM 執行角色及其附加的權限策略。連結會在您的工作負載工廠帳戶與一個或多個 FSx for ONTAP 檔案系統之間建立連線。您可以透過兩種方式指派 IAM 執行角色和連結權限：自動指派或使用者指派。在工作負載工廠中管理執行角色及其附加的權限策略意味著您無需再使用第三方程式碼。</block>
-  <block id="2cb3ea55d484ee81bd75e230c32b7fcd" category="paragraph">第二代 FSx for ONTAP 檔案系統是預設部署類型。當區域不支援第二代 FSx for ONTAP 檔案系統時，部署類型將切換為第一代。</block>
   <block id="cc7023e1e70f83f63ba0c94135b83c2d" category="paragraph">對於高效能工作負載，或當工作負載從小規模開始並逐步擴展到 72 GB/s 的吞吐量和 240 萬 IOPS 時，建議使用此配置。</block>
   <block id="ce920fde7af8f67cbfd1ca3e8efd6b91" category="list-text">多個可用性區域（ Multi-AZ ）部署：即使可用性區域不可用、仍可持續提供資料可用度。多 AZ 檔案系統是專為業務關鍵的正式作業工作負載所設計、這些工作負載需要高可用度的共享 ONTAP 檔案資料、而且需要跨可用性區域內建複寫的儲存設備。</block>
   <block id="fc22ff32bfac4486f50da9af2033830e" category="paragraph">對於需要高達 6 GB/s 吞吐量或 200,000 IOPS 的工作負載，建議使用此單 HA 對配置。</block>
   <block id="87839b96284704d104c8e445d0cfb887" category="list-text">對於第一代部署，您無法在建立檔案系統後減少容量。</block>
   <block id="8d4ad9a0aaca41b1aa7122cb909588a7" category="list-text">對於第二代部署，您可以在建立檔案系統後增加容量。</block>
-  <block id="a2841b4c7bc0c058832e81b45f756892" category="list-text">*部署類型*：選擇部署類型和檔案系統產生。</block>
-  <block id="d790be978976d563ba38a969cce78e04" category="paragraph">*檔案系統代數*：選擇以下選項之一：** *第二代*：此配置適用於高效能工作負載，或工作負載從小規模開始，逐步擴展到 72 GB/s 吞吐量和 240 萬 IOPS 的情況。** *第一代*：此配置非常適合需要高達 4 GB/s 吞吐量或 16 萬 IOPS 的工作負載。第一代檔案系統只能增加容量。</block>
-  <block id="0db3110a95d1dfd82b55d5dde656871c" category="paragraph">+ 第二代檔案系統的可用性取決於所選區域。如果所選區域不支援第二代 FSx for ONTAP 檔案系統，則部署類型將切換為第一代。</block>
   <block id="5ee057335585da70af1caca368e4e422" category="list-text">*第二代*：對於需要高達 6 GB/s 吞吐量或 200,000 IOPS 的工作負載，建議使用此單 HA 對配置。在多可用區和第二代檔案系統中，容量可以根據工作負載需求增加或減少。</block>
   <block id="272021095e67d1fdf73f94aa211e4e56" category="list-text">*第一代*：此配置非常適合需要高達 4 GB/s 或 160,000 IOPS 的工作負載。第一代檔案系統只能增加容量。</block>
-  <block id="912e83b52cf2a4421217bf96185e618a" category="paragraph">第二代檔案系統的可用性取決於所選區域。如果所選區域不支援第二代 FSx for ONTAP 檔案系統，則部署類型將切換為第一代。</block>
   <block id="7ef603b4e7f8efb6252e42ef0745f9cc" category="list-text">對於第二代部署，您可以調整容量。</block>
   <block id="6eb76be6a5409fb6f547e3cf3944cfe6" category="list-text">*每個 HA 對的吞吐容量*：選擇每個 HA 對的吞吐容量。第一代檔案系統僅支援一個 HA 對。</block>
   <block id="ee6e43b0904c4672da5651009001b259" category="list-text">*預先配置 IOPS*：選擇下列選項之一：</block>
@@ -1951,7 +1943,6 @@
   <block id="080138c9fde9abc63b7003839106198b" category="list-text">*使用者配置*：對於使用者配置，輸入 IOPS 值。</block>
   <block id="7392fd7ce1aac825ec2bdccdf93b5ad8" category="paragraph">在此工作流程中，您有兩個建立連結的選項 - 自動或手動。您必須在 AWS 帳戶中啟動 AWS CloudForgation 堆疊、才能建立連結。</block>
   <block id="2f33e5a4fe58163ac0df8f3b097df4db" category="list-text">*連結權限*：選擇以下連結權限選項之一：</block>
-  <block id="4c0e4494d278c08e2a1d6707604575a3" category="list-text">*自動*：選擇此選項，以便 AWS CloudFormation 或 Terraform 程式碼自動建立 Lambda 權限原則和執行角色。</block>
   <block id="dd9c72ad3bbeb047b573638ce62d0cc6" category="list-text">*使用者提供*：選擇此選項可將指定的 Lambda 執行角色及其附加的策略指派給 Lambda 連結。 Lambda需要以下權限。<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block>僅當您啟用 AWS Secrets Manager 時才需要權限。</block>
   <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">在文字方塊中輸入 Lambda 執行角色 ARN。</block>
   <block id="e151c7c26f691694d417720f8986d3fa" category="list-text">*連結註冊*：選擇下拉箭頭以展開有關如何從 AWS CloudFormation 服務或使用 Terraform 註冊連結的說明。請依照指示進行。</block>
@@ -2019,4 +2010,11 @@
   <block id="9d1d72e4ac9c59d5a464cfdbfae095f3" category="paragraph">使用此選項、您可以從 AWS CloudForgation 擷取連結的 ARN 、並在此處報告。工作負載工廠會手動為您登錄連結。</block>
   <block id="80b014e5654af87ea5edcdf6ec223a6d" category="list-text">*自動*：選擇此選項，以便 AWS CloudFormation 程式碼自動建立 Lambda 權限原則和執行角色。</block>
   <block id="ff1dfe8b36206663d4bf870113dc19d6" category="paragraph">當音量不平衡時，請考慮<block ref="ef2b4a1f9f61a730aafc8bb66fd04b9b" category="inline-xref-macro-rx"></block> 。</block>
+  <block id="1abe6434c0a72292080ce57490bb16d1" category="paragraph">使用 BlueXP 工作負載工廠，您可以建立第一代和第二代 FSx for ONTAP 檔案系統來新增和管理磁碟區和附加資料服務。</block>
+  <block id="89733971c4e3e5f45999d2907d6d1c43" category="paragraph">第二代 FSx for ONTAP 檔案系統是快速建立的預設部署類型，除非所選區域不支援第二代 FSx for ONTAP 檔案系統。</block>
+  <block id="9f9382d36e2904b74545777af65bb3d2" category="list-text">*部署類型*：選擇部署類型和檔案系統產生。第二代檔案系統的可用性取決於所選的區域。如果所選區域不支援第二代 FSx for ONTAP 檔案系統，則部署類型將切換為第一代。</block>
+  <block id="ad25ffa35c681232ceeec02144315aa5" category="paragraph">*檔案系統產生*：選擇以下其中之一：</block>
+  <block id="19f3a3d53bb0ae9a377ecb1e961d2155" category="list-text">*第二代*：此配置適用於高效能工作負載，或當工作負載從小規模開始並逐步擴展到 72 GB/s 的吞吐量和 240 萬 IOPS 時。</block>
+  <block id="2af62906cede15164d81a343aa2da6a4" category="summary">檢查並重新平衡容量以避免隨著時間的推移而出現不平衡。</block>
+  <block id="f778d4dac2542cbef9605e3e41c11ba2" category="doc">檢查並重新平衡磁碟區容量</block>
 </blocks>

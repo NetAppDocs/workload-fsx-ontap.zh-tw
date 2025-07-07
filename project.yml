@@ -102,7 +102,7 @@ sidebar:
         url: "/manage-immutable-files.html"
       - title: 管理 Volume 標記
         url: "/manage-volume-tags.html"
-      - title: 重新平衡磁碟區的容量
+      - title: 重新平衡磁碟區容量
         url: "/rebalance-volume.html"
       - title: 變更分層原則
         url: "/change-tiering-policy.html"

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: rebalance-volume.html 
 keywords: rebalance capacity, volume capacity, redistribute capacity 
-summary: 檢查並重新平衡磁碟區的容量，以避免隨著時間而產生的不平衡現象。 
+summary: 檢查並重新平衡容量以避免隨著時間的推移而出現不平衡。 
 ---
-= 檢查並重新平衡磁碟區的容量
+= 檢查並重新平衡磁碟區容量
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
