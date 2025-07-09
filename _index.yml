@@ -18,6 +18,8 @@ indexpage:
       url: "/explore-savings.html"
     - title: 為 ONTAP 檔案系統建立 FSX
       url: "/create-file-system.html"
+    - title: 查看 FSx for ONTAP檔案系統的良好架構狀態
+      url: "/improve-configurations.html"
     - title: 為 ONTAP Volume 建立 FSX
       url: "/create-volume.html"
     - title: 保護您的資料

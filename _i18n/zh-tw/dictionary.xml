@@ -1691,9 +1691,6 @@
   <block id="49441c63fc169d06940470ec9c0e4b1f" category="paragraph">當內部部署 ONTAP 叢集是複寫關係的目標時，不支援變更快照以進行長期保留。</block>
   <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">資料庫的 BlueXP  工作負載工廠會掃描 Microsoft SQL Server 組態，提供深入分析和建議，協助您達到卓越營運績效。</block>
   <block id="cf6372133f01401bdd9aefc7bead4b10" category="doc">實作架構良好的檔案系統組態</block>
-  <block id="3a23bb090bb2219c1febb97610b3122a" category="paragraph">利用組態分析洞見和建議，利用 BlueXP  工作負載工廠為您的 ONTAP 檔案系統執行 FSX 的最佳實務做法。您可以輕鬆找到問題，並採取行動，改善任何未針對可靠性，安全性，效率，效能和成本進行最佳化的系統架構。</block>
-  <block id="7933cf24268e185cf9acf9afb0edcb26" category="paragraph">BlueXP  每天分析 Amazon FSX for NetApp ONTAP 檔案系統部署組態。每日分析提供深入分析和建議，並提供可自動修正組態問題的選項，讓您的檔案系統符合最佳實務做法。</block>
-  <block id="0ccac1a46342dcb95d1b631638c4f99e" category="paragraph">您可以選擇檢閱檔案系統組態問題的建議，並從工作負載原廠主控台的儲存設備庫存中修正這些問題。</block>
   <block id="681f8e0d48f8a5609d29d038dfdb7354" category="list-text">分析內容</block>
   <block id="ee519805bc36a437f398c40154b9f4f0" category="list-text">工作負載工廠會針對適用於 ONTAP 檔案系統的 FSX ，分析下列組態的架構良好狀態：</block>
   <block id="9d0e9f5c0aa1e38cfaa8e64e155bc5a8" category="list-text">SSD 容量臨界值</block>
@@ -2017,4 +2014,10 @@
   <block id="19f3a3d53bb0ae9a377ecb1e961d2155" category="list-text">*第二代*：此配置適用於高效能工作負載，或當工作負載從小規模開始並逐步擴展到 72 GB/s 的吞吐量和 240 萬 IOPS 時。</block>
   <block id="2af62906cede15164d81a343aa2da6a4" category="summary">檢查並重新平衡容量以避免隨著時間的推移而出現不平衡。</block>
   <block id="f778d4dac2542cbef9605e3e41c11ba2" category="doc">檢查並重新平衡磁碟區容量</block>
+  <block id="c271fb4528ce236e85fc9cf102efa8cf" category="paragraph">利用配置分析洞察和建議，利用工作負載工廠為您的 FSx for ONTAP檔案系統實施最佳實務。您可以輕鬆查看架構完善的狀態，了解配置問題，並採取措施改善任何未針對可靠性、安全性、效率、效能和成本進行最佳化的系統架構。</block>
+  <block id="2bab4675fc931e32d65c62820186d2e3" category="inline-link-macro">了解工作負載工廠中的配置分析和良好架構狀態。</block>
+  <block id="827070c9ee124a138455bb1007f526f3" category="paragraph"><block ref="827070c9ee124a138455bb1007f526f3" category="inline-link-macro-rx"></block></block>
+  <block id="61e6079323dfdf994259df13eb1f5bea" category="paragraph">工作負載工廠每日分析Amazon FSx for NetApp ONTAP檔案系統部署設定。每日分析提供架構完善的狀態、見解和建議，以及自動修復配置問題的選項，確保您的檔案系統符合最佳實務。</block>
+  <block id="9fa762c3e56dd52eab735970b481c743" category="paragraph">您可以選擇查看檔案系統設定問題的建議，並從工作負載工廠控制台中的儲存清單中修復問題。</block>
+  <block id="bfebf248126ee0c8c192d7442b03e1a1" category="sidebar">查看 FSx for ONTAP檔案系統的良好架構狀態</block>
 </blocks>
