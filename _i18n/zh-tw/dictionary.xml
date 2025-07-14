@@ -494,8 +494,6 @@
   <block id="0c2c6a9c149348bd95ea113c9e333baa" category="paragraph">或者、選取 * 無限 * 。</block>
   <block id="87684df341e5a7d9f280a7bdf2048a6e" category="section-title">連結的運作方式</block>
   <block id="5abd3a6ae198e27e4c8402463411560f" category="paragraph">連結運用 AWS Lambda 。Lambda 會回應事件執行程式碼、並自動管理該程式碼所需的運算資源。您建立的連結是 NetApp 帳戶的一部分、它們與 AWS 帳戶相關聯。</block>
-  <block id="ff5c41103f48a7b4755ac57734036d05" category="paragraph">建立連結之後、您可以將其與 ONTAP 檔案系統的一個或多個 FSX 建立關聯。每個檔案系統只能與同一個 NetApp 帳戶中的一個連結建立關聯。如果您有多個 NetApp 帳戶、則單一檔案系統可以與不同 NetApp 帳戶下的其他連結建立關聯。</block>
-  <block id="7d6d7edbcee228f35d85531a33a68076" category="inline-link-macro">瞭解如何建立連結</block>
   <block id="66096c22a6220952b7aef731ef78c167" category="section-title">成本</block>
   <block id="0ab8cd7f04804af6d53be93ef7bd5345" category="inline-link-macro">深入瞭解使用 AWS Lambda 的相關成本</block>
   <block id="70f0040e444997fbb4beeeae8bd03d34" category="paragraph"><block ref="70f0040e444997fbb4beeeae8bd03d34" category="inline-link-macro-rx"></block></block>
@@ -663,7 +661,6 @@
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="7aa1575aeeddba65d55707b41584cd4a" category="sidebar">使用Amazon FSX for NetApp ONTAP 解決方案</block>
   <block id="2553f0a003cdfb6c46e0fb29cca1c670" category="sidebar">使用連結</block>
-  <block id="95818c359b553f6f2db093ae431dd5be" category="sidebar">連結總覽</block>
   <block id="e2439a8512b353f75391ba9c346bc84d" category="sidebar">管理磁碟區</block>
   <block id="dc88dce8ec264777b2f90ec0af744f43" category="sidebar">建立Volume</block>
   <block id="8272f5b23e79d0ee33bd5151dcddc454" category="sidebar">建立儲存VM</block>
@@ -914,8 +911,6 @@
   <block id="de401cd5994804b12e8c1734d1ee027c" category="summary">工作負載原廠連結可在工作負載原廠帳戶和 ONTAP 檔案系統的一或多個 FSX 之間建立信任關係和連線。</block>
   <block id="12565ed510f1f762365915b3fa807454" category="doc">瞭解 BlueXP  工作負載工廠連結</block>
   <block id="691199ddecf65c4783496c94612dd07f" category="paragraph">您不需要連結即可開始使用工作負載工廠，但在某些情況下，您需要建立連結來解除鎖定所有工作負載原廠功能和工作負載功能。</block>
-  <block id="c1dad4a74a18053a2db1d6f5da393921" category="paragraph">您可以在工作負載工廠中，從適用於 ONTAP 檔案系統頁面的 FSX 建立連結。<block ref="e9a88ae15a9584972e43294d65e9c8ac" category="inline-link-macro-rx"></block> 以取得詳細資訊。</block>
-  <block id="895a7d895aa3866c9188fcd255af1541" category="paragraph">工作負載工廠需要一個連結來顯示一些資訊並執行一些工作。如果您嘗試執行需要連結的作業、但尚未將連結與 ONTAP 檔案系統的 FSX 關聯、則會看到作業需要連結的訊息。您可以新增連結、或是將適用於 ONTAP 檔案系統的 FSX 與現有連結建立關聯、以便執行作業。</block>
   <block id="20cbf23ff8204cff465470ae4144d936" category="summary">視需要在 BlueXP  工作負載工廠中管理適用於 ONTAP 檔案系統的 FSX 備份排程。</block>
   <block id="53fe87832fd05bf7a8e9f1e1bad4aa86" category="doc">管理適用於 ONTAP 檔案系統的 FSX 備份排程</block>
   <block id="e8333245618d8dbca5436b9e71370d58" category="paragraph">在 BlueXP  工作負載工廠中管理適用於 ONTAP 檔案系統的 FSX 備份排程。</block>
@@ -1117,18 +1112,7 @@
   <block id="e13a5649dfef3a1c76c4be8e463226d7" category="list-text">在工作負載原廠主控台的右上角，選取 * 說明 &gt; 支援 * 。</block>
   <block id="42236277fa3913ec4d1fd1e17b26874c" category="paragraph">所有地區均支援最高每秒 2 Gb 的橫向擴充組態。下列地區支援最高每秒 4 Gb 的最大處理量容量、可進行橫向擴充部署：美國東部（俄亥俄州）地區、美國東部（北維吉尼亞州）地區、美國西部（俄勒岡州）地區和歐洲（愛爾蘭）。</block>
   <block id="f23f9e699754fa9634675e68ddb2477a" category="list-text">對於長期保留複寫關係，只有最後一個快照可供還原。</block>
-  <block id="3566e30d1125b1cc489403b83380b16e" category="list-text">顯示安裝在適用於 ONTAP 檔案系統的 FSX 上的 ONTAP 版本</block>
   <block id="70b71b7616d1607e66f58defc9384bf3" category="list-text">在適用於 ONTAP 檔案系統的 FSX 上管理 iSCSI 磁碟區</block>
-  <block id="dd7d7ae00fef8de94b69aa7b5b540cb1" category="list-text">Volume 的自動擴充功能</block>
-  <block id="3351e8dc51e33708d3280516a366bf4f" category="list-text">建立及管理快照原則</block>
-  <block id="bc405b20c5dce6dc67910950f2591510" category="list-text">複寫關係組態</block>
-  <block id="900f24520b234a239d52bc47e673bdd5" category="list-text">在 ONTAP 檔案系統的 FSX 之間進行 Volume 複寫</block>
-  <block id="2886577fc59b2d9df21dd1d41704de71" category="list-text">備份關係組態</block>
-  <block id="ab8c429c03a3887588677f966f3e8c48" category="list-text">將 Volume 資料備份至雲端儲存設備</block>
-  <block id="0fb8fbbbeb74e2e76be7a39d75ecdcda" category="list-text">在適用於 ONTAP 檔案系統的 FSX 內建立 Volume 複本</block>
-  <block id="981bc65604544a529c511adc06cb441f" category="list-text">直接從 ONTAP 顯示其他指標（ Amazon CloudWatch 會收集預設指標）</block>
-  <block id="310e8bd2aa0fbf766664a8fadbb86083" category="list-text">NFS 匯出原則的管理</block>
-  <block id="9d19d65b5c0b11e65c72a68e686c8efc" category="list-text">管理 CIFS 共用</block>
   <block id="5b4240cc70ef93fd3963a5a4a1489114" category="summary">在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用，包括建立，判斷使用者和群組存取權，以及刪除。</block>
   <block id="ed2b1c265309f7d9a2006128f317479e" category="paragraph">開始之前，請執行下列步驟：</block>
   <block id="0162ca60ba3c63c1058d5815f318b75b" category="section-title">為磁碟區建立 CIFS 共用區</block>
@@ -1711,7 +1695,6 @@
   <block id="45b5dce37159255d07342e3102124571" category="list-text">選取 * 繼續 * 以修正組態問題。</block>
   <block id="20086b220eeb33caf74bd6e628cfcd8c" category="section-title">AWS Secrets Manager 支援</block>
   <block id="ffe2f2a5c6f5c2a7a4d95da829cd5cb4" category="paragraph">BlueXP  工作負載原廠連結可在工作負載原廠帳戶和一或多個適用於 ONTAP 檔案系統的 FSX 之間建立信任關係和連線。這可讓您直接從 Amazon FSX for ONTAP API 無法使用的 ONTAP REST API 呼叫監控及管理特定檔案系統功能。</block>
-  <block id="8f30a77efbeaeec8415337994a976197" category="paragraph">您可以使用儲存在工作負載原廠認證服務中的認證資料，或是儲存在 AWS Secrets Manager 中的認證資料，來建立可靠的連結。工作負載工廠不支援變更驗證模式。</block>
   <block id="eee5751928fa32e80cacc3177eabff02" category="section-title">驗證連結</block>
   <block id="e9efd53f2fa290402dc3f6be4a32cc68" category="paragraph">提供工作負載原廠認證的管理使用者密碼，或是 AWS Secrets Manager 機密 ARN ，將連結連線至 ONTAP 檔案系統的 FSX 。</block>
   <block id="696ea928d9d3c6e9a7783d23ab82a78a" category="admonition">每個連結只支援一種驗證方法。例如，如果您選取連結驗證與 AWS Secrets Manager ，則之後就無法變更驗證方法。</block>
@@ -2020,4 +2003,26 @@
   <block id="61e6079323dfdf994259df13eb1f5bea" category="paragraph">工作負載工廠每日分析Amazon FSx for NetApp ONTAP檔案系統部署設定。每日分析提供架構完善的狀態、見解和建議，以及自動修復配置問題的選項，確保您的檔案系統符合最佳實務。</block>
   <block id="9fa762c3e56dd52eab735970b481c743" category="paragraph">您可以選擇查看檔案系統設定問題的建議，並從工作負載工廠控制台中的儲存清單中修復問題。</block>
   <block id="bfebf248126ee0c8c192d7442b03e1a1" category="sidebar">查看 FSx for ONTAP檔案系統的良好架構狀態</block>
+  <block id="65050310e57f3790fef3c72eb48d33fe" category="section-title">為什麼連結是有益的</block>
+  <block id="4e5ad1c2c7f1e4eb79418c584549c8db" category="paragraph">連結非常有用，因為它們允許工作負載工廠執行Amazon FSx for ONTAP API 原生無法執行的操作。連結支援高階ONTAP功能和自動化，從而增強 FSx for ONTAP檔案系統的管理。</block>
+  <block id="abca8c391b472ef4e80c6577b5d5eb2a" category="paragraph">以下是使用連結的一些好處：</block>
+  <block id="964a29c1cbea0c1c51aa60608d960a3e" category="list-text">此連結使BlueXP能夠將ONTAP指令直接傳送到您的 FSx for ONTAP檔案系統，從而帶來 AWS 原生提供的ONTAP進階功能。</block>
+  <block id="92d3d2d26bd62a6b2959d23585ef12a2" category="list-text">連結利用 AWS Lambda 執行程式碼來回應事件。這種無伺服器方法消除了對 VPC 中運行實例的依賴。</block>
+  <block id="e721a1904dd1a2a54d259deb8d176230" category="paragraph">建立連結後，您可以將其與一個或多個 FSx for ONTAP檔案系統關聯。每個檔案系統只能與同一個 NetApp 帳戶中的一個連結建立關聯。如果您有多個 NetApp 帳戶、則單一檔案系統可以與不同 NetApp 帳戶下的其他連結建立關聯。</block>
+  <block id="f022b18c277e4963edee6e68adbb6444" category="paragraph">您可以在工作負載工廠中建立並關聯來自儲存工作負載的連結。</block>
+  <block id="54e67484027376a69b47aa1c0db7f038" category="paragraph">您可以使用儲存在工作負載工廠憑證服務中的憑證或儲存在 AWS Secrets Manager 中的憑證來驗證連結。工作負載工廠不支援變更驗證模式。</block>
+  <block id="92ed487a00f33b78311d56c6c063ea86" category="paragraph">工作負載工廠需要一個連結來顯示一些資訊並執行一些工作。如果您嘗試執行需要連結的操作，但尚未將連結與 FSx for ONTAP檔案系統關聯，則工作負載工廠會通知您該操作需要連結。</block>
+  <block id="d078fe237d087bff0fe3c19efd14fa54" category="list-text">FSx for ONTAP檔案系統配置的良好架構狀態，可實現主動維護、可靠性和成本效益最佳化</block>
+  <block id="c6501747b7c38b1e25460b13a727ec7c" category="list-text">NetApp自主勒索軟體防護 (ARP/AI)</block>
+  <block id="489e0dc0c162e1aff5f0f664bf2ea756" category="list-text">增強了 FSx for ONTAP檔案系統的整體容量可觀察性</block>
+  <block id="b97b322b8cb0f9b187eb7b966c9ff886" category="list-text">捲和儲存虛擬機器資料複製、管理和監控</block>
+  <block id="147d85abf5db68a53249c95e1a68cedb" category="list-text">SMB/CIFS 共用和 NFS 匯出策略設定和管理</block>
+  <block id="0ff428418a3d64cc69a6ee68906a8959" category="list-text">建立和管理自訂保護 SLA 的快照策略</block>
+  <block id="c92f4938531f7fd55dc831a93892d29a" category="list-text">增強 Inode 管理以實現自動容量管理</block>
+  <block id="3b5c7e283e0b752d51311178d3fa06f1" category="list-text">容量自動成長以實現彈性擴展</block>
+  <block id="6cdde78d80d6fbbd8f3706a9bcac599e" category="list-text">克隆創建和管理，用於即時、就地資料克隆</block>
+  <block id="7cacd07dfdd5c4feadcbf23d19f9972d" category="list-text">直接從ONTAP顯示其他指標，例如ONTAP版本</block>
+  <block id="30f1ae8a88bc842cdf5e493350ae7eb1" category="inline-link-macro">將連結連接到 FSx for ONTAP檔案系統</block>
+  <block id="f86bb6aab3a49998f4db8fa07a49d81a" category="paragraph">瞭解如何<block ref="e658cbfbd30fb261626bc7c82308a713" category="inline-link-macro-rx"></block>。</block>
+  <block id="78f8c00f462b0fbe742eab283e3fdf7a" category="sidebar">了解連結</block>
 </blocks>
