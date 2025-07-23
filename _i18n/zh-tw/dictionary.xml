@@ -2025,4 +2025,14 @@
   <block id="30f1ae8a88bc842cdf5e493350ae7eb1" category="inline-link-macro">將連結連接到 FSx for ONTAP檔案系統</block>
   <block id="f86bb6aab3a49998f4db8fa07a49d81a" category="paragraph">瞭解如何<block ref="e658cbfbd30fb261626bc7c82308a713" category="inline-link-macro-rx"></block>。</block>
   <block id="78f8c00f462b0fbe742eab283e3fdf7a" category="sidebar">了解連結</block>
+  <block id="46d508a0ef715ddbdea8774565e48b6b" category="list-text">*路徑*：使用預設磁碟區名定義路徑或提供內部目錄的共用。</block>
+  <block id="8e2b88358241ef7747b6792d7462b691" category="paragraph">卷名的有效路徑輸入（例如“avocado”）如下：</block>
+  <block id="bc994da55037b4e7c9afafbe70522e6d" category="list-text">/酪梨</block>
+  <block id="432077b55a10afffa0af3d33e07a94e9" category="list-text">/酪梨/文件夾</block>
+  <block id="c0c918e275c7f11d91995b593de46d7d" category="list-text">/酪梨/資料夾/子資料夾</block>
+  <block id="98b5386c92ba145079ee1d23fb004949" category="list-text">/酪梨/檔案名</block>
+  <block id="bc025949e555f7c280c05ab910dfb022" category="paragraph">共享名稱的有效路徑輸入（例如“伺服器”）如下：</block>
+  <block id="5b4d700431157f8e7dcc17b14d365c7f" category="list-text">\\伺服器</block>
+  <block id="6b8258a2b9dce9918a5b42eb1c2de4c6" category="list-text">\\伺服器\項目</block>
+  <block id="710ecb74356fd86fc995d76f7fcb7c5c" category="list-text">\\伺服器\專案\共享資源</block>
 </blocks>
