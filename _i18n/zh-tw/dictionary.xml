@@ -148,10 +148,8 @@
   <block id="b2f3a9c80071ec30919944cb6cd21a42" category="list-text">在「建立連結」頁面上、提供下列項目：</block>
   <block id="89a62ddcc9759060d903ef8b7aee42c3" category="list-text">* 連結名稱 * ：輸入您要用於此連結的名稱。名稱在您的帳戶中必須是唯一的。</block>
   <block id="68d5729d2a63e62a04de68bac212b9ab" category="list-text">* 標記 * ：您也可以選擇新增任何標記來與此連結建立關聯、以便更輕鬆地將資源分類。例如、您可以新增一個標記、將此連結識別為由 FSX 用於 ONTAP 檔案系統。</block>
-  <block id="c54e90f3916f294bec1f9be7d938fba1" category="paragraph">AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔案系統的 FSX 自動擷取。</block>
   <block id="c602cdf8533ce956e9f326890f6d8723" category="list-text">選取 * 繼續 * 以開啟 AWS 管理主控台、然後登入此 ONTAP 檔案系統的 AWS 帳戶。</block>
   <block id="ab44f988398acb833af7b9b2bc6c26b9" category="list-text">在「快速建立堆疊」頁面的「功能」下、選取 * 我瞭解 AWS CloudForgation 可能會建立 IAM 資源 * 。</block>
-  <block id="da0a73063a34bf5fda005c52ba51f931" category="paragraph">您可以從「事件」頁面監控連結建立狀態。這不應超過 5 分鐘。</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
   <block id="19b12f8ea4cd395e2a8c4f8e4dbac642" category="summary">為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免在發生無法預見的災難時遺失資料。</block>
   <block id="ca0c3dd7dca9f636af3209d526098e1e" category="doc">建立複寫關係</block>
@@ -761,7 +759,6 @@
   <block id="1ffab80b063e5f05f25ab6681156237d" category="paragraph">如果您要連線至自我管理的 AD 、請使用 AD 中的群組名稱。預設群組為<block ref="746c2ea920930b61350130daa63e23e5" prefix=" " category="inline-code"></block>。</block>
   <block id="758ce486f132a2978be7ecfbcd518afa" category="list-text">您應該考慮要使用哪個連結建立選項。</block>
   <block id="6903e2b3a86228f4d258e423fb6b913a" category="open-title">自動建立</block>
-  <block id="6a97c44fefe95ac9ca6fe05e50d1729f" category="paragraph">此時會出現重新導向至 CloudForgation 對話方塊、並說明如何從 AWS CloudForgation 服務建立連結。</block>
   <block id="a85b3f8e5456d47e8056e0372aeccb2a" category="open-title">手動建立</block>
   <block id="26e6f4cc71039ce95ddbb0acdad6891d" category="section-title">2024 年 9 月 29 日</block>
   <block id="50fa5062b83d0f575448ba449245fa17" category="list-text">iSCSI 傳輸協定僅適用於 FlexVol 磁碟區。^1^</block>
@@ -1281,7 +1278,6 @@
   <block id="fd8693cf8f6802fd1c7d50d5742a4c71" category="section-title">Tracker 中的 CloudShell 事件</block>
   <block id="e7a6197673267c30b5dc86e0d5f6c536" category="paragraph">現在您可以在 Tracker 中追蹤 CloudShell 事件。</block>
   <block id="cf5df8345ca5f203e0f805460b558155" category="list-text">單一可用性區域（單一 AZ ）部署：監控硬體故障並在發生故障時自動更換基礎架構元件，藉此提供可用度。在可用性區域內自動複寫資料、以保護資料免於元件故障、進而達到高耐用度。</block>
-  <block id="65122529e27ab1e34a08fc55d0f38a93" category="list-text">自動：透過工作負載工廠建立自動登錄的連結。自動建立的連結需要工作負載工廠自動化的權杖， CloudForgation 程式碼也很短。最多只能使用六小時。</block>
   <block id="99f375ee1d56d1983309c071fe9cb69a" category="paragraph">目標檔案系統中的複寫磁碟區為資料保護（ DP ）磁碟區，並遵循命名格式：<block ref="4b5beb37da0fa6444b7f9f92238aadb1" prefix=" " category="inline-code"></block>。</block>
   <block id="df4c98f43132ebd68d92a0c9822984df" category="list-text">在「複寫資料」頁面的「複寫目標」下，提供下列項目：</block>
   <block id="0cbe076a4ce5208b10cdb81c9e175006" category="list-text">* 選擇現有的原則 * ：從下拉式功能表中選取現有的原則。</block>
@@ -1622,27 +1618,21 @@
   <block id="824994853534784eb4495b892e13b1c6" category="paragraph">如果您所提供的使用者不是 fsxadmin 使用者，稍後您需要重設 fsxadmin 密碼，您就可以從 AWS 主控台執行此動作。</block>
   <block id="dd34b811cd079417f985f8f56a4f1dca" category="list-text">* 儲存 VM 認證 * ：選用。輸入您的使用者名稱。密碼可以是此檔案系統的特定密碼，也可以使用輸入的相同密碼來取得 ONTAP 認證。您可以立即或稍後設定密碼。</block>
   <block id="37b002845528ac0296b86d28bb71e5a5" category="doc">使用 Lambda 連結連線至適用於 ONTAP 檔案系統的 FSX</block>
-  <block id="2a1f44a051d664b0361d859768b12826" category="paragraph">若要執行進階 ONTAP 管理作業，您必須在工作負載原廠帳戶和一或多個適用於 ONTAP 檔案系統的 FSX 之間建立連線。建立連線包括建立新的和現有的 Lambda 連結，以及驗證連結。連結關聯可讓您直接從適用於 ONTAP 檔案系統的 FSX 監控及管理某些功能，這些功能無法透過 AWS FSX for ONTAP API 取得。</block>
-  <block id="c51de18a298cdd25fa9e70493aefa7f4" category="paragraph">定義 ONTAP 檔案系統的 FSX 時、您可以在帳戶中建立連結。該連結將用於該檔案系統、其他的 FSX 可用於 ONTAP 檔案系統。您也可以稍後建立檔案系統的連結。</block>
-  <block id="e313a3c9bf44cc5cfaada2f84c946a94" category="paragraph">連結需要驗證。您可以使用儲存在工作負載原廠認證服務中的認證資料，或是儲存在 AWS Secrets Manager 中的認證資料，來建立可靠的連結。每個連結只支援一種驗證方法。例如，如果您選取連結驗證與 AWS Secrets Manager ，則之後就無法變更驗證方法。</block>
   <block id="3909315ab3cc8353eec0cd02ce0845da" category="admonition">使用 Connector 時不支援 AWS Secrets Manager 。</block>
   <block id="2c1b9e7969c6e96f38bd871fc9f26ae1" category="section-title">建立新連結的關聯</block>
   <block id="05a2e668e80fd3ace12e9585ebc06578" category="paragraph">建立新連結的關聯包括連結建立和關聯。</block>
   <block id="695199449ad50832d8cff3be92e812b3" category="inline-link-macro">在工作負載工廠新增認證</block>
   <block id="2f1cd483ab7b6144b733f5155b2026c6" category="list-text">在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以建立連結，然後選取 * 建立連結 * 。</block>
   <block id="29abae1dabc3d83e30cbe456ae214256" category="list-text">* AWS Secrets Manager* ：選用。允許工作負載工廠從 AWS Secrets Manager 擷取適用於 ONTAP 存取認證的 FSX 。</block>
-  <block id="13ecd4f9bb62f6c0730c8f136a58fb36" category="paragraph">連結部署堆疊會將下列預設密碼管理程式 ARN regex 新增至 Lambda 權限原則<block ref="218d5bbe44642244cc57db37477be310" prefix=" " category="inline-code"></block>：。</block>
   <block id="de786693aed7955f1cb538f51e25f7d6" category="paragraph">您可以根據預設權限建立機密，或為連結原則指派自訂權限。</block>
   <block id="49af4dcead2678507453b9bff6c332f1" category="paragraph">* 將 VPC 私有端點設定為 AWS Secrets Manager* 預設為停用。選取此選項會使用 VPC 私有端點儲存機密，而非儲存在本機。</block>
   <block id="c3b24be1571207cf6200f2d8b54ee7c0" category="paragraph">成功建立堆疊後、將 Lambda ARN 貼到文字方塊中。</block>
-  <block id="91744aea42b1e1eb3b5b0f486498fe3c" category="paragraph">您建立的連結會與適用於 ONTAP 檔案系統的 FSX 相關聯。您可以執行進階 ONTAP 作業。</block>
   <block id="48457d7f94975228307244f863f96fee" category="section-title">將現有連結與適用於 ONTAP 檔案系統的 FSX 建立關聯</block>
   <block id="531d680092609d3ec7794cd6dd8c39fe" category="paragraph">建立連結之後，請將其與 ONTAP 檔案系統的一或多個 FSX 建立關聯。</block>
   <block id="447f36846a239be6be0faf7dc1fa0364" category="list-text">在「建立關聯」連結頁面中，選取 * 建立現有連結的關聯 * ，選取連結，然後選取 * 繼續 * 。</block>
   <block id="5b5b11575f2a0c06c832b5cbd1c6dcfe" category="list-text">選取驗證模式。</block>
   <block id="219e99148dae7112d47eedc1f49517ae" category="list-text">Workload Factory ：輸入密碼兩次。</block>
   <block id="b9000423f3d632810a4d8c3550eb4119" category="list-text">AWS Secrets Manager ：輸入機密 ARN 。</block>
-  <block id="0481a079b29497027474b2f22074dd5a" category="paragraph">秘密 ARN 必須包含下列金鑰有效配對：</block>
   <block id="91a73bc4f293d9fc4712c2770316ae08" category="list-text">filesystemID = fsx_filesystem_id</block>
   <block id="db1e2f706f83d7a3a9a03793db05422a" category="list-text">密碼 = user_password</block>
   <block id="3179fc8078925ef0503270fd907af44c" category="paragraph">此連結與適用於 ONTAP 檔案系統的 FSX 相關聯。您可以執行進階 ONTAP 作業。</block>
@@ -2035,4 +2025,17 @@
   <block id="5b4d700431157f8e7dcc17b14d365c7f" category="list-text">\\伺服器</block>
   <block id="6b8258a2b9dce9918a5b42eb1c2de4c6" category="list-text">\\伺服器\項目</block>
   <block id="710ecb74356fd86fc995d76f7fcb7c5c" category="list-text">\\伺服器\專案\共享資源</block>
+  <block id="3195be56175905f73d7a96220c8058ac" category="paragraph">若要執行進階ONTAP管理操作，請在工作負載工廠帳戶和一個或多個 FSx for ONTAP檔案系統之間建立連線。這涉及關聯新的和現有的 Lambda 鏈接，並對鏈接進行驗證。透過連結關聯，您可以直接從 FSx for ONTAP檔案系統監控和管理某些無法透過Amazon FSx for ONTAP API 取得的功能。</block>
+  <block id="272d4b49948c30687aaaffecca19cb82" category="paragraph">您可以在定義 FSx for ONTAP檔案系統時在您的帳戶中建立連結。此連結用於該檔案系統，也可以用於其他 FSx for ONTAP檔案系統。您也可以稍後關聯檔案系統的連結。</block>
+  <block id="e76c38630b92f6e32b58c439a30d6e3a" category="paragraph">連結需要驗證。您可以使用儲存在工作負載工廠憑證服務中的憑證或儲存在 AWS Secrets Manager 中的憑證來驗證連結。每個連結僅支援一種身份驗證方法。例如，如果您選擇使用 AWS Secrets Manager 進行連結驗證，則以後無法變更身份驗證方法。</block>
+  <block id="20f231352191b3538a4951e663663903" category="list-text">自動：透過工作負載工廠建立自動註冊的連結。這需要用於工作負載工廠自動化的令牌，並且 CloudFormation 程式碼的生命週期很短，最多可使用六個小時。</block>
+  <block id="049f730a98eb69627912748561a543b8" category="paragraph">連結部署堆疊會自動將以下預設金鑰管理器 ARN 正規表示式新增至 Lambda 權限策略：<block ref="218d5bbe44642244cc57db37477be310" prefix=" " category="inline-code"></block> 。</block>
+  <block id="2f50ceaec248a408742379493bc7731b" category="paragraph">工作負載工廠根據 FSx for ONTAP檔案系統自動擷取 AWS 帳戶、位置和安全群組。</block>
+  <block id="bab25954c067653929b889d687bcb718" category="paragraph">出現「重新導向到 CloudFormation」對話方塊並解釋如何從 AWS CloudFormation 服務建立連結。</block>
+  <block id="a37cbff3921a52bcde5c7689c912e1f4" category="paragraph">您可以在事件頁面上監控連結建立狀態。這應該不會超過 5 分鐘。</block>
+  <block id="305994fbfd694e4b407718361492a83c" category="paragraph">工作負載工廠將連結與 FSx for ONTAP檔案系統關聯。您可以執行進階ONTAP操作。</block>
+  <block id="9a5abe8b855a4f42f1c70c4b367d9bce" category="paragraph">確保密鑰 ARN 包含下列密鑰有效對，儘管 _filesystemID_ 是可選的。</block>
+  <block id="1023373ba9dff02b999882804d6dc2ef" category="list-text">檔案系統ID = FSx_filesystem_id（可選）</block>
+  <block id="508e0beab9fc0c907eb4adcaa7a736f7" category="list-text">使用者 = FSx_user</block>
+  <block id="0dcf8b4e3476c0545950d4d61acb625c" category="admonition">使用 AWS Secrets Manager 進行身份驗證需要一個用戶，可以是您提供的 _FSx_user_，也可以是在 FSx for ONTAP檔案系統上建立的其他用戶。預設用戶是<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block>如果您不提供使用者。</block>
 </blocks>

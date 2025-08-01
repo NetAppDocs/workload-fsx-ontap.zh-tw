@@ -11,16 +11,16 @@ summary: 您可以建立及管理連結，以在 BlueXP  工作負載工廠帳�
 
 
 [role="lead"]
-若要執行進階 ONTAP 管理作業，您必須在工作負載原廠帳戶和一或多個適用於 ONTAP 檔案系統的 FSX 之間建立連線。建立連線包括建立新的和現有的 Lambda 連結，以及驗證連結。連結關聯可讓您直接從適用於 ONTAP 檔案系統的 FSX 監控及管理某些功能，這些功能無法透過 AWS FSX for ONTAP API 取得。
+若要執行進階ONTAP管理操作，請在工作負載工廠帳戶和一個或多個 FSx for ONTAP檔案系統之間建立連線。這涉及關聯新的和現有的 Lambda 鏈接，並對鏈接進行驗證。透過連結關聯，您可以直接從 FSx for ONTAP檔案系統監控和管理某些無法透過Amazon FSx for ONTAP API 取得的功能。
 
 link:links-overview.html["深入瞭解連結"]。
 
 .關於這項工作
 連結利用 AWS Lambda 執行程式碼來回應事件、並自動管理該程式碼所需的運算資源。您建立的連結是 NetApp 帳戶的一部分、它們與 AWS 帳戶相關聯。
 
-定義 ONTAP 檔案系統的 FSX 時、您可以在帳戶中建立連結。該連結將用於該檔案系統、其他的 FSX 可用於 ONTAP 檔案系統。您也可以稍後建立檔案系統的連結。
+您可以在定義 FSx for ONTAP檔案系統時在您的帳戶中建立連結。此連結用於該檔案系統，也可以用於其他 FSx for ONTAP檔案系統。您也可以稍後關聯檔案系統的連結。
 
-連結需要驗證。您可以使用儲存在工作負載原廠認證服務中的認證資料，或是儲存在 AWS Secrets Manager 中的認證資料，來建立可靠的連結。每個連結只支援一種驗證方法。例如，如果您選取連結驗證與 AWS Secrets Manager ，則之後就無法變更驗證方法。
+連結需要驗證。您可以使用儲存在工作負載工廠憑證服務中的憑證或儲存在 AWS Secrets Manager 中的憑證來驗證連結。每個連結僅支援一種身份驗證方法。例如，如果您選擇使用 AWS Secrets Manager 進行連結驗證，則以後無法變更身份驗證方法。
 
 
 NOTE: 使用 Connector 時不支援 AWS Secrets Manager 。
@@ -33,7 +33,7 @@ NOTE: 使用 Connector 時不支援 AWS Secrets Manager 。
 
 在此工作流程中，您有兩個建立連結的選項 - 自動或手動。您必須在 AWS 帳戶中啟動 AWS CloudForgation 堆疊、才能建立連結。
 
-* 自動：透過工作負載工廠建立自動登錄的連結。自動建立的連結需要工作負載工廠自動化的權杖， CloudForgation 程式碼也很短。最多只能使用六小時。
+* 自動：透過工作負載工廠建立自動註冊的連結。這需要用於工作負載工廠自動化的令牌，並且 CloudFormation 程式碼的生命週期很短，最多可使用六個小時。
 * 手動：建立具有手動登錄的連結。CloudForgation 程式碼持續提供您更多時間來完成作業。這在與安全和 DevOps 等不同團隊合作時很有用，因為他們可能需要先授予完成連結建立所需的權限。
 
 
@@ -102,7 +102,7 @@ NOTE: 使用 Connector 時不支援 AWS Secrets Manager 。
 .. * 連結名稱 * ：輸入您要用於此連結的名稱。名稱在您的帳戶中必須是唯一的。
 .. * AWS Secrets Manager* ：選用。允許工作負載工廠從 AWS Secrets Manager 擷取適用於 ONTAP 存取認證的 FSX 。
 +
-連結部署堆疊會將下列預設密碼管理程式 ARN regex 新增至 Lambda 權限原則 `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`：。
+連結部署堆疊會自動將以下預設金鑰管理器 ARN 正規表示式新增至 Lambda 權限策略： `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*` 。
 
 +
 您可以根據預設權限建立機密，或為連結原則指派自訂權限。
@@ -131,13 +131,13 @@ NOTE: 使用 Connector 時不支援 AWS Secrets Manager 。
 
 .. * 標記 * ：您也可以選擇新增任何標記來與此連結建立關聯、以便更輕鬆地將資源分類。例如、您可以新增一個標記、將此連結識別為由 FSX 用於 ONTAP 檔案系統。
 +
-AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔案系統的 FSX 自動擷取。
+工作負載工廠根據 FSx for ONTAP檔案系統自動擷取 AWS 帳戶、位置和安全群組。
 
 
 
 . 選擇* Create *（建立*）。
 +
-此時會出現重新導向至 CloudForgation 對話方塊、並說明如何從 AWS CloudForgation 服務建立連結。
+出現「重新導向到 CloudFormation」對話方塊並解釋如何從 AWS CloudFormation 服務建立連結。
 
 . 選取 * 繼續 * 以開啟 AWS 管理主控台、然後登入此 ONTAP 檔案系統的 AWS 帳戶。
 . 在「快速建立堆疊」頁面的「功能」下、選取 * 我瞭解 AWS CloudForgation 可能會建立 IAM 資源 * 。
@@ -153,7 +153,7 @@ AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔
 ----
 . 選取 * 建立堆疊 * ，然後選取 * 繼續 * 。
 +
-您可以從「事件」頁面監控連結建立狀態。這不應超過 5 分鐘。
+您可以在事件頁面上監控連結建立狀態。這應該不會超過 5 分鐘。
 
 . 返回工作負載原廠介面，您會看到連結與 ONTAP 檔案系統的 FSX 相關聯。
 
@@ -173,7 +173,7 @@ AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔
 .. * 連結名稱 * ：輸入您要用於此連結的名稱。名稱在您的帳戶中必須是唯一的。
 .. * AWS Secrets Manager* ：選用。允許工作負載工廠從 AWS Secrets Manager 擷取適用於 ONTAP 存取認證的 FSX 。
 +
-連結部署堆疊會將下列預設密碼管理程式 ARN regex 新增至 Lambda 權限原則 `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*`：。
+連結部署堆疊會自動將以下預設金鑰管理器 ARN 正規表示式新增至 Lambda 權限策略： `arn:aws:secretsmanager:<link_deployment_region>:<link_deployment_account_id>:secret:FSxSecret*` 。
 
 +
 您可以根據預設權限建立機密，或為連結原則指派自訂權限。
@@ -215,12 +215,12 @@ AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔
 +
 成功建立堆疊後、將 Lambda ARN 貼到文字方塊中。
 
-.. AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔案系統的 FSX 自動擷取。
+.. 工作負載工廠根據 FSx for ONTAP檔案系統自動擷取 AWS 帳戶、位置和安全群組。
 
 
 . 選擇* Create *（建立*）。
 +
-您可以從「事件」頁面監控連結建立狀態。這不應超過 5 分鐘。
+您可以在事件頁面上監控連結建立狀態。這應該不會超過 5 分鐘。
 
 . 返回工作負載原廠介面，您會看到連結與 ONTAP 檔案系統的 FSX 相關聯。
 
@@ -228,7 +228,7 @@ AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔
 --
 ====
 .結果
-您建立的連結會與適用於 ONTAP 檔案系統的 FSX 相關聯。您可以執行進階 ONTAP 作業。
+工作負載工廠將連結與 FSx for ONTAP檔案系統關聯。您可以執行進階ONTAP操作。
 
 
 
@@ -246,12 +246,16 @@ AWS 帳戶和帳戶、位置和安全性群組的其他資訊會根據 ONTAP 檔
 ** Workload Factory ：輸入密碼兩次。
 ** AWS Secrets Manager ：輸入機密 ARN 。
 +
-秘密 ARN 必須包含下列金鑰有效配對：
+確保密鑰 ARN 包含下列密鑰有效對，儘管 _filesystemID_ 是可選的。
 
 +
-*** filesystemID = fsx_filesystem_id
-*** 使用者名稱 = FSx_user
+*** 檔案系統ID = FSx_filesystem_id（可選）
+*** 使用者 = FSx_user
 *** 密碼 = user_password
++
+
+NOTE: 使用 AWS Secrets Manager 進行身份驗證需要一個用戶，可以是您提供的 _FSx_user_，也可以是在 FSx for ONTAP檔案系統上建立的其他用戶。預設用戶是 `fsxadmin`如果您不提供使用者。
+
 
 
 
