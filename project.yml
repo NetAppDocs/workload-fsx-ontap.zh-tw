@@ -109,7 +109,7 @@ sidebar:
         url: "/update-storage-efficiency.html"
       - title: 管理NFS匯出原則
         url: "/manage-nfs-export-policy.html"
-      - title: 管理CIFS共用區
+      - title: 管理 SMB/CIFS 共享
         url: "/manage-cifs-share.html"
       - title: 分割複製的 Volume
         url: "/split-cloned-volume.html"

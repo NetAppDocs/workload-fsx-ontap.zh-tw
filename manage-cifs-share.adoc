@@ -1,30 +1,30 @@
 ---
 sidebar: sidebar 
 permalink: manage-cifs-share.html 
-keywords: cifs, CIFS, cifs share, change cifs share, update cifs share, modify cifs share 
-summary: 在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用，包括建立，判斷使用者和群組存取權，以及刪除。 
+keywords: cifs, smb, SMB/CIFS, cifs share, change, update, modify, delete, create 
+summary: 在工作負載工廠中管理磁碟區的 SMB/CIFS 共用包括建立、確定使用者和群組存取以及刪除。 
 ---
-= 在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用
+= 管理工作負載工廠中磁碟區的 SMB/CIFS 共用
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用包括建立 CIFS 共用，決定授予存取權的使用者和群組，以及授予存取權的權限等級，以及刪除 CIFS 共用。
+在工作負載工廠中管理磁碟區的 SMB/CIFS 共用包括建立 SMB/CIFS 共用、確定要授予存取權限的使用者和群組以及授予他們的權限等級以及刪除 SMB/CIFS 共用。
 
 .開始之前
 開始之前，請執行下列步驟：
 
-* 要管理 CIFS 共享，您必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
+* 要管理 SMB/CIFS 共享，您必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"] 。連結關聯後，返回此操作。
 * 決定要授予存取權的使用者或群組，以及授予他們的權限等級。
 
 
 
 
-== 為磁碟區建立 CIFS 共用區
+== 為磁碟區建立 SMB/CIFS 共用
 
-請依照步驟為磁碟區建立 CIFS 共用。
+依照步驟為磁碟區建立 SMB/CIFS 共用。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
@@ -32,25 +32,39 @@ summary: 在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用，包�
 . 在 *FSX for ONTAP * 標籤中，選取要更新磁碟區之檔案系統的三點功能表，然後選取 * 管理 * 。
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
 . 從 Volumes （磁碟區）索引標籤中，選取要變更 SMB 共用的磁碟區三點功能表。
-. 選擇 * 進階動作 * ，然後 * 管理 CIFS 共用 * 。
-. 在「管理 CIFS 共用」頁面上，選取 * 建立 CIFS 共用 * 。
-. 在「建立 CIFS 共用」對話方塊中，提供下列項目：
+. 選擇*進階操作*，然後選擇*管理 SMB/CIFS 共用*。
+. 在管理 SMB/CIFS 共用頁面上，選擇*建立 SMB/CIFS 共用*。
+. 在建立 SMB/CIFS 共用對話方塊中，提供以下內容：
 +
-.. * 名稱 * ：輸入 CIFS 共用的名稱。
+.. *名稱*：輸入 SMB/CIFS 共享的名稱。
+.. *路徑*：使用預設磁碟區名定義路徑或提供內部目錄的共用。
++
+卷名的有效路徑輸入（例如“avocado”）如下：
+
++
+*** /酪梨
+*** /酪梨/文件夾
+*** /酪梨/資料夾/子資料夾
+*** /酪梨/檔案名
++
+共享名稱的有效路徑輸入（例如“伺服器”）如下：
+
+*** \\伺服器
+*** \\伺服器\項目
+*** \\伺服器\專案\共享資源
+
+
 .. * 權限 * ：選取 [ 完全控制 ] ， [ 讀取 / 寫入 ] ， [ 讀取 ] 或 [ 無存取權 ] ，然後輸入以分號（ ; ）分隔的使用者或群組。使用者或群組區分大小寫，使用者的網域必須使用「網域 \ 使用者名稱」格式。
 
 
 . 選擇* Create *（建立*）。
 
 
-.結果
-磁碟區的 CIFS 共用即會建立。
 
 
+== 更改磁碟區的 SMB/CIFS 共享
 
-== 變更磁碟區的 CIFS 共用
-
-請依照步驟變更磁碟區的 CIFS 共用設定。
+依照步驟變更磁碟區的 SMB/CIFS 共用設定。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
@@ -58,23 +72,20 @@ summary: 在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用，包�
 . 在 *FSX for ONTAP * 標籤中，選取要更新磁碟區之檔案系統的三點功能表，然後選取 * 管理 * 。
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
 . 從 Volumes （磁碟區）索引標籤中，選取要變更 SMB 共用的磁碟區三點功能表。
-. 選擇 * 進階動作 * ，然後 * 管理 CIFS 共用 * 。
-. 在「管理 CIFS 共用」頁面上，將游標移至 CIFS 共用區，然後選取鉛筆圖示進行變更。
-. 變更 CIFS 存取權限，或是要授予權限的使用者或群組。
+. 選擇*進階操作*，然後選擇*管理 SMB/CIFS 共用*。
+. 在管理 SMB/CIFS 共用頁面上，選擇*檢視和編輯*。
+. 變更 SMB/CIFS 存取權限，或變更要授予權限的使用者或群組。
 +
-變更可能會導致目前使用者或群組失去對 CIFS 共用的存取權。
+變更可能會導致目前使用者或群組失去對 SMB/CIFS 共享的存取權。
 
 . 選取 * 套用 * 以儲存變更。
 
 
-.結果
-磁碟區的 CIFS 共用已更新。
 
 
+== 刪除磁碟區的 SMB/CIFS 共用
 
-== 刪除磁碟區的 CIFS 共用
-
-請依照步驟刪除磁碟區的 CIFS 共用。
+依照步驟刪除磁碟區的 SMB/CIFS 共用。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
@@ -82,13 +93,10 @@ summary: 在 BlueXP  工作負載工廠中管理磁碟區的 CIFS 共用，包�
 . 在 *FSX for ONTAP * 標籤中，選取要更新磁碟區之檔案系統的三點功能表，然後選取 * 管理 * 。
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
 . 從 Volumes （磁碟區）索引標籤中，選取要變更 SMB 共用的磁碟區三點功能表。
-. 選擇 * 進階動作 * ，然後 * 管理 CIFS 共用 * 。
-. 在「管理 CIFS 共用」頁面上，將游標移至 CIFS 共用上，然後選取垃圾桶圖示加以刪除。
+. 選擇*進階操作*，然後選擇*管理 SMB/CIFS 共用*。
+. 在管理 SMB/CIFS 共享頁面上，選擇 SMB/CIFS 共享的三點選單，然後選擇*刪除*。
 +
-刪除 CIFS 共用會讓任何想要掛載的使用者無法使用或無法存取。
+刪除 SMB/CIFS 共用將使任何想要掛載它的使用者都無法使用它並且無法存取它。
 
-. 選擇 * 刪除 * 以確認刪除。
+. 在刪除 SMB/CIFS 共用對話方塊中，選擇*刪除*確認刪除。
 
-
-.結果
-磁碟區的 CIFS 共用即會刪除。

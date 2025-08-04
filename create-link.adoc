@@ -34,7 +34,7 @@ NOTE: 使用 Connector 時不支援 AWS Secrets Manager 。
 在此工作流程中，您有兩個建立連結的選項 - 自動或手動。您必須在 AWS 帳戶中啟動 AWS CloudForgation 堆疊、才能建立連結。
 
 * 自動：透過工作負載工廠建立自動註冊的連結。這需要用於工作負載工廠自動化的令牌，並且 CloudFormation 程式碼的生命週期很短，最多可使用六個小時。
-* 手動：建立具有手動登錄的連結。CloudForgation 程式碼持續提供您更多時間來完成作業。這在與安全和 DevOps 等不同團隊合作時很有用，因為他們可能需要先授予完成連結建立所需的權限。
+* 手動：使用 Codebox 中的 CloudFormation 或 Terraform 建立帶有手動註冊的連結。程式碼持續存在，為您提供更多時間來完成操作。這在與安全性和 DevOps 等不同的團隊合作時很有用，因為他們可能首先需要授予完成連結建立所需的權限。
 
 
 .開始之前
@@ -161,14 +161,14 @@ NOTE: 使用 Connector 時不支援 AWS Secrets Manager 。
 --
 .手動建立
 --
-使用此選項、您可以從 AWS CloudForgation 擷取連結的 ARN 、並在此處報告。工作負載工廠會手動為您登錄連結。
+您可以使用 Codebox 中的兩個基礎架構即程式碼 (IaC) 工具建立連結：CloudFormation 或 Terraform。使用此選項，您可以從 AWS CloudFormation 中提取連結的 ARN 並在此處報告。工作負載工廠手動為您註冊連結。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
 . 在 *FSX for ONTAP * 標籤中，選取檔案系統的三點功能表以建立連結，然後選取 * 建立連結 * 。
 . 在關聯連結對話方塊中、選取 * 建立新連結 * 、然後選取 * 繼續 * 。
-. 在「建立連結」頁面上、提供下列項目：
+. 在建立連結頁面上，從 Codebox 中選擇 CloudFormation 或 Terraform，然後提供以下內容：
 +
 .. * 連結名稱 * ：輸入您要用於此連結的名稱。名稱在您的帳戶中必須是唯一的。
 .. * AWS Secrets Manager* ：選用。允許工作負載工廠從 AWS Secrets Manager 擷取適用於 ONTAP 存取認證的 FSX 。
@@ -201,7 +201,7 @@ NOTE: 使用 Connector 時不支援 AWS Secrets Manager 。
 
 
 .. * 標記 * ：您也可以選擇新增任何標記來與此連結建立關聯、以便更輕鬆地將資源分類。例如、您可以新增一個標記、將此連結識別為由 FSX 用於 ONTAP 檔案系統。
-.. *連結註冊*：選擇下拉箭頭以展開有關如何從 AWS CloudFormation 服務或使用 Terraform 註冊連結的說明。請依照指示進行。
+.. *連結註冊*：選擇CloudFormation或Terraform以取得如何註冊連結的說明，並依照指示進行操作。
 +
 請注意、當您啟動 CloudForgation 範本時、 Lambda 會獲得三個權限。工作負載工廠在使用連結時會使用這些權限。
 
