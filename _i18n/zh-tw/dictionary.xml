@@ -1630,7 +1630,6 @@
   <block id="69ed1cf6539793c15a93584373cddf2a" category="inline-link-macro">使用 Amazon FSX for NetApp ONTAP 啟用多重傳輸協定工作負載</block>
   <block id="5b9f6dc6990c28e364a2622ffeadc327" category="list-text">* 安全樣式 * ：對於雙協議卷，請選擇 UNIX 或 NTFS 安全樣式。UNIX 是雙協定磁碟區的預設安全樣式。有關此上下文中用戶映射的詳細指導，請參閱 AWS 博客文章<block ref="2c1778bd252c045607257b2888dcb7e7" category="inline-link-macro-rx"></block>。</block>
   <block id="49441c63fc169d06940470ec9c0e4b1f" category="paragraph">當內部部署 ONTAP 叢集是複寫關係的目標時，不支援變更快照以進行長期保留。</block>
-  <block id="820e39a5de0a231b1bdee7ce11de7c77" category="summary">資料庫的 BlueXP  工作負載工廠會掃描 Microsoft SQL Server 組態，提供深入分析和建議，協助您達到卓越營運績效。</block>
   <block id="cf6372133f01401bdd9aefc7bead4b10" category="doc">實作架構良好的檔案系統組態</block>
   <block id="681f8e0d48f8a5609d29d038dfdb7354" category="list-text">分析內容</block>
   <block id="ee519805bc36a437f398c40154b9f4f0" category="list-text">工作負載工廠會針對適用於 ONTAP 檔案系統的 FSX ，分析下列組態的架構良好狀態：</block>
@@ -2115,4 +2114,5 @@
   <block id="eaba2a7eb36250fc59ebf37ea423ebd5" category="paragraph">當懷疑受到攻擊時，系統會在該時間點拍攝卷快照並鎖定該副本。如果稍後確認攻擊，則可以使用 ARP/AI 快照還原受影響的檔案或整個磁碟區。</block>
   <block id="613abd0d9da6f7ee37d283174e11fcaf" category="section-title">2025年8月3日</block>
   <block id="1595965c84afe577a4228c0f8a132a00" category="sidebar">管理 SMB/CIFS 共享</block>
+  <block id="b8bfbf72dc92e989a0b91cd409144076" category="summary">工作負載工廠掃描Amazon FSx for NetApp ONTAP配置，提供見解和建議，協助您實現卓越營運。</block>
 </blocks>

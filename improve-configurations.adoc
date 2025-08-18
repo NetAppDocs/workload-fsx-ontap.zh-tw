@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: improve-configurations.html 
 keywords: implement best practices, well-architected file system, Amazon FSx for NetApp ONTAP, FSx for ONTAP 
-summary: 資料庫的 BlueXP  工作負載工廠會掃描 Microsoft SQL Server 組態，提供深入分析和建議，協助您達到卓越營運績效。 
+summary: 工作負載工廠掃描Amazon FSx for NetApp ONTAP配置，提供見解和建議，協助您實現卓越營運。 
 ---
 = 實作架構良好的檔案系統組態
 :allow-uri-read: 
