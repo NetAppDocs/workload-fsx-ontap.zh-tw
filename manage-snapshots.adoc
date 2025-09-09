@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: manage-snapshots.html 
+keywords: snapshot, snapshots, manage snapshots, edit snapshots, access snapshots, delete snapshots, remove snapshots 
+summary: 編輯快照設定、啟用目錄存取和刪除快照以管理工作負載工廠中的快照和資料保護。 
+---
+= 管理 FSx for ONTAP磁碟區的快照
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+編輯快照設定、啟用目錄存取和刪除快照以管理工作負載工廠中的快照和資料保護。
+
+
+
+== 編輯快照
+
+編輯快照的名稱、標籤和保留期。如果快照尚未變為不可變的，您可以使快照變為不可變的。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在 * 儲存 * 中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 *FSX for ONTAP （用於卷的 FSX ） * 選項卡中，選擇包含卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。
+. 在檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 從「*Volumes*」標籤中，選擇要編輯快照的磁碟區的三點選單。
+. 選擇*資料保護操作*，然後選擇*管理快照*。
+. 在管理快照頁面中，選擇要編輯的快照的三點選單，然後選擇*編輯*。
+. 在編輯快照對話方塊中，您可以編輯以下內容：
++
+.. 更改名稱。
+.. 更改標籤。
+.. 更改保留期。
+.. 可選：*使此快照不可變*，以防止快照在保留期內被刪除。
++
+如果快照已經不可變，則無法編輯此設定。
+
++
+接受關於不可變快照的聲明。
+
+
+
+. 選擇*應用*。
+
+
+
+
+== 存取快照
+
+啟用快照目錄訪問，讓使用者能夠自主存取快照。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在 * 儲存 * 中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 *FSX for ONTAP （用於卷的 FSX ） * 選項卡中，選擇包含卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。
+. 在檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 從「*Volumes*」標籤中，選擇要存取快照的磁碟區的三點選單。
+. 選擇*資料保護操作*，然後選擇*管理快照*。
+. 在管理快照頁面中，選擇要存取的快照的三點選單，然後選擇*存取*。
+. 在存取快照對話方塊中，選擇*啟用快照目錄存取*以存取此磁碟區快照和該磁碟區的所有快照。
++
+** 對於 NFS 磁碟區：選擇 *NFS 存取路徑* 以查看快照的 NFS 路徑。
+** 對於 SMB/CIFS 磁碟區：選擇 *SMB 存取路徑* 以查看快照的 SMB 路徑。
+
+
+. 複製存取路徑。
+. 選擇*應用*。
+
+
+
+
+== 從快照恢復數據
+
+您可以選擇將資料從快照還原到現有磁碟區或新磁碟區。
+
+link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_snapshot-mgmt/restore-volume-from-snapshot.html["從快照還原磁碟區"]
+
+
+
+== 刪除快照
+
+刪除快照以釋放空間。
+
+不可變快照在保留期結束前不能被刪除。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在 * 儲存 * 中、選取 * 移至儲存設備詳細目錄 * 。
+. 在 *FSX for ONTAP （用於卷的 FSX ） * 選項卡中，選擇包含卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。
+. 在檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 從「*Volumes*」標籤中，選擇要刪除快照的磁碟區的三點選單。
+. 選擇*資料保護操作*，然後選擇*管理快照*。
+. 在管理快照頁面中，選擇要刪除的快照的三點選單，然後選擇*刪除*。
+. 在刪除快照對話方塊中，輸入「delete」。
+. 選擇*刪除*確認刪除。
+
+
+.相關資訊
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-snapshot.html["建立快照"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-snapshot-policy.html["建立快照原則"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapshot.html["從快照還原磁碟區"]
+

@@ -197,13 +197,8 @@
   <block id="c9f265881e56f4c52918525bdcb9205d" category="list-text">* 名稱 * ：輸入儲存 VM 的名稱。</block>
   <block id="42a49281a2c075c2004f1e73852b27e3" category="list-text">* 儲存 VM 認證 * ：提供此儲存 VM 使用者的密碼<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 、或使用檔案系統的<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 使用者認證。</block>
   <block id="34cc44a6e06f592c6033a57f8671a67a" category="list-text">* 根磁碟區安全樣式 * ：根據存取資料的用戶端類型、選取根磁碟區安全樣式： UNIX （ Linux 用戶端）、 NTFS （ Windows 用戶端）或混合。</block>
-  <block id="1bc82fa8aedf24369834db8950935e12" category="doc">從快照為 ONTAP Volume 建立新的 FSX</block>
-  <block id="94bf5ecde85890bdfbccd00fad3fbd70" category="paragraph">快照是一次擷取 ONTAP Volume 的 FSX 唯讀映像。從快照建立新磁碟區、可在數秒內建立整個磁碟區的複本、而不受磁碟區大小的影響。新建立的複本代表新的 Volume 。</block>
   <block id="dd92a94c350d15b3e750c8345c72be14" category="paragraph">從快照建立磁碟區之前、請先考慮下列限制：</block>
   <block id="aa598f48818753dcf8598b6294e34d5b" category="list-text">權限模型的變更：如果您使用此作業來切換網路附加儲存（ NAS ）傳輸協定類型、也可能會切換安全性樣式所提供的權限模型。您可能會遇到檔案存取權限問題、您只能使用 NAS 用戶端工具進行權限設定、以管理員存取的方式手動修正。</block>
-  <block id="0d9c537067f7d4fbde0af7c35b682638" category="list-text">增加磁碟區使用量：從快照建立磁碟區後、您會有兩個不同的磁碟區、而且這兩個磁碟區都會從主機檔案系統消耗容量。</block>
-  <block id="749bb7d7b85b238efdd51a2af6612da7" category="list-text">選取 * 資料保護動作 * 、 * 快照 * 、然後 * 從快照 * 建立磁碟區。</block>
-  <block id="7703989c08fa05b728e233f271b4650e" category="list-text">在 Create volume from a snapshot （從快照創建卷）對話框中，輸入快照名稱。</block>
   <block id="25b72c08a4a289e6b89fc38db06792a9" category="doc">為 ONTAP Volume 建立 FSX</block>
   <block id="8a1e5168feb60a6391f96310159dca9a" category="list-text">NFS ：適用於 Unix 作業系統的檔案儲存傳輸協定</block>
   <block id="ec38854bd667a882fa1d0b62579b5079" category="list-text">iSCSI ：區塊儲存傳輸協定</block>
@@ -399,15 +394,11 @@
   <block id="bb6d5d351525342dd6b3cf4d15b6f298" category="list-text">* 結案案例 * ：提供結案原因的詳細資料、並選取 * 結案案例 * 。</block>
   <block id="e93217b2f709a398ce3c0fb753beb05f" category="inline-image-macro">螢幕擷取畫面、顯示您在表格最後一欄選取功能表後可以採取的動作。</block>
   <block id="6f7cf78e14aa346236a87d9541221fb2" category="paragraph"><block ref="6f7cf78e14aa346236a87d9541221fb2" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0a2f587a53fd97b6d49adac14c5ef1b6" category="summary">當使用的 SSD 儲存容量超過您指定的臨界值時、手動增加 ONTAP 檔案系統的 FSX SSD 儲存容量。</block>
   <block id="d1c1f85063b5f4742efda82442c2ddff" category="doc">增加檔案系統容量</block>
   <block id="7db52e1b6d399a07ae2a24a19f03a6ad" category="inline-link-macro">啟用自動容量管理功能</block>
-  <block id="bdccdc17ac819f178e84be61503a0de2" category="paragraph">增加檔案系統容量會影響適用於 ONTAP 檔案系統的 FSX 的 IOPS 。</block>
   <block id="11df76043d9d8bb3a76f1f7e71096a92" category="inline-link-macro">配置 IOPS</block>
   <block id="ffc888e5ff626bf410d67b62a9e8a9a8" category="paragraph">如需 SSD 儲存容量限制、請參閱 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> AWS FSX for NetApp ONTAP 文件。</block>
   <block id="3fa4dafc00a14f08641efa3389891289" category="inline-link-macro">停用自動容量管理</block>
-  <block id="e58acd1760f609c958f436e6f19a798d" category="paragraph">若要增加檔案系統的容量、您必須先 <block ref="8c3635bc720b3de661de28059e4ae780" category="inline-link-macro-rx"></block>。</block>
-  <block id="3f43f703da21affaf8c9fe7bb0026712" category="list-text">在 SSD 儲存容量對話方塊中、輸入 * 已配置容量 * 的數字。</block>
   <block id="bb38e8f0462bc33d127ff7d217a31149" category="list-text">選取已配置容量的單位。</block>
   <block id="ceadc0f7d6f2330af477eb47568a259b" category="doc">增加 Volume 容量</block>
   <block id="eacbf9150c5d9c7a7032185805a236b8" category="inline-link-macro">啟用自動擴充功能</block>
@@ -550,11 +541,7 @@
   <block id="c5cce99928ce0d8af5b82b7d22ea310e" category="list-text">* 恢復的 Volume 名稱 * ：輸入還原的 Volume 名稱。</block>
   <block id="67b0d8b6788b457b2c8385033f28756f" category="summary">當磁碟區包含刪除或毀損的檔案時、從快照中還原適用於 ONTAP Volume 的 FSX 。</block>
   <block id="c90683522eadafc05ec442d8c440363f" category="doc">從快照還原磁碟區</block>
-  <block id="028c5ca154a90ad525b01ec66b26fa3f" category="paragraph">此作業會將資料從快照還原至新的磁碟區。</block>
   <block id="71fa8628af6f2038af0eab0c8ca9c4cf" category="paragraph">只有當您擁有磁碟區的現有快照複本時、才能從快照還原磁碟區。</block>
-  <block id="4905114f3925ed2863baa2d94439902b" category="paragraph">請確定您有足夠的容量來完成此作業。</block>
-  <block id="3d7743d27e7346a7094199a8317979a9" category="list-text">選取 * 資料保護動作 * 、 * 快照 * 、然後 * 從快照還原磁碟區 * 。</block>
-  <block id="cd311f58436ee68a7677fa7444318b66" category="list-text">在「從快照還原磁碟區」對話方塊的「 * 快照名稱 * 」欄位中、從下拉式功能表中選取要還原的快照。</block>
   <block id="dfb1565e1ec2734dcbcb24e6b43c9919" category="list-text">在 * 還原的 Volume 名稱 * 欄位中、輸入要還原的磁碟區唯一名稱。</block>
   <block id="4f1846b15b8a356a7b4e9cd679e14ad1" category="summary">反轉複寫關係、使目標磁碟區成為來源磁碟區。</block>
   <block id="11d688dbb6757a0fe68e53ad308bce54" category="doc">反轉複寫關係</block>
@@ -663,10 +650,7 @@
   <block id="e5787a3a7b79c3cdbeb01e163f0a84de" category="sidebar">管理快照</block>
   <block id="af9c364e0933200b7b8c1e7e13947ccf" category="sidebar">建立快照</block>
   <block id="e807ebdf213353b8a415f991a2cade81" category="sidebar">建立快照原則</block>
-  <block id="ea8c9a66e2636ce9b98d1a110a02791e" category="sidebar">從快照建立新的磁碟區</block>
-  <block id="cb230ad17b1cab1fba2436fdf9a4222a" category="sidebar">管理備份至物件儲存設備</block>
   <block id="c650dc131eb6eb56a3ed637559a17a3f" category="sidebar">建立手動備份</block>
-  <block id="3baac809cc5d7dd36919afed53778b41" category="sidebar">管理複寫</block>
   <block id="5eb43e1edd4f0757c83c6d6f6632ff94" category="sidebar">管理與監控</block>
   <block id="8cf9dbe17cb44a10f0622b63961c131d" category="sidebar">Volume管理</block>
   <block id="56994f1db86bfe709cbe47f96bde566f" category="sidebar">編輯 Volume 自動擴充</block>
@@ -682,7 +666,6 @@
   <block id="ef045d17e80274aec5be009d1f13f5a2" category="sidebar">為檔案系統配置 IOPS</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">參考資料</block>
   <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">疑難排解</block>
-  <block id="b39f472a8f42e6a145c20b290f2c0f7b" category="paragraph">當您自動 <block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block> 使用檔案系統時、每增加 1 GiB 的 SSD 容量、 IOPS 就會增加 3 IOPS 。</block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">瞭解如何使用 Codebox 進行自動化</block>
   <block id="672d0efbe9223ef23c5fd7d2c7cd4a95" category="paragraph">您可以使用 _Quick creity_ 或 _Advanced creity_ 、為 ONTAP 檔案系統建立 FSX 。您也可以使用 Codebox 中的下列工具： REST API 、 CloudForformation 和 Terraform 。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>。</block>
   <block id="11e2fb5025fdb2cb91fd04c343163328" category="admonition">從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 和<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 密碼。執行程式碼時、您需要重新輸入密碼。</block>
@@ -828,9 +811,6 @@
   <block id="4da97157b6693eaf9968b187d7b8259c" category="paragraph">為適用於 ONTAP 檔案系統的 FSX 建立儲存 VM （ SVM ），以便在 BlueXP  工作負載工廠中，為您的工作負載，以虛擬方式存取儲存和資料服務。</block>
   <block id="54f16768a20bbfb09d736f2fa0a731aa" category="paragraph">儲存 VM 是隔離的檔案伺服器，您可以使用它來存取工作負載原廠儲存設備中每個工作負載的資料。每個 SVM 都有自己的管理認證和端點、用於管理和存取資料。</block>
   <block id="08e2fd9fd4dc9adfe3d5f817b3499842" category="paragraph">您可以從工作負載原廠主控台建立儲存 VM 。您也可以使用 Codebox 中的下列工具： REST API 、 CloudForformation 和 Terraform 。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>。</block>
-  <block id="55a23b72fe4aee5e2f0024c790d7eaba" category="paragraph">從 BlueXP  工作負載工廠的快照建立適用於 ONTAP Volume 的全新 FSX ，以啟用時間點還原。</block>
-  <block id="8d34a33f34659b0ea11833ac0b8fac52" category="list-text">在 *FSX for ONTAP * 標籤中，選取含有 Volume Snapshot 的檔案系統三點功能表，然後選取 * 管理 * 。</block>
-  <block id="3ce528a1818baf0bbf2f6b362b1f7d58" category="list-text">在 Volumes （磁碟區）索引標籤中，選取含有您要建立磁碟區之快照的磁碟區的三點功能表。</block>
   <block id="96a5899d90dd9b81319f168f67bcb5ae" category="summary">若要在 BlueXP  工作負載工廠中刪除檔案系統，您必須先刪除與檔案系統相關的任何磁碟區，儲存 VM 或複寫關係。</block>
   <block id="378213b58b31bfb9d173e8b2ad3c0968" category="doc">在 BlueXP  工作負載工廠中刪除檔案系統</block>
   <block id="a3101c3638d17143df93e5cfcc3c3a0a" category="list-text">在 *FSX for （用於 ONTAP ） * 標籤中，選擇要刪除的 ONTAP 文件系統的 FSX 的三點菜單。</block>
@@ -869,10 +849,7 @@
   <block id="b136689ec8046bd4fb76df787393258d" category="list-text">在 _ 自動化 _ 模式中，您可以直接從工作負載工廠部署適用於 ONTAP 檔案系統的 FSX 。您也可以從 Codebox 視窗複製內容、並使用其中一種 Codebox 方法來部署系統。</block>
   <block id="42342e81c625fd1c1141771fe2b6b202" category="summary">NetApp 以多種方式支援工作負載工廠及其雲端服務。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和社群論壇。您的支援註冊包括透過網路票證提供遠端技術支援。</block>
   <block id="cf0e6c8d239f09812e12102f2415bb94" category="doc">取得 ONTAP for Workload Factory 的 FSX 說明</block>
-  <block id="4788b71d4c5e86a9696627d3c900127a" category="doc">增加 BlueXP  工作負載工廠的檔案系統容量</block>
   <block id="9d5344a986b0470d38d0c3e88e507b26" category="paragraph">或者，您也可以<block ref="2bbbc5acd5fd256837600f63916b0e57" category="inline-link-macro-rx"></block>讓工作負載在工廠為您管理檔案系統容量。</block>
-  <block id="1eacd22d13fd6fa8174d7a166e0e9e6b" category="list-text">在 * 適用於 ONTAP * 的 FSX 標籤中，選取檔案系統的三點功能表以增加容量。</block>
-  <block id="b809bcb34d202de3370d7e6db448a949" category="list-text">在「資訊」下，選取 * 容量分配 * 旁邊的鉛筆圖示。當滑鼠移動到 * 容量分配 * 列上時、下拉式箭頭旁會出現鉛筆圖示。</block>
   <block id="56878af0f0856af0f2eb7d58b284ec98" category="summary">隨時手動增加 BlueXP  工作負載工廠中的 Volume 容量。</block>
   <block id="9a043b713e882184d11ad1a7919816bc" category="doc">增加 BlueXP  工作負載工廠的 Volume 容量</block>
   <block id="9aebf119a4043534b3bad38302a5a426" category="paragraph">在 BlueXP  工作負載工廠中，隨時手動增加 Volume 容量。</block>
@@ -964,8 +941,6 @@
   <block id="a961210a0ba733961532745ff6f57f44" category="paragraph">在 BlueXP  工作負載工廠中，您可以將磁碟區從備份還原至 AWS 帳戶中任何適用於 ONTAP 檔案系統的 FSX 。</block>
   <block id="81d97c35dd4fb198942dc29738189b53" category="list-text">從 * Volumes （磁碟區） * 標籤中，選取要從備份還原之磁碟區的三點功能表。</block>
   <block id="f77361b272ce81d8275727f7b1a756a8" category="list-text">選擇*還原*。</block>
-  <block id="c044800449646a715ebe323cce453c98" category="doc">從 BlueXP  工作負載工廠的快照還原磁碟區</block>
-  <block id="52f33bacfd6c28493dc1bdae553bb3cd" category="paragraph">在 BlueXP  工作負載工廠中，當磁碟區包含已刪除或毀損的檔案時，您可以從快照中還原適用於 ONTAP Volume 的 FSX 。</block>
   <block id="e17e241599862dc1177ef32c2eeba1d6" category="list-text">從 *Volumes （卷） * 選項卡中，選擇要從快照恢復的卷的三點菜單。</block>
   <block id="ce4e51fb870a92120876371d3bddc3aa" category="doc">反轉 BlueXP  工作負載工廠的複寫關係</block>
   <block id="b3c4745e4516364034e0070ca832f670" category="paragraph">反轉 BlueXP  工作負載工廠中的複寫關係，使目標 Volume 成為來源 Volume 。</block>
@@ -1259,9 +1234,6 @@
   <block id="78c187892204fa9a888a00a5635447c9" category="list-text">選用：啟用不可變快照。</block>
   <block id="bac08643512e190f9a6a6c2a8e9b983b" category="list-text">選取 * 啟用不可變快照 * ，以防止在保留期間刪除在此原則中拍攝的快照。</block>
   <block id="4e41f89501d754d5c6885a51e74ac5f0" category="list-text">將 * 保留期間 * 設定為小時數，天數，月數或年數。</block>
-  <block id="58defc647621cf2147bca50eba3d13f5" category="summary">在 BlueXP  工作負載工廠中為儲存 VM 建立自訂快照原則。</block>
-  <block id="2a07132290664925d6acf392c1b389ba" category="doc">在 BlueXP  工作負載工廠中為儲存 VM 建立快照原則</block>
-  <block id="2f8e07938edc25be83cf584fa9baa96b" category="paragraph">在 BlueXP  工作負載工廠中為儲存 VM 建立自訂快照原則。Snapshot 原則定義系統如何為儲存 VM 建立快照。您可以在適用於 ONTAP 檔案系統的 FSX 中，為儲存 VM 建立快照原則。您也可以在多個儲存 VM 之間共用原則。</block>
   <block id="cf6066b0e9e3a71171e38923cf6da6f9" category="list-text">在檔案系統總覽中，選取 * 儲存 VMS* 標籤。</block>
   <block id="f74e735c048e3c0f84c80e2fade1fb56" category="list-text">從 * 儲存 VMS* 索引標籤中，選取要使用排程快照保護的磁碟區的三點功能表，然後選取 * 進階動作 * ，再選取 * 管理快照原則 * 。</block>
   <block id="c92307c84c3661374297e6b2cb6a8af4" category="list-text">在「 Snapshot 原則管理」頁面上，選取 * 建立快照原則 * 。</block>
@@ -1271,16 +1243,10 @@
   <block id="c4f08518809bffff8a2b5046db374241" category="list-text">選用：針對您需要的任何排程啟用 * 可匯入的快照 * ，為每個排程設定 * 保留期間 * ，並接受該聲明以繼續。</block>
   <block id="fbe63591e4efcbefdcee988dc8bc46ae" category="paragraph">啟用不可變快照會鎖定此快照原則中的所有快照，以防止在保留期間刪除快照。</block>
   <block id="67e792ffec4a29b646fa11aff1d8c441" category="list-text">* 跨儲存 VM 共用 * ：預設為啟用。啟用時，快照原則會在檔案系統中的所有儲存 VM 之間共用。停用以建立單一儲存 VM 的快照原則。</block>
-  <block id="bcdd10c1cff7243af519e9d8eec8dbd8" category="paragraph">快照原則即會建立。</block>
   <block id="c30e0acb90fa2137d90a80462f560839" category="list-text">在 *FSX for ONTAP * 標籤中，選取包含要建立快照之磁碟區的檔案系統三點功能表，然後選取 * 管理 * 。</block>
   <block id="fefc3b8b375d96e8bf83d73c262aab57" category="list-text">從 *Volumes （卷） * 選項卡中，選擇要使用快照保護的卷的三點菜單。</block>
-  <block id="f01fa636d7ab2112e7dd3793a4da0345" category="list-text">選擇 * 資料保護動作 * ， * 快照 * ，然後 * 建立快照 * 。</block>
-  <block id="84c4fbf0889e2d552cef58742fbb6561" category="list-text">在 Create a snapshot （創建快照）對話框中，在 *Snapshot name* （快照名稱 * ）字段中輸入快照名稱。</block>
-  <block id="6ed24439c49aa780b53884f3cee8e455" category="list-text">選用：將快照設為不可變的，以防止在保留期間刪除快照。</block>
-  <block id="497a3a6d6896389f61471114110cc7fe" category="list-text">啟用 * 可匯入的快照 * 。</block>
   <block id="be418a0bf2ad3249acf7833b04db3bd5" category="list-text">將 * 保留期間 * 設定為小時，天，月或年數。</block>
   <block id="6612ee3812a7ecc1b61dc6f585b1c26f" category="list-text">接受關於不可變快照的聲明。</block>
-  <block id="a07e25b28678b53fe808a082369fda80" category="paragraph">磁碟區有快照複本。</block>
   <block id="86ee35c0029c920dce9ef56d88935e8e" category="paragraph">您的磁碟區可能會使用下列通訊協定：</block>
   <block id="8feb9be2f7d30e723f1c8aa899250dae" category="list-text">* 區塊存取 * ：允許執行關鍵業務應用程式的主機使用 iSCSI 傳輸協定存取磁碟區。區塊存取僅在檔案系統橫向擴充部署具有六個或更少 HA 配對時可用。</block>
   <block id="f122287653386d74229199bd670f4990" category="list-text">保留期間有兩種設定： _ 保留原則 _ 和 _ 保留期間 _ 。_ 保留原則 _ 定義在不可變 WORM 狀態下保留檔案的時間長度。您可以指定自己的保留原則，或使用預設保留原則（未指定），即 30 年。最小和最大保留期間 _ 定義鎖定檔案所允許的時間範圍。</block>
@@ -2115,4 +2081,94 @@
   <block id="613abd0d9da6f7ee37d283174e11fcaf" category="section-title">2025年8月3日</block>
   <block id="1595965c84afe577a4228c0f8a132a00" category="sidebar">管理 SMB/CIFS 共享</block>
   <block id="b8bfbf72dc92e989a0b91cd409144076" category="summary">工作負載工廠掃描Amazon FSx for NetApp ONTAP配置，提供見解和建議，協助您實現卓越營運。</block>
+  <block id="d1e5e17e5a4cb355117a41318746c4a4" category="doc">儲存庫存報表增強功能</block>
+  <block id="b749705b43261f48fe8b1309cb366d90" category="paragraph">工作負載工廠增強了針對 FSx for ONTAP檔案系統所報告的資料。  FSx for ONTAP庫存頁面的可下載報表包括以下新欄位：</block>
+  <block id="c61468edc77ab93ea17568f678793bdd" category="list-text">SSD已使用：顯示已使用SSD容量的值</block>
+  <block id="a1a4ea0fabd62225adb4786dd703d1a7" category="list-text">SSD 使用率：顯示 SSD 容量的使用百分比</block>
+  <block id="c016cb9916988a0ea698d070fd6b702a" category="list-text">吞吐量利用率：顯示過去 30 天的平均和峰值利用率</block>
+  <block id="197af635c10bcbf35ba56184f54cb088" category="list-text">IO 利用率：顯示過去 30 天的平均和峰值 IO 利用率</block>
+  <block id="92bce71ffaebc031ec78d565e6ad7032" category="list-text">CPU 使用率：顯示過去 30 天的平均和峰值 CPU 使用率</block>
+  <block id="95851c89a4d869fdb94916625564bb6c" category="section-title">快照管理增強功能</block>
+  <block id="fbb3322fb25c1109310e7be3bcc20fd5" category="paragraph">工作負載工廠對查看卷快照詳細資訊和管理卷快照做出了多項增強。這些增強功能使您更容易了解快照的狀態並保護您的資料。</block>
+  <block id="3ecb130f0ffe2d8e485cb11c629b90b5" category="inline-image-macro">螢幕截圖顯示了 FSx for ONTAP磁碟區選單的基本操作，然後查看磁碟區詳細資料。</block>
+  <block id="d26eb7e0d00b2e5069d790d2b9be49ba" category="paragraph"><block ref="d26eb7e0d00b2e5069d790d2b9be49ba" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cb34ab44253ae9c736786f23dc173879" category="paragraph">在「保護」標籤下的「磁碟區詳細資料」中顯示其他項目：</block>
+  <block id="6d4b26be686dd37e202e23010a22bf04" category="list-text">快照策略名稱</block>
+  <block id="a81cec6ec43470b1419a033e0457112d" category="list-text">快照空間預留</block>
+  <block id="c04d4554f0391d80036dceaa0e930ee2" category="list-text">快照空間預留容量</block>
+  <block id="06fd2134099fd30808caa961b2bc9b21" category="inline-image-macro">螢幕截圖顯示了 FSx for ONTAP磁碟區的詳細信息，其中「保護」標籤處於開啟狀態。</block>
+  <block id="b52491919b24cba6fd1efad7447c7798" category="paragraph"><block ref="b52491919b24cba6fd1efad7447c7798" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e987130d3b26cda391ff2f1e5149f444" category="paragraph">可以從磁碟區存取新的快照管理畫面；它提供有關磁碟區的快照策略的信息，並包含包含所有磁碟區快照的資料表。此表顯示以下快照詳細資訊：建立時間、大小、到期時間、不可變快照保護和標籤。從管理畫面，您可以變更磁碟區的快照策略，手動建立快照以及編輯、存取、還原和刪除快照。</block>
+  <block id="ad8f55b88a50703984e58a23e36e9026" category="inline-image-macro">顯示管理快照畫面的螢幕截圖。</block>
+  <block id="404a59509c6a806310ecbd1d601e0ee6" category="paragraph"><block ref="404a59509c6a806310ecbd1d601e0ee6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="52574bdc9ce79e7e568096fa39264d72" category="section-title">SSD 儲存容量可減少</block>
+  <block id="0cc6e64eaa35165d8791def1903c483a" category="paragraph">工作負載工廠支援減少第一代和第二代檔案系統的固態硬碟 (SSD) 容量。利用彈性檔案系統容量，您可以動態調整檔案系統的容量以滿足工作負載的需求。</block>
+  <block id="298ae1d1e13ebe1f0f22936b7ea9ce33" category="inline-link-macro">調整檔案系統容量</block>
+  <block id="6b4be3b501bf6ae8984293c02d4d610b" category="paragraph"><block ref="6b4be3b501bf6ae8984293c02d4d610b" category="inline-link-macro-rx"></block></block>
+  <block id="14fc4cc175abaf53d8e3d6a080ba96e8" category="summary">為工作負載工廠中的儲存虛擬機器建立自訂快照策略。</block>
+  <block id="12b776fb2d015f7638890feb17b66bf6" category="doc">為工作負載工廠中的儲存虛擬機器建立快照策略</block>
+  <block id="2908297e977ab153ee0bec5fba041d6f" category="paragraph">為工作負載工廠中的儲存虛擬機器建立自訂快照策略，以管理快照的建立和保留。快照策略定義了系統如何為儲存虛擬機器建立快照。您可以為 FSx for ONTAP檔案系統中的儲存虛擬機器建立快照原則。您也可以在多個儲存虛擬機器之間共用該策略。</block>
+  <block id="1528c852e43be2a99e8719b76138fb44" category="list-text">選擇*資料保護操作*，然後選擇*管理快照*。</block>
+  <block id="f4a331106cfb59d634afb478ec8cfccb" category="list-text">在管理快照頁面中，選擇*建立快照*。</block>
+  <block id="75aba4f0296caf05917e327be4ed5543" category="list-text">在建立快照對話方塊中，執行下列操作：</block>
+  <block id="0322f0a521f84e22afd1df9ed7f765db" category="list-text">在「*快照名稱*」欄位中輸​​入快照名稱。</block>
+  <block id="4c01998cfbe91538bc592922c3e8734f" category="list-text">或者，選擇一個標籤或建立一個新標籤。</block>
+  <block id="923a0a2b244437dc531c8a64263b0020" category="list-text">可選：*使此快照不可變*，以防止快照在保留期內被刪除。</block>
+  <block id="f7485ffd44c64cac23a73493d66e3cf4" category="summary">手動調整 FSx for ONTAP檔案系統的 SSD 儲存容量，以滿足具有不同活動工作集的基於專案的工作負載的需求。</block>
+  <block id="f091318898763a58ec22bd1c8c205e0b" category="doc">在工作負載工廠中調整檔案系統容量</block>
+  <block id="36ce9e23b4485aac42f272cf012cfd85" category="paragraph">手動調整 FSx for ONTAP檔案系統的固態硬碟 (SSD) 儲存容量，以滿足具有不同活動工作集的基於專案的工作負載的需求。</block>
+  <block id="383573d373c886b1029b549fd3ab5636" category="paragraph">當使用的 SSD 儲存容量超過您指定的閾值時，增加 FSx for ONTAP檔案系統的 SSD 儲存容量，或在工作集不活動時減少 SSD 儲存容量，以提高成本效率。</block>
+  <block id="3c600356591a28f18cc21513190e4cb5" category="paragraph">利用彈性檔案系統容量，您可以動態調整檔案系統的容量以滿足工作負載的需求。</block>
+  <block id="33f1d74921ddc533e52016f4d1a89af9" category="paragraph">調整檔案系統容量會影響 FSx for ONTAP檔案系統的 IOPS。</block>
+  <block id="fa86270fd952d04b42ae4b5586eabdef" category="paragraph">當你自動<block ref="a9cec068297d5b243eecd658574a7cef" category="inline-link-macro-rx"></block>對於檔案系統，SSD 容量每增加或減少 1 GiB，IOPS 就會增加或減少 3 IOPS。</block>
+  <block id="7c4988a80f96ebde3a91c80963bb725d" category="paragraph">要調整檔案系統的容量，必須先<block ref="8c3635bc720b3de661de28059e4ae780" category="inline-link-macro-rx"></block>。</block>
+  <block id="c58a7814e09e2136ba19c01a85ca87cb" category="list-text">從儀表板中選擇*調整 SSD 容量*。</block>
+  <block id="22bc230291a62283fe347ecaef11e64d" category="list-text">選擇您要調整容量的檔案系統，然後選擇*繼續*。</block>
+  <block id="c68dcfd2e9aa85bd2ccb1ef7efb36856" category="paragraph">*潛在節省*是減少容量的建議。</block>
+  <block id="ab60333415618ec9fe15bd79adf222ee" category="list-text">在調整 SSD 容量對話框中，輸入 *預先配置容量* 的數字。</block>
+  <block id="a7c0ac9b435ae713a713a271638a992c" category="summary">編輯快照設定、啟用目錄存取和刪除快照以管理工作負載工廠中的快照和資料保護。</block>
+  <block id="3893740c49122217b62d6529f246ffc7" category="doc">管理 FSx for ONTAP磁碟區的快照</block>
+  <block id="57e53df8f66509e4ecdabdca5294937b" category="section-title">編輯快照</block>
+  <block id="5c5cf4cdf8dd88c1f0fa6aea2ecac35e" category="paragraph">編輯快照的名稱、標籤和保留期。如果快照尚未變為不可變的，您可以使快照變為不可變的。</block>
+  <block id="c0f24431ed90baa037117b26a5a22d22" category="list-text">從「*Volumes*」標籤中，選擇要編輯快照的磁碟區的三點選單。</block>
+  <block id="a8221bf4844208248f5cb74e74c739fd" category="list-text">在管理快照頁面中，選擇要編輯的快照的三點選單，然後選擇*編輯*。</block>
+  <block id="bea584725867b5b5e974a646929f56b4" category="list-text">在編輯快照對話方塊中，您可以編輯以下內容：</block>
+  <block id="22d1cb21d295d88b771f81456e349920" category="list-text">更改名稱。</block>
+  <block id="3cdc796d3f8c10c8504e7f62ac85a560" category="list-text">更改標籤。</block>
+  <block id="c51b9f8bfc3d25cb60ce2f85fa473dab" category="list-text">更改保留期。</block>
+  <block id="a461891ce745b6e53163499dd6a76301" category="paragraph">如果快照已經不可變，則無法編輯此設定。</block>
+  <block id="56581c15d8f7e3ec52e678e2807f1810" category="section-title">存取快照</block>
+  <block id="1733a9f5d8e959e38355a0dbe35d5065" category="paragraph">啟用快照目錄訪問，讓使用者能夠自主存取快照。</block>
+  <block id="85e036beddd0153b2b24fc252c5930af" category="list-text">從「*Volumes*」標籤中，選擇要存取快照的磁碟區的三點選單。</block>
+  <block id="5221d99ac8e89eb52e64918972f35b5a" category="list-text">在管理快照頁面中，選擇要存取的快照的三點選單，然後選擇*存取*。</block>
+  <block id="07c4a8c1c625be343c227870575c8d87" category="list-text">在存取快照對話方塊中，選擇*啟用快照目錄存取*以存取此磁碟區快照和該磁碟區的所有快照。</block>
+  <block id="b222a1837d5e9867712802dd2a235a98" category="list-text">對於 NFS 磁碟區：選擇 *NFS 存取路徑* 以查看快照的 NFS 路徑。</block>
+  <block id="3dae4cd8dcc7270203f2f8ea0d079815" category="list-text">對於 SMB/CIFS 磁碟區：選擇 *SMB 存取路徑* 以查看快照的 SMB 路徑。</block>
+  <block id="8695344671e89445641e5521e94e092a" category="list-text">複製存取路徑。</block>
+  <block id="f4b128dfa4315b7560d911b08c3653c2" category="section-title">從快照恢復數據</block>
+  <block id="05f173e81abaca211df63916cfac7a74" category="paragraph">您可以選擇將資料從快照還原到現有磁碟區或新磁碟區。</block>
+  <block id="6520c3672c5d01c2976ef1980c6c4f4b" category="paragraph"><block ref="6520c3672c5d01c2976ef1980c6c4f4b" category="inline-link-macro-rx"></block></block>
+  <block id="efb44cfe1d5b8d9954ea045385675c66" category="section-title">刪除快照</block>
+  <block id="6dbf69edbee88e5a8078a8a4e008a3b8" category="paragraph">刪除快照以釋放空間。</block>
+  <block id="65231a1c4b836cdc3226241028b6f5c1" category="paragraph">不可變快照在保留期結束前不能被刪除。</block>
+  <block id="ea6e0fbfc66a50ad275a34ced4baee30" category="list-text">從「*Volumes*」標籤中，選擇要刪除快照的磁碟區的三點選單。</block>
+  <block id="18c5c678d2db682d1c0c828b0712359a" category="list-text">在管理快照頁面中，選擇要刪除的快照的三點選單，然後選擇*刪除*。</block>
+  <block id="89e6716d68072489564767a766ad91b4" category="list-text">在刪除快照對話方塊中，輸入「delete」。</block>
+  <block id="6b7a52834d577f2e4ac4d587036728f4" category="list-text">選擇*刪除*確認刪除。</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="list-title">相關資訊</block>
+  <block id="6d2771dfb9453c665603cef4b0fbb11a" category="list-text"><block ref="6d2771dfb9453c665603cef4b0fbb11a" category="inline-link-macro-rx"></block></block>
+  <block id="83920bb8c8a04a2372e330bd4db6becc" category="list-text"><block ref="83920bb8c8a04a2372e330bd4db6becc" category="inline-link-macro-rx"></block></block>
+  <block id="2e5c50a11ce0216fa9a931d0e31f38fb" category="list-text"><block ref="2e5c50a11ce0216fa9a931d0e31f38fb" category="inline-link-macro-rx"></block></block>
+  <block id="5555c9991f89f798392b8981015a49d6" category="doc">從工作負載工廠中的快照還原卷</block>
+  <block id="fedae93e45eef0cf99ae9d3e2dbff802" category="paragraph">在工作負載工廠中，您可以將資料從快照還原到現有磁碟區或新磁碟區。當磁碟區包含已刪除或損壞的檔案時，還原作業可以實現時間點復原。</block>
+  <block id="d53b53fb3880fbcc2120f4ebdcb4b727" category="paragraph">從快照建立新磁碟區會在幾秒鐘內複製整個磁碟區，與磁碟區大小無關。新建立的副本代表一個新磁碟區。</block>
+  <block id="22509908f6a972a65b5370b282ed646c" category="list-text">增加磁碟區消耗：從快照建立磁碟區後，您將擁有兩個獨立的捲，並且都消耗主機檔案系統的容量。確保您有足夠的容量來完成此操作。</block>
+  <block id="8babf692a891c5060bb678dacf1bb2ad" category="list-text">在管理快照頁面中，選擇要還原的快照的三點選單，然後選擇*還原*。</block>
+  <block id="0c5f6f3cf9344efbd61695ffdf90106f" category="list-text">在從快照還原磁碟區對話方塊中，從下列選項中進行選擇：</block>
+  <block id="63421d2e7769a33701821702ab1b0be8" category="list-text">切換選擇*恢復為新磁碟區*。</block>
+  <block id="2321232f7bb400db057064cec47f4904" category="list-text">將資料從快照還原到現有磁碟區。此操作將永久刪除快照建立時間後修改的任何資料。</block>
+  <block id="b271a75b2d121a8cb5f59ae458394323" category="section-title">2025年9月9日</block>
+  <block id="62486fa65fc31c383ace8989549632ad" category="sidebar">使用快照</block>
+  <block id="b8d3d1ca4d4975c76eec10109e85c77f" category="sidebar">使用備份到物件存儲</block>
+  <block id="fe355a62d144a6a42805c3eb5698310a" category="sidebar">使用複製</block>
 </blocks>

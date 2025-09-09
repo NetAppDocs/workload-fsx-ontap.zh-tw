@@ -1,39 +1,45 @@
 ---
 sidebar: sidebar 
 permalink: increase-file-system-capacity.html 
-keywords: increase capacity, increase file system capacity, increase FSx capacity 
-summary: 當使用的 SSD 儲存容量超過您指定的臨界值時、手動增加 ONTAP 檔案系統的 FSX SSD 儲存容量。 
+keywords: adjust capacity, elastic file system capacity, increase file system capacity, increase FSx capacity, decrease file system capacity, decrease FSx capacity 
+summary: 手動調整 FSx for ONTAP檔案系統的 SSD 儲存容量，以滿足具有不同活動工作集的基於專案的工作負載的需求。 
 ---
-= 增加 BlueXP  工作負載工廠的檔案系統容量
+= 在工作負載工廠中調整檔案系統容量
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-當使用的 SSD 儲存容量超過您指定的臨界值時、手動增加 ONTAP 檔案系統的 FSX SSD 儲存容量。
+手動調整 FSx for ONTAP檔案系統的固態硬碟 (SSD) 儲存容量，以滿足具有不同活動工作集的基於專案的工作負載的需求。
+
+當使用的 SSD 儲存容量超過您指定的閾值時，增加 FSx for ONTAP檔案系統的 SSD 儲存容量，或在工作集不活動時減少 SSD 儲存容量，以提高成本效率。
 
 或者，您也可以link:enable-auto-capacity-management.html["啟用自動容量管理功能"]讓工作負載在工廠為您管理檔案系統容量。
 
 .關於這項工作
-增加檔案系統容量會影響適用於 ONTAP 檔案系統的 FSX 的 IOPS 。
+利用彈性檔案系統容量，您可以動態調整檔案系統的容量以滿足工作負載的需求。
 
-當您自動 link:provision-iops.html["配置 IOPS"] 使用檔案系統時、每增加 1 GiB 的 SSD 容量、 IOPS 就會增加 3 IOPS 。
+調整檔案系統容量會影響 FSx for ONTAP檔案系統的 IOPS。
+
+當你自動link:provision-iops.html["配置 IOPS"]對於檔案系統，SSD 容量每增加或減少 1 GiB，IOPS 就會增加或減少 3 IOPS。
 
 手動時link:provision-iops.html["配置 IOPS"]，您可能需要增加 IOPS 配置，以支援增加的檔案系統容量。
 
 如需 SSD 儲存容量限制、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配額"^] AWS FSX for NetApp ONTAP 文件。
 
 .開始之前
-若要增加檔案系統的容量、您必須先 link:enable-auto-capacity-management.html["停用自動容量管理"]。
+要調整檔案系統的容量，必須先link:enable-auto-capacity-management.html["停用自動容量管理"]。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在 Storage （儲存設備）中、選取 * 前往 Storage inventory* （儲存設備庫存）。
-. 在 * 適用於 ONTAP * 的 FSX 標籤中，選取檔案系統的三點功能表以增加容量。
-. 選擇*管理*。
-. 在「資訊」下，選取 * 容量分配 * 旁邊的鉛筆圖示。當滑鼠移動到 * 容量分配 * 列上時、下拉式箭頭旁會出現鉛筆圖示。
-. 在 SSD 儲存容量對話方塊中、輸入 * 已配置容量 * 的數字。
+. 從儀表板中選擇*調整 SSD 容量*。
+. 選擇您要調整容量的檔案系統，然後選擇*繼續*。
++
+*潛在節省*是減少容量的建議。
+
+. 在調整 SSD 容量對話框中，輸入 *預先配置容量* 的數字。
 . 選取已配置容量的單位。
 . 選擇*應用*。
 

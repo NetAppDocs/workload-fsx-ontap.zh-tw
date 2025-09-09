@@ -53,7 +53,7 @@ sidebar:
       entries:
       - title: 資料保護總覽
         url: "/data-protection-overview.html"
-      - title: 管理快照
+      - title: 使用快照
         entries:
         - title: 建立快照
           url: "/create-snapshot.html"
@@ -61,15 +61,13 @@ sidebar:
           url: "/create-snapshot-policy.html"
         - title: 從快照還原磁碟區
           url: "/restore-volume-from-snapshot.html"
-        - title: 從快照建立新的磁碟區
-          url: "/create-volume-from-snapshot.html"
-      - title: 管理備份至物件儲存設備
+      - title: 使用備份到物件存儲
         entries:
         - title: 建立手動備份
           url: "/create-backup.html"
         - title: 從備份還原磁碟區
           url: "/restore-from-backup.html"
-      - title: 管理複寫
+      - title: 使用複製
         entries:
         - title: 建立複寫關係
           url: "/create-replication.html"
@@ -145,6 +143,8 @@ sidebar:
           url: "/manage-snapshot-policy.html"
         - title: 啟用及編輯快照以進行長期保留
           url: "/enable-snapshots-long-term.html"
+        - title: 管理快照
+          url: "/manage-snapshots.html"
       - title: 備份
         entries:
         - title: 管理 ONTAP 備份排程的 FSX

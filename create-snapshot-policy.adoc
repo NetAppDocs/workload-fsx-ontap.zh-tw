@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: create-snapshot-policy.html 
 keywords: create 
-summary: 在 BlueXP  工作負載工廠中為儲存 VM 建立自訂快照原則。 
+summary: 為工作負載工廠中的儲存虛擬機器建立自訂快照策略。 
 ---
-= 在 BlueXP  工作負載工廠中為儲存 VM 建立快照原則
+= 為工作負載工廠中的儲存虛擬機器建立快照策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在 BlueXP  工作負載工廠中為儲存 VM 建立自訂快照原則。Snapshot 原則定義系統如何為儲存 VM 建立快照。您可以在適用於 ONTAP 檔案系統的 FSX 中，為儲存 VM 建立快照原則。您也可以在多個儲存 VM 之間共用原則。
+為工作負載工廠中的儲存虛擬機器建立自訂快照策略，以管理快照的建立和保留。快照策略定義了系統如何為儲存虛擬機器建立快照。您可以為 FSx for ONTAP檔案系統中的儲存虛擬機器建立快照原則。您也可以在多個儲存虛擬機器之間共用該策略。
 
 .關於這項工作
 您可以建立與適用於 ONTAP 的 FSX 三個內建快照原則不同的自訂快照原則：
@@ -65,6 +65,3 @@ summary: 在 BlueXP  工作負載工廠中為儲存 VM 建立自訂快照原則
 . * 跨儲存 VM 共用 * ：預設為啟用。啟用時，快照原則會在檔案系統中的所有儲存 VM 之間共用。停用以建立單一儲存 VM 的快照原則。
 . 選擇* Create *（建立*）。
 
-
-.結果
-快照原則即會建立。
