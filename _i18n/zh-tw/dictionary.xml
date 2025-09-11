@@ -450,9 +450,7 @@
   <block id="a5a980f3518b6bdf573ccca8b4570aaa" category="list-text">* 代碼箱 * ：為開發人員提供適用於 ONTAP 作業的 FSX 程式碼檢視器、用於複製和下載的程式碼範本、以及用於重新使用程式碼的自動化目錄。</block>
   <block id="20b4f77bd00b4f63a49ec8e08f3bf6a6" category="section-title">成本</block>
   <block id="2f00f54e8e91e47bd247b06a51824fb0" category="inline-link-macro">Amazon FSX for NetApp ONTAP 的定價</block>
-  <block id="8c4b25218155a1fdb972f4169855d04f" category="section-title">支援的地區</block>
   <block id="d5b1044cbc510048a5dac270bde89ed5" category="inline-link">檢視支援的Amazon地區。</block>
-  <block id="ee9b3af8630059982f4d1dd2fd3834a3" category="paragraph"><block ref="ee9b3af8630059982f4d1dd2fd3834a3" category="inline-link-rx"></block></block>
   <block id="20c404f3ca0633629eee9b1b4ccd6737" category="section-title">取得協助</block>
   <block id="da444b283df699667b2316206972bdfe" category="paragraph">Amazon FSX for NetApp ONTAP 的功能是AWS的第一方解決方案。如需與適用於 ONTAP 檔案系統、基礎架構或任何使用此服務的解決方案的 FSX 相關的問題或技術支援問題、請使用 AWS 管理主控台的支援中心、開啟 AWS 的支援案例。選取「FSXfor ONTAP Sf1」服務和適當的類別。提供建立AWS支援案例所需的其餘資訊。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律聲明</block>
@@ -2162,7 +2160,6 @@
   <block id="5555c9991f89f798392b8981015a49d6" category="doc">從工作負載工廠中的快照還原卷</block>
   <block id="fedae93e45eef0cf99ae9d3e2dbff802" category="paragraph">在工作負載工廠中，您可以將資料從快照還原到現有磁碟區或新磁碟區。當磁碟區包含已刪除或損壞的檔案時，還原作業可以實現時間點復原。</block>
   <block id="d53b53fb3880fbcc2120f4ebdcb4b727" category="paragraph">從快照建立新磁碟區會在幾秒鐘內複製整個磁碟區，與磁碟區大小無關。新建立的副本代表一個新磁碟區。</block>
-  <block id="22509908f6a972a65b5370b282ed646c" category="list-text">增加磁碟區消耗：從快照建立磁碟區後，您將擁有兩個獨立的捲，並且都消耗主機檔案系統的容量。確保您有足夠的容量來完成此操作。</block>
   <block id="8babf692a891c5060bb678dacf1bb2ad" category="list-text">在管理快照頁面中，選擇要還原的快照的三點選單，然後選擇*還原*。</block>
   <block id="0c5f6f3cf9344efbd61695ffdf90106f" category="list-text">在從快照還原磁碟區對話方塊中，從下列選項中進行選擇：</block>
   <block id="63421d2e7769a33701821702ab1b0be8" category="list-text">切換選擇*恢復為新磁碟區*。</block>
@@ -2171,4 +2168,13 @@
   <block id="62486fa65fc31c383ace8989549632ad" category="sidebar">使用快照</block>
   <block id="b8d3d1ca4d4975c76eec10109e85c77f" category="sidebar">使用備份到物件存儲</block>
   <block id="fe355a62d144a6a42805c3eb5698310a" category="sidebar">使用複製</block>
+  <block id="044dbc650d6316ed90f739b69dfff7ee" category="section-title">區域支持</block>
+  <block id="468469fded9ecf5cf0e132a6daa62d32" category="paragraph">以下 AWS 區域不受支援：</block>
+  <block id="cc6dcf46ebcb08f1caa420526cc0ab18" category="list-text">中國地區</block>
+  <block id="1411debdb32e6b128ca27ec92a708cbd" category="list-text">GovCloud（美國）區域</block>
+  <block id="ecd96786b112acf6970d6aaf3be575ca" category="list-text">秘密雲</block>
+  <block id="151ef168e17772f7a361db78a0c86552" category="list-text">絕密雲</block>
+  <block id="5948f3347ebc02ebc690227c059661e1" category="section-title">區域</block>
+  <block id="dbd9df55416d4512d3fcb441aced88b3" category="paragraph">所有支援 FSx for ONTAP 的商業區域都支援工作負載工廠。<block ref="c26e1d6730022abf3c378cf0c0cad7af" category="inline-link-macro-rx"></block></block>
+  <block id="186585d175a4fff1722ac82a5520c584" category="paragraph">以下 AWS 區域不受支援：</block>
 </blocks>

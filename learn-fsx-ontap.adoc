@@ -70,9 +70,17 @@ AWS 維護您的 FSX for ONTAP 帳戶，而非工作負載工廠。請參閱 lin
 
 
 
-== 支援的地區
+== 區域
 
-https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["檢視支援的Amazon地區。"^]
+所有支援 FSx for ONTAP 的商業區域都支援工作負載工廠。link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["檢視支援的Amazon地區。"^]
+
+以下 AWS 區域不受支援：
+
+* 中國地區
+* GovCloud（美國）區域
+* 秘密雲
+* 絕密雲
+
 
 
 
