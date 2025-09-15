@@ -2100,7 +2100,6 @@
   <block id="ad8f55b88a50703984e58a23e36e9026" category="inline-image-macro">顯示管理快照畫面的螢幕截圖。</block>
   <block id="404a59509c6a806310ecbd1d601e0ee6" category="paragraph"><block ref="404a59509c6a806310ecbd1d601e0ee6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="52574bdc9ce79e7e568096fa39264d72" category="section-title">SSD 儲存容量可減少</block>
-  <block id="0cc6e64eaa35165d8791def1903c483a" category="paragraph">工作負載工廠支援減少第一代和第二代檔案系統的固態硬碟 (SSD) 容量。利用彈性檔案系統容量，您可以動態調整檔案系統的容量以滿足工作負載的需求。</block>
   <block id="298ae1d1e13ebe1f0f22936b7ea9ce33" category="inline-link-macro">調整檔案系統容量</block>
   <block id="6b4be3b501bf6ae8984293c02d4d610b" category="paragraph"><block ref="6b4be3b501bf6ae8984293c02d4d610b" category="inline-link-macro-rx"></block></block>
   <block id="14fc4cc175abaf53d8e3d6a080ba96e8" category="summary">為工作負載工廠中的儲存虛擬機器建立自訂快照策略。</block>
@@ -2177,4 +2176,6 @@
   <block id="5948f3347ebc02ebc690227c059661e1" category="section-title">區域</block>
   <block id="dbd9df55416d4512d3fcb441aced88b3" category="paragraph">所有支援 FSx for ONTAP 的商業區域都支援工作負載工廠。<block ref="c26e1d6730022abf3c378cf0c0cad7af" category="inline-link-macro-rx"></block></block>
   <block id="186585d175a4fff1722ac82a5520c584" category="paragraph">以下 AWS 區域不受支援：</block>
+  <block id="edfbca9622799a953a48987a288fe283" category="paragraph">工作負載工廠支援減少第二代檔案系統的固態硬碟 (SSD) 容量。利用彈性檔案系統容量，您可以動態調整檔案系統的容量以滿足工作負載的需求。</block>
+  <block id="381c6da705f822c3139853781716a57a" category="admonition">僅第二代檔案系統支援減少 SSD 儲存容量。</block>
 </blocks>
