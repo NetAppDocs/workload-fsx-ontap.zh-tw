@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: manage-nfs-export-policy.html 
 keywords: NFS, nfs, export policy, change export policy, update export policy, modify export policy 
-summary: 在 BlueXP  工作負載工廠中，管理使用 NFSv3 或 NFSv4.1 傳輸協定類型之 Volume 的 NFS 匯出原則。 
+summary: 在NetApp Workload Factory 中管理使用 NFSv3 或 NFSv4.1 協定類型的磁碟區的 NFS 匯出策略。 
 ---
-= 管理 BlueXP  工作負載工廠中某個 Volume 的 NFS 匯出原則
+= 在NetApp Workload Factory 中管理磁碟區的 NFS 匯出策略
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在 BlueXP  工作負載工廠中，管理使用 NFSv3 或 NFSv4.1 傳輸協定類型之 Volume 的 NFS 匯出原則。
+在NetApp Workload Factory 中管理使用 NFSv3 或 NFSv4.1 協定類型的磁碟區的 NFS 匯出策略。
 
 .關於這項工作
 管理 Volume 的匯出原則包括新增匯出原則規則，詳述用戶端規格，存取控制，超級使用者存取和 NFS 版本。您可以新增多個匯出原則、並將其排定優先順序。
@@ -29,10 +29,11 @@ summary: 在 BlueXP  工作負載工廠中，管理使用 NFSv3 或 NFSv4.1 傳
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for ONTAP * 標籤中，選取要更新磁碟區之檔案系統的三點功能表，然後選取 * 管理 * 。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要更新磁碟區的檔案系統的操作選單，然後選擇 *管理*。
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
-. 從 Volumes （磁碟區）索引標籤中，選取要變更 NFS 匯出原則之磁碟區的三點功能表。
+. 從「磁碟區」標籤中，選擇要變更 NFS 匯出策略的磁碟區的操作功能表。
 . 選擇 * 進階動作 * 、然後 * 編輯 NFS 匯出原則 * 。
 . 在「編輯 NFS 匯出原則」頁面上、提供下列項目：
 +

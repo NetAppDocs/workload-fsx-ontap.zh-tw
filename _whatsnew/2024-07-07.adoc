@@ -1,9 +1,9 @@
-= Amazon FSX for NetApp ONTAP 的工作負載工廠初始版本
+= Amazon FSx for NetApp ONTAP的 Workload Factory 初始版本
 :allow-uri-read: 
 
 
 
 
-=== Amazon FSX for NetApp ONTAP 的工作負載工廠初始版本
+=== Amazon FSx for NetApp ONTAP的 Workload Factory 初始版本
 
 Amazon FSX for NetApp ONTAP 目前已正式推出 BlueXP  工作負載工廠。

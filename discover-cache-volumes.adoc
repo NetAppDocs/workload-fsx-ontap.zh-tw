@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: discover-cache-volumes.html 
+keywords: discover cache volume, FlexCache technology, ONTAP FlexCache, FSx for ONTAP volume 
+summary: 無需離開NetApp Workload Factory 控制台即可發現並查看與快取關係關聯的快取磁碟區。 
+---
+= 在 Workload Factory 中發現快取卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+無需離開NetApp Workload Factory 控制台即可發現並查看與快取關係關聯的快取磁碟區。快取關係也稱為ONTAP FlexCache關係。  Workload Factory 使用FlexCache技術發現現有的快取關係，FlexCache 技術是NetApp ONTAP 的遠端快取功能，可加速資料訪問，減少 WAN 延遲、頻寬和讀取密集型工作負載的成本，尤其是在客戶端需要重複存取相同資料的情況下。
+
+link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html["了解有關使用FlexCache複製資料的更多資訊。"^]
+
+.關於這項工作
+需要連結關聯來發現快取關係。
+
+兩個ONTAP系統（例如一個 FSx for ONTAP檔案系統和一個Cloud Volumes ONTAP系統）上的磁碟區之間可以存在快取關係。快取關係也可以存在於單一 FSx for ONTAP檔案系統中，從一個磁碟區到另一個磁碟區。
+
+.開始之前
+在開始之前請考慮以下事項。
+
+* 您必須關聯一個連結才能發現檔案系統上的快取關係。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"] 。連結關聯後，返回此操作。
+* 您必須具有現有的快取關係。
+
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇 *Cache relationships* 選項卡。
+. 您的快取卷出現在表格中。此表包含有關每個快取卷的以下資訊：
++
+** *原始群集*： FlexCache關係的起源或來源群集。
+** *原始卷*： FlexCache關係的起源或來源卷。
+** *原始儲存虛擬機器*：磁碟區的原始或來源儲存虛擬機器。
+** *快取磁碟區*： FlexCache關係的快取或目標磁碟區。
+** *快取儲存虛擬機器*：磁碟區的快取或目標儲存虛擬機器。
+** *狀態*： FlexCache關係的狀態。
+** *快取中的可用儲存量*：快取磁碟區上的可用儲存量。
+** *快取檔案系統*：快取卷的檔案系統。
+** *寫入模式*： FlexCache關係的寫入模式。
+** *DR 快取*：指示FlexCache關係是否為災難復原 (DR) 快取。
+** *導出策略*：快取磁碟區的導出策略。
+
+
+

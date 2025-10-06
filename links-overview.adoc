@@ -2,28 +2,28 @@
 sidebar: sidebar 
 permalink: links-overview.html 
 keywords: links, accounts, lambda 
-summary: 工作負載原廠連結可在工作負載原廠帳戶和 ONTAP 檔案系統的一或多個 FSX 之間建立信任關係和連線。 
+summary: Workload Factory 連結在 Workload Factory 帳戶和一個或多個 FSx for ONTAP檔案系統之間建立信任關係和連線。 
 ---
-= 瞭解 BlueXP  工作負載工廠連結
+= 了解有關NetApp Workload Factory 連結的信息
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-BlueXP  工作負載原廠連結可在工作負載原廠帳戶和一或多個適用於 ONTAP 檔案系統的 FSX 之間建立信任關係和連線。這可讓您直接從 Amazon FSX for ONTAP API 無法使用的 ONTAP REST API 呼叫監控及管理特定檔案系統功能。
+NetApp Workload Factory 連結在 Workload Factory 帳戶和一個或多個 FSx for ONTAP檔案系統之間建立信任關係和連線。這可讓您直接從ONTAP REST API 呼叫監控和管理某些檔案系統功能，而這些功能無法透過Amazon FSx for ONTAP API 取得。
 
-您不需要連結即可開始使用工作負載工廠，但在某些情況下，您需要建立連結來解除鎖定所有工作負載原廠功能和工作負載功能。
+您不需要連結即可開始使用 Workload Factory，但在某些情況下，您需要建立連結來解鎖所有 Workload Factory 功能和工作負載能力。
 
 
 
 == 為什麼連結是有益的
 
-連結非常有用，因為它們允許工作負載工廠執行Amazon FSx for ONTAP API 原生無法執行的操作。連結支援高階ONTAP功能和自動化，從而增強 FSx for ONTAP檔案系統的管理。
+連結很有用，因為它們允許 Workload Factory 執行透過Amazon FSx for ONTAP API 本身無法執行的操作。連結支援高階ONTAP功能和自動化，從而增強 FSx for ONTAP檔案系統的管理。
 
 以下是使用連結的一些好處：
 
-* 此連結使BlueXP能夠將ONTAP指令直接傳送到您的 FSx for ONTAP檔案系統，從而帶來 AWS 原生提供的ONTAP進階功能。
+* 此連結使NetApp控制台能夠將ONTAP指令直接傳送到您的 FSx for ONTAP檔案系統，從而帶來 AWS 原生提供的ONTAP進階功能。
 * 連結利用 AWS Lambda 執行程式碼來回應事件。這種無伺服器方法消除了對 VPC 中運行實例的依賴。
 
 
@@ -37,13 +37,13 @@ BlueXP  工作負載原廠連結可在工作負載原廠帳戶和一或多個�
 
 您可以在工作負載工廠中建立並關聯來自儲存工作負載的連結。
 
-您可以使用儲存在工作負載工廠憑證服務中的憑證或儲存在 AWS Secrets Manager 中的憑證來驗證連結。工作負載工廠不支援變更驗證模式。
+您可以使用儲存在 Workload Factory 憑證服務中的憑證或儲存在 AWS Secrets Manager 中的憑證來驗證連結。工作負載工廠不支援更改身份驗證模式。
 
 
 
 == 成本
 
-Lambda 執行的每項交易都會產生費用。由於 Lambda 在兩個系統之間扮演代理的角色，因此 Lambda 在檔案系統上傳送要求給 ONTAP REST API ，以及將回應傳回工作負載工廠時，都會收取費用。
+Lambda 執行的每筆交易都會產生費用。由於 Lambda 充當兩個系統之間的代理，因此當 Lambda 向檔案系統上的ONTAP REST API 發送請求時以及將回應傳送回 Workload Factory 時都會產生費用。
 
 link:https://aws.amazon.com/lambda/pricing/["深入瞭解使用 AWS Lambda 的相關成本"^]
 
@@ -51,7 +51,7 @@ link:https://aws.amazon.com/lambda/pricing/["深入瞭解使用 AWS Lambda 的�
 
 == 需要連結時
 
-工作負載工廠需要一個連結來顯示一些資訊並執行一些工作。如果您嘗試執行需要連結的操作，但尚未將連結與 FSx for ONTAP檔案系統關聯，則工作負載工廠會通知您該操作需要連結。
+工作負載工廠需要一個連結來顯示一些資訊並執行一些任務。如果您嘗試執行需要連結的操作，但尚未將連結與 FSx for ONTAP檔案系統關聯，則 Workload Factory 會通知您該操作需要連結。
 
 需要連結的功能包括：
 

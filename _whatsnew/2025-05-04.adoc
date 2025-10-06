@@ -44,7 +44,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["建立
 
 ==== 支援從適用於 ONTAP 的 FSX 到內部部署的反向複寫
 
-從適用於 ONTAP 檔案系統的 FSX 到內部部署 ONTAP 叢集，現在可從工作負載原廠主控台進行反向複寫。
+現在可以從 Workload Factory 控制台內將 FSx for ONTAP檔案系統反向複製到本機ONTAP叢集。
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/reverse-replication.html["反轉複寫"]
 
@@ -124,4 +124,4 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-from-backup.html["
 
 === 更新的權限術語
 
-工作負載工廠使用者介面和文件現在使用“只讀”來指讀取權限，使用“讀取/寫入”來指稱自動化權限。
+Workload Factory 使用者介面和文件現在使用「只讀」來指涉讀取權限，使用「讀取/寫入」來指稱自動化權限。

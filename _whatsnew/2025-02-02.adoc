@@ -6,7 +6,7 @@
 
 === BlueXP  工作負載原廠主控台的 CloudShell
 
-CloudShell 是 BlueXP  儲存工作負載原廠提供的內嵌 CLI 功能。您可以使用 CloudShell 從工作負載原廠主控台內的 Shell 環境中，從多個工作階段建立，共用及執行 ONTAP 或 AWS CLI 命令。
+CloudShell 是BlueXP workload factory中用於儲存的嵌入式 CLI 功能。您可以使用 CloudShell 在 Workload Factory 控制台內類似 shell 的環境中從多個會話建立、共用和執行ONTAP或 AWS CLI 指令。
 
 link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["深入瞭解 BlueXP  工作負載工廠的 CloudShell"]
 
@@ -16,7 +16,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["深
 
 您現在可以從 BlueXP  工作負載工廠的儲存設備，將適用於 ONTAP 的 FSX 庫存資料下載到 Microsoft Excel 或 CSV 檔案中。
 
-image:screenshot-fsx-inventory-download.png["BlueXP  工作負載工廠儲存設備的螢幕擷取畫面，顯示新的下載按鈕，可下載適用於 ONTAP 檔案系統庫存資料的 FSX 。"]
+image:screenshot-fsx-inventory-download.png["BlueXP workload factory中的儲存螢幕截圖，顯示了用於下載 FSx for ONTAP檔案系統庫存資料的新下載按鈕。"]
 
 
 
@@ -59,7 +59,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html["�
 
 === 支援第二代 Amazon FSX for NetApp ONTAP 檔案系統
 
-您現在可以在 BlueXP  工作負載工廠中，將 Amazon FSX 用於 NetApp ONTAP 第二代檔案系統。適用於 ONTAP 第二代單一 AZ 檔案系統的 FSX 搭載多達 12 個 HA 配對，可提供高達 72 Gbps 的處理量容量和 2 ， 400,000 個 SSD IOPS 。適用於 ONTAP 第二代 Multi-AZ 檔案系統的 FSX 採用單一 HA 配對，提供 6 Gbps 的處理量容量和 20 ， 000 SSD IOPS 。
+現在您可以在NetApp Workload Factory 中使用Amazon FSx for NetApp ONTAP第二代檔案系統。  FSx for ONTAP第二代單可用區檔案系統由多達 12 個 HA 對提供支持，可提供高達 72 GBps 的吞吐容量和 2,400,000 SSD IOPS。  FSx for ONTAP第二代多可用區檔案系統由一個 HA 對提供支持，可提供 6 GBps 的吞吐容量和 200,000 SSD IOPS。
 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/add-ha-pairs.html["新增高可用度配對"]
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["Amazon FSX for NetApp ONTAP 的配額與限制"^]

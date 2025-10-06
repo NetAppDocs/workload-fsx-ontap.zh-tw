@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: update-storage-efficiency.html 
 keywords: storage efficiency change, update storage efficiency 
-summary: 在 BlueXP  工作負載工廠中，您可以在建立磁碟區後更新儲存效率設定。 
+summary: 在NetApp Workload Factory 中，您可以在建立磁碟區後更新儲存效率設定。 
 ---
 = 更新磁碟區的儲存效率設定
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 在 BlueXP  工作負載工廠中，您可以在建立磁碟區後更�
 
 
 [role="lead"]
-在 BlueXP  工作負載工廠中，您可以在建立磁碟區後更新儲存效率設定。
+在NetApp Workload Factory 中，您可以在建立磁碟區後更新儲存效率設定。
 
 .關於這項工作
 儲存效率功能包括重複資料刪除，資料壓縮及資料壓縮，可在 FlexVol volume 上達到最佳的空間節約效益。重複資料刪除技術可消除重複的資料區塊資料壓縮會壓縮資料區塊、以減少所需的實體儲存容量。資料壓縮可在較少空間中儲存更多資料、以提升儲存效率。
@@ -22,10 +22,11 @@ summary: 在 BlueXP  工作負載工廠中，您可以在建立磁碟區後更�
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for ONTAP * 標籤中，選取要更新磁碟區之檔案系統的三點功能表，然後選取 * 管理 * 。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要更新磁碟區的檔案系統的操作選單，然後選擇 *管理*。
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
-. 從 Volumes （磁碟區）索引標籤中，選取要變更分層原則的磁碟區三點功能表。
+. 從「磁碟區」標籤中，選擇要變更分層策略的磁碟區的操作選單。
 . 選擇 * 進階動作 * ，然後 * 設定儲存效率 * 。
 . 選擇啟用或停用 Volume 儲存效率。
 . 選取 * 套用 * 以儲存變更。

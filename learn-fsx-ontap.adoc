@@ -2,20 +2,20 @@
 sidebar: sidebar 
 permalink: learn-fsx-ontap.html 
 keywords: Amazon FSx for NetApp ONTAP, FSx, storage, aws 
-summary: Amazon FSX for NetApp ONTAP 是一項完全託管的服務，可讓客戶在工作負載工廠內啟動及執行檔案系統作為工作負載的儲存後端。 
+summary: Amazon FSx for NetApp ONTAP是一項完全託管的服務，可讓客戶啟動和執行檔案系統作為 Workload Factory 內工作負載的儲存後端。 
 ---
-= 瞭解 BlueXP  工作負載工廠的 Amazon FSX for NetApp ONTAP
+= 了解NetApp Workload Factory 中的Amazon FSx for NetApp ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-Amazon FSX for NetApp ONTAP 是完全託管的雲端型資料儲存服務、可提供進階資料管理功能和高度擴充的效能。適用於 ONTAP 的 FSX 可讓您建立及管理檔案系統，做為 BlueXP  工作負載工廠內所有工作負載的儲存後端。
+Amazon FSx for NetApp ONTAP是一種完全託管的基於雲端的資料儲存服務，可提供進階資料管理功能和高度可擴展的效能。  FSx for ONTAP可讓您建立和管理檔案系統作為NetApp Workload Factory 中所有工作負載的儲存後端。
 
 FSX for ONTAP VMware提供NetApp客戶目前內部部署所使用的相同功能、效能和管理功能、以及原生AWS服務的簡易性、敏捷度、安全性和擴充性。
 
-適用於 ONTAP 的 FSX 是工作負載工廠中的 _Storage_ 元件。
+FSx for ONTAP是 Workload Factory 中的_儲存_元件。
 
 
 
@@ -23,7 +23,7 @@ FSX for ONTAP VMware提供NetApp客戶目前內部部署所使用的相同功能
 
 適用於 ONTAP 的 FSX 提供下列功能：
 
-* * 完全託管服務 * ：提供與工作負載原廠主控台整合的全託管服務。
+* *完全託管服務*：提供與 Workload Factory 控制台整合的完全託管服務。
 * * 高可用度 * ：為 ONTAP 檔案系統的每個 FSX 提供高可用度、支援單一和多重可用度區域部署。
 * * 自動快照 * ：利用自動化、有效率的快照來保護資料、快照近乎即時、空間效率極高的時間點檔案系統或磁碟區唯讀複本。
 * * Volume 複寫 * ：透過 Amazon Web Services 的跨區域複寫功能、提供災難恢復功能。
@@ -40,7 +40,7 @@ FSX for ONTAP VMware提供NetApp客戶目前內部部署所使用的相同功能
 
 
 
-== 工作負載工廠的其他功能
+== 工作負載工廠的附加功能
 
 * * 儲存成本比較計算機 * ：將 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和適用於 Windows 檔案伺服器的 FSX 儲存成本與適用於 ONTAP 的 FSX 進行比較。從計算機中、您可以檢視適用於 ONTAP 儲存組態的 FSX 如何節省成本、並規劃移轉至適用於 ONTAP 儲存設備的 FSX 。
 * * 工作負載工廠使用者介面 * ：提供 _ 快速建立 _ 和 _ 進階建立 _ 部署模式選項。快速建立包括 AWS 、 NetApp 、以及適用於您儲存組態的業界標準最佳實務做法。
@@ -49,24 +49,24 @@ FSX for ONTAP VMware提供NetApp客戶目前內部部署所使用的相同功能
 
 
 
-== 使用工作負載工廠的工具
+== 使用NetApp Workload Factory 的工具
 
-您可以搭配下列工具使用 BlueXP  工作負載工廠：
+您可以將NetApp Workload Factory 與以下工具一起使用：
 
-* * 工作負載原廠主控台 * ：工作負載原廠主控台可提供應用程式與專案的視覺化整體檢視。
-* * BlueXP  console* ： BlueXP  主控台提供混合式介面體驗，讓您可以將 BlueXP  工作負載工廠與其他 BlueXP  服務一起使用。
-* * 詢問我 * ：使用「詢問我 AI 」助理來詢問問題，並深入瞭解工作負載工廠，而無需離開工作負載工廠的網路 UI 。從工作負載原廠說明功能表存取 Ask me 。
-* * CloudShell CL1* ：工作負載工廠包含 CloudShell CLI ，可透過單一瀏覽器型 CLI ，跨帳戶管理及操作 AWS 和 NetApp 環境。從工作負載原廠主控台的頂端列存取 CloudShell 。
-* * REST API* ：使用工作負載原廠 REST API 來部署及管理適用於 ONTAP 檔案系統和其他 AWS 資源的 FSX 。
-* * CloudForgius* ：使用 AWS CloudForgation 程式碼來執行您在工作負載工廠主控台中定義的動作，以便在 AWS 帳戶中建構，配置及管理 CloudForgation 堆疊中的 AWS 和第三方資源。
-* * Terraform BlueXP  工作負載工廠供應商 * ：使用 Terraform 建置及管理在工作負載工廠主控台產生的基礎架構工作流程。
+* *Workload Factory 控制台*：Workload Factory 控制台提供您的應用程式和專案的視覺化、整體視圖。
+* * NetApp控制台*： NetApp控制台提供混合介面體驗，以便您可以將 Workload Factory 與其他NetApp資料服務一起使用。
+* *問我*：使用問我 AI 助理來提問並了解有關 Workload Factory 的更多信息，而無需離開 Workload Factory 控制台。從 Workload Factory 幫助選單中存取「問我」。
+* *CloudShell CLI*：Workload Factory 包含 CloudShell CLI，可透過基於瀏覽器的單一 CLI 跨帳號管理和操作 AWS 和NetApp環境。從 Workload Factory 控制台頂部欄存取 CloudShell。
+* *REST API*：使用 Workload Factory REST API 部署和管理您的 FSx for ONTAP檔案系統和其他 AWS 資源。
+* *CloudFormation*：使用 AWS CloudFormation 程式碼執行您在 Workload Factory 控制台中定義的操作，以從您的 AWS 帳戶中的 CloudFormation 堆疊對 AWS 和第三方資源進行建模、配置和管理。
+* *Terraform NetApp Workload Factory 提供者*：使用 Terraform 建置和管理在 Workload Factory 控制台中產生的基礎架構工作流程。
 
 
 
 
 == 成本
 
-AWS 維護您的 FSX for ONTAP 帳戶，而非工作負載工廠。請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Amazon FSX for NetApp ONTAP 的定價"^]。
+AWS 維護您的 FSx for ONTAP帳戶，而不是 Workload Factory。請參閱link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Amazon FSX for NetApp ONTAP 的定價"^] 。
 
 
 
@@ -88,4 +88,4 @@ AWS 維護您的 FSX for ONTAP 帳戶，而非工作負載工廠。請參閱 lin
 
 Amazon FSX for NetApp ONTAP 的功能是AWS的第一方解決方案。如需與適用於 ONTAP 檔案系統、基礎架構或任何使用此服務的解決方案的 FSX 相關的問題或技術支援問題、請使用 AWS 管理主控台的支援中心、開啟 AWS 的支援案例。選取「FSXfor ONTAP Sf1」服務和適當的類別。提供建立AWS支援案例所需的其餘資訊。
 
-有關工作負載工廠或工作負載工廠應用程式與服務的一般問題，請link:get-help.html["取得 ONTAP for Workload Factory 的 FSX 說明"]參閱。
+有關 Workload Factory 或 Workload Factory 應用程式和服務的一般問題，請參閱link:get-help.html["取得 FSx for ONTAP for Workload Factory 的協助"]。

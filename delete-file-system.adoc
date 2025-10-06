@@ -2,24 +2,24 @@
 sidebar: sidebar 
 permalink: delete-file-system.html 
 keywords: file system, delete file system, file system deletion 
-summary: 若要在 BlueXP  工作負載工廠中刪除檔案系統，您必須先刪除與檔案系統相關的任何磁碟區，儲存 VM 或複寫關係。 
+summary: 若要刪除NetApp Workload Factory 中的檔案系統，您必須先刪除與該檔案系統關聯的任何磁碟區、儲存虛擬機器或複製關係。 
 ---
-= 在 BlueXP  工作負載工廠中刪除檔案系統
+= 在NetApp Workload Factory 中刪除檔案系統
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-若要在 BlueXP  工作負載工廠中刪除檔案系統，您必須先刪除與檔案系統相關的任何磁碟區，儲存 VM 或複寫關係。
+若要刪除NetApp Workload Factory 中的檔案系統，您必須先刪除與該檔案系統關聯的任何磁碟區、儲存虛擬機器或複製關係。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for （用於 ONTAP ） * 標籤中，選擇要刪除的 ONTAP 文件系統的 FSX 的三點菜單。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要刪除的 FSx for ONTAP檔案系統的操作選單。
 . 選擇*管理*。
-. 在 * 總覽 * 標籤中，選取三點選單。
+. 在「*概述*」標籤中，選擇操作選單。
 . 選擇*刪除*。
 . 在刪除 ONTAP 檔案系統的 FSX 對話方塊中、輸入要刪除的 ONTAP 檔案系統的 FSX 名稱。
-. 選擇*刪除*。
+. 選擇*刪除*進行確認。
 

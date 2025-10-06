@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: edit-volume-autogrow.html 
 keywords: volume autogrow, increase volume capacity, enable autogrow 
-summary: 啟用卷自動增長以讓工作負載工廠為您管理磁碟區容量。您可以隨時停用。 
+summary: 啟用磁碟區自動成長以讓 Workload Factory 為您管理磁碟區容量。您可以隨時停用它。 
 ---
-= 在工作負載工廠中啟用卷自動增長
+= 在 Workload Factory 中啟用磁碟區自動成長
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-啟用卷自動增長以讓工作負載工廠為您管理磁碟區容量。您可以隨時停用。
+啟用磁碟區自動成長以讓 Workload Factory 為您管理磁碟區容量。您可以隨時停用它。
 
 您也可以選擇隨時使用手動增加 Volume 的容量 link:increase-volume-capacity.html["增加 Volume 容量功能"]。
 
@@ -23,10 +23,11 @@ NOTE: iSCSI Volume 不支援 Volume 自動擴充。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 FSX for ONTAP 標籤中，選取要更新之 Volume 的檔案系統三點功能表，然後選取 * 管理 * 。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要更新磁碟區的檔案系統的操作選單，然後選擇 *管理*。
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
-. 從 Volumes （磁碟區）標籤中，選取您要修改之磁碟區的三點選單。
+. 從磁碟區選項卡中，選擇要修改的磁碟區的操作選單。
 . 選擇*基本操作*，然後選擇*設定磁碟區自動增長*。
 . 在「設定自動成長」對話方塊中，啟用磁碟區自動成長功能，以自動擴充磁碟區容量，直到達到最大大小。此功能可適應不斷增長的數據使用量，確保操作不間斷。
 +

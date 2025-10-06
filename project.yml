@@ -41,6 +41,8 @@ sidebar:
         url: "/create-link.html"
       - title: 管理連結
         url: "/manage-links.html"
+    - title: 發現並查看快取卷
+      url: "/discover-cache-volumes.html"
     - title: 管理磁碟區
       entries:
       - title: 建立Volume
@@ -115,7 +117,7 @@ sidebar:
         url: "/delete-volume.html"
     - title: 檔案系統管理
       entries:
-      - title: 增加檔案系統容量
+      - title: 調整檔案系統容量
         url: "/increase-file-system-capacity.html"
       - title: 啟用自動容量管理
         url: "/enable-auto-capacity-management.html"
@@ -190,5 +192,5 @@ sidebar:
   - title: 法律聲明
     url: "/legal-notices.html"
 product-family:
-  name: BlueXP workload factory
+  name: NetApp Workload Factory
   repo: workload-family

@@ -2,18 +2,21 @@
 sidebar: sidebar 
 permalink: create-volume.html 
 keywords: create volume, FSx for ONTAP volume 
-summary: 設定 FSx for ONTAP 檔案系統後，在工作負載工廠中建立 FSx for ONTAP 磁碟區。 
+summary: 設定 FSx for ONTAP檔案系統後，在 Workload Factory 中建立 FSx for ONTAP磁碟區。 
 ---
-= 在工作負載工廠中建立 FSx for ONTAP 卷
+= 在 Workload Factory 中建立 FSx for ONTAP磁碟區
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-設定 FSx for ONTAP 檔案系統後，在工作負載工廠中建立 FSx for ONTAP 磁碟區作為用於對資料進行分組的虛擬資源。
+設定 FSx for ONTAP檔案系統後，在 Workload Factory 中建立 FSx for ONTAP磁碟區作為用於分組資料的虛擬資源。
 
-.關於這項工作
+
+
+== 關於這項工作
+
 FSx for ONTAP 磁碟區以虛擬方式將資料分組，決定資料的儲存方式，並決定資料的存取類型。Volume 不會消耗檔案系統儲存容量。儲存在磁碟區中的資料主要會消耗 SSD 儲存設備。視磁碟區的分層原則而定、資料可能也會佔用容量集區儲存空間。您可以在建立磁碟區時設定磁碟區的大小、稍後也可以變更其大小。
 
 您的磁碟區可能會使用下列通訊協定：
@@ -23,10 +26,36 @@ FSx for ONTAP 磁碟區以虛擬方式將資料分組，決定資料的儲存方
 * iSCSI ：區塊儲存傳輸協定
 
 
-.開始之前
+
+
+=== 音量設定詳情
+
+.不可變文件
+此功能也稱為SnapLock，預設為停用。啟用不可變檔案可防止在一定時期內刪除或覆蓋資料。僅在建立磁碟區期間才可以啟用此功能。該功能一旦啟用，就無法停用。這是 FSx for ONTAP的進階功能，需要額外收費。更多信息，請參閱link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["SnapLock 的運作方式"^]在Amazon FSx for NetApp ONTAP文件中。
+
+* *保留模式*：您可以從兩種保留模式中選擇 - _企業_或_合規_。
++
+** 在 _Enterprise_ 模式中，不可變的檔案或 SnapLock ，管理員可以在檔案保留期間刪除檔案。
+** 在 _ Compliance _ 模式中， WORM 檔案無法在其保留期限到期之前刪除。同樣地，在磁碟區內所有檔案的保留期間到期之前，無法刪除不可變的磁碟區。
+
+
+* *保留期*：保留期有兩種設定 - _保留政策_和_保留期_。 _保留策略_定義了檔案在不可變的 WORM 狀態下保留多久。您可以指定自己的保留策略，也可以使用預設保留策略（未指定），即 30 年。最小和最大保留期定義了鎖定檔案允許的時間範圍。
++
+
+NOTE: 即使在保留期限到期之後，您仍無法修改 WORM 檔案。您只能刪除或設定新的保留期間，才能再次開啟 WORM 保護。
+
+* *自動提交*：您可以選擇啟用自動提交功能。如果文件在自動提交期間沒有發生變化，則自動提交功能會將文件提交到SnapLock磁碟區上的 WORM 狀態。預設情況下，自動提交功能是禁用的。您必須確保要自動提交的文件位於SnapLock磁碟區上。
+* *特權刪除*： SnapLock管理員可以在SnapLock Enterprise磁碟區上啟用特權刪除，以允許在檔案保留期到期之前刪除檔案。預設情況下，此功能處於停用狀態。
+* *磁碟區附加模式*：您無法修改受 WORM 保護的文件中現有資料。但是，不可變文件可讓您使用 WORM 可附加文件來維護對現有資料的保護。例如，您可以產生日誌檔案或儲存音訊或視訊串流數據，同時以增量方式向其中寫入資料。link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["深入瞭解 Volume 附加模式"^]在Amazon FSx for NetApp ONTAP文件中。
+
+
+
+
+== 開始之前
+
 建立 Volume 之前、請先檢閱下列先決條件：
 
-* 您必須在工作負載工廠控制台中擁有 FSx for ONTAP 檔案系統。
+* 您必須在 Workload Factory 控制台中擁有 FSx for ONTAP檔案系統。
 * 您必須擁有儲存 VM 。
 * 若要存取傳輸協定、請完成下列步驟：
 +
@@ -47,8 +76,9 @@ NOTE: 從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for ONTAP * 標籤中，選取您要在其中建立 Volume 的檔案系統三點功能表，然後選取 * 建立 Volume * 。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要在其中建立磁碟區的檔案系統的操作選單，然後選擇 *建立磁碟區*。
 . 在「一般詳細資料」下的「建立 Volume 」頁面上、提供下列詳細資料：
 +
 .. * Volume 名稱 * ：輸入磁碟區的名稱。
@@ -79,46 +109,29 @@ FlexGroup 磁碟區大小取決於組成部分的數量，每個組成部分需�
 +
 請填寫下列欄位、以設定對磁碟區的檔案存取。
 
+
+
+.. * NFS 匯出原則 * ：提供下列詳細資料以提供 NFS 存取：
 +
-.... * NFS 匯出原則 * ：提供下列詳細資料以提供 NFS 存取：
-+
-..... * 存取控制 * ：從下拉式功能表中選取 * 自訂匯出原則 * 、 * 現有匯出原則 * 或 * 無法存取 Volume * 。
-..... * 匯出原則名稱 * ：
+... * 存取控制 * ：從下拉式功能表中選取 * 自訂匯出原則 * 、 * 現有匯出原則 * 或 * 無法存取 Volume * 。
+... * 匯出原則名稱 * ：
 +
 如果您選取自訂匯出原則、請從下拉式功能表中選取現有的原則名稱。
 
 +
 如果您選取現有的匯出原則、請輸入新的原則名稱。
 
-..... * 新增匯出原則規則 * ：您也可以針對自訂匯出原則新增匯出原則規則至原則。
+... * 新增匯出原則規則 * ：您也可以針對自訂匯出原則新增匯出原則規則至原則。
 
 
-.... *SMB/CIFS 分享*：提供以下內容：
+.. *SMB/CIFS 分享*：提供以下內容：
 +
-..... *名稱*：輸入 SMB/CIFS 共享名稱以提供存取權限。
-..... *路徑*：使用預設磁碟區名定義路徑或提供內部目錄的共用。
+... *名稱*：輸入 SMB/CIFS 共享名稱以提供存取權限。
+... * 權限 * ：選取 [ 完全控制 ] ， [ 讀取 / 寫入 ] ， [ 讀取 ] 或 [ 無存取權 ] ，然後輸入以分號（ ; ）分隔的使用者或群組。使用者或群組區分大小寫，使用者的網域必須使用「網域 \ 使用者名稱」格式。
+
+
+.. * 安全樣式 * ：對於雙協議卷，請選擇 UNIX 或 NTFS 安全樣式。UNIX 是雙協定磁碟區的預設安全樣式。有關此上下文中用戶映射的詳細指導，請參閱 AWS 博客文章link:https://aws.amazon.com/blogs/storage/enabling-multiprotocol-workloads-with-amazon-fsx-for-netapp-ontap["使用 Amazon FSX for NetApp ONTAP 啟用多重傳輸協定工作負載"^]。
 +
-卷名的有效路徑輸入（例如“avocado”）如下：
-
-+
-****** /酪梨
-****** /酪梨/文件夾
-****** /酪梨/資料夾/子資料夾
-****** /酪梨/檔案名
-+
-共享名稱的有效路徑輸入（例如“伺服器”）如下：
-
-****** \\伺服器
-****** \\伺服器\項目
-****** \\伺服器\專案\共享資源
-
-
-..... * 權限 * ：選取 [ 完全控制 ] ， [ 讀取 / 寫入 ] ， [ 讀取 ] 或 [ 無存取權 ] ，然後輸入以分號（ ; ）分隔的使用者或群組。使用者或群組區分大小寫，使用者的網域必須使用「網域 \ 使用者名稱」格式。
-
-
-.... * 安全樣式 * ：對於雙協議卷，請選擇 UNIX 或 NTFS 安全樣式。UNIX 是雙協定磁碟區的預設安全樣式。有關此上下文中用戶映射的詳細指導，請參閱 AWS 博客文章link:https://aws.amazon.com/blogs/storage/enabling-multiprotocol-workloads-with-amazon-fsx-for-netapp-ontap["使用 Amazon FSX for NetApp ONTAP 啟用多重傳輸協定工作負載"^]。
-
-
 *** * 區塊存取 * ：允許執行關鍵業務應用程式的主機使用 iSCSI 傳輸協定存取磁碟區。區塊存取僅在檔案系統橫向擴充部署具有六個或更少 HA 配對時可用。
 +
 請填寫下列欄位、以設定對磁碟區的區塊存取。
@@ -134,6 +147,13 @@ FlexGroup 磁碟區大小取決於組成部分的數量，每個組成部分需�
 
 
 
+
+
+.. *S3 端點*：可選地，附加一個 S3 端點以透過 AWS S3 API 存取駐留在 NFS 或 SMB/CIFS 磁碟區上的 FSx for ONTAP檔案系統資料。僅支援文件存取類型。提供以下詳細資訊：
++
+*** *S3 端點名稱*：輸入 S3 端點的名稱。
+*** *使用者*：選擇有權存取該磁碟區的現有使用者或建立新使用者。
+*** *使用者類型*：選擇*UNIX*或*Windows*作為使用者類型。
 
 
 
@@ -168,33 +188,10 @@ NOTE: 快照時間以檔案系統的時區為基礎、其預設為協調世界�
 
 .. * 分層原則 * ：選取儲存在磁碟區中資料的分層原則。
 +
-平衡（自動） _ 是使用工作負載原廠主控台建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^] AWS FSX for NetApp ONTAP 文件中的。請注意，工作負載工廠會在工作負載原廠主控台中使用以使用案例為基礎的名稱來分層原則，並在括弧中包含適用於 ONTAP 分層原則名稱的 FSX 。
+使用 Workload Factory 控制台建立磁碟區時，_平衡（自動）_ 是預設分層策略。有關卷分層策略的更多信息，請參閱link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^]在 AWS FSx for NetApp ONTAP文件中。請注意，工作負載工廠在工作負載工廠控制台中使用基於用例的名稱來制定分層策略，並在括號中包含 FSx for ONTAP分層策略名稱。
 
-.. * 可匯入的檔案 * ：此功能（也稱為 SnapLock ）預設為停用。啟用不可變檔案可防止在一定時期內刪除或覆蓋資料。只有在磁碟區建立期間，才能啟用此功能。啟用此功能後，便無法停用此功能。這是適用於 ONTAP 的 FSX 的優質功能，需要額外付費。如需詳細資訊，請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/how-snaplock-works.html["SnapLock 的運作方式"^]Amazon FSX for NetApp ONTAP 文件中的。
+.. *不可變檔案*：啟用不可變檔案功能將永久地將此磁碟區中的檔案提交到不可變的 WORM（一次寫入多次讀取）狀態。提供以下詳細資訊：
 +
-啟用「不可變檔案」功能會將此磁碟區中的檔案永久認可為不可變的 WORM （一次寫入多次讀取）狀態。
-
-+
-保留模式:: 您可以選擇兩種保留模式： _ 企業 _ 或 _ 法規遵循 _ 。
-+
---
-*** 在 _Enterprise_ 模式中，不可變的檔案或 SnapLock ，管理員可以在檔案保留期間刪除檔案。
-*** 在 _ Compliance _ 模式中， WORM 檔案無法在其保留期限到期之前刪除。同樣地，在磁碟區內所有檔案的保留期間到期之前，無法刪除不可變的磁碟區。
-
-
---
-保留期間:: 保留期間有兩種設定： _ 保留原則 _ 和 _ 保留期間 _ 。_ 保留原則 _ 定義在不可變 WORM 狀態下保留檔案的時間長度。您可以指定自己的保留原則，或使用預設保留原則（未指定），即 30 年。最小和最大保留期間 _ 定義鎖定檔案所允許的時間範圍。
-+
---
-附註:: 即使在保留期限到期之後，您仍無法修改 WORM 檔案。您只能刪除或設定新的保留期間，才能再次開啟 WORM 保護。
-
-
---
-AUTOCOMMIT:: 您可以選擇啟用自動認可功能。如果檔案在自動認可期間內未變更，則自動認可功能會將檔案提交至 SnapLock 磁碟區的 WORM 狀態。自動提交功能預設為停用。您必須確保要自動提交的文件位於 SnapLock 磁碟區上。
-Volume 附加模式:: 您無法修改受 WORM 保護檔案中的現有資料。不過，不可變的檔案可讓您使用 WORM 可擴充檔案來維護現有資料的保護。例如，您可以產生記錄檔，或是保留音訊或視訊串流資料，同時逐步將資料寫入記錄檔。link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/worm-state.html#worm-state-append["深入瞭解 Volume 附加模式"^]Amazon FSX for NetApp ONTAP 文件。
-+
---
-.不可變檔案的步驟
 ... 選取以啟用 * 由 SnapLock * 提供的可匯入檔案。
 ... 選取方塊以同意並繼續。
 ... 選取 * 啟用 * 。
@@ -216,10 +213,8 @@ Volume 附加模式:: 您無法修改受 WORM 保護檔案中的現有資料。�
 
 
 ... *AUTOCOMMIT* ：禁用或啓用自動提交。如果啟用自動提交，請設定自動提交期間。
+... *特權刪除*：停用或啟用。如果啟用特權刪除， SnapLock管理員可以在檔案保留期到期之前刪除該檔案。
 ... * Volume 附加模式 * ：停用或啟用。可讓您將新內容新增至 WORM 檔案。
-
-
---
 
 
 .. *ARP/AI*：當連結與檔案系統關聯時，NetApp 自主勒索軟體保護與 AI (ARP/AI) 預設為啟用。link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["了解有關 ARP/AI 的更多信息"]。接受聲明以繼續。

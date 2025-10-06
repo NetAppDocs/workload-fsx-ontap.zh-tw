@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: performance-reference.html 
 keywords: performance, FSx for ONTAP performance 
-summary: 效能參考資料是針對 BlueXP  工作負載工廠中的 ONTAP 適用的 FSX 。 
+summary: NetApp Workload Factory 中提供了 FSx for ONTAP的效能參考。 
 ---
-= BlueXP  工作負載工廠中適用於 ONTAP 的 FSX 效能
+= NetApp Workload Factory 中 FSx for ONTAP的效能
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

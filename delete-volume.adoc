@@ -4,7 +4,7 @@ permalink: delete-volume.html
 keywords: delete volume, volume deletion 
 summary: 刪除 FSX for ONTAP 檔案系統中不再需要的 Volume ，並釋放空間。此操作無法還原。 
 ---
-= 在 BlueXP  工作負載工廠中刪除 Volume
+= 在NetApp Workload Factory 中刪除卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -24,10 +24,11 @@ summary: 刪除 FSX for ONTAP 檔案系統中不再需要的 Volume ，並釋放
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for （用於 ONTAP ） * 選項卡中，選擇包含要刪除的卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要刪除磁碟區的檔案系統的操作，然後選擇 *管理*。
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
-. 從 Volumes （磁碟區）標籤中，選取要刪除的磁碟區的三點功能表。
+. 從「磁碟區」標籤中，選擇要刪除的磁碟區的操作選單。
 . 選擇 * 基本動作 * 、然後 * 刪除 Volume * 。
 . 在刪除 Volume 對話方塊中、執行下列步驟：
 +
@@ -37,7 +38,7 @@ summary: 刪除 FSX for ONTAP 檔案系統中不再需要的 Volume ，並釋放
 
 .. 選擇*繼續*。
 .. 輸入「 delete 」刪除磁碟區。
-.. 選擇*刪除*。
+.. 選擇*刪除*進行確認。
 
 
 

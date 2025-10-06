@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: limit-transfer-rate.html 
 keywords: limit max transfer rate, limit transfer rate 
-summary: 限制 BlueXP  工作負載工廠中複寫關係的最大傳輸率。 
+summary: 限制NetApp Workload Factory 中複製關係的最大傳輸速率。 
 ---
 = 限制複寫關係的最大傳輸率
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 限制 BlueXP  工作負載工廠中複寫關係的最大傳輸率。
 
 
 [role="lead"]
-限制 BlueXP  工作負載工廠中複寫關係的最大傳輸率。無限傳輸率可能會對其他應用程式和網路的效能造成負面影響。
+限制NetApp Workload Factory 中複製關係的最大傳輸速率。無限制的傳輸速率可能會對其他應用程式和網路的效能產生負面影響。
 
 .關於這項工作
 限制最大傳輸速率是選擇性的、但建議使用。如果沒有限制，網路和應用程式的效能可能會下降。
@@ -23,10 +23,11 @@ summary: 限制 BlueXP  工作負載工廠中複寫關係的最大傳輸率。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for （用於 ONTAP ） * 選項卡中，選擇要更新的文件系統的三點菜單，然後選擇 *Manage* （管理）。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要更新的檔案系統的操作，然後選擇 *管理*。
 . 從檔案系統總覽中、選取 * 複寫關係 * 索引標籤。
-. 在 [ 複寫關係 ] 索引標籤中，選取複寫關係的三點功能表，以限制的最大傳輸速率。
+. 在複製關係標籤中，選擇複製關係的操作選單來限制最大傳輸速率。
 . 選取 * 編輯最大傳輸率 * 。
 . 在「編輯最大傳輸率」對話方塊中、選取 * 限制 * 、然後輸入以 MB/s 為單位的最大傳輸限制
 +

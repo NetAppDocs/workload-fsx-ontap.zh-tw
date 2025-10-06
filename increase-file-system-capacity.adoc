@@ -4,7 +4,7 @@ permalink: increase-file-system-capacity.html
 keywords: adjust capacity, elastic file system capacity, increase file system capacity, increase FSx capacity, decrease file system capacity, decrease FSx capacity 
 summary: 手動調整 FSx for ONTAP檔案系統的 SSD 儲存容量，以滿足具有不同活動工作集的基於專案的工作負載的需求。 
 ---
-= 在工作負載工廠中調整檔案系統容量
+= 在 Workload Factory 中調整檔案系統容量
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -15,7 +15,7 @@ summary: 手動調整 FSx for ONTAP檔案系統的 SSD 儲存容量，以滿足�
 
 當使用的 SSD 儲存容量超過您指定的閾值時，增加 FSx for ONTAP檔案系統的 SSD 儲存容量，或在工作集不活動時減少 SSD 儲存容量，以提高成本效率。
 
-或者，您也可以link:enable-auto-capacity-management.html["啟用自動容量管理功能"]讓工作負載在工廠為您管理檔案系統容量。
+或者，您可以link:enable-auto-capacity-management.html["啟用自動容量管理功能"]因此 Workload Factory 會為您管理檔案系統容量。
 
 
 NOTE: 僅第二代檔案系統支援減少 SSD 儲存容量。
@@ -36,7 +36,7 @@ NOTE: 僅第二代檔案系統支援減少 SSD 儲存容量。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在 Storage （儲存設備）中、選取 * 前往 Storage inventory* （儲存設備庫存）。
+. 在儲存圖塊中，選擇*轉到儲存*。
 . 從儀表板中選擇*調整 SSD 容量*。
 . 選擇您要調整容量的檔案系統，然後選擇*繼續*。
 +

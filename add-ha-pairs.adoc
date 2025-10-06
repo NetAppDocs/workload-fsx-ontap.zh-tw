@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: add-ha-pairs.html 
 keywords: add high-availability pairs, add HA pairs, add HA pair, add high-availability pair, scale out, file system, fsx for ontap 
-summary: 將高可用度配對新增至 BlueXP  工作負載工廠的檔案系統，以橫向擴充檔案系統。 
+summary: 將高可用性對新增至NetApp Workload Factory 中的檔案系統以擴充檔案系統。 
 ---
-= 將 HA 配對新增至 BlueXP  工作負載工廠中的檔案系統
+= 在NetApp Workload Factory 中將 HA 對加入到檔案系統
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在 BlueXP  工作負載工廠中新增高可用度（ HA ）配對，以橫向擴充適用於 ONTAP 第二代單一 AZ 檔案系統的 FSX ，以提升效能和容量。這項擴充可讓您比第一代檔案系統更具效能擴充性和靈活度。
+新增高可用性 (HA) 對以在NetApp Workload Factory 中擴展 FSx for ONTAP第二代單可用區檔案系統，從而提高效能和容量。與第一代檔案系統相比，此擴充功能為您提供了更高的效能可擴展性和靈活性。
 
 .關於這項工作
 新的 HA 配對會使用相同的 SKU 和每個 HA 配對相同的容量來新增。
@@ -43,8 +43,9 @@ summary: 將高可用度配對新增至 BlueXP  工作負載工廠的檔案系�
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for ONTAP * 標籤的 * 資訊 * 下，選取 * HA 配對 * 旁的鉛筆圖示。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *資訊* 下的 *FSx for ONTAP* 中，選擇 *HA 對* 旁的鉛筆圖示。
 . 在 * 新增 HA 配對 * 對話方塊中，選取要新增至檔案系統的 HA 配對數。
 . 選取 * 新增 * 以確認新增 HA 配對。
 

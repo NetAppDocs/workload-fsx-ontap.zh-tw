@@ -11,7 +11,7 @@ summary: 自動為 ONTAP 檔案系統的 FSX 配置或手動配置 SSD IOPS 。
 
 
 [role="lead"]
-在 BlueXP  工作負載工廠中，自動為 ONTAP 檔案系統的 FSX 配置或手動配置 SSD IOPS 。
+在NetApp Workload Factory 中為 FSx for ONTAP檔案系統自動設定或手動設定 SSD IOPS。
 
 .關於這項工作
 您可以為 FSX 檔案系統啟用自動 SSD IOPS 資源配置、或手動配置 IOPS 。
@@ -24,8 +24,9 @@ summary: 自動為 ONTAP 檔案系統的 FSX 配置或手動配置 SSD IOPS 。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在 Storage （儲存設備）中、選取 * 前往 Storage inventory* （儲存設備庫存）。
-. 在 * 適用於 ONTAP * 的 FSX 索引標籤中，選取要為其配置 IOPS 的檔案系統三點功能表，然後選取 * 管理 * 。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要設定 IOPS 的檔案系統的操作選單，然後選擇 *管理*。
 . 在「資訊」下，選取當滑鼠移到 *IOPS allocation （ IOPS 分配）列上時，出現在下拉式箭頭旁的鉛筆圖示。
 . 在 [ 已配置的 IOPS ] 對話方塊中，選取 * 自動 * 或 * 使用者已配置 * 。
 . 如果您選取 * 使用者佈建 * ，請輸入所需的 * IOPS 值 * 。

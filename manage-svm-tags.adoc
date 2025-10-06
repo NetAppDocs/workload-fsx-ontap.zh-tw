@@ -4,21 +4,22 @@ permalink: manage-svm-tags.html
 keywords: edit storage vm tags, vm tags, svm tags 
 summary: 隨時新增、更新或移除儲存 VM 的儲存 VM 標籤。 
 ---
-= 在 BlueXP  工作負載工廠中管理儲存 VM 標籤
+= 在NetApp Workload Factory 中管理儲存虛擬機器標籤
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-標記可協助您分類資源。您可以隨時在 BlueXP  工作負載工廠中新增，編輯及移除儲存 VM 的標籤。
+標籤可以幫助您對資源進行分類。您可以隨時在NetApp Workload Factory 中新增、編輯和刪除儲存虛擬機器的標籤。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 * 適用於 ONTAP * 的 FSX 標籤中，選取要更新儲存 VM 的檔案系統的三點功能表，然後選取 * 管理 * 。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要更新的儲存虛擬機器的檔案系統的操作選單，然後選擇 *管理*。
 . 從檔案系統總覽中、選取 * 儲存 VMS* 標籤。
-. 從 Storage VMs 標籤中，選取要編輯標記的儲存 VM 的三點功能表。
+. 從「儲存虛擬機器」標籤中，選擇要編輯標籤的儲存虛擬機器的操作選單。
 . 選取 * 編輯儲存 VM 標記 * 。
 . 在「編輯儲存 VM 標籤」頁面上、新增、編輯或移除標籤。
 +

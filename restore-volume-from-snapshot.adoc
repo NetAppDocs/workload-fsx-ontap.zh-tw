@@ -4,14 +4,14 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot 
 summary: 當磁碟區包含刪除或毀損的檔案時、從快照中還原適用於 ONTAP Volume 的 FSX 。 
 ---
-= 從工作負載工廠中的快照還原卷
+= 從 Workload Factory 中的快照還原磁碟區
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在工作負載工廠中，您可以將資料從快照還原到現有磁碟區或新磁碟區。當磁碟區包含已刪除或損壞的檔案時，還原作業可以實現時間點復原。
+在 Workload Factory 中，您可以將資料從快照還原到現有磁碟區或新磁碟區。當磁碟區包含已刪除或損壞的檔案時，還原作業可以實現時間點復原。
 
 .關於這項工作
 您可以選擇將資料從快照還原到現有磁碟區或新磁碟區。
@@ -27,12 +27,13 @@ summary: 當磁碟區包含刪除或毀損的檔案時、從快照中還原適�
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在 * 儲存 * 中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for ONTAP （用於卷的 FSX ） * 選項卡中，選擇包含卷的文件系統的三點菜單，然後選擇 *Manag* （管理）。
+. 在*儲存*中，選擇*前往儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇具有磁碟區的檔案系統的操作選單，然後選擇 *管理*。
 . 在檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
-. 從 *Volumes （卷） * 選項卡中，選擇要從快照恢復的卷的三點菜單。
+. 從「*Volumes*」標籤中，選擇要從快照還原的磁碟區的操作選單。
 . 選擇*資料保護操作*，然後選擇*管理快照*。
-. 在管理快照頁面中，選擇要還原的快照的三點選單，然後選擇*還原*。
+. 在「管理快照」頁面中，選擇要還原的快照的操作選單，然後選擇「*恢復*」。
 . 在從快照還原磁碟區對話方塊中，從下列選項中進行選擇：
 +
 ** 切換選擇*恢復為新磁碟區*。

@@ -4,7 +4,7 @@ permalink: cascade-replication.html
 keywords: replicate, cascade, cascade replication, cascade deployment, data protection, volume replication, replicate data protection volume 
 summary: 複寫資料保護磁碟區，或串聯磁碟區資料的複寫，將資料保護延伸至第三系統或移轉資料。 
 ---
-= 在 BlueXP  工作負載工廠中複寫資料保護磁碟區
+= 在NetApp Workload Factory 中複製資料保護卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -14,7 +14,7 @@ summary: 複寫資料保護磁碟區，或串聯磁碟區資料的複寫，將�
 複寫資料保護磁碟區，或串聯磁碟區資料的複寫，將資料保護延伸至第三系統或移轉資料。
 
 .關於這項工作
-BlueXP  工作負載工廠支援複寫資料保護磁碟區，也稱為串聯部署。層疊式部署由一系列關係組成，其中來源 Volume 會鏡射至次要 Volume （第一跳），次要 Volume 則鏡射至第三個 Volume （第二跳）。如果次要Volume無法使用、您可以在不執行新的基礎傳輸的情況下、同步主要和第三個Volume之間的關係。
+NetApp Workload Factory 支援複製資料保護卷，也稱為_級聯部署_。 _級聯部署_由一系列關係組成，其中源卷鏡像到輔助卷（第一跳），輔助卷鏡像到第三卷（第二跳）。如果輔助磁碟區不可用，您可以同步主磁碟區和三級磁碟區之間的關係，而無需執行新的基準傳輸。
 
 適用於 ONTAP 9.6 版及更新版本 ONTAP 檔案系統的 FSX 支援此功能。請參閱 link:https://docs.netapp.com/us-en/ontap/data-protection/compatible-ontap-versions-snapmirror-concept.html#snapmirror-disaster-recovery-relationships["相容 ONTAP 版本的 ONTAP 文件"^]。
 
@@ -30,8 +30,9 @@ BlueXP  工作負載工廠支援複寫資料保護磁碟區，也稱為串聯�
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for ONTAP * 標籤中，選取包含要複寫之磁碟區的檔案系統三點功能表，然後選取 * 管理 * 。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇包含要複製的磁碟區的檔案系統的操作選單，然後選擇 *管理*。
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
 . 在 Volumes （磁碟區）表格中，選取一或多個資料保護磁碟區（ DP / 複寫磁碟區），然後選取 * Replicate data* 。
 . 在「複寫資料」頁面的「複寫目標」下，提供下列項目：
@@ -39,7 +40,7 @@ BlueXP  工作負載工廠支援複寫資料保護磁碟區，也稱為串聯�
 .. * 適用於 ONTAP 檔案系統 * 的 FSX ：針對適用於 ONTAP 檔案系統的目標 FSX 、選取 ONTAP 檔案系統名稱的認證、區域和 FSX 。
 .. * 儲存 VM 名稱 * ：從下拉式功能表中選取儲存 VM 。
 .. *Volume name* ：目標 Volume 名稱會自動以下列格式產生 `{OriginalVolumeName}_copy`。您可以使用自動產生的 Volume 名稱或輸入其他 Volume 名稱。
-.. * 使用案例 * ：選取下列其中一個複寫使用案例。視所選的使用案例而定，工作負載工廠會根據最佳實務做法，以建議的值填入表單。您可以接受建議的值，或在完成表單時進行變更。
+.. *用例*：選擇以下其中一個用例進行複製。根據所選的用例，Workload Factory 會根據最佳實踐在表單中填入建議值。您可以接受建議的數值，也可以在填寫表格時進行變更。
 +
 *** 移轉：將資料傳輸至 ONTAP 檔案系統的目標 FSX
 *** 熱災難恢復：確保關鍵工作負載的高可用度和快速災難恢復
@@ -54,10 +55,10 @@ BlueXP  工作負載工廠支援複寫資料保護磁碟區，也稱為串聯�
 
 .. * 分層原則 * ：選取儲存在目標 Volume 中的資料分層原則。分層原則預設為您所選使用案例的建議分層原則。
 +
-平衡（自動） _ 是使用工作負載原廠主控台建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^] AWS FSX for NetApp ONTAP 文件中的。請注意，工作負載工廠會在工作負載原廠主控台中使用以使用案例為基礎的名稱來分層原則，並在括弧中包含適用於 ONTAP 分層原則名稱的 FSX 。
+使用 Workload Factory 控制台建立磁碟區時，_平衡（自動）_ 是預設分層策略。有關卷分層策略的更多信息，請參閱link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^]在 AWS FSx for NetApp ONTAP文件中。請注意，工作負載工廠在工作負載工廠控制台中使用基於用例的名稱來制定分層策略，並在括號中包含 FSx for ONTAP分層策略名稱。
 
 +
-如果您選取移轉使用案例，工作負載工廠會自動選擇將來源 Volume 的分層原則複製到目標 Volume 。您可以取消選取以複製分層原則，並選取適用於所選複寫磁碟區的分層原則。
+如果您選擇了遷移案例，Workload Factory 會自動選擇將來源磁碟區的分層策略複製到目標磁碟區。您可以取消選擇複製分層策略並選擇適用於選擇進行複製的磁碟區的分層策略。
 
 .. * 最大傳輸速率 * ：選取 * 受限 * 、然後以 MB/s 為單位輸入最大傳輸限制或者、選取 * 無限 * 。
 +

@@ -2,16 +2,16 @@
 sidebar: sidebar 
 permalink: use-onprem-data.html 
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
-summary: 在 BlueXP  工作負載工廠中探索及複寫內部部署的 ONTAP 資料，以便用於豐富 AI 知識庫。 
+summary: 在NetApp Workload Factory 中發現並複製本地ONTAP數據，以便用於豐富 AI 知識庫。 
 ---
-= 在 BlueXP  工作負載工廠中使用內部部署的 ONTAP 叢集資料
+= 在NetApp Workload Factory 中使用本地ONTAP叢集數據
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在 BlueXP  工作負載工廠中探索及複寫內部部署的 ONTAP 資料，以便用於豐富 AI 知識庫。
+在NetApp Workload Factory 中發現並複製本地ONTAP數據，以便用於豐富 AI 知識庫。
 
 .關於這項工作
 若要使用內部部署 ONTAP 叢集的資料，您必須先探索內部部署 ONTAP 叢集。發現內部部署 ONTAP 叢集之後，您可以將資料用於下列任何一種使用案例。
@@ -31,7 +31,7 @@ summary: 在 BlueXP  工作負載工廠中探索及複寫內部部署的 ONTAP 
 
 == 探索內部部署 ONTAP 的叢集
 
-探索 BlueXP  工作負載工廠中的內部部署 ONTAP 叢集，以便將資料複寫到 Amazon FSX for NetApp ONTAP 檔案系統。
+在NetApp Workload Factory 中發現本機ONTAP集群，以便您可以將資料複製到Amazon FSx for NetApp ONTAP檔案系統。
 
 .開始之前
 開始之前，請確定您擁有下列項目：
@@ -48,13 +48,13 @@ image:screenshot-on-prem-connectivity.png["顯示內部部署 ONTAP 叢集應如
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
+. 在儲存圖塊中，選擇*轉到儲存*。
 . 選取 * 內部部署 ONTAP * 標籤。
 . 選擇* Discover（探索）*。
 . 檢閱先決條件，然後選取 * 下一步 * 。
 . 在「探索 ONTAP 內部部署」頁面上，於 * 叢集組態 * 下提供下列項目：
 +
-.. * 連結 * ：選取連結。此連結將與內部部署叢集相關聯，以在叢集和工作負載工廠之間建立連線。
+.. *連結*：選擇一個連結。此連結將與內部部署叢集相關聯，以在叢集和工作負載工廠之間建立連線。
 +
 如果您尚未建立連結，請依照指示操作，然後返回此作業並選取連結。
 
@@ -84,8 +84,8 @@ image:screenshot-on-prem-connectivity.png["顯示內部部署 ONTAP 叢集應如
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 選取 * 內部部署 ONTAP * 標籤。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *On-premises ONTAP*。
 . 若要依儲存 VM 尋找磁碟區，您可以從下拉式清單中 * 選取儲存 VM* 。
 . 選取一個或多個要複寫的磁碟區，然後選取 * Replicate * 。
 . 在「建立複寫」頁面的「複寫目標」下、提供下列項目：
@@ -95,7 +95,7 @@ image:screenshot-on-prem-connectivity.png["顯示內部部署 ONTAP 叢集應如
 .. *Volume name* ：目標 Volume 名稱會自動以下列格式產生 `{OriginalVolumeName}_copy`。您可以使用自動產生的 Volume 名稱或輸入其他 Volume 名稱。
 .. *Tiering data* ：為儲存在目標 Volume 中的資料選取分層原則。
 +
-*** * 自動 * ：使用 ONTAP 使用者介面的工作負載原廠 FSX 建立磁碟區時，預設的分層原則。在特定時間段內，將包含使用者資料和快照的所有冷資料分層至容量集區儲存層。
+*** *自動*：使用 Workload Factory FSx for ONTAP使用者介面建立磁碟區時的預設分層策略。將包含使用者資料和快照在內的所有冷資料分層到容量池儲存層，並保存特定時間段。
 *** * 僅限 Snapshot * ：將僅限階層的快照資料傳送至容量集區儲存層。
 *** * 無 * ：將所有 Volume 資料保留在主要儲存層。
 *** * 全部 * ：將所有使用者資料和快照資料標示為冷資料、並儲存在容量集區儲存層。
@@ -140,20 +140,20 @@ image:screenshot-on-prem-connectivity.png["顯示內部部署 ONTAP 叢集應如
 
 
 
-== 從 BlueXP  工作負載工廠移除內部部署 ONTAP 叢集
+== 從NetApp Workload Factory 中刪除本地ONTAP集群
 
-視需要從 BlueXP  工作負載工廠移除內部部署 ONTAP 叢集。
+需要時從NetApp Workload Factory 中刪除本地ONTAP叢集。
 
 .開始之前
 移除叢集之前，您必須link:delete-replication.html["刪除所有現有的複寫關係"]先移除內部部署 ONTAP 叢集中的任何磁碟區，才能避免關係中斷。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 選取 * 內部部署 ONTAP * 標籤。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *On-premises ONTAP*。
 . 選取要移除的內部部署 ONTAP 叢集。
-. 選取「三點」功能表，然後選取 * 從工作負載原廠移除 * 。
+. 選擇操作選單並選擇*從工作負載工廠中刪除*。
 
 
 .結果
-內部部署 ONTAP 叢集已從 BlueXP  工作負載工廠移除。
+本地ONTAP叢集已從NetApp Workload Factory 中刪除。

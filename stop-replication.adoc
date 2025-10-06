@@ -2,23 +2,24 @@
 sidebar: sidebar 
 permalink: stop-replication.html 
 keywords: stop replication, break replication 
-summary: 在 BlueXP  工作負載工廠中停止來源和目標磁碟區之間的複寫關係。 
+summary: 停止NetApp Workload Factory 中來源磁碟區和目標磁碟區之間的複製關係。 
 ---
-= 停止 BlueXP  工作負載工廠的複寫關係
+= 停止NetApp Workload Factory 中的複製關係
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-停止 BlueXP  工作負載工廠的複寫關係。當您停止複寫關係時，排程複寫會從來源磁碟區更新至目標磁碟區，並暫停。目標 Volume 會從唯讀轉換為讀寫。
+停止NetApp Workload Factory 中的複製關係。當您停止複製關係時，從來源磁碟區到目標磁碟區的計畫複製更新將暫停。目標卷從唯讀轉換為讀/寫。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for （用於 ONTAP ） * 選項卡中，選擇要更新的文件系統的三點菜單，然後選擇 *Manage* （管理）。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要更新的檔案系統的操作選單，然後選擇 *管理*。
 . 從檔案系統總覽中、選取 * 複寫關係 * 索引標籤。
-. 在複寫關係索引標籤中，選取要停止複寫關係的三點功能表。
+. 在複製關係標籤中，選擇要停止的複製關係的操作選單。
 . 選取 * 中斷 * 。
 . 在中斷複寫對話方塊中、選取 * 中斷 * 。
 

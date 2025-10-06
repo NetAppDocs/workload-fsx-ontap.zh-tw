@@ -1,8 +1,8 @@
 ---
 indexpage:
-  title: Amazon FSX for NetApp ONTAP for BlueXP  工作負載原廠文件
-  lead: Amazon FSX for NetApp ONTAP 功能將ONTAP 完整的功能整合至原生AWS託管服務、提供一致的混合雲體驗。本文件說明如何使用
-    BlueXP  工作負載工廠來管理適用於 ONTAP 的 FSX 。
+  title: Amazon FSx for NetApp ONTAP for NetApp Workload Factory 文件
+  lead: Amazon FSx for NetApp ONTAP將ONTAP的全部功能引入原生 AWS 託管服務，提供一致的混合雲體驗。本文檔介紹如何使用NetApp
+    Workload Factory 管理 FSx for ONTAP 。
   tiles:
   - title: 開始使用
     links:
@@ -32,9 +32,9 @@ indexpage:
       url: "/get-help.html"
   - title: 部落格與社群
     links:
+    - title: NetApp控制台
+      url: https://www.netapp.com/console
+    - title: NetApp資料服務
+      url: https://www.netapp.com/data-services/
     - title: NetApp社群
-      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
-    - title: BlueXP部落格
-      url: https://bluexp.netapp.com/blog
-    - title: 雲端網路研討會
-      url: https://bluexp.netapp.com/events
+      url: https://community.netapp.com/

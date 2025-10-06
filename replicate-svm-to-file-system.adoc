@@ -11,17 +11,18 @@ summary: 將儲存 VM 複製到另一個適用於 ONTAP 檔案系統的 FSX 、�
 
 
 [role="lead"]
-在 BlueXP  工作負載工廠中，將儲存 VM 複製到另一個適用於 ONTAP 檔案系統的 FSX ，可在資料遺失時提供保護層的資料存取。此作業會將一個儲存 VM 中的所有磁碟區複寫到另一個適用於 ONTAP 檔案系統的 FSX 。
+在NetApp Workload Factory 中將儲存虛擬機器複製到另一個 FSx for ONTAP檔案系統可在資料遺失時提供資料存取的保護層。此操作將一個儲存虛擬機器中的所有磁碟區複製到另一個 FSx for ONTAP檔案系統。
 
 .開始之前
 若要將儲存虛擬機器複製到另一個 FSx for ONTAP 檔案系統，您必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 * 適用於 ONTAP * 的 FSX 標籤中，選取檔案系統的三點功能表，並將儲存 VM 複寫到其中，然後選取 * 管理 * 。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要複製儲存虛擬機器的檔案系統的操作選單，然後選擇 *管理*。
 . 從檔案系統總覽中、選取 * 儲存 VMS* 標籤。
-. 從 Storage VMs （儲存 VM ）標籤中，選取要複寫 SVM 的儲存 VM 的三點功能表。
+. 從「儲存虛擬機器」標籤中，選擇要為其複製 SVM 的儲存虛擬機器的操作選單。
 . 選取 * 複寫儲存 VM* 。
 . 在「建立複寫」頁面的「複寫目標」下、提供下列項目：
 +
@@ -30,7 +31,7 @@ summary: 將儲存 VM 複製到另一個適用於 ONTAP 檔案系統的 FSX 、�
 .. *Volume name* ：目標 Volume 名稱會自動以下列格式產生 `{OriginalVolumeName}_copy`。
 .. * 分層原則 * ：選取儲存在目標 Volume 中的資料分層原則。
 +
-_Auto_ 是使用 ONTAP 使用者介面的工作負載原廠 FSX 建立 Volume 時的預設分層原則。如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^]AWS FSX for NetApp ONTAP 文件中的。
+使用 Workload Factory FSx for ONTAP使用者介面建立磁碟區時，_Auto_ 是預設分層策略。有關卷分層策略的更多信息，請參閱link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^]在 AWS FSx for NetApp ONTAP文件中。
 
 .. * 最大傳輸速率 * ：選取 * 受限 * 、然後以 MB/s 為單位輸入最大傳輸限制或者、選取 * 無限 * 。
 +

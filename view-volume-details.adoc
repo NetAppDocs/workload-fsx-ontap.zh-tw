@@ -4,7 +4,7 @@ permalink: view-volume-details.html
 keywords: volume details, volume information 
 summary: 檢視 Volume 詳細資料、配送、使用、存取和保護。 
 ---
-= 在 BlueXP  工作負載工廠中檢視 Volume 詳細資料
+= 在NetApp Workload Factory 中查看卷詳細信息
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -17,8 +17,8 @@ summary: 檢視 Volume 詳細資料、配送、使用、存取和保護。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 Volumes （磁碟區）標籤中，針對您要修改的磁碟區選取三點選單。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 在「卷」標籤中，選擇要修改的磁碟區的操作選單。
 . 選擇 * 基本動作 * 、然後 * 檢視 Volume 詳細資料 * 。
 . 在 * Volume details* 中、選取標籤以檢視下列 Volume 詳細資料：
 +

@@ -4,7 +4,7 @@ permalink: manage-immutable-files.html
 keywords: enable immutable files, disable immutable files, lock files, unlock files 
 summary: 啟用此功能時，您可以更新某些不可變更的檔案設定。 
 ---
-= 在 BlueXP  工作負載工廠中管理磁碟區的不可變檔案
+= 在NetApp Workload Factory 中管理磁碟區的不可變文件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -17,9 +17,10 @@ summary: 啟用此功能時，您可以更新某些不可變更的檔案設定�
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 選擇 * Volumes （卷） * 選項卡。
-. 在 Volumes （磁碟區）標籤中、選取要複製之磁碟區的 thThree thots （三點）功能表。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要更新磁碟區的檔案系統的操作選單，然後選擇 *管理*。
+. 在「磁碟區」標籤中，選擇要複製的磁碟區的操作選單。
 . 選擇 * 資料保護動作 * ，然後 * 管理不可變的檔案 * 。
 . 在「管理不可修改的檔案」頁面上，您可以更新下列項目：
 +
@@ -35,6 +36,7 @@ summary: 啟用此功能時，您可以更新某些不可變更的檔案設定�
 
 
 ** *AUTOCOMMIT* ：啟用或停用自動將檔案提交至 WORM 的功能，但此功能在 AUTOCOMMIT 期間尚未修改。
+** *特權刪除*：啟用或停用該功能。啟用此功能可讓SnapLock管理員刪除未過期的 WORM 磁碟區。此功能僅在企業保留模式下支援。
 ** * Volume 附加模式 * ：啟用或停用此功能。啟用 Volume 附加模式可讓您將新內容新增至 WORM 檔案。
 
 

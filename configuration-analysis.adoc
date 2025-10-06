@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configuration-analysis.html 
 keywords: configuration issues, issues, improve, analyze, storage configuration, Amazon FSx for NetApp ONTAP, FSx for ONTAP, recommendation, recommendations 
-summary: BlueXP  工作負載工廠會定期分析 Amazon FSX for NetApp ONTAP 檔案系統組態，以判斷是否有任何問題。 
+summary: NetApp Workload Factory 定期分析Amazon FSx for NetApp ONTAP檔案系統配置，以確定是否有任何問題。 
 ---
 = 適用於 ONTAP 檔案系統的 FSX 組態分析
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: BlueXP  工作負載工廠會定期分析 Amazon FSX for NetApp ONTAP 
 
 
 [role="lead"]
-BlueXP  工作負載工廠會定期分析 Amazon FSX for NetApp ONTAP 檔案系統組態，以判斷是否有任何問題。發現問題時，工作負載工廠會向您說明問題所在，並說明需要變更哪些項目，以確保檔案系統儲存設備達到尖峰效能，成本效益，並符合最佳實務做法。
+NetApp Workload Factory 定期分析Amazon FSx for NetApp ONTAP檔案系統配置，以確定是否有任何問題。當發現問題時，Workload Factory 會向您展示問題所在，並解釋需要進行哪些更改以確保您的檔案系統儲存達到最佳效能、成本效益並符合最佳實踐。
 
 主要功能包括：
 
@@ -26,7 +26,7 @@ BlueXP  工作負載工廠會定期分析 Amazon FSX for NetApp ONTAP 檔案系
 
 == 架構良好的狀態
 
-在檔案系統層級的工作負載原廠主控台中，所有適用於 ONTAP 檔案系統的 FSX 都會列出架構良好的狀態。架構良好的狀態可歸類為「問題」，「未分析」或「架構良好」。選擇架構良好的狀態會將您重新導向至檔案系統內架構良好的狀態索引標籤，您可以在其中找到架構良好的分數，組態類別，檔案系統的所有組態。
+在檔案系統層級的 Workload Factory 控制台中，列出了所有 FSx for ONTAP檔案系統的良好架構狀態。架構良好的狀態分為「問題」、「未分析」或「架構良好」。選擇良好架構狀態會將您重新導向至檔案系統內的良好架構狀態標籤，您可以在其中找到良好架構分數、設定類別以及檔案系統的所有設定。
 
 架構良好的分數:: 分數包括所有目前分析的組態，並以百分比顯示。25% 的分數表示 25% 的檔案系統組態架構良好。
 組態類別:: 檔案系統組態分為幾類，符合 AWS 架構良好的架構架構的下列五大支柱。
@@ -46,7 +46,7 @@ BlueXP  工作負載工廠會定期分析 Amazon FSX for NetApp ONTAP 檔案系
 
 == 分析需求
 
-若要進行完整的檔案系統分析，您必須建立連結的關聯。連結連線功能可讓工作負載在工廠中分析所有檔案系統組態，例如資料保護和效能。
+為了進行完整的檔案系統分析，您必須關聯一個連結。連結連接讓 Workload Factory 可以分析所有檔案系統配置，例如資料保護和效能。
 
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。
 

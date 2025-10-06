@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: update-throughput-capacity.html 
 keywords: update throughput, change throughput, throughput capacity 
-summary: 視需要在 BlueXP  工作負載工廠中更新適用於 ONTAP 檔案系統的 FSX 處理量容量。 
+summary: 根據需要更新NetApp Workload Factory 中 FSx for ONTAP檔案系統的吞吐容量。 
 ---
 = 更新檔案系統的處理量容量
 :allow-uri-read: 
@@ -11,14 +11,15 @@ summary: 視需要在 BlueXP  工作負載工廠中更新適用於 ONTAP 檔案
 
 
 [role="lead"]
-視需要在 BlueXP  工作負載工廠中更新適用於 ONTAP 檔案系統的 FSX 處理量容量。
+根據需要更新NetApp Workload Factory 中 FSx for ONTAP檔案系統的吞吐容量。
 
 如需處理量容量限制、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配額"^] AWS FSX for NetApp ONTAP 文件。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在 Storage （儲存設備）中、選取 * 前往 Storage inventory* （儲存設備庫存）。
-. 在 * 適用於 ONTAP * 的 FSX 標籤中，選取檔案系統的三點功能表以更新的處理量容量，然後選取 * 管理 * 。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要更新吞吐量容量的檔案系統的作業選單，然後選擇 *管理*。
 . 在「資訊」下，選取「 * 輸送量容量 * 」旁邊的鉛筆圖示。當滑鼠移動到 * 輸送量容量 * 列上時、下拉式箭頭旁會出現鉛筆圖示。
 . 在「處理量容量」對話方塊中、選取您需要的處理量容量。
 . 選取 * 套用 * 以儲存變更。

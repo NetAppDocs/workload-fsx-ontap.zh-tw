@@ -33,7 +33,7 @@ ARP/AI 功能會根據Amazon FSx for NetApp ONTAP執行的ONTAP版本自動更�
 學習和作用中模式:: ARP/AI 先在_學習模式_下執行，然後自動切換到_主動模式_。
 +
 --
-* *學習模式*：當您啟用 ARP/AI 時，它以_學習模式_運行。在學習模式下，FSx for ONTAP檔案系統根據分析區域（熵、檔案擴充類型和檔案 IOPS）開發警報設定檔。在檔案系統以學習模式運行 ARP/AI 足夠時間以評估工作負載特徵後，工作負載工廠會自動切換到 ARP/AI 到_主動模式_並開始保護您的資料。
+* *學習模式*：當您啟用 ARP/AI 時，它以_學習模式_運行。在學習模式下，FSx for ONTAP檔案系統根據分析區域（熵、檔案擴充類型和檔案 IOPS）開發警報設定檔。在檔案系統以學習模式執行 ARP/AI 足夠時間以評估工作負載特徵後，Workload Factory 會自動切換到 ARP/AI 到_主動模式_並開始保護您的資料。
 * *主動模式*：ARP/AI 切換到_主動模式_後，如果偵測到威脅，FSx for ONTAP會建立 ARP/AI 快照來保護資料。
 +
 在作用中模式中、如果檔案副檔名標示為異常、您應該評估警示。您可以對警示採取行動以保護資料、也可以將警示標記為誤報。將警示標記為誤報會更新警示設定檔。例如、如果警示是由新的副檔名觸發、而您將警示標記為誤判、則下次觀察到該副檔名時、您將不會收到警示。
@@ -58,7 +58,7 @@ ARP/AI 功能會根據Amazon FSx for NetApp ONTAP執行的ONTAP版本自動更�
 
 為檔案系統啟用 ARP/AI 會自動為所有現有 NAS 和新建立的 NAS（NFS/SMB）磁碟區新增保護。您也可以為單一磁碟區啟用 ARP/AI。
 
-啟用 ARP/AI 後，如果發生攻擊並且您確定攻擊是真實的，工作負載工廠會自動設定快照策略，每四小時最多拍攝六次快照。每個快照鎖定2-5天。
+啟用 ARP/AI 後，如果發生攻擊並且您確定攻擊是真實的，Workload Factory 會自動設定快照策略，每四小時最多拍攝六次快照。每個快照鎖定2-5天。
 
 .開始之前
 若要為檔案系統或磁碟區啟用 ARP/AI，您必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"] 。連結關聯後，返回此操作。
@@ -69,8 +69,9 @@ ARP/AI 功能會根據Amazon FSx for NetApp ONTAP執行的ONTAP版本自動更�
 --
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在 Storage （儲存設備）中、選取 * 前往 Storage inventory* （儲存設備庫存）。
-. 在 *FSx for ONTAP* 標籤中，選擇檔案系統的三點選單以啟用 ARP/AI，然後選擇 *管理*。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇檔案系統的操作選單以啟用 ARP/AI，然後選擇 *管理*。
 . 在資訊下，選擇「自主勒索軟體防護」旁的鉛筆圖示。當滑鼠停留在「Autonomous Ransomware Protection」行上時，箭頭旁邊會出現一個鉛筆圖示。
 . 在NetApp自主勒索軟體防護 AI (ARP/AI) 頁面中，執行以下操作：
 +
@@ -89,9 +90,10 @@ ARP/AI 功能會根據Amazon FSx for NetApp ONTAP執行的ONTAP版本自動更�
 --
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在 Storage （儲存設備）中、選取 * 前往 Storage inventory* （儲存設備庫存）。
-. 在 *FSx for ONTAP* 標籤中，選擇檔案系統的三點選單以啟用 ARP/AI，然後選擇 *管理*。
-. 從「磁碟區」標籤中，選擇磁碟區的三點選單以啟用 ARP/AI，然後選擇*資料保護操作*，然後選擇*管理 ARP/AI*。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇檔案系統的操作選單以啟用 ARP/AI，然後選擇 *管理*。
+. 從「磁碟區」標籤中，選擇磁碟區的操作選單以啟用 ARP/AI，然後選擇*資料保護操作*，然後選擇*管理 ARP/AI*。
 . 在管理 ARP/AI 對話方塊中，執行以下操作：
 +
 .. 啟用或停用該功能。
@@ -112,7 +114,9 @@ ARP/AI 功能會根據Amazon FSx for NetApp ONTAP執行的ONTAP版本自動更�
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在 Storage （儲存設備）中、選取 * 前往 Storage inventory* （儲存設備庫存）。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要驗證勒索軟體攻擊的檔案系統。
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
 . 從「自主勒索軟體保護」磚中選取 * 分析攻擊 * 。
 . 下載攻擊事件報告，檢閱是否有任何檔案或資料夾遭到入侵，然後決定是否發生攻擊。
@@ -132,7 +136,9 @@ ARP/AI 功能會根據Amazon FSx for NetApp ONTAP執行的ONTAP版本自動更�
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在 Storage （儲存設備）中、選取 * 前往 Storage inventory* （儲存設備庫存）。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要還原資料的檔案系統。
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
 . 從「自主勒索軟體保護」磚中選取 * 分析攻擊 * 。
 . 如果發生攻擊，請針對表格中的磁碟區選取 * 實際攻擊 * 。

@@ -2,38 +2,38 @@
 sidebar: sidebar 
 permalink: quick-start.html 
 keywords: Amazon FSx for NetApp ONTAP, fsx, netapp, quick, get started, install, deploy, setup, launch, requirements, prerequisites, credentials, permissions, policy 
-summary: 只需幾個步驟，就能在 BlueXP  工作負載工廠開始使用適用於 ONTAP 的 FSX 。 
+summary: 只需幾個步驟，即可在NetApp Workload Factory 中開始使用 FSx for ONTAP 。 
 ---
-= 在 BlueXP  工作負載工廠中快速啟動 Amazon FSX for NetApp ONTAP
+= NetApp Workload Factory 中Amazon FSx for NetApp ONTAP的快速入門
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在 BlueXP  工作負載工廠中使用 Amazon FSX for NetApp ONTAP ，您可以立即以 _basive_ 模式開始使用。
+透過NetApp Workload Factory 中的Amazon FSx for NetApp ONTAP ，您可以立即以_基本_模式開始使用。
 
-如果您想要使用工作負載工廠來建立檔案系統，管理資源等，只需幾個步驟即可開始使用。在這種情況下，您需要 AWS 帳戶和認證才能開始使用。
+如果您想使用 Workload Factory 來建立檔案系統、管理資源等，只需幾個步驟即可開始。在這種情況下，您需要一個 AWS 帳戶和憑證才能開始使用。
 
 請依照下列步驟開始使用。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"]登入工作負載工廠
 [role="quick-margin-para"]
-您需要 link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["在工作負載工廠設定帳戶"^] 和 link:https://console.workloads.netapp.com["登入"^]
+你需要link:https://docs.netapp.com/us-en/workload-setup-admin/sign-up-saas.html["在 Workload Factory 上建立帳戶"^]和link:https://console.workloads.netapp.com["登入"^]
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 新增認證和權限
 [role="quick-margin-para"]
 在 _basic_、_read-only_ 和 _read/write_ 之間進行選擇link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["作業模式"^]
 
 [role="quick-margin-para"]
-如果您選擇以 _basive_ 模式操作、就不需要再繼續操作。您可以開始使用 FSX for ONTAP 的工作負載原廠來複製部分完成的程式碼範例。
+如果您選擇以基本模式操作，則無需再進行任何操作。您可以開始使用 Workload Factory for FSx for ONTAP複製部分完成的程式碼範例。
 
 [role="quick-margin-para"]
 如果您在「唯讀」或「讀取/寫入」模式下操作，則需要link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手動新增認證至帳戶"^]其中包括選擇工作負載功能（例如資料庫和 AI）以及建立 IAM 策略以確保您擁有以_唯讀_或_讀/寫_模式操作的正確權限。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 建立檔案系統
 [role="quick-margin-para"]
-您將建立一個 FSX 檔案系統，開始在工作負載工廠中管理您的儲存設備和 ONTAP 資源的 FSX 。在的link:https://console.workloads.netapp.com["工作負載原廠主控台"^]儲存區中，選取 * 建立檔案系統 * 。link:create-file-system.html["瞭解如何建立檔案系統"]。
+您將建立一個 FSx 檔案系統來開始在 Workload Factory 中管理您的儲存空間和 FSx for ONTAP資源。在link:https://console.workloads.netapp.com["工作負載工廠控制台"^]在儲存中，選擇*建立檔案系統*。link:create-file-system.html["瞭解如何建立檔案系統"] 。
 
 [role="quick-margin-para"]
 您也可以從儲存節約計算機開始、比較 Amazon Elastic Block Store 、 Elastic File System 和適用於 Windows 檔案伺服器儲存環境的 FSX 與適用於 ONTAP 的 FSX 的成本。 link:explore-savings.html["使用儲存節約計算機探索節約效益。"]

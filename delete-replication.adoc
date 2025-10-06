@@ -2,25 +2,26 @@
 sidebar: sidebar 
 permalink: delete-replication.html 
 keywords: delete replication 
-summary: 視需要刪除 BlueXP  工作負載工廠中的複寫關係。 
+summary: 根據需要刪除NetApp Workload Factory 中的複製關係。 
 ---
-= 刪除 BlueXP  工作負載工廠中的複寫關係
+= 在NetApp Workload Factory 中刪除複製關係
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-刪除 BlueXP  工作負載工廠中的複寫關係。刪除複寫關係時、會移除來源磁碟區和目標磁碟區之間的複寫關係。複寫關係刪除之後、兩個磁碟區仍會與它們所包含的目前資料保持不中斷的狀態。
+刪除NetApp Workload Factory 中的複製關係。當您刪除複製關係時，它會刪除來源磁碟區和目標磁碟區之間的複製關係。刪除複製關係後，兩個磁碟區將繼續獨立存在，並保留其包含的當前資料。
 
 當您刪除複寫關係時、適用於 ONTAP 的 FSX 也會刪除來源和目標 Volume 的一般複寫快照。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 *FSX for （用於 ONTAP ） * 選項卡中，選擇要更新的文件系統的三點菜單，然後選擇 *Manage* （管理）。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要更新的檔案系統的操作選單，然後選擇 *管理*。
 . 從檔案系統總覽中、選取 * 複寫關係 * 索引標籤。
-. 在「複寫關係」索引標籤中，選取要刪除複寫關係的三點功能表。
+. 在複製關係標籤中，選擇要刪除的複製關係的操作選單。
 . 選擇*刪除*。
 . 在刪除關係對話方塊中，選取 * 刪除 * 。
 

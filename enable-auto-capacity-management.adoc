@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: enable-auto-capacity-management.html 
 keywords: auto capacity, automatic capacity management, file system capacity 
-summary: 啟用此功能可讓工作負載原廠自動將遞增儲存設備新增至適用於 ONTAP 檔案系統的 FSX ，以因應容量需求隨時間變化。 
+summary: 啟用此功能後，Workload Factory 可以根據容量需求隨時間的變化自動向 FSx for ONTAP檔案系統新增增量儲存。 
 ---
 = 為 ONTAP 檔案系統啟用 FSX 的自動容量管理
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 啟用此功能可讓工作負載原廠自動將遞增儲存設備新�
 
 
 [role="lead"]
-啟用自動容量管理後，BlueXP 工作負載工廠可根據容量需求隨時間變化自動為 FSx for ONTAP 檔案系統新增增量儲存。此外，啟用此功能無需手動監控容量，並降低了影響應用程式資料讀寫的風險。
+啟用自動容量管理後， NetApp Workload Factory 可以根據容量需求隨時間的變化自動在 FSx for ONTAP檔案系統中新增增量儲存。此外，啟用此功能無需手動監控容量，並可降低影響應用程式資料讀寫的風險。
 
 .關於這項工作
 每 30 分鐘掃描一次 ONTAP 檔案系統的 FSX ，以判斷是否需要新增遞增儲存設備，以及檢查可用的 Volume inode ，或是磁碟區中的檔案和資料夾數目上限，以便根據設定的自動容量管理臨界值來增加其數量。
@@ -23,15 +23,16 @@ summary: 啟用此功能可讓工作負載原廠自動將遞增儲存設備新�
 .開始之前
 開始之前請先考慮下列事項：
 
-* 您必須擁有工作負載工廠中具有讀取/寫入權限的憑證才能完成此任務。
+* 您必須擁有 Workload Factory 中具有讀取/寫入權限的憑證才能完成此任務。
 * 為了確保磁碟區 inode 隨著儲存容量的增加而增加，您必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
 * 您不應在資料遷移期間啟用此功能，因為 AWS 規定 SSD 容量增加之間至少需要六小時的冷卻期。此限制可能會延遲調整，因此請做好相應的規劃。
 
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在 Storage （儲存設備）中、選取 * 前往 Storage inventory* （儲存設備庫存）。
-. 在 * 適用於 ONTAP * 的 FSX 標籤中，選取檔案系統的三點功能表，以啟用的自動容量管理。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇檔案系統的操作選單以啟用自動容量管理。
 . 選擇*管理*。
 . 在「資訊」下，選取 * 自動容量管理 * 旁的鉛筆圖示。當滑鼠移動到 * 自動容量管理 * 列上時、下拉式箭頭旁會出現鉛筆圖示。
 . 在 * 自動容量管理 * 對話方塊中、提供下列項目：

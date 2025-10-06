@@ -4,14 +4,14 @@ permalink: split-cloned-volume.html
 keywords: split clone volume, FlexVol volume 
 summary: 將複本 FlexVol volume 從其父磁碟區分割成正常的讀寫 FlexVol volume 。 
 ---
-= 在 BlueXP  工作負載工廠中分割複製的磁碟區
+= 在NetApp Workload Factory 中拆分克隆卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-將複製的 FlexVol volume 從其父磁碟區分割開來，使複製作業成為 BlueXP  工作負載工廠中的正常讀寫 FlexVol volume 。
+將克隆的FlexVol volume與其父磁碟區分離，使複製成為NetApp Workload Factory 中的正常讀取/寫入FlexVol volume。
 
 分割期間、可在複本和父實體上存取資料。分割程序只會更新中繼資料、而且需要最少的 IO 。不會複製任何資料區塊。
 
@@ -35,9 +35,11 @@ summary: 將複本 FlexVol volume 從其父磁碟區分割成正常的讀寫 Fle
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 選擇 * Volumes （卷） * 選項卡。
-. 在 Volumes （磁碟區）標籤中，選取要分割之複製磁碟區的磁碟區三點功能表。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要分割的磁碟區複製的檔案系統的操作選單，然後選擇 *管理*。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 在「磁碟區」標籤中，選擇要分割的複製卷的操作選單。
 . 選擇 * 資料保護動作 * 、然後 * 分割複製的 Volume * 。
 . 在分割磁碟區對話方塊中，選取 * 刪除 * 。
 

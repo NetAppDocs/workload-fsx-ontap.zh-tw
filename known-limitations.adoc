@@ -63,7 +63,7 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 == 儲存VM
 
-每個 SKU 的儲存 VM 數量有限。工作負載工廠不支援建立超出限制的儲存 VM 。 ^1^
+每個 SKU 的儲存虛擬機器數量是有限的。  Workload Factory 不支援建立超出限制的儲存虛擬機器。 ^1^
 
 如需每個檔案系統的 SVM 最大數量、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["管理 ONTAP 儲存虛擬機器的 FSX"^] AWS 文件中的。
 
@@ -117,7 +117,7 @@ System Manager 不支援用於 ONTAP 連線的 FSX 連結。
 
 == AWS Secrets Manager 支援
 
-使用 Connector 時不支援 AWS Secrets Manager 。
+使用控制台代理程式時不支援 AWS Secrets Manager。
 
 附註：
 

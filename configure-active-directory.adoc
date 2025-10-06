@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: configure-active-directory.html 
 keywords: configure AD, configure active directory, update ad, edit active directory 
-summary: 在 BlueXP  工作負載工廠中，為適用於 ONTAP 檔案系統的 FSX 中的儲存 VM 設定及更新 Active Directory 。 
+summary: 在NetApp Workload Factory 中為 FSx for ONTAP檔案系統中的儲存虛擬機器設定和更新 Active Directory。 
 ---
 = 設定及更新儲存 VM 的 Active Directory
 :allow-uri-read: 
@@ -11,17 +11,18 @@ summary: 在 BlueXP  工作負載工廠中，為適用於 ONTAP 檔案系統的
 
 
 [role="lead"]
-在 BlueXP  工作負載工廠中，為適用於 ONTAP 檔案系統的 FSX 中的儲存 VM 設定及更新 Active Directory 。
+在NetApp Workload Factory 中為 FSx for ONTAP檔案系統中的儲存虛擬機器設定和更新 Active Directory。
 
 .關於這項工作
 同樣的步驟也適用於設定及更新儲存 VM 的 Active Directory 。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 移至儲存設備詳細目錄 * 。
-. 在 * 適用於 ONTAP * 的 FSX 標籤中，選取要更新儲存 VM 的檔案系統的三點功能表，然後選取 * 管理 * 。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要更新的儲存虛擬機器的檔案系統的操作選單，然後選擇 *管理*。
 . 從檔案系統總覽中、選取 * 儲存 VMS* 標籤。
-. 從 Storage VMs （儲存 VM ）標籤中，選取要設定 Active Directory 的儲存 VM 的三點功能表。
+. 從「儲存虛擬機器」標籤中，選擇要為其設定 Active Directory 的儲存虛擬機器的操作選單。
 . 選取 * 管理 AD 組態 * 。
 . 在「管理 AD 組態」頁面上、提供下列項目：
 +

@@ -1,17 +1,17 @@
 ---
 sidebar: sidebar 
 permalink: create-file-system.html 
-keywords: create, FSx file system, ONTAP file system, workload factory, storage 
-summary: 使用 BlueXP  工作負載工廠，您可以為 ONTAP 檔案系統建立 FSX ，以新增及管理磁碟區和其他資料服務。 
+keywords: create, FSx file system, ONTAP file system, Workload Factory, storage 
+summary: 使用NetApp Workload Factory，您可以建立 FSx for ONTAP檔案系統來新增和管理磁碟區和其他資料服務。 
 ---
-= 在 BlueXP  工作負載工廠中為 ONTAP 檔案系統建立 FSX
+= 在NetApp Workload Factory 中建立 FSx for ONTAP檔案系統
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-使用 BlueXP 工作負載工廠，您可以建立第一代和第二代 FSx for ONTAP 檔案系統來新增和管理磁碟區和附加資料服務。
+使用NetApp Workload Factory，您可以建立第一代和第二代 FSx for ONTAP檔案系統來新增和管理磁碟區和其他資料服務。
 
 .關於這項工作
 儲存 VM 和安全性群組是建立檔案系統的一部分。
@@ -19,7 +19,7 @@ summary: 使用 BlueXP  工作負載工廠，您可以為 ONTAP 檔案系統建
 .開始之前
 在為 ONTAP 檔案系統建立 FSX 之前、您需要：
 
-* IAM 角色的 ARN ，賦予工作負載工廠為 ONTAP 檔案系統建立 FSX 所需的權限。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["瞭解如何授予 AWS 帳戶權限"^]。
+* IAM 角色的 ARN，該角色為 Workload Factory 提供建立 FSx for ONTAP檔案系統所需的權限。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["瞭解如何授予 AWS 帳戶權限"^] 。
 * 您將在其中建立FSX以利ONTAP 執行個體的區域和VPC資訊。
 
 
@@ -42,14 +42,14 @@ NOTE: 從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 為 ONTAP * 建立 FSX 。
+. 在儲存磁貼中，選擇*建立 FSx for ONTAP*。
 . 在 Create FSX for （為 ONTAP 建立 FSX ）頁面上、選取 * Quick create* （快速建立 * ）。
 +
 您也可以載入儲存的組態。
 
 . 在「檔案系統一般組態」下、提供下列項目：
 +
-.. * AWS 認證 * ：選取以在工作負載工廠中新增 AWS 認證，或在沒有認證的情況下繼續。
+.. *AWS 憑證*：選擇在 Workload Factory 中新增 AWS 憑證或繼續不使用憑證。
 .. * 檔案系統名稱 * ：輸入檔案系統的名稱。
 .. * 區域與 VPC* ：選取檔案系統的區域與 VPC 。
 .. * 部署類型 * ：選擇部署類型。
@@ -114,14 +114,14 @@ NOTE: 從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存設備中、選取 * 為 ONTAP * 建立 FSX 。
+. 在儲存磁貼中，選擇*建立 FSx for ONTAP*。
 . 在 Create FSX for （為 ONTAP 建立 FSX ）頁面上、選取 * Advanced create* （進階建立 * ）。
 +
 您也可以載入儲存的組態。
 
 . 在「檔案系統一般組態」下、提供下列項目：
 +
-.. * AWS 認證 * ：選取以在工作負載工廠中新增 AWS 認證，或在沒有認證的情況下繼續。
+.. *AWS 憑證*：選擇在 Workload Factory 中新增 AWS 憑證或繼續不使用憑證。
 .. * 檔案系統名稱 * ：輸入檔案系統的名稱。
 .. * 區域與 VPC* ：選取檔案系統的區域與 VPC 。
 .. *部署類型*：選擇部署類型和檔案系統產生。第二代檔案系統的可用性取決於所選的區域。如果所選區域不支援第二代 FSx for ONTAP 檔案系統，則部署類型將切換為第一代。
