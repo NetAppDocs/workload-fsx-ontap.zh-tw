@@ -124,7 +124,7 @@ FlexVol 卷已重新平衡。當作業完成時，檔案系統將會被節流回
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在*存儲*中，選擇*轉到存儲
+. 在*儲存*中，選擇*前往儲存*
 . 從儲存選單中，選擇 *FSx for ONTAP*。
 . 從 *FSx for ONTAP* 中，選擇包含要重新平衡的磁碟區的檔案系統的操作選單，然後選擇 *管理*。
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
