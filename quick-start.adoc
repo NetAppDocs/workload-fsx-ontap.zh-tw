@@ -23,13 +23,13 @@ summary: 只需幾個步驟，即可在NetApp Workload Factory 中開始使用 F
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 新增認證和權限
 [role="quick-margin-para"]
-在 _basic_、_read-only_ 和 _read/write_ 之間進行選擇link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["作業模式"^]
+選擇link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["權限策略"^]滿足您的需求。
 
 [role="quick-margin-para"]
-如果您選擇以基本模式操作，則無需再進行任何操作。您可以開始使用 Workload Factory for FSx for ONTAP複製部分完成的程式碼範例。
+如果您選擇不授予權限，您可以開始使用適用於ONTAP的 FSx Workload Factory 來複製部分完成的程式碼範例。
 
 [role="quick-margin-para"]
-如果您在「唯讀」或「讀取/寫入」模式下操作，則需要link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手動新增認證至帳戶"^]其中包括選擇工作負載功能（例如資料庫和 AI）以及建立 IAM 策略以確保您擁有以_唯讀_或_讀/寫_模式操作的正確權限。
+如果您選擇授予權限，您需要…link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["手動新增認證至帳戶"^]這包括選擇工作負載功能（例如資料庫和人工智慧），以及建立所需權限的 IAM 策略。
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 建立檔案系統
 [role="quick-margin-para"]

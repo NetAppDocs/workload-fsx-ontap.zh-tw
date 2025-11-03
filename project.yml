@@ -81,6 +81,8 @@ sidebar:
         url: "/clone-volume.html"
       - title: 使用內部部署 ONTAP 資料
         url: "/use-onprem-data.html"
+      - title: 建立網路保險庫以保護數據
+        url: "/create-cyber-vault.html"
   - title: 管理與監控
     entries:
     - title: 使用 Tracker 監控作業
@@ -95,14 +97,16 @@ sidebar:
       entries:
       - title: 編輯 Volume 自動擴充
         url: "/edit-volume-autogrow.html"
-      - title: 增加 Volume 容量
-        url: "/increase-volume-capacity.html"
+      - title: 調整音量容量
+        url: "/adjust-volume-capacity.html"
+      - title: 重新平衡磁碟區容量
+        url: "/rebalance-volume.html"
       - title: 管理不可變的檔案
         url: "/manage-immutable-files.html"
       - title: 管理 Volume 標記
         url: "/manage-volume-tags.html"
-      - title: 重新平衡磁碟區容量
-        url: "/rebalance-volume.html"
+      - title: 管理快取卷
+        url: "/manage-cache-volumes.html"
       - title: 變更分層原則
         url: "/change-tiering-policy.html"
       - title: 更新儲存效率
@@ -119,7 +123,7 @@ sidebar:
       entries:
       - title: 調整檔案系統容量
         url: "/increase-file-system-capacity.html"
-      - title: 啟用自動容量管理
+      - title: 啟用自動容量和 inode 管理
         url: "/enable-auto-capacity-management.html"
       - title: 重設 fsxadmin 密碼
         url: "/reset-fsxadmin-password.html"

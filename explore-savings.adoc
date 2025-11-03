@@ -116,7 +116,7 @@ NetApp Workload Factory 包含一個儲存節省計算器，用於將 Amazon 儲
 == 探索偵測到的儲存環境的節約效益
 
 .開始之前
-為了讓 Workload Factory 能夠偵測您 AWS 帳戶中的 Amazon Elastic Block Store (EBS)、Elastic File System (EFS) 和 FSx for Windows File Server 儲存環境，請確保link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予唯讀權限"^]在您的 AWS 帳戶中。
+為了讓 Workload Factory 能夠偵測到您 AWS 帳戶中的 Amazon Elastic Block Store (EBS)、Elastic File System (EFS) 和 FSx for Windows File Server 儲存環境，請確保：link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、規劃和分析_權限"^]在您的 AWS 帳戶中。
 
 
 NOTE: 此計算機選項不支援 EBS 快照和適用於 Windows 檔案伺服器陰影複製的 FSX 的計算。透過自訂功能探索節約效益時、您可以提供適用於 Windows File Server 快照的 EBS 和 FSX 詳細資料。

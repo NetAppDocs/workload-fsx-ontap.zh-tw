@@ -13,7 +13,7 @@ summary: 啟用磁碟區自動成長以讓 Workload Factory 為您管理磁碟�
 [role="lead"]
 啟用磁碟區自動成長以讓 Workload Factory 為您管理磁碟區容量。您可以隨時停用它。
 
-您也可以選擇隨時使用手動增加 Volume 的容量 link:increase-volume-capacity.html["增加 Volume 容量功能"]。
+您也可以隨時使用以下方法手動增加磁碟區的容量：link:adjust-volume-capacity.html["調整音量容量功能"] 。
 
 
 NOTE: iSCSI Volume 不支援 Volume 自動擴充。

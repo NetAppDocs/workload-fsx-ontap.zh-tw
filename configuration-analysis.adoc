@@ -46,9 +46,17 @@ NetApp Workload Factory 定期分析Amazon FSx for NetApp ONTAP檔案系統配�
 
 == 分析需求
 
-為了進行完整的檔案系統分析，您必須關聯一個連結。連結連接讓 Workload Factory 可以分析所有檔案系統配置，例如資料保護和效能。
+要進行完整的檔案系統分析，必須執行以下操作：
 
+* 關聯連結。連結連接使 Workload Factory 能夠分析所有檔案系統配置，例如資料保護和效能。
++
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。
+
+* 在您的 AWS 帳戶中授予_檢視、規劃和分析_權限。
++
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["瞭解如何授予 AWS 帳戶權限"^]
+
+
 
 .下一步
 link:improve-configurations.html["實作架構良好的檔案系統組態"]

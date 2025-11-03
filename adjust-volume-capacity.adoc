@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: adjust-volume-capacity.html 
+keywords: increase capacity, volume capacity 
+summary: 您可以隨時在NetApp Workload Factory中手動調整磁碟區的容量。 
+---
+= 在NetApp Workload Factory中調整磁碟區容量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+隨時可透過NetApp Workload Factory控制台手動調整磁碟區的容量。
+
+或者，您可以link:edit-volume-autogrow.html["啟用自動擴充功能"]讓 Workload Factory 為您管理磁碟區容量。
+
+.關於這項工作
+您可以透過增加或減少磁碟區的已配置大小來調整磁碟區容量。下表顯示了不同體積類型的最小和最大體積尺寸：
+
+[cols="1,1,1"]
+|===
+| 卷類型 | 最小尺寸 | 最大尺寸 
+
+
+| 流通量FlexVol | 20 MiB | 300 TiB 
+
+
+| 流通量FlexGroup | 800 GiB | 2 PiB 
+|===
+對於 iSCSI LUN，增加磁碟區的大小也會增加主機 LUN 的大小。增加磁碟區容量後，請依照主機作業系統提供的步驟尋找 LUN 的新大小並擴充 LUN 的檔案系統。
+
+僅 NFS 和 SMB/CIFS 磁碟區支援減小磁碟區大小。
+
+.開始之前
+若要調整音量容量，必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結關聯後，返回此操作。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要更新磁碟區的檔案系統的操作選單，然後選擇 *管理*。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 在「磁碟區」標籤中，選擇要調整容量的磁碟區的操作選單。
+. 選擇*基本操作*，然後選擇*調整容量*。
+. 在「調整磁碟區容量」對話方塊中，設定「已配置容量」和單位。
+. 選擇“調整”以套用變更。
+
+
+.相關資訊
+* link:edit-volume-autogrow.html["在 Workload Factory 中啟用磁碟區自動成長"]
+* link:rebalance-volume.html["在工作負載工廠中重新平衡容量"]
+

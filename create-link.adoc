@@ -39,7 +39,7 @@ NOTE: 使用 Connector 時不支援 AWS Secrets Manager 。
 
 .開始之前
 * 您應該考慮要使用哪個連結建立選項。
-* 您需要在 Workload Factory 中至少有一個 FSx for ONTAP檔案系統。若要發現或建立 FSx for ONTAP檔案系統，您必須擁有一個具有 FSx for ONTAP執行個體權限的 AWS 帳戶，且link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["在 Workload Factory 中新增憑證"^]具有儲存管理的_唯讀_或_讀/寫_權限。
+* Workload Factory 中至少需要一個 FSx for ONTAP檔案系統。若要發現 FSx for ONTAP檔案系統，您必須擁有一個具有 FSx for ONTAP實例權限的 AWS 帳戶，且link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html#overview["在 Workload Factory 中新增憑證"^]具有儲存管理的_檢視、規劃和分析_權限。
 * 必須在與 FSx for ONTAP 檔案系統關聯的安全性群組中開啟下列連接埠以實現連結連線。
 +
 ** 對於 Workload Factory 控制台：連接埠 443 (HTTPS)

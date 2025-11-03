@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: create-cyber-vault.html 
+keywords: create cyber vault, volume cyber vault, protect data cyber vault, cyber vault setup 
+summary: 了解NetApp網路保險庫以及如何實施網路保險庫架構，以保護您的資料免受勒索軟體和網路威脅的侵害。 
+---
+= 使用網路安全保險庫保護您的資料。
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+網路保險庫磁碟區是一個隔離的、安全的儲存位置，用於儲存資料的備份副本，保護資料免受勒索軟體攻擊和其他網路威脅。作為建立保險庫的一部分，您將建立網路保險庫卷，停用所有用戶端協議，並在來源磁碟區和網路保險庫磁碟區之間建立複製關係，並在網路保險庫磁碟區上建立不可變快照。
+
+.什麼是網路保險庫？
+網路保險庫是一種特定的資料保護技術，涉及將關鍵資料儲存在與主要 IT 基礎設施分開的隔離環境中。
+
+網路金庫是一個「物理隔離」的、不可更改的、不可抹除的資料儲存庫，它不受影響主網路的威脅（例如惡意軟體、勒索軟體，甚至是內部威脅）的影響。利用不可更改且不可刪除的快照可以實現網路保險庫。
+
+使用傳統方法的氣隙備份涉及創建空間並物理分離主媒體和輔助媒體。透過將媒體移出現場和/或切斷連接，不良行為者就無法存取資料。這可以保護數據，但會導致恢復時間變慢。
+
+.FSx for ONTAP網路保險庫
+支援將Amazon FSx for NetApp ONTAP用作網路安全保險庫的來源和目標。
+
+.執行
+Workload Factory 提供建立網路安全架構的協助。當您聯絡NetApp表示有興趣實施網路安全保險庫後， NetApp專家會與您聯繫，討論您的需求。
+
+請發送電子郵件至ng-FSx-Cyber​​Vault@netapp.com以開始使用。
+
+.相關資訊
+有關網絡保險庫以及如何構建此架構的更多信息，請參閱…link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["ONTAP網路保險庫文檔"^] 。

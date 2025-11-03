@@ -1,0 +1,121 @@
+---
+sidebar: sidebar 
+permalink: manage-cache-volumes.html 
+keywords: cache volumes, manage cache, FSx for ONTAP cache 
+summary: 根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案系統的快取磁碟區。 
+---
+= 管理 FSx for ONTAP檔案系統的快取卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+透過NetApp Workload Factory控制台，您可以管理 FSx for ONTAP檔案系統的快取磁碟區。管理任務包括編輯快取名稱、增加快取容量、編輯匯出策略、更改快取方法、預先填充快取以及在不再需要時刪除快取磁碟區。
+
+.關於這項工作
+您無需離開NetApp Workload Factory控制台即可管理與快取關係關聯的快取磁碟區。
+
+.開始之前
+* 您必須關聯一個連結來管理快取捲和關係。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結關聯後，返回此操作。
+* 您必須擁有一個已存在的快取磁碟區才能進行編輯。
+
+
+
+
+== 編輯快取卷名稱
+
+您可以隨時變更現有快取磁碟區的名稱。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 FSx for ONTAP。
+. 在 FSx for ONTAP中，選擇包含快取磁碟區的檔案系統的操作選單，然後選擇「管理」。
+. 從檔案系統概覽中，選擇「快取關係」標籤。
+. 選擇要修改的快取磁碟區的操作選單，然後選擇「編輯快取名稱」。
+. 在「編輯快取名稱」對話方塊中，輸入快取磁碟區的新名稱，然後選擇「套用」。
+
+
+
+
+== 增加快取卷的容量
+
+如果需要增加現有快取磁碟區的容量，您可以隨時進行增加。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 FSx for ONTAP。
+. 在 FSx for ONTAP中，選擇包含快取磁碟區的檔案系統的操作選單，然後選擇「管理」。
+. 從檔案系統概覽中，選擇「快取關係」標籤。
+. 選擇要修改的快取磁碟區的操作選單，然後選擇「增加快取容量」。
+. 在「增加快取容量」對話方塊中，按百分比或單位輸入快取容量的新值，然後選擇「應用」。
+
+
+
+
+== 編輯快取卷導出策略
+
+更改現有快取磁碟區的掛載路徑或匯出策略。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 FSx for ONTAP。
+. 在 FSx for ONTAP中，選擇包含快取磁碟區的檔案系統的操作選單，然後選擇「管理」。
+. 從檔案系統概覽中，選擇「快取關係」標籤。
+. 選擇要修改的快取磁碟區的操作選單，然後選擇「編輯匯出策略」。
+. 在「編輯匯出策略」對話方塊中，變更掛載路徑或選擇不同的匯出策略來指派給快取磁碟區。
+. 選擇*應用*。
+
+
+
+
+== 更改快取卷的快取方法
+
+將現有快取卷的快取方法或模式變更為寫回或寫繞。
+
+詳細了解link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html["寫入模式"^]。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 FSx for ONTAP。
+. 在 FSx for ONTAP中，選擇包含快取磁碟區的檔案系統的操作選單，然後選擇「管理」。
+. 從檔案系統概覽中，選擇「快取關係」標籤。
+. 選擇要修改的快取磁碟區的操作選單，然後選擇「變更快取方法」。
+. 在「變更快取方法」對話方塊中，選擇新的快取方法，然後選擇「套用」。
+
+
+
+
+== 預先填充快取卷
+
+在請求快取資料之前，先用來源磁碟區中的資料預先填入快取卷，以加快快取資料的存取速度。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 FSx for ONTAP。
+. 在 FSx for ONTAP中，選擇包含快取磁碟區的檔案系統的操作選單，然後選擇「管理」。
+. 從檔案系統概覽中，選擇「快取關係」標籤。
+. 選擇要修改的快取磁碟區的操作選單，然後選擇「預填快取」。
+. 在「*預先填入快取*」對話方塊中，指定要用於預先填入的資料集路徑，然後選擇「套用」。
+
+
+
+
+== 刪除快取卷
+
+刪除快取磁碟區會刪除來源磁碟區和快取磁碟區之間的快取關係。刪除後，快取資料將不再可用。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 FSx for ONTAP。
+. 在 FSx for ONTAP中，選擇包含快取磁碟區的檔案系統的操作選單，然後選擇「管理」。
+. 從檔案系統概覽中，選擇「快取關係」標籤。
+. 選擇要刪除的快取卷的操作選單，然後選擇「刪除快取卷」。
+. 在「刪除快取卷」對話方塊中，確認刪除，然後選擇「刪除」。
+

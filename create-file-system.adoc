@@ -19,7 +19,7 @@ summary: 使用NetApp Workload Factory，您可以建立 FSx for ONTAP檔案系�
 .開始之前
 在為 ONTAP 檔案系統建立 FSX 之前、您需要：
 
-* IAM 角色的 ARN，該角色為 Workload Factory 提供建立 FSx for ONTAP檔案系統所需的權限。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["瞭解如何授予 AWS 帳戶權限"^] 。
+* 具有建立和刪除檔案系統權限的憑證，用於建立ONTAP檔案系統的 FSx。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["瞭解如何授予 AWS 帳戶權限"^]。
 * 您將在其中建立FSX以利ONTAP 執行個體的區域和VPC資訊。
 
 

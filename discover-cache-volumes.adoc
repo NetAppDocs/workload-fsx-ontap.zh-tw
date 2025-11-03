@@ -48,3 +48,6 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html["了
 
 
 
+
+.相關資訊
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cache-volumes.html["管理快取卷"]
