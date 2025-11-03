@@ -2216,18 +2216,15 @@
   <block id="13c47466230be92e5e3aa6588809aeac" category="list-text">預先填充快取卷</block>
   <block id="52fc772a9179443c2c2ba75c94518e8f" category="list-text">刪除快取卷</block>
   <block id="7826298c658de05b150f4b10fc144ea2" category="inline-link-macro">管理快取卷</block>
-  <block id="9223fd31c285815a2492912ef49bdbbb" category="paragraph"><block ref="9223fd31c285815a2492912ef49bdbbb" category="inline-link-macro-rx"></block></block>
   <block id="7c0216aac73557cb5845492aebaeab8a" category="section-title">可自動進行 inode 管理</block>
   <block id="31dcfbe8cd69ef4085402c0f104858cd" category="paragraph">您可以啟用自動 inode 管理，而無需啟用自動容量管理。</block>
   <block id="71e9d4ada3104308778ade0ba22de28d" category="inline-link-macro">啟用自動 inode 管理</block>
-  <block id="c38d477b997e2c8216a0b40479691f29" category="paragraph"><block ref="c38d477b997e2c8216a0b40479691f29" category="inline-link-macro-rx"></block></block>
   <block id="22fcde27b4672d89a21e10e9be49cdee" category="section-title">容量和 inode 使用情況的閾值警告設置</block>
   <block id="cc72208ba5327054f030d802d324477c" category="inline-link-macro">NetApp Workload Factory通知服務</block>
   <block id="f1ff66cdf2af497189be6ebd8f6e5fcd" category="paragraph">容量和 inode 使用情況均有閾值警告。您可以在啟用自動容量或 inode 管理時設定這些閾值。若要使用此設置，您需要使用以下方式配置通知：<block ref="52b0820c6dc6b8d67591785df8b1a634" category="inline-link-macro-rx"></block> 。</block>
   <block id="76170a72d0c8b98ef012c3b57dc6dbe8" category="section-title">容量減少可用</block>
   <block id="26b07c7813c6a780d507b42d999b4792" category="paragraph">您可以在NetApp Workload Factory中減少 NFS 和 SMB/CIFS 磁碟區的大小。此功能可讓您減少不再需要的磁碟區的大小，從而更好地管理儲存資源。</block>
   <block id="fcbcb93b74f64a75b2b710bb8328b4e0" category="inline-link-macro">減少體積</block>
-  <block id="e1b7073be30c28b07f5c847e0a1b56ed" category="paragraph"><block ref="e1b7073be30c28b07f5c847e0a1b56ed" category="inline-link-macro-rx"></block></block>
   <block id="f09c98d35d5b89f3f833636d36ca3283" category="section-title">增強型 FSx for ONTAP資源狀態</block>
   <block id="9d017083ba2041742b1b85bbb1a846c4" category="paragraph">Workload Factory 增強了「配置錯誤」資源狀態，使其包含對資源實際問題的解釋。</block>
   <block id="48707dc4d2e44fe9cf85834f27b932e8" category="paragraph">Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設定：</block>
@@ -2240,11 +2237,9 @@
   <block id="036d0224d85e6a18c7e85f034ace65c1" category="list-text">檔案系統建立和刪除：建立和刪除ONTAP檔案系統和儲存虛擬機器的 FSx。</block>
   <block id="c1c8be0a907c363e6506c96d16870672" category="paragraph">新增憑證時，您可以根據要授予 Workload Factory 的存取級別，選擇一個或多個權限原則。</block>
   <block id="b20b01e02162a68002ca1747d1bd3c10" category="inline-link-macro">Workload Factory 權限參考</block>
-  <block id="444b052e3d1349e221d4ceb42e6c1cf7" category="paragraph"><block ref="444b052e3d1349e221d4ceb42e6c1cf7" category="inline-link-macro-rx"></block></block>
   <block id="c4a6983274098ca737ffda27862010ea" category="section-title">FSx 的ONTAP網路保險庫支持</block>
   <block id="4a3b498d2b39740971d75ebbab434a8f" category="paragraph">您可以使用 FSx for ONTAP作為網路保險庫架構中的來源或目標來建立網路保險庫。網路保險庫為儲存關鍵資料提供安全隔離的環境，保護資料免受勒索軟體和其他網路威脅的侵害。</block>
   <block id="4bc6d1e741e4c817c4985300ec66b77f" category="inline-link-macro">使用 FSx 為ONTAP設定網路保險庫</block>
-  <block id="545bd81803e837dd73a7bceb1a798b8a" category="paragraph"><block ref="545bd81803e837dd73a7bceb1a798b8a" category="inline-link-macro-rx"></block></block>
   <block id="443d77d8a4d29940f1da82d57cf91d7b" category="summary">您可以隨時在NetApp Workload Factory中手動調整磁碟區的容量。</block>
   <block id="9506827488d3f10bebcc3d5a3e5f83f8" category="doc">在NetApp Workload Factory中調整磁碟區容量</block>
   <block id="2d6396444f6d2c33e9a33bc98d74a44b" category="paragraph">隨時可透過NetApp Workload Factory控制台手動調整磁碟區的容量。</block>
@@ -2283,7 +2278,6 @@
   <block id="e8e8dcbe97676a6fe5760aae822c6e61" category="paragraph">Workload Factory 提供建立網路安全架構的協助。當您聯絡NetApp表示有興趣實施網路安全保險庫後， NetApp專家會與您聯繫，討論您的需求。</block>
   <block id="9577a31ea32e2c5b58950150698f2a07" category="paragraph">請發送電子郵件至ng-FSx-Cyber​​Vault@netapp.com以開始使用。</block>
   <block id="a9541230016fd9f6de7895f1a32b75fb" category="inline-link-macro">ONTAP網路保險庫文檔</block>
-  <block id="eac9e4c62fd872313a45023cb8fd31ec" category="paragraph">有關網絡保險庫以及如何構建此架構的更多信息，請參閱…<block ref="5ee11ce3f9bfc218d47e808a1ac01a55" category="inline-link-macro-rx"></block> 。</block>
   <block id="18e03b41df425134308f1975a1972f8e" category="list-text">具有建立和刪除檔案系統權限的憑證，用於建立ONTAP檔案系統的 FSx。<block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block>。</block>
   <block id="4c4658c6e6bcc607d3d1e8c00d38f9b6" category="list-text">Workload Factory 中至少需要一個 FSx for ONTAP檔案系統。若要發現 FSx for ONTAP檔案系統，您必須擁有一個具有 FSx for ONTAP實例權限的 AWS 帳戶，且<block ref="a253a365fdf90416889360c06d5b56a2" category="inline-link-macro-rx"></block>具有儲存管理的_檢視、規劃和分析_權限。</block>
   <block id="8763b09bbcb06ec11c1d0d3331ba74f4" category="paragraph"><block ref="8763b09bbcb06ec11c1d0d3331ba74f4" category="inline-link-macro-rx"></block></block>
@@ -2363,4 +2357,9 @@
   <block id="2d7b297cbb6cd40fb509f94fc82809d8" category="sidebar">建立網路保險庫以保護數據</block>
   <block id="77323f759a4ed2ac40e1bf8211da2f5f" category="sidebar">調整音量容量</block>
   <block id="aadb016687f81f1f6f82a4c97ba651ed" category="sidebar">啟用自動容量和 inode 管理</block>
+  <block id="8cc5e5335040870d41183130dad2a0a6" category="paragraph"><block ref="8cc5e5335040870d41183130dad2a0a6" category="inline-link-macro-rx"></block></block>
+  <block id="6b49a1e6e88960820791afdda16a063c" category="paragraph"><block ref="6b49a1e6e88960820791afdda16a063c" category="inline-link-macro-rx"></block></block>
+  <block id="7999c939951d1cfce0556df15a76a345" category="paragraph"><block ref="7999c939951d1cfce0556df15a76a345" category="inline-link-macro-rx"></block></block>
+  <block id="1aa6907369c233df8f3cc388c26b9890" category="paragraph"><block ref="1aa6907369c233df8f3cc388c26b9890" category="inline-link-macro-rx"></block></block>
+  <block id="9241eb0a9aab7657dc2b300da8931da7" category="paragraph">有關網絡保險庫以及如何構建此架構的更多信息，請參閱… <block ref="5ee11ce3f9bfc218d47e808a1ac01a55" category="inline-link-macro-rx"></block>。</block>
 </blocks>
