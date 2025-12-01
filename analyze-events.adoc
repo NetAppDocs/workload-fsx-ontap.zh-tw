@@ -1,0 +1,108 @@
+---
+sidebar: sidebar 
+permalink: analyze-events.html 
+keywords: analyze events, events, FSx for ONTAP events, troubleshoot FSx for ONTAP 
+summary: 分析NetApp Workload Factory for FSx for ONTAP中的 EMS 事件。 
+---
+= 在NetApp Workload Factory中分析 FSx for ONTAP EMS 事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用智慧型事件分析器自動擷取和分析NetApp Workload Factory中 FSx for ONTAP檔案系統的事件管理系統 (EMS) 事件，以便您可以快速識別和解決問題。Agentic AI 為基礎的分析需要 Amazon Bedrock 整合。
+
+
+
+== 關於這項工作
+
+儲存管理員通常只有在客戶投訴後才會回應 FSx for ONTAP EMS 事件，或透過建立自訂腳本和警報來回應。這種被動應對方式會減慢問題解決速度，增加停機時間，並降低營運效率。
+
+事件分析器會擷取 FSx for ONTAP EMS 事件並進行分析，以協助您維護 FSx for ONTAP檔案系統的健康狀況和效能。
+
+主要優勢包括：
+
+* 進階故障排除：利用人工智慧主動偵測和分析事件，為需要關注的ONTAP EMS 事件提供清晰的解決方案步驟。
+* 最佳實務修復：根據您的環境，提供修復 FSx for ONTAP問題的清晰步驟，以便任何人都能解決問題。
+
+
+使用事件分析器時，您可以在享受高級 AI 分析的同時，保持對環境的完全控制。
+
+要使用事件分析器，您需要啟動 Amazon Bedrock，選擇 Workload Factory 使用的模型，建立連接到 Amazon Bedrock 的私人端點，新增權限，並建立企業授權。
+
+link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定價"^]
+
+
+
+=== 資料隱私和安全
+
+此功能透過以下措施確保資料隱私和安全：
+
+.數據主權
+資料和聚合資料保留在您的 AWS 帳戶內，透過私人 VPC 終端節點（Amazon Bedrock）進行通信，確保不會暴露於公共互聯網。
+
+.無人工智慧訓練
+客戶資料不會用於訓練或改進模型。 Amazon Bedrock 會即時處理事件，但不會使用您的資料進行訓練。結果僅供參考，將儲存在您的環境中。更多詳情請參閱…link:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html["Amazon Bedrock 資料保護文檔"^] 。
+
+
+
+== 開始之前
+
+要使用事件分析器，您必須滿足以下先決條件：
+
+* 你必須link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、規劃和分析_權限"^]在您的 AWS 帳戶中查看 FSx for ONTAP檔案系統的事件。
+* 你必須link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到 FSx for ONTAP檔案系統"]使用EMS事件分析器。
+* 您還需要滿足以下要求。分析日誌錯誤時，系統會提示您完成這些步驟。
++
+** *亞馬遜基岩啟動*
++
+事件分析器使用 Amazon Bedrock API 為 FSx for ONTAP事件提供基於 AI 的見解。
+
++
+建議模型：亞馬遜基岩模型（anthropic.claude-sonnet-4-20250514-v1:0）。您必須提供所選區域中此模型的推理設定檔 ARN。
+
+** *工作負載工廠連結*
++
+您必須建立連結並將其與 FSx for ONTAP檔案系統關聯，才能啟用 AI 驅動的事件分析。此連結在 Workload Factory 與一個或多個 FSx for ONTAP檔案系統之間建立信任關係，並利用 AWS Lambda。
+
++
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結關聯後，返回此操作。
+
+** *AWS IAM 權限*
++
+您必須將下列權限新增至 Workload Factory IAM 角色關聯策略。
+
++
+*** 權限： `bedrock:InvokeModel`和 `bedrock:InvokeModelWithResponseStream`
++
+這些權限使 Workload Factory 能夠呼叫 Bedrock 模型，以便主動進行錯誤調查和補救指導。此設定檔還能確保安全地存取人工智慧，從而提供客製化的洞察。
+
+*** 與 Workload Factory 關聯的 AWS 憑證： `bedrock:GetFoundationModelAvailability`和 `bedrock:ListInferenceProfiles`權限
++
+這些權限用於驗證模型的可用性。
+
+
+
+
+
+
+
+
+
+== 檢視和分析適用於ONTAP的 FSx 的 EMS 事件
+
+使用 Workload Factory 控制台檢視和分析 FSx for ONTAP檔案系統的 EMS 事件。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從“儲存”選單中，選擇“分析”。
+. 在「分析」畫面中，選擇包含要分析的 FSx for ONTAP檔案系統的 AWS 帳戶、憑證和區域。
++
+僅支援在螢幕上顯示事件的ONTAP檔案系統的 FSx。
+
+. 如有需要，請依照螢幕提示完成*AI 分析設定要求*，以滿足任何缺失的先決條件。
+. 找到要分析的 FSx for ONTAP檔案系統，然後選擇「檢視事件」。
+. 請查看詳細的活動資訊。
+

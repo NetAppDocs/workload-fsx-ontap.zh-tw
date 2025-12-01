@@ -4,20 +4,20 @@ permalink: manage-cache-volumes.html
 keywords: cache volumes, manage cache, FSx for ONTAP cache 
 summary: 根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案系統的快取磁碟區。 
 ---
-= 管理 FSx for ONTAP檔案系統的快取卷
+= 使用NetApp Workload Factory管理ONTAP的 FSx 快取卷
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-透過NetApp Workload Factory控制台，您可以管理 FSx for ONTAP檔案系統的快取磁碟區。管理任務包括編輯快取名稱、增加快取容量、編輯匯出策略、更改快取方法、預先填充快取以及在不再需要時刪除快取磁碟區。
+使用NetApp Workload Factory控制台管理 FSx for ONTAP檔案系統的快取磁碟區。快取是一種暫時儲存資料的方法，它透過減少檢索時間來提高資料存取效能。您可以編輯快取名稱、調整容量、變更匯出策略、選擇快取方法、預先填入快取或刪除快取磁碟區。
 
 .關於這項工作
-您無需離開NetApp Workload Factory控制台即可管理與快取關係關聯的快取磁碟區。
+您可以在NetApp Workload Factory控制台中管理與快取關係關聯的快取磁碟區。
 
 .開始之前
-* 您必須關聯一個連結來管理快取捲和關係。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結關聯後，返回此操作。
+* 您必須關聯一個連結來管理快取捲和關係。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。關聯連結後，返回此操作。
 * 您必須擁有一個已存在的快取磁碟區才能進行編輯。
 
 
@@ -39,9 +39,9 @@ summary: 根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案�
 
 
 
-== 增加快取卷的容量
+== 調整快取磁碟區的容量
 
-如果需要增加現有快取磁碟區的容量，您可以隨時進行增加。
+您可以隨時調整現有快取磁碟區的容量。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
@@ -49,8 +49,8 @@ summary: 根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案�
 . 從儲存選單中，選擇 FSx for ONTAP。
 . 在 FSx for ONTAP中，選擇包含快取磁碟區的檔案系統的操作選單，然後選擇「管理」。
 . 從檔案系統概覽中，選擇「快取關係」標籤。
-. 選擇要修改的快取磁碟區的操作選單，然後選擇「增加快取容量」。
-. 在「增加快取容量」對話方塊中，按百分比或單位輸入快取容量的新值，然後選擇「應用」。
+. 選擇要修改的快取容量的操作選單，然後選擇「調整快取容量」。
+. 在「調整快取容量」對話方塊中，以百分比或單位輸入快取體積的新容量，然後選擇「套用」。
 
 
 
@@ -74,7 +74,7 @@ summary: 根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案�
 
 == 更改快取卷的快取方法
 
-將現有快取卷的快取方法或模式變更為寫回或寫繞。
+您可以變更現有快取磁碟區的快取工作方式，使其採用寫繞式或寫回式。
 
 詳細了解link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/using-flexcache.html["寫入模式"^]。
 
@@ -92,7 +92,7 @@ summary: 根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案�
 
 == 預先填充快取卷
 
-在請求快取資料之前，先用來源磁碟區中的資料預先填入快取卷，以加快快取資料的存取速度。
+在使用快取卷之前，請先用來源磁碟區中的資料填入快取卷，以加快快取資料的可用性。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
@@ -108,7 +108,7 @@ summary: 根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案�
 
 == 刪除快取卷
 
-刪除快取磁碟區會刪除來源磁碟區和快取磁碟區之間的快取關係。刪除後，快取資料將不再可用。
+刪除快取磁碟區時，會移除與其快取的關係。快取資料已失效。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。

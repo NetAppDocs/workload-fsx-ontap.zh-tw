@@ -23,7 +23,7 @@ summary: 只需幾個步驟，即可在NetApp Workload Factory 中開始使用 F
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 新增認證和權限
 [role="quick-margin-para"]
-選擇link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html["權限策略"^]滿足您的需求。
+選擇link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.html["權限策略"^]滿足您的需求。
 
 [role="quick-margin-para"]
 如果您選擇不授予權限，您可以開始使用適用於ONTAP的 FSx Workload Factory 來複製部分完成的程式碼範例。

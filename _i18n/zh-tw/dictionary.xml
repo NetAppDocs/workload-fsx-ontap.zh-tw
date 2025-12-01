@@ -583,14 +583,6 @@
   <block id="241ea6618170a92484ea213e4cade854" category="doc">更新檔案系統的處理量容量</block>
   <block id="6cc2a35072ede8f6e3bef70bce54ed8c" category="paragraph">如需處理量容量限制、請參閱 <block ref="5e5311b04805e422cc2fabe002034628" category="inline-link-macro-rx"></block> AWS FSX for NetApp ONTAP 文件。</block>
   <block id="77fe58178c324bbc70fcb16af3bf2b46" category="list-text">在「處理量容量」對話方塊中、選取您需要的處理量容量。</block>
-  <block id="885fd24663ae2a75b6cf326e1cb1c8a0" category="summary">檢視 Volume 詳細資料、配送、使用、存取和保護。</block>
-  <block id="67fd29a6cc928abe6b6f86ff09e307f2" category="paragraph">只有在檔案系統中建立磁碟區之後、才會顯示磁碟區詳細資料。</block>
-  <block id="6d861bb7f63e6cf47b5c554ee05eac67" category="list-text">選擇 * 基本動作 * 、然後 * 檢視 Volume 詳細資料 * 。</block>
-  <block id="439d42a534fe0bae9413648240777bfc" category="list-text">在 * Volume details* 中、選取標籤以檢視下列 Volume 詳細資料：</block>
-  <block id="1c7942ef9895243b7d4ef6b21c58b5c4" category="list-text">* 發佈 * ：包括託管集合體、 Volume 樣式（ FlexGroup 或 FlexVol ）、組成（僅限 FlexGroup ）和重新平衡比率（僅限 FlexGroup - 高、中或低）。</block>
-  <block id="ebf624cb45bff65c163a51dc14608a8e" category="list-text">* 使用量 * ：包括大小、使用的 SSD 、使用的容量集區、自動擴充設定、最大成長規模、 儲存效率設定、節省的壓縮空間、節省的重複資料刪除空間、分層原則和冷卻日。</block>
-  <block id="5c56dce0204190e932ff7e64632a6971" category="list-text">* 存取 * ：包括匯接路徑、安全樣式、匯出原則和 NFS 版本（適用於 NFS ）、 Active Directory 、 CIFS 共用名稱、使用者或群組、以及 SMB/CIFS 的權限、以及 iSCSI 的啟動器群組和主機 IQN 。</block>
-  <block id="541f0f17fbfba6b941c5b77a421fb336" category="list-text">* 保護 * ：包括本機快照、快照原則名稱、遠端複寫、以及用於 ONTAP 備份的 FSX 。</block>
   <block id="69a94f722f40461d326d0d87f7643499" category="summary">瞭解 Amazon FSX for NetApp ONTAP 的新功能。</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">開始使用</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">版本資訊</block>
@@ -686,7 +678,6 @@
   <block id="1d949c7c5600289e10795f178278edd1" category="section-title">2024 年 7 月 7 日</block>
   <block id="0fd886acd6700c343d655429665d7e6a" category="paragraph">您現在可以使用 Codebox 中的 Terraform 來部署檔案系統和儲存 VM 。</block>
   <block id="f0881d896f399a09e86122a09c00b74d" category="doc">儲存管理的讀取模式支援</block>
-  <block id="06fdd4e2a129920e1eda56425068ba01" category="inline-link-macro">深入瞭解讀取模式</block>
   <block id="fc30083e7a76ed4c8eb6167ea377c198" category="section-title">支援磁碟區刪除之前的備份</block>
   <block id="8b97ffb47ece0280994594aa00a04a55" category="paragraph">您現在可以在刪除之前備份磁碟區。備份將保留在檔案系統中、直到刪除為止。</block>
   <block id="7dd9587dbbaf30e59e9c0550bb88b5cd" category="list-text">在刪除 Volume 對話方塊中、執行下列步驟：</block>
@@ -715,7 +706,6 @@
   <block id="03b2cfc949418819e16b1dc5fa3660ae" category="list-text"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block></block>
   <block id="3b915cd68add8a6cdac4cd1adeb5f100" category="list-text"><block ref="3b915cd68add8a6cdac4cd1adeb5f100" category="inline-link-macro-rx"></block></block>
   <block id="7115d78353263dbb2dbe063624f9f601" category="list-text"><block ref="7115d78353263dbb2dbe063624f9f601" category="inline-link-macro-rx"></block></block>
-  <block id="f584ba5824f9f0b7bb3a173d45332dd3" category="paragraph"><block ref="f584ba5824f9f0b7bb3a173d45332dd3" category="inline-link-macro-rx"></block></block>
   <block id="a0fbee91270a9c1ec1d2bc9b56f87ff3" category="paragraph"><block ref="a0fbee91270a9c1ec1d2bc9b56f87ff3" category="inline-link-macro-rx"></block></block>
   <block id="3874612023324fe909b90a886072b352" category="paragraph"><block ref="3874612023324fe909b90a886072b352" category="inline-link-macro-rx"></block></block>
   <block id="0d2c81cd9ea6f82a77b580a488c5e8aa" category="doc">存取您的 FSX 以取得 ONTAP 檔案系統資料</block>
@@ -1060,7 +1050,6 @@
   <block id="ceb833d216db0e056b9ab7d22ba4f023" category="paragraph">如果沒有限制，網路和應用程式的效能可能會下降。或者、我們建議為 ONTAP 檔案系統的關鍵工作負載（例如主要用於災難恢復的工作負載）提供不限傳輸率的 FSX 。</block>
   <block id="c4ee13228c56b3c8a94bcef6d8d6d357" category="summary">將複本 FlexVol volume 從其父磁碟區分割成正常的讀寫 FlexVol volume 。</block>
   <block id="dde14eef9b53344c34a3e3e63830d29e" category="paragraph">將 Volume 資料從內部部署 ONTAP 叢集複寫到適用於 ONTAP 檔案系統的 FSX 。複寫後，資料可用於豐富 AI 知識庫。</block>
-  <block id="8b02e3f5a15bae20358e2221cac45d83" category="list-text">* 一般詳細資料 * ：包括磁碟區名稱，磁碟區 UUID ，磁碟區 ID ，建立時間，狀態，磁碟區類型（讀取 / 寫入 / 資料保護（ RWDP ）或唯讀），快照原則名稱，託管儲存 VM （ SVM ）和標籤。</block>
   <block id="95712b1074d83e6727c42aa16be5af5a" category="paragraph"><block ref="95712b1074d83e6727c42aa16be5af5a" category="inline-link-macro-rx"></block></block>
   <block id="815e02f013485997d1d56438f0bf1505" category="paragraph"><block ref="815e02f013485997d1d56438f0bf1505" category="inline-link-macro-rx"></block></block>
   <block id="21a1f3fb63f8e2b67d072b29080f89f9" category="list-text">層級 1 （工作）：追蹤檔案系統部署。</block>
@@ -1992,7 +1981,6 @@
   <block id="f899a571558dc3581836d9ffe17218ed" category="paragraph">連結連接允許 Workload Factory 掃描效能、資料保護和配置方面的問題。<block ref="f06ee96e93460df1397f1b3b70044a3e" category="inline-link-macro-rx"></block>對您的檔案系統資源進行最全面的分析。</block>
   <block id="efa540b6730dc694889e9447404ff68a" category="paragraph">您可以選擇查看檔案系統設定問題的建議，並在 Workload Factory 控制台中修復儲存問題。</block>
   <block id="73b9ca32e75f36a5247f70e0ac6f7034" category="list-text">可靠性：SSD 容量閾值、計劃的本地快照、FSx for ONTAP備份、遠端資料複製以及長期保留的資料可靠性</block>
-  <block id="24ef9c1deb4b27b9f21ac5bafe0b447a" category="list-text">成本優化：儲存效率和資料分層</block>
   <block id="f4620ec86c292b6ceff91a8418771488" category="list-text">修復過程可能會導致執行個體停機或服務中斷。在選擇修復配置問題之前，請務必仔細查看每個建議。</block>
   <block id="bdcff0916b9de421b3f836810688eb67" category="list-text"><block ref="f06ee96e93460df1397f1b3b70044a3e" category="inline-link-macro-rx"></block>對您的檔案系統資源進行最全面的分析。</block>
   <block id="99647ce863ab632fcdb252345dc9e76b" category="list-text">或者，按類別、子類別、狀態、嚴重性和標籤過濾配置問題。</block>
@@ -2193,8 +2181,6 @@
   <block id="ed6e985965d3239d89b208e6d5a24ba4" category="paragraph">需要時從NetApp Workload Factory 中刪除本地ONTAP叢集。</block>
   <block id="0463237fa8bae60d5bd9fc513e1c72f2" category="list-text">選擇操作選單並選擇*從工作負載工廠中刪除*。</block>
   <block id="da4b7454793816018fbc84be4732006d" category="paragraph">本地ONTAP叢集已從NetApp Workload Factory 中刪除。</block>
-  <block id="0638752c3b8f96a63528f3ba5d76579e" category="doc">在NetApp Workload Factory 中查看卷詳細信息</block>
-  <block id="1f46e6bdd9d9415125871b73f726d3bb" category="list-text">在「卷」標籤中，選擇要修改的磁碟區的操作選單。</block>
   <block id="a41dd7aa7d921f9f0881a705d3679e6c" category="section-title">2025年10月6日</block>
   <block id="7fe837fc0a93acdad81da1d440ee3fd2" category="section-title">2025年10月5日</block>
   <block id="5cc3bb62b21de598b940e08376ed73b6" category="sidebar">Amazon FSx for NetApp ONTAP將ONTAP的全部功能引入原生 AWS 託管服務，提供一致的混合雲體驗。本文檔介紹如何使用NetApp Workload Factory 管理 FSx for ONTAP 。</block>
@@ -2318,10 +2304,6 @@
   <block id="052dbb930400a0ed10fd9a2369d6e91b" category="list-text">你必須<block ref="31bad9d191bee3fabcae484ca4efec82" category="inline-link-macro-rx"></block>在您的 AWS 帳戶中。</block>
   <block id="8397e16109313045973558b01bfb9915" category="list-text">iSCSI 磁碟區不支援減小磁碟區大小。</block>
   <block id="00e4e6045ee76f2899377d5370d56a36" category="summary">根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案系統的快取磁碟區。</block>
-  <block id="77202d5f206e842a17a7c71e4612af8c" category="doc">管理 FSx for ONTAP檔案系統的快取卷</block>
-  <block id="6d6084417b916dd2a1b60499b04dad76" category="paragraph">透過NetApp Workload Factory控制台，您可以管理 FSx for ONTAP檔案系統的快取磁碟區。管理任務包括編輯快取名稱、增加快取容量、編輯匯出策略、更改快取方法、預先填充快取以及在不再需要時刪除快取磁碟區。</block>
-  <block id="c0c5d63ff1a1fe8bf6fe4f26c7af37c8" category="paragraph">您無需離開NetApp Workload Factory控制台即可管理與快取關係關聯的快取磁碟區。</block>
-  <block id="fe39e5a751393e260c8760e626d46663" category="list-text">您必須關聯一個連結來管理快取捲和關係。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結關聯後，返回此操作。</block>
   <block id="2923b8d05b469dec564ede3ae38cab32" category="list-text">您必須擁有一個已存在的快取磁碟區才能進行編輯。</block>
   <block id="9741f5c69b66c193b24db8c6b064d449" category="section-title">編輯快取卷名稱</block>
   <block id="dd9dbeec9d1d47721414517e8ceb1003" category="paragraph">您可以隨時變更現有快取磁碟區的名稱。</block>
@@ -2330,27 +2312,20 @@
   <block id="91c9dd0465d889c4cd7dcd9d00c3cff9" category="list-text">從檔案系統概覽中，選擇「快取關係」標籤。</block>
   <block id="704333b75cf6acba4392d7ad809dfb1d" category="list-text">選擇要修改的快取磁碟區的操作選單，然後選擇「編輯快取名稱」。</block>
   <block id="19b0e87ba7ed54521f11cd8489003533" category="list-text">在「編輯快取名稱」對話方塊中，輸入快取磁碟區的新名稱，然後選擇「套用」。</block>
-  <block id="f25e64c5391d2a162a25bbb460a7f886" category="paragraph">如果需要增加現有快取磁碟區的容量，您可以隨時進行增加。</block>
-  <block id="dc97b6b6257816c273cb4b23c4be1923" category="list-text">選擇要修改的快取磁碟區的操作選單，然後選擇「增加快取容量」。</block>
-  <block id="1a6d17f42b3c06ad6ef47079b2b7d2bf" category="list-text">在「增加快取容量」對話方塊中，按百分比或單位輸入快取容量的新值，然後選擇「應用」。</block>
   <block id="d34bce37c8d5cf5a3814d3185867c80e" category="section-title">編輯快取卷導出策略</block>
   <block id="3591b370a6ba1fccb018417aa452f30e" category="paragraph">更改現有快取磁碟區的掛載路徑或匯出策略。</block>
   <block id="19bb8592aa45eac21fc3a0ff7043f17f" category="list-text">選擇要修改的快取磁碟區的操作選單，然後選擇「編輯匯出策略」。</block>
   <block id="a23d30d9dbd5b5de5e3ee67a9ded5242" category="list-text">在「編輯匯出策略」對話方塊中，變更掛載路徑或選擇不同的匯出策略來指派給快取磁碟區。</block>
   <block id="7f7e450958b0a4653cfea4189d6ed995" category="section-title">更改快取卷的快取方法</block>
-  <block id="3e5271b8379ddcabf8c8d8673b311437" category="paragraph">將現有快取卷的快取方法或模式變更為寫回或寫繞。</block>
   <block id="cabfeb9da681d3ace757106e0813cd8f" category="inline-link-macro">寫入模式</block>
   <block id="38fdf5539761bcae25e0fc465e40d97f" category="paragraph">詳細了解<block ref="956f54ba6b1d39caea9bd76790adf811" category="inline-link-macro-rx"></block>。</block>
   <block id="a3e52bd74056f56571702f1d78113945" category="list-text">選擇要修改的快取磁碟區的操作選單，然後選擇「變更快取方法」。</block>
   <block id="0ec532fce8b15ab5badcbf1146af5bef" category="list-text">在「變更快取方法」對話方塊中，選擇新的快取方法，然後選擇「套用」。</block>
-  <block id="aef7f37d9224e6cdc84773fd0752841c" category="paragraph">在請求快取資料之前，先用來源磁碟區中的資料預先填入快取卷，以加快快取資料的存取速度。</block>
   <block id="03b8e2cae40fcbf80cad40862d5d0025" category="list-text">選擇要修改的快取磁碟區的操作選單，然後選擇「預填快取」。</block>
   <block id="d451f44672ea0a78b72fd7dd794c481e" category="list-text">在「*預先填入快取*」對話方塊中，指定要用於預先填入的資料集路徑，然後選擇「套用」。</block>
-  <block id="0eb48cd23b461a05c76d8f751c427193" category="paragraph">刪除快取磁碟區會刪除來源磁碟區和快取磁碟區之間的快取關係。刪除後，快取資料將不再可用。</block>
   <block id="9bed233fd25bae0dceb43f72350d951b" category="list-text">選擇要刪除的快取卷的操作選單，然後選擇「刪除快取卷」。</block>
   <block id="c150fc012517f3e827497fc4aa6b609a" category="list-text">在「刪除快取卷」對話方塊中，確認刪除，然後選擇「刪除」。</block>
   <block id="51bf12717b370e03e3310859db67cac6" category="inline-link-macro">權限策略</block>
-  <block id="1b9d0264ffd97a37d34b3626026426a0" category="paragraph">選擇<block ref="7dcfcf538adde0d607dcea20e99b9fe9" category="inline-link-macro-rx"></block>滿足您的需求。</block>
   <block id="d15741d42f2a6f5f82721fc70d54b6a4" category="paragraph">如果您選擇不授予權限，您可以開始使用適用於ONTAP的 FSx Workload Factory 來複製部分完成的程式碼範例。</block>
   <block id="38c4c72673e051381c12c32e1dd20f50" category="paragraph">如果您選擇授予權限，您需要…<block ref="bb44378f07a38aa36833bde05fae1b5d" category="inline-link-macro-rx"></block>這包括選擇工作負載功能（例如資料庫和人工智慧），以及建立所需權限的 IAM 策略。</block>
   <block id="2afa479317acb4455a0a649aab2944d1" category="section-title">2025年11月2日</block>
@@ -2362,4 +2337,129 @@
   <block id="7999c939951d1cfce0556df15a76a345" category="paragraph"><block ref="7999c939951d1cfce0556df15a76a345" category="inline-link-macro-rx"></block></block>
   <block id="1aa6907369c233df8f3cc388c26b9890" category="paragraph"><block ref="1aa6907369c233df8f3cc388c26b9890" category="inline-link-macro-rx"></block></block>
   <block id="9241eb0a9aab7657dc2b300da8931da7" category="paragraph">有關網絡保險庫以及如何構建此架構的更多信息，請參閱… <block ref="5ee11ce3f9bfc218d47e808a1ac01a55" category="inline-link-macro-rx"></block>。</block>
+  <block id="081af9c5870a1e2b72453c8137d7fc73" category="doc">NetApp Workload Factory中的區塊設備支持</block>
+  <block id="41c0f3170443e12c1081a0a411a2c7a4" category="paragraph">NetApp Workload Factory中新引入的區塊裝置支持，可更有效地管理您的區塊裝置。此功能可讓您查看 iSCSI LUN 的詳細資訊並增加其容量，從而為您的儲存需求提供更大的靈活性。</block>
+  <block id="83fd7a4dba0970697d173ce4398c1b71" category="inline-link-macro">在工作負載工廠中管理區塊設備</block>
+  <block id="e739cb7976f49d4295e9ffa8e259037b" category="paragraph"><block ref="e739cb7976f49d4295e9ffa8e259037b" category="inline-link-macro-rx"></block></block>
+  <block id="90b40f16cf91d89fc22fbcc0a38efa7c" category="list-text">刪除不必要的快照：檢查磁碟區中是否存在過時且不必要的快照，這些快照可以刪除以降低成本。</block>
+  <block id="2945c0b218624e42ee523aefde446d66" category="list-text">FlexGroup容量重新平衡：檢查FlexGroup容量是否在其成員容量之間保持均衡，以確保最佳效能。</block>
+  <block id="0f80b197268947adedcc0297fc4a4efd" category="section-title">NetApp Workload Factory中的 EMS 事件 AI 分析器</block>
+  <block id="b0e5de397c4ec9c39df271c0f4cf05e1" category="paragraph">NetApp Workload Factory推出了一款基於 AI 的ONTAP事件管理系統 (EMS) 事件分析器。此功能透過分析 EMS 事件數據，提供見解和建議，幫助您快速識別和解決問題。</block>
+  <block id="a661f5e2ef22dbf468d0f8427ad8323e" category="inline-link-macro">在工作負載工廠中分析 EMS 事件</block>
+  <block id="8121ebebfc076bea222c1f4c838b09ec" category="paragraph"><block ref="8121ebebfc076bea222c1f4c838b09ec" category="inline-link-macro-rx"></block></block>
+  <block id="1df24a9e91a6f6d01b5ce32608b6f3f7" category="section-title">監控 FSx for ONTAP檔案系統的成本和使用趨勢</block>
+  <block id="56a2825e2abb3758584b94544cfdba40" category="paragraph">您可以直接從NetApp Workload Factory控制台監控 FSx for ONTAP檔案系統的成本和使用趨勢。此功能提供儲存消耗和成本指標以及詳細成本，幫助您優化資源分配和預算規劃。</block>
+  <block id="bd89bba18a943a5ad32117396fcdea90" category="inline-link-macro">在 Workload Factory 中追蹤 FSx for ONTAP檔案系統的成本</block>
+  <block id="d5905c9d9cba2248871f04654e4f9b1d" category="paragraph"><block ref="d5905c9d9cba2248871f04654e4f9b1d" category="inline-link-macro-rx"></block></block>
+  <block id="5b58af6390ae44b5a39c726b4820fffb" category="section-title">在NetApp Workload Factory中管理檔案系統的 FSx 標籤</block>
+  <block id="543e684a4a914d6bef4f91873d32e315" category="paragraph">直接從NetApp Workload Factory控制台輕鬆管理檔案系統的 FSx 標籤。此功能可讓您新增、編輯或刪除標籤，從而更好地組織和分類您的 FSx for ONTAP檔案系統。</block>
+  <block id="8945587d036e5b09c39322767239857a" category="inline-link-macro">在工作負載工廠中管理 FSx 標籤</block>
+  <block id="3c57420160e53dc4967d9ca75a5d5d06" category="paragraph"><block ref="3c57420160e53dc4967d9ca75a5d5d06" category="inline-link-macro-rx"></block></block>
+  <block id="1b931c0909a42d2dd6b1b28eeb36252c" category="section-title">調整 FSx for ONTAP檔案系統的快取容量</block>
+  <block id="aed1296ef373ba8df468af355d85d3ce" category="paragraph">您可以透過工作負載工廠控制台增加和減少快取磁碟區的容量。</block>
+  <block id="012110073acf8459d2a77ef54f547130" category="inline-link-macro">在工作負載工廠中管理快取卷</block>
+  <block id="cfd839007fdba7ba7d7a5a35de4aa55a" category="paragraph"><block ref="cfd839007fdba7ba7d7a5a35de4aa55a" category="inline-link-macro-rx"></block></block>
+  <block id="07236cc47c70c5fd568c5a75720db649" category="summary">分析NetApp Workload Factory for FSx for ONTAP中的 EMS 事件。</block>
+  <block id="12f4e0399e2df3c2e6f5c6d078ccfcb7" category="doc">在NetApp Workload Factory中分析 FSx for ONTAP EMS 事件</block>
+  <block id="ab6bb38002e21094a77f3fc386f75b81" category="paragraph">使用智慧型事件分析器自動擷取和分析NetApp Workload Factory中 FSx for ONTAP檔案系統的事件管理系統 (EMS) 事件，以便您可以快速識別和解決問題。Agentic AI 為基礎的分析需要 Amazon Bedrock 整合。</block>
+  <block id="69b4c5d1a10df7b24661fa3357de7164" category="paragraph">儲存管理員通常只有在客戶投訴後才會回應 FSx for ONTAP EMS 事件，或透過建立自訂腳本和警報來回應。這種被動應對方式會減慢問題解決速度，增加停機時間，並降低營運效率。</block>
+  <block id="2579e7ab91941f10b5b5ff1d62950587" category="paragraph">事件分析器會擷取 FSx for ONTAP EMS 事件並進行分析，以協助您維護 FSx for ONTAP檔案系統的健康狀況和效能。</block>
+  <block id="950a30dbe6160d51c93dd8570573b0b1" category="paragraph">主要優勢包括：</block>
+  <block id="ff395ce69e116ba9c811e7b5e4d30150" category="list-text">進階故障排除：利用人工智慧主動偵測和分析事件，為需要關注的ONTAP EMS 事件提供清晰的解決方案步驟。</block>
+  <block id="e81b4c6e0ef57eb1b12f2dee109f70a5" category="list-text">最佳實務修復：根據您的環境，提供修復 FSx for ONTAP問題的清晰步驟，以便任何人都能解決問題。</block>
+  <block id="8b6e7c06cc47e464865ce794c06c1cdc" category="paragraph">使用事件分析器時，您可以在享受高級 AI 分析的同時，保持對環境的完全控制。</block>
+  <block id="9885b601634edd1a14ff24653669df48" category="paragraph">要使用事件分析器，您需要啟動 Amazon Bedrock，選擇 Workload Factory 使用的模型，建立連接到 Amazon Bedrock 的私人端點，新增權限，並建立企業授權。</block>
+  <block id="888aee60b948bfcee3f85cb52d4d62f0" category="inline-link-macro">Amazon Bedrock 定價</block>
+  <block id="2064dc6bc6a42df41c5d58cafe4e5108" category="paragraph"><block ref="2064dc6bc6a42df41c5d58cafe4e5108" category="inline-link-macro-rx"></block></block>
+  <block id="bf71ae5aa16f5632361df660e7d643c6" category="section-title">資料隱私和安全</block>
+  <block id="4156616e317ae39855b5f4857b036da9" category="paragraph">此功能透過以下措施確保資料隱私和安全：</block>
+  <block id="a492925ae64557e89b32f29da418b5eb" category="paragraph-title">數據主權</block>
+  <block id="6c9fd6facdeb8075fa50e4efcd8bf208" category="paragraph">資料和聚合資料保留在您的 AWS 帳戶內，透過私人 VPC 終端節點（Amazon Bedrock）進行通信，確保不會暴露於公共互聯網。</block>
+  <block id="2405b8bbe1eec9accdcb22235860c3f2" category="paragraph-title">無人工智慧訓練</block>
+  <block id="ff8598dd406774c1ca9008fc13afdda5" category="inline-link-macro">Amazon Bedrock 資料保護文檔</block>
+  <block id="5ccaf9841b400d75e00f4c8e0a92737d" category="paragraph">客戶資料不會用於訓練或改進模型。 Amazon Bedrock 會即時處理事件，但不會使用您的資料進行訓練。結果僅供參考，將儲存在您的環境中。更多詳情請參閱…<block ref="b066fd87fd1e8a2b8d520c5977ecc43e" category="inline-link-macro-rx"></block> 。</block>
+  <block id="300fe33bee6926cbc2c265a3ccde1b0f" category="paragraph">要使用事件分析器，您必須滿足以下先決條件：</block>
+  <block id="5f12cac6e522ac73a1f518e795d5d742" category="list-text">你必須<block ref="74a62493240df6cc0643a248f282a25a" category="inline-link-macro-rx"></block>在您的 AWS 帳戶中查看 FSx for ONTAP檔案系統的事件。</block>
+  <block id="709be97721c78cba90770231b1263a14" category="inline-link-macro">使用連結連接到 FSx for ONTAP檔案系統</block>
+  <block id="35f42184479bd0858fd2a493aa10006d" category="list-text">你必須<block ref="13912c59a5ea303190d1db0c6a5f11f5" category="inline-link-macro-rx"></block>使用EMS事件分析器。</block>
+  <block id="ffbf1245cc8098f00c47babcce153016" category="list-text">您還需要滿足以下要求。分析日誌錯誤時，系統會提示您完成這些步驟。</block>
+  <block id="b731c0685ba6b81efc2a3730248eb9d5" category="list-text">*亞馬遜基岩啟動*</block>
+  <block id="2a1c67a7dc28732cbee29b267a4a9af7" category="paragraph">事件分析器使用 Amazon Bedrock API 為 FSx for ONTAP事件提供基於 AI 的見解。</block>
+  <block id="3e7827ba3fa976aec6ad1122b7da30fe" category="paragraph">建議模型：亞馬遜基岩模型（anthropic.claude-sonnet-4-20250514-v1:0）。您必須提供所選區域中此模型的推理設定檔 ARN。</block>
+  <block id="b523b0335680ab84edd50860caeed123" category="list-text">*工作負載工廠連結*</block>
+  <block id="bd3978e078bba2f9f1743c27d1db8462" category="paragraph">您必須建立連結並將其與 FSx for ONTAP檔案系統關聯，才能啟用 AI 驅動的事件分析。此連結在 Workload Factory 與一個或多個 FSx for ONTAP檔案系統之間建立信任關係，並利用 AWS Lambda。</block>
+  <block id="72fa279f5dbab8677f6a4a2b563e0629" category="paragraph"><block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結關聯後，返回此操作。</block>
+  <block id="7ed47c99073de0aed63f1c44842de720" category="list-text">*AWS IAM 權限*</block>
+  <block id="fb6d7ca6557e4fecfffa8ab3a6a96421" category="paragraph">您必須將下列權限新增至 Workload Factory IAM 角色關聯策略。</block>
+  <block id="47160e55fc85c2702f6f616e65ff73cd" category="list-text">權限：<block ref="93804e96d3f417a0088c564647dd28e9" prefix=" " category="inline-code"></block>和<block ref="00fe52afa6e3b9a0d389f529a2b88242" prefix=" " category="inline-code"></block></block>
+  <block id="69e9daf6e587a39e4b6dea7dda714604" category="paragraph">這些權限使 Workload Factory 能夠呼叫 Bedrock 模型，以便主動進行錯誤調查和補救指導。此設定檔還能確保安全地存取人工智慧，從而提供客製化的洞察。</block>
+  <block id="84f81cf573c6d781702f75eaf12f08f0" category="list-text">與 Workload Factory 關聯的 AWS 憑證：<block ref="c812f1cb829c6d16da192b12e04d78ff" prefix=" " category="inline-code"></block>和<block ref="9aa5a97dfe3f7608d8ee28e7db3c4e2c" prefix=" " category="inline-code"></block>權限</block>
+  <block id="3fc6364e2f4555bc71d109a7ba02fef1" category="paragraph">這些權限用於驗證模型的可用性。</block>
+  <block id="3c9bac4bc86cac9a309d9792f5bb65df" category="section-title">檢視和分析適用於ONTAP的 FSx 的 EMS 事件</block>
+  <block id="6baf937b798e7ea8fa07c50ef6c201f9" category="paragraph">使用 Workload Factory 控制台檢視和分析 FSx for ONTAP檔案系統的 EMS 事件。</block>
+  <block id="7f4aea97afc4fe9bca082673b0935315" category="list-text">從“儲存”選單中，選擇“分析”。</block>
+  <block id="50d875c26d87da128f69cb933227d1a5" category="list-text">在「分析」畫面中，選擇包含要分析的 FSx for ONTAP檔案系統的 AWS 帳戶、憑證和區域。</block>
+  <block id="3508b6e4bf84f2b46e5223cd82593789" category="paragraph">僅支援在螢幕上顯示事件的ONTAP檔案系統的 FSx。</block>
+  <block id="18aee431fdcb283a94abf2d0c207e76d" category="list-text">如有需要，請依照螢幕提示完成*AI 分析設定要求*，以滿足任何缺失的先決條件。</block>
+  <block id="0b8feb0f50822d2155836ac6630dcff8" category="list-text">找到要分析的 FSx for ONTAP檔案系統，然後選擇「檢視事件」。</block>
+  <block id="dacb27092cd2afb431a6b906c5beb313" category="list-text">請查看詳細的活動資訊。</block>
+  <block id="f96fb00c03e55e8700536f390d41e78b" category="list-text">成本優化：儲存效率、資料分層和不必要的快照刪除</block>
+  <block id="a5f8aee6e945eb0dbb1da60eaac3110f" category="list-text">效能最佳化： FlexGroup卷重新平衡</block>
+  <block id="36e5c8637cbc6d751b3ef3aea28243c2" category="summary">在NetApp Workload Factory中管理 FSx for ONTAP檔案系統的區塊設備。</block>
+  <block id="c596ea1662cbb07d0ef3b729c17d7ed2" category="doc">管理 FSx for ONTAP檔案系統的區塊設備</block>
+  <block id="f0fdc7a12fb16089bbf1f5d134742921" category="paragraph">透過NetApp Workload Factory控制台，您可以管理 FSx for ONTAP檔案系統的區塊設備。管理任務包括查看區塊設備詳細資訊和增加容量。</block>
+  <block id="2bdf5c50f504c8de4e3490f942010338" category="paragraph">區塊設備，或稱為 LUN（邏輯單元號），是 SAN 環境中包含檔案系統的捲，可透過網路被主機存取。</block>
+  <block id="2a29012d549070ee593fcda2b2383198" category="paragraph">您可以管理使用 iSCSI 協定的ONTAP檔案系統的 FSx 區塊裝置。</block>
+  <block id="11f86c8098f50365bfc25a2fb87568db" category="list-text">您必須關聯一個連結才能管理區塊設備。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。關聯連結後，返回此操作。</block>
+  <block id="ab333c71570d582979f29ab5f2f547f5" category="list-text">您必須擁有一個已存在的區塊設備才能查看和管理它。</block>
+  <block id="934c3d38b90775eafeecd6f5f7490e2c" category="section-title">查看區塊設備詳情</block>
+  <block id="12a66c1ef123e6c23c139c511d70f3f4" category="paragraph">隨時查看現有區塊設備的詳細資訊。</block>
+  <block id="1ee5303f1904e713e5abd28b233031e0" category="list-text">從 *FSx for ONTAP* 中選擇 *區塊設備* 選項卡。</block>
+  <block id="cd659e59124101049c18f2e95358f822" category="list-text">導覽至區塊裝置的操作選單，然後選擇*查看詳細資料*。</block>
+  <block id="69f69d356f75e18a9b5cc248282a325f" category="paragraph">顯示區塊設備的常規詳細資訊、功耗、存取權限和保護資訊。</block>
+  <block id="563aa0194a1babc41517b2ffa3c46c5d" category="section-title">增加塊設備的容量</block>
+  <block id="5dc92058914c7c5082569828d0258972" category="paragraph">隨時增加現有塊設備的容量。</block>
+  <block id="ea25ef7373f521d52fbd5ca2a47bca2f" category="list-text">導航至區塊設備的操作選單，然後選擇“增加容量”。</block>
+  <block id="f038e534cccdfa3eb80bc4f41d03b815" category="list-text">輸入塊狀設備的新容量並選擇單位。</block>
+  <block id="a513f9168d077dcb464740ecedeeeebe" category="list-text">選擇“增加”以套用變更。</block>
+  <block id="fc550a6b2bee383ed3285311141dfd90" category="admonition">增加區塊設備的大小後，按照主機作業系統提供的步驟來發現區塊設備的新大小，並擴展其上的檔案系統。</block>
+  <block id="5731c6f2c2af81018b15a6dc509612e7" category="doc">使用NetApp Workload Factory管理ONTAP的 FSx 快取卷</block>
+  <block id="434453d056f84022d78f78e508e2c9e4" category="paragraph">使用NetApp Workload Factory控制台管理 FSx for ONTAP檔案系統的快取磁碟區。快取是一種暫時儲存資料的方法，它透過減少檢索時間來提高資料存取效能。您可以編輯快取名稱、調整容量、變更匯出策略、選擇快取方法、預先填入快取或刪除快取磁碟區。</block>
+  <block id="511fe435e8165aed773eaad3ed9390d2" category="paragraph">您可以在NetApp Workload Factory控制台中管理與快取關係關聯的快取磁碟區。</block>
+  <block id="427f7328ade7fa24ab13c85e87e8bbfd" category="list-text">您必須關聯一個連結來管理快取捲和關係。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。關聯連結後，返回此操作。</block>
+  <block id="70c7c51ab85c821261f3ba2480abf1db" category="section-title">調整快取磁碟區的容量</block>
+  <block id="5ed1aecee1798642ab9b691b328aa8ab" category="paragraph">您可以隨時調整現有快取磁碟區的容量。</block>
+  <block id="fe3be7f306e31f68a5be5e69e70a8b52" category="list-text">選擇要修改的快取容量的操作選單，然後選擇「調整快取容量」。</block>
+  <block id="77b996cd23d489eedaf364444f3767e7" category="list-text">在「調整快取容量」對話方塊中，以百分比或單位輸入快取體積的新容量，然後選擇「套用」。</block>
+  <block id="193ef2bb6385a35be8ff3b84833c39e4" category="paragraph">您可以變更現有快取磁碟區的快取工作方式，使其採用寫繞式或寫回式。</block>
+  <block id="9b56249d55afe0d9c4ba3cc38ab4b64a" category="paragraph">在使用快取卷之前，請先用來源磁碟區中的資料填入快取卷，以加快快取資料的可用性。</block>
+  <block id="0e4f2d0a44a5351cf8fa58d69ca7867e" category="paragraph">刪除快取磁碟區時，會移除與其快取的關係。快取資料已失效。</block>
+  <block id="c5ef40517475cde4aa83a5451658e49f" category="summary">隨時為檔案系統新增、更新或刪除 FSx for ONTAP檔案系統標籤。</block>
+  <block id="eb4fc4352d1165f11c777d937df4f824" category="doc">在NetApp Workload Factory中管理ONTAP檔案系統標籤的 FSx</block>
+  <block id="46512aa67048f4a43e843b7f1767367e" category="paragraph">標籤可以幫助你將資源分類。在NetApp Workload Factory中，您可以隨時新增、編輯和刪除檔案系統的標籤。</block>
+  <block id="0212093392893715fbbcaff6318bf12c" category="list-text">從 *FSx for ONTAP* 中選擇要更新的檔案系統的操作選單，然後選擇 *管理檔案系統標籤*。</block>
+  <block id="9b3a1ad5abecf153aceb732b418aab4f" category="list-text">在「管理檔案系統標籤」對話方塊中，根據需要新增、編輯或刪除標籤。</block>
+  <block id="e8c1165d9931bb1b1cf9a7e8b496158d" category="paragraph">檔案系統最多可以套用 50 個標籤。</block>
+  <block id="4e9dffb84355d8e05d841ef09cb0b14f" category="paragraph">選擇<block ref="7cb8f01033b9f51b50ad23ef165f92b6" category="inline-link-macro-rx"></block>滿足您的需求。</block>
+  <block id="01fae763ec208cbe8aba55abc3b09866" category="summary">在NetApp Workload Factory中追蹤 FSx for ONTAP檔案系統資源的成本。</block>
+  <block id="032c10b11ebbd33bcfb1d9c697658530" category="doc">在NetApp Workload Factory中追蹤資源成本</block>
+  <block id="d4c186d67cf8c08158cf00710c119d5c" category="paragraph">使用NetApp Workload Factory以統一視圖追蹤 FSx for ONTAP檔案系統的成本和使用情況。成本數據有助於您有效管理預算和優化資源。  AWS Cost Explorer 提供成本資料。</block>
+  <block id="a9e1e30ff98d7ffed745988d1a4fc1fb" category="paragraph">使用下列權限從 AWS Cost Explorer 提取 FSx for ONTAP檔案系統資源的成本和使用情況資料：</block>
+  <block id="2340e78cb09237db2f23f58bd9bd22a3" category="list-text"><block ref="bba6542a0e46014b21a818003b1e41d2" prefix="" category="inline-code"></block></block>
+  <block id="eb31a5b8779c15ebaec006efc85981a3" category="list-text"><block ref="f74e5982a82afd7d2755b24355dd08c6" prefix="" category="inline-code"></block></block>
+  <block id="c5722965ac58717f7a4510137bda582a" category="inline-link-macro">使用_檢視、規劃和分析_權限策略授予憑證</block>
+  <block id="108b346d0d8c9cf596528ad0d2a7de34" category="paragraph"><block ref="5763d95ed6eefefde40388c1a7624c69" category="inline-link-macro-rx"></block>在 Workload Factory 中追蹤 FSx 的ONTAP成本。</block>
+  <block id="45eecb5efbc4c958be178611070d560c" category="list-text">從儲存選單中，選擇“成本”。</block>
+  <block id="a95a893b7dafb6da5604234e0936ce1c" category="list-text">在「成本」頁面上，透過提供以下資訊來篩選 FSx for ONTAP資源的成本和容量資料：</block>
+  <block id="f4654cadb5477c95a6a0e93a5be01b7b" category="list-text">*AWS 帳戶*：選擇要檢視成本資料的帳戶。</block>
+  <block id="5ef42bc94075bca2b4d7247474fbb5f3" category="list-text">*憑證*：選擇具有_檢視、規劃和分析_權限的憑證。</block>
+  <block id="63d9c4239e3de8cd030beef46a2ba8c6" category="list-text">*區域*：選擇要查看成本資料的 AWS 區域。</block>
+  <block id="ccb042e2bddd0b77b8fffd5210de4f5a" category="list-text">*成本資料範圍*：選擇要查看的成本資料的時間範圍。</block>
+  <block id="db2c0720daa95b2841a73d2a13c0e539" category="list-text">查看 FSx for ONTAP資源的*成本詳情*。</block>
+  <block id="815e75619b370a1b845eccec6979ed74" category="section-title">2025年11月27日</block>
+  <block id="7ba9e316fdb6ba8e077283db064835f0" category="sidebar">追蹤與分析 FSx for ONTAP成本</block>
+  <block id="74475e9b626ebe70ba32217725555fb2" category="sidebar">分析 FSx 中的ONTAP事件</block>
+  <block id="7afacf82c5a68418fd34140a4a69b555" category="sidebar">區塊設備管理</block>
+  <block id="b312d49b502ea93d7b1d38b92313f502" category="sidebar">管理區塊設備</block>
+  <block id="9f83e27b7a1a59c38fc7d458de16054a" category="sidebar">管理檔案系統標籤</block>
 </blocks>

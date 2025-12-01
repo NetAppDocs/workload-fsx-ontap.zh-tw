@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: manage-fsx-tags.html 
+keywords: create fsx tags, create tags, edit fsx tags, fsx tags 
+summary: 隨時為檔案系統新增、更新或刪除 FSx for ONTAP檔案系統標籤。 
+---
+= 在NetApp Workload Factory中管理ONTAP檔案系統標籤的 FSx
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+標籤可以幫助你將資源分類。在NetApp Workload Factory中，您可以隨時新增、編輯和刪除檔案系統的標籤。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選擇要更新的檔案系統的操作選單，然後選擇 *管理檔案系統標籤*。
+. 在「管理檔案系統標籤」對話方塊中，根據需要新增、編輯或刪除標籤。
++
+檔案系統最多可以套用 50 個標籤。
+
+. 選擇*應用*。
+

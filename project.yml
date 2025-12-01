@@ -33,6 +33,8 @@ sidebar:
     entries:
     - title: 探索節約效益
       url: "/explore-savings.html"
+    - title: 追蹤與分析 FSx for ONTAP成本
+      url: "/track-costs.html"
     - title: 使用連結
       entries:
       - title: 了解連結
@@ -93,6 +95,8 @@ sidebar:
         url: "/configuration-analysis.html"
       - title: 實作架構良好的檔案系統組態
         url: "/improve-configurations.html"
+    - title: 分析 FSx 中的ONTAP事件
+      url: "/analyze-events.html"
     - title: Volume管理
       entries:
       - title: 編輯 Volume 自動擴充
@@ -119,12 +123,18 @@ sidebar:
         url: "/split-cloned-volume.html"
       - title: 刪除 Volume
         url: "/delete-volume.html"
+    - title: 區塊設備管理
+      entries:
+      - title: 管理區塊設備
+        url: "/manage-block-devices.html"
     - title: 檔案系統管理
       entries:
       - title: 調整檔案系統容量
         url: "/increase-file-system-capacity.html"
       - title: 啟用自動容量和 inode 管理
         url: "/enable-auto-capacity-management.html"
+      - title: 管理檔案系統標籤
+        url: "/manage-fsx-tags.html"
       - title: 重設 fsxadmin 密碼
         url: "/reset-fsxadmin-password.html"
       - title: 刪除檔案系統

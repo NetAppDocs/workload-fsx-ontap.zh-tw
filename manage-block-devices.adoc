@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: manage-block-devices.html 
+keywords: block devices, manage luns, manage iscsi 
+summary: 在NetApp Workload Factory中管理 FSx for ONTAP檔案系統的區塊設備。 
+---
+= 管理 FSx for ONTAP檔案系統的區塊設備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+透過NetApp Workload Factory控制台，您可以管理 FSx for ONTAP檔案系統的區塊設備。管理任務包括查看區塊設備詳細資訊和增加容量。
+
+.關於這項工作
+區塊設備，或稱為 LUN（邏輯單元號），是 SAN 環境中包含檔案系統的捲，可透過網路被主機存取。
+
+您可以管理使用 iSCSI 協定的ONTAP檔案系統的 FSx 區塊裝置。
+
+.開始之前
+* 您必須關聯一個連結才能管理區塊設備。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。關聯連結後，返回此操作。
+* 您必須擁有一個已存在的區塊設備才能查看和管理它。
+
+
+
+
+== 查看區塊設備詳情
+
+隨時查看現有區塊設備的詳細資訊。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選擇 *區塊設備* 選項卡。
+. 導覽至區塊裝置的操作選單，然後選擇*查看詳細資料*。
++
+顯示區塊設備的常規詳細資訊、功耗、存取權限和保護資訊。
+
+
+
+
+
+== 增加塊設備的容量
+
+隨時增加現有塊設備的容量。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選擇 *區塊設備* 選項卡。
+. 導航至區塊設備的操作選單，然後選擇“增加容量”。
+. 輸入塊狀設備的新容量並選擇單位。
+. 選擇“增加”以套用變更。
+
+
+
+NOTE: 增加區塊設備的大小後，按照主機作業系統提供的步驟來發現區塊設備的新大小，並擴展其上的檔案系統。
