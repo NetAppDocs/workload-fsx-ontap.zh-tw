@@ -12,18 +12,26 @@ indexpage:
       url: "/learn-fsx-ontap.html"
     - title: 快速入門
       url: "/quick-start.html"
+    - title: 為 ONTAP 檔案系統建立 FSX
+      url: "/create-file-system.html"
   - title: 使用適用於 ONTAP 的 FSX
     links:
     - title: 探索節約效益
       url: "/explore-savings.html"
-    - title: 為 ONTAP 檔案系統建立 FSX
-      url: "/create-file-system.html"
-    - title: 查看 FSx for ONTAP檔案系統的良好架構狀態
-      url: "/improve-configurations.html"
-    - title: 為 ONTAP Volume 建立 FSX
-      url: "/create-volume.html"
+    - title: 追蹤 FSx for ONTAP資源的成本和使用情況
+      url: "/track-costs.html"
+    - title: 使用連結連線至檔案系統
+      url: "/create-link.html"
     - title: 保護您的資料
       url: "/data-protection-overview.html"
+  - title: 管理與監控
+    links:
+    - title: 使用 Tracker 監控作業
+      url: "/monitor-operations.html"
+    - title: 查看 FSx for ONTAP檔案系統的良好架構狀態
+      url: "/improve-configurations.html"
+    - title: 分析 FSx 中的ONTAP EMS 事件
+      url: "/analyze-events.html"
   - title: 知識與支援
     links:
     - title: 註冊以取得支援

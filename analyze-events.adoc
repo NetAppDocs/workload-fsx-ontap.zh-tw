@@ -19,7 +19,7 @@ summary: 分析NetApp Workload Factory for FSx for ONTAP中的 EMS 事件。
 
 儲存管理員通常只有在客戶投訴後才會回應 FSx for ONTAP EMS 事件，或透過建立自訂腳本和警報來回應。這種被動應對方式會減慢問題解決速度，增加停機時間，並降低營運效率。
 
-事件分析器會擷取 FSx for ONTAP EMS 事件並進行分析，以協助您維護 FSx for ONTAP檔案系統的健康狀況和效能。
+事件分析器會擷取 FSx for ONTAP EMS 事件並進行分析，以協助您維護 FSx for ONTAP檔案系統的健康狀況和效能。Workload Factory 僅顯示最近 72 小時內發生的事件。
 
 主要優勢包括：
 
@@ -51,13 +51,13 @@ link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定價"^]
 
 要使用事件分析器，您必須滿足以下先決條件：
 
-* 你必須link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、規劃和分析_權限"^]在您的 AWS 帳戶中查看 FSx for ONTAP檔案系統的事件。
+* 你必須link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _操作和修復_ 權限"^]在您的 AWS 帳戶中查看 FSx for ONTAP檔案系統的事件。
 * 你必須link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到 FSx for ONTAP檔案系統"]使用EMS事件分析器。
 * 您還需要滿足以下要求。分析日誌錯誤時，系統會提示您完成這些步驟。
 +
-** *亞馬遜基岩啟動*
+** *亞馬遜基岩模型*
 +
-事件分析器使用 Amazon Bedrock API 為 FSx for ONTAP事件提供基於 AI 的見解。
+事件分析器使用您的 Amazon Bedrock API 為 FSx for ONTAP事件提供基於 AI 的見解。
 
 +
 建議模型：亞馬遜基岩模型（anthropic.claude-sonnet-4-20250514-v1:0）。您必須提供所選區域中此模型的推理設定檔 ARN。
@@ -78,7 +78,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解�
 +
 這些權限使 Workload Factory 能夠呼叫 Bedrock 模型，以便主動進行錯誤調查和補救指導。此設定檔還能確保安全地存取人工智慧，從而提供客製化的洞察。
 
-*** 與 Workload Factory 關聯的 AWS 憑證： `bedrock:GetFoundationModelAvailability`和 `bedrock:ListInferenceProfiles`權限
+*** 與 Workload Factory 關聯的 AWS 憑證： `bedrock:GetInferenceProfile`和 `bedrock:ListInferenceProfiles`權限
 +
 這些權限用於驗證模型的可用性。
 
@@ -97,12 +97,10 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解�
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存圖塊中，選擇*轉到儲存*。
-. 從“儲存”選單中，選擇“分析”。
-. 在「分析」畫面中，選擇包含要分析的 FSx for ONTAP檔案系統的 AWS 帳戶、憑證和區域。
-+
-僅支援在螢幕上顯示事件的ONTAP檔案系統的 FSx。
-
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 選擇要分析的 FSx for ONTAP檔案系統，然後選擇「管理」。
+. 選擇“分析”標籤。
 . 如有需要，請依照螢幕提示完成*AI 分析設定要求*，以滿足任何缺失的先決條件。
-. 找到要分析的 FSx for ONTAP檔案系統，然後選擇「檢視事件」。
+. 選擇“分析”。
 . 請查看詳細的活動資訊。
 
