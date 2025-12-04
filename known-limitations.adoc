@@ -120,6 +120,12 @@ System Manager 不支援用於 ONTAP 連線的 FSX 連結。
 
 使用控制台代理程式時不支援 AWS Secrets Manager。
 
+
+
+== Amazon S3 存取點限制
+
+每個儲存虛擬機器的 S3 存取點數量上限為 4,000 個。
+
 附註：
 
 . 適用於 Amazon FSX for NetApp ONTAP
