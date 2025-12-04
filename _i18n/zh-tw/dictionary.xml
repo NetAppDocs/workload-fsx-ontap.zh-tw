@@ -1472,7 +1472,6 @@
   <block id="9e46846308a6940deed12bb97a4f8290" category="list-text">連結與檔案系統無關聯。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
   <block id="7c3e31cda0e937f8fa1edeeb89e9fe70" category="list-text">ARP/AI 不支援具有不可變檔案的磁碟區以及具有 iSCSI 和 NVMe 協定的磁碟區。</block>
   <block id="df1195db43983cb33962d0fe23f28da4" category="list-text">檔案系統已具有 ARP/AI 策略。</block>
-  <block id="0bce1227be581635db9bb209f22cf4e6" category="paragraph">工作負載工廠啟動卷創建。建立完成後，系統會在「磁碟區」標籤中顯示新磁碟區。</block>
   <block id="817a91472106a30911a7a081b0284ff7" category="paragraph">檢查 FlexVol 或 FlexGroup 卷容量的平衡，並重新平衡磁碟區容量，以將檔案均勻分佈在節點中的所有 FlexVol 磁碟區或所有組成部分之間，以便所有節點都參與單一 FlexGroup 磁碟區的工作負載。</block>
   <block id="46119f30376fd007e4806359f116810d" category="paragraph">FlexVol 捲和 FlexGroup 磁碟區支援重新平衡磁碟區容量。重新平衡磁碟區會在新增檔案和檔案成長、隨著時間的推移而產生不平衡時、重新分配容量。手動開始重新平衡作業後、我們會選取檔案、並自動且不中斷地移動。Volume 傳輸作業會消耗檔案系統資源。</block>
   <block id="bbf6fdac51a56da72339e09ef6a7537c" category="paragraph">每種磁碟區類型和重新平衡操作均有不同，如下所示。</block>
@@ -2467,4 +2466,29 @@
   <block id="f553bab80aec86e43829abd15b816ce5" category="section-title">Amazon S3 存取點限制</block>
   <block id="19dc991ee5919c74b5a565fe2ea70176" category="paragraph">每個儲存虛擬機器的 S3 存取點數量上限為 4,000 個。</block>
   <block id="ef6c8d59ba70b1efd5437dd31e63efcb" category="section-title">2025年12月4日</block>
+  <block id="bf9dc967c38bf5f6366aea1d464016b5" category="inline-link-macro">使用 S3 存取點建立磁碟區</block>
+  <block id="9650d80f3b4a8975eb2cc3145efe97fd" category="list-text"><block ref="9650d80f3b4a8975eb2cc3145efe97fd" category="inline-link-macro-rx"></block></block>
+  <block id="3e2c74c8c2d6921bd86b94a0e3ce7846" category="inline-link-macro">管理磁碟區的 S3 存取點</block>
+  <block id="bec075d59b91517943ea96b4d56e06de" category="list-text"><block ref="bec075d59b91517943ea96b4d56e06de" category="inline-link-macro-rx"></block></block>
+  <block id="a008e298246d26d679639f7bc96ba6ac" category="inline-link-macro">調整工作負載工廠的容量</block>
+  <block id="6397bacd7d32cf08e4bf24faa5700a5a" category="list-text"><block ref="6397bacd7d32cf08e4bf24faa5700a5a" category="inline-link-macro-rx"></block></block>
+  <block id="d8774a6076f48d902ee122d2219887a0" category="inline-link-macro">在工作負載工廠中變更容量分層策略</block>
+  <block id="15edb6ed53ce8a32fd0631a4517d7fc7" category="list-text"><block ref="15edb6ed53ce8a32fd0631a4517d7fc7" category="inline-link-macro-rx"></block></block>
+  <block id="d628678d4875b2f8f6ea7ca8dab6ade0" category="inline-link-macro">在工作負載工廠中管理 S3 存取點</block>
+  <block id="81cca59ad3bedd27880ab1c747ae8b70" category="list-text"><block ref="81cca59ad3bedd27880ab1c747ae8b70" category="inline-link-macro-rx"></block></block>
+  <block id="e89e0732eb8fbeb9c1bb216d5b1fe2c8" category="summary">在NetApp Workload Factory中管理磁碟區的 S3 存取點。</block>
+  <block id="7caacaed323c9582bdf146f33b338930" category="doc">在NetApp Workload Factory中管理磁碟區的 S3 存取點</block>
+  <block id="c03be794767b179eaf0a48a2bc06884b" category="paragraph">在NetApp Workload Factory中管理磁碟區的 S3 存取點。您可以使用 Workload Factory 控制台將 S3 存取點指派給現有磁碟區或刪除 S3 存取點。</block>
+  <block id="1f26d72d95cf276540f7a69b509645fe" category="paragraph">您必須擁有一個已存在的包含 S3 存取點的磁碟區。</block>
+  <block id="be929bcd251acd28106548a34c8a067b" category="list-text">從 *FSx for ONTAP* 中選擇要更新的磁碟區的檔案系統的操作選單，然後選擇 *管理*。</block>
+  <block id="7fcc02a075c6d0b859fd9a03f5250e5f" category="list-text">在“磁碟區”標籤中，選擇要管理 S3 存取點的磁碟區的操作選單，然後選擇“進階操作”，再選擇“管理 S3 存取點”。</block>
+  <block id="056da7279a8392afebe1b20256f8656b" category="list-text">在「管理 S3 存取點」頁面上，您可以建立和附加存取點或刪除現有存取點。</block>
+  <block id="4dc9fa88ed74bd072e88bad92a1f17c6" category="open-title">建立 S3 存取點並將其附加到現有捲</block>
+  <block id="c57302a0d02305ff8c144fb37bb2fab9" category="list-text">選擇「建立並連接 S3 接入點」。</block>
+  <block id="e979f8982cafd5647560686a5ec74a2a" category="list-text">在「建立並連接 S3 接入點」對話方塊中，提供以下資訊：</block>
+  <block id="0802ef324b114effd397e5e5ac619733" category="list-text">選擇“建立並附加”。</block>
+  <block id="f4e2e090f540d174d8e07c3527c25962" category="open-title">從磁碟區中刪除現有的 S3 存取點</block>
+  <block id="a87127d2d5ce747338342d2d926d9cc4" category="list-text">選擇要刪除的 S3 接入點的操作選單，然後選擇「分離」。</block>
+  <block id="8d755d1f354bf995e33c13051ecdaeca" category="list-text">在「分離並移除 S3 存取點」對話方塊中，選擇「分離並移除」以從磁碟區中刪除 S3 存取點。</block>
+  <block id="f994c7e71102a3d5ed7af5975abfaa09" category="sidebar">管理 S3 存取點</block>
 </blocks>

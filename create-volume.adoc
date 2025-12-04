@@ -241,5 +241,8 @@ NOTE: 快照時間以檔案系統的時區為基礎、其預設為協調世界�
 . 選擇* Create *（建立*）。
 
 
-.結果
-工作負載工廠啟動卷創建。建立完成後，系統會在「磁碟區」標籤中顯示新磁碟區。
+.相關資訊
+* link:adjust-volume-capacity.html["調整工作負載工廠的容量"]
+* link:change-tiering-policy.html["在工作負載工廠中變更容量分層策略"]
+* link:manage-s3-access-points.html["在工作負載工廠中管理 S3 存取點"]
+

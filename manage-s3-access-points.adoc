@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: manage-s3-access-points.html 
+keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
+summary: 在NetApp Workload Factory中管理磁碟區的 S3 存取點。 
+---
+= 在NetApp Workload Factory中管理磁碟區的 S3 存取點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在NetApp Workload Factory中管理磁碟區的 S3 存取點。您可以使用 Workload Factory 控制台將 S3 存取點指派給現有磁碟區或刪除 S3 存取點。
+
+.開始之前
+您必須擁有一個已存在的包含 S3 存取點的磁碟區。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選擇要更新的磁碟區的檔案系統的操作選單，然後選擇 *管理*。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 在“磁碟區”標籤中，選擇要管理 S3 存取點的磁碟區的操作選單，然後選擇“進階操作”，再選擇“管理 S3 存取點”。
+. 在「管理 S3 存取點」頁面上，您可以建立和附加存取點或刪除現有存取點。
++
+[role="tabbed-block"]
+====
+.建立 S3 存取點並將其附加到現有捲
+--
+.. 選擇「建立並連接 S3 接入點」。
+.. 在「建立並連接 S3 接入點」對話方塊中，提供以下資訊：
++
+*** *S3接入點名稱*：輸入S3接入點的名稱。
+*** *使用者*：選擇有權存取該磁碟區的現有使用者或建立新使用者。
+*** *使用者類型*：選擇*UNIX*或*Windows*作為使用者類型。
+
+
+.. 選擇“建立並附加”。
+
+
+--
+.從磁碟區中刪除現有的 S3 存取點
+--
+.. 選擇要刪除的 S3 接入點的操作選單，然後選擇「分離」。
+.. 在「分離並移除 S3 存取點」對話方塊中，選擇「分離並移除」以從磁碟區中刪除 S3 存取點。
+
+
+--
+====
+

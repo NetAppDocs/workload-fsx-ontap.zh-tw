@@ -119,6 +119,8 @@ sidebar:
         url: "/manage-nfs-export-policy.html"
       - title: 管理 SMB/CIFS 共享
         url: "/manage-cifs-share.html"
+      - title: 管理 S3 存取點
+        url: "/manage-s3-access-points.html"
       - title: 分割複製的 Volume
         url: "/split-cloned-volume.html"
       - title: 刪除 Volume
