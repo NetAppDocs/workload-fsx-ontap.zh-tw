@@ -2460,12 +2460,11 @@
   <block id="ec43608dd1a0c06ed66226644c486b9a" category="sidebar">追蹤 FSx for ONTAP資源的成本和使用情況</block>
   <block id="063d22315ef43d4247b4ee3e2986ca61" category="sidebar">分析 FSx 中的ONTAP EMS 事件</block>
   <block id="01f76f754caa3b688233762c1b9391f6" category="section-title">支援用於ONTAP的 FSx 的 AWS S3 存取點</block>
-  <block id="3b8b774c9a2fdbcd783a971c096ca5f2" category="paragraph">借助此功能，您可以從 Workload Factory 控制台使用 S3 存取點建立磁碟區。使用 S3 存取點，您可以透過 AWS S3 API 存取駐留在 SMB/CIFS 或 NFS 磁碟區上的檔案資料。這樣，您就可以將現有資料與支援 S3 存取點的 AWS 服務的 GenAI、ML 和分析功能整合在一起。</block>
   <block id="d30cb805d7270ac0b7cc06375888e47f" category="paragraph">NetApp Workload Factory為您的 FSx for ONTAP檔案系統提供 AWS S3 存取點。您可以使用 S3 存取點建立磁碟區，將 S3 存取點指派給現有捲，並從 Workload Factory 控制台管理 S3 存取點。使用 S3 存取點，您可以透過 AWS S3 API 存取駐留在 SMB/CIFS 或 NFS 磁碟區上的檔案資料。這樣，您就可以將現有資料與支援 S3 存取點的 AWS 服務的 GenAI、ML 和分析功能整合在一起。</block>
   <block id="886bb289e00112de662ac993067a77cd" category="paragraph">S3 端點可以連線到 FSx for ONTAP磁碟區。使用 S3 存取點，您可以透過 AWS S3 API 存取駐留在 SMB/CIFS 或 NFS 磁碟區上的檔案資料。這樣，您就可以將現有資料與支援 S3 存取點的 AWS 服務的 GenAI、ML 和分析功能整合在一起。</block>
   <block id="33d481ba528452e02faf75a2f7350ee4" category="list-text">*S3 存取點*：可選地，透過 AWS S3 API 連接 S3 存取點，以存取駐留在 NFS 或 SMB/CIFS 磁碟區上的 FSx for ONTAP檔案系統資料。僅支援文件存取類型。提供以下詳細資訊：</block>
   <block id="41706ab07c21315a8c38172f78132df3" category="list-text">*S3接入點名稱*：輸入S3接入點的名稱。</block>
   <block id="f553bab80aec86e43829abd15b816ce5" category="section-title">Amazon S3 存取點限制</block>
   <block id="19dc991ee5919c74b5a565fe2ea70176" category="paragraph">每個儲存虛擬機器的 S3 存取點數量上限為 4,000 個。</block>
-  <block id="788c421d379c47cc27e8fdc18771f4c7" category="section-title">2025年12月2日</block>
+  <block id="ef6c8d59ba70b1efd5437dd31e63efcb" category="section-title">2025年12月4日</block>
 </blocks>

@@ -15,7 +15,7 @@ summary: 瞭解 Amazon FSX for NetApp ONTAP 的新功能。
 
 
 
-== 2025年12月2日
+== 2025年12月4日
 
 
 
