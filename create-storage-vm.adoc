@@ -34,8 +34,9 @@ NOTE: 從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 在儲存圖塊中，選擇*轉到儲存*。
 . 從儲存選單中，選擇 *FSx for ONTAP*。
-. 從 *FSx for ONTAP* 中，選擇要為其建立儲存 VM 的檔案系統的操作選單，然後選擇 *建立儲存 VM*。
-. 在「儲存 VM 」頁面的「儲存 VM 組態」下、提供下列項目：
+. 從 *FSx for ONTAP* 中選擇檔案系統的操作選單，然後選擇 *管理*。
+. 在檔案系統概覽的「儲存虛擬機器」下，選擇「建立儲存虛擬機器」。
+. 在「建立儲存虛擬機器」頁面的「儲存虛擬機器配置」下，提供以下資訊：
 +
 .. * 名稱 * ：輸入儲存 VM 的名稱。
 .. * 儲存 VM 認證 * ：提供此儲存 VM 使用者的密碼 `vsadmin` 、或使用檔案系統的 `fsxadmin` 使用者認證。

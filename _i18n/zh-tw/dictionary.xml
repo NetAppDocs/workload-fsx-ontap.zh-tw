@@ -71,8 +71,6 @@
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="summary"></block>
   <block id="85a0e511a99369efd5c47890a946947b" category="doc">設定及更新儲存 VM 的 Active Directory</block>
   <block id="c19f2fad6f0110c3951bd583edb5371f" category="paragraph">同樣的步驟也適用於設定及更新儲存 VM 的 Active Directory 。</block>
-  <block id="3a7b10a42e70c562594e7593e84cfb0d" category="list-text">從檔案系統總覽中、選取 * 儲存 VMS* 標籤。</block>
-  <block id="584856da16c520c5370d79f390f47426" category="list-text">選取 * 管理 AD 組態 * 。</block>
   <block id="dcfecf722762bfcce19242fd2e38a2c2" category="list-text">在「管理 AD 組態」頁面上、提供下列項目：</block>
   <block id="a531f5a3e49319a6c1b23021b5a27417" category="list-text">* 要加入的 Active Directory 網域 * ：輸入 Active Directory 的完整網域名稱（ FQDN ）。</block>
   <block id="194331d5ecf77bf506c810edab0a3cc7" category="list-text">* DNS IP 位址 * ：輸入最多三個 IP 位址、並以逗號分隔。</block>
@@ -188,7 +186,6 @@
   <block id="bc7303a544a54859ef646aaae48578a5" category="paragraph">有了 SVM 、當您存取適用於 ONTAP 的 FSX 中的資料時、您的用戶端和工作站會使用 SVM 的端點（ IP 位址）、掛載由 SVM 託管的 Volume 、 CIFS/SMB 共享區或 iSCSI LUN 。</block>
   <block id="0be7879371b03da9f3e439c5431f1db2" category="inline-link-macro">管理 ONTAP 儲存虛擬機器的 FSX</block>
   <block id="cbddd6713cb3317df938ea4a6fd2cd84" category="paragraph">確認每個檔案系統支援的儲存 VM 數量。如需每個檔案系統的 SVM 最大數量、請參閱 <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> AWS 文件中的。</block>
-  <block id="cdbc38b99c6a38c90c6623e1ac73a0fd" category="list-text">在「儲存 VM 」頁面的「儲存 VM 組態」下、提供下列項目：</block>
   <block id="c9f265881e56f4c52918525bdcb9205d" category="list-text">* 名稱 * ：輸入儲存 VM 的名稱。</block>
   <block id="42a49281a2c075c2004f1e73852b27e3" category="list-text">* 儲存 VM 認證 * ：提供此儲存 VM 使用者的密碼<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 、或使用檔案系統的<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 使用者認證。</block>
   <block id="34cc44a6e06f592c6033a57f8671a67a" category="list-text">* 根磁碟區安全樣式 * ：根據存取資料的用戶端類型、選取根磁碟區安全樣式： UNIX （ Linux 用戶端）、 NTFS （ Windows 用戶端）或混合。</block>
@@ -280,7 +277,6 @@
   <block id="4d07a6e16a1c8ad6e621cc84eb969e7e" category="list-text">適用於 ONTAP 備份的 FSX ：適用於 ONTAP 備份複本的 FSX 將會保留、您仍然可以使用這些備份複本。</block>
   <block id="c54ab0793e326deff351b944ad70d29c" category="list-text">選擇 * 基本動作 * 、然後 * 刪除 Volume * 。</block>
   <block id="321fbbd6f40d9b084f632750d5190dc8" category="summary">隨時新增、更新或移除儲存 VM 的儲存 VM 標籤。</block>
-  <block id="856fd7298379e6a75a221ebc3af9cdec" category="list-text">選取 * 編輯儲存 VM 標記 * 。</block>
   <block id="14d8aa612c687d8708f6fefc5f554d22" category="list-text">在「編輯儲存 VM 標籤」頁面上、新增、編輯或移除標籤。</block>
   <block id="2d1066d1fee53e98224fefca16751fd3" category="paragraph">您可以套用至儲存 VM 的標籤數量上限為 50 個。</block>
   <block id="2332ee8494d2f8246a961c95630281a2" category="admonition">iSCSI Volume 不支援 Volume 自動擴充。</block>
@@ -492,11 +488,9 @@
   <block id="89568baf7659b31a2110d1de7f69778d" category="paragraph">您可以在儲存設備庫存中使用檔案系統 <block ref="41a32458a6146c3b772c57ac70acc68e" category="inline-link-macro-rx"></block>、管理適用於 ONTAP 檔案系統的 FSX 、以及設定資源的資料保護。</block>
   <block id="a509c58d8659a3366f3053048526e6ec" category="summary">將儲存 VM 複製到另一個適用於 ONTAP 檔案系統的 FSX 、可在資料遺失時提供保護層的資料存取。</block>
   <block id="ec42d150d63ba9d69905da61ff84b59b" category="doc">將儲存 VM 複寫到另一個適用於 ONTAP 檔案系統的 FSX</block>
-  <block id="068ecbcf009e32427973dc04a3628cb7" category="list-text">選取 * 複寫儲存 VM* 。</block>
   <block id="0e752dc97b5515d4bd6d0ef6482c2342" category="paragraph">儲存 VM 中的所有磁碟區都會複寫到目標檔案系統。</block>
   <block id="ff40dc19143c531bc7b8a932c148a848" category="list-text">選取 * 重設 fsxadmin 密碼 * 。</block>
   <block id="edacd360980e63a5f2e01df2fa59b050" category="list-text">在「重設 fsxadmin 密碼」對話方塊中、輸入新的 fsxadmin 密碼、然後重新輸入以確認。</block>
-  <block id="3930015dcc2810869591e35a2b5d714b" category="list-text">選擇*重設密碼*。</block>
   <block id="0828ddc896996b7d41cc9ceb1e453764" category="list-text">在「重設密碼」對話方塊中、提供下列資訊：</block>
   <block id="8d54082fcba7dd82063ffe4497f8c70d" category="list-text">* 新密碼 * ：輸入儲存 VM 的新密碼。</block>
   <block id="ebb4bf732c3ade314c393d5284af8715" category="list-text">* 確認密碼 * ：再次輸入新密碼以確認。</block>
@@ -699,7 +693,6 @@
   <block id="71083868a2ec5abfee9a2647a74612c0" category="list-text">適用於 ONTAP 的 FSX 標籤：顯示您目前擁有的 ONTAP 檔案系統的 FSX 。</block>
   <block id="1113c9108b3e58789456954d1c2ea9c2" category="list-text">瀏覽節約標籤：顯示 Elastic Block Store 、適用於 Windows 檔案伺服器的 FSX 、以及 Elastic File Systems 儲存系統。從這裡、您可以將這些系統與適用於 ONTAP 的 FSX 進行比較、以探索這些系統的節約效益。</block>
   <block id="fa8dc6e67f45bcde58853510e56ce6a1" category="list-text">從檔案系統的「總覽」標籤中、選取 * Volumes （磁碟區） * 標籤。</block>
-  <block id="8c9880429b2df2018a366dbb14193026" category="list-text">從檔案系統的概觀索引標籤中、選取 * 儲存 VMS* 索引標籤。</block>
   <block id="d9f5899ddcae7952c9df69e075c822e2" category="section-title">2024 年 11 月 3 日</block>
   <block id="ddeb24aeadcd9bd34930d38c34152c03" category="paragraph">Amazon FSX for NetApp ONTAP 目前已正式推出 BlueXP  工作負載工廠。</block>
   <block id="03b2cfc949418819e16b1dc5fa3660ae" category="list-text"><block ref="03b2cfc949418819e16b1dc5fa3660ae" category="inline-link-macro-rx"></block></block>
@@ -1412,7 +1405,6 @@
   <block id="3cb1fda07c1d6b96bda1c65f1996fc1f" category="list-text">若要建立自訂快照策略，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
   <block id="d49502975428f953533ab14ab9c02a5b" category="paragraph">您必須關聯一個連結才能建立磁碟區的手動快照。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
   <block id="6234e99ad9e8c051d4afaa47c5d4ff82" category="list-text">要配置對卷的訪問，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
-  <block id="0152fea6b73cbe86540a93515bf61029" category="paragraph">以下是 AWS 的預設原則。對於自訂快照策略，您必須<block ref="6ac03ad394740d642419d1159fa121ff" category="inline-link-macro-rx"></block> 。</block>
   <block id="2b34fc0bead4dcf64099078fdaf86d69" category="paragraph">要啟用卷自動增長，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
   <block id="f8e03e36604030c79d6107b800f61804" category="list-text">為了確保磁碟區 inode 隨著儲存容量的增加而增加，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
   <block id="2c793b5b15ea565983390f5625f7b85b" category="inline-link-macro">建立並關聯連結</block>
@@ -1845,7 +1837,6 @@
   <block id="b0a0826c5a9c2b2e6c919de33e89dbfe" category="paragraph">在檔案系統層級的 Workload Factory 控制台中，列出了所有 FSx for ONTAP檔案系統的良好架構狀態。架構良好的狀態分為「問題」、「未分析」或「架構良好」。選擇良好架構狀態會將您重新導向至檔案系統內的良好架構狀態標籤，您可以在其中找到良好架構分數、設定類別以及檔案系統的所有設定。</block>
   <block id="93482e0e05af93f1f57953ff700f65af" category="summary">在NetApp Workload Factory 中為 FSx for ONTAP檔案系統中的儲存虛擬機器設定和更新 Active Directory。</block>
   <block id="b517cd494437c46f189031b81fe054d1" category="list-text">從 *FSx for ONTAP* 中，選擇要更新的儲存虛擬機器的檔案系統的操作選單，然後選擇 *管理*。</block>
-  <block id="55713424abf36138f2e5576255ae328d" category="list-text">從「儲存虛擬機器」標籤中，選擇要為其設定 Active Directory 的儲存虛擬機器的操作選單。</block>
   <block id="e2978ebf10a51b553f9a074316b27b79" category="summary">在定期備份之外，在NetApp Workload Factory 中建立磁碟區的手動備份。</block>
   <block id="54fe537cb8aa5bbba8b6f2002f13d69c" category="doc">在NetApp Workload Factory 中建立磁碟區的手動備份</block>
   <block id="4f43be2165dfc12e9cac6220645b9996" category="paragraph">在NetApp Workload Factory 中定期備份之外建立磁碟區的手動備份。</block>
@@ -1880,7 +1871,6 @@
   <block id="673f61d59e74b38d8158f8338fec1e4b" category="paragraph">為 FSx for ONTAP檔案系統建立儲存虛擬機器 (SVM)，以虛擬方式存取NetApp Workload Factory 中工作負載的儲存和資料服務。</block>
   <block id="0f54202fd3d9422accef6305efaf73a6" category="paragraph">儲存虛擬機器是獨立的檔案伺服器，您可以使用它來存取工作負載工廠儲存中每個工作負載的資料。每個 SVM 都有自己的管理憑證和端點，用於管理和存取資料。</block>
   <block id="176a501864ff4c70a2c1b132289ccad0" category="paragraph">您可以從 Workload Factory 控制台建立儲存虛擬機器。您也可以使用 Codebox 中提供的以下工具：REST API、CloudFormation 和 Terraform。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block> 。</block>
-  <block id="5a2fcba235cbe9725acb555b8a1ff973" category="list-text">從 *FSx for ONTAP* 中，選擇要為其建立儲存 VM 的檔案系統的操作選單，然後選擇 *建立儲存 VM*。</block>
   <block id="2c1104e8d18fa2476c3ec5d972050908" category="summary">設定 FSx for ONTAP檔案系統後，在 Workload Factory 中建立 FSx for ONTAP磁碟區。</block>
   <block id="b576330956781fec1fe9e230ce503cdc" category="doc">在 Workload Factory 中建立 FSx for ONTAP磁碟區</block>
   <block id="d2c9fde6d19778c0e3d1e865ed1f22a8" category="paragraph">設定 FSx for ONTAP檔案系統後，在 Workload Factory 中建立 FSx for ONTAP磁碟區作為用於分組資料的虛擬資源。</block>
@@ -1911,7 +1901,6 @@
   <block id="1c9d39dfea82aa323f287c11668fb9ab" category="paragraph">刪除NetApp Workload Factory 中的複製關係。當您刪除複製關係時，它會刪除來源磁碟區和目標磁碟區之間的複製關係。刪除複製關係後，兩個磁碟區將繼續獨立存在，並保留其包含的當前資料。</block>
   <block id="06a91edaa8e77e04dfd0ccc1dee5a6c7" category="list-text">在複製關係標籤中，選擇要刪除的複製關係的操作選單。</block>
   <block id="ce1de3f28d8568be87cdce779516de02" category="doc">在NetApp Workload Factory 中刪除儲存虛擬機</block>
-  <block id="17a5fbc49fda805ff4e98fd7a9af355a" category="list-text">在「儲存虛擬機器」標籤中，選擇要為其設定 Active Directory 的儲存虛擬機器的操作選單。</block>
   <block id="d287f4840c4e2956b3e030d276822021" category="doc">在NetApp Workload Factory 中刪除卷</block>
   <block id="5d2b2d216923f677893f0a068bc1b92f" category="list-text">從 *FSx for ONTAP* 中，選擇要刪除磁碟區的檔案系統的操作，然後選擇 *管理*。</block>
   <block id="1235950c75ed0fc0a7588ccae6518e39" category="list-text">從「磁碟區」標籤中，選擇要刪除的磁碟區的操作選單。</block>
@@ -2074,7 +2063,6 @@
   <block id="f1275ed085039c3832dda6dfba0ad9f2" category="list-text">在管理快照頁面中，選擇要刪除的快照的操作選單，然後選擇*刪除*。</block>
   <block id="b8b31b5d8488dcb7ebd8c2bb9ba38f50" category="doc">在NetApp Workload Factory 中管理儲存虛擬機器標籤</block>
   <block id="0c950433d94be139f73fb59247d857a5" category="paragraph">標籤可以幫助您對資源進行分類。您可以隨時在NetApp Workload Factory 中新增、編輯和刪除儲存虛擬機器的標籤。</block>
-  <block id="9407fd42d3f2176c45d9212981f7f058" category="list-text">從「儲存虛擬機器」標籤中，選擇要編輯標籤的儲存虛擬機器的操作選單。</block>
   <block id="558281a06321bc8c7b90d170a463683f" category="doc">在NetApp Workload Factory 中管理磁碟區標籤</block>
   <block id="693a8f663c39ae53134101e5d974fda8" category="paragraph">標籤可以幫助您對資源進行分類。您可以隨時在NetApp Workload Factory 中為 FSx for ONTAP磁碟區新增、編輯和刪除磁碟區標籤。</block>
   <block id="ff53601e946713a2f9385573998c76d7" category="list-text">從「磁碟區」標籤中，選擇要修改標籤的磁碟區的操作選單。</block>
@@ -2114,7 +2102,6 @@
   <block id="59dfa377d2b15b40ba2bddd83dcb5c53" category="list-text">從 *FSx for ONTAP* 中，選擇包含要重新平衡的磁碟區的檔案系統的操作選單，然後選擇 *管理*。</block>
   <block id="fbf1bac8c72be0440c190a08fabc8dc0" category="paragraph">在NetApp Workload Factory 中將儲存虛擬機器複製到另一個 FSx for ONTAP檔案系統可在資料遺失時提供資料存取的保護層。此操作將一個儲存虛擬機器中的所有磁碟區複製到另一個 FSx for ONTAP檔案系統。</block>
   <block id="e42fc3e4b35126c00393bef5dd43abb0" category="list-text">從 *FSx for ONTAP* 中，選擇要複製儲存虛擬機器的檔案系統的操作選單，然後選擇 *管理*。</block>
-  <block id="f762650128ec007cd0d70b6659361ba3" category="list-text">從「儲存虛擬機器」標籤中，選擇要為其複製 SVM 的儲存虛擬機器的操作選單。</block>
   <block id="60de20bb9aba6d637fe2c39698d63a93" category="paragraph">使用 Workload Factory FSx for ONTAP使用者介面建立磁碟區時，_Auto_ 是預設分層策略。有關卷分層策略的更多信息，請參閱<block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block>在 AWS FSx for NetApp ONTAP文件中。</block>
   <block id="00e61784b4c0263d643d339751f948b5" category="summary">必要時重設NetApp Workload Factory 中的 fsxadmin 密碼。</block>
   <block id="49504d649db43bbd86ff76609ad14e6b" category="doc">在NetApp Workload Factory 中重設 fsxadmin 密碼</block>
@@ -2125,8 +2112,6 @@
   <block id="423500f4bc14c3ceee3a5af733bedd61" category="summary">必要時重設NetApp Workload Factory 中儲存虛擬機器的密碼。</block>
   <block id="3c483a45ab5fea02162be0b6c6004287" category="doc">在NetApp Workload Factory 中重設儲存虛擬機器密碼</block>
   <block id="bff8efadf7143427c1acb1b9e3330d81" category="list-text">從儲存中，選擇*前往儲存*。</block>
-  <block id="b3dd19bbbe1cbd4f108d8e41f40c783e" category="list-text">從 *FSx for ONTAP* 中，選擇要更新的儲存 VM 的 FSx for ONTAP檔案系統的操作選單，然後選擇 *管理*。</block>
-  <block id="b841fe8526d10304e2b38270715c1b84" category="list-text">在「儲存虛擬機器」標籤中，選擇要重設密碼的儲存虛擬機器的操作選單。</block>
   <block id="398b64d3ae2c039c62637d684fcbe30d" category="doc">從NetApp Workload Factory 中的備份還原卷</block>
   <block id="19002cddfac8e15ce79f8ccad53b74e6" category="paragraph">在NetApp Workload Factory 中，您可以將磁碟區從備份還原到 AWS 帳戶中的任何 FSx for ONTAP檔案系統。</block>
   <block id="de32db8377dafaed047e32a0f5c78af1" category="list-text">從「*Volumes*」標籤中，選擇要從備份中還原的磁碟區的操作選單。</block>
@@ -2491,4 +2476,68 @@
   <block id="a87127d2d5ce747338342d2d926d9cc4" category="list-text">選擇要刪除的 S3 接入點的操作選單，然後選擇「分離」。</block>
   <block id="8d755d1f354bf995e33c13051ecdaeca" category="list-text">在「分離並移除 S3 存取點」對話方塊中，選擇「分離並移除」以從磁碟區中刪除 S3 存取點。</block>
   <block id="f994c7e71102a3d5ed7af5975abfaa09" category="sidebar">管理 S3 存取點</block>
+  <block id="bc5d3bf99236801351dc3a2d7c20aed7" category="paragraph">Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設定：</block>
+  <block id="afc7c7589e5f20d86c03b5e089bbad6b" category="list-text">NetApp自主勒索軟體防護 (ARP/AI) 已停用（包括區塊裝置）：檢查區塊裝置磁碟區上的 ARP/AI 是否已停用</block>
+  <block id="2270e6ac2c31be458c93c87db612a494" category="list-text">快取關係寫入模式：檢查寫入模式是否最適合快取卷工作負載。</block>
+  <block id="2125a9a589f0bc57c38acf63f5ffb150" category="list-text">刪除不必要的備份：檢查備份是否已過期或不再需要，以便刪除以降低成本。</block>
+  <block id="5e3b7f958129022f75fe2931c55615b2" category="section-title">問我關於人工智慧助理首頁整合的問題</block>
+  <block id="65bcc541760e8f25e0281edbfdfbf7f3" category="paragraph">Workload Factory 控制台主頁嵌入了 Ask me AI 助手，讓您可以詢問有關您自己的儲存環境的問題，直接從您的環境中獲取個人化見解，並參考先前的對話。您可以與「問我」進行交互，以了解您的工作負載、解決問題並了解更多關於工作負載工廠的資訊——所有這些都無需離開控制台。</block>
+  <block id="270dd22752e2f3f31c99a49ff489774e" category="section-title">在 Lambda 連結資源中採用 IAM 使用者主體權限策略</block>
+  <block id="75141a4e46e0a646f4c8379f8d5e7b52" category="paragraph">用於連接 Workload Factory 帳戶和一個或多個 FSx for ONTAP檔案系統以執行高級ONTAP操作的 Lambda 鏈接，現在使用 IAM 使用者主體進行基於資源的策略權限。此項變更使 AWS 資源存取與行業最佳實踐更加一致。</block>
+  <block id="b0dd04cf44137b432a8f89cb4f3c9919" category="section-title">為 EMS 事件的 AI 分析器添加了分析螢幕</block>
+  <block id="5cd27690d7988b2c3f04768e500459bb" category="paragraph">儲存選單中新增了「分析」畫面。從此畫面，您可以使用適用於ONTAP EMS 事件功能的 FSx AI 分析器。</block>
+  <block id="a9b4b239246fd03c03ac43e963075319" category="section-title">NetApp Workload Factory中的區塊裝置增強功能</block>
+  <block id="6ef37e3f05edf0fb9740ef851722a8f3" category="paragraph">針對區塊設備進行了以下增強。</block>
+  <block id="0a32dfaa27bfe59db7152c5c5da72282" category="section-title">建立區塊設備</block>
+  <block id="8e8c152eb29cb88d5d80a375d44aee87" category="paragraph">NetApp Workload Factory支援在 FSx for ONTAP檔案系統上使用 iSCSI 協定建立區塊設備，以便您可以從 Workload Factory 控制台更好地支援您的業務線 (LOB) 應用程式。</block>
+  <block id="0b5d1c04d20d94c2a21dacfa53d7354d" category="section-title">區塊設備管理增強功能</block>
+  <block id="e578bac1e9f39054ae2eb2b16d807f71" category="inline-link-macro">管理區塊設備</block>
+  <block id="e16cdf4dbd146007b4b40124e28ca1a2" category="paragraph">NetApp Workload Factory包含以下增強功能： <block ref="b08ca4e282a45fe2e49c9a019646bd36" category="inline-link-macro-rx"></block>。現在您可以從 Workload Factory 控制台執行以下任務：</block>
+  <block id="f8b3baca819978515d628c6a5881eb4e" category="list-text">管理客戶端存取權限</block>
+  <block id="5338dad31c000cc89dea6cc573f1a242" category="list-text">歸檔塊設備數據</block>
+  <block id="88073627bb09173d8e0b3fa15a27725b" category="list-text">刪除區塊設備</block>
+  <block id="3c4600754ec66ef615c303417126da12" category="section-title">支援包含區塊設備的FlexVol磁碟區上的 ARP/AI</block>
+  <block id="3043237188bfe3f198084dbfe55d05c0" category="inline-link-macro">NetApp自主勒索軟體防護（AI 防護，ARP/AI）</block>
+  <block id="34f4bbf8697d1205da43ee612001efe7" category="paragraph">您可以啟用 <block ref="028271ae216dacdd20feb47aea2c131d" category="inline-link-macro-rx"></block> 在包含區塊設備的FlexVol磁碟區上。啟用 ARP/AI 可以利用人工智慧來偵測勒索軟體攻擊，並有助於資料復原。</block>
+  <block id="71a3ae3af23eb1b872f9026901ca4187" category="list-text">在「儲存虛擬機器」下的檔案系統概覽中，選擇「管理」。</block>
+  <block id="3e723486c5a3951bcc9cc4e9b31c7a1b" category="list-text">在「管理儲存虛擬機器」畫面上，選擇要為其設定 Active Directory 的儲存虛擬機器的操作選單，然後選擇「基本操作」&gt;「管理 AD 設定」。</block>
+  <block id="3d19aa5c03e04bba25fa64fb693e9f98" category="summary">建立區塊設備以支援您的業務線 (LOB) 應用需求。</block>
+  <block id="3c1e85123bd6f772d273b23b09a26e74" category="doc">在NetApp Workload Factory中為檔案系統建立區塊設備</block>
+  <block id="7d004b13cdadf8e9ba5aa6e7fd56c9c9" category="paragraph">NetApp Workload Factory僅支援區塊設備的FlexVol磁碟區。您可以使用 iSCSI 協定建立區塊設備。</block>
+  <block id="454897ca790322f298897b4fdfc33941" category="paragraph">區塊大小必須小於可用的FlexVol volume大小。</block>
+  <block id="fb02a89efec565f92916696e97a69514" category="list-text">您必須關聯連結才能建立區塊設備。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。關聯連結後，返回此操作。</block>
+  <block id="b517955ef14866b28544f7b2807b497d" category="list-text">選擇“建立區塊設備”。</block>
+  <block id="c494d1f97c8af593b2547e971cde7048" category="list-text">在「音量詳情」下，執行以下操作：</block>
+  <block id="28d37ed4396c69863c777832e2dc985a" category="list-text">*卷名*：請選擇下列選項之一。</block>
+  <block id="def02085a38e856b98b13e533d3b840f" category="list-text">建立一個新磁碟區並輸入磁碟區名稱。</block>
+  <block id="e5113669fd2a554528c1fff4b4a28162" category="list-text">選擇一個現有磁碟區。</block>
+  <block id="f879102f0ab70ffbcdaf5ea3b09693dd" category="list-text">*儲存虛擬機器*：選擇一個儲存虛擬機器。</block>
+  <block id="0bd1c4c69e2f0fa0ace2c5a2bc4bfb4f" category="list-text">*音量樣式*：預設音量樣式為* FlexVol*。</block>
+  <block id="c68f7e5abbdc5e2d69f2654296febb52" category="list-text">*體積大小*：輸入體積大小並選擇單位。每個FlexVol volume的最大容量為 100 TiB。</block>
+  <block id="f0ddb24224adb11c4c26879e00143b36" category="list-text">*卷自動增長*：您可以選擇啟用卷自動增長功能，使卷在達到容量上限時自動增加大小。最大生長尺寸為 300 TiB。</block>
+  <block id="ad2ab5f2c7e10afc96bd0e17739e1986" category="list-text">*標籤*：您可以選擇新增標籤，以協助組織和分類您的積木設備。</block>
+  <block id="66849c76f9938572ebbf346d93c18eea" category="list-text">在「封鎖設備詳細資料」下，執行以下操作：</block>
+  <block id="a585842d038e5160ebfc3806b62044a6" category="list-text">*區塊設備名稱*：輸入區塊設備的名稱。</block>
+  <block id="6d73923747600d8280fb309f7bb705ea" category="list-text">*塊設備大小*：輸入塊設備的大小並選擇單位。區塊設備的大小必須小於可用磁碟區的大小。</block>
+  <block id="e9e005dffa12441a25899a863e99f0fa" category="list-text">在「存取權限」下，執行以下操作：</block>
+  <block id="d4a692c93d71fdee64560b6ac04e9714" category="list-text">*iSCSI 配置*：請選擇下列選項之一。</block>
+  <block id="d9f80ec4d13936fdba78b793f44c184c" category="list-text">*建立新的啟動器群組*：提供主機作業系統、啟動器群組名稱，並新增一個或多個 iSCSI 限定名稱 (IQN) 主機啟動器。</block>
+  <block id="104d3f014c0f2ca8498a2aa9f78b1864" category="list-text">*對應現有啟動器群組*：選擇一個現有啟動器群組，提供主機作業系統，然後選擇一個或多個 iSCSI 限定名稱 (IQN) 主機啟動器。</block>
+  <block id="db784c6694930c54da9655a9d31c365a" category="list-text">在「效率與保護」項下，執行以下操作：</block>
+  <block id="8cbc6c14a0474488d906dfdd17ce79c4" category="paragraph">以下是 AWS 的預設策略。若要顯示現有的快照策略，您必須 <block ref="6ac03ad394740d642419d1159fa121ff" category="inline-link-macro-rx"></block>。</block>
+  <block id="4dd81c3ec298b3b3b12adbd43350c454" category="paragraph">使用 Workload Factory 控制台建立磁碟區時，預設分層策略為 _Balanced (Auto)_。有關容量分層策略的更多信息，請參閱 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> 在 AWS FSx for NetApp ONTAP文件中。請注意，Workload Factory 在 Workload Factory 控制台中使用基於用例的名稱來定義分層策略，並在括號中包含 FSx for ONTAP分層策略名稱。</block>
+  <block id="eafa5af121307f6008fad4d24d6d9f14" category="list-text">ARP/AI 不支援包含不可變檔案的捲和使用 NVMe 協定的磁碟區。</block>
+  <block id="78b92538a82bd788a456f9cf838a5c11" category="paragraph"><block ref="78b92538a82bd788a456f9cf838a5c11" category="inline-link-macro-rx"></block></block>
+  <block id="1e3a8de3c21016b6778340215e821fb6" category="list-text">從 *FSx for ONTAP* 中選擇檔案系統的操作選單，然後選擇 *管理*。</block>
+  <block id="96271eab8824304349d49f716ef08b72" category="list-text">在檔案系統概覽的「儲存虛擬機器」下，選擇「建立儲存虛擬機器」。</block>
+  <block id="355a4219717415b19bc0cfb3a299f9a8" category="list-text">在「建立儲存虛擬機器」頁面的「儲存虛擬機器配置」下，提供以下資訊：</block>
+  <block id="3b097ea48314307e283cb12e56ebf242" category="list-text">在「管理儲存虛擬機器」畫面上，選擇要刪除的儲存虛擬機器的操作選單。</block>
+  <block id="add6edc9de6a44472705a7a46e4fd5c2" category="inline-link-macro">為ONTAP檔案系統的 FSx 建立區塊設備</block>
+  <block id="a795e8e784620e60993a8b9e17168564" category="paragraph"><block ref="a795e8e784620e60993a8b9e17168564" category="inline-link-macro-rx"></block></block>
+  <block id="6a3dc4143a7da62f8900b495e210893d" category="list-text">在「管理儲存虛擬機器」畫面上，選擇要編輯標籤的儲存虛擬機器的操作選單，然後選擇「基本操作」&gt;「編輯儲存虛擬機器標籤」。</block>
+  <block id="e8b970818f72fb7cf471fb0f9361d2fb" category="list-text">在「管理儲存虛擬機器」畫面上，選擇要為其複製 SVM 的儲存虛擬機器的操作選單，然後選擇「進階操作」&gt;「複製儲存虛擬機器」。</block>
+  <block id="f7c0292ee19b0ef8ab597e8587b490f2" category="list-text">從 *FSx for ONTAP* 中選擇要重設儲存 VM 密碼的檔案系統的操作選單，然後選擇 *管理*。</block>
+  <block id="d303726d253e10ceb3c3a9904bc4c18f" category="list-text">在「管理儲存虛擬機器」畫面上，選擇要重設密碼的儲存虛擬機器的操作選單，然後選擇「基本操作」&gt;「重設密碼」。</block>
+  <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">2026年1月4日</block>
+  <block id="04c5d70ed6312687a1e39677346bbaff" category="sidebar">建立區塊設備</block>
 </blocks>

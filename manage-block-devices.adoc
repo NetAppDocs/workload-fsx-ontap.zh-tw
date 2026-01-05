@@ -58,3 +58,9 @@ summary: 在NetApp Workload Factory中管理 FSx for ONTAP檔案系統的區塊�
 
 
 NOTE: 增加區塊設備的大小後，按照主機作業系統提供的步驟來發現區塊設備的新大小，並擴展其上的檔案系統。
+
+
+
+== 相關資訊
+
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html["為ONTAP檔案系統的 FSx 建立區塊設備"]

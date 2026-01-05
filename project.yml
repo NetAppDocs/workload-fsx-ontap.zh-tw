@@ -51,6 +51,8 @@ sidebar:
         url: "/create-volume.html"
       - title: 存取您的資料
         url: "/access-data.html"
+    - title: 建立區塊設備
+      url: "/create-block-device.html"
     - title: 建立儲存VM
       url: "/create-storage-vm.html"
     - title: 保護您的資料
