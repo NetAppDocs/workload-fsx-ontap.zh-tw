@@ -52,12 +52,17 @@ link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定價"^]
 要使用事件分析器，您必須滿足以下先決條件：
 
 * 你必須link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _操作和修復_ 權限"^]在您的 AWS 帳戶中查看 FSx for ONTAP檔案系統的事件。
+* 對於 EMS 事件分析，必須在與 FSx for ONTAP檔案系統關聯的安全性群組中開啟下列連接埠。
++
+** 埠 22（SSH）
+
+
 * 你必須link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到 FSx for ONTAP檔案系統"]使用EMS事件分析器。
 * 您還需要滿足以下要求。分析日誌錯誤時，系統會提示您完成這些步驟。
 +
 ** *亞馬遜基岩模型*
 +
-事件分析器使用您的 Amazon Bedrock API 為 FSx for ONTAP事件提供基於 AI 的見解。
+事件分析器使用 Amazon Bedrock API 為 FSx for ONTAP事件提供基於 AI 的見解。分別為每個 AWS 帳戶配置 Amazon Bedrock。
 
 +
 建議模型：亞馬遜基岩模型（anthropic.claude-sonnet-4-20250514-v1:0）。您必須提供所選區域中此模型的推理設定檔 ARN。

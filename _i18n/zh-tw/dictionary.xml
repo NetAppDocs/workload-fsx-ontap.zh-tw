@@ -1399,7 +1399,6 @@
   <block id="be8334e3a8f0885af8e03ba816b24537" category="inline-link-macro">了解如何關聯現有連結或建立並關聯新連結</block>
   <block id="3b1785543fb9e9ab18e56f4cf89f47d9" category="paragraph"><block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。</block>
   <block id="d7a33a9350fbc2bb6f775eabf85866de" category="list-text">必須在與 FSx for ONTAP 檔案系統關聯的安全性群組中開啟下列連接埠以實現連結連線。</block>
-  <block id="90ead46e5d824c4081637d976f92fc96" category="list-text">對於 CloudShell：連接埠 22 (SSH)</block>
   <block id="316509fcb5a8d1b5e1280f3f64c594f2" category="list-text">使用者名稱 = FSx_user</block>
   <block id="b1882f9c170c4d334f1f12e72456f0c6" category="list-text">您用於複寫關係的兩個檔案系統必須有相關的連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
   <block id="3cb1fda07c1d6b96bda1c65f1996fc1f" category="list-text">若要建立自訂快照策略，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
@@ -2436,7 +2435,6 @@
   <block id="de524979693d09207c5eeb62cad773dc" category="paragraph">事件分析器會擷取 FSx for ONTAP EMS 事件並進行分析，以協助您維護 FSx for ONTAP檔案系統的健康狀況和效能。Workload Factory 僅顯示最近 72 小時內發生的事件。</block>
   <block id="d55be6cbc9080d8651f85cfb40118d1c" category="list-text">你必須<block ref="6f74e2a9589a6666ba7fdb81dabfc5eb" category="inline-link-macro-rx"></block>在您的 AWS 帳戶中查看 FSx for ONTAP檔案系統的事件。</block>
   <block id="79aceabdc6c99b8ffa443536ee6c3fac" category="list-text">*亞馬遜基岩模型*</block>
-  <block id="df3d4ef155c8b4e033aeae2ee4342695" category="paragraph">事件分析器使用您的 Amazon Bedrock API 為 FSx for ONTAP事件提供基於 AI 的見解。</block>
   <block id="ca29c80b4531f01e2f485c85067fd269" category="list-text">與 Workload Factory 關聯的 AWS 憑證：<block ref="fdd997ab8b4252f76acdda855bb7b890" prefix=" " category="inline-code"></block>和<block ref="9aa5a97dfe3f7608d8ee28e7db3c4e2c" prefix=" " category="inline-code"></block>權限</block>
   <block id="23d6d74604ef4454bcce97196495439d" category="list-text">選擇要分析的 FSx for ONTAP檔案系統，然後選擇「管理」。</block>
   <block id="4a9800a79df53d92124cfa905926f3a8" category="list-text">選擇“分析”標籤。</block>
@@ -2540,4 +2538,9 @@
   <block id="d303726d253e10ceb3c3a9904bc4c18f" category="list-text">在「管理儲存虛擬機器」畫面上，選擇要重設密碼的儲存虛擬機器的操作選單，然後選擇「基本操作」&gt;「重設密碼」。</block>
   <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">2026年1月4日</block>
   <block id="04c5d70ed6312687a1e39677346bbaff" category="sidebar">建立區塊設備</block>
+  <block id="45825282cf9c53db319df9569d2ca486" category="list-text">對於 EMS 事件分析，必須在與 FSx for ONTAP檔案系統關聯的安全性群組中開啟下列連接埠。</block>
+  <block id="aebaf822d95c8539079782ed80029db9" category="list-text">埠 22（SSH）</block>
+  <block id="e0f1940fa03564fc187d37678d5739f9" category="paragraph">事件分析器使用 Amazon Bedrock API 為 FSx for ONTAP事件提供基於 AI 的見解。分別為每個 AWS 帳戶配置 Amazon Bedrock。</block>
+  <block id="64153de607e9925466a905a664c31502" category="list-text">用於ONTAP緊急管理系統 (EMS) 事件分析的 CloudShell 和 FSx：連接埠 22 (SSH)</block>
+  <block id="f1a54b856438e25c87919e1789ae841c" category="list-text">ONTAP EMS 事件監控與警報</block>
 </blocks>

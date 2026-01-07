@@ -43,7 +43,7 @@ NOTE: 使用 Connector 時不支援 AWS Secrets Manager 。
 * 必須在與 FSx for ONTAP 檔案系統關聯的安全性群組中開啟下列連接埠以實現連結連線。
 +
 ** 對於 Workload Factory 控制台：連接埠 443 (HTTPS)
-** 對於 CloudShell：連接埠 22 (SSH)
+** 用於ONTAP緊急管理系統 (EMS) 事件分析的 CloudShell 和 FSx：連接埠 22 (SSH)
 
 
 * 使用 CloudFormation 堆疊新增連結時、 AWS 帳戶必須具有下列權限：

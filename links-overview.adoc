@@ -56,6 +56,7 @@ link:https://aws.amazon.com/lambda/pricing/["深入瞭解使用 AWS Lambda 的�
 需要連結的功能包括：
 
 * FSx for ONTAP檔案系統配置的良好架構狀態，可實現主動維護、可靠性和成本效益最佳化
+* ONTAP EMS 事件監控與警報
 * NetApp自主勒索軟體防護 (ARP/AI)
 * 增強了 FSx for ONTAP檔案系統的整體容量可觀察性
 * 捲和儲存虛擬機器資料複製、管理和監控
