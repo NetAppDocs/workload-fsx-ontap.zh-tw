@@ -41,7 +41,8 @@ NetApp Workload Factory 包含一個儲存節省計算器，用於將 Amazon 儲
 --
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存圖塊中，選擇 *探索節省*，然後選擇 *Amazon Elastic Block Store (EBS)*。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從“儲存”選單中，選擇“探索節省”，然後選擇“Amazon Elastic Block Store (EBS)”標籤。
 . 在儲存節約計算機中、提供下列詳細資料：
 +
 .. * 使用案例 * ：必要。從下拉式功能表中選取使用案例。所選的使用案例會決定 ONTAP 檔案系統特性的 FSX 、以供比較。
@@ -62,7 +63,8 @@ NetApp Workload Factory 包含一個儲存節省計算器，用於將 Amazon 儲
 --
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存磁貼中，選擇 *探索節省*，然後選擇 * Amazon FSx for Windows File Server*。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從“儲存”選單中，選擇“探索節省”，然後選擇“Amazon Elastic Block Store (EBS)”標籤。
 . 在儲存節約計算機中、提供下列詳細資料：
 +
 .. * 使用案例 * ：必要。從下拉式功能表中選取使用案例。所選的使用案例會決定 ONTAP 檔案系統特性的 FSX 、以供比較。
@@ -84,7 +86,8 @@ NetApp Workload Factory 包含一個儲存節省計算器，用於將 Amazon 儲
 --
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存磁貼中，選擇 *探索節省*，然後選擇 *Amazon Elastic File System (EFS)*。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從“儲存”選單中，選擇“探索節省”，然後選擇“Amazon Elastic Block Store (EBS)”標籤。
 . 在儲存節約計算機中、提供下列詳細資料：
 +
 .. * 使用案例 * ：必要。從下拉式功能表中選取使用案例。所選的使用案例會決定 ONTAP 檔案系統特性的 FSX 、以供比較。
@@ -129,8 +132,8 @@ NOTE: 此計算機選項不支援 EBS 快照和適用於 Windows 檔案伺服器
 --
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存圖塊中，選擇*轉到儲存*。
-. 從儲存選單中，選擇*探索節省*。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從“儲存”選單中，選擇“探索節省”，然後選擇“Amazon Elastic Block Store (EBS)”標籤。
 . 在 * 彈性區塊存放區（ EBS ） * 標籤中，選取要與 ONTAP 的 FSX 比較的執行個體，然後選取 * 探索節約 * 。
 . 儲存節約計算機隨即出現。下列儲存系統特性會根據您選取的執行個體預先填入：
 +
@@ -148,8 +151,8 @@ NOTE: 此計算機選項不支援 EBS 快照和適用於 Windows 檔案伺服器
 --
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存圖塊中，選擇*轉到儲存*。
-. 從儲存選單中，選擇*探索節省*。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從“儲存”功能表中，選擇“探索節省”，然後選擇“Amazon FSx for Windows 檔案伺服器”標籤。
 . 在 *Amazon FSX for Windows File Server* （適用於 Windows 檔案伺服器 * ）標籤中，選取要與 ONTAP 的 FSX 比較的執行個體，然後選取 * Explore 節約 * 。
 . 儲存節約計算機隨即出現。根據您所選執行個體的部署類型、預先填入下列儲存系統特性：
 +
@@ -167,8 +170,8 @@ NOTE: 此計算機選項不支援 EBS 快照和適用於 Windows 檔案伺服器
 --
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存圖塊中，選擇*轉到儲存*。
-. 從儲存選單中，選擇*探索節省*。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從“儲存”選單中，選擇“探索節省”，然後選擇“Amazon Elastic File System (EFS)”標籤。
 . 在 * 彈性檔案系統（ EFS ） * 標籤中，選取要與 ONTAP 的 FSX 比較的執行個體，然後選取 * 探索節約 * 。
 . 儲存節約計算機隨即出現。下列儲存系統特性會根據您選取的執行個體預先填入：
 +

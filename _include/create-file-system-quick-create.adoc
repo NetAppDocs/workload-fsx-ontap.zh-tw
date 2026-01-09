@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-. 在 Create FSX for （為 ONTAP 建立 FSX ）頁面上、選取 * Quick create* （快速建立 * ）。
+. 在建立 FSx for ONTAP檔案系統頁面上，選擇*快速建立*。
 +
 您也可以載入儲存的組態。
 

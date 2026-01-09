@@ -30,10 +30,9 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 工作負載工廠會針對適用於 ONTAP 檔案系統的 FSX ，分析下列組態的架構良好狀態：
 
 * 可靠性：SSD 容量閾值、計劃的本地快照、FSx for ONTAP備份、遠端資料複製以及長期保留的資料可靠性
-* 安全性： NetApp自主勒索軟體防護（具備 AI 功能，即 ARP/AI）和磁碟區未經授權存取防護
-* 卓越營運：自動容量管理、磁碟區檔案容量利用率閾值以及卷利用率接近飽和
-* 成本優化：儲存效率、資料分層和不必要的快照刪除
-* 效能最佳化： FlexGroup卷重新平衡
+* 安全性： NetApp自主勒索軟體防護（含 AI 功能，ARP/AI 已停用）以及對卷的未經授權訪問
+* 卓越營運：自動容量管理、磁碟區檔案容量利用率閾值、卷利用率接近滿值以及快取關係寫入模式
+* 成本優化：提高儲存效率、資料分層、刪除不必要的快照和備份
 
 
 
@@ -50,7 +49,7 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存圖塊中，選擇*轉到儲存*。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
 . 從儲存選單中，選擇 *FSx for ONTAP*。
 . 從 *FSx for ONTAP* 中，選擇要更新的檔案系統的操作選單，然後選擇 *管理*。
 . 從 FSx for ONTAP檔案系統概覽導覽至 *Well-architected status* 標籤。
@@ -84,7 +83,7 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存圖塊中，選擇*轉到儲存*。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
 . 從儲存選單中，選擇 *FSx for ONTAP*。
 . 從 *FSx for ONTAP* 中，選擇檔案系統的操作選單，然後選擇 *管理*。
 . 從 FSx for ONTAP檔案系統概覽導覽至 *Well-architected status* 標籤。
@@ -97,7 +96,7 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 --
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存圖塊中，選擇*轉到儲存*。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
 . 從儲存選單中，選擇 *FSx for ONTAP*。
 . 從 *FSx for ONTAP* 中，選擇檔案系統的操作選單，然後選擇 *管理*。
 . 從 FSx for ONTAP檔案系統概覽導覽至 *Well-architected status* 標籤。
@@ -131,7 +130,7 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 --
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存圖塊中，選擇*轉到儲存*。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
 . 從儲存選單中，選擇 *FSx for ONTAP*。
 . 從 *FSx for ONTAP* 中，選擇檔案系統的 actionsenu，然後選擇 *Manage*。
 . 從 FSx for ONTAP檔案系統概覽導覽至 *Well-architected status* 標籤。
@@ -144,7 +143,7 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 --
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存圖塊中，選擇*轉到儲存*。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
 . 從儲存選單中，選擇 *FSx for ONTAP*。
 . 從 *FSx for ONTAP* 中，選擇檔案系統的操作選單，然後選擇 *管理*。
 . 從 FSx for ONTAP檔案系統概覽導覽至 *Well-architected status* 標籤。

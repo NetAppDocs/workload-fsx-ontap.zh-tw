@@ -4,14 +4,14 @@ permalink: manage-block-devices.html
 keywords: block devices, manage luns, manage iscsi 
 summary: 在NetApp Workload Factory中管理 FSx for ONTAP檔案系統的區塊設備。 
 ---
-= 管理 FSx for ONTAP檔案系統的區塊設備
+= 在NetApp Workload Factory中管理檔案系統的區塊設備
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-透過NetApp Workload Factory控制台，您可以管理 FSx for ONTAP檔案系統的區塊設備。管理任務包括查看區塊設備詳細資訊和增加容量。
+透過NetApp Workload Factory控制台，您可以管理 FSx for ONTAP檔案系統的區塊設備。管理任務包括查看區塊設備詳細資訊、增加容量、管理客戶端存取、歸檔區塊設備資料和刪除區塊設備。
 
 .關於這項工作
 區塊設備，或稱為 LUN（邏輯單元號），是 SAN 環境中包含檔案系統的捲，可透過網路被主機存取。
@@ -31,7 +31,7 @@ summary: 在NetApp Workload Factory中管理 FSx for ONTAP檔案系統的區塊�
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存圖塊中，選擇*轉到儲存*。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
 . 從儲存選單中，選擇 *FSx for ONTAP*。
 . 從 *FSx for ONTAP* 中選擇 *區塊設備* 選項卡。
 . 導覽至區塊裝置的操作選單，然後選擇*查看詳細資料*。
@@ -48,7 +48,7 @@ summary: 在NetApp Workload Factory中管理 FSx for ONTAP檔案系統的區塊�
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存圖塊中，選擇*轉到儲存*。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
 . 從儲存選單中，選擇 *FSx for ONTAP*。
 . 從 *FSx for ONTAP* 中選擇 *區塊設備* 選項卡。
 . 導航至區塊設備的操作選單，然後選擇“增加容量”。
@@ -58,6 +58,63 @@ summary: 在NetApp Workload Factory中管理 FSx for ONTAP檔案系統的區塊�
 
 
 NOTE: 增加區塊設備的大小後，按照主機作業系統提供的步驟來發現區塊設備的新大小，並擴展其上的檔案系統。
+
+
+
+== 管理區塊設備的客戶端存取權限
+
+您可以隨時透過建立 igroup、新增或刪除區塊裝置和主機發起程式來管理現有區塊裝置的用戶端存取權限。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選擇 *區塊設備* 選項卡。
+. 導覽至區塊裝置的操作選單，然後選擇「管理用戶端存取」。
+. 如果不存在 igroup，請選擇「建立 igroup」建立新的 igroup，然後執行下列操作：
++
+.. *區塊設備名稱*：請輸入區塊設備名稱。您可以選擇多個區塊設備與 igroup 關聯。
+.. *作業系統類型*：選擇作業系統類型。
+.. *igroup 名稱*：請輸入 igroup 名稱。
+.. *igroup 描述*：可選，輸入 igroup 描述。
+.. *主機發起程式*：輸入一個或多個主機發起程式。這些發起程序必須遵循 iSCSI 合格 (IQN) 格式。
+.. 選擇* Create *（建立*）。
+
+
+. 如果 igroup 已存在，請選擇「編輯用戶端存取」以向 igroup 新增或刪除區塊裝置和主機發起程序，然後選擇「套用」。
+
+
+
+
+== 將孤立區塊裝置的資料歸檔
+
+不再映射到客戶端或連續七天未使用的區塊設備將被歸類為孤立區塊設備。您可以將孤立區塊裝置的資料歸檔到容量池層，以回收 SSD 容量。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選擇 *區塊設備* 選項卡。
+. 在“孤立設備”下，選擇“查看和回收容量”。
+. 在「回收未使用的區塊設備空間」畫面上，選擇一個或多個區塊設備來歸檔資料並回收容量。
+. 選擇“存檔”。
+
+
+
+
+== 刪除區塊設備
+
+不再映射到客戶端或連續七天未使用的區塊設備將被歸類為孤立區塊設備。此操作會取消對應並刪除選取的區塊裝置。如果主機FlexVol volume不包含任何區塊設備，Workload Factory 也會將其刪除。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選擇 *區塊設備* 選項卡。
+. 在“孤立設備”下，選擇“查看和回收容量”。
+. 在「回收未使用的區塊設備空間」畫面上，選擇一個或多個區塊設備來歸檔資料並回收容量。
+. 選擇*刪除*。
+
 
 
 

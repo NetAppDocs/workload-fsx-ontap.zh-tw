@@ -25,7 +25,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["�
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 在儲存圖塊中，選擇*轉到儲存*。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
 . 從儲存選單中，選擇“成本”。
 . 在「成本」頁面上，透過提供以下資訊來篩選 FSx for ONTAP資源的成本和容量資料：
 +

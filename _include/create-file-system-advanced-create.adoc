@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-. 在 Create FSX for （為 ONTAP 建立 FSX ）頁面上、選取 * Advanced create* （進階建立 * ）。
+. 在「為ONTAP檔案系統建立 FSx」頁面上，選擇「進階建立」。
 +
 您也可以載入儲存的組態。
 
