@@ -23,7 +23,7 @@ link:links-overview.html["深入瞭解連結"]。
 連結需要驗證。您可以使用儲存在 Workload Factory 憑證服務中的憑證或儲存在 AWS Secrets Manager 中的憑證來驗證連結。每個連結僅支援一種身份驗證方法。例如，如果您選擇使用 AWS Secrets Manager 進行連結驗證，則以後無法變更身份驗證方法。
 
 
-NOTE: 使用 Connector 時不支援 AWS Secrets Manager 。
+NOTE: 使用控制台代理程式時不支援 AWS Secrets Manager。
 
 
 
@@ -46,6 +46,7 @@ NOTE: 使用 Connector 時不支援 AWS Secrets Manager 。
 ** 用於ONTAP緊急管理系統 (EMS) 事件分析的 CloudShell 和 FSx：連接埠 22 (SSH)
 
 
+* 此連結必須能夠連接到以下端點：\ https://api.workloads.netapp.com.基於 Web 的控制台透過與 Workload Factory API 互動來管理和操作 FSx for ONTAP工作負載。
 * 使用 CloudFormation 堆疊新增連結時、 AWS 帳戶必須具有下列權限：
 +
 [%collapsible]
