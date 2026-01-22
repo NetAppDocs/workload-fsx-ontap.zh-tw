@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: analyze-events.html 
-keywords: analyze events, events, FSx for ONTAP events, troubleshoot FSx for ONTAP 
+keywords: analyze events, events, FSx for ONTAP events, EMS, troubleshoot FSx for ONTAP 
 summary: 分析NetApp Workload Factory for FSx for ONTAP中的 EMS 事件。 
 ---
 = 在NetApp Workload Factory中分析 FSx for ONTAP EMS 事件
@@ -11,25 +11,27 @@ summary: 分析NetApp Workload Factory for FSx for ONTAP中的 EMS 事件。
 
 
 [role="lead"]
-使用智慧型事件分析器自動擷取和分析NetApp Workload Factory中 FSx for ONTAP檔案系統的事件管理系統 (EMS) 事件，以便您可以快速識別和解決問題。Agentic AI 為基礎的分析需要 Amazon Bedrock 整合。
+使用 NetApp Workload Factory 中的智慧事件分析器，快速識別並解決 FSx for ONTAP 檔案系統問題。此事件分析器利用與 Amazon Bedrock 整合的 Agentic AI，自動擷取並分析 FSx for ONTAP 事件管理系統（EMS）事件。
 
 
 
 == 關於這項工作
 
-儲存管理員通常只有在客戶投訴後才會回應 FSx for ONTAP EMS 事件，或透過建立自訂腳本和警報來回應。這種被動應對方式會減慢問題解決速度，增加停機時間，並降低營運效率。
+儲存管理員通常只有在客戶投訴後才會回應 FSx for ONTAP EMS 事件,或透過維護自訂腳本和警報來解決問題。這種被動回應的方式會降低效率、延遲問題解決並增加停機時間。
 
-事件分析器會擷取 FSx for ONTAP EMS 事件並進行分析，以協助您維護 FSx for ONTAP檔案系統的健康狀況和效能。Workload Factory 僅顯示最近 72 小時內發生的事件。
+事件分析器會自動從 FSx for ONTAP 檔案系統中提取錯誤、警告和緊急 EMS 事件。您可以link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接至檔案系統"]和link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_檢視、規劃和分析_權限"^]在 AWS 帳戶中查看這些事件。事件會在移除前顯示 72 小時。
+
+透過與 Amazon Bedrock 整合，Workload Factory 使用 AI 分析事件並提供可行的深入見解，以維護 FSx for ONTAP 檔案系統的健全狀況和效能。
 
 主要優勢包括：
 
-* 進階故障排除：利用人工智慧主動偵測和分析事件，為需要關注的ONTAP EMS 事件提供清晰的解決方案步驟。
-* 最佳實務修復：根據您的環境，提供修復 FSx for ONTAP問題的清晰步驟，以便任何人都能解決問題。
+* 進階疑難排解：AI 自動識別、分析並提供深入見解，以修正 FSx for ONTAP EMS 事件，減少手動調查時間。
+* 最佳實務補救措施：事件分析器提供清晰、可操作的步驟來解決 FSx for ONTAP EMS 事件。
 
 
-使用事件分析器時，您可以在享受高級 AI 分析的同時，保持對環境的完全控制。
+使用事件分析器時，您可以完全控制您的環境，同時也能受益於先進的 AI 分析。
 
-要使用事件分析器，您需要啟動 Amazon Bedrock，選擇 Workload Factory 使用的模型，建立連接到 Amazon Bedrock 的私人端點，新增權限，並建立企業授權。
+若要允許 Workload Factory 分析事件，您必須啟動 Amazon Bedrock、選擇 Workload Factory 使用的模型、建立連接至 Amazon Bedrock 的私人端點、新增權限，並建立企業授權。
 
 link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定價"^]
 
@@ -37,57 +39,57 @@ link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定價"^]
 
 === 資料隱私和安全
 
-此功能透過以下措施確保資料隱私和安全：
+您的資料隱私和安全將透過以下方式受到保護：
 
-.數據主權
-資料和聚合資料保留在您的 AWS 帳戶內，透過私人 VPC 終端節點（Amazon Bedrock）進行通信，確保不會暴露於公共互聯網。
+* *資料主權*：所有資料和彙總都保留在您的 AWS 帳戶內，並透過私有 VPC 端點（Amazon Bedrock）進行通訊，不會暴露於公用網際網路。
+* *不進行 AI 訓練*：客戶資料不會用於訓練或改進模型。Amazon Bedrock 會即時處理事件，但不會使用您的資料進行訓練。結果僅儲存在您的環境中。
 
-.無人工智慧訓練
-客戶資料不會用於訓練或改進模型。 Amazon Bedrock 會即時處理事件，但不會使用您的資料進行訓練。結果僅供參考，將儲存在您的環境中。更多詳情請參閱…link:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html["Amazon Bedrock 資料保護文檔"^] 。
+
+如需更多詳細資訊，請參閱 link:https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html["Amazon Bedrock 資料保護文檔"^]。
 
 
 
 == 開始之前
 
-要使用事件分析器，您必須滿足以下先決條件：
+若要使用事件分析器、請確保下列事項：
 
-* 你必須link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _操作和修復_ 權限"^]在您的 AWS 帳戶中查看 FSx for ONTAP檔案系統的事件。
-* 對於 EMS 事件分析，必須在與 FSx for ONTAP檔案系統關聯的安全性群組中開啟下列連接埠。
-+
-** 埠 22（SSH）
+* 您可以在 AWS 帳戶中link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_operations and remediation_ 權限"^]分析 FSx for ONTAP 檔案系統的事件。
+* 連接埠 22 (SSH) 在與您的 FSx for ONTAP 檔案系統相關聯的安全性群組中已開啟。
 
 
-* 你必須link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到 FSx for ONTAP檔案系統"]使用EMS事件分析器。
-* 您還需要滿足以下要求。分析日誌錯誤時，系統會提示您完成這些步驟。
+其他要求（系統會在記錄錯誤分析過程中提示您）：
+
+* *亞馬遜基岩模型*
 +
-** *亞馬遜基岩模型*
-+
-事件分析器使用 Amazon Bedrock API 為 FSx for ONTAP事件提供基於 AI 的見解。分別為每個 AWS 帳戶配置 Amazon Bedrock。
+為每個 AWS 帳戶配置 Amazon Bedrock API。Amazon BedRock API 用於提供有關 FSx for ONTAP 事件的分析資料。
 
 +
-建議模型：亞馬遜基岩模型（anthropic.claude-sonnet-4-20250514-v1:0）。您必須提供所選區域中此模型的推理設定檔 ARN。
+推薦模型： `anthropic.claude-sonnet-4-20250514-v1:0`。請提供您所選區域的推理設定檔 ARN。
 
-** *工作負載工廠連結*
+* *工作負載工廠連結*
 +
-您必須建立連結並將其與 FSx for ONTAP檔案系統關聯，才能啟用 AI 驅動的事件分析。此連結在 Workload Factory 與一個或多個 FSx for ONTAP檔案系統之間建立信任關係，並利用 AWS Lambda。
+建立連結並將其與 FSx for ONTAP 檔案系統關聯，以啟用 AI 驅動的事件分析。此連結在 Workload Factory 與一個或多個 FSx for ONTAP 檔案系統之間建立信任關係，並利用 AWS Lambda。
 
 +
 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結關聯後，返回此操作。
 
-** *AWS IAM 權限*
+* *AWS IAM 權限*
 +
-您必須將下列權限新增至 Workload Factory IAM 角色關聯策略。
+將下列權限新增至 Workload Factory IAM 角色相關聯原則。
 
 +
-*** 權限： `bedrock:InvokeModel`和 `bedrock:InvokeModelWithResponseStream`
+** `bedrock:InvokeModel`
+** `bedrock:InvokeModelWithResponseStream`
 +
-這些權限使 Workload Factory 能夠呼叫 Bedrock 模型，以便主動進行錯誤調查和補救指導。此設定檔還能確保安全地存取人工智慧，從而提供客製化的洞察。
+這些權限允許 Workload Factory 呼叫 Bedrock 模型進行錯誤調查和修復指導。此設定檔還可確保安全的 AI 存取，以獲得量身打造的洞察資訊。
 
-*** 與 Workload Factory 關聯的 AWS 憑證： `bedrock:GetInferenceProfile`和 `bedrock:ListInferenceProfiles`權限
++
+此外，也要為與 Workload Factory 關聯的 AWS 認證新增下列權限：
+
+** `bedrock:GetInferenceProfile`
+** `bedrock:ListInferenceProfiles`
 +
 這些權限用於驗證模型的可用性。
-
-
 
 
 

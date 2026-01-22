@@ -2328,34 +2328,14 @@
   <block id="cfd839007fdba7ba7d7a5a35de4aa55a" category="paragraph"><block ref="cfd839007fdba7ba7d7a5a35de4aa55a" category="inline-link-macro-rx"></block></block>
   <block id="07236cc47c70c5fd568c5a75720db649" category="summary">分析NetApp Workload Factory for FSx for ONTAP中的 EMS 事件。</block>
   <block id="12f4e0399e2df3c2e6f5c6d078ccfcb7" category="doc">在NetApp Workload Factory中分析 FSx for ONTAP EMS 事件</block>
-  <block id="ab6bb38002e21094a77f3fc386f75b81" category="paragraph">使用智慧型事件分析器自動擷取和分析NetApp Workload Factory中 FSx for ONTAP檔案系統的事件管理系統 (EMS) 事件，以便您可以快速識別和解決問題。Agentic AI 為基礎的分析需要 Amazon Bedrock 整合。</block>
-  <block id="69b4c5d1a10df7b24661fa3357de7164" category="paragraph">儲存管理員通常只有在客戶投訴後才會回應 FSx for ONTAP EMS 事件，或透過建立自訂腳本和警報來回應。這種被動應對方式會減慢問題解決速度，增加停機時間，並降低營運效率。</block>
   <block id="950a30dbe6160d51c93dd8570573b0b1" category="paragraph">主要優勢包括：</block>
-  <block id="ff395ce69e116ba9c811e7b5e4d30150" category="list-text">進階故障排除：利用人工智慧主動偵測和分析事件，為需要關注的ONTAP EMS 事件提供清晰的解決方案步驟。</block>
-  <block id="e81b4c6e0ef57eb1b12f2dee109f70a5" category="list-text">最佳實務修復：根據您的環境，提供修復 FSx for ONTAP問題的清晰步驟，以便任何人都能解決問題。</block>
-  <block id="8b6e7c06cc47e464865ce794c06c1cdc" category="paragraph">使用事件分析器時，您可以在享受高級 AI 分析的同時，保持對環境的完全控制。</block>
-  <block id="9885b601634edd1a14ff24653669df48" category="paragraph">要使用事件分析器，您需要啟動 Amazon Bedrock，選擇 Workload Factory 使用的模型，建立連接到 Amazon Bedrock 的私人端點，新增權限，並建立企業授權。</block>
   <block id="888aee60b948bfcee3f85cb52d4d62f0" category="inline-link-macro">Amazon Bedrock 定價</block>
   <block id="2064dc6bc6a42df41c5d58cafe4e5108" category="paragraph"><block ref="2064dc6bc6a42df41c5d58cafe4e5108" category="inline-link-macro-rx"></block></block>
   <block id="bf71ae5aa16f5632361df660e7d643c6" category="section-title">資料隱私和安全</block>
-  <block id="4156616e317ae39855b5f4857b036da9" category="paragraph">此功能透過以下措施確保資料隱私和安全：</block>
-  <block id="a492925ae64557e89b32f29da418b5eb" category="paragraph-title">數據主權</block>
-  <block id="6c9fd6facdeb8075fa50e4efcd8bf208" category="paragraph">資料和聚合資料保留在您的 AWS 帳戶內，透過私人 VPC 終端節點（Amazon Bedrock）進行通信，確保不會暴露於公共互聯網。</block>
-  <block id="2405b8bbe1eec9accdcb22235860c3f2" category="paragraph-title">無人工智慧訓練</block>
   <block id="ff8598dd406774c1ca9008fc13afdda5" category="inline-link-macro">Amazon Bedrock 資料保護文檔</block>
-  <block id="5ccaf9841b400d75e00f4c8e0a92737d" category="paragraph">客戶資料不會用於訓練或改進模型。 Amazon Bedrock 會即時處理事件，但不會使用您的資料進行訓練。結果僅供參考，將儲存在您的環境中。更多詳情請參閱…<block ref="b066fd87fd1e8a2b8d520c5977ecc43e" category="inline-link-macro-rx"></block> 。</block>
-  <block id="300fe33bee6926cbc2c265a3ccde1b0f" category="paragraph">要使用事件分析器，您必須滿足以下先決條件：</block>
-  <block id="709be97721c78cba90770231b1263a14" category="inline-link-macro">使用連結連接到 FSx for ONTAP檔案系統</block>
-  <block id="35f42184479bd0858fd2a493aa10006d" category="list-text">你必須<block ref="13912c59a5ea303190d1db0c6a5f11f5" category="inline-link-macro-rx"></block>使用EMS事件分析器。</block>
-  <block id="ffbf1245cc8098f00c47babcce153016" category="list-text">您還需要滿足以下要求。分析日誌錯誤時，系統會提示您完成這些步驟。</block>
-  <block id="3e7827ba3fa976aec6ad1122b7da30fe" category="paragraph">建議模型：亞馬遜基岩模型（anthropic.claude-sonnet-4-20250514-v1:0）。您必須提供所選區域中此模型的推理設定檔 ARN。</block>
   <block id="b523b0335680ab84edd50860caeed123" category="list-text">*工作負載工廠連結*</block>
-  <block id="bd3978e078bba2f9f1743c27d1db8462" category="paragraph">您必須建立連結並將其與 FSx for ONTAP檔案系統關聯，才能啟用 AI 驅動的事件分析。此連結在 Workload Factory 與一個或多個 FSx for ONTAP檔案系統之間建立信任關係，並利用 AWS Lambda。</block>
   <block id="72fa279f5dbab8677f6a4a2b563e0629" category="paragraph"><block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結關聯後，返回此操作。</block>
   <block id="7ed47c99073de0aed63f1c44842de720" category="list-text">*AWS IAM 權限*</block>
-  <block id="fb6d7ca6557e4fecfffa8ab3a6a96421" category="paragraph">您必須將下列權限新增至 Workload Factory IAM 角色關聯策略。</block>
-  <block id="47160e55fc85c2702f6f616e65ff73cd" category="list-text">權限：<block ref="93804e96d3f417a0088c564647dd28e9" prefix=" " category="inline-code"></block>和<block ref="00fe52afa6e3b9a0d389f529a2b88242" prefix=" " category="inline-code"></block></block>
-  <block id="69e9daf6e587a39e4b6dea7dda714604" category="paragraph">這些權限使 Workload Factory 能夠呼叫 Bedrock 模型，以便主動進行錯誤調查和補救指導。此設定檔還能確保安全地存取人工智慧，從而提供客製化的洞察。</block>
   <block id="3fc6364e2f4555bc71d109a7ba02fef1" category="paragraph">這些權限用於驗證模型的可用性。</block>
   <block id="3c9bac4bc86cac9a309d9792f5bb65df" category="section-title">檢視和分析適用於ONTAP的 FSx 的 EMS 事件</block>
   <block id="6baf937b798e7ea8fa07c50ef6c201f9" category="paragraph">使用 Workload Factory 控制台檢視和分析 FSx for ONTAP檔案系統的 EMS 事件。</block>
@@ -2415,10 +2395,7 @@
   <block id="7afacf82c5a68418fd34140a4a69b555" category="sidebar">區塊設備管理</block>
   <block id="b312d49b502ea93d7b1d38b92313f502" category="sidebar">管理區塊設備</block>
   <block id="9f83e27b7a1a59c38fc7d458de16054a" category="sidebar">管理檔案系統標籤</block>
-  <block id="de524979693d09207c5eeb62cad773dc" category="paragraph">事件分析器會擷取 FSx for ONTAP EMS 事件並進行分析，以協助您維護 FSx for ONTAP檔案系統的健康狀況和效能。Workload Factory 僅顯示最近 72 小時內發生的事件。</block>
-  <block id="d55be6cbc9080d8651f85cfb40118d1c" category="list-text">你必須<block ref="6f74e2a9589a6666ba7fdb81dabfc5eb" category="inline-link-macro-rx"></block>在您的 AWS 帳戶中查看 FSx for ONTAP檔案系統的事件。</block>
   <block id="79aceabdc6c99b8ffa443536ee6c3fac" category="list-text">*亞馬遜基岩模型*</block>
-  <block id="ca29c80b4531f01e2f485c85067fd269" category="list-text">與 Workload Factory 關聯的 AWS 憑證：<block ref="fdd997ab8b4252f76acdda855bb7b890" prefix=" " category="inline-code"></block>和<block ref="9aa5a97dfe3f7608d8ee28e7db3c4e2c" prefix=" " category="inline-code"></block>權限</block>
   <block id="ec43608dd1a0c06ed66226644c486b9a" category="sidebar">追蹤 FSx for ONTAP資源的成本和使用情況</block>
   <block id="063d22315ef43d4247b4ee3e2986ca61" category="sidebar">分析 FSx 中的ONTAP EMS 事件</block>
   <block id="01f76f754caa3b688233762c1b9391f6" category="section-title">支援用於ONTAP的 FSx 的 AWS S3 存取點</block>
@@ -2518,9 +2495,6 @@
   <block id="d303726d253e10ceb3c3a9904bc4c18f" category="list-text">在「管理儲存虛擬機器」畫面上，選擇要重設密碼的儲存虛擬機器的操作選單，然後選擇「基本操作」&gt;「重設密碼」。</block>
   <block id="334f5b13a66630c66877aaf36ce24673" category="section-title">2026年1月4日</block>
   <block id="04c5d70ed6312687a1e39677346bbaff" category="sidebar">建立區塊設備</block>
-  <block id="45825282cf9c53db319df9569d2ca486" category="list-text">對於 EMS 事件分析，必須在與 FSx for ONTAP檔案系統關聯的安全性群組中開啟下列連接埠。</block>
-  <block id="aebaf822d95c8539079782ed80029db9" category="list-text">埠 22（SSH）</block>
-  <block id="e0f1940fa03564fc187d37678d5739f9" category="paragraph">事件分析器使用 Amazon Bedrock API 為 FSx for ONTAP事件提供基於 AI 的見解。分別為每個 AWS 帳戶配置 Amazon Bedrock。</block>
   <block id="64153de607e9925466a905a664c31502" category="list-text">用於ONTAP緊急管理系統 (EMS) 事件分析的 CloudShell 和 FSx：連接埠 22 (SSH)</block>
   <block id="f1a54b856438e25c87919e1789ae841c" category="list-text">ONTAP EMS 事件監控與警報</block>
   <block id="6e9c833800dbc4ebe142052809560480" category="list-text">在「為ONTAP檔案系統建立 FSx」頁面上，選擇「進階建立」。</block>
@@ -2560,4 +2534,33 @@
   <block id="b06e53572a17ccf08cb282ac59af4b93" category="paragraph">不再映射到客戶端或連續七天未使用的區塊設備將被歸類為孤立區塊設備。此操作會取消對應並刪除選取的區塊裝置。如果主機FlexVol volume不包含任何區塊設備，Workload Factory 也會將其刪除。</block>
   <block id="33e155c9d3cab85dd1499ba63bd9d34d" category="paragraph">包含區塊裝置的FlexVol磁碟區以活動模式啟動 ARP/AI。</block>
   <block id="aca2e051b8b58a53ee4cf20a78bdde8a" category="list-text">此連結必須能夠連接到以下端點：\ https://api.workloads.netapp.com.基於 Web 的控制台透過與 Workload Factory API 互動來管理和操作 FSx for ONTAP工作負載。</block>
+  <block id="ae7bbdf37f2fa18593f3db57d284b5eb" category="paragraph">使用 NetApp Workload Factory 中的智慧事件分析器，快速識別並解決 FSx for ONTAP 檔案系統問題。此事件分析器利用與 Amazon Bedrock 整合的 Agentic AI，自動擷取並分析 FSx for ONTAP 事件管理系統（EMS）事件。</block>
+  <block id="69fa9c087519616c715c1ff5cb8799b4" category="paragraph">儲存管理員通常只有在客戶投訴後才會回應 FSx for ONTAP EMS 事件,或透過維護自訂腳本和警報來解決問題。這種被動回應的方式會降低效率、延遲問題解決並增加停機時間。</block>
+  <block id="ea0503aedfe2585b2372e8f13d9a188b" category="inline-link-macro">使用連結連接至檔案系統</block>
+  <block id="9d2246fd849af6e6265f4bfd88a1fae2" category="inline-link-macro">授予_檢視、規劃和分析_權限</block>
+  <block id="2647b280de36025cc715dd5e1d5ccecf" category="paragraph">事件分析器會自動從 FSx for ONTAP 檔案系統中提取錯誤、警告和緊急 EMS 事件。您可以<block ref="f91a3df34ad8b434c845af1c5c4599e2" category="inline-link-macro-rx"></block>和<block ref="f7fcd176fbc4e82ec30b37b672d1e76e" category="inline-link-macro-rx"></block>在 AWS 帳戶中查看這些事件。事件會在移除前顯示 72 小時。</block>
+  <block id="0ee3fcfb10a8d4af3c7cb550b6d9bc38" category="paragraph">透過與 Amazon Bedrock 整合，Workload Factory 使用 AI 分析事件並提供可行的深入見解，以維護 FSx for ONTAP 檔案系統的健全狀況和效能。</block>
+  <block id="721c487e9ac5dc5fc37d25389a9c0866" category="list-text">進階疑難排解：AI 自動識別、分析並提供深入見解，以修正 FSx for ONTAP EMS 事件，減少手動調查時間。</block>
+  <block id="90fff3808b87c7068de0570f6b4692b6" category="list-text">最佳實務補救措施：事件分析器提供清晰、可操作的步驟來解決 FSx for ONTAP EMS 事件。</block>
+  <block id="27562a45337f51e17d281897d9fddcd2" category="paragraph">使用事件分析器時，您可以完全控制您的環境，同時也能受益於先進的 AI 分析。</block>
+  <block id="0da91429b3f9223cbaa4f8470ef89ea0" category="paragraph">若要允許 Workload Factory 分析事件，您必須啟動 Amazon Bedrock、選擇 Workload Factory 使用的模型、建立連接至 Amazon Bedrock 的私人端點、新增權限，並建立企業授權。</block>
+  <block id="697e3d01e31a8ce7704ee41323400066" category="paragraph">您的資料隱私和安全將透過以下方式受到保護：</block>
+  <block id="84ae233a79c0ea9a3056e7680572780d" category="list-text">*資料主權*：所有資料和彙總都保留在您的 AWS 帳戶內，並透過私有 VPC 端點（Amazon Bedrock）進行通訊，不會暴露於公用網際網路。</block>
+  <block id="83ba0533f3c89bcebf3d4a8565cd0192" category="list-text">*不進行 AI 訓練*：客戶資料不會用於訓練或改進模型。Amazon Bedrock 會即時處理事件，但不會使用您的資料進行訓練。結果僅儲存在您的環境中。</block>
+  <block id="cb955412ddfc1e82347d29c44308ede8" category="paragraph">如需更多詳細資訊，請參閱 <block ref="b066fd87fd1e8a2b8d520c5977ecc43e" category="inline-link-macro-rx"></block>。</block>
+  <block id="4afc10e211f325b277b31bdf03653564" category="paragraph">若要使用事件分析器、請確保下列事項：</block>
+  <block id="e6cefdd5e44ac5e5142c68d4b8d3451b" category="inline-link-macro">_operations and remediation_ 權限</block>
+  <block id="955afa6e7ada9aae898db4f1ec89597b" category="list-text">您可以在 AWS 帳戶中<block ref="3728a9886a6e8befe945facf87fd7817" category="inline-link-macro-rx"></block>分析 FSx for ONTAP 檔案系統的事件。</block>
+  <block id="622f422e31dd55d6b288a24d05bc2309" category="list-text">連接埠 22 (SSH) 在與您的 FSx for ONTAP 檔案系統相關聯的安全性群組中已開啟。</block>
+  <block id="b6c462f58509f9b26d80dbd1d24b9aed" category="paragraph">其他要求（系統會在記錄錯誤分析過程中提示您）：</block>
+  <block id="c8598674a87a9c799b14c6b675d2dd50" category="paragraph">為每個 AWS 帳戶配置 Amazon Bedrock API。Amazon BedRock API 用於提供有關 FSx for ONTAP 事件的分析資料。</block>
+  <block id="10b86811a1c2efaa2595c0a2596a2bc0" category="paragraph">推薦模型：<block ref="00384dd7439f3263ff61a20c6a4db34c" prefix=" " category="inline-code"></block>。請提供您所選區域的推理設定檔 ARN。</block>
+  <block id="b119b2ead611491e4d54de03365b4de2" category="paragraph">建立連結並將其與 FSx for ONTAP 檔案系統關聯，以啟用 AI 驅動的事件分析。此連結在 Workload Factory 與一個或多個 FSx for ONTAP 檔案系統之間建立信任關係，並利用 AWS Lambda。</block>
+  <block id="bb038c2aeef4cf3da06b0b304f46890d" category="paragraph">將下列權限新增至 Workload Factory IAM 角色相關聯原則。</block>
+  <block id="f80c2c54334d4ddca4016b89152c6684" category="list-text"><block ref="93804e96d3f417a0088c564647dd28e9" prefix="" category="inline-code"></block></block>
+  <block id="1ed1b1bc988715ea858abe38c168d87a" category="list-text"><block ref="00fe52afa6e3b9a0d389f529a2b88242" prefix="" category="inline-code"></block></block>
+  <block id="c8e7b109460fb25e6bdcb5d7e4a18364" category="paragraph">這些權限允許 Workload Factory 呼叫 Bedrock 模型進行錯誤調查和修復指導。此設定檔還可確保安全的 AI 存取，以獲得量身打造的洞察資訊。</block>
+  <block id="4ba4032fe66a2ab71b90bddc3cde5770" category="paragraph">此外，也要為與 Workload Factory 關聯的 AWS 認證新增下列權限：</block>
+  <block id="4e736cb1760a43a4bf2b5d861b6deb96" category="list-text"><block ref="fdd997ab8b4252f76acdda855bb7b890" prefix="" category="inline-code"></block></block>
+  <block id="71d01806cd25e89067c25b4f03e9a607" category="list-text"><block ref="9aa5a97dfe3f7608d8ee28e7db3c4e2c" prefix="" category="inline-code"></block></block>
 </blocks>
