@@ -51,8 +51,12 @@ sidebar:
         url: "/create-volume.html"
       - title: 存取您的資料
         url: "/access-data.html"
-    - title: 建立區塊設備
-      url: "/create-block-device.html"
+    - title: 建立區塊儲存資源
+      entries:
+      - title: 建立 igroup
+        url: "/create-igroup.html"
+      - title: 建立區塊設備
+        url: "/create-block-device.html"
     - title: 建立儲存VM
       url: "/create-storage-vm.html"
     - title: 保護您的資料
@@ -127,8 +131,10 @@ sidebar:
         url: "/split-cloned-volume.html"
       - title: 刪除 Volume
         url: "/delete-volume.html"
-    - title: 區塊設備管理
+    - title: 區塊儲存管理
       entries:
+      - title: 管理 igroup
+        url: "/manage-igroups.html"
       - title: 管理區塊設備
         url: "/manage-block-devices.html"
     - title: 檔案系統管理

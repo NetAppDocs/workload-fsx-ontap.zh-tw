@@ -11,10 +11,58 @@ summary: 在NetApp Workload Factory中管理磁碟區的 S3 存取點。
 
 
 [role="lead"]
-在NetApp Workload Factory中管理磁碟區的 S3 存取點。您可以使用 Workload Factory 控制台將 S3 存取點指派給現有磁碟區或刪除 S3 存取點。
+在 NetApp Workload Factory 中管理某個磁碟區的 S3 存取端點。您可以使用 Workload Factory 主控台為現有磁碟區指派 S3 存取端點、檢視 S3 儲存貯體的詳細資訊、變更現有存取端點，或刪除 S3 存取端點。
+
+.關於這項工作
+Amazon FSx for NetApp ONTAP 支援透過 NFS 和 SMB 檔案系統存取 S3 資料，因此能夠與數十種基於 S3 的 AWS 服務（例如 Amazon Bedrock、SageMaker、Athena、AWS Glue 等）整合。您可以將 AWS 服務連接到所有物件儲存資料。
+
+透過將 S3 存取點附加到 FSx for ONTAP 檔案系統中的 NFS 和 SMB 磁碟區，儲存在這些磁碟區中的檔案可以被任何 AWS 服務存取，就像它們儲存在 S3 儲存貯體中一樣。附加存取點時，您需要定義其唯一 ID、指定檔案存取類型（UNIX 或 Windows）並新增使用者名稱，用於授權存取點的檔案存取要求。
+
+S3 存取點連接後，它會顯示在 AWS Management Console 中，並擁有唯一的存取點別名。此別名會用作 S3 儲存貯體名稱，提供給您要連接的 AWS 服務。例如，您可以將別名提供給 Amazon Bedrock 知識庫，然後它會使用 FSx for ONTAP 磁碟區中的檔案來為查詢提供情境式答案。
+
+您可以將多個 S3 存取點連接到單一 FSx for ONTAP 磁碟區，每個存取點都有其獨特的存取級別，讓您能夠連接到所需數量的 AWS 服務。
 
 .開始之前
-您必須擁有一個已存在的包含 S3 存取點的磁碟區。
+請確保您符合以下要求：
+
+* 您必須擁有一個已存在的包含 S3 存取點的磁碟區。
+* 您必須在 Workload Factory 中link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["使用 _operations and remediation_ 權限原則授予認證"^]完成此任務。
+
+
+
+
+== 建立 S3 存取點並將其附加到現有捲
+
+在 NetApp Workload Factory 中建立 S3 接入點並將其附加到現有磁碟區。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇包含要更新之磁碟區的檔案系統。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 在“磁碟區”標籤中，選擇要管理 S3 存取點的磁碟區的操作選單，然後選擇“進階操作”，再選擇“管理 S3 存取點”。
+. 選擇「建立並連接 S3 接入點」。
+. 在「建立並連接 S3 接入點」對話方塊中，提供以下資訊：
++
+** *S3接入點名稱*：輸入S3接入點的名稱。
+** *使用者*：選擇有權存取該磁碟區的現有使用者或建立新使用者。
+** *使用者類型*：選擇*UNIX*或*Windows*作為使用者類型。
+** *啟用元資料目錄*：選取此項目可啟用磁碟區的元資料，從而為所有可透過 S3 存取點存取的物件產生元資料清單。此功能會產生 AWS S3 請求費用。
+
+
+. 選擇“建立並附加”。
+
+
+
+
+== 檢視詳細資料
+
+別名、ARN 和 S3 URI 是未啟用中繼資料時可用的存取點詳細資訊。
+
+啟用磁碟區的元資料後，您可以查看附加到該磁碟區的現有 S3 存取點的存取點、清單表和表儲存桶詳細資料。此外，也會提供指向 AWS Management Console 中清單表的連結。
+
+存取點詳細資料可複製，以便在其他應用程式中使用。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
@@ -23,30 +71,57 @@ summary: 在NetApp Workload Factory中管理磁碟區的 S3 存取點。
 . 從 *FSx for ONTAP* 中選擇要更新的磁碟區的檔案系統的操作選單，然後選擇 *管理*。
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
 . 在“磁碟區”標籤中，選擇要管理 S3 存取點的磁碟區的操作選單，然後選擇“進階操作”，再選擇“管理 S3 存取點”。
-. 在「管理 S3 存取點」頁面上，您可以建立和附加存取點或刪除現有存取點。
-+
-[role="tabbed-block"]
-====
-.建立 S3 存取點並將其附加到現有捲
---
-.. 選擇「建立並連接 S3 接入點」。
-.. 在「建立並連接 S3 接入點」對話方塊中，提供以下資訊：
-+
-*** *S3接入點名稱*：輸入S3接入點的名稱。
-*** *使用者*：選擇有權存取該磁碟區的現有使用者或建立新使用者。
-*** *使用者類型*：選擇*UNIX*或*Windows*作為使用者類型。
+. 從 *Manage S3 access points* 畫面中，選取動作功能表，然後選取 *View details* 。
 
 
-.. 選擇“建立並附加”。
 
 
---
-.從磁碟區中刪除現有的 S3 存取點
---
-.. 選擇要刪除的 S3 接入點的操作選單，然後選擇「分離」。
-.. 在「分離並移除 S3 存取點」對話方塊中，選擇「分離並移除」以從磁碟區中刪除 S3 存取點。
+== 編輯存取點
+
+變更已連線至磁碟區的現有 S3 存取點的使用者和使用者類型。您也可以啟用或停用存取點的中繼資料。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選擇要更新的磁碟區的檔案系統的操作選單，然後選擇 *管理*。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 在“磁碟區”標籤中，選擇要管理 S3 存取點的磁碟區的操作選單，然後選擇“進階操作”，再選擇“管理 S3 存取點”。
+. 從 *Manage S3 access points* 畫面中，選擇操作選單，然後選擇 *Edit access point* 。
+. 進行更新，然後選取 *Apply* 。
 
 
---
-====
+
+
+== 管理 S3 存取點標籤
+
+為連接至磁碟區的現有 S3 存取點新增或移除標籤。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選擇要更新的磁碟區的檔案系統的操作選單，然後選擇 *管理*。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 在“磁碟區”標籤中，選擇要管理 S3 存取點的磁碟區的操作選單，然後選擇“進階操作”，再選擇“管理 S3 存取點”。
+. 從 *Manage S3 access points* 畫面中，選擇操作選單，然後選擇 *Manage tags*。
+. 在「管理 S3 存取點標籤」對話方塊中，您可以為 S3 存取點新增最多 50 個標籤或移除標籤。
+. 選擇*應用*。
+
+
+
+
+== 從磁碟區中刪除現有的 S3 存取點
+
+從 NetApp Workload Factory 的一個磁碟區中刪除現有的 S3 存取端點。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選擇要更新的磁碟區的檔案系統的操作選單，然後選擇 *管理*。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 在“磁碟區”標籤中，選擇要管理 S3 存取點的磁碟區的操作選單，然後選擇“進階操作”，再選擇“管理 S3 存取點”。
+. 選擇要刪除的 S3 接入點的操作選單，然後選擇「分離」。
+. 在「分離並移除 S3 存取點」對話方塊中，選擇「分離並移除」以從磁碟區中刪除 S3 存取點。
 

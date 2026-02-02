@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: create-igroup.html 
+keywords: create initiator group, create igroup, iscsi protocol 
+summary: 建立啟動器群組以管理主機對 NetApp Workload Factory 中區塊裝置的存取。 
+---
+= 在 NetApp Workload Factory 中為檔案系統建立啟動器群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用 NetApp Workload Factory 建立啟動器群組並管理主機對 SAN 區塊裝置的存取。
+
+.關於這項工作
+啟動器群組或 igroup 會將區塊裝置（LUN）連接至允許存取這些裝置的運算資源。與 NFS 或 CIFS 不同（磁碟區可廣泛存取且使用者權限可控制存取），區塊儲存權限是在機器層級運作。通常一次只有一個系統可以存取區塊裝置。
+
+igroup 充當區塊儲存的權限層。當伺服器連接到儲存系統時，它會使用其 iSCSI qualified (IQN) 主機發起程式進行身份驗證。如果該 IQN 屬於一個或多個 igroup，則伺服器可以存取與這些 igroup 關聯的所有 LUN。igroup 和 iSCSI 主機連線對於 iSCSI 的正常運作都至關重要。
+
+.開始之前
+您必須關聯一個連結以建立 igroups。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。關聯連結後，請返回此操作。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 在儲存圖塊中，選擇*轉到儲存*。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選擇 *區塊設備* 選項卡。
+. 選擇資源類型 *Create initiator group* ，然後選擇 *Create igroup* 。
+. 在 *Create initiator group* 對話方塊中，執行下列操作：
++
+** *igroup name*：輸入 initiator group 的名稱。
+** *igroup 描述*：（選用）輸入啟動器群組的描述。
+** *Storage VM 名稱*：選擇啟動器群組的 Storage VM。
+** *區塊裝置名稱*：選擇一個或多個要與啟動器群組建立關聯的區塊裝置。列出的區塊裝置是尚未對應至主機啟動器的裝置。
+** *作業系統類型*：選擇作業系統類型的 Linux、VMware 或 Windows。
+** *主機啟動器*：在啟動器群組中新增一個或多個 iSCSI 合格（IQN）主機啟動器。
+
+
+. 選擇* Create *（建立*）。
+
+
+.相關資訊
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-igroups.html["管理 FSx for ONTAP 檔案系統的 igroup"]

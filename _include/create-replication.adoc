@@ -2,8 +2,6 @@
 :allow-uri-read: 
 
 
-. * 儲存 VM 名稱 * ：從下拉式功能表中選取儲存 VM 。您選擇的儲存虛擬機器是此複製關係中所有選定磁碟區的目標。
-. *Volume name* ：目標 Volume 名稱會自動以下列格式產生 `{OriginalVolumeName}_copy`。您可以使用自動產生的 Volume 名稱或輸入其他 Volume 名稱。
 . *用例*：選擇以下其中一個用例進行複製。根據所選的用例，Workload Factory 會根據最佳實踐在表單中填入建議值。您可以接受建議的數值，也可以在填寫表格時進行變更。
 +
 ** 移轉：將資料傳輸至 ONTAP 檔案系統的目標 FSX
@@ -28,6 +26,9 @@
 
 
 
+. * 適用於 ONTAP 檔案系統 * 的 FSX ：針對適用於 ONTAP 檔案系統的目標 FSX 、選取 ONTAP 檔案系統名稱的認證、區域和 FSX 。
+. * 儲存 VM 名稱 * ：從下拉式功能表中選取儲存 VM 。您選擇的儲存虛擬機器是此複製關係中所有選定磁碟區的目標。
+. *Volume name* ：目標 Volume 名稱會自動以下列格式產生 `{OriginalVolumeName}_copy`。您可以使用自動產生的 Volume 名稱或輸入其他 Volume 名稱。
 . * 分層原則 * ：選取儲存在目標 Volume 中的資料分層原則。分層原則預設為您所選使用案例的建議分層原則。
 +
 使用 Workload Factory 控制台建立磁碟區時，_平衡（自動）_ 是預設分層策略。有關卷分層策略的更多信息，請參閱link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^]在 AWS FSx for NetApp ONTAP文件中。請注意，工作負載工廠在工作負載工廠控制台中使用基於用例的名稱來制定分層策略，並在括號中包含 FSx for ONTAP分層策略名稱。
@@ -62,4 +63,14 @@ NOTE: 長期保留需要相符的來源和目標標籤。如有需要，工作�
 ** * Snapshot Policies * ：在表格中、選取快照原則頻率和要保留的複本數量。您可以選取多個快照原則。
 
 
+. *S3 存取點*：可選地，透過 AWS S3 API 連接 S3 存取點，以存取駐留在 NFS 或 SMB/CIFS 磁碟區上的 FSx for ONTAP檔案系統資料。僅支援文件存取類型。提供以下詳細資訊：
++
+** *S3接入點名稱*：輸入S3接入點的名稱。
+** *使用者*：選擇有權存取該磁碟區的現有使用者或建立新使用者。
+** *使用者類型*：選擇*UNIX*或*Windows*作為使用者類型。
+** *網路組態*：選擇 *Internet* 或 *Virtual private cloud (VPC)*。您選擇的網路類型決定了存取點是可從網際網路存取，還是僅限於特定的 VPC。
+** *啟用元資料*：啟用元資料會建立一個 S3 表，其中包含 S3 存取點可存取的所有物件，您可以將其用於稽核、治理、自動化、分析和最佳化。啟用元資料會產生額外的 AWS 費用。請參閱 link:https://aws.amazon.com/s3/pricing/["Amazon S3 定價文件"^] 以了解更多資訊。
+
+
+. *S3 存取點標籤*：您可以選擇新增最多 50 個標籤。
 

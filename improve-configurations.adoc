@@ -17,7 +17,10 @@ summary: 工作負載工廠掃描Amazon FSx for NetApp ONTAP配置，提供見�
 
 link:configuration-analysis.html["了解 Workload Factory 中的配置分析和良好架構狀態。"]
 
-.關於這項工作
+
+
+== 關於這項工作
+
 工作負載工廠每日分析Amazon FSx for NetApp ONTAP檔案系統部署設定。每日分析提供架構完善的狀態、見解和建議，以及自動修復配置問題的選項，確保您的檔案系統符合最佳實務。
 
 連結連接允許 Workload Factory 掃描效能、資料保護和配置方面的問題。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到 FSx for ONTAP檔案系統"]對您的檔案系統資源進行最全面的分析。
@@ -31,8 +34,17 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 
 * 可靠性：SSD 容量閾值、計劃的本地快照、FSx for ONTAP備份、遠端資料複製以及長期保留的資料可靠性
 * 安全性： NetApp自主勒索軟體防護（含 AI 功能，ARP/AI 已停用）以及對卷的未經授權訪問
-* 卓越營運：自動容量管理、磁碟區檔案容量利用率閾值、卷利用率接近滿值以及快取關係寫入模式
-* 成本優化：提高儲存效率、資料分層、刪除不必要的快照和備份
+* 卓越營運：自動容量管理、Volume 檔案容量使用率臨界值、Volume 使用率接近全滿、快取關係寫入模式、最佳化快取 Volume 大小以及 Volume 邏輯容量報告
+* 成本最佳化：儲存效率、資料分層、不必要的快照和備份刪除以及孤立區塊裝置
+
+
+
+
+== 開始之前
+
+* 您必須在 AWS 帳戶中link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _操作和修復_ 權限"^]。
+* 修復過程可能會導致執行個體停機或服務中斷。在選擇修復配置問題之前，請務必仔細查看每個建議。
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到 FSx for ONTAP檔案系統"]對您的檔案系統資源進行最全面的分析。
 
 
 
@@ -41,20 +53,11 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 
 您可以修正 FSx for ONTAP檔案系統或檔案系統中選定磁碟區的設定問題。您可以選擇一個或多個要修復的配置。
 
-.開始之前
-* 你必須link:link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _操作和修復_ 權限"^]在您的 AWS 帳戶中。
-* 修復過程可能會導致執行個體停機或服務中斷。在選擇修復配置問題之前，請務必仔細查看每個建議。
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到 FSx for ONTAP檔案系統"]對您的檔案系統資源進行最全面的分析。
-
-
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
-. 從儲存選單中，選擇 *FSx for ONTAP*。
-. 從 *FSx for ONTAP* 中，選擇要更新的檔案系統的操作選單，然後選擇 *管理*。
-. 從 FSx for ONTAP檔案系統概覽導覽至 *Well-architected status* 標籤。
-. 或者，按類別、子類別、狀態、嚴重性和標籤過濾配置問題。
-. 對於任何配置，選擇“查看建議”。請務必仔細閱讀該建議。
+. 從 Storage 選單中，選擇 *Well-architected* 。
+. 針對任何組態選取 *View issues* 。請務必仔細檢閱建議。
 +
 本建議說明未最佳化組態的最佳實務做法和潛在陷阱。
 
@@ -79,16 +82,16 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 ====
 .取消檔案系統的設定分析
 --
-關閉以無限期停止 FSx for ONTAP檔案系統的設定分析。您可以在需要時重新開始分析。
-
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
-. 從儲存選單中，選擇 *FSx for ONTAP*。
-. 從 *FSx for ONTAP* 中，選擇檔案系統的操作選單，然後選擇 *管理*。
-. 從 FSx for ONTAP檔案系統概覽導覽至 *Well-architected status* 標籤。
-. 在*配置*下，確定您想要關閉的配置並選擇*關閉*。
-. 選擇“*Dismiss*”即可停止配置分析。
+. 從 Storage 選單中，選擇 *Well-architected* 。
+. 針對任何組態選取 *View issues* 。請務必仔細檢閱建議。
++
+本建議說明未最佳化組態的最佳實務做法和潛在陷阱。
+
+. 在「配置」下，找出不適用於您環境的配置，然後選取 *Dismiss* 。
+. 在「取消組態」對話方塊中、選取 *取消* 以停止分析組態。
 
 
 --
@@ -97,10 +100,8 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
-. 從儲存選單中，選擇 *FSx for ONTAP*。
-. 從 *FSx for ONTAP* 中，選擇檔案系統的操作選單，然後選擇 *管理*。
-. 從 FSx for ONTAP檔案系統概覽導覽至 *Well-architected status* 標籤。
-. 在*配置*下，確定要關閉的選定磁碟區的配置，然後選擇*檢視並修復*。
+. 從 Storage 選單中，選擇 *Well-architected* 。
+. 在「配置」下，識別要為所選磁碟區取消的配置，然後選取 *View and fix* 。
 . 確定要從配置分析中忽略的磁碟區。
 +
 ** 對於一個磁碟區：選擇操作選單，然後選擇*關閉磁碟區*。
@@ -131,10 +132,8 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
-. 從儲存選單中，選擇 *FSx for ONTAP*。
-. 從 *FSx for ONTAP* 中，選擇檔案系統的 actionsenu，然後選擇 *Manage*。
-. 從 FSx for ONTAP檔案系統概覽導覽至 *Well-architected status* 標籤。
-. 在*配置*旁邊，選擇*已消除的配置*。
+. 從 Storage 選單中，選擇 *Well-architected* 。
+. 選擇 *Dismissed configurations* 。
 . 確定您想要重新啟動的配置並選擇*重新啟動*。
 
 
@@ -144,13 +143,11 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
-. 從儲存選單中，選擇 *FSx for ONTAP*。
-. 從 *FSx for ONTAP* 中，選擇檔案系統的操作選單，然後選擇 *管理*。
-. 從 FSx for ONTAP檔案系統概覽導覽至 *Well-architected status* 標籤。
-. 在*配置*下，確定要重新啟動選取磁碟的配置，然後選擇*檢視並修復*。
+. 從 Storage 選單中，選擇 *Well-architected* 。
+. 選擇 *Dismissed configurations* 。
 . 從配置分析中識別要重新啟動的磁碟區。
 +
-** 對於一個磁碟區：選擇操作選單，然後選擇*重新啟動磁碟區*。
+** 對於單一磁碟區：選擇操作選單，然後選擇 *Reactivate volume*。
 ** 對於多個卷：選擇卷，然後選擇批次操作旁邊的*重新啟動*。
 
 
