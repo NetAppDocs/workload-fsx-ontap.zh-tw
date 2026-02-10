@@ -390,7 +390,6 @@
   <block id="2204b0f79985b7b0565114e8305937a5" category="section-title">儲存VM</block>
   <block id="b1c8cb58e124bead4ca2e09fa1c20c9b" category="paragraph">如需每個檔案系統的 SVM 最大數量、請參閱 <block ref="17ef0d7491a925205e8443311f7ef122" category="inline-link-macro-rx"></block> AWS 文件中的。</block>
   <block id="3a448e496404b548627a97fc00da8e23" category="section-title">iSCSI 傳輸協定支援</block>
-  <block id="53c858a11ae23c19aee107fb913f096a" category="list-text">每個磁碟區只能設定單一 LUN 。</block>
   <block id="7e7397a7b79323762c61941fc0e6b5f9" category="section-title">資料保護</block>
   <block id="3625bed0ef82516150cc87137582e2b5" category="list-text">無法刪除快照。</block>
   <block id="fa0b5078a184e3a9f13892acdade9375" category="list-text">當您複寫檔案系統時、檔案系統中的所有磁碟區都會使用相同的複寫原則。</block>
@@ -723,8 +722,6 @@
   <block id="0e42938784ca54b8dc455284578841f0" category="list-text">在「初始化關係」對話方塊中，選取 * 初始化 * 。</block>
   <block id="478b776fc28a60e8545a858eb7ca9a3e" category="summary">已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。</block>
   <block id="bd2e4cb8c94783198db1a525a87ae34a" category="doc">Amazon FSX for NetApp ONTAP 的已知限制</block>
-  <block id="26ed02718973e705cd69ee6e109400e0" category="section-title">系統管理員</block>
-  <block id="9ee31cf2622a4d1606ccae84e2ba0742" category="paragraph">System Manager 不支援用於 ONTAP 連線的 FSX 連結。</block>
   <block id="384c5c520d0877aaaaed76d75d973d99" category="list-text">* 儲存成本比較計算機 * ：將 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和適用於 Windows 檔案伺服器的 FSX 儲存成本與適用於 ONTAP 的 FSX 進行比較。從計算機中、您可以檢視適用於 ONTAP 儲存組態的 FSX 如何節省成本、並規劃移轉至適用於 ONTAP 儲存設備的 FSX 。</block>
   <block id="f6858e5eadd0ed940450d85121838545" category="list-text">* 工作負載工廠使用者介面 * ：提供 _ 快速建立 _ 和 _ 進階建立 _ 部署模式選項。快速建立包括 AWS 、 NetApp 、以及適用於您儲存組態的業界標準最佳實務做法。</block>
   <block id="53fe87832fd05bf7a8e9f1e1bad4aa86" category="doc">管理適用於 ONTAP 檔案系統的 FSX 備份排程</block>
@@ -2513,7 +2510,6 @@
   <block id="69fa9c087519616c715c1ff5cb8799b4" category="paragraph">儲存管理員通常只有在客戶投訴後才會回應 FSx for ONTAP EMS 事件,或透過維護自訂腳本和警報來解決問題。這種被動回應的方式會降低效率、延遲問題解決並增加停機時間。</block>
   <block id="ea0503aedfe2585b2372e8f13d9a188b" category="inline-link-macro">使用連結連接至檔案系統</block>
   <block id="9d2246fd849af6e6265f4bfd88a1fae2" category="inline-link-macro">授予_檢視、規劃和分析_權限</block>
-  <block id="2647b280de36025cc715dd5e1d5ccecf" category="paragraph">事件分析器會自動從 FSx for ONTAP 檔案系統中提取錯誤、警告和緊急 EMS 事件。您可以<block ref="f91a3df34ad8b434c845af1c5c4599e2" category="inline-link-macro-rx"></block>和<block ref="f7fcd176fbc4e82ec30b37b672d1e76e" category="inline-link-macro-rx"></block>在 AWS 帳戶中查看這些事件。事件會在移除前顯示 72 小時。</block>
   <block id="0ee3fcfb10a8d4af3c7cb550b6d9bc38" category="paragraph">透過與 Amazon Bedrock 整合，Workload Factory 使用 AI 分析事件並提供可行的深入見解，以維護 FSx for ONTAP 檔案系統的健全狀況和效能。</block>
   <block id="721c487e9ac5dc5fc37d25389a9c0866" category="list-text">進階疑難排解：AI 自動識別、分析並提供深入見解，以修正 FSx for ONTAP EMS 事件，減少手動調查時間。</block>
   <block id="90fff3808b87c7068de0570f6b4692b6" category="list-text">最佳實務補救措施：事件分析器提供清晰、可操作的步驟來解決 FSx for ONTAP EMS 事件。</block>
@@ -2553,11 +2549,9 @@
   <block id="76f77cbc01f0341dffcaaa5f6236eb73" category="section-title">S3 儲存桶詳細資訊可在 Storage 中查看</block>
   <block id="c203e76297d071e4d8256e073c93dafb" category="paragraph">啟用 S3 存取點的元資料後，NetApp Workload Factory 會自動掃描您的 AWS S3 儲存桶並填入 S3 表，從而為您提供所有物件及其元資料、屬性和標籤的清晰快照。存取這些詳細資訊有助於您保持對所負責資料的控制、可見度和信任度，同時降低維運開銷。</block>
   <block id="cc7664945c125a51dd2e69095c8f8200" category="inline-link-macro">查看 FSx for ONTAP 檔案系統中 S3 存取點的詳細資訊</block>
-  <block id="dd52e33b4320b655cb69fb76bc1e345f" category="paragraph"><block ref="dd52e33b4320b655cb69fb76bc1e345f" category="inline-link-macro-rx"></block></block>
   <block id="2249107cb1f4c202ef0253c53bcff598" category="section-title">S3 存取點的其他管理作業</block>
   <block id="bf44c4671ee3bfbc818d505bb9a0e59a" category="paragraph">NetApp Workload Factory 為 S3 存取點提供額外的管理操作。您可以透過 NetApp Workload Factory 介面查看存取點詳細資訊、修改現有 S3 存取點以及新增或刪除 S3 存取點標籤，從而簡化物件儲存管理任務。</block>
   <block id="366c32f0cbb2503b337e243eaa8c42b5" category="inline-link-macro">在 NetApp Workload Factory 中管理 S3 存取端點</block>
-  <block id="d9ec48855b13e13fd489d2442f822e4d" category="paragraph"><block ref="d9ec48855b13e13fd489d2442f822e4d" category="inline-link-macro-rx"></block></block>
   <block id="e593953aaf04eebecfe2e26326145784" category="list-text">最佳化快取磁碟區大小：檢查快取磁碟區是否啟用了磁碟區自動調整大小和清理功能，以保持最佳大小並將快取集中用於熱資料，從而達到最高效率。</block>
   <block id="00e21b809963a2e31abfc13c3aea34b6" category="list-text">孤立區塊設備：建議歸檔區塊設備資料或刪除連續七天未使用的區塊設備。</block>
   <block id="a872ae5d7fdb75042465788519d63c35" category="list-text">Storage VM 邏輯報告：檢查 Storage VM 的預設報告設定是否設定為邏輯，以便更了解磁碟區層級的儲存使用情況。</block>
@@ -2566,13 +2560,10 @@
   <block id="2f09b86fd82a1603b2104c3d565e4187" category="list-text">儲存效率：顯示已使用和可用的儲存容量；已使用容量按 SSD 和容量集區儲存層細分。</block>
   <block id="075b9a975b25dba22b299c4edaf12834" category="list-text">受保護的裝置：顯示具有快照、遠端複製、NetApp Autonomous Ransomware Protection（ARP/AI）和備份的區塊裝置的百分比。</block>
   <block id="46dd61e303a77cea00fc631287dfeab6" category="inline-link-macro">回收未使用的區塊裝置空間</block>
-  <block id="8e8a93bbbd6df5c04a7668748139ce7a" category="list-text">孤立設備：顯示是否有連續七天未使用的區塊設備，幫助您有效識別和管理未使用的資源。您可以在此處<block ref="ddc66f326affa5fcec5ab8f0c0c76e68" category="inline-link-macro-rx"></block>。</block>
   <block id="9ebda12d23b72f4bdda3cbbcd05e0817" category="section-title">支援啟動器群組的建立和管理</block>
   <block id="de002c21193de456c56ce9ccecfc09ab" category="paragraph">NetApp Workload Factory 支援在 FSx for ONTAP 檔案系統中建立和管理區塊儲存的啟動器群組（igroup）。啟動器群組將區塊設備（LUN）連接到允許存取它們的運算資源，從而為 SAN 環境中的區塊儲存提供權限層。</block>
   <block id="e477df666bb45ae0a1fda1f7058551a2" category="inline-link-macro">在 NetApp Workload Factory 中建立啟動器群組</block>
-  <block id="5e85fc9bd832f8bc5366f7ffe4912a99" category="list-text"><block ref="5e85fc9bd832f8bc5366f7ffe4912a99" category="inline-link-macro-rx"></block></block>
   <block id="8933129f9a07c1370a31a0b9f2e53018" category="inline-link-macro">在 NetApp Workload Factory 中管理現有啟動器群組</block>
-  <block id="b241a4baaecab76fcbba49cd24dc9185" category="list-text"><block ref="b241a4baaecab76fcbba49cd24dc9185" category="inline-link-macro-rx"></block></block>
   <block id="185698e1c6b71d12cf578fc402c84407" category="summary">建立啟動器群組以管理主機對 NetApp Workload Factory 中區塊裝置的存取。</block>
   <block id="b99c94539727b97b20142c5b655d47f4" category="doc">在 NetApp Workload Factory 中為檔案系統建立啟動器群組</block>
   <block id="7fa60554ae8bd6b13d23cabdd189c7c5" category="paragraph">使用 NetApp Workload Factory 建立啟動器群組並管理主機對 SAN 區塊裝置的存取。</block>
@@ -2663,4 +2654,10 @@
   <block id="d8ad6fc6096c88d41f98b91f0043eebe" category="sidebar">建立 igroup</block>
   <block id="9a6576dfb2c795711c67df7e1a5b076a" category="sidebar">區塊儲存管理</block>
   <block id="e77c03d49e828607828412709552dbd6" category="sidebar">管理 igroup</block>
+  <block id="fdb38c6259208c2509d21f6a3f0beb02" category="paragraph"><block ref="fdb38c6259208c2509d21f6a3f0beb02" category="inline-link-macro-rx"></block></block>
+  <block id="cc97dddf7d9715fea79ba3e831f0fbca" category="paragraph"><block ref="cc97dddf7d9715fea79ba3e831f0fbca" category="inline-link-macro-rx"></block></block>
+  <block id="b55768d72b4883d58308aa15e30fc7ab" category="list-text">孤立設備：顯示是否有連續七天未使用的區塊設備，幫助您有效識別和管理未使用的資源。您可以在此處<block ref="88cbe2cfb6c92276ca9f0b27df016fa5" category="inline-link-macro-rx"></block>。</block>
+  <block id="0352f037ca8dfca49383ddb908805d9a" category="list-text"><block ref="0352f037ca8dfca49383ddb908805d9a" category="inline-link-macro-rx"></block></block>
+  <block id="0a17c703284dc61149bdaf13e30980de" category="list-text"><block ref="0a17c703284dc61149bdaf13e30980de" category="inline-link-macro-rx"></block></block>
+  <block id="df267252f2595421cf837794528f006f" category="paragraph">事件分析器會自動從 FSx for ONTAP 檔案系統中提取錯誤、警報和緊急 EMS 事件。您可以<block ref="f91a3df34ad8b434c845af1c5c4599e2" category="inline-link-macro-rx"></block>和<block ref="f7fcd176fbc4e82ec30b37b672d1e76e" category="inline-link-macro-rx"></block>在 AWS 帳戶中查看這些事件。事件會在 72 小時後移除前顯示。</block>
 </blocks>

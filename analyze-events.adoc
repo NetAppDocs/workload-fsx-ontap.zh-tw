@@ -19,7 +19,7 @@ summary: 分析NetApp Workload Factory for FSx for ONTAP中的 EMS 事件。
 
 儲存管理員通常只有在客戶投訴後才會回應 FSx for ONTAP EMS 事件,或透過維護自訂腳本和警報來解決問題。這種被動回應的方式會降低效率、延遲問題解決並增加停機時間。
 
-事件分析器會自動從 FSx for ONTAP 檔案系統中提取錯誤、警告和緊急 EMS 事件。您可以link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接至檔案系統"]和link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_檢視、規劃和分析_權限"^]在 AWS 帳戶中查看這些事件。事件會在移除前顯示 72 小時。
+事件分析器會自動從 FSx for ONTAP 檔案系統中提取錯誤、警報和緊急 EMS 事件。您可以link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接至檔案系統"]和link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_檢視、規劃和分析_權限"^]在 AWS 帳戶中查看這些事件。事件會在 72 小時後移除前顯示。
 
 透過與 Amazon Bedrock 整合，Workload Factory 使用 AI 分析事件並提供可行的深入見解，以維護 FSx for ONTAP 檔案系統的健全狀況和效能。
 

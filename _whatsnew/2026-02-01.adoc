@@ -28,7 +28,7 @@ NetApp Workload Factory 的儲存工作負載中，S3 接入點管理功能已�
 
 啟用 S3 存取點的元資料後，NetApp Workload Factory 會自動掃描您的 AWS S3 儲存桶並填入 S3 表，從而為您提供所有物件及其元資料、屬性和標籤的清晰快照。存取這些詳細資訊有助於您保持對所負責資料的控制、可見度和信任度，同時降低維運開銷。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.html["查看 FSx for ONTAP 檔案系統中 S3 存取點的詳細資訊"^]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.html["查看 FSx for ONTAP 檔案系統中 S3 存取點的詳細資訊"]
 
 
 
@@ -36,7 +36,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.ht
 
 NetApp Workload Factory 為 S3 存取點提供額外的管理操作。您可以透過 NetApp Workload Factory 介面查看存取點詳細資訊、修改現有 S3 存取點以及新增或刪除 S3 存取點標籤，從而簡化物件儲存管理任務。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.html["在 NetApp Workload Factory 中管理 S3 存取端點"^]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.html["在 NetApp Workload Factory 中管理 S3 存取端點"]
 
 
 
@@ -57,7 +57,7 @@ Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設�
 
 * 儲存效率：顯示已使用和可用的儲存容量；已使用容量按 SSD 和容量集區儲存層細分。
 * 受保護的裝置：顯示具有快照、遠端複製、NetApp Autonomous Ransomware Protection（ARP/AI）和備份的區塊裝置的百分比。
-* 孤立設備：顯示是否有連續七天未使用的區塊設備，幫助您有效識別和管理未使用的資源。您可以在此處link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html#view-block-device-details["回收未使用的區塊裝置空間"]。
+* 孤立設備：顯示是否有連續七天未使用的區塊設備，幫助您有效識別和管理未使用的資源。您可以在此處link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html#archive-the-data-of-an-orphaned-block-device["回收未使用的區塊裝置空間"]。
 
 
 
@@ -66,6 +66,6 @@ Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設�
 
 NetApp Workload Factory 支援在 FSx for ONTAP 檔案系統中建立和管理區塊儲存的啟動器群組（igroup）。啟動器群組將區塊設備（LUN）連接到允許存取它們的運算資源，從而為 SAN 環境中的區塊儲存提供權限層。
 
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html["在 NetApp Workload Factory 中建立啟動器群組"^]
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-igroups.html["在 NetApp Workload Factory 中管理現有啟動器群組"^]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html["在 NetApp Workload Factory 中建立啟動器群組"]
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-igroups.html["在 NetApp Workload Factory 中管理現有啟動器群組"]
 
