@@ -2580,9 +2580,6 @@
   <block id="283119ca74749a876a6dfcb0c6968a8c" category="list-text">*主機啟動器*：在啟動器群組中新增一個或多個 iSCSI 合格（IQN）主機啟動器。</block>
   <block id="8298e20d0a9a0a5f92a40700ffa7ff7e" category="inline-link-macro">管理 FSx for ONTAP 檔案系統的 igroup</block>
   <block id="22774fb9e9e4a2ed10c53dba9c6a522f" category="paragraph"><block ref="22774fb9e9e4a2ed10c53dba9c6a522f" category="inline-link-macro-rx"></block></block>
-  <block id="ce4c42b6f5a833fc926c27c3d1ca424a" category="paragraph">在 NetApp Workload Factory 中為 FSx for ONTAP 檔案系統建立複寫關係，以避免在發生意外災難時資料遺失。支援在兩個 FSx for ONTAP 檔案系統之間，以及 Cloud Volumes ONTAP 或內部部署 ONTAP 系統與 FSx for ONTAP 檔案系統之間進行複寫。</block>
-  <block id="e8d6717f6adc0d18b1ec64c39c57b7be" category="paragraph">如果資料所在的區域發生災難，複寫功能可以防止資料遺失。</block>
-  <block id="e481f3e818c1bf548144dff8b6c46360" category="paragraph">此操作為 FSx for ONTAP 檔案系統、內部部署 ONTAP 系統或 Cloud Volumes ONTAP 系統中的來源磁碟區建立複寫關係。</block>
   <block id="578ca57adcfb8fa2a5c899374a2f5732" category="paragraph">當您複製包含不可變檔案的來源磁碟區時，目標磁碟區和檔案系統將保持鎖定狀態，直到來源磁碟區中不可變檔案的保留期結束。當您<block ref="40da211f809bc6c9e6163aa605349c18" category="inline-link-macro-rx"></block> FSx for ONTAP 檔案系統時，可使用不可變檔案功能。</block>
   <block id="30965461c316b499ed01c7f92f651051" category="list-text">使用 iSCSI 或 NVMe 通訊協定的區塊磁碟區不支援複寫。</block>
   <block id="36e75a4b793293fd1dde9fdc618c8431" category="list-text">您必須擁有一個 FSx for ONTAP 檔案系統，才能在複寫關係中用作目標。</block>
@@ -2660,4 +2657,8 @@
   <block id="0352f037ca8dfca49383ddb908805d9a" category="list-text"><block ref="0352f037ca8dfca49383ddb908805d9a" category="inline-link-macro-rx"></block></block>
   <block id="0a17c703284dc61149bdaf13e30980de" category="list-text"><block ref="0a17c703284dc61149bdaf13e30980de" category="inline-link-macro-rx"></block></block>
   <block id="df267252f2595421cf837794528f006f" category="paragraph">事件分析器會自動從 FSx for ONTAP 檔案系統中提取錯誤、警報和緊急 EMS 事件。您可以<block ref="f91a3df34ad8b434c845af1c5c4599e2" category="inline-link-macro-rx"></block>和<block ref="f7fcd176fbc4e82ec30b37b672d1e76e" category="inline-link-macro-rx"></block>在 AWS 帳戶中查看這些事件。事件會在 72 小時後移除前顯示。</block>
+  <block id="8115d76153f9adbfd582019025403480" category="paragraph">在 NetApp Workload Factory 中為 FSx for ONTAP 檔案系統建立複製關係，以避免在發生意外災難時資料遺失。支援在兩個 FSx for ONTAP 檔案系統之間以及內部部署 ONTAP 系統和 FSx for ONTAP 檔案系統之間進行複製。</block>
+  <block id="d8d2b7ae69d9c4bdf4c6f9dbea6cbace" category="paragraph">如果您的地區發生災難，複寫功能可以保護您的資料。</block>
+  <block id="3894b1835f2c953d5ab4246fe8da430b" category="paragraph">此操作為 FSx for ONTAP 檔案系統或內部部署 ONTAP 系統中的來源磁碟區建立複寫關係。</block>
+  <block id="0aa7d11dc16260c47faf9d5b0b642366" category="paragraph">開始之前、請先檢閱這些需求。</block>
 </blocks>

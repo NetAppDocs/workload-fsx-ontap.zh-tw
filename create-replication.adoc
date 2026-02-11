@@ -11,12 +11,12 @@ summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免�
 
 
 [role="lead"]
-在 NetApp Workload Factory 中為 FSx for ONTAP 檔案系統建立複寫關係，以避免在發生意外災難時資料遺失。支援在兩個 FSx for ONTAP 檔案系統之間，以及 Cloud Volumes ONTAP 或內部部署 ONTAP 系統與 FSx for ONTAP 檔案系統之間進行複寫。
+在 NetApp Workload Factory 中為 FSx for ONTAP 檔案系統建立複製關係，以避免在發生意外災難時資料遺失。支援在兩個 FSx for ONTAP 檔案系統之間以及內部部署 ONTAP 系統和 FSx for ONTAP 檔案系統之間進行複製。
 
 .關於這項工作
-如果資料所在的區域發生災難，複寫功能可以防止資料遺失。
+如果您的地區發生災難，複寫功能可以保護您的資料。
 
-此操作為 FSx for ONTAP 檔案系統、內部部署 ONTAP 系統或 Cloud Volumes ONTAP 系統中的來源磁碟區建立複寫關係。
+此操作為 FSx for ONTAP 檔案系統或內部部署 ONTAP 系統中的來源磁碟區建立複寫關係。
 
 目標檔案系統中的複寫磁碟區為資料保護（ DP ）磁碟區，並遵循命名格式： `{OriginalVolumeName}_copy`。
 
@@ -30,7 +30,7 @@ summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免�
 
 ====
 .開始之前
-在開始之前請考慮以下事項。
+開始之前、請先檢閱這些需求。
 
 * 您必須擁有一個 FSx for ONTAP 檔案系統，才能在複寫關係中用作目標。
 * 您用於複寫關係的 FSx for ONTAP 檔案系統必須具備相關聯的連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。在您關聯連結後，請返回此操作。
