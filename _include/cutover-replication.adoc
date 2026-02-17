@@ -1,0 +1,10 @@
+= 
+:allow-uri-read: 
+
+
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中、選取包含要複寫之磁碟區的檔案系統。
+. 選擇 *Replication relationships* 標籤。
+. 在複製關係表中、選取要切換的複製關係、然後選取 *Cut over replication* 。
+. 查看「切換複製」對話方塊中的資訊，然後輸入 _cut over_ 進行確認。
+

@@ -4,23 +4,26 @@ permalink: create-replication.html
 keywords: replication, replicate, data protection, disaster recovery, data loss 
 summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免在發生無法預見的災難時遺失資料。 
 ---
-= 在NetApp Workload Factory 中建立複製關係
+= 在 NetApp Workload Factory 中將資料複製到 FSx for ONTAP
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-在 NetApp Workload Factory 中為 FSx for ONTAP 檔案系統建立複製關係，以避免在發生意外災難時資料遺失。支援在兩個 FSx for ONTAP 檔案系統之間以及內部部署 ONTAP 系統和 FSx for ONTAP 檔案系統之間進行複製。
+在 NetApp Workload Factory 中為 FSx for ONTAP 檔案系統建立複寫關係，以避免在發生意外災難時資料遺失。您可以在兩個 FSx for ONTAP 檔案系統之間複寫資料，也可以在內部部署 ONTAP 系統和 FSx for ONTAP 檔案系統之間複寫資料。
 
-.關於這項工作
-如果您的地區發生災難，複寫功能可以保護您的資料。
+對於儲存 VM 遷移，您必須在建立複寫關係後立即完成切換作業。
 
-此操作為 FSx for ONTAP 檔案系統或內部部署 ONTAP 系統中的來源磁碟區建立複寫關係。
+
+
+== 關於這項工作
+
+如果您的地區發生災難，複寫功能可以保護您的資料；它還可以用於移轉目的。
 
 目標檔案系統中的複寫磁碟區為資料保護（ DP ）磁碟區，並遵循命名格式： `{OriginalVolumeName}_copy`。
 
-當您複製包含不可變檔案的來源磁碟區時，目標磁碟區和檔案系統將保持鎖定狀態，直到來源磁碟區中不可變檔案的保留期結束。當您link:create-volume.html["創建卷"] FSx for ONTAP 檔案系統時，可使用不可變檔案功能。
+如果複製的來源磁碟區包含不可變檔案，則目標磁碟區和檔案系統將保持鎖定狀態，直到來源磁碟區的保留期結束。當您link:create-volume.html["創建卷"] FSx for ONTAP 檔案系統時，不可變檔案功能可用。
 
 [NOTE]
 ====
@@ -29,21 +32,52 @@ summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免�
 
 
 ====
+
+
+=== 遷移使用案例
+
+選擇遷移使用案例時，您可以選擇複製單一 storage VM 的 storage VM 資料和組態設定。同時移轉資料和組態設定時、請確保磁碟區的最後一次複寫已在過去 24 小時內完成。必須選取同一個儲存 VM 中的所有磁碟區、才能使用此功能。所有磁碟區的分層原則預設為來源磁碟區的分層原則、建議用於移轉使用案例。
+
+Workload Factory 支援以下儲存系統之間的移轉複寫。
+
+* 內部部署 ONTAP 系統和 FSx for ONTAP 檔案系統
+* Cloud Volumes ONTAP 和 FSx for ONTAP 檔案系統
+* FSx for ONTAP 和 FSx for ONTAP 檔案系統
++
+** 第一代到第一代
+** 第一代到第二代
+** 第二代至第二代
+
+
+
+
+若要遷移儲存 VM 資料和組態設定，您必須完成兩項作業。
+
+. <<建立複寫關係,建立複寫關係>>，選擇 *Migration* 作為使用案例，然後選擇 *Replicate storage VM configuration*。
+. <<Cut over replication,切換複寫>> 將資料和組態設定從來源檔案系統永久遷移到目標 FSx for ONTAP 檔案系統。
+
+
+
+
+== 建立複寫關係
+
+在兩個 FSx for ONTAP 檔案系統之間、或在內部部署 ONTAP 系統和 FSx for ONTAP 檔案系統之間複寫資料。
+
 .開始之前
 開始之前、請先檢閱這些需求。
 
 * 您必須擁有一個 FSx for ONTAP 檔案系統，才能在複寫關係中用作目標。
 * 您用於複寫關係的 FSx for ONTAP 檔案系統必須具備相關聯的連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。在您關聯連結後，請返回此操作。
 * 若要從內部部署 ONTAP 系統複寫到 FSx for ONTAP 檔案系統，請確保您已探索內部部署 ONTAP 系統。
+* 對於處於可用、已建立或配置錯誤以外狀態的磁碟區，以及 ONTAP 版本不相容時，不支援複寫。
+* 對於遷移使用案例，請確保在使用儲存 VM 資料和組態設定建立複寫關係之前，磁碟區的最後一次複寫已在過去 24 小時內完成。
 
-
-請依照下列步驟複製檔案系統中的特定磁碟區或所有磁碟區。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
 . 從儲存選單中，選擇 *FSx for ONTAP*。
-. 從 *FSx for ONTAP* 中，選擇包含要複製的磁碟區的檔案系統的操作選單，然後選擇 *管理*。
+. 從 *FSx for ONTAP* 中、選取包含要複寫之磁碟區的檔案系統。
 . 可複寫檔案系統中的所有磁碟區，或複寫選取的磁碟區。
 +
 ** 若要複寫檔案系統中的所有磁碟區：從檔案系統總覽選取 * 複寫資料 * 。
@@ -58,6 +92,9 @@ summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免�
 .. *用例*：選擇以下其中一個用例進行複製。根據所選的用例，Workload Factory 會根據最佳實踐在表單中填入建議值。您可以接受建議的數值，也可以在填寫表格時進行變更。
 +
 *** 移轉：將資料傳輸至 ONTAP 檔案系統的目標 FSX
++
+*複製儲存 VM 組態*：您可以選擇複製單一儲存 VM 的資料和組態設定。同時移轉資料和組態設定時、請確保磁碟區的最後一次複寫已在過去 24 小時內完成。必須選取同一個儲存 VM 中的所有磁碟區、才能使用此功能。所有磁碟區的分層原則預設為來源磁碟區的分層原則、建議用於移轉使用案例。
+
 *** 熱災難恢復：確保關鍵工作負載的高可用度和快速災難恢復
 *** 冷災難恢復或歸檔災難恢復：
 +
@@ -139,3 +176,36 @@ NOTE: 長期保留需要相符的來源和目標標籤。如有需要，工作�
 
 .結果
 複寫關係會出現在 ONTAP 檔案系統的目標 FSX 的 * 複寫關係 * 索引標籤中。
+
+如果您為了遷移目的建立了複製關係，則必須切換所有磁碟區及其關聯的儲存 VM，才能完成將儲存 VM 資料和組態設定遷移到目標 FSx for ONTAP 檔案系統。
+
+
+
+== 切換複寫以適應移轉使用案例
+
+為遷移用例建立複製關係後，您必須執行切換複製，才能將儲存 VM 資料和組態設定遷移到目標 FSx for ONTAP 檔案系統。切換複製會將資料和儲存 VM 組態設定從來源檔案系統永久遷移到目標 FSx for ONTAP 檔案系統。切換期間，資料將進行最後一次複製。切換完成後，系統將刪除來源磁碟區。此操作無法復原。
+
+.開始之前
+開始之前、請先檢閱這些需求。
+
+* 在切換複寫之前，請停止所有用戶端對儲存 VM 的存取。
+* 在切換複寫之前，請確保所有來源磁碟區均未承載任何資料。
+* 在切換複製之前、請確保來源磁碟區和目標磁碟區之間的資料已同步。
+* 您用於複寫關係的 FSx for ONTAP 檔案系統必須具備相關聯的連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。在您關聯連結後，請返回此操作。
+
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中、選取包含要複寫之磁碟區的檔案系統。
+. 選擇 *Replication relationships* 標籤。
+. 在複製關係表中、選取要切換的複製關係、然後選取 *Cut over replication* 。
+. 查看「切換複製」對話方塊中的資訊，然後輸入 _cut over_ 進行確認。
+
+
+. 選擇 *Cut over* 。
+
+
+.結果
+切換完成後，來源磁碟區將被刪除，目標磁碟區將變為讀 / 寫狀態。您可以在切換完成後link:change-tiering-policy.html["修改分層原則"]目標磁碟區。

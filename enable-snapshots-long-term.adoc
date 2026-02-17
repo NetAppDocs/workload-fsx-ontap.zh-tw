@@ -19,11 +19,14 @@ summary: 啟用快照以進行長期保留，可讓您複寫特定快照以進�
 
 當內部部署 ONTAP 叢集是複寫關係的目標時，不支援變更快照以進行長期保留。
 
+
+NOTE: 複製儲存 VM 資料和組態設定時，無法編輯長期保留。
+
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
 . 從儲存選單中，選擇 *FSx for ONTAP*。
-. 從 *FSx for ONTAP* 中，選擇要更新的檔案系統的操作，然後選擇 *管理*。
+. 從 *FSx for ONTAP* 中，選擇要更新的檔案系統的操作選單，然後選擇 *管理*。
 . 從檔案系統總覽中、選取 * 複寫關係 * 索引標籤。
 . 在複製關係標籤中，選擇要變更的複製關係計畫的操作選單。
 . 選取 * 編輯長期保留 * 。
