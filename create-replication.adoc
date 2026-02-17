@@ -54,7 +54,7 @@ Workload Factory 支援以下儲存系統之間的移轉複寫。
 若要遷移儲存 VM 資料和組態設定，您必須完成兩項作業。
 
 . <<建立複寫關係,建立複寫關係>>，選擇 *Migration* 作為使用案例，然後選擇 *Replicate storage VM configuration*。
-. <<Cut over replication,切換複寫>> 將資料和組態設定從來源檔案系統永久遷移到目標 FSx for ONTAP 檔案系統。
+. <<切換複寫以適應移轉使用案例,切換複寫以適應移轉使用案例>> 將資料和組態設定從來源檔案系統永久遷移到目標 FSx for ONTAP 檔案系統。
 
 
 

@@ -2680,8 +2680,6 @@
   <block id="9b03bdd83a5017b3aa998f32e7ad219f" category="list-text">第二代至第二代</block>
   <block id="04e64253a4742b9534714d0147f467f6" category="paragraph">若要遷移儲存 VM 資料和組態設定，您必須完成兩項作業。</block>
   <block id="59835e5fb082d065015e2824a515a5b7" category="list-text"><block ref="75331dd4d9fa346165fac294e4e498ee" category="inline-xref-macro-rx"></block>，選擇 *Migration* 作為使用案例，然後選擇 *Replicate storage VM configuration*。</block>
-  <block id="db529797694203560d43ab415a6dd52d" category="inline-xref">切換複寫</block>
-  <block id="4ff5e77c5ed7650b96676675b9d3eb18" category="list-text"><block ref="76a1fb9977d9fe48f9a1edf04990b3a3" category="inline-xref-macro-rx"></block> 將資料和組態設定從來源檔案系統永久遷移到目標 FSx for ONTAP 檔案系統。</block>
   <block id="4031de6ffffe0beb0671ccd52a118661" category="paragraph">在兩個 FSx for ONTAP 檔案系統之間、或在內部部署 ONTAP 系統和 FSx for ONTAP 檔案系統之間複寫資料。</block>
   <block id="66de39f46af06b661b7bce68c01c8e61" category="list-text">對於處於可用、已建立或配置錯誤以外狀態的磁碟區，以及 ONTAP 版本不相容時，不支援複寫。</block>
   <block id="cbcff6555c8b07eb6add33653d3ab030" category="list-text">對於遷移使用案例，請確保在使用儲存 VM 資料和組態設定建立複寫關係之前，磁碟區的最後一次複寫已在過去 24 小時內完成。</block>
@@ -2699,4 +2697,5 @@
   <block id="9b9935ad5969c28de13381a2e512b47c" category="paragraph">注意：</block>
   <block id="9d7213e75b44382027a2100eae065746" category="list-text">複製儲存 VM 資料和組態設定時，無法使用反向複製。</block>
   <block id="fb042b7b99959e391eeb7c417511098a" category="section-title">2026 年 2 月 16 日</block>
+  <block id="df319eebb5e9e4cde194e1e976bf0795" category="list-text"><block ref="7a9cdee14fa6d629f0d48ed18525f6a5" category="inline-xref-macro-rx"></block> 將資料和組態設定從來源檔案系統永久遷移到目標 FSx for ONTAP 檔案系統。</block>
 </blocks>
