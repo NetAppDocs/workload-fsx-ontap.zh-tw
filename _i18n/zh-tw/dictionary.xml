@@ -2496,12 +2496,9 @@
   <block id="e220387578f5151d1653ad1ff2b5a002" category="list-text">*igroup 描述*：可選，輸入 igroup 描述。</block>
   <block id="d719073ebb477e6cf9934f806cd15577" category="list-text">*主機發起程式*：輸入一個或多個主機發起程式。這些發起程序必須遵循 iSCSI 合格 (IQN) 格式。</block>
   <block id="2614a90f09c2b1321e872a7622f7f888" category="list-text">如果 igroup 已存在，請選擇「編輯用戶端存取」以向 igroup 新增或刪除區塊裝置和主機發起程序，然後選擇「套用」。</block>
-  <block id="b637e46326ea8277194ab0d5f5de8b3d" category="section-title">將孤立區塊裝置的資料歸檔</block>
-  <block id="3c464f9d7ea4cd3d820898f4b25e6832" category="paragraph">不再映射到客戶端或連續七天未使用的區塊設備將被歸類為孤立區塊設備。您可以將孤立區塊裝置的資料歸檔到容量池層，以回收 SSD 容量。</block>
   <block id="68d85c073028f0fd978bc424d69ee8fd" category="list-text">在“孤立設備”下，選擇“查看和回收容量”。</block>
   <block id="f6841052bd0d86548318f9b2df118ea3" category="list-text">在「回收未使用的區塊設備空間」畫面上，選擇一個或多個區塊設備來歸檔資料並回收容量。</block>
   <block id="2c77adf5fa1de4ed37a6e14d2212f074" category="list-text">選擇“存檔”。</block>
-  <block id="b06e53572a17ccf08cb282ac59af4b93" category="paragraph">不再映射到客戶端或連續七天未使用的區塊設備將被歸類為孤立區塊設備。此操作會取消對應並刪除選取的區塊裝置。如果主機FlexVol volume不包含任何區塊設備，Workload Factory 也會將其刪除。</block>
   <block id="33e155c9d3cab85dd1499ba63bd9d34d" category="paragraph">包含區塊裝置的FlexVol磁碟區以活動模式啟動 ARP/AI。</block>
   <block id="aca2e051b8b58a53ee4cf20a78bdde8a" category="list-text">此連結必須能夠連接到以下端點：\ https://api.workloads.netapp.com.基於 Web 的控制台透過與 Workload Factory API 互動來管理和操作 FSx for ONTAP工作負載。</block>
   <block id="ae7bbdf37f2fa18593f3db57d284b5eb" category="paragraph">使用 NetApp Workload Factory 中的智慧事件分析器，快速識別並解決 FSx for ONTAP 檔案系統問題。此事件分析器利用與 Amazon Bedrock 整合的 Agentic AI，自動擷取並分析 FSx for ONTAP 事件管理系統（EMS）事件。</block>
@@ -2551,7 +2548,6 @@
   <block id="bf44c4671ee3bfbc818d505bb9a0e59a" category="paragraph">NetApp Workload Factory 為 S3 存取點提供額外的管理操作。您可以透過 NetApp Workload Factory 介面查看存取點詳細資訊、修改現有 S3 存取點以及新增或刪除 S3 存取點標籤，從而簡化物件儲存管理任務。</block>
   <block id="366c32f0cbb2503b337e243eaa8c42b5" category="inline-link-macro">在 NetApp Workload Factory 中管理 S3 存取端點</block>
   <block id="e593953aaf04eebecfe2e26326145784" category="list-text">最佳化快取磁碟區大小：檢查快取磁碟區是否啟用了磁碟區自動調整大小和清理功能，以保持最佳大小並將快取集中用於熱資料，從而達到最高效率。</block>
-  <block id="00e21b809963a2e31abfc13c3aea34b6" category="list-text">孤立區塊設備：建議歸檔區塊設備資料或刪除連續七天未使用的區塊設備。</block>
   <block id="a872ae5d7fdb75042465788519d63c35" category="list-text">Storage VM 邏輯報告：檢查 Storage VM 的預設報告設定是否設定為邏輯，以便更了解磁碟區層級的儲存使用情況。</block>
   <block id="40fbd58cc84d2567a5be7db0e1e48224" category="section-title">區塊裝置的其他卡</block>
   <block id="e1d58576240df6c3acc0d5f3067d6468" category="paragraph">儲存工作負載的「區塊裝置」標籤中新增了三張卡片，以便快速瞭解區塊裝置的使用情況和保護狀態：</block>
@@ -2584,7 +2580,6 @@
   <block id="ba1072e8c0845f82f77ef660d46bde4a" category="list-text">若要從內部部署 ONTAP 系統複寫到 FSx for ONTAP 檔案系統，請確保您已探索內部部署 ONTAP 系統。</block>
   <block id="45eea8cd3d88c48d8f4826a6be39d707" category="list-text">*S3 存取點標籤*：您可以選擇新增最多 50 個標籤或移除標籤。</block>
   <block id="66d540c0d4f07e9992cf6e0ac1083e36" category="list-text">卓越營運：自動容量管理、Volume 檔案容量使用率臨界值、Volume 使用率接近全滿、快取關係寫入模式、最佳化快取 Volume 大小以及 Volume 邏輯容量報告</block>
-  <block id="cf0e722b11c4855de7e43d714e007581" category="list-text">成本最佳化：儲存效率、資料分層、不必要的快照和備份刪除以及孤立區塊裝置</block>
   <block id="357d9dd76af15c8aaf8f09990a2846a9" category="list-text">您必須在 AWS 帳戶中<block ref="6f74e2a9589a6666ba7fdb81dabfc5eb" category="inline-link-macro-rx"></block>。</block>
   <block id="8c8656579a32ab7e80c68b10832337bb" category="list-text">從 Storage 選單中，選擇 *Well-architected* 。</block>
   <block id="4f5fc99db78476b3b87fbb795ab55b26" category="list-text">針對任何組態選取 *View issues* 。請務必仔細檢閱建議。</block>
@@ -2649,7 +2644,6 @@
   <block id="e77c03d49e828607828412709552dbd6" category="sidebar">管理 igroup</block>
   <block id="fdb38c6259208c2509d21f6a3f0beb02" category="paragraph"><block ref="fdb38c6259208c2509d21f6a3f0beb02" category="inline-link-macro-rx"></block></block>
   <block id="cc97dddf7d9715fea79ba3e831f0fbca" category="paragraph"><block ref="cc97dddf7d9715fea79ba3e831f0fbca" category="inline-link-macro-rx"></block></block>
-  <block id="b55768d72b4883d58308aa15e30fc7ab" category="list-text">孤立設備：顯示是否有連續七天未使用的區塊設備，幫助您有效識別和管理未使用的資源。您可以在此處<block ref="88cbe2cfb6c92276ca9f0b27df016fa5" category="inline-link-macro-rx"></block>。</block>
   <block id="0352f037ca8dfca49383ddb908805d9a" category="list-text"><block ref="0352f037ca8dfca49383ddb908805d9a" category="inline-link-macro-rx"></block></block>
   <block id="0a17c703284dc61149bdaf13e30980de" category="list-text"><block ref="0a17c703284dc61149bdaf13e30980de" category="inline-link-macro-rx"></block></block>
   <block id="df267252f2595421cf837794528f006f" category="paragraph">事件分析器會自動從 FSx for ONTAP 檔案系統中提取錯誤、警報和緊急 EMS 事件。您可以<block ref="f91a3df34ad8b434c845af1c5c4599e2" category="inline-link-macro-rx"></block>和<block ref="f7fcd176fbc4e82ec30b37b672d1e76e" category="inline-link-macro-rx"></block>在 AWS 帳戶中查看這些事件。事件會在 72 小時後移除前顯示。</block>
@@ -2698,4 +2692,10 @@
   <block id="9d7213e75b44382027a2100eae065746" category="list-text">複製儲存 VM 資料和組態設定時，無法使用反向複製。</block>
   <block id="fb042b7b99959e391eeb7c417511098a" category="section-title">2026 年 2 月 16 日</block>
   <block id="df319eebb5e9e4cde194e1e976bf0795" category="list-text"><block ref="7a9cdee14fa6d629f0d48ed18525f6a5" category="inline-xref-macro-rx"></block> 將資料和組態設定從來源檔案系統永久遷移到目標 FSx for ONTAP 檔案系統。</block>
+  <block id="3ecf18c09ae5a2bd1855ba6515de6cd7" category="list-text">不活躍的區塊設備：建議歸檔區塊設備資料或刪除連續七天未使用的區塊設備。</block>
+  <block id="3310dcc189ef22670c22a32bdf58f0c9" category="list-text">孤立設備：顯示是否有連續七天未使用的區塊設備，幫助您有效識別和管理未使用的資源。您可以在此處<block ref="5d1d66741e880017163f47d5a2557cb1" category="inline-link-macro-rx"></block>。</block>
+  <block id="628b46b908bfc92bdcca823a9f84cd05" category="list-text">成本優化：儲存效率、資料分層、不必要的快照和備份刪除以及非使用中區塊裝置</block>
+  <block id="958926cf6ac067918ae80f7f610d415a" category="section-title">將非作用中區塊裝置的資料歸檔</block>
+  <block id="d37c72ca2c27b8b48a724120cf91c835" category="paragraph">不再對應到客戶端或連續七天未使用的區塊裝置將被歸類為非活動區塊裝置。您可以將非活動區塊裝置的資料歸檔到容量池層，以回收 SSD 容量。</block>
+  <block id="01b51d5b9524250e9003d631e9e3f35b" category="paragraph">不再對應到客戶端或連續七天未使用的區塊裝置將被歸類為非活動區塊裝置。此操作將取消映射並刪除選定的區塊裝置。如果主機 FlexVol volume 不包含任何區塊裝置，Workload Factory 也會將其刪除。</block>
 </blocks>

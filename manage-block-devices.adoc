@@ -86,9 +86,9 @@ NOTE: 增加區塊設備的大小後，按照主機作業系統提供的步驟�
 
 
 
-== 將孤立區塊裝置的資料歸檔
+== 將非作用中區塊裝置的資料歸檔
 
-不再映射到客戶端或連續七天未使用的區塊設備將被歸類為孤立區塊設備。您可以將孤立區塊裝置的資料歸檔到容量池層，以回收 SSD 容量。
+不再對應到客戶端或連續七天未使用的區塊裝置將被歸類為非活動區塊裝置。您可以將非活動區塊裝置的資料歸檔到容量池層，以回收 SSD 容量。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
@@ -104,7 +104,7 @@ NOTE: 增加區塊設備的大小後，按照主機作業系統提供的步驟�
 
 == 刪除區塊設備
 
-不再映射到客戶端或連續七天未使用的區塊設備將被歸類為孤立區塊設備。此操作會取消對應並刪除選取的區塊裝置。如果主機FlexVol volume不包含任何區塊設備，Workload Factory 也會將其刪除。
+不再對應到客戶端或連續七天未使用的區塊裝置將被歸類為非活動區塊裝置。此操作將取消映射並刪除選定的區塊裝置。如果主機 FlexVol volume 不包含任何區塊裝置，Workload Factory 也會將其刪除。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。

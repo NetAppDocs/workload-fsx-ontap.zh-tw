@@ -72,7 +72,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-s3-access-points.ht
 Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設定：
 
 * 最佳化快取磁碟區大小：檢查快取磁碟區是否啟用了磁碟區自動調整大小和清理功能，以保持最佳大小並將快取集中用於熱資料，從而達到最高效率。
-* 孤立區塊設備：建議歸檔區塊設備資料或刪除連續七天未使用的區塊設備。
+* 不活躍的區塊設備：建議歸檔區塊設備資料或刪除連續七天未使用的區塊設備。
 * Storage VM 邏輯報告：檢查 Storage VM 的預設報告設定是否設定為邏輯，以便更了解磁碟區層級的儲存使用情況。
 
 
@@ -84,7 +84,7 @@ Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設�
 
 * 儲存效率：顯示已使用和可用的儲存容量；已使用容量按 SSD 和容量集區儲存層細分。
 * 受保護的裝置：顯示具有快照、遠端複製、NetApp Autonomous Ransomware Protection（ARP/AI）和備份的區塊裝置的百分比。
-* 孤立設備：顯示是否有連續七天未使用的區塊設備，幫助您有效識別和管理未使用的資源。您可以在此處link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html#archive-the-data-of-an-orphaned-block-device["回收未使用的區塊裝置空間"]。
+* 孤立設備：顯示是否有連續七天未使用的區塊設備，幫助您有效識別和管理未使用的資源。您可以在此處link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html#archive-the-data-of-an-inactive-block-device["回收未使用的區塊裝置空間"]。
 
 
 
