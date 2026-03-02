@@ -107,4 +107,4 @@ NOTE: 快照時間以檔案系統的時區為基礎、其預設為協調世界�
 
 
 .相關資訊
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html["管理 FSx for ONTAP檔案系統的區塊設備"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html["管理 FSx for ONTAP 檔案系統的區塊儲存設備"]

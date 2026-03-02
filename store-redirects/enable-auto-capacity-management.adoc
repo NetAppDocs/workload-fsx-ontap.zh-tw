@@ -1,0 +1,8 @@
+---
+permalink: enable-auto-capacity-management.html 
+redirect: workload-fsx-ontap/manage-capacity-automatically.html 
+---
+= 
+:allow-uri-read: 
+
+

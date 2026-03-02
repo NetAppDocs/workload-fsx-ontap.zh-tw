@@ -1,23 +1,25 @@
 ---
 sidebar: sidebar 
-permalink: enable-auto-capacity-management.html 
+permalink: manage-capacity-automatically.html 
 keywords: auto capacity, automatic capacity management, inodes management, file system capacity 
 summary: 啟用此功能後，Workload Factory 可以根據容量需求隨時間的變化，自動為 FSx for ONTAP檔案系統新增增量儲存或 inode。 
 ---
-= 啟用檔案系統的自動容量和 inode 管理
+= 在 Workload Factory 中自動管理檔案系統容量和 inode
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-啟用自動容量和 inode 管理後， NetApp Workload Factory可以根據容量需求隨時間的變化，自動在 FSx for ONTAP檔案系統中新增增量儲存或 inode。此外，啟用此功能後，就無需手動監控容量和 inode 了。
+啟用容量管理後，NetApp Workload Factory 可以根據容量需求的變化，自動為 FSx for ONTAP 檔案系統新增增量儲存空間。此外，啟用此功能還無需手動監控容量。
 
 
 
 == 關於這項工作
 
-每 30 分鐘對 FSx for ONTAP檔案系統進行一次掃描，以確定是否需要添加增量存儲，並檢查可用的捲 inode、卷中文件和資料夾的最大數量，以便根據配置的自動容量管理閾值增加其計數。
+系統每 30 分鐘掃描一次 FSx for ONTAP 檔案系統。它會檢查是否需要新增增量儲存空間，並驗證可用的磁碟區 inode。計數會根據自動容量管理臨界值而增加。
+
+啟用 inode 管理後，NetApp Workload Factory 可以根據容量需求的變化，自動為 FSx for ONTAP 檔案系統新增增量 inode。此功能無需手動監控 inode。
 
 只有一個帳戶可以管理此功能。
 
@@ -43,25 +45,35 @@ summary: 啟用此功能後，Workload Factory 可以根據容量需求隨時間
 . 從儲存選單中，選擇 *FSx for ONTAP*。
 . 從 *FSx for ONTAP* 中，選擇檔案系統的操作選單以啟用自動容量管理。
 . 選擇*管理*。
-. 在「資訊」下，選取 * 自動容量管理 * 旁的鉛筆圖示。當滑鼠移動到 * 自動容量管理 * 列上時、下拉式箭頭旁會出現鉛筆圖示。
-. 在 * 自動容量管理 * 對話方塊中、提供下列項目：
+. 在「資訊」下，選擇 *Capacity management* 旁的鉛筆圖示。將滑鼠停留在 *Capacity management* 行上時，下拉箭頭旁邊會出現鉛筆圖示。
+. 在 *Capacity management* 對話方塊中、提供以下資訊：
 +
 .. * 認證 * ：從下拉式功能表中選取具有 _ 自動化 _ 權限的認證。
 .. 選取啟用按鈕以 * 啟用自動容量管理 * 。
 +
 或者、停用此功能。如果您需要增加檔案系統容量、則必須先停用自動容量管理。
 
-.. *警告閾值*：將警告閾值設定為低於觸發工作負載工廠通知服務的閾值增加值。預設值為 70%。
+.. *Mode* ：選擇自動管理容量的模式。選項包括 incremental 模式和 adaptive 模式。
++
+*** *增量模式*：在達到閾值時，以固定量增加容量。
++
+**** *警告閾值*：將警告閾值設定為低於觸發工作負載工廠通知服務的閾值增加值。預設值為 70%。
 +
 只有在您滿足以下條件時，警告閾值設定才可用：link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["啟用工作負載工廠通知服務"^] 。
 
-.. *閾值增加*：輸入 FSx for ONTAP檔案系統的最大百分比增加值。預設值為 80%。
+**** *閾值增加*：輸入 FSx for ONTAP檔案系統的最大百分比增加值。預設值為 80%。
 +
-這是工作負載工廠觸發作業以增加容量的閾值。例如，如果檔案系統達到 80% 的容量，則 Workload Factory 將增加容量。
+這是 Workload Factory 觸發作業以增加容量的閾值。例如，如果檔案系統容量達到 80% ，則 Workload Factory 會增加容量。
 
-.. *增量增加*：輸入增量增加產能的百分比。預設值為 10%。
+
+
+*** *Adaptive 模式*：根據歷史資料預測並改變容量。
 +
-這是每次達到閾值時我們增加產能的百分比。例如，如果檔案系統已使用 80%，且增量設定為 10%，則 Workload Factory 會將容量增加 10%。
+**** *分析週期*：設定分析週期（以小時為單位），以決定容量預測中需要考慮的歷史資料量。預設值為 120 小時。
+**** *規劃緩衝時間*：設定緩衝時間（以小時為單位），以確保在實際需要之前增加容量。預設值為 48 小時。
+
+
+
 
 
 
@@ -69,13 +81,36 @@ summary: 啟用此功能後，Workload Factory 可以根據容量需求隨時間
 
 
 .結果
-每 30 分鐘進行一次檔案系統掃描，以判斷檔案系統是否需要額外容量。
+檔案系統每 30 分鐘進行一次掃描，以確定是否需要額外容量。
 
 
 
-== 啟用自動 inode 管理
+== 啟用容量通知
 
-啟用自動 inode 管理，確保每個磁碟區的檔案容量透過增加 inode（檔案）的數量來擴展，直到達到允許的限制。
+設定通知，以便在檔案系統達到特定容量閾值時收到警示。
+
+.開始之前
+您必須 link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["啟用工作負載工廠通知服務"^] 使用此功能。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇檔案系統的操作選單以啟用自動容量管理。
+. 選擇*管理*。
+. 在「資訊」下，選擇 *Capacity management* 旁的鉛筆圖示。將滑鼠停留在 *Capacity management* 行上時，下拉箭頭旁邊會出現鉛筆圖示。
+. 在 *Capacity management* 對話方塊中，選取 *Enable capacity notifications* 以在容量達到閾值以及 Workload Factory 執行自動容量增加時開啟通知。
+. 設定 *Notification threshold* ，以便在檔案系統達到特定容量百分比時接收通知。預設值為 70% 。
+. 選擇*應用*。
+
+
+
+
+== 為檔案系統啟用 inode 管理
+
+啟用自動 inode 管理，以增加每個磁碟區的 inode （檔案）數量，直到達到允許的限制。
+
+FSx for ONTAP 檔案系統每 30 分鐘掃描一次。它會驗證可用的磁碟區 inode，並檢查是否需要新增增量 inode。計數會根據自動 inode 管理閾值遞增。
 
 
 NOTE: *Terraform 使用者*：Terraform 有限制，要求所有操作都必須在 Terraform 內部完成。  Terraform 不支援 inode 管理，但您可以在 Workload Factory 控制台中啟用自動 inode 管理。

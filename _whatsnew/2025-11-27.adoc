@@ -8,7 +8,7 @@
 
 NetApp Workload Factory中新引入的區塊裝置支持，可更有效地管理您的區塊裝置。此功能可讓您查看 iSCSI LUN 的詳細資訊並增加其容量，從而為您的儲存需求提供更大的靈活性。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-devices.html["在工作負載工廠中管理區塊設備"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html["在工作負載工廠中管理區塊設備"]
 
 
 

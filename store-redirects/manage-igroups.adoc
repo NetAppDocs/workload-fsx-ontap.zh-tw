@@ -1,0 +1,8 @@
+---
+permalink: manage-igroups.html 
+redirect: workload-fsx-ontap/manage-block-storage.html 
+---
+= 
+:allow-uri-read: 
+
+
