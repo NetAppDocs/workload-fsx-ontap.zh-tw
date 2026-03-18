@@ -171,7 +171,7 @@ sidebar:
           url: "/manage-snapshots.html"
       - title: 備份
         entries:
-        - title: 管理 ONTAP 備份排程的 FSX
+        - title: 管理磁碟區備份排程
           url: "/manage-backup-schedule.html"
       - title: 複寫
         entries:

@@ -83,11 +83,8 @@
   <block id="ef13ae21eedaa1ecccd02fb7ddd30bb1" category="list-text">* 委派系統管理員群組 * ：選擇性地輸入委派的檔案系統管理員群組。</block>
   <block id="85912990c5413ea32362225e50fc2629" category="paragraph">如果您使用的是 AWS 託管的 Microsoft AD 、則必須指定群組、例如 AWS 委派的 FSX 管理員、 AWS 委派管理員、或是具有 OU 委派權限的自訂群組。</block>
   <block id="3fd21f2222285241b7bbfebc4759ab56" category="paragraph">如果您要加入自我管理的 AD 、請使用 AD 中的群組名稱。預設群組為<block ref="746c2ea920930b61350130daa63e23e5" prefix=" " category="inline-code"></block>。</block>
-  <block id="6705427f56dd0e2d84c82d8ce7b8e137" category="paragraph">ONTAP 備份的 FSX 是每個磁碟區、因此每個備份只包含特定磁碟區中的資料。</block>
-  <block id="5d34cf2e67586f6adc1c52bd11363230" category="paragraph">用於 ONTAP 備份的 FSX 是遞增式、這表示只有在儲存最近的備份之後變更的磁碟區上的資料才會被儲存。如此可將建立備份和備份所需的儲存設備所需的時間減至最低、避免重複資料而節省儲存成本。</block>
   <block id="ad999f7438a6c6743b334836cd6d2765" category="paragraph">若要備份您的磁碟區、您的磁碟區和檔案系統都必須有足夠的可用 SSD 儲存容量、才能儲存備份快照。在拍攝備份快照時、快照所消耗的額外儲存容量、不會導致磁碟區超過 98% 的 SSD 儲存使用率。如果發生這種情況、備份將會失敗。</block>
   <block id="a7e91b4f0b8cb9a002ae712f6a8e8856" category="list-text">在檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。</block>
-  <block id="c90eb480f69fa94333471c53a08ebfb9" category="list-text">選擇 * 資料保護動作 * 、 * ONTAP 備份 * 的 FSX 、然後 * 手動備份 * 。</block>
   <block id="efb6cdeb8b2e5095e65f43be813e1f3d" category="list-text">在手動備份對話方塊中、輸入備份的名稱。</block>
   <block id="2fdd0cbe402a8ae2149e0cdf4e1d9b9c" category="doc">為 ONTAP 檔案系統建立 FSX</block>
   <block id="d0e7f7527c3a0ceae557c9f12bb1d5e7" category="paragraph">在為 ONTAP 檔案系統建立 FSX 之前、您需要：</block>
@@ -124,7 +121,6 @@
   <block id="adf3b9421185cf4dc6b3d80fb9c26d9b" category="list-text">* 加密 * ：從下拉式清單中選取加密金鑰名稱。</block>
   <block id="909443f15178d32af4981d109af80748" category="list-text">在「檔案系統詳細資料」下、提供下列資訊：</block>
   <block id="31846199ab330eacea22764e7bc1ab7a" category="list-text">在「備份與維護」下、提供下列項目：</block>
-  <block id="5a7b83bad76b38a063667e0b80bd78d6" category="list-text">*FSX for ONTAP Backup* ：預設會啟用每日自動備份。視需要停用。</block>
   <block id="f009614070b8aab7ff6edcea9473b3dc" category="list-text">* 自動備份保留期間 * ：輸入保留自動備份的天數。</block>
   <block id="1972e6c134f87506bf46fce45a157104" category="list-text">* 每日自動備份時段 * ：選擇 * 無偏好設定 * （為您選擇每日備份開始時間）或 * 選擇每日備份開始時間 * 、並指定開始時間。</block>
   <block id="86405f997495dd34a1622331050968f1" category="list-text">* 每週維護時段 * ：選擇 * 無偏好設定 * （為您選擇每週維護時段開始時間）或 * 選擇每週 30 分鐘維護時段的開始時間 * 、並指定開始時間。</block>
@@ -176,7 +172,6 @@
   <block id="736ef7205c037a078bc461f368c6a21f" category="doc">為 ONTAP Volume 建立 FSX 的手動快照</block>
   <block id="5b10cd7d19a8a16358cb05922f38a69e" category="paragraph">快照是磁碟區的資源、是資料的即時擷取、僅會佔用修改資料的空間。由於資料會隨著時間而改變、快照通常會隨著時間變舊而佔用更多空間。</block>
   <block id="bbc11127132b3f6e8be58ad79bf66689" category="paragraph">適用於 ONTAP Volume 的 FSX 使用即時寫入複本、因此快照中任何未修改的檔案都不會佔用任何磁碟區容量。</block>
-  <block id="4eb3a89899e681d1b9380bde026db85c" category="admonition">快照並非資料的複本。如果您想要複製資料、請考慮使用 FSX 進行 ONTAP 備份或 Volume 複寫功能。</block>
   <block id="644e775d0497e56fe0475dde3829ce1e" category="doc">為 ONTAP 檔案系統的 FSX 建立儲存 VM</block>
   <block id="bc7303a544a54859ef646aaae48578a5" category="paragraph">有了 SVM 、當您存取適用於 ONTAP 的 FSX 中的資料時、您的用戶端和工作站會使用 SVM 的端點（ IP 位址）、掛載由 SVM 託管的 Volume 、 CIFS/SMB 共享區或 iSCSI LUN 。</block>
   <block id="0be7879371b03da9f3e439c5431f1db2" category="inline-link-macro">管理 ONTAP 儲存虛擬機器的 FSX</block>
@@ -269,7 +264,6 @@
   <block id="8e9a64bda9d21f945b6489df2e7946e1" category="doc">刪除 Volume</block>
   <block id="c4037415f2f0cfbaf2d8633bef548eca" category="paragraph">刪除磁碟區之前、請先考慮下列事項：</block>
   <block id="7ba3b681b508a24c70a973831af6f1ad" category="list-text">本機快照：將永久刪除與此 FSX for ONTAP 檔案系統相關的所有快照。</block>
-  <block id="4d07a6e16a1c8ad6e621cc84eb969e7e" category="list-text">適用於 ONTAP 備份的 FSX ：適用於 ONTAP 備份複本的 FSX 將會保留、您仍然可以使用這些備份複本。</block>
   <block id="c54ab0793e326deff351b944ad70d29c" category="list-text">選擇 * 基本動作 * 、然後 * 刪除 Volume * 。</block>
   <block id="321fbbd6f40d9b084f632750d5190dc8" category="summary">隨時新增、更新或移除儲存 VM 的儲存 VM 標籤。</block>
   <block id="14d8aa612c687d8708f6fefc5f554d22" category="list-text">在「編輯儲存 VM 標籤」頁面上、新增、編輯或移除標籤。</block>
@@ -488,7 +482,6 @@
   <block id="ebb4bf732c3ade314c393d5284af8715" category="list-text">* 確認密碼 * ：再次輸入新密碼以確認。</block>
   <block id="8b0e8407f70ad599b0ea28ad2aba3c8d" category="summary">將磁碟區從備份還原至 AWS 帳戶中任何適用於 ONTAP 檔案系統的 FSX 。</block>
   <block id="669e24f4895025d47b6321e03f0890e4" category="doc">從備份還原磁碟區</block>
-  <block id="04b1c243101a3b35e04f4796a82296b7" category="list-text">選擇 * 資料保護動作 * 、 * ONTAP 備份 * 的 FSX 、然後 * 從備份 * 還原。</block>
   <block id="954f91e5419aff167b9c5ff119492972" category="list-text">在從備份還原對話方塊中、提供下列項目：</block>
   <block id="1db91acefbe1be544aa103101dea1eea" category="list-text">* 目標檔案系統 * ：從下拉式功能表中選取目標檔案系統。</block>
   <block id="dce3fffc0f825635bb1abc80d4fad0d8" category="list-text">* 目標儲存虛擬機器 * ：從下拉式功能表中選取目標儲存虛擬機器。</block>
@@ -561,7 +554,6 @@
   <block id="fa6e79d91adacad3ba5d3684079b4ea1" category="summary">Amazon FSX for NetApp ONTAP 文件會提供疑難排解主題、供您參考。</block>
   <block id="025110220989dd80d639c418b593cad3" category="inline-link-macro">Amazon FSX for NetApp ONTAP 疑難排解</block>
   <block id="aa3f4a232768328d892056c200f23b5f" category="paragraph">如需詳細資訊、請參閱 <block ref="39d4d71bb679e33c9314f282da47094c" category="inline-link-macro-rx"></block> 。</block>
-  <block id="c3b25a5d5a44f6b35c6e6497598499eb" category="list-text">在 *FSX for ONTAP backup* 對話框中，提供以下內容：</block>
   <block id="fb4531252f707fbda1308840e3c7d6af" category="summary">在複寫關係中、隨時手動更新在來源磁碟區和目標磁碟區之間傳輸的快照資料。</block>
   <block id="9ff8251e97123d13337c62b2b74bbe1e" category="doc">在複寫關係中更新快照資料</block>
   <block id="fa0604fd5c522ae5ab642bebf836c3d0" category="list-text">選擇 * 立即更新 * 。</block>
@@ -722,7 +714,6 @@
   <block id="384c5c520d0877aaaaed76d75d973d99" category="list-text">* 儲存成本比較計算機 * ：將 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和適用於 Windows 檔案伺服器的 FSX 儲存成本與適用於 ONTAP 的 FSX 進行比較。從計算機中、您可以檢視適用於 ONTAP 儲存組態的 FSX 如何節省成本、並規劃移轉至適用於 ONTAP 儲存設備的 FSX 。</block>
   <block id="f6858e5eadd0ed940450d85121838545" category="list-text">* 工作負載工廠使用者介面 * ：提供 _ 快速建立 _ 和 _ 進階建立 _ 部署模式選項。快速建立包括 AWS 、 NetApp 、以及適用於您儲存組態的業界標準最佳實務做法。</block>
   <block id="53fe87832fd05bf7a8e9f1e1bad4aa86" category="doc">管理適用於 ONTAP 檔案系統的 FSX 備份排程</block>
-  <block id="4a74309dc15865035b8b93cec28f2a96" category="list-text">在 [ 資訊 ] 下，選取 *FSX for ONTAP backup* 旁邊的鉛筆圖示。當滑鼠移動到 *FSX for ONTAP backup* 列上時、下拉式箭頭旁會出現鉛筆圖示。</block>
   <block id="9f16bb4c9cbb656a02f2d0ac20ae70a8" category="list-text">* 每日自動備份 * ：啟用或停用此功能。如果您停用此功能，請選取 * 套用 * 。如果您啟用此功能、請完成下列步驟。</block>
   <block id="1b7732fda3ed237c994a5ac55fb150ea" category="list-text">* 每日自動備份時段 * ：選擇 * 無偏好設定 * （為您選擇每日備份開始時間）或 * 選擇每日備份開始時間 * ，並指定開始時間。</block>
   <block id="eeba2ebb020e2a04f72c79660c1af4c0" category="inline-link-macro">增加檔案系統容量</block>
@@ -738,7 +729,6 @@
   <block id="1bab530ca9dd117d24aa1c1510692003" category="doc">Amazon FSX for NetApp ONTAP 的新功能</block>
   <block id="d151342d67a639e871ca8c57524ca7f8" category="sidebar">管理 Volume 標記</block>
   <block id="11c0aa7596d4f4521c9a98f708c34cc4" category="sidebar">管理儲存 VM 標籤</block>
-  <block id="e4b304b6d81189c09bd7e999a18522e8" category="sidebar">管理 ONTAP 備份排程的 FSX</block>
   <block id="c4f10a04f7aa75535a8a0475261393eb" category="doc">ONTAP 檔案系統橫向擴充 FSX 的區塊儲存設備</block>
   <block id="152983842f852ef5bae46ac675caec95" category="paragraph">現在，您可以透過適用於 ONTAP 的 FSX 配置區塊儲存設備，以使用橫向擴充的檔案系統部署，最多可配置 6 個 HA 配對。</block>
   <block id="8cce6f6c21973d5dff1898076cddb209" category="paragraph"><block ref="8cce6f6c21973d5dff1898076cddb209" category="inline-link-macro-rx"></block></block>
@@ -1215,16 +1205,6 @@
   <block id="3583e4a3e4e2e122cff65b8ad9045348" category="list-text">主動觀察</block>
   <block id="16fcd85dc9469370b62b4b46381f8e2a" category="list-text">行動洞見</block>
   <block id="7a3fc3cf12e9da54628c7311398bee5c" category="list-text">AWS 架構良好的架構顧問</block>
-  <block id="fc34f37e0124ad3486b3476b4c3bf8ba" category="section-title">架構良好的狀態</block>
-  <block id="a64cfe5c8ae4b3445ff288e9acf4b12e" category="list-text">架構良好的分數</block>
-  <block id="3ae4c18410c2fa4fdf19fa3a943ef362" category="list-text">分數包括所有目前分析的組態，並以百分比顯示。25% 的分數表示 25% 的檔案系統組態架構良好。</block>
-  <block id="a4394e01049a42d14bd6258585de98b7" category="list-text">組態類別</block>
-  <block id="d24dfe9869a3af3c94d86b476bc18a3d" category="list-text">檔案系統組態分為幾類，符合 AWS 架構良好的架構架構的下列五大支柱。</block>
-  <block id="b88f659b2eb7813471f331b19c9d7f02" category="list-text">_ 可靠性 _ ：確保工作負載能正確且一致地執行其預期功能，即使發生中斷也沒問題。ONTAP 備份的範例組態為 FSX 。</block>
-  <block id="6a940b53f011e22baccafe058e7df66e" category="list-text">_ 安全 _ ：強調透過風險評估和緩解策略來保護資料，系統和資產。</block>
-  <block id="d5f464c28ed994054fe98db4934a7da1" category="list-text">營運卓越 _ ：專注於提供最理想的架構和商業價值。</block>
-  <block id="03be89b5f488a61c9b35832aa58745c1" category="list-text">成本最佳化 _ ：旨在提供商業價值，同時將成本降至最低。</block>
-  <block id="49c47aadfeff1e01313108c157d381b4" category="list-text">_ 效能效率 _ ：專注於有效運用資源來滿足系統需求，並在需求改變時維持最佳效能。</block>
   <block id="3f6f8b4e204fd3aa39cac35661de164d" category="section-title">分析需求</block>
   <block id="02f2e108af721f7fc825883d8811e77a" category="list-text">* ONTAP 認證 * ：選用。輸入您的 ONTAP 使用者名稱和密碼。您可以立即或稍後設定密碼。</block>
   <block id="824994853534784eb4495b892e13b1c6" category="paragraph">如果您所提供的使用者不是 fsxadmin 使用者，稍後您需要重設 fsxadmin 密碼，您就可以從 AWS 主控台執行此動作。</block>
@@ -1803,15 +1783,11 @@
   <block id="21c979f4327cd67644d8ab5b64a762c7" category="doc">在NetApp Workload Factory 中克隆卷</block>
   <block id="6681a3fb664c63dc897bbc8182969165" category="list-text">從 *FSx for ONTAP* 中，選擇包含要複製的磁碟區的 FSx for ONTAP檔案系統的操作選單，然後選擇 *管理*。</block>
   <block id="6b74b1eeb944b58dcf027766f050311f" category="list-text">在「磁碟區」標籤中，選擇要複製的磁碟區的操作選單。</block>
-  <block id="43b56786015efd5716b466b10628735f" category="summary">NetApp Workload Factory 定期分析Amazon FSx for NetApp ONTAP檔案系統配置，以確定是否有任何問題。</block>
-  <block id="25c58ec67af5ce4deef895fad9566aa0" category="paragraph">NetApp Workload Factory 定期分析Amazon FSx for NetApp ONTAP檔案系統配置，以確定是否有任何問題。當發現問題時，Workload Factory 會向您展示問題所在，並解釋需要進行哪些更改以確保您的檔案系統儲存達到最佳效能、成本效益並符合最佳實踐。</block>
-  <block id="b0a0826c5a9c2b2e6c919de33e89dbfe" category="paragraph">在檔案系統層級的 Workload Factory 控制台中，列出了所有 FSx for ONTAP檔案系統的良好架構狀態。架構良好的狀態分為「問題」、「未分析」或「架構良好」。選擇良好架構狀態會將您重新導向至檔案系統內的良好架構狀態標籤，您可以在其中找到良好架構分數、設定類別以及檔案系統的所有設定。</block>
   <block id="93482e0e05af93f1f57953ff700f65af" category="summary">在NetApp Workload Factory 中為 FSx for ONTAP檔案系統中的儲存虛擬機器設定和更新 Active Directory。</block>
   <block id="b517cd494437c46f189031b81fe054d1" category="list-text">從 *FSx for ONTAP* 中，選擇要更新的儲存虛擬機器的檔案系統的操作選單，然後選擇 *管理*。</block>
   <block id="e2978ebf10a51b553f9a074316b27b79" category="summary">在定期備份之外，在NetApp Workload Factory 中建立磁碟區的手動備份。</block>
   <block id="54fe537cb8aa5bbba8b6f2002f13d69c" category="doc">在NetApp Workload Factory 中建立磁碟區的手動備份</block>
   <block id="4f43be2165dfc12e9cac6220645b9996" category="paragraph">在NetApp Workload Factory 中定期備份之外建立磁碟區的手動備份。</block>
-  <block id="54c39ca8203b6aca3fa33c7e87a0ede7" category="list-text">從「*Volumes*」標籤中，選擇要備份的磁碟區的操作。</block>
   <block id="cc481e5a678e1d84e7207782a75f9a18" category="summary">使用NetApp Workload Factory，您可以建立 FSx for ONTAP檔案系統來新增和管理磁碟區和其他資料服務。</block>
   <block id="9b19e4522ce9145cc667b5fcceaba11d" category="doc">在NetApp Workload Factory 中建立 FSx for ONTAP檔案系統</block>
   <block id="ebb1274f47205fb0c6d6d8988b0944b0" category="paragraph">使用NetApp Workload Factory，您可以建立第一代和第二代 FSx for ONTAP檔案系統來新增和管理磁碟區和其他資料服務。</block>
@@ -2740,4 +2716,74 @@
   <block id="f9b8d8043e7f357d7b5805e6dfd01b25" category="sidebar">管理區塊儲存設備</block>
   <block id="90fbacfd00a759e142437ac247a4317c" category="sidebar">手動調整檔案系統容量</block>
   <block id="241296c9db6f3205e0e5738da7ec12ef" category="sidebar">自動管理檔案系統容量</block>
+  <block id="62790b093d67bd09f77b7088f1cf32a6" category="list-text">*Volume backups*：預設啟用每日自動備份。可依需要停用。</block>
+  <block id="94a3e141996b9431c4516ae849425040" category="summary">NetApp Workload Factory 會定期分析 Amazon FSx for NetApp ONTAP 檔案系統組態，以判斷是否有任何組態問題。</block>
+  <block id="eb2b721313223c7264abb769bf627d20" category="paragraph">NetApp Workload Factory 會定期分析 Amazon FSx for NetApp ONTAP 檔案系統設定，以判斷是否存在任何設定問題。當發現問題時，Workload Factory 會顯示這些問題並說明需要做出哪些更改，以確保您的檔案系統儲存能達到最佳效能、成本效益及符合最佳實務。</block>
+  <block id="9ffdb95250e26c7a6b468126ac7c75b0" category="section-title">運作方式</block>
+  <block id="2888fa977354ad1bf513fa2f17fdd7df" category="paragraph">Workload Factory 每日分析您在 Amazon FSx for NetApp ONTAP 檔案系統部署上執行的工作負載。此分析提供架構完善的狀態資訊、洞察分析和建議。</block>
+  <block id="678b83ba882b41e4bae10f8e48f4a766" category="paragraph">每日分析完成後，部署的 Well-architected 儀表板會顯示配置狀態為「已最佳化」或「未最佳化」。您可以在這裡查看總優化得分、按類別劃分的配置問題以及配置問題和建議清單。您可以查看針對配置問題的建議。部分問題可由 Workload Factory 自動修復，而其他問題則需要人工幹預。在這種情況下，Workload Factory 會提供詳細說明，幫助您實施建議的變更。</block>
+  <block id="1fab3ff575faec37f5f5855ba6c44e9b" category="paragraph">您可以忽略不適用於您環境的配置分析。這樣可以避免不必要的警報和不準確的優化結果。當您忽略某個設定分析時，Workload Factory 不會將該配置計入總最佳化得分。</block>
+  <block id="ee25e0b6cd574166f206b4c5b7f02df3" category="section-title">為什麼這很重要</block>
+  <block id="1ae45cc8915c23757127ca10c1cc4000" category="paragraph">Workload Factory 將最佳實踐應用於大型儲存、資料庫和 VMware 環境，透過持續評估與建議洞察和修復措施相結合。在 Workload Factory 主控台中套用的自動化修復可減少人為錯誤、確保統一管理，並維護工作負載基礎架構的效能和可靠性。</block>
+  <block id="c6ee17dfa8bb85cfb470ccbc889f031c" category="section-title">儲存工作負載的最佳實務做法和建議</block>
+  <block id="9302fb8b1312c354620e74d118c4a66d" category="paragraph">Workload Factory 會對儲存配置進行評估，以深入了解 ONTAP 配置的最佳實踐，並確保其符合 AWS Well-Architected Framework。評估也會提出改進和修復建議。</block>
+  <block id="ffd9fc00ab43b8283346c6266e00d684" category="paragraph">精心設計的分析將組態分類為架構的下列要素：_可靠性_、_安全性_、_卓越營運_、_成本最佳化_和_效能效率_。</block>
+  <block id="820b8f74ad843d1574106ec4cadfc07e" category="section-title">可靠性</block>
+  <block id="32293fdcb7dff0798e6d06da4b108ce6" category="paragraph">可靠性確保工作負載即使在出現中斷的情況下也能正確、持續地執行其預期功能。</block>
+  <block id="8994ec75ad87cef8edf4cf8eae6b4e4c" category="list-text">*排程磁碟區備份*</block>
+  <block id="3bacc0d1986b203b432f61110667b3d7" category="paragraph">備份磁碟區有助於滿足資料保留和合規性需求。使用磁碟區備份來設定資料的自動備份和保留。</block>
+  <block id="277088f7a0bc1d2b0023dc08b1d30e37" category="list-text">*排程本機快照*</block>
+  <block id="ce36269ae95cd0ab7422d78bb843b720" category="paragraph">安排本機快照以實現高效備份和快速還原。快照是磁碟區的即時時間點映像。</block>
+  <block id="b34347ddf6e48f7eb5aee09d6f7b92a6" category="list-text">* 跨區域複寫 *</block>
+  <block id="152d89843ca63a94df485f882e2be60d" category="paragraph">跨區域複製可確保您的資料複製到另一個 AWS 區域，從而增強資料的持久性和可用性。Workload Factory 建議設定跨區域複製，以協助災難復原和合規性檢查。</block>
+  <block id="1efec9308ce64129e1db77dd8baa679c" category="list-text">*設定資料複寫*</block>
+  <block id="793435fc062d4d74518687597c405959" category="paragraph">為了提高資料可靠性，可以將資料複製到同一區域或其他區域的 Amazon FSx for NetApp ONTAP 檔案系統。設定資料複製以支援跨檔案系統的遷移、災難復原和長期資料保留。</block>
+  <block id="4776b32ae8a508cea6dc14786e7b1d3f" category="list-text">*提高 SSD 容量閾值*</block>
+  <block id="e48d5f7bfc0f630823696ef4d2f1861d" category="paragraph">SSD 儲存層的容量利用率不應持續超過 80%。否則可能會影響容量池儲存層的資料讀寫操作，進而影響檔案系統的吞吐量。容量不足可能導致資料磁碟區變成唯讀，嘗試寫入新資料的服務可能會失敗。</block>
+  <block id="52dcb980883fc7c1570f6f9c4c6e4f47" category="list-text">*比對標籤以確保資料可靠性*</block>
+  <block id="6b684c41f8808f2d21748ed56ee909d7" category="paragraph">來源磁碟區的快照原則標籤和複寫原則標籤必須相符，以確保資料可靠性。</block>
+  <block id="ec75a1c7b766068775fc7894ddaf83e4" category="list-text">*提高檔案容量閾值*</block>
+  <block id="0d73092e450f3018847f6e8ff85e28c0" category="paragraph">應提高檔案容量閾值，以避免達到磁碟區容量限制。檔案容量（inodes）過低會阻止向磁碟區寫入更多資料。NetApp Workload Factory 建議持續將可用檔案容量的使用率保持在 80% 以下。在磁碟區中建立新檔案需要足夠的可用檔案容量。</block>
+  <block id="2fae32629d4ef4fc6341f1751b405e45" category="section-title">安全性</block>
+  <block id="7d7265a6929882bb433fc74e8bee871a" category="paragraph">安全重點在於透過風險評估和緩解策略來保護資料、系統和資產。</block>
+  <block id="6b164cf17f1cd008f12b094341cb3264" category="list-text">*啟用 ARP/AI*</block>
+  <block id="3c93b584a7552b941c7752fec865d7f1" category="paragraph">NetApp 具備人工智慧的自主勒索軟體防護（ARP/AI）可協助您保護磁碟區免受勒索軟體威脅。Workload Factory 建議為所有磁碟區啟用 ARP/AI。</block>
+  <block id="1218a704bef91508c259c867ba832d76" category="list-text">*未經授權存取磁碟區*</block>
+  <block id="0f47a13bb4c0929efc89421b05c0e209" category="paragraph">使用 iSCSI 提供應用程式資料的磁碟區不應允許並行存取 NAS。NetApp Workload Factory 建議，透過 iSCSI 協定存取的磁碟區應限制使用任何其他協定。</block>
+  <block id="17d2a91a4f3c01de4c2f05b2242e49d3" category="section-title">卓越營運</block>
+  <block id="aae272278ce139a51849ab88adc7d597" category="paragraph">卓越營運的重點在於提供最佳架構和業務價值。</block>
+  <block id="2e8c868875c81824742ded82e0ff9518" category="list-text">* 啟用自動容量管理 *</block>
+  <block id="c2af0d35add26707ebd7d7030d750beb" category="paragraph">應啟用自動容量管理，以定期確保 SSD 層不超過閾值。</block>
+  <block id="32438b829cdc61174e9727896ad00733" category="list-text">*Volume 容量使用率閾值*</block>
+  <block id="938de8c74e8e4f67c370d24df8ab0411" category="paragraph">Workload Factory 建議磁碟區容量使用率不要持續超過 80%。這可能會影響應用程式的資料讀寫操作。磁碟區容量的增加可以手動進行，也可以使用磁碟區自動增長功能自動進行。</block>
+  <block id="900f4b8178b38a2b7075005f38bd4a08" category="list-text">*磁碟區使用率接近滿載*</block>
+  <block id="1771306e58ae20ceab27a04d0b17adcd" category="paragraph">當磁碟區接近滿載時、NetApp Workload Factory 建議採取措施增加磁碟區容量、以避免潛在的應用程式中斷。</block>
+  <block id="dea8be5f351d7ba412ea10951c1fe16c" category="list-text">*快取關係寫入模式*</block>
+  <block id="a58ce95d0ee8f9d592643a6f31d60878" category="paragraph">為了獲得最佳效能， Workload Factory 會根據您的工作負載推薦最合適的快取關係寫入模式。對於讀取密集型、檔案較小的工作負載，環繞寫入模式可提供更佳的效能；而對於寫入密集型、檔案較大的工作負載，回寫模式可提供更佳的效能。</block>
+  <block id="3a3b30a3337caa5b953626eb873e3e6b" category="list-text">*最佳化快取磁碟區大小*</block>
+  <block id="3f8b3943fba700ffad94c47ef4638509" category="paragraph">Workload Factory 建議啟用快取磁碟區的磁碟區自動調整大小和清理功能，以保持最佳大小並將快取集中用於熱資料，從而達到最高效率。</block>
+  <block id="a49bf929860657a29ec7b321ff7a63ba" category="list-text">*Storage VM 邏輯報告*</block>
+  <block id="7edda8ec9be79d47927f4aa7e27bd776" category="paragraph">Workload Factory 建議將儲存 VM 的預設報告設定設為邏輯報告，以便更了解磁碟區層級的儲存使用情況。</block>
+  <block id="a39ae09f8be4327fc176cfeb76a0e366" category="section-title">成本最佳化</block>
+  <block id="394c926099d3d2cf7e0d7477f17faf38" category="paragraph">成本優化可協助您在保持低成本的同時，為企業創造最大價值。</block>
+  <block id="ff879d0ae47ba423426718c1437f43bc" category="list-text">*透過對冷資料進行分層來優化 TCO*</block>
+  <block id="3fa1db8a8be8ef91cca2bf931c2698f3" category="paragraph">應啟用冷資料分層以降低 SSD 儲存層的使用率。建議對每個磁碟區套用分層原則。FSx for ONTAP 會持續掃描資料以偵測冷資料，並將其無縫移至容量儲存集區層。</block>
+  <block id="7cee9f2699d966625a5743c41334d168" category="list-text">*啟用儲存效率*</block>
+  <block id="4ac28dca7ab7f0f38a67c27c947662d5" category="paragraph">應啟用儲存效率提升功能（壓縮、整理和去重），以優化儲存利用率並降低 SSD 層成本。</block>
+  <block id="fed8dca8f704b8520ccccb85704d4336" category="list-text">*不必要的快照和備份刪除*</block>
+  <block id="0c3c1c3be816da545548a0d1ddb8eab2" category="paragraph">應刪除不再需要的快照和備份以降低成本。</block>
+  <block id="c359614024935abd3712075452782fa3" category="list-text">*非作用中區塊裝置*</block>
+  <block id="934ae55c0ac8033312b0dd4fc00ad677" category="paragraph">如果區塊設備連續七天未使用、Workload Factory 建議歸檔區塊設備資料或刪除未使用的區塊設備以降低成本。</block>
+  <block id="f915580ac605b8302594b2e8b9e200c4" category="list-text">*未充分利用的 SSD 容量*</block>
+  <block id="20f19e4030e406a0bbc3f71b51e9b885" category="paragraph">SSD 容量層利用率不足可能會導致不必要的成本。Workload Factory 建議降低 SSD 層容量，同時保持比目前已使用容量高出 20% 的可用空間緩衝區。容量縮減操作可能需要數小時到數天時間，在此期間不支援其他檔案系統操作。</block>
+  <block id="3224742265d3111d23b216e2a1d3036c" category="paragraph">Volume 備份是按 Volume 進行的，因此每個備份僅包含特定 Volume 中的資料。</block>
+  <block id="9b1c40247bbd6b430d06045ce9149bf4" category="paragraph">磁碟區備份採用增量備份，這表示僅儲存自上次備份以來磁碟區上發生變更的資料。這最大限度地減少了建立備份所需的時間和備份所需的儲存空間，從而避免資料重複，節省了儲存成本。</block>
+  <block id="40e95cbe82fc979afaca404d45ab88c7" category="list-text">從 *Volumes* 標籤中，選擇要備份的磁碟區的操作選單。</block>
+  <block id="0b3a2f729072cb80e423288abd69fa27" category="list-text">選擇 *Data protection actions* 、 *Volume backups* ，然後選擇 *Manual backup* 。</block>
+  <block id="108be83f8740c01bf49fb6d51d4b134e" category="admonition">快照並非資料副本。如果您需要建立資料副本，請考慮使用磁碟區備份或磁碟區複寫功能。</block>
+  <block id="d6a7c6eb08e4e62d76793fd3d8b368d4" category="list-text">磁碟區備份：磁碟區備份副本將保留，您仍然可以使用它們。</block>
+  <block id="e18aace8bf973f70c990d2b81fcba316" category="list-text">在「資訊」下，選擇 *Volume backups* 旁的鉛筆圖示。當滑鼠懸停在 *Volume backups* 行上時，下拉箭頭旁邊會顯示鉛筆圖示。</block>
+  <block id="8650af0fa3c7b902ba6a94894d28c472" category="list-text">在 *Volume backups* 對話方塊中，提供以下資訊：</block>
+  <block id="5e9b88efcc8c9692790f512327a22476" category="list-text">選擇 *Data protection actions* 、 *Volume backups* ，然後選擇 *Restore from a backup* 。</block>
+  <block id="6eb18ebccbf4fe18669aca55778990e0" category="sidebar">管理磁碟區備份排程</block>
 </blocks>
