@@ -1,0 +1,500 @@
+---
+sidebar: sidebar 
+permalink: setup-journal-table.html 
+keywords: S3, s3, access points, journal table, setup journal table, NetApp Workload Factory 
+summary: 在 NetApp Workload Factory 中為 S3 存取點設定日誌表基礎架構。 
+---
+= 為 NetApp Workload Factory 設定 Journal 資料表基礎架構
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+設定日誌表基礎架構，以擷取和儲存 Amazon FSx for ONTAP 磁碟區存取點的使用者存取事件和物件操作的稽核日誌。需要執行多個步驟來設定 AWS 服務的基礎架構，例如 AWS CloudTrail、AWS CloudWatch、AWS S3 儲存桶、AWS CloudWatch 日誌群組、AWS Identity and Access Management (IAM) 和 AWS S3 表，以便日誌事件能夠正確地在管道中傳輸並被 Workload Factory 讀取。
+
+
+
+== 關於這項工作
+
+Journal 表功能可擷取受監控 FSx for ONTAP S3 存取點的 S3 資料平面事件（PutObject、GetObject、DeleteObject 等）。它使用部署到您 AWS 帳戶中的一系列 AWS 服務。正確設定基礎架構後，它會連接到 FSx for ONTAP Volume 存取點，並建立管道，將使用者存取和物件操作稽核事件擷取到 Journal 表中。
+
+下表列出構成基礎架構一部分的 AWS 服務、其各自的資源名稱模式，以及該服務在管道中的用途。
+
+[cols="1,1,1"]
+|===
+| AWS 服務 | 資源名稱模式 | 目的 
+
+
+| AWS CloudFormation | netapp-metadata-* | 將所有基礎架構部署為堆疊 
+
+
+| AWS S3 儲存貯體 | netapp-metadata-cloudtrail-events-logs-{uuid} | 儲存原始 CloudTrail 日誌檔案 
+
+
+| AWS CloudTrail | netapp-metadata-journal-資料-事件-追蹤-{uuid} | 擷取特定存取點的 S3 資料事件 
+
+
+| AWS CloudWatch 日誌群組 | netapp-metadata-journal-資料-事件-{uuid} | 以結構化日誌項目的形式接收 CloudTrail 事件 
+
+
+| IAM 角色  a| 
+* netapp-metadata-cloudtrail-cw-role-{uuid}
+* netapp-metadata-s3table-integration-role-{uuid}
+
+| 主動整合 
+
+
+| ObservabilityAdmin | S3TableIntegration | 將 CloudWatch 日誌橋接至 S3 Tables 表格 
+
+
+| S3 資料表 | aws-cloudwatch 儲存貯體 → logs.aws_cloudtrail__data | 以 Iceberg 格式儲存結構化、可查詢的 CloudTrail 事件 
+|===
+{uuid} 是在建立範本時產生的隨機 8 個字元識別碼。
+
+
+
+== 開始之前
+
+若要啟用 Journal 表功能，請完成下列步驟：
+
+* 已存在一個有 S3 存取點的磁碟區。link:create-volume.html["使用 S3 存取點建立磁碟區"]
+* 將網路設定設為 *Internet* 以用於 S3 存取端點。link:edit-s3-access-point.adoc["編輯 S3 存取點的網路組態"]。
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _operations and remediation_ 權限"^] 至您的 Workload Factory 認證資料。
+* 將下列 IAM 政策權限新增至用於執行 CloudFormation 部署以設定 Journal 表的 AWS 帳戶。
++
+.日誌表設定的 IAM 原則權限
+[%collapsible]
+====
+[source, json]
+----
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "CFNStack",
+            "Effect": "Allow",
+            "Action": [
+                "cloudformation:CreateStack",
+                "cloudformation:DescribeStacks",
+                "cloudformation:DescribeStackEvents"
+            ],
+            "Resource": "arn:aws:cloudformation:*:*:stack/netapp-metadata-*/*"
+        },
+        {
+            "Sid": "StarResources",
+            "Effect": "Allow",
+            "Action": [
+                "cloudformation:GetTemplateSummary",
+                "cloudtrail:DescribeTrails",
+                "logs:DescribeLogGroups",
+                "logs:ListSourcesForS3TableIntegration",
+                "observabilityadmin:CreateS3TableIntegration",
+                "observabilityadmin:GetS3TableIntegration",
+                "observabilityadmin:TagResource",
+                "observabilityadmin:ListTagsForResource"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "S3Bucket",
+            "Effect": "Allow",
+            "Action": [
+                "s3:CreateBucket",
+                "s3:PutBucketPolicy",
+                "s3:PutBucketTagging"
+            ],
+            "Resource": "arn:aws:s3:::netapp-metadata-*"
+        },
+        {
+            "Sid": "IAMRoles",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateRole",
+                "iam:PutRolePolicy",
+                "iam:TagRole",
+                "iam:GetRole"
+            ],
+            "Resource": "arn:aws:iam::*:role/netapp-metadata-*"
+        },
+        {
+            "Sid": "PassRole",
+            "Effect": "Allow",
+            "Action": "iam:PassRole",
+            "Resource": "arn:aws:iam::*:role/netapp-metadata-*",
+            "Condition": {
+                "StringEquals": {
+                    "iam:PassedToService": [
+                        "cloudtrail.amazonaws.com",
+                        "logs.amazonaws.com"
+                    ]
+                }
+            }
+        },
+        {
+            "Sid": "CloudTrail",
+            "Effect": "Allow",
+            "Action": [
+                "cloudtrail:CreateTrail",
+                "cloudtrail:StartLogging",
+                "cloudtrail:AddTags",
+                "cloudtrail:PutEventSelectors"
+            ],
+            "Resource": "arn:aws:cloudtrail:*:*:trail/netapp-metadata-*"
+        },
+        {
+            "Sid": "CWLogGroup",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:DeleteLogGroup",
+                "logs:PutRetentionPolicy",
+                "logs:TagResource",
+                "logs:AssociateSourceToS3TableIntegration"
+            ],
+            "Resource": "arn:aws:logs:*:*:log-group:netapp-metadata-*"
+        },
+        {
+            "Sid": "S3Table",
+            "Effect": "Allow",
+            "Action": [
+                "s3tables:CreateTableBucket",
+                "s3tables:PutTableBucketEncryption",
+                "s3tables:PutTableBucketPolicy"
+            ],
+            "Resource": "arn:aws:s3tables:*:*:bucket/aws-cloudwatch"
+        }
+    ]
+}
+----
+====
+
+
+
+
+== 設定日誌表基礎架構
+
+設定基礎架構，以從 S3 存取點擷取 AWS 服務事件到日誌表中。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選擇要更新的磁碟區的檔案系統的操作選單，然後選擇 *管理*。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 在「磁碟區」標籤中，選擇要管理 S3 存取點的磁碟區的操作選單，然後選擇 *進階操作*，再選擇 *管理 S3 存取點*。
+. 從 *Manage S3 access points* 畫面中，選擇操作選單，然後選擇 *Edit access point* 。
+. 在「編輯 S3 存取點」對話方塊中、確保網路組態設定為「Internet」。
+. 依照對話方塊中的說明設定日誌表功能的基礎架構。
+. 下載 CloudFormation 範本。
+. 在您的 AWS 帳戶中部署 CloudFormation 堆疊。
++
+.. 將範本 JSON 儲存至檔案。
+.. 使用 AWS CLI 或 AWS Management Console 部署範本。
+.. 等待堆疊達到  `CREATE_COMPLETE` 狀態。
+.. 從堆疊輸出中取得 CloudTrail ARN。
+
+
+. 返回 Workload Factory 主控台，然後回到要管理 S3 存取點的磁碟區。
+. 從磁碟區動作功能表中選取 *View details*。
+. 在 *Journal table* 標籤中，輸入 CloudTrail ARN。
+. 選擇*應用*。
+
+
+如果任何步驟失敗，<<Troubleshoot the infrastructure setup,疑難排解日誌表的基礎架構設定>> 或聯絡 NetApp 支援以尋求協助。
+
+
+
+== 疑難排解日誌表的基礎架構設定
+
+您可以使用 AWS Management Console 或 AWS CLI 來疑難排解 CloudFormation 堆疊部署及其建立的資源期間發生的故障。
+
+解決問題後，請再次提交 CloudTrail ARN 以重新啟動日誌表設定。
+
+
+
+=== 常見的 CloudFormation 部署故障
+
+
+
+==== IAM 權限不足
+
+部署角色 / 使用者需要一組特定的權限。請參閱 <<開始之前,開始之前>> 以取得完整原則。
+
+如果堆疊失敗並出現 `AccessDenied`或 `InsufficientPermission`錯誤，請檢查堆疊事件並尋找 `ResourceStatusReason`欄位中缺少的權限。
+
+
+
+==== CloudTrail 限制
+
+AWS 預設每個區域最多只能建立 5 條軌跡。如果帳戶已建立 5 條軌跡， `the FsxDataEventTrail`資源將失敗，並顯示：超出最大軌跡數 (5)。您可以使用以下命令檢查區域層級的軌跡數：
+
+[source, cli]
+----
+aws cloudtrail describe-trails \
+  --no-include-shadow-trails \
+  --region <region> \
+  --query "length(trailList)"
+----
+.解決選項
+* 選項 1：刪除該區域中未使用的追蹤以騰出空間。
+* 選項 2：使用現有追蹤。在重新部署 CloudFormation 堆疊之前，請從範本中移除 `FsxDataEventTrail`、 `CloudTrailBucket`、 `CloudTrailBucketPolicy`和 `CloudTrailToCloudWatchRole`資源。然後在初始化步驟中傳遞現有追蹤的 ARN。現有追蹤必須配置 CloudWatch Log Group、將 S3TableIntegration 與該 Log Group 建立關聯，並且正在記錄資料事件。
+
+
+
+
+==== S3 Table 整合已存在
+
+如果帳戶中已經存在 aws_cloudtrail 資料來源的 S3TableIntegration，則 LogsToS3TableIntegration 資源將會失敗。
+
+.解決方案
+在重新部署 CloudFormation 堆疊之前，請從範本中移除 `LogsToS3TableIntegration`和 `S3TableIntegrationRole`資源。只要您為 aws_cloudtrail 資料事件進行設定，系統就會自動使用現有的整合。
+
+檢查現有整合：
+
+[source, cli]
+----
+aws observabilityadmin list-s3-table-integrations --region <your-region>
+----
+
+
+==== S3 儲存貯體名稱已存在
+
+儲存桶名稱 `netapp-metadata-cloudtrail-events-logs-{uuid}`是全域唯一的。如果發生衝突，請重新要求範本以取得新的 UUID。
+
+
+
+==== IAM 角色已存在
+
+如果先前的部分部署遺留了  `netapp-metadata-*` 名稱模式相同的 IAM 角色，則在建立角色時堆疊將失敗。請先刪除這些孤立的角色：
+
+[source, json]
+----
+aws iam delete-role-policy \
+  --role-name netapp-metadata-cloudtrail-cw-role-<uuid> \
+  --policy-name <policy-name>
+aws iam delete-role \
+  --role-name netapp-metadata-cloudtrail-cw-role-<uuid>
+----
+
+
+=== 啟用日誌表後發生的故障
+
+提交 CloudTrail ARN 後，Workload Factory 會自動發送 _seed_（或測試）事件來驗證整個資源管道。如果驗證成功，種子事件將到達 S3 Tables 表中。此測試大約需要 10 分鐘。
+
+如果測試驗證失敗、您可能會收到下列其中一則錯誤訊息：
+
+[cols="1,1"]
+|===
+| 錯誤訊息 | 意義 
+
+
+| 表 aws_cloudtrail__data 未在 {bucket} 中建立。請驗證 s3table 權限。 | S3TableIntegration 未建立 CloudWatch 管理的表格。CloudWatch Logs 與 S3 Tables 之間的管道已中斷。 
+
+
+| 表格存在，但日誌種子事件未顯示。請檢查 CloudTrail 和 CloudWatch 權限。 | 表格存在，但特定的種子事件從未到達。CloudTrail 與 S3 Tables 表格之間的管道中斷。 
+
+
+| 無法啟動日誌設定。... | 背景種子 / 輪詢流程期間發生錯誤。請檢查後續訊息以取得詳細資料。 
+|===
+.解決步驟
+當日誌達到 FAILED 時，請透過管道階段向前追蹤種子事件，以確定其確切停止位置。每個步驟都對應至範本建立的特定 AWS 資源。
+
+. 檢查 CloudTrail S3 儲存桶。
++
+此追蹤程式會將原始事件日誌寫入 S3 儲存貯體 `netapp-metadata-cloudtrail-events-logs`。請尋找最近的日誌檔案。
+
++
+如果沒有日誌檔案，則表示 CloudTrail 沒有捕獲到事件。請檢查以下內容：
+
++
+** 追蹤記錄正在記錄 (`IsLogging: true`）
+** 進階事件選取器包含正確的存取點 ARN
+** 進階事件選擇器包括 `eventCategory = Data`和 `resources.type = AWS::S3::AccessPoint`的篩選器
+
+
+. 檢查 CloudWatch 日誌群組。
++
+該路徑也會向 CloudWatch Log Group 傳送事件。Log Group 名稱以 `netapp-metadata-journal-data-events-<uuid>`開頭。
+
++
+** 如果日誌組為空，則 CloudTrail 不會將事件傳遞到 CloudWatch。請檢查 `CloudTrailToCloudWatchRole` IAM 角色是否存在並具有 `logs:CreateLogStream`和 `logs:PutLogEvents`權限，並確保追蹤已使用正確的 `CloudWatchLogsLogGroupArn`和 `CloudWatchLogsRoleArn`進行設定。
+** 如果種子事件出現在日誌群組中，則問題出在下游 — 繼續執行步驟 3。
+
+
+. 請查看 S3 Tables 表格(`aws-cloudwatch`）。
++
+S3TableIntegration 會自動建立一個名為 aws-cloudwatch 的表格儲存桶，並在 logs.aws_cloudtrail__data 中填入一個表格。此表格僅在第一個事件流過後才會建立。
+
++
+** 如果 aws-cloudwatch 表格儲存桶不存在，則 `S3TableIntegrationRole`缺少權限。它需要 `s3tables:CreateTableBucket`、 `s3tables:PutTableBucketEncryption`和 `s3tables:PutTableBucketPolicy`— 所有這些權限都限定在 `arn:aws:s3tables:*:*:bucket/aws-cloudwatch`範圍內。
+** 如果表格儲存桶存在但 `logs.aws_cloudtrail__data`未顯示，則整合未路由事件。整合必須顯示 `Status: ACTIVE`並將 `aws_cloudtrail`作為日誌來源。
+** 如果表存在但種子事件不在其中，則該事件可能仍在傳輸中。S3 Tables 資料導入有一定的延遲。請稍等幾分鐘。如果 15-20 分鐘後仍未出現，則整合可能已中斷。
+
+
+. 直接查詢種子事件。
++
+.. 在 AWS Management Console 中開啟 S3 Tables。
+.. 導覽至 aws-cloudwatch 表格儲存桶 → aws_cloudtrail__data 表格，然後使用 *Preview* 按鈕直接在瀏覽器中執行快速查詢。
+.. 如果事件已存在於表中，但日誌仍顯示 `FAILED`，則可能是輪詢視窗在事件到達之前已過期。
+
+
+
+
+解決問題後，返回 Workload Factory 主控台。再次提交 Trail ARN 以重試 <<設定日誌表基礎架構,啟動日誌表設定>>。
+
+. 如果設定仍然失敗，請聯絡 NetApp 支援以尋求協助。
+
+
+
+
+== 日誌表設定的權限參考
+
+用於部署 CloudFormation 堆疊以啟用 Journal 表功能的 IAM 角色需要下列權限。請參閱 <<開始之前,開始之前>> 以取得包含所需權限的可複製 JSON 策略。
+
+
+
+=== 堆疊操作
+
+[cols="1,1,1"]
+|===
+| 權限 | 資源 | 為什麼 
+
+
+| cloudformation：CreateStack | arn:aws:cloudformation:*:*:stack/netapp-metadata-*/* | 建立堆疊 
+
+
+| cloudformation：DescribeStacks | arn:aws:cloudformation:*:*:stack/netapp-metadata-*/* | 監控堆疊狀態 
+
+
+| cloudformation：DescribeStackEvents | arn:aws:cloudformation:*:*:stack/netapp-metadata-*/* | 診斷資源層級故障 cloudformation:GetTemplateSummary * 預檢範本驗證 
+|===
+
+
+=== CloudTrail
+
+[cols="1,1,1"]
+|===
+| 權限 | 資源 | 為什麼 
+
+
+| cloudtrail：CreateTrail | arn:aws:cloudtrail:*:*:trail/netapp-metadata-* | 建立追蹤 
+
+
+| cloudtrail：StartLogging | arn:aws:cloudtrail:*:*:trail/netapp-metadata-* | 啟用記錄 
+
+
+| cloudtrail：AddTags | arn:aws:cloudtrail:*:*:trail/netapp-metadata-* | 套用識別標籤 
+
+
+| cloudtrail：PutEventSelectors | arn:aws:cloudtrail:*:*:trail/netapp-metadata-* | 設定資料事件擷取 
+
+
+| cloudtrail：DescribeTrails | * | 解析堆疊輸出的追蹤 ARN 
+|===
+
+
+=== S3
+
+[cols="1,1,1"]
+|===
+| 權限 | 資源 | 為什麼 
+
+
+| s3：CreateBucket | arn:aws:s3:::netapp-metadata-* | 建立 CloudTrail 日誌儲存貯體 
+
+
+| s3：PutBucketPolicy | arn:aws:s3:::netapp-metadata-* | 允許 CloudTrail 寫入日誌 
+
+
+| s3：PutBucketTagging | arn:aws:s3:::netapp-metadata-* | 套用識別標籤 
+|===
+
+
+=== IAM
+
+[cols="1,1,1"]
+|===
+| 權限 | 資源 | 為什麼 
+
+
+| iam：CreateRole | arn:aws:iam::*:role/netapp-metadata-* | 建立兩個 IAM 角色 
+
+
+| iam：PutRolePolicy | arn:aws:iam::*:role/netapp-metadata-* | 附加內嵌原則 
+
+
+| iam：TagRole | arn:aws:iam::*:role/netapp-metadata-* | 套用識別標籤 
+
+
+| iam：GetRole | arn:aws:iam::*:role/netapp-metadata-* | 確認角色處於作用中狀態 
+
+
+| iam：PassRole | arn:aws:iam::*:role/netapp-metadata-* （條件： PassedToService = cloudtrail.amazonaws.com 、 logs.amazonaws.com ） | 傳遞角色至 CloudTrail 和 CloudWatch Logs 
+|===
+
+
+=== CloudWatch 日誌
+
+[cols="1,1,1"]
+|===
+| 權限 | 資源 | 為什麼 
+
+
+| 日誌：CreateLogGroup | arn:aws:logs:*:*:log-group:netapp-metadata-* | 建立日誌群組 
+
+
+| 日誌:DeleteLogGroup | arn:aws:logs:*:*:log-group:netapp-metadata-* | 如果建立失敗，請清理日誌群組 
+
+
+| 日誌：PutRetentionPolicy | arn:aws:logs:*:*:log-group:netapp-metadata-* | 設定 30 天保留期 
+
+
+| 日誌：TagResource | arn:aws:logs:*:*:log-group:netapp-metadata-* | 套用識別標籤 
+
+
+| logs:AssociateSourceToS3TableIntegration | arn:aws:logs:*:*:log-group:netapp-metadata-* | 將 CloudTrail 來源連結至 S3 Tables 
+
+
+| 日誌：DescribeLogGroups | * | 檢查日誌群組是否存在 
+
+
+| logs:ListSourcesForS3TableIntegration | * | 確認整合關聯 
+|===
+
+
+=== ObservabilityAdmin
+
+[cols="1,1,1"]
+|===
+| 權限 | 資源 | 為什麼 
+
+
+| observabilityadmin:CreateS3TableIntegration | * | 建立 CloudWatch → S3 Tables 橋接器 
+
+
+| observabilityadmin:GetS3TableIntegration | * | 確認整合已啟動 
+
+
+| observabilityadmin：TagResource | * | 套用識別標籤 
+
+
+| observabilityadmin：ListTagsForResource | * | 漂移偵測 
+|===
+
+
+=== S3 資料表
+
+[cols="1,1,1"]
+|===
+| 權限 | 資源 | 為什麼 
+
+
+| s3tables：CreateTableBucket | arn:aws:s3tables:*:*:bucket/aws-cloudwatch | 建立 S3 Tables 儲存貯體（透過整合角色） 
+
+
+| s3tables：PutTableBucketEncryption | arn:aws:s3tables:*:*:bucket/aws-cloudwatch | 設定 AES256 加密 
+
+
+| s3tables：PutTableBucketPolicy | arn:aws:s3tables:*:*:bucket/aws-cloudwatch | 允許 CloudWatch Logs 存取 
+|===

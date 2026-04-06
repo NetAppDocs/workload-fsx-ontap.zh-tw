@@ -190,7 +190,6 @@
   <block id="62e91320f9cdbfe080b1002592de785b" category="list-text">* Volume 名稱 * ：輸入磁碟區的名稱。</block>
   <block id="b2e658eb3f11776899234dd87caf3823" category="list-text">* 儲存 VM 名稱 * ：選擇性地輸入儲存 VM 名稱。</block>
   <block id="71a8fe56183b62227c11ca4ce811f166" category="list-text">* Volume 樣式 * ：選擇 * FlexVol * 或 * FlexGroup * Volume 。</block>
-  <block id="cb69a576eebf4d27436ae39122a9562c" category="paragraph">FlexVol Volume 樣式預設為選取。</block>
   <block id="ffe3253d848af0e44a26ba39fba69329" category="list-text">* Volume Size* ：輸入 Volume 大小和單位。</block>
   <block id="b46ad6f5a61764c118c979f2583ab630" category="paragraph">也可以啟用 Volume 自動擴充。當您選擇 * 檔案存取 * 作為磁碟區存取類型時、即可使用此選項。</block>
   <block id="53ebc36ae845935202fde349f39b2e17" category="list-text">在 Access （僅適用於具有相關連結的檔案系統）下、提供下列詳細資料：</block>
@@ -220,7 +219,6 @@
   <block id="bbcc4e18576e310acdd3a82682875a7f" category="list-text">此原則的運作方式與原則相同、<block ref="c21f969b5f03d33d43e04f8f136e7682" prefix=" " category="inline-code"></block> 只是它只會從每週排程中保留一個快照。</block>
   <block id="e3944f065f8a736803ad0b4de4b49f84" category="list-text">此原則不會擷取任何快照。您可以將此原則指派給磁碟區、以防止自動擷取快照。</block>
   <block id="b206a5f8985f80349f02e0144a4a341d" category="list-text">* 分層原則 * ：選取儲存在磁碟區中資料的分層原則。</block>
-  <block id="057899be9192508684a0a7c0ddce247b" category="list-text">在進階組態下、提供下列項目：</block>
   <block id="31bc68ca566d500bf92a8cab85ec5ae3" category="list-text">* 交會路徑 * ：在儲存 VM 的命名空間中輸入裝入磁碟區的位置。預設交會路徑為<block ref="efef91582c9b0099c391a47d56e741d2" prefix=" " category="inline-code"></block>。</block>
   <block id="a481fc89f2e7d4e062f18bfa2b0d4c70" category="list-text">* 集合體清單 * ：僅適用於 FlexGroup Volume 。新增或移除集合體。集合體的最小數量為 1 。</block>
   <block id="688711a00683b1f80450615a64ae5765" category="list-text">* 組成數量 * ：僅適用於 FlexGroup Volume 。輸入每個 Aggregate 的組成數量。每個成分需要 100 GiB 。</block>
@@ -550,9 +548,6 @@
   <block id="201080500e946070a2e4873042507c77" category="paragraph">確認將您的申請提交給NetApp、並建議您建立NetApp 支援網站 一個申請表。</block>
   <block id="cc8b0535948da368f832027c19b7f853" category="list-text">請務必複製上述序號欄位使用的帳戶序號（960xxxx）。這將加速帳戶處理。</block>
   <block id="684375e279a289295b72a006d93e2c4c" category="paragraph">在此過程中、NetApp應與您聯絡。這是新使用者的一次性就職練習。</block>
-  <block id="fa6e79d91adacad3ba5d3684079b4ea1" category="summary">Amazon FSX for NetApp ONTAP 文件會提供疑難排解主題、供您參考。</block>
-  <block id="025110220989dd80d639c418b593cad3" category="inline-link-macro">Amazon FSX for NetApp ONTAP 疑難排解</block>
-  <block id="aa3f4a232768328d892056c200f23b5f" category="paragraph">如需詳細資訊、請參閱 <block ref="39d4d71bb679e33c9314f282da47094c" category="inline-link-macro-rx"></block> 。</block>
   <block id="fb4531252f707fbda1308840e3c7d6af" category="summary">在複寫關係中、隨時手動更新在來源磁碟區和目標磁碟區之間傳輸的快照資料。</block>
   <block id="9ff8251e97123d13337c62b2b74bbe1e" category="doc">在複寫關係中更新快照資料</block>
   <block id="fa0604fd5c522ae5ab642bebf836c3d0" category="list-text">選擇 * 立即更新 * 。</block>
@@ -593,7 +588,6 @@
   <block id="267e5e88580f97af56a5fa2b981a6a67" category="sidebar">效能管理</block>
   <block id="ef045d17e80274aec5be009d1f13f5a2" category="sidebar">為檔案系統配置 IOPS</block>
   <block id="63d5049791d9d79d86e9a108b0a999ca" category="sidebar">參考資料</block>
-  <block id="231cf4c70d866b616c21baddaeed0696" category="sidebar">疑難排解</block>
   <block id="c7f1094806f4a7907a28dc01a1473f90" category="inline-link-macro">瞭解如何使用 Codebox 進行自動化</block>
   <block id="672d0efbe9223ef23c5fd7d2c7cd4a95" category="paragraph">您可以使用 _Quick creity_ 或 _Advanced creity_ 、為 ONTAP 檔案系統建立 FSX 。您也可以使用 Codebox 中的下列工具： REST API 、 CloudForformation 和 Terraform 。<block ref="e0a3467dce43941c7b863cc8d6f0a62a" category="inline-link-macro-rx"></block>。</block>
   <block id="11e2fb5025fdb2cb91fd04c343163328" category="admonition">從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block> 和<block ref="6173aa5206484b5224450952747c7148" prefix=" " category="inline-code"></block> 密碼。執行程式碼時、您需要重新輸入密碼。</block>
@@ -1414,7 +1408,6 @@
   <block id="dd9c72ad3bbeb047b573638ce62d0cc6" category="list-text">*使用者提供*：選擇此選項可將指定的 Lambda 執行角色及其附加的策略指派給 Lambda 連結。 Lambda需要以下權限。<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block>僅當您啟用 AWS Secrets Manager 時才需要權限。</block>
   <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">在文字方塊中輸入 Lambda 執行角色 ARN。</block>
   <block id="38adbad92c37166c4ce64da1eb51513b" category="inline-link-macro">創建卷</block>
-  <block id="1626bc194a1c6fb76d8a47eba39add09" category="paragraph">FlexGroup 磁碟區大小取決於組成部分的數量，每個組成部分需要 100 GiB。</block>
   <block id="f80d67f0a6951b3f6c1185e7c7f39c30" category="paragraph">指定卷的最大增長大小和單位。不能將最大成長大小設定為小於目前磁碟區大小</block>
   <block id="d932719afe063ca8fcfe0eb63f1b6ec9" category="paragraph">ONTAP 使用重複資料刪除和壓縮功能實現儲存效率。重複資料刪除技術可消除重複的資料區塊資料壓縮會壓縮資料區塊、以減少所需的實體儲存容量。</block>
   <block id="9d083d8cac2f7524236aec0400de23bf" category="inline-link-macro">了解有關 ARP/AI 的更多信息</block>
@@ -2074,7 +2067,6 @@
   <block id="fb9b6bbcab5fb396a13f67594a0ba1ee" category="list-text">請務必複製上面用於序號欄位的NetApp帳號序號 (960xxxx)。這將加快帳戶處理速度。</block>
   <block id="40eff8559acd41057187b6cb11fa1919" category="list-text">完成以下步驟，將您的新 NSS 帳戶與您的NetApp控制台登入關聯<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
   <block id="f335678326583cea28377216c5515221" category="paragraph">擁有NetApp支援網站帳號後，請依照下列步驟將帳號與您的NetApp控制台登入關聯<block ref="2f3aba04ec49ee5f0573a6c80a1b9df2" category="inline-xref-macro-rx"></block>。</block>
-  <block id="2b769f5862082021bf11a857697aa4ce" category="doc">NetApp Workload Factory 中 FSx for ONTAP的故障排除</block>
   <block id="fbd561748c9b594e4d65b8ccf21f5769" category="paragraph">複製關係有設定的複製計劃，但您可以隨時手動更新NetApp Workload Factory 中來源磁碟區和目標磁碟區之間傳輸的快照資料。</block>
   <block id="1d27ede7e22b617fbd392a02ca413a78" category="list-text">在複製關係標籤中，選擇要更新的複製關係的操作選單。</block>
   <block id="0b81b68aa4b4da3fc81b7541c9557525" category="summary">在NetApp Workload Factory 中，您可以在建立磁碟區後更新儲存效率設定。</block>
@@ -2338,16 +2330,7 @@
   <block id="15edb6ed53ce8a32fd0631a4517d7fc7" category="list-text"><block ref="15edb6ed53ce8a32fd0631a4517d7fc7" category="inline-link-macro-rx"></block></block>
   <block id="d628678d4875b2f8f6ea7ca8dab6ade0" category="inline-link-macro">在工作負載工廠中管理 S3 存取點</block>
   <block id="81cca59ad3bedd27880ab1c747ae8b70" category="list-text"><block ref="81cca59ad3bedd27880ab1c747ae8b70" category="inline-link-macro-rx"></block></block>
-  <block id="e89e0732eb8fbeb9c1bb216d5b1fe2c8" category="summary">在NetApp Workload Factory中管理磁碟區的 S3 存取點。</block>
-  <block id="7caacaed323c9582bdf146f33b338930" category="doc">在NetApp Workload Factory中管理磁碟區的 S3 存取點</block>
-  <block id="1f26d72d95cf276540f7a69b509645fe" category="paragraph">您必須擁有一個已存在的包含 S3 存取點的磁碟區。</block>
   <block id="be929bcd251acd28106548a34c8a067b" category="list-text">從 *FSx for ONTAP* 中選擇要更新的磁碟區的檔案系統的操作選單，然後選擇 *管理*。</block>
-  <block id="7fcc02a075c6d0b859fd9a03f5250e5f" category="list-text">在“磁碟區”標籤中，選擇要管理 S3 存取點的磁碟區的操作選單，然後選擇“進階操作”，再選擇“管理 S3 存取點”。</block>
-  <block id="4dc9fa88ed74bd072e88bad92a1f17c6" category="open-title">建立 S3 存取點並將其附加到現有捲</block>
-  <block id="c57302a0d02305ff8c144fb37bb2fab9" category="list-text">選擇「建立並連接 S3 接入點」。</block>
-  <block id="e979f8982cafd5647560686a5ec74a2a" category="list-text">在「建立並連接 S3 接入點」對話方塊中，提供以下資訊：</block>
-  <block id="0802ef324b114effd397e5e5ac619733" category="list-text">選擇“建立並附加”。</block>
-  <block id="f4e2e090f540d174d8e07c3527c25962" category="open-title">從磁碟區中刪除現有的 S3 存取點</block>
   <block id="f994c7e71102a3d5ed7af5975abfaa09" category="sidebar">管理 S3 存取點</block>
   <block id="bc5d3bf99236801351dc3a2d7c20aed7" category="paragraph">Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設定：</block>
   <block id="afc7c7589e5f20d86c03b5e089bbad6b" category="list-text">NetApp自主勒索軟體防護 (ARP/AI) 已停用（包括區塊裝置）：檢查區塊裝置磁碟區上的 ARP/AI 是否已停用</block>
@@ -2432,13 +2415,11 @@
   <block id="c7d27c61cfd9d94c94e936b1785769dd" category="section-title">管理區塊設備的客戶端存取權限</block>
   <block id="679f0d3f635a07fd97dff3c93833dc50" category="paragraph">您可以隨時透過建立 igroup、新增或刪除區塊裝置和主機發起程式來管理現有區塊裝置的用戶端存取權限。</block>
   <block id="ac40a086c14a9eef79fce5123e9bd49c" category="list-text">導覽至區塊裝置的操作選單，然後選擇「管理用戶端存取」。</block>
-  <block id="2ea858957b4333f86af5869e62f5efe5" category="list-text">如果不存在 igroup，請選擇「建立 igroup」建立新的 igroup，然後執行下列操作：</block>
   <block id="d66126919f51b95d3c2330d837b5f66c" category="list-text">*區塊設備名稱*：請輸入區塊設備名稱。您可以選擇多個區塊設備與 igroup 關聯。</block>
   <block id="e29d6df132d9efce7dfdd9c017453c6a" category="list-text">*作業系統類型*：選擇作業系統類型。</block>
   <block id="7d73711421384d2485630673ab93b662" category="list-text">*igroup 名稱*：請輸入 igroup 名稱。</block>
   <block id="e220387578f5151d1653ad1ff2b5a002" category="list-text">*igroup 描述*：可選，輸入 igroup 描述。</block>
   <block id="d719073ebb477e6cf9934f806cd15577" category="list-text">*主機發起程式*：輸入一個或多個主機發起程式。這些發起程序必須遵循 iSCSI 合格 (IQN) 格式。</block>
-  <block id="2614a90f09c2b1321e872a7622f7f888" category="list-text">如果 igroup 已存在，請選擇「編輯用戶端存取」以向 igroup 新增或刪除區塊裝置和主機發起程序，然後選擇「套用」。</block>
   <block id="68d85c073028f0fd978bc424d69ee8fd" category="list-text">在“孤立設備”下，選擇“查看和回收容量”。</block>
   <block id="f6841052bd0d86548318f9b2df118ea3" category="list-text">在「回收未使用的區塊設備空間」畫面上，選擇一個或多個區塊設備來歸檔資料並回收容量。</block>
   <block id="2c77adf5fa1de4ed37a6e14d2212f074" category="list-text">選擇“存檔”。</block>
@@ -2484,11 +2465,8 @@
   <block id="b04638337aac148655a104c2db6c4766" category="section-title">Storage 中的 S3 存取點增強功能</block>
   <block id="f76e736f45740f58cc12ec666b824eb2" category="paragraph">NetApp Workload Factory 的儲存工作負載中，S3 接入點管理功能已獲得多項增強。您可以輸入 S3 接入點的網路設定詳細資訊並新增 S3 接入點標籤。其他增強功能包括查看 S3 儲存桶詳細資訊以及執行更多 S3 接入點管理操作。</block>
   <block id="76f77cbc01f0341dffcaaa5f6236eb73" category="section-title">S3 儲存桶詳細資訊可在 Storage 中查看</block>
-  <block id="c203e76297d071e4d8256e073c93dafb" category="paragraph">啟用 S3 存取點的元資料後，NetApp Workload Factory 會自動掃描您的 AWS S3 儲存桶並填入 S3 表，從而為您提供所有物件及其元資料、屬性和標籤的清晰快照。存取這些詳細資訊有助於您保持對所負責資料的控制、可見度和信任度，同時降低維運開銷。</block>
-  <block id="cc7664945c125a51dd2e69095c8f8200" category="inline-link-macro">查看 FSx for ONTAP 檔案系統中 S3 存取點的詳細資訊</block>
   <block id="2249107cb1f4c202ef0253c53bcff598" category="section-title">S3 存取點的其他管理作業</block>
   <block id="bf44c4671ee3bfbc818d505bb9a0e59a" category="paragraph">NetApp Workload Factory 為 S3 存取點提供額外的管理操作。您可以透過 NetApp Workload Factory 介面查看存取點詳細資訊、修改現有 S3 存取點以及新增或刪除 S3 存取點標籤，從而簡化物件儲存管理任務。</block>
-  <block id="366c32f0cbb2503b337e243eaa8c42b5" category="inline-link-macro">在 NetApp Workload Factory 中管理 S3 存取端點</block>
   <block id="e593953aaf04eebecfe2e26326145784" category="list-text">最佳化快取磁碟區大小：檢查快取磁碟區是否啟用了磁碟區自動調整大小和清理功能，以保持最佳大小並將快取集中用於熱資料，從而達到最高效率。</block>
   <block id="a872ae5d7fdb75042465788519d63c35" category="list-text">Storage VM 邏輯報告：檢查 Storage VM 的預設報告設定是否設定為邏輯，以便更了解磁碟區層級的儲存使用情況。</block>
   <block id="40fbd58cc84d2567a5be7db0e1e48224" category="section-title">區塊裝置的其他卡</block>
@@ -2545,30 +2523,17 @@
   <block id="a7d242b126bf6ced54231e71dba71bda" category="list-text">在「刪除發起者群組（igroup）」對話方塊中、輸入「delete」以確認您要刪除 igroup、然後選取 *Delete* 。</block>
   <block id="4d7b443b927537bbc33ca3690bbcaed1" category="inline-link-macro">為 FSx for ONTAP 檔案系統建立 igroup</block>
   <block id="34fc9e9b0a58447e45d29d99c376a3ec" category="paragraph"><block ref="34fc9e9b0a58447e45d29d99c376a3ec" category="inline-link-macro-rx"></block></block>
-  <block id="1ef8cc6eec11f56d70880a4ca54620d0" category="paragraph">在 NetApp Workload Factory 中管理某個磁碟區的 S3 存取端點。您可以使用 Workload Factory 主控台為現有磁碟區指派 S3 存取端點、檢視 S3 儲存貯體的詳細資訊、變更現有存取端點，或刪除 S3 存取端點。</block>
-  <block id="d33d3fec0d0cc42bf9722d3406ba5aa2" category="paragraph">請確保您符合以下要求：</block>
   <block id="69b8b9524d643674b889fa70c17e1cc8" category="inline-link-macro">使用 _operations and remediation_ 權限原則授予認證</block>
   <block id="8c378042ad1ba655fb1f5cd941dc98b6" category="list-text">您必須在 Workload Factory 中<block ref="c6ffb720e530188ab1b1bff284837062" category="inline-link-macro-rx"></block>完成此任務。</block>
-  <block id="f1834a86a3431bfc71aeab4c9747192d" category="paragraph">在 NetApp Workload Factory 中建立 S3 接入點並將其附加到現有磁碟區。</block>
   <block id="0a76b0d6a11006d8a1c5f62db933ddb6" category="list-text">從 *FSx for ONTAP* 中，選擇包含要更新之磁碟區的檔案系統。</block>
-  <block id="6e9783376d951cfd780e9fdb67a0f02c" category="section-title">檢視詳細資料</block>
-  <block id="6210aebae6ddd596486bcb13eb5ef89a" category="list-text">從 *Manage S3 access points* 畫面中，選取動作功能表，然後選取 *View details* 。</block>
-  <block id="6ed5516949fd4560f1570e0f701efbac" category="section-title">編輯存取點</block>
-  <block id="803c8783e877d292e1c22e5a3d7cd78a" category="paragraph">變更已連線至磁碟區的現有 S3 存取點的使用者和使用者類型。您也可以啟用或停用存取點的中繼資料。</block>
   <block id="37068c532170e23c2a91d4d23699dd31" category="list-text">從 *Manage S3 access points* 畫面中，選擇操作選單，然後選擇 *Edit access point* 。</block>
   <block id="076804dea9fcf3467cf7c699f9811498" category="list-text">進行更新，然後選取 *Apply* 。</block>
-  <block id="e41ac5d896a0e6edc27784d233dfbc29" category="section-title">管理 S3 存取點標籤</block>
-  <block id="287f73523996b72469d9fd36d0cb155c" category="paragraph">為連接至磁碟區的現有 S3 存取點新增或移除標籤。</block>
-  <block id="6e5f33fd29d5f7477e4a80a8769b962b" category="list-text">從 *Manage S3 access points* 畫面中，選擇操作選單，然後選擇 *Manage tags*。</block>
-  <block id="3fa8b09c93230485435b89bed0fa2e87" category="list-text">在「管理 S3 存取點標籤」對話方塊中，您可以為 S3 存取點新增最多 50 個標籤或移除標籤。</block>
   <block id="f6e1df464413e09857979a0ca8b75a4b" category="paragraph">從 NetApp Workload Factory 的一個磁碟區中刪除現有的 S3 存取端點。</block>
   <block id="d1fabbd85b7cc34641739e525d26f652" category="section-title">2026 年 2 月 1 日</block>
   <block id="2855f13e1a4620842b40a36c5090209b" category="sidebar">建立區塊儲存資源</block>
   <block id="d8ad6fc6096c88d41f98b91f0043eebe" category="sidebar">建立 igroup</block>
   <block id="9a6576dfb2c795711c67df7e1a5b076a" category="sidebar">區塊儲存管理</block>
   <block id="e77c03d49e828607828412709552dbd6" category="sidebar">管理 igroup</block>
-  <block id="fdb38c6259208c2509d21f6a3f0beb02" category="paragraph"><block ref="fdb38c6259208c2509d21f6a3f0beb02" category="inline-link-macro-rx"></block></block>
-  <block id="cc97dddf7d9715fea79ba3e831f0fbca" category="paragraph"><block ref="cc97dddf7d9715fea79ba3e831f0fbca" category="inline-link-macro-rx"></block></block>
   <block id="0352f037ca8dfca49383ddb908805d9a" category="list-text"><block ref="0352f037ca8dfca49383ddb908805d9a" category="inline-link-macro-rx"></block></block>
   <block id="0a17c703284dc61149bdaf13e30980de" category="list-text"><block ref="0a17c703284dc61149bdaf13e30980de" category="inline-link-macro-rx"></block></block>
   <block id="df267252f2595421cf837794528f006f" category="paragraph">事件分析器會自動從 FSx for ONTAP 檔案系統中提取錯誤、警報和緊急 EMS 事件。您可以<block ref="f91a3df34ad8b434c845af1c5c4599e2" category="inline-link-macro-rx"></block>和<block ref="f7fcd176fbc4e82ec30b37b672d1e76e" category="inline-link-macro-rx"></block>在 AWS 帳戶中查看這些事件。事件會在 72 小時後移除前顯示。</block>
@@ -2609,8 +2574,6 @@
   <block id="782b2627ed10262abe4e368b33d508dc" category="list-text">在切換複寫之前，請確保所有來源磁碟區均未承載任何資料。</block>
   <block id="dda7c50cacac64812ef938f4d803c3a5" category="list-text">在切換複製之前、請確保來源磁碟區和目標磁碟區之間的資料已同步。</block>
   <block id="882f34227a47a95827c88036c610642f" category="list-text">選擇 *Cut over* 。</block>
-  <block id="7b626244b5e77ec8426207a79760602c" category="inline-link-macro">修改分層原則</block>
-  <block id="10356b2b96c443d8a19edb3095962df2" category="paragraph">切換完成後，來源磁碟區將被刪除，目標磁碟區將變為讀 / 寫狀態。您可以在切換完成後<block ref="3a64959985d458e07b4f09b2f2e0e438" category="inline-link-macro-rx"></block>目標磁碟區。</block>
   <block id="51123444304b31165de4e3a52117437d" category="admonition">複製儲存 VM 資料和組態設定時，無法編輯長期保留。</block>
   <block id="f08a7d33d3e9fe4faf87ad7235d0c02a" category="list-text">一個 FSx for ONTAP 檔案系統和一個內部部署的 ONTAP 系統</block>
   <block id="9b9935ad5969c28de13381a2e512b47c" category="paragraph">注意：</block>
@@ -2623,7 +2586,6 @@
   <block id="3d8f5698e4ea8cae76ec64ff32d1aa8a" category="list-text">人工智慧（AI）和機器學習（ML）：將內部部署 ONTAP 資料複寫到 FSx for ONTAP，並建立 S3 存取點以支援雲端 AI 和 ML 訓練</block>
   <block id="911879fb512486e8b5af8019b65a8205" category="list-text">*啟用清單表*：在磁碟區啟用清單表後，系統會為所有可透過 S3 存取點存取的物件產生元數據，並產生 AWS S3 請求費用。如需詳細資訊，請參閱<block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block>。</block>
   <block id="aa72376768d67d3c8a77216621fb5316" category="paragraph"><block ref="aa72376768d67d3c8a77216621fb5316" category="inline-link-macro-rx"></block></block>
-  <block id="b810156a51d2ff011de686d088c6dcce" category="list-text">孤立設備：顯示是否有連續七天未使用的區塊設備，幫助您有效識別和管理未使用的資源。您可以在此處<block ref="04044e5382e57a877bbf97c227fa9ee4" category="inline-link-macro-rx"></block>。</block>
   <block id="b4faaa513060331f5bb7705e042e49cd" category="list-text">未充分利用的 SSD 容量：檢查 SSD 容量層是否未充分利用，並建議減少 SSD 容量以優化成本。</block>
   <block id="01b065251159f3c3b86f7d49511f1bf7" category="list-text">排程磁碟區備份：Workload Factory 改進了配置建議，並新增了啟用 FSx for ONTAP 備份或 AWS Backup 的選項。FSx for ONTAP 備份會將預設原則套用至檔案系統中的所有磁碟區，建立每日備份，最多可保留 90 天。AWS Backup 可讓您為備份計畫中的每個磁碟區選擇不同的保留期限。</block>
   <block id="9ad8abc81514723f5439d23cac33f67b" category="section-title">Workload Factory 支援 AI 與 ML 使用案例的複寫</block>
@@ -2633,7 +2595,6 @@
   <block id="42fe2ab7947c044bb47fb357526022c2" category="section-title">編輯現有的 S3 存取點</block>
   <block id="33c5aa1872cfcc4e8c7c5850619e6f87" category="paragraph">您可以變更連接到磁碟區的現有 S3 存取點的使用者和使用者類型。您也可以啟用或停用存取點的中繼資料。</block>
   <block id="7525bd4fe22d4a212fea8807fb8d750b" category="inline-link-macro">在 NetApp Workload Factory 編輯 S3 存取端點</block>
-  <block id="88d72467009c25b9669edfef18e21df3" category="paragraph"><block ref="88d72467009c25b9669edfef18e21df3" category="inline-link-macro-rx"></block></block>
   <block id="692b5b6f757e38d7e4d1dd3f957a20f0" category="section-title">新增區塊儲存圖</block>
   <block id="55d6cb6b45d9aaa08c53b22b5ac8a617" category="paragraph">如果您使用區塊儲存，可以查看區塊儲存圖，直觀地了解區塊設備如何連接到節點和 igroup。該圖有助於您理解和管理區塊儲存。</block>
   <block id="e852955e53f52fa18c0de4a24d22f4af" category="inline-link-macro">在 NetApp Workload Factory 中管理區塊儲存</block>
@@ -2652,7 +2613,6 @@
   <block id="3b40a61896ac7bb071b70913553072f1" category="inline-link-macro">管理 FSx for ONTAP 檔案系統的區塊儲存設備</block>
   <block id="72a58cc21323626d7784d44077612a4a" category="paragraph"><block ref="72a58cc21323626d7784d44077612a4a" category="inline-link-macro-rx"></block></block>
   <block id="16f2ae5a8a2de6f12ddc298127a4ddb7" category="list-text">可靠性：SSD 容量臨界值、排程本機快照、排程磁碟區備份、遠端資料複寫，以及長期保留的資料可靠性</block>
-  <block id="b6680821568b93d1977b91f8852a2201" category="list-text">成本優化：儲存效率、資料分層、刪除不必要的快照和備份、非使用中的區塊裝置以及未充分利用的 SSD 容量</block>
   <block id="cfcff7e4ca0a4496f029a99d812c3cb3" category="doc">在 Workload Factory 中手動調整檔案系統容量</block>
   <block id="59f5126fcebfa1b4b592a46994a99827" category="paragraph">當使用量超過您指定的臨界值時，增加 SSD 儲存容量。當您不使用工作集時，減少 SSD 儲存容量以節省成本。</block>
   <block id="eb6c620cfb7e9a2b2d272cbd7de4add5" category="inline-link-macro">啟用自動容量管理</block>
@@ -2702,14 +2662,10 @@
   <block id="d38a17b6c80e0c89c1d9fcf60a993290" category="paragraph">將 S3 存取點附加到 FSx for ONTAP 檔案系統中的 NFS 和 SMB Volume，以便 AWS 服務可以像存取 S3 儲存貯體中的檔案一樣存取它們。附加存取點時，請定義一個唯一 ID，選擇檔案存取類型（UNIX 或 Windows），並新增用於存取授權的使用者名稱。</block>
   <block id="050fbf0b45be1573711ea227653f0c71" category="paragraph">附加 S3 存取點後，它會出現在 AWS Management Console 中，並附有一個唯一的別名。使用此別名作為 AWS 服務（例如 Amazon Bedrock）的 S3 儲存貯體名稱，即可存取 Amazon FSx for NetApp ONTAP 磁碟區中的檔案。</block>
   <block id="5fdffd86a20eb0d0630a1c07876def30" category="paragraph">您可以將多個 S3 存取點連接到單一 FSx for ONTAP 磁碟區，每個存取點都有唯一的存取層級，以連接到多個 AWS 服務。</block>
-  <block id="2b66ddc2a8e489f0bdc3cdbd31ddcb5b" category="list-text">在「磁碟區」標籤中，選擇要管理 S3 存取點的磁碟區的操作選單，然後選擇 *進階操作*，再選擇 *管理 S3 存取點*。</block>
-  <block id="dd3517c1da70fae4b3b5b4c3901aeaef" category="paragraph">當未啟用庫存表時，您可以查看別名、ARN 和 S3 URI 作為存取點詳細資訊。</block>
-  <block id="77bfd97469b79623f26d2442c8591082" category="paragraph">啟用磁碟區的清單表後，您可以查看附加到該磁碟區的現有 S3 存取點的存取點、清單表和表儲存桶詳細資料。系統也會在 AWS Management Console 中提供指向清單表的連結。</block>
   <block id="a0433002dc542bdc0aaeba81d4c088db" category="paragraph">您可以複製存取點詳細資訊以供其他應用程式使用。</block>
   <block id="08995153fcac85dd0ea3390effc2faf7" category="list-text">在「磁碟區」標籤中，選擇要管理 S3 存取點的磁碟區的操作選單，然後選擇 *進階操作*，再選擇 *管理 S3 存取點*。</block>
   <block id="e017a7ea48404bb134394eb7fe78d1af" category="list-text">選擇要刪除的 S3 存取點的動作功能表，然後選取 *Delete* 。</block>
   <block id="95922585c37177ee9b8a541e7e22ca06" category="list-text">在*刪除 S3 存取點*對話方塊中、選取*刪除*以從磁碟區刪除 S3 存取點。</block>
-  <block id="495751a17f4061798aca8d3f98638c0c" category="paragraph">Workload Factory 主控台不會移除中繼資料、但您可以從 AWS Management Console 中移除。</block>
   <block id="4aa1f4ce7ff97e69b143fbe399631234" category="section-title">2026 年 3 月 1 日</block>
   <block id="f9b8d8043e7f357d7b5805e6dfd01b25" category="sidebar">管理區塊儲存設備</block>
   <block id="90fbacfd00a759e142437ac247a4317c" category="sidebar">手動調整檔案系統容量</block>
@@ -2786,4 +2742,264 @@
   <block id="6eb18ebccbf4fe18669aca55778990e0" category="sidebar">管理磁碟區備份排程</block>
   <block id="0961e27231cdfd5dc9ef441903dabe01" category="doc">Amazon FSx for NetApp ONTAP 在 NetApp Workload Factory 中的已知限制</block>
   <block id="b6a0b5ebabfe42c8ed27e9b4c0efda76" category="paragraph">已知限制是指本產品版本不支援或無法與之正確互通的平台、設備或功能。以下限制僅適用於 NetApp Workload Factory 中的 Amazon FSx for NetApp ONTAP。請仔細閱讀這些限制。</block>
+  <block id="373a2f1d901c2d939efc602830f01830" category="paragraph">新的清單表會自動掃描您的 AWS S3 儲存桶，並將資訊填入 S3 表中，從而為您提供所有物件、其元資料、屬性和標籤的清晰概覽。存取這些詳細資訊有助於您保持對所負責資料的控制、可見度和信任度，同時降低維運成本。您可以在建立和附加 S3 存取點時或編輯現有存取點時啟用此功能。</block>
+  <block id="89431b722804b6b5729917d710d8bca9" category="inline-link-macro">在 NetApp Workload Factory 中為一個 volume 建立並附加 S3 存取端點</block>
+  <block id="479e84ecf4496e9113dbf4e4caa47328" category="paragraph"><block ref="479e84ecf4496e9113dbf4e4caa47328" category="inline-link-macro-rx"></block></block>
+  <block id="0695b468968701e6133374525567ebb8" category="list-text">非作用中區塊裝置：顯示是否有任何區塊裝置連續七天未使用，協助您有效識別並管理未使用的資源。您可以從這裡 <block ref="04044e5382e57a877bbf97c227fa9ee4" category="inline-link-macro-rx"></block>。</block>
+  <block id="0ba338e49aa7425a86cae293804b2d70" category="paragraph"><block ref="0ba338e49aa7425a86cae293804b2d70" category="inline-link-macro-rx"></block></block>
+  <block id="97c89cdac712f1b76105f91dee0572f0" category="paragraph">Workload Factory 會分析您的 FSx for ONTAP 檔案系統，尋找*非使用中的 NAS 磁碟區*。組態分析會識別未主動使用的 NAS 磁碟區，並建議採取行動以最佳化儲存使用率並降低成本。</block>
+  <block id="8fed534b92837766d0beda280a6179f0" category="inline-link-macro">為 ONTAP 檔案系統實作架構良好的 FSx</block>
+  <block id="aa9fc3ddfcff516e1422d829fd2d4138" category="paragraph"><block ref="aa9fc3ddfcff516e1422d829fd2d4138" category="inline-link-macro-rx"></block></block>
+  <block id="51d8364219eb8c2bcde5564c48004466" category="section-title">S3 存取點的日誌表功能</block>
+  <block id="5693755c177f4efee6db3867cf164616" category="paragraph">日誌表功能提供了一種大規模管理 FSx ONTAP S3 物件儲存的方法，可讓您輕鬆稽核使用者對儲存貯體中物件的存取事件和操作。使用 Workload Factory，您可以設定儲存貯體和 S3 表的自動掃描，以記錄事件，顯示所有物件、其詳細資訊和使用者操作。</block>
+  <block id="f5605effc9ff1f2b6b56333b91b9188b" category="inline-link-macro">為 NetApp Workload Factory 設定日誌表格基礎架構</block>
+  <block id="15ee03197182e575bb603c90e93b0f1d" category="paragraph"><block ref="15ee03197182e575bb603c90e93b0f1d" category="inline-link-macro-rx"></block></block>
+  <block id="7a492c4bebdd8855719e33759860ec85" category="section-title">支援管理現有 igroup</block>
+  <block id="8770963e84c3458575dd2cb30097ea59" category="paragraph">Workload Factory 支援管理現有的 igroup。您可以新增或移除區塊裝置和主機啟動器、以準時提供已部署的工作負載。</block>
+  <block id="fb848967e18d6d577c43fdac12d36dae" category="section-title">支援指定 FlexVol volume 的 Aggregate</block>
+  <block id="d5df323db0a76ed62a683b9faace70ee" category="paragraph">Workload Factory 支援在選定的 Aggregate 上建立 FlexVol 磁碟區。這樣，您可以將容量和效能負載分散到所有檔案系統資源。</block>
+  <block id="dfe0bf59b17a7c242e3e57ed9983cadf" category="inline-link-macro">在 NetApp Workload Factory 中建立 FlexVol volume</block>
+  <block id="438b9ce1f05f60505d31940eb7d80713" category="paragraph"><block ref="438b9ce1f05f60505d31940eb7d80713" category="inline-link-macro-rx"></block></block>
+  <block id="934fd3399568391e103ee0d773bf954d" category="list-text">*非使用中的 NAS Volume*</block>
+  <block id="ad888b2fc1946f3bc7c47013f4399476" category="paragraph">組態分析會識別未主動使用的 NAS Volume ，並建議刪除或歸檔 Volume 以降低成本。</block>
+  <block id="27bbb381f95a5892aac5e6fa577ad167" category="list-text">*Aggregate 名稱*：選取要託管新磁碟區的 Aggregate 。</block>
+  <block id="bbe174274b18d7c6c98e45b8076c38f3" category="paragraph">切換後，來源儲存 VM 會離線。</block>
+  <block id="aadb221d48ad5912d16ae10d1a2f7515" category="inline-link-macro">修改分層原則</block>
+  <block id="de12e179e610f435272079f58d2c6bf8" category="paragraph"><block ref="7a3d97c05742e0c35a808e39b9ae9bf1" category="inline-link-macro-rx"></block>針對轉換後的目標磁碟區。</block>
+  <block id="9991602752d2f7a5f66a5872be6ec903" category="summary">在 NetApp Workload Factory 中為一個 volume 建立 S3 存取端點。</block>
+  <block id="66c9abf800da7c775d1c85a15372ac8a" category="doc">在 NetApp Workload Factory 中為一個 volume 建立 S3 存取端點</block>
+  <block id="d5f104656aed233be9a593de789bbebd" category="paragraph">在 NetApp Workload Factory 中為磁碟區建立並附加 S3 存取點。</block>
+  <block id="9dcfa34c623752899d0cd665d6921df4" category="paragraph">開始之前、請先完成下列需求。</block>
+  <block id="a3e0a4d34abe4cb6242fd1657cb155d4" category="inline-link-macro">使用 S3 存取點建立磁碟區</block>
+  <block id="6f6ccfdfe231ae2138827786254112c2" category="list-text">您必須擁有一個已存在的包含 S3 存取點的磁碟區。<block ref="c7b581e6d0e133046496fe0baeb0e257" category="inline-link-macro-rx"></block></block>
+  <block id="450d84b08c6958224dd89ed70bc5e196" category="list-text">在 Volumes 標籤中、選取您要使用之磁碟區的動作功能表、然後選取 *Advanced actions*、接著選取 *Manage S3 access points*。</block>
+  <block id="1ab0f92903be1ffc4bfffd2b16c9822b" category="list-text">在「管理 S3 存取點」頁面上、選取 * 建立並附加 S3 存取點 * 。</block>
+  <block id="d4e1585a083abcd993be7dae0c424273" category="list-text">在「建立並連接 S3 存取點」頁面上，提供以下資訊：</block>
+  <block id="8f3e222b23e17bc1bb1082500f8b04e5" category="list-text">*網路組態*：選取 *Internet* 或 *Virtual private cloud (VPC)*。您選擇的網路類型決定了存取點是可從網際網路存取、還是僅限於特定 VPC。若要使用 Journal 表格功能、您必須選取 *Internet* 作為網路組態。</block>
+  <block id="4b0fad635cf8179faf708fd1c02a8c74" category="list-text">*清單表*：選用。需要<block ref="7bc9c2ce1ace9cb69dc8583727298aa5" prefix=" " category="inline-code"></block> 權限。在磁碟區上啟用清單表，即可為所有可透過 S3 存取點存取的物件產生中繼資料，並產生 AWS S3 請求成本。如需詳細資訊，請參閱<block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block>。表格每 24 小時更新一次。</block>
+  <block id="138bd218889d182c485797c551c9e401" category="paragraph">您可以選擇在 Workload Factory 中使用 S3 存取點的日誌表功能。日誌表基礎架構會擷取並儲存 Amazon FSx for ONTAP 磁碟區存取點上的使用者存取事件和物件操作的稽核日誌。若要啟用日誌表功能、您必須設定必要的 AWS 基礎架構、包括 AWS CloudTrail、AWS CloudWatch、AWS S3 儲存桶、AWS CloudWatch 日誌群組、以及 AWS Identity and Access Management（IAM）角色和政策。<block ref="86eb473c6e9139cc69adeb6635c94df0" category="inline-link-macro-rx"></block>。</block>
+  <block id="ded1ddb4cefc23e05b9056875b8f60f2" category="paragraph">其他相關主題：</block>
+  <block id="ce2c045b9972b366e21ce322585243c1" category="inline-link-macro">在 NetApp Workload Factory 中編輯某個 volume 的 S3 存取端點</block>
+  <block id="6ab180dbd7d796cef71ba054a1f9dfbe" category="list-text"><block ref="6ab180dbd7d796cef71ba054a1f9dfbe" category="inline-link-macro-rx"></block></block>
+  <block id="9487230e4f8371a9b9f378d1d39b9ee9" category="inline-link-macro">在 NetApp Workload Factory 中刪除某個 volume 的 S3 存取端點</block>
+  <block id="947655aca5d5b945e754b785894bd687" category="list-text"><block ref="947655aca5d5b945e754b785894bd687" category="inline-link-macro-rx"></block></block>
+  <block id="8a1536ab9b29e8a78ccc890fc9c2f457" category="list-text">_FlexVol volume_ 是 ONTAP 中的一種邏輯儲存類型，可讓您管理資料。FlexVol volume 可以在同一儲存虛擬機器 (SVM) 內的 aggregate 或節點之間移動，而不會中斷用戶端存取。預設會選取 FlexVol volume 樣式。</block>
+  <block id="2725753901ab5f4d4cb3e6f957b07d14" category="list-text">_FlexGroup_ 磁碟區是一種橫向擴展的 NAS 容器，可提供高效能以及自動負載分配和擴充性。它由多個成員磁碟區（組成）組成，這些成員磁碟區是底層 FlexVol 磁碟區，可透明地共享流量。</block>
+  <block id="f5f0f9ccd160bcb2aece2a01ea2af06c" category="paragraph">+ FlexGroup Volume 大小取決於成分數量，每個成分需要 100 GiB。</block>
+  <block id="5c02d2d98076787a0793a0f4e49b2a25" category="list-text">在「進階配置」下，輸入以下詳細資訊。此部分下的欄位會根據您選擇的 Volume 樣式而有所不同。</block>
+  <block id="5695b68c52927a5c6607b4889a131e0c" category="list-text">* Aggregate 名稱 * ：僅適用於 FlexVol Volume 。選取要裝載新 Volume 的 Aggregate 。</block>
+  <block id="c7fd6103a481528ad5b9c60b269f1ab2" category="summary">刪除 NetApp Workload Factory 中某個 volume 的 S3 存取端點。</block>
+  <block id="465c16b78dbf848c4ef504aabfafa05b" category="doc">在 NetApp Workload Factory 中刪除某個 volume 的 S3 存取端點</block>
+  <block id="c2e690e1e88bf68a1329d006ca0abba1" category="paragraph">Workload Factory 不會刪除清單表或日誌表、但您可以從 AWS Management Console 手動移除它們。</block>
+  <block id="601896e24afca68bcb4b7e50c7a3fd9a" category="summary">在 NetApp Workload Factory 中編輯磁碟區的 S3 存取點。</block>
+  <block id="d2352112ab40045cec0375e016ea4229" category="doc">在 NetApp Workload Factory 中編輯某個 volume 的 S3 存取端點</block>
+  <block id="4f2481bead84c7e45263bffec42a080f" category="paragraph">在 NetApp Workload Factory 中更新 S3 存取點詳細資訊並管理磁碟區的標籤。</block>
+  <block id="a2872fa19a103aff070420e355911099" category="paragraph">您也可以啟用或停用存取點的 *Inventory table* 。Inventory table 會為所有可透過 S3 存取點存取的物件產生中繼資料，並產生 AWS S3 請求費用。如需詳細資訊，請參閱 <block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block> 。</block>
+  <block id="fdc1e49b1bc817c660403950b89e1054" category="list-text">在「磁碟區」標籤中、選取您要編輯 S3 存取點之磁碟區的動作功能表、然後選取 *進階動作*、接著選取 *管理 S3 存取點*。</block>
+  <block id="c0945892db5abb8e13b1125b34afb488" category="inline-link-macro">瞭解如何為 NetApp Workload Factory 設定 Journal 資料表基礎架構</block>
+  <block id="ad40f635e61a919e5fb283214c26e631" category="paragraph">若要設定 journal table 功能的基礎架構，您必須選擇 *Internet* 作為 S3 存取點的網路設定。<block ref="4575008aa3349eefa1ff140f7e1ef1a5" category="inline-link-macro-rx"></block>.</block>
+  <block id="bd01d52efa7861fe563eb75b30ae42db" category="list-text">成本最佳化：儲存效率、資料分層、不必要的快照和備份刪除、非作用中區塊裝置、未充分利用的 SSD 容量以及非作用中 NAS 磁碟區</block>
+  <block id="e5eaf9094fc3ae9a063c974472917f15" category="list-text">如果不存在 igroup、請選取 * 對應 igroup &gt; 建立 igroup * 來建立新的 igroup、然後執行下列動作：</block>
+  <block id="cd7bfadfb1480ea2e4e23f8c5b8ec668" category="list-text">如果 igroup 已存在、請選取 * 對應 igroup &gt; 對應現有 igroup* 、以從 igroup 新增或移除區塊裝置和主機啟動器、然後選取 * 對應 * 。</block>
+  <block id="cc3aa8207a3047098fb0a9e50930dc27" category="summary">在 NetApp Workload Factory 中為 S3 存取點設定日誌表基礎架構。</block>
+  <block id="4869b41fa1d8d8c7a4ca3326d581a992" category="doc">為 NetApp Workload Factory 設定 Journal 資料表基礎架構</block>
+  <block id="fb84b838e667358e5556cb53ea951043" category="paragraph">設定日誌表基礎架構，以擷取和儲存 Amazon FSx for ONTAP 磁碟區存取點的使用者存取事件和物件操作的稽核日誌。需要執行多個步驟來設定 AWS 服務的基礎架構，例如 AWS CloudTrail、AWS CloudWatch、AWS S3 儲存桶、AWS CloudWatch 日誌群組、AWS Identity and Access Management (IAM) 和 AWS S3 表，以便日誌事件能夠正確地在管道中傳輸並被 Workload Factory 讀取。</block>
+  <block id="480173409cda6dfbfe14f44d35e908ef" category="paragraph">Journal 表功能可擷取受監控 FSx for ONTAP S3 存取點的 S3 資料平面事件（PutObject、GetObject、DeleteObject 等）。它使用部署到您 AWS 帳戶中的一系列 AWS 服務。正確設定基礎架構後，它會連接到 FSx for ONTAP Volume 存取點，並建立管道，將使用者存取和物件操作稽核事件擷取到 Journal 表中。</block>
+  <block id="3e1f0faf43de8e4b1f92a2dcb1cd6512" category="paragraph">下表列出構成基礎架構一部分的 AWS 服務、其各自的資源名稱模式，以及該服務在管道中的用途。</block>
+  <block id="6ce50df88b622198e679f77e2c9b34f2" category="cell">AWS 服務</block>
+  <block id="a8cf084e0995da67b2530fe5fd33f3eb" category="cell">資源名稱模式</block>
+  <block id="261addf78c7b2c961032b3dd08ba0b1f" category="cell">目的</block>
+  <block id="8679a1944db93938a65e47107be5d2b8" category="cell">AWS CloudFormation</block>
+  <block id="08d96c4fa5b18191111c42c8d3e0fff0" category="cell">netapp-metadata-*</block>
+  <block id="d109a8ce6dc5f1fa8e43b69a51f12dc6" category="cell">將所有基礎架構部署為堆疊</block>
+  <block id="dacc597de1ff25fe3f4c99ddca3ee24e" category="cell">AWS S3 儲存貯體</block>
+  <block id="cdb69dc2853537d31a07fbf7dfab6757" category="cell">netapp-metadata-cloudtrail-events-logs-{uuid}</block>
+  <block id="960ce1851018d0db921178419d194461" category="cell">儲存原始 CloudTrail 日誌檔案</block>
+  <block id="26ca9b29af36f84c577a85a80a58a381" category="cell">AWS CloudTrail</block>
+  <block id="1bf2c526fba25615493648244da21313" category="cell">netapp-metadata-journal-資料-事件-追蹤-{uuid}</block>
+  <block id="66b6d6563a2c7baf57554c386fa898cf" category="cell">擷取特定存取點的 S3 資料事件</block>
+  <block id="54c46974005cb6a579c5f80a0d1f4236" category="cell">AWS CloudWatch 日誌群組</block>
+  <block id="a09d9836c7e975f3fc3dcbf1bd450af3" category="cell">netapp-metadata-journal-資料-事件-{uuid}</block>
+  <block id="7bc3a60483fc66e99b403f789205c302" category="cell">以結構化日誌項目的形式接收 CloudTrail 事件</block>
+  <block id="bef5f130edd0f036b2ca659d3295d5c7" category="cell">IAM 角色</block>
+  <block id="c54e5f47607237dd23ffa87810586d1a" category="list-text">netapp-metadata-cloudtrail-cw-role-{uuid}</block>
+  <block id="884ec9e905762feedf1cbfd3a6cc2a81" category="list-text">netapp-metadata-s3table-integration-role-{uuid}</block>
+  <block id="ed429e87b8f48521ace6c236f70941c6" category="cell">主動整合</block>
+  <block id="0d9f475bc36a861d305105af0c166782" category="cell">ObservabilityAdmin</block>
+  <block id="dbfaee866f5b9a3c2aa7c2a6a2ead2a2" category="cell">S3TableIntegration</block>
+  <block id="f553a2ab7ae4ae018c2e96c7445b107c" category="cell">將 CloudWatch 日誌橋接至 S3 Tables 表格</block>
+  <block id="8fd20e70f8cfe7b4bb7cfbbdab188f28" category="cell">S3 資料表</block>
+  <block id="69a6da8e3057b2fc397a8583020cfbf2" category="cell">aws-cloudwatch 儲存貯體 → logs.aws_cloudtrail__data</block>
+  <block id="bcc7da78895c21f670e81ed8a262f465" category="cell">以 Iceberg 格式儲存結構化、可查詢的 CloudTrail 事件</block>
+  <block id="879dd7a9b77ace45aca7823b176d494e" category="paragraph">{uuid} 是在建立範本時產生的隨機 8 個字元識別碼。</block>
+  <block id="b3cf46a72aa2712b902917aa8edd528b" category="paragraph">若要啟用 Journal 表功能，請完成下列步驟：</block>
+  <block id="7dd5f4cb0a5173bab714471707528207" category="list-text">已存在一個有 S3 存取點的磁碟區。<block ref="c7b581e6d0e133046496fe0baeb0e257" category="inline-link-macro-rx"></block></block>
+  <block id="5bfdf0b458e21e7b279a700232966f84" category="inline-link-macro">編輯 S3 存取點的網路組態</block>
+  <block id="874a559cddbe3d880b3b3f030a4107c5" category="list-text">將網路設定設為 *Internet* 以用於 S3 存取端點。<block ref="d4dbc6ef9541fd6cdb144f928aed07a9" category="inline-link-macro-rx"></block>。</block>
+  <block id="a8679885e73648ab5faedee9828c5b82" category="inline-link-macro">授予 _operations and remediation_ 權限</block>
+  <block id="10265503ad4154aa0d463ede0d207291" category="list-text"><block ref="a7a3720492cd37e2e97b596f29b12116" category="inline-link-macro-rx"></block> 至您的 Workload Factory 認證資料。</block>
+  <block id="72f26542288a74925afe209f90721746" category="list-text">將下列 IAM 政策權限新增至用於執行 CloudFormation 部署以設定 Journal 表的 AWS 帳戶。</block>
+  <block id="8a3af9acf77bc2d1c523769ccfb9d02a" category="example-title">日誌表設定的 IAM 原則權限</block>
+  <block id="4b4299209f4cfca6b0ced53fbb875922" category="section-title">設定日誌表基礎架構</block>
+  <block id="43ec6f35ca2ab03a81f2ea216fb53592" category="paragraph">設定基礎架構，以從 S3 存取點擷取 AWS 服務事件到日誌表中。</block>
+  <block id="6c6bdb9e64962766080b453ac5399c0b" category="list-text">在「編輯 S3 存取點」對話方塊中、確保網路組態設定為「Internet」。</block>
+  <block id="81d0eefd16c03b5f5ec8e749720517e4" category="list-text">依照對話方塊中的說明設定日誌表功能的基礎架構。</block>
+  <block id="99efbd47a50ba6f535a8200791561bb3" category="list-text">下載 CloudFormation 範本。</block>
+  <block id="2f6dabbdb98dce21d04afe199ae5f5ea" category="list-text">在您的 AWS 帳戶中部署 CloudFormation 堆疊。</block>
+  <block id="c1d628e3526732a7df245aa48d5c48a1" category="list-text">將範本 JSON 儲存至檔案。</block>
+  <block id="6933cc8b32b041ef9586d20cb2dcd2e6" category="list-text">使用 AWS CLI 或 AWS Management Console 部署範本。</block>
+  <block id="5cb966e5247c525746877f0025dfe7e6" category="list-text">等待堆疊達到 <block ref="4d1e1d4a1296383246ae7a9a73103a7f" prefix=" " category="inline-code"></block> 狀態。</block>
+  <block id="cf199e47a86606d6a3d6fb37f9b27c49" category="list-text">從堆疊輸出中取得 CloudTrail ARN。</block>
+  <block id="34847192ce0b60124e0f7168d1583693" category="list-text">返回 Workload Factory 主控台，然後回到要管理 S3 存取點的磁碟區。</block>
+  <block id="ce70b2050a1073565c099a6fbd3b065f" category="list-text">從磁碟區動作功能表中選取 *View details*。</block>
+  <block id="9382fbb062e863792dfd15cbe61c84e7" category="list-text">在 *Journal table* 標籤中，輸入 CloudTrail ARN。</block>
+  <block id="adb49c9f19393797db3a880e8a584bdf" category="inline-xref">疑難排解日誌表的基礎架構設定</block>
+  <block id="1e39bd1a00a790bdc9da556553475561" category="paragraph">如果任何步驟失敗，<block ref="e13861f05778285d9b52658ff8c7a4e4" category="inline-xref-macro-rx"></block> 或聯絡 NetApp 支援以尋求協助。</block>
+  <block id="080a5a3e40ce46b4145a580d7b2f73b1" category="section-title">疑難排解日誌表的基礎架構設定</block>
+  <block id="104419ea1730bd4a3aa0c64a52b07bdb" category="paragraph">您可以使用 AWS Management Console 或 AWS CLI 來疑難排解 CloudFormation 堆疊部署及其建立的資源期間發生的故障。</block>
+  <block id="a6e5ed0cef87feff8ebec1aded14f069" category="paragraph">解決問題後，請再次提交 CloudTrail ARN 以重新啟動日誌表設定。</block>
+  <block id="eb3ade3351abab40569af496936c9233" category="section-title">常見的 CloudFormation 部署故障</block>
+  <block id="0dfe55c5ca2a84937a86a09887f27d09" category="section-title">IAM 權限不足</block>
+  <block id="2aa89303e835424a2cbec47a2984fc6d" category="paragraph">部署角色 / 使用者需要一組特定的權限。請參閱 <block ref="3744d798ea179f12a35f01ad2377ca14" category="inline-xref-macro-rx"></block> 以取得完整原則。</block>
+  <block id="ff4581318d257964b332c15c8c5d0203" category="paragraph">如果堆疊失敗並出現<block ref="cbcc0759909213e7cdba1f0cbf253126" prefix=" " category="inline-code"></block>或<block ref="871b8552f8bb64f4bc348f239b580097" prefix=" " category="inline-code"></block>錯誤，請檢查堆疊事件並尋找<block ref="b5d355fec3069ae353fa2ccfd2b7230d" prefix=" " category="inline-code"></block>欄位中缺少的權限。</block>
+  <block id="09b3ca5533ed443e260c98ab00ff3b54" category="section-title">CloudTrail 限制</block>
+  <block id="d4a5bda661968689c309e4b5638b449f" category="paragraph">AWS 預設每個區域最多只能建立 5 條軌跡。如果帳戶已建立 5 條軌跡，<block ref="3dd7fd672908a85d60b0dab857b9aae6" prefix=" " category="inline-code"></block>資源將失敗，並顯示：超出最大軌跡數 (5)。您可以使用以下命令檢查區域層級的軌跡數：</block>
+  <block id="349124f192f2fae86b306946ded74f66" category="list-title">解決選項</block>
+  <block id="a2ebaca53dc16344da545f5f09909cf3" category="list-text">選項 1：刪除該區域中未使用的追蹤以騰出空間。</block>
+  <block id="6cc90dcd18b526d1d0b82f26c13c8001" category="list-text">選項 2：使用現有追蹤。在重新部署 CloudFormation 堆疊之前，請從範本中移除<block ref="42a534cc1039d65526d6e1e32221e571" prefix=" " category="inline-code"></block>、<block ref="0486802ddfa776141e49f23c0da359c3" prefix=" " category="inline-code"></block>、<block ref="3b87876334e530cfca7a489521608c5a" prefix=" " category="inline-code"></block>和<block ref="5a80676cbbbff2ba0a66f1a049a6f4bc" prefix=" " category="inline-code"></block>資源。然後在初始化步驟中傳遞現有追蹤的 ARN。現有追蹤必須配置 CloudWatch Log Group、將 S3TableIntegration 與該 Log Group 建立關聯，並且正在記錄資料事件。</block>
+  <block id="82c0016f5a4395118d57dbad88a0dd78" category="section-title">S3 Table 整合已存在</block>
+  <block id="d76ebd11f350fad0f23d59f8223cb050" category="paragraph">如果帳戶中已經存在 aws_cloudtrail 資料來源的 S3TableIntegration，則 LogsToS3TableIntegration 資源將會失敗。</block>
+  <block id="b5a4b64b2aa505bd7c11f79b8a9f458d" category="paragraph-title">解決方案</block>
+  <block id="31a5513bd3f88e5d174c548c5d2ef475" category="paragraph">在重新部署 CloudFormation 堆疊之前，請從範本中移除<block ref="381eb029c83231e2cd5d11cb6b1263de" prefix=" " category="inline-code"></block>和<block ref="7d656f1698c163699e7ddd7dad92d20d" prefix=" " category="inline-code"></block>資源。只要您為 aws_cloudtrail 資料事件進行設定，系統就會自動使用現有的整合。</block>
+  <block id="aee0800db72b1ecc5f7164b83e954a01" category="paragraph">檢查現有整合：</block>
+  <block id="3895643f8d2c137f3b955c39e2e201da" category="section-title">S3 儲存貯體名稱已存在</block>
+  <block id="5a6ae38ee8f24c3794ec9a0816e9eb69" category="paragraph">儲存桶名稱<block ref="cdb69dc2853537d31a07fbf7dfab6757" prefix=" " category="inline-code"></block>是全域唯一的。如果發生衝突，請重新要求範本以取得新的 UUID。</block>
+  <block id="a0495ad17b794a5010e57547a919c710" category="section-title">IAM 角色已存在</block>
+  <block id="c37edadecc507cdab971e11e67ed8b57" category="paragraph">如果先前的部分部署遺留了 <block ref="08d96c4fa5b18191111c42c8d3e0fff0" prefix=" " category="inline-code"></block> 名稱模式相同的 IAM 角色，則在建立角色時堆疊將失敗。請先刪除這些孤立的角色：</block>
+  <block id="55b93fa687702387be9d297169c296d2" category="section-title">啟用日誌表後發生的故障</block>
+  <block id="881de5afa89439976c3434ce287ec4c2" category="paragraph">提交 CloudTrail ARN 後，Workload Factory 會自動發送 _seed_（或測試）事件來驗證整個資源管道。如果驗證成功，種子事件將到達 S3 Tables 表中。此測試大約需要 10 分鐘。</block>
+  <block id="57ae3dab0bbc63364ba791755305ea7c" category="paragraph">如果測試驗證失敗、您可能會收到下列其中一則錯誤訊息：</block>
+  <block id="e20cbb947afcf84cf58de1358ee1068d" category="cell">錯誤訊息</block>
+  <block id="7277de5f2ed6f17c61f1f25594591a82" category="cell">意義</block>
+  <block id="71d9363aa200e5d6b1483674cbfeae3d" category="cell">表 aws_cloudtrail__data 未在 {bucket} 中建立。請驗證 s3table 權限。</block>
+  <block id="32fece5df4fecfd00ae2b345328ebf70" category="cell">S3TableIntegration 未建立 CloudWatch 管理的表格。CloudWatch Logs 與 S3 Tables 之間的管道已中斷。</block>
+  <block id="668b0fbd371f31b34fd0a515830f7b37" category="cell">表格存在，但日誌種子事件未顯示。請檢查 CloudTrail 和 CloudWatch 權限。</block>
+  <block id="ecbcb2d5385478ad81dabfb0f4ab49ca" category="cell">表格存在，但特定的種子事件從未到達。CloudTrail 與 S3 Tables 表格之間的管道中斷。</block>
+  <block id="09a9ba4aed38541d2db585d9af87ee80" category="cell">無法啟動日誌設定。...</block>
+  <block id="b438b0bb3583c8372563f1600bb752ac" category="cell">背景種子 / 輪詢流程期間發生錯誤。請檢查後續訊息以取得詳細資料。</block>
+  <block id="874aa46aa7bff3cd7406845ddfe7ec3a" category="paragraph-title">解決步驟</block>
+  <block id="97d91b5bc1070913cafc109a679f4010" category="paragraph">當日誌達到 FAILED 時，請透過管道階段向前追蹤種子事件，以確定其確切停止位置。每個步驟都對應至範本建立的特定 AWS 資源。</block>
+  <block id="18a2ae1fb26af8f92d55adc4b65e8290" category="list-text">檢查 CloudTrail S3 儲存桶。</block>
+  <block id="3359efe5d8da87f977eb88c9627599a3" category="paragraph">此追蹤程式會將原始事件日誌寫入 S3 儲存貯體<block ref="fa0a08bf0287e3558d34ed7f39ef0c18" prefix=" " category="inline-code"></block>。請尋找最近的日誌檔案。</block>
+  <block id="74c5d257e55cddf9dc4e42ea5da78be1" category="paragraph">如果沒有日誌檔案，則表示 CloudTrail 沒有捕獲到事件。請檢查以下內容：</block>
+  <block id="a3f42d0fd09319a415334959ee0fdf43" category="list-text">追蹤記錄正在記錄 <block ref="9588023fb5490571cd5e166d4fb845ec" prefix="(" category="inline-code"></block>）</block>
+  <block id="6034fec4ec3760aac22f338aacdf6f80" category="list-text">進階事件選取器包含正確的存取點 ARN</block>
+  <block id="a9d7518dcf9e4b0776909f6ee0d5e277" category="list-text">進階事件選擇器包括<block ref="8c9637acdb24718ffd8530639b23ec2f" prefix=" " category="inline-code"></block>和<block ref="1efcab11a55e39809ed4739b2cad52e6" prefix=" " category="inline-code"></block>的篩選器</block>
+  <block id="a448581897f558c44c39151f81a700cd" category="list-text">檢查 CloudWatch 日誌群組。</block>
+  <block id="69052e40a21cf07938062dc4e53e51b7" category="paragraph">該路徑也會向 CloudWatch Log Group 傳送事件。Log Group 名稱以<block ref="75aaaa6def99fdfbcb66a1f2475e97fd" prefix=" " category="inline-code"></block>開頭。</block>
+  <block id="ce0e87e82f8d4f23d5a4c37389a92104" category="list-text">如果日誌組為空，則 CloudTrail 不會將事件傳遞到 CloudWatch。請檢查<block ref="5a80676cbbbff2ba0a66f1a049a6f4bc" prefix=" " category="inline-code"></block> IAM 角色是否存在並具有<block ref="9294f7e303ba3ddc420e24b7e47eab2c" prefix=" " category="inline-code"></block>和<block ref="3ba3376e55a3bdd26ed9c2519b4b9e6a" prefix=" " category="inline-code"></block>權限，並確保追蹤已使用正確的<block ref="0690e7e714fe324377f54309182bb16b" prefix=" " category="inline-code"></block>和<block ref="6fc05480186b087fe531c37b0a014cec" prefix=" " category="inline-code"></block>進行設定。</block>
+  <block id="64e40540a992f6c227488e364d03ca83" category="list-text">如果種子事件出現在日誌群組中，則問題出在下游 — 繼續執行步驟 3。</block>
+  <block id="28ace9ce6c794d9e4e4720a56ea24e5c" category="list-text">請查看 S3 Tables 表格<block ref="2c2c37985634e28bc5d99984a53d7b37" prefix="(" category="inline-code"></block>）。</block>
+  <block id="d88ed1c5cea3096d335f8ac296b07ad9" category="paragraph">S3TableIntegration 會自動建立一個名為 aws-cloudwatch 的表格儲存桶，並在 logs.aws_cloudtrail__data 中填入一個表格。此表格僅在第一個事件流過後才會建立。</block>
+  <block id="69d1ebe089e7ee7091ba937331471da7" category="list-text">如果 aws-cloudwatch 表格儲存桶不存在，則<block ref="7d656f1698c163699e7ddd7dad92d20d" prefix=" " category="inline-code"></block>缺少權限。它需要<block ref="00246fed3ef66165d3ba3d6bfdd371cc" prefix=" " category="inline-code"></block>、<block ref="82242c740e8fb14071b4907c5f9796aa" prefix=" " category="inline-code"></block>和<block ref="b0a6eb48f73351a252096302ea696228" prefix=" " category="inline-code"></block>— 所有這些權限都限定在<block ref="be3e806fd006ff77fc6f5df51b0b15fc" prefix=" " category="inline-code"></block>範圍內。</block>
+  <block id="4cbe6af7965ecc41148f2f932fa3c00a" category="list-text">如果表格儲存桶存在但<block ref="b1f2a28029574848e2434a748ff62c91" prefix=" " category="inline-code"></block>未顯示，則整合未路由事件。整合必須顯示<block ref="3f8d62dd572d46eacdb644bc7dd5a773" prefix=" " category="inline-code"></block>並將<block ref="2a562909c4995db56ef8bf77c1dd2947" prefix=" " category="inline-code"></block>作為日誌來源。</block>
+  <block id="31f70976094cbc00378315152e208476" category="list-text">如果表存在但種子事件不在其中，則該事件可能仍在傳輸中。S3 Tables 資料導入有一定的延遲。請稍等幾分鐘。如果 15-20 分鐘後仍未出現，則整合可能已中斷。</block>
+  <block id="ccc135431e07764b8b70db477f74d247" category="list-text">直接查詢種子事件。</block>
+  <block id="fd041db7c2772c6b04caa39367714c83" category="list-text">在 AWS Management Console 中開啟 S3 Tables。</block>
+  <block id="ffb4bafe4deefe3efb2537959dd77fc0" category="list-text">導覽至 aws-cloudwatch 表格儲存桶 → aws_cloudtrail__data 表格，然後使用 *Preview* 按鈕直接在瀏覽器中執行快速查詢。</block>
+  <block id="dcbbd0b7f6de94cefc0f1d9997be5055" category="list-text">如果事件已存在於表中，但日誌仍顯示<block ref="b9e14d9b2886bcff408b85aefa780419" prefix=" " category="inline-code"></block>，則可能是輪詢視窗在事件到達之前已過期。</block>
+  <block id="92254d246118fa5399d3859349adf6c6" category="inline-xref">啟動日誌表設定</block>
+  <block id="35d86d167f6b9d35a772dbcf9a7c9f08" category="paragraph">解決問題後，返回 Workload Factory 主控台。再次提交 Trail ARN 以重試 <block ref="c5fcc47ac12a05dd4c0f04f5c2336d01" category="inline-xref-macro-rx"></block>。</block>
+  <block id="b2547e14f7d714181a745f654128a3b3" category="list-text">如果設定仍然失敗，請聯絡 NetApp 支援以尋求協助。</block>
+  <block id="810181631483521b4977c3caefad85b1" category="section-title">日誌表設定的權限參考</block>
+  <block id="0cec117b5b4db2a8973e274cd81d053c" category="paragraph">用於部署 CloudFormation 堆疊以啟用 Journal 表功能的 IAM 角色需要下列權限。請參閱 <block ref="3744d798ea179f12a35f01ad2377ca14" category="inline-xref-macro-rx"></block> 以取得包含所需權限的可複製 JSON 策略。</block>
+  <block id="d0423a5ad6ad03a5309cfb5cebda08c6" category="section-title">堆疊操作</block>
+  <block id="ed5dea09095f671b801bee34ea28a319" category="cell">權限</block>
+  <block id="be8545ae7ab0276e15898aae7acfbd7a" category="cell">資源</block>
+  <block id="91164770fc34b877cc56ccaf61d6eee8" category="cell">為什麼</block>
+  <block id="6ccfab5404f73a6b0bacb222665e72d7" category="cell">cloudformation：CreateStack</block>
+  <block id="5053fe952165ea085a46bcb9738b0ee7" category="cell">arn:aws:cloudformation:*:*:stack/netapp-metadata-*/*</block>
+  <block id="0ce910ff5d5bb901cb52c6d55b780310" category="cell">建立堆疊</block>
+  <block id="f404fc6d0850472807e4fcd86203a313" category="cell">cloudformation：DescribeStacks</block>
+  <block id="3dbc9fe0eeb9cf87ea850bc6f5eff9df" category="cell">監控堆疊狀態</block>
+  <block id="da044dbe1821a39f63f98e823344b062" category="cell">cloudformation：DescribeStackEvents</block>
+  <block id="924fe230741efe6d0c6ec61fa965cfed" category="cell">診斷資源層級故障 cloudformation:GetTemplateSummary * 預檢範本驗證</block>
+  <block id="92fbbd5478621cf8f70624389759b44c" category="section-title">CloudTrail</block>
+  <block id="cea2689ef0cfba4faf16baec914e3c15" category="cell">cloudtrail：CreateTrail</block>
+  <block id="556d5bb69b65d50075a09a028fdc6ee6" category="cell">arn:aws:cloudtrail:*:*:trail/netapp-metadata-*</block>
+  <block id="fba1f9e04005a1c87f4c392c74a06cf0" category="cell">建立追蹤</block>
+  <block id="0d5b0b239bbd6239c00d900ec3ec62fe" category="cell">cloudtrail：StartLogging</block>
+  <block id="c218ee1f0300a1c69a0f97d6d2872fde" category="cell">啟用記錄</block>
+  <block id="4a1eb91814ee961864b614589f0138ef" category="cell">cloudtrail：AddTags</block>
+  <block id="f6b5a2e7a02d0e507846c6b134a09574" category="cell">套用識別標籤</block>
+  <block id="89aa68fffda7d587077f8069ae60e59f" category="cell">cloudtrail：PutEventSelectors</block>
+  <block id="90ba3828cc3d219ca2729b513bca36e5" category="cell">設定資料事件擷取</block>
+  <block id="ec0eeb3f4d79ae881dd378823884b3fa" category="cell">cloudtrail：DescribeTrails</block>
+  <block id="3389dae361af79b04c9c8e7057f60cc6" category="cell">*</block>
+  <block id="641ee695f3b7fd9d4b5a39e82ae7d2c1" category="cell">解析堆疊輸出的追蹤 ARN</block>
+  <block id="e2ab7c65b21ed8cc1c3b642b5e36429e" category="section-title">S3</block>
+  <block id="d0e4bee632dc55607e492853b76d8194" category="cell">s3：CreateBucket</block>
+  <block id="e9ce2b97e7a7127b4ba5bd9ba11548f1" category="cell">arn:aws:s3:::netapp-metadata-*</block>
+  <block id="3b7aa575d0f171a194ad74f241764046" category="cell">建立 CloudTrail 日誌儲存貯體</block>
+  <block id="4b9c42bf1853fa25d534302dbc43f035" category="cell">s3：PutBucketPolicy</block>
+  <block id="f6ff4374754cdfb9764e89358c6f937a" category="cell">允許 CloudTrail 寫入日誌</block>
+  <block id="f7e22455b86c7ea94ba86cc949d37161" category="cell">s3：PutBucketTagging</block>
+  <block id="41dff7155cc7aeb11c06434f6a450bb3" category="section-title">IAM</block>
+  <block id="3b8d1aa9f2727ee5948e48b70e7ea00b" category="cell">iam：CreateRole</block>
+  <block id="9437ab907170f0c3bc599aca914b6164" category="cell">arn:aws:iam::*:role/netapp-metadata-*</block>
+  <block id="9bdb3bfe2aa8daa3a7d0ae0042ae07ae" category="cell">建立兩個 IAM 角色</block>
+  <block id="a6e64d0684dcf803ad58d40684383bb9" category="cell">iam：PutRolePolicy</block>
+  <block id="6c909cd008777d24aebff08499a3146b" category="cell">附加內嵌原則</block>
+  <block id="7f862a4b8fc22b0af5dda5c9ababa346" category="cell">iam：TagRole</block>
+  <block id="9dcf380856979ca5b723d30e996e1f95" category="cell">iam：GetRole</block>
+  <block id="5a75ea23f120d0e764f419a06826ac37" category="cell">確認角色處於作用中狀態</block>
+  <block id="f6ae0a8a1321975a6474722dcafe1322" category="cell">iam：PassRole</block>
+  <block id="861c0a280cc43cd23d3971f9ac4a1cb0" category="cell">arn:aws:iam::*:role/netapp-metadata-* （條件： PassedToService = cloudtrail.amazonaws.com 、 logs.amazonaws.com ）</block>
+  <block id="5000d87838eb7e94d812ed5f6d18896c" category="cell">傳遞角色至 CloudTrail 和 CloudWatch Logs</block>
+  <block id="a8c600be214ced26950e704d39c3ca21" category="section-title">CloudWatch 日誌</block>
+  <block id="4011ea392d4bd2f3136eea1bbb00683d" category="cell">日誌：CreateLogGroup</block>
+  <block id="ba643d240ea518faad40426a1f54ef42" category="cell">arn:aws:logs:*:*:log-group:netapp-metadata-*</block>
+  <block id="8fa369fb6ddf5fdad9cc1d944b8a818b" category="cell">建立日誌群組</block>
+  <block id="7a9b9ad62305b466cf303f08fa08127f" category="cell">日誌:DeleteLogGroup</block>
+  <block id="2a5778b1dcf8d129409861f984d9b3cb" category="cell">如果建立失敗，請清理日誌群組</block>
+  <block id="9c72603737d6e2074ae7fab048b5d3d1" category="cell">日誌：PutRetentionPolicy</block>
+  <block id="c74bf2009d8f729c1aa55fdf8dfaa80c" category="cell">設定 30 天保留期</block>
+  <block id="dc344e1b51ae9e5aff7a5efaf286df5a" category="cell">日誌：TagResource</block>
+  <block id="5ed87b55605578a6bca78a049d6afb0f" category="cell">logs:AssociateSourceToS3TableIntegration</block>
+  <block id="aa5547149267bde3159275741ad451a4" category="cell">將 CloudTrail 來源連結至 S3 Tables</block>
+  <block id="99a70cb6d5b807589a0a1aa9bbcfea7d" category="cell">日誌：DescribeLogGroups</block>
+  <block id="498608f8d83df246026e7cd4bb58df5e" category="cell">檢查日誌群組是否存在</block>
+  <block id="069eff0bd2f373ac9bbcdfbfa4931470" category="cell">logs:ListSourcesForS3TableIntegration</block>
+  <block id="64d515eca6e1dbad68b5cae6d11ad480" category="cell">確認整合關聯</block>
+  <block id="95afe0df7096b504cd3d5d80bd97eb75" category="cell">observabilityadmin:CreateS3TableIntegration</block>
+  <block id="6a825d68a19916ea8e00b8e3abef5385" category="cell">建立 CloudWatch → S3 Tables 橋接器</block>
+  <block id="2175594d7fe808b3bdd968869b5bc7c7" category="cell">observabilityadmin:GetS3TableIntegration</block>
+  <block id="be2f330d2e5db93e954568e0985de050" category="cell">確認整合已啟動</block>
+  <block id="6d4aadc33145ce0baf8ff11f6fb18474" category="cell">observabilityadmin：TagResource</block>
+  <block id="127621ab6b40d381b424cf9ede76795c" category="cell">observabilityadmin：ListTagsForResource</block>
+  <block id="d2bf8d4292916f6760d456561e3ed9b8" category="cell">漂移偵測</block>
+  <block id="00246fed3ef66165d3ba3d6bfdd371cc" category="cell">s3tables：CreateTableBucket</block>
+  <block id="be3e806fd006ff77fc6f5df51b0b15fc" category="cell">arn:aws:s3tables:*:*:bucket/aws-cloudwatch</block>
+  <block id="e627f0f312d7a03630a01f865738f445" category="cell">建立 S3 Tables 儲存貯體（透過整合角色）</block>
+  <block id="82242c740e8fb14071b4907c5f9796aa" category="cell">s3tables：PutTableBucketEncryption</block>
+  <block id="4da06b5b2b57a157e92fb5c3213bbf50" category="cell">設定 AES256 加密</block>
+  <block id="b0a6eb48f73351a252096302ea696228" category="cell">s3tables：PutTableBucketPolicy</block>
+  <block id="b1ad085edd3140c672ff2109d9242452" category="cell">允許 CloudWatch Logs 存取</block>
+  <block id="4d565cafb7f83c16708d52b5ab6f97af" category="summary">在 NetApp Workload Factory 中檢視磁碟區的 S3 存取點詳細資訊。</block>
+  <block id="0508a20ce5214e259576cd4e33683ed1" category="doc">在 NetApp Workload Factory 中檢視某個磁碟區的 S3 存取端點詳細資料</block>
+  <block id="b83eea7e75edc796e98ee57692e03801" category="paragraph">查看 S3 存取點詳細資訊，例如別名、ARN 和 S3 URI。啟用清單和日誌表後，您可以查看跨 S3 存取點的使用者存取事件和物件操作的中繼資料和稽核記錄。</block>
+  <block id="cf3c11cd7ad93f5d574a0699e780188f" category="paragraph">啟用磁碟區的清單表後，您可以查看連接到該磁碟區的現有 S3 存取點的存取點、清單表和表儲存桶詳細資料。系統也會在 AWS Management Console 中提供指向清單表的連結。</block>
+  <block id="5a8fb625347b548bdba1297afcb24588" category="paragraph">啟用日誌表後，Workload Factory 會在表格中產生存取點的日誌供您參考。此表格包含 CloudTrail 事件、追蹤（AWS 活動記錄）、CloudTrail 篩選器、CloudWatch 日誌群組等資訊。</block>
+  <block id="b7371f693c4933ae68bcd3c1e54d8f2c" category="list-text">從 *FSx for ONTAP* 中選擇包含要檢視詳細資料之磁碟區的檔案系統。</block>
+  <block id="595b711bbed1bfb14aeeae9906c0c67a" category="list-text">從「磁碟區」索引標籤中，選取要檢視詳細資料之磁碟區的動作功能表，然後選取 *進階動作*，接著選取 *檢視詳細資料*。</block>
+  <block id="9f4713f4c145950631eb9253132c7ada" category="paragraph">詳細資訊顯示在四個標籤下：* Access point *、* Inventory table *、* Journal table * 和 * Table bucket *。</block>
+  <block id="4b00d53749c72d6e6e220e24c308c29e" category="list-text">如果庫存表或日記帳表的狀態已啟用，但您缺少 <block ref="c38e323a00a79423dcc6c063c22b63fc" prefix=" " category="inline-code"></block> 權限，請依照對話方塊中的指示新增所需的權限。</block>
+  <block id="9b2b2c4b41fe590fbaaf09e74f892891" category="list-text">當日誌表狀態為「待處理」時，您必須提供 CloudTrail ARN 才能將日誌表連接到已建立的基礎架構。請依照說明使用 AWS CLI 或 AWS 管理控制台部署 CloudFormation 堆疊，然後返回 Workload Factory 控制台輸入 CloudTrail ARN。</block>
+  <block id="372a7f52608ee07741b6f86a497e9fd1" category="inline-link-macro">在 NetApp Workload Factory 中設定日誌表基礎架構並疑難排解日誌表的設定問題。</block>
+  <block id="f33f64df042b527511c8608dc9749078" category="list-text"><block ref="f33f64df042b527511c8608dc9749078" category="inline-link-macro-rx"></block></block>
+  <block id="7f65119c79afd09b7f99936d13e97909" category="section-title">2026 年 4 月 6 日</block>
+  <block id="df9cb9b9a707c3ace18761ef83751ee6" category="sidebar">建立並連接 S3 存取點</block>
+  <block id="087b2bf3ee9925d6feea388b7dfd398a" category="sidebar">編輯 S3 存取點</block>
+  <block id="462be4711361458eea73842ce954eb91" category="sidebar">檢視有關 S3 存取點的詳細資訊</block>
+  <block id="bc8efabe5bb393ec04bcc82dbbfe36c2" category="sidebar">刪除 S3 存取點</block>
 </blocks>

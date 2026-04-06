@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: view-s3-details.html 
+keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
+summary: 在 NetApp Workload Factory 中檢視磁碟區的 S3 存取點詳細資訊。 
+---
+= 在 NetApp Workload Factory 中檢視某個磁碟區的 S3 存取端點詳細資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+查看 S3 存取點詳細資訊，例如別名、ARN 和 S3 URI。啟用清單和日誌表後，您可以查看跨 S3 存取點的使用者存取事件和物件操作的中繼資料和稽核記錄。
+
+.關於這項工作
+啟用磁碟區的清單表後，您可以查看連接到該磁碟區的現有 S3 存取點的存取點、清單表和表儲存桶詳細資料。系統也會在 AWS Management Console 中提供指向清單表的連結。
+
+啟用日誌表後，Workload Factory 會在表格中產生存取點的日誌供您參考。此表格包含 CloudTrail 事件、追蹤（AWS 活動記錄）、CloudTrail 篩選器、CloudWatch 日誌群組等資訊。
+
+您可以複製存取點詳細資訊以供其他應用程式使用。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選擇包含要檢視詳細資料之磁碟區的檔案系統。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 從「磁碟區」索引標籤中，選取要檢視詳細資料之磁碟區的動作功能表，然後選取 *進階動作*，接著選取 *檢視詳細資料*。
++
+詳細資訊顯示在四個標籤下：* Access point *、* Inventory table *、* Journal table * 和 * Table bucket *。
+
+. 如果庫存表或日記帳表的狀態已啟用，但您缺少  `get:Object` 權限，請依照對話方塊中的指示新增所需的權限。
+. 當日誌表狀態為「待處理」時，您必須提供 CloudTrail ARN 才能將日誌表連接到已建立的基礎架構。請依照說明使用 AWS CLI 或 AWS 管理控制台部署 CloudFormation 堆疊，然後返回 Workload Factory 控制台輸入 CloudTrail ARN。
+
+
+.相關資訊
+* link:setup-journal-table.html["在 NetApp Workload Factory 中設定日誌表基礎架構並疑難排解日誌表的設定問題。"]
+

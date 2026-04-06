@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: create-s3-access-points.html 
+keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
+summary: 在 NetApp Workload Factory 中為一個 volume 建立 S3 存取端點。 
+---
+= 在 NetApp Workload Factory 中為一個 volume 建立 S3 存取端點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Workload Factory 中為磁碟區建立並附加 S3 存取點。
+
+.關於這項工作
+Amazon FSx for NetApp ONTAP 允許 NFS 和 SMB 檔案系統存取 S3 資料，並連接到 Amazon Bedrock、SageMaker、Athena、AWS Glue 等 AWS 服務。您可以將 AWS 服務連接到所有物件儲存資料。
+
+將 S3 存取點附加到 FSx for ONTAP 檔案系統中的 NFS 和 SMB Volume，以便 AWS 服務可以像存取 S3 儲存貯體中的檔案一樣存取它們。附加存取點時，請定義一個唯一 ID，選擇檔案存取類型（UNIX 或 Windows），並新增用於存取授權的使用者名稱。
+
+附加 S3 存取點後，它會出現在 AWS Management Console 中，並附有一個唯一的別名。使用此別名作為 AWS 服務（例如 Amazon Bedrock）的 S3 儲存貯體名稱，即可存取 Amazon FSx for NetApp ONTAP 磁碟區中的檔案。
+
+您可以將多個 S3 存取點連接到單一 FSx for ONTAP 磁碟區，每個存取點都有唯一的存取層級，以連接到多個 AWS 服務。
+
+.開始之前
+開始之前、請先完成下列需求。
+
+* 您必須擁有一個已存在的包含 S3 存取點的磁碟區。link:create-volume.html["使用 S3 存取點建立磁碟區"]
+* 您必須在 Workload Factory 中link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["使用 _operations and remediation_ 權限原則授予認證"^]完成此任務。
+
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇包含要更新之磁碟區的檔案系統。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 在 Volumes 標籤中、選取您要使用之磁碟區的動作功能表、然後選取 *Advanced actions*、接著選取 *Manage S3 access points*。
+. 在「管理 S3 存取點」頁面上、選取 * 建立並附加 S3 存取點 * 。
+. 在「建立並連接 S3 存取點」頁面上，提供以下資訊：
++
+** *S3接入點名稱*：輸入S3接入點的名稱。
+** *使用者*：選擇有權存取該磁碟區的現有使用者或建立新使用者。
+** *使用者類型*：選擇*UNIX*或*Windows*作為使用者類型。
+** *網路組態*：選取 *Internet* 或 *Virtual private cloud (VPC)*。您選擇的網路類型決定了存取點是可從網際網路存取、還是僅限於特定 VPC。若要使用 Journal 表格功能、您必須選取 *Internet* 作為網路組態。
+** *清單表*：選用。需要 `getObject` 權限。在磁碟區上啟用清單表，即可為所有可透過 S3 存取點存取的物件產生中繼資料，並產生 AWS S3 請求成本。如需詳細資訊，請參閱link:https://aws.amazon.com/s3/pricing/["Amazon S3 定價文件"^]。表格每 24 小時更新一次。
+** *S3 存取點標籤*：您可以選擇新增最多 50 個標籤或移除標籤。
+
+
+. 選擇* Create *（建立*）。
+
+
+.相關資訊
+您可以選擇在 Workload Factory 中使用 S3 存取點的日誌表功能。日誌表基礎架構會擷取並儲存 Amazon FSx for ONTAP 磁碟區存取點上的使用者存取事件和物件操作的稽核日誌。若要啟用日誌表功能、您必須設定必要的 AWS 基礎架構、包括 AWS CloudTrail、AWS CloudWatch、AWS S3 儲存桶、AWS CloudWatch 日誌群組、以及 AWS Identity and Access Management（IAM）角色和政策。link:setup-journal-table.adoc["為 NetApp Workload Factory 設定日誌表格基礎架構"^]。
+
+其他相關主題：
+
+* link:edit-s3-access-points.html["在 NetApp Workload Factory 中編輯某個 volume 的 S3 存取端點"]
+* link:delete-s3-access-points.html["在 NetApp Workload Factory 中刪除某個 volume 的 S3 存取端點"]
+

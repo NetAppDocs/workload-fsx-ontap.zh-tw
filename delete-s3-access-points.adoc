@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: delete-s3-access-points.html 
+keywords: S3, s3, access points, delete access points, remove access points 
+summary: 刪除 NetApp Workload Factory 中某個 volume 的 S3 存取端點。 
+---
+= 在 NetApp Workload Factory 中刪除某個 volume 的 S3 存取端點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+從 NetApp Workload Factory 的一個磁碟區中刪除現有的 S3 存取端點。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選擇要更新的磁碟區的檔案系統的操作選單，然後選擇 *管理*。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 在「磁碟區」標籤中，選擇要管理 S3 存取點的磁碟區的操作選單，然後選擇 *進階操作*，再選擇 *管理 S3 存取點*。
+. 選擇要刪除的 S3 存取點的動作功能表，然後選取 *Delete* 。
+. 在*刪除 S3 存取點*對話方塊中、選取*刪除*以從磁碟區刪除 S3 存取點。
++
+Workload Factory 不會刪除清單表或日誌表、但您可以從 AWS Management Console 手動移除它們。
+
+
