@@ -370,7 +370,6 @@
   <block id="42812c21ac1eee37a9ac12cf59634ce6" category="paragraph">初始化會執行 _baseline 傳輸：它會建立來源磁碟區的快照、然後將快照及其參照的所有資料區塊傳輸至目標磁碟區。</block>
   <block id="8ab8abb2ddeeba17b40c9c83b7345674" category="paragraph">選擇完成此作業時請考慮。初始化可能會很耗時。您可能想要在非尖峰時間執行基準傳輸。</block>
   <block id="18e73e557ecb75c57d1d16ca781cbfbe" category="list-text">選擇 * 初始化 * 。</block>
-  <block id="1eba71d64e6c5e410e558530711e835b" category="summary">已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。請仔細檢閱這些限制。</block>
   <block id="482723983a4f2af954e36ff41e567451" category="doc">已知限制</block>
   <block id="488044172f20eab904aecc2827c019b4" category="section-title">處理量容量區域支援</block>
   <block id="0a27e957ebaf89bce02c66c147da7966" category="section-title">橫向擴充部署</block>
@@ -710,7 +709,6 @@
   <block id="d7b5ef3710c50092f6633bb1e66a1561" category="paragraph">如果您想要切換至適用於 ONTAP 的 FSX 以節省成本，請選取 * 建立 * ，直接從「建立適用於 ONTAP 檔案系統的 FSX 」精靈建立檔案系統，或選取 * 儲存 * 來儲存建議的組態以供稍後使用。</block>
   <block id="0e42938784ca54b8dc455284578841f0" category="list-text">在「初始化關係」對話方塊中，選取 * 初始化 * 。</block>
   <block id="478b776fc28a60e8545a858eb7ca9a3e" category="summary">已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。</block>
-  <block id="bd2e4cb8c94783198db1a525a87ae34a" category="doc">Amazon FSX for NetApp ONTAP 的已知限制</block>
   <block id="384c5c520d0877aaaaed76d75d973d99" category="list-text">* 儲存成本比較計算機 * ：將 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和適用於 Windows 檔案伺服器的 FSX 儲存成本與適用於 ONTAP 的 FSX 進行比較。從計算機中、您可以檢視適用於 ONTAP 儲存組態的 FSX 如何節省成本、並規劃移轉至適用於 ONTAP 儲存設備的 FSX 。</block>
   <block id="f6858e5eadd0ed940450d85121838545" category="list-text">* 工作負載工廠使用者介面 * ：提供 _ 快速建立 _ 和 _ 進階建立 _ 部署模式選項。快速建立包括 AWS 、 NetApp 、以及適用於您儲存組態的業界標準最佳實務做法。</block>
   <block id="53fe87832fd05bf7a8e9f1e1bad4aa86" category="doc">管理適用於 ONTAP 檔案系統的 FSX 備份排程</block>
@@ -2786,4 +2784,6 @@
   <block id="8650af0fa3c7b902ba6a94894d28c472" category="list-text">在 *Volume backups* 對話方塊中，提供以下資訊：</block>
   <block id="5e9b88efcc8c9692790f512327a22476" category="list-text">選擇 *Data protection actions* 、 *Volume backups* ，然後選擇 *Restore from a backup* 。</block>
   <block id="6eb18ebccbf4fe18669aca55778990e0" category="sidebar">管理磁碟區備份排程</block>
+  <block id="0961e27231cdfd5dc9ef441903dabe01" category="doc">Amazon FSx for NetApp ONTAP 在 NetApp Workload Factory 中的已知限制</block>
+  <block id="b6a0b5ebabfe42c8ed27e9b4c0efda76" category="paragraph">已知限制是指本產品版本不支援或無法與之正確互通的平台、設備或功能。以下限制僅適用於 NetApp Workload Factory 中的 Amazon FSx for NetApp ONTAP。請仔細閱讀這些限制。</block>
 </blocks>

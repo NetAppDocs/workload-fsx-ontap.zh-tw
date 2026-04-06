@@ -4,14 +4,14 @@ permalink: known-limitations.html
 keywords: limitations, fsx, ontap 
 summary: 已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。 
 ---
-= Amazon FSX for NetApp ONTAP 的已知限制
+= Amazon FSx for NetApp ONTAP 在 NetApp Workload Factory 中的已知限制
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。請仔細檢閱這些限制。
+已知限制是指本產品版本不支援或無法與之正確互通的平台、設備或功能。以下限制僅適用於 NetApp Workload Factory 中的 Amazon FSx for NetApp ONTAP。請仔細閱讀這些限制。
 
 
 
