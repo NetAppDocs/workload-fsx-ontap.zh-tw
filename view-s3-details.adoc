@@ -35,5 +35,5 @@ summary: 在 NetApp Workload Factory 中檢視磁碟區的 S3 存取點詳細資
 
 
 .相關資訊
-* link:setup-journal-table.html["在 NetApp Workload Factory 中設定日誌表基礎架構並疑難排解日誌表的設定問題。"]
+* link:setup-journal-table.html["設定日誌表基礎架構"]
 

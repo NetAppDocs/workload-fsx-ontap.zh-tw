@@ -2744,7 +2744,6 @@
   <block id="b6a0b5ebabfe42c8ed27e9b4c0efda76" category="paragraph">已知限制是指本產品版本不支援或無法與之正確互通的平台、設備或功能。以下限制僅適用於 NetApp Workload Factory 中的 Amazon FSx for NetApp ONTAP。請仔細閱讀這些限制。</block>
   <block id="373a2f1d901c2d939efc602830f01830" category="paragraph">新的清單表會自動掃描您的 AWS S3 儲存桶，並將資訊填入 S3 表中，從而為您提供所有物件、其元資料、屬性和標籤的清晰概覽。存取這些詳細資訊有助於您保持對所負責資料的控制、可見度和信任度，同時降低維運成本。您可以在建立和附加 S3 存取點時或編輯現有存取點時啟用此功能。</block>
   <block id="89431b722804b6b5729917d710d8bca9" category="inline-link-macro">在 NetApp Workload Factory 中為一個 volume 建立並附加 S3 存取端點</block>
-  <block id="479e84ecf4496e9113dbf4e4caa47328" category="paragraph"><block ref="479e84ecf4496e9113dbf4e4caa47328" category="inline-link-macro-rx"></block></block>
   <block id="0695b468968701e6133374525567ebb8" category="list-text">非作用中區塊裝置：顯示是否有任何區塊裝置連續七天未使用，協助您有效識別並管理未使用的資源。您可以從這裡 <block ref="04044e5382e57a877bbf97c227fa9ee4" category="inline-link-macro-rx"></block>。</block>
   <block id="0ba338e49aa7425a86cae293804b2d70" category="paragraph"><block ref="0ba338e49aa7425a86cae293804b2d70" category="inline-link-macro-rx"></block></block>
   <block id="97c89cdac712f1b76105f91dee0572f0" category="paragraph">Workload Factory 會分析您的 FSx for ONTAP 檔案系統，尋找*非使用中的 NAS 磁碟區*。組態分析會識別未主動使用的 NAS 磁碟區，並建議採取行動以最佳化儲存使用率並降低成本。</block>
@@ -2777,7 +2776,6 @@
   <block id="d4e1585a083abcd993be7dae0c424273" category="list-text">在「建立並連接 S3 存取點」頁面上，提供以下資訊：</block>
   <block id="8f3e222b23e17bc1bb1082500f8b04e5" category="list-text">*網路組態*：選取 *Internet* 或 *Virtual private cloud (VPC)*。您選擇的網路類型決定了存取點是可從網際網路存取、還是僅限於特定 VPC。若要使用 Journal 表格功能、您必須選取 *Internet* 作為網路組態。</block>
   <block id="4b0fad635cf8179faf708fd1c02a8c74" category="list-text">*清單表*：選用。需要<block ref="7bc9c2ce1ace9cb69dc8583727298aa5" prefix=" " category="inline-code"></block> 權限。在磁碟區上啟用清單表，即可為所有可透過 S3 存取點存取的物件產生中繼資料，並產生 AWS S3 請求成本。如需詳細資訊，請參閱<block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block>。表格每 24 小時更新一次。</block>
-  <block id="138bd218889d182c485797c551c9e401" category="paragraph">您可以選擇在 Workload Factory 中使用 S3 存取點的日誌表功能。日誌表基礎架構會擷取並儲存 Amazon FSx for ONTAP 磁碟區存取點上的使用者存取事件和物件操作的稽核日誌。若要啟用日誌表功能、您必須設定必要的 AWS 基礎架構、包括 AWS CloudTrail、AWS CloudWatch、AWS S3 儲存桶、AWS CloudWatch 日誌群組、以及 AWS Identity and Access Management（IAM）角色和政策。<block ref="86eb473c6e9139cc69adeb6635c94df0" category="inline-link-macro-rx"></block>。</block>
   <block id="ded1ddb4cefc23e05b9056875b8f60f2" category="paragraph">其他相關主題：</block>
   <block id="ce2c045b9972b366e21ce322585243c1" category="inline-link-macro">在 NetApp Workload Factory 中編輯某個 volume 的 S3 存取端點</block>
   <block id="6ab180dbd7d796cef71ba054a1f9dfbe" category="list-text"><block ref="6ab180dbd7d796cef71ba054a1f9dfbe" category="inline-link-macro-rx"></block></block>
@@ -2797,7 +2795,6 @@
   <block id="a2872fa19a103aff070420e355911099" category="paragraph">您也可以啟用或停用存取點的 *Inventory table* 。Inventory table 會為所有可透過 S3 存取點存取的物件產生中繼資料，並產生 AWS S3 請求費用。如需詳細資訊，請參閱 <block ref="af9c8757ba81fcc825b028513d05dce7" category="inline-link-macro-rx"></block> 。</block>
   <block id="fdc1e49b1bc817c660403950b89e1054" category="list-text">在「磁碟區」標籤中、選取您要編輯 S3 存取點之磁碟區的動作功能表、然後選取 *進階動作*、接著選取 *管理 S3 存取點*。</block>
   <block id="c0945892db5abb8e13b1125b34afb488" category="inline-link-macro">瞭解如何為 NetApp Workload Factory 設定 Journal 資料表基礎架構</block>
-  <block id="ad40f635e61a919e5fb283214c26e631" category="paragraph">若要設定 journal table 功能的基礎架構，您必須選擇 *Internet* 作為 S3 存取點的網路設定。<block ref="4575008aa3349eefa1ff140f7e1ef1a5" category="inline-link-macro-rx"></block>.</block>
   <block id="bd01d52efa7861fe563eb75b30ae42db" category="list-text">成本最佳化：儲存效率、資料分層、不必要的快照和備份刪除、非作用中區塊裝置、未充分利用的 SSD 容量以及非作用中 NAS 磁碟區</block>
   <block id="e5eaf9094fc3ae9a063c974472917f15" category="list-text">如果不存在 igroup、請選取 * 對應 igroup &gt; 建立 igroup * 來建立新的 igroup、然後執行下列動作：</block>
   <block id="cd7bfadfb1480ea2e4e23f8c5b8ec668" category="list-text">如果 igroup 已存在、請選取 * 對應 igroup &gt; 對應現有 igroup* 、以從 igroup 新增或移除區塊裝置和主機啟動器、然後選取 * 對應 * 。</block>
@@ -2835,7 +2832,6 @@
   <block id="b3cf46a72aa2712b902917aa8edd528b" category="paragraph">若要啟用 Journal 表功能，請完成下列步驟：</block>
   <block id="7dd5f4cb0a5173bab714471707528207" category="list-text">已存在一個有 S3 存取點的磁碟區。<block ref="c7b581e6d0e133046496fe0baeb0e257" category="inline-link-macro-rx"></block></block>
   <block id="5bfdf0b458e21e7b279a700232966f84" category="inline-link-macro">編輯 S3 存取點的網路組態</block>
-  <block id="874a559cddbe3d880b3b3f030a4107c5" category="list-text">將網路設定設為 *Internet* 以用於 S3 存取端點。<block ref="d4dbc6ef9541fd6cdb144f928aed07a9" category="inline-link-macro-rx"></block>。</block>
   <block id="a8679885e73648ab5faedee9828c5b82" category="inline-link-macro">授予 _operations and remediation_ 權限</block>
   <block id="10265503ad4154aa0d463ede0d207291" category="list-text"><block ref="a7a3720492cd37e2e97b596f29b12116" category="inline-link-macro-rx"></block> 至您的 Workload Factory 認證資料。</block>
   <block id="72f26542288a74925afe209f90721746" category="list-text">將下列 IAM 政策權限新增至用於執行 CloudFormation 部署以設定 Journal 表的 AWS 帳戶。</block>
@@ -2854,7 +2850,6 @@
   <block id="ce70b2050a1073565c099a6fbd3b065f" category="list-text">從磁碟區動作功能表中選取 *View details*。</block>
   <block id="9382fbb062e863792dfd15cbe61c84e7" category="list-text">在 *Journal table* 標籤中，輸入 CloudTrail ARN。</block>
   <block id="adb49c9f19393797db3a880e8a584bdf" category="inline-xref">疑難排解日誌表的基礎架構設定</block>
-  <block id="1e39bd1a00a790bdc9da556553475561" category="paragraph">如果任何步驟失敗，<block ref="e13861f05778285d9b52658ff8c7a4e4" category="inline-xref-macro-rx"></block> 或聯絡 NetApp 支援以尋求協助。</block>
   <block id="080a5a3e40ce46b4145a580d7b2f73b1" category="section-title">疑難排解日誌表的基礎架構設定</block>
   <block id="104419ea1730bd4a3aa0c64a52b07bdb" category="paragraph">您可以使用 AWS Management Console 或 AWS CLI 來疑難排解 CloudFormation 堆疊部署及其建立的資源期間發生的故障。</block>
   <block id="a6e5ed0cef87feff8ebec1aded14f069" category="paragraph">解決問題後，請再次提交 CloudTrail ARN 以重新啟動日誌表設定。</block>
@@ -2995,11 +2990,15 @@
   <block id="9f4713f4c145950631eb9253132c7ada" category="paragraph">詳細資訊顯示在四個標籤下：* Access point *、* Inventory table *、* Journal table * 和 * Table bucket *。</block>
   <block id="4b00d53749c72d6e6e220e24c308c29e" category="list-text">如果庫存表或日記帳表的狀態已啟用，但您缺少 <block ref="c38e323a00a79423dcc6c063c22b63fc" prefix=" " category="inline-code"></block> 權限，請依照對話方塊中的指示新增所需的權限。</block>
   <block id="9b2b2c4b41fe590fbaaf09e74f892891" category="list-text">當日誌表狀態為「待處理」時，您必須提供 CloudTrail ARN 才能將日誌表連接到已建立的基礎架構。請依照說明使用 AWS CLI 或 AWS 管理控制台部署 CloudFormation 堆疊，然後返回 Workload Factory 控制台輸入 CloudTrail ARN。</block>
-  <block id="372a7f52608ee07741b6f86a497e9fd1" category="inline-link-macro">在 NetApp Workload Factory 中設定日誌表基礎架構並疑難排解日誌表的設定問題。</block>
-  <block id="f33f64df042b527511c8608dc9749078" category="list-text"><block ref="f33f64df042b527511c8608dc9749078" category="inline-link-macro-rx"></block></block>
   <block id="7f65119c79afd09b7f99936d13e97909" category="section-title">2026 年 4 月 6 日</block>
   <block id="df9cb9b9a707c3ace18761ef83751ee6" category="sidebar">建立並連接 S3 存取點</block>
   <block id="087b2bf3ee9925d6feea388b7dfd398a" category="sidebar">編輯 S3 存取點</block>
   <block id="462be4711361458eea73842ce954eb91" category="sidebar">檢視有關 S3 存取點的詳細資訊</block>
   <block id="bc8efabe5bb393ec04bcc82dbbfe36c2" category="sidebar">刪除 S3 存取點</block>
+  <block id="0af31167a43cbbff0833653449e77b49" category="paragraph"><block ref="0af31167a43cbbff0833653449e77b49" category="inline-link-macro-rx"></block></block>
+  <block id="04130d8294ba59ea4c2ac5390d390631" category="paragraph">您可以選擇在 Workload Factory 中使用 S3 存取點的日誌表功能。日誌表基礎架構會擷取並儲存 Amazon FSx for ONTAP 磁碟區存取點上的使用者存取事件和物件操作的稽核日誌。若要啟用日誌表功能、您必須設定必要的 AWS 基礎架構、包括 AWS CloudTrail、AWS CloudWatch、AWS S3 儲存桶、AWS CloudWatch 日誌群組、以及 AWS Identity and Access Management（IAM）角色和政策。<block ref="553122dc04c99e949a416adc2483f843" category="inline-link-macro-rx"></block>。</block>
+  <block id="ea685f233aea123c83b565162b32cebd" category="paragraph">若要設定 journal table 功能的基礎架構，您必須選擇 *Internet* 作為 S3 存取點的網路設定。<block ref="9a734a2c5081c8020434e9c7428d378f" category="inline-link-macro-rx"></block>。</block>
+  <block id="58ff05ec25b45f54f79eb1afc9e31b9c" category="list-text">將網路設定設為 *Internet* 以用於 S3 存取端點。<block ref="f5b1c6fb53ebc8db45e1c55bd4e00f01" category="inline-link-macro-rx"></block>。</block>
+  <block id="559b775ce267386e1398935c6753e6f3" category="paragraph">如果任何步驟失敗，<block ref="05993fa90b9226bcf7edb149f0761729" category="inline-xref-macro-rx"></block> 或聯絡 NetApp 支援以尋求協助。</block>
+  <block id="e520cc743022825140834d2b02cc8cba" category="list-text"><block ref="e520cc743022825140834d2b02cc8cba" category="inline-link-macro-rx"></block></block>
 </blocks>

@@ -25,6 +25,6 @@ summary: 在 NetApp Workload Factory 中編輯磁碟區的 S3 存取點。
 . 從 *Manage S3 access points* 畫面中，選擇操作選單，然後選擇 *Edit access point* 。
 . 進行更新，然後選取 *Apply* 。
 +
-若要設定 journal table 功能的基礎架構，您必須選擇 *Internet* 作為 S3 存取點的網路設定。link:setup-journal-table.adoc["瞭解如何為 NetApp Workload Factory 設定 Journal 資料表基礎架構"].
+若要設定 journal table 功能的基礎架構，您必須選擇 *Internet* 作為 S3 存取點的網路設定。link:setup-journal-table.html["瞭解如何為 NetApp Workload Factory 設定 Journal 資料表基礎架構"]。
 
 
