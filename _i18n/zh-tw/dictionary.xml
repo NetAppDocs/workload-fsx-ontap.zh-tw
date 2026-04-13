@@ -1941,7 +1941,6 @@
   <block id="df22e5c72d75cea7ae766daf660bd529" category="summary">在需要時管理NetApp Workload Factory 中 FSx for ONTAP檔案系統的備份計畫。</block>
   <block id="be1c92aa6bef23dd57df3395c46827bb" category="paragraph">在NetApp Workload Factory 中管理 FSx for ONTAP檔案系統的備份計畫。</block>
   <block id="93ae473ca3e8f97f82687e6f98eab1da" category="list-text">從 *FSx for ONTAP* 中，選擇要更新備份計畫的檔案系統的作業選單，然後選擇 *管理*。</block>
-  <block id="da0f0bd52c148eab60b2dfefe8e25fa3" category="summary">在 Workload Factory 中管理磁碟區的 SMB/CIFS 共用包括建立、確定使用者和群組存取以及刪除。</block>
   <block id="f73fd134806728f0a5ac79982e11ead7" category="doc">在 Workload Factory 中管理磁碟區的 SMB/CIFS 共用</block>
   <block id="c69f3e9214ff94aa0825993b6fb1b85a" category="paragraph">在 Workload Factory 中管理磁碟區的 SMB/CIFS 共用包括建立 SMB/CIFS 共用、確定授予存取權限的使用者和群組以及授予他們的權限等級以及刪除 SMB/CIFS 共用。</block>
   <block id="4b898528f057698b461041b6d7447cfe" category="list-text">從「磁碟區」標籤中，選擇要變更 SMB 共享的磁碟區的操作選單。</block>
@@ -3001,4 +3000,7 @@
   <block id="58ff05ec25b45f54f79eb1afc9e31b9c" category="list-text">將網路設定設為 *Internet* 以用於 S3 存取端點。<block ref="f5b1c6fb53ebc8db45e1c55bd4e00f01" category="inline-link-macro-rx"></block>。</block>
   <block id="559b775ce267386e1398935c6753e6f3" category="paragraph">如果任何步驟失敗，<block ref="05993fa90b9226bcf7edb149f0761729" category="inline-xref-macro-rx"></block> 或聯絡 NetApp 支援以尋求協助。</block>
   <block id="e520cc743022825140834d2b02cc8cba" category="list-text"><block ref="e520cc743022825140834d2b02cc8cba" category="inline-link-macro-rx"></block></block>
+  <block id="d08fabf4c0fdff2290096692a4ffa28a" category="section-title">區塊裝置的最後存取時間</block>
+  <block id="fa4bdc942217a8579f785220b2742233" category="paragraph">Workload Factory 會回報區塊裝置的最後存取時間。該時間是根據您上次在 Workload Factory 中存取 igroup 的時間。了解每個區塊裝置的最後使用時間有助於您最佳化資源。</block>
+  <block id="9b6ea8e99ee787981ebaca2de09e7c7f" category="summary">在 Workload Factory 中管理磁碟區的 SMB 或 CIFS 共用包括建立、確定使用者和群組存取權以及刪除。</block>
 </blocks>
