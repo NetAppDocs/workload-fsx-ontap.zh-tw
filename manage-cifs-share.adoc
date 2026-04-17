@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: manage-cifs-share.html 
-keywords: cifs, smb, SMB/CIFS, cifs share, change, update, modify, delete, create 
+keywords: cifs, smb, SMB, CIFS, cifs share, change, update, modify, delete, create 
 summary: 在 Workload Factory 中管理磁碟區的 SMB 或 CIFS 共用包括建立、確定使用者和群組存取權以及刪除。 
 ---
 = 在 Workload Factory 中管理磁碟區的 SMB/CIFS 共用
