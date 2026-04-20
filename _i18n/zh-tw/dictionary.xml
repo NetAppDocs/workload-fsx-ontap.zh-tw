@@ -363,8 +363,6 @@
   <block id="3fa4dafc00a14f08641efa3389891289" category="inline-link-macro">停用自動容量管理</block>
   <block id="bb38e8f0462bc33d127ff7d217a31149" category="list-text">選取已配置容量的單位。</block>
   <block id="eacbf9150c5d9c7a7032185805a236b8" category="inline-link-macro">啟用自動擴充功能</block>
-  <block id="26f68296f7b3ad0f394e89c82f5ea642" category="summary">初始化來源磁碟區與目標磁碟區之間的複寫關係。</block>
-  <block id="45df433d6d3e94a4c9cb03d82b93e7fa" category="doc">初始化複寫關係</block>
   <block id="42812c21ac1eee37a9ac12cf59634ce6" category="paragraph">初始化會執行 _baseline 傳輸：它會建立來源磁碟區的快照、然後將快照及其參照的所有資料區塊傳輸至目標磁碟區。</block>
   <block id="8ab8abb2ddeeba17b40c9c83b7345674" category="paragraph">選擇完成此作業時請考慮。初始化可能會很耗時。您可能想要在非尖峰時間執行基準傳輸。</block>
   <block id="18e73e557ecb75c57d1d16ca781cbfbe" category="list-text">選擇 * 初始化 * 。</block>
@@ -1900,7 +1898,6 @@
   <block id="bdcff0916b9de421b3f836810688eb67" category="list-text"><block ref="f06ee96e93460df1397f1b3b70044a3e" category="inline-link-macro-rx"></block>對您的檔案系統資源進行最全面的分析。</block>
   <block id="66fc3121113a1126522690fe858e4b3d" category="list-text">對於一個磁碟區：選擇操作選單，然後選擇*關閉磁碟區*。</block>
   <block id="39b152c5585fc0bf22a04de0cc07dff1" category="paragraph">或者，您可以<block ref="e5ea0961d6c7f5be0b804e74d995de2b" category="inline-link-macro-rx"></block>讓 Workload Factory 為您管理磁碟區容量。</block>
-  <block id="2ee765f12c6b1a8ffcd478e2ea34f09b" category="doc">在NetApp Workload Factory 中初始化複製關係</block>
   <block id="ddc0042b887590b7a2423362f6c3455b" category="paragraph">初始化來源磁碟區和目標磁碟區之間的複製關係，以傳送NetApp Workload Factory 中的快照和所有資料區塊。</block>
   <block id="e7fac383dedc147790819a6b6ec1ca87" category="list-text">在複製關係標籤中，選擇要初始化的複製關係的操作選單。</block>
   <block id="788b79b544c9d26ebf09e0fd37232958" category="paragraph">每個 SKU 的儲存虛擬機器數量是有限的。  Workload Factory 不支援建立超出限制的儲存虛擬機器。 ^1^</block>
@@ -2491,7 +2488,6 @@
   <block id="cab281453766ba01226c32a419bd00b4" category="list-text">*區塊裝置名稱*：選擇一個或多個要與啟動器群組建立關聯的區塊裝置。列出的區塊裝置是尚未對應至主機啟動器的裝置。</block>
   <block id="54d026e00002c68ee50033dbd7e53e6f" category="list-text">*作業系統類型*：選擇作業系統類型的 Linux、VMware 或 Windows。</block>
   <block id="283119ca74749a876a6dfcb0c6968a8c" category="list-text">*主機啟動器*：在啟動器群組中新增一個或多個 iSCSI 合格（IQN）主機啟動器。</block>
-  <block id="30965461c316b499ed01c7f92f651051" category="list-text">使用 iSCSI 或 NVMe 通訊協定的區塊磁碟區不支援複寫。</block>
   <block id="66aa1d91f89810f078327deb1e1fc2c8" category="list-text">您用於複寫關係的 FSx for ONTAP 檔案系統必須具備相關聯的連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。在您關聯連結後，請返回此操作。</block>
   <block id="ba1072e8c0845f82f77ef660d46bde4a" category="list-text">若要從內部部署 ONTAP 系統複寫到 FSx for ONTAP 檔案系統，請確保您已探索內部部署 ONTAP 系統。</block>
   <block id="45eea8cd3d88c48d8f4826a6be39d707" category="list-text">*S3 存取點標籤*：您可以選擇新增最多 50 個標籤或移除標籤。</block>
@@ -2555,8 +2551,6 @@
   <block id="507884c25618fc114f4becd877e50dd8" category="list-text">FSx for ONTAP 和 FSx for ONTAP 檔案系統</block>
   <block id="811a8960cadc3b9f9379096dc8b6b831" category="list-text">第一代到第一代</block>
   <block id="9b03bdd83a5017b3aa998f32e7ad219f" category="list-text">第二代至第二代</block>
-  <block id="04e64253a4742b9534714d0147f467f6" category="paragraph">若要遷移儲存 VM 資料和組態設定，您必須完成兩項作業。</block>
-  <block id="59835e5fb082d065015e2824a515a5b7" category="list-text"><block ref="75331dd4d9fa346165fac294e4e498ee" category="inline-xref-macro-rx"></block>，選擇 *Migration* 作為使用案例，然後選擇 *Replicate storage VM configuration*。</block>
   <block id="4031de6ffffe0beb0671ccd52a118661" category="paragraph">在兩個 FSx for ONTAP 檔案系統之間、或在內部部署 ONTAP 系統和 FSx for ONTAP 檔案系統之間複寫資料。</block>
   <block id="66de39f46af06b661b7bce68c01c8e61" category="list-text">對於處於可用、已建立或配置錯誤以外狀態的磁碟區，以及 ONTAP 版本不相容時，不支援複寫。</block>
   <block id="cbcff6555c8b07eb6add33653d3ab030" category="list-text">對於遷移使用案例，請確保在使用儲存 VM 資料和組態設定建立複寫關係之前，磁碟區的最後一次複寫已在過去 24 小時內完成。</block>
@@ -2571,7 +2565,6 @@
   <block id="9b9935ad5969c28de13381a2e512b47c" category="paragraph">注意：</block>
   <block id="9d7213e75b44382027a2100eae065746" category="list-text">複製儲存 VM 資料和組態設定時，無法使用反向複製。</block>
   <block id="fb042b7b99959e391eeb7c417511098a" category="section-title">2026 年 2 月 16 日</block>
-  <block id="df319eebb5e9e4cde194e1e976bf0795" category="list-text"><block ref="7a9cdee14fa6d629f0d48ed18525f6a5" category="inline-xref-macro-rx"></block> 將資料和組態設定從來源檔案系統永久遷移到目標 FSx for ONTAP 檔案系統。</block>
   <block id="3ecf18c09ae5a2bd1855ba6515de6cd7" category="list-text">不活躍的區塊設備：建議歸檔區塊設備資料或刪除連續七天未使用的區塊設備。</block>
   <block id="958926cf6ac067918ae80f7f610d415a" category="section-title">將非作用中區塊裝置的資料歸檔</block>
   <block id="d37c72ca2c27b8b48a724120cf91c835" category="paragraph">不再對應到客戶端或連續七天未使用的區塊裝置將被歸類為非活動區塊裝置。您可以將非活動區塊裝置的資料歸檔到容量池層，以回收 SSD 容量。</block>
@@ -2996,11 +2989,9 @@
   <block id="fa4bdc942217a8579f785220b2742233" category="paragraph">Workload Factory 會回報區塊裝置的最後存取時間。該時間是根據您上次在 Workload Factory 中存取 igroup 的時間。了解每個區塊裝置的最後使用時間有助於您最佳化資源。</block>
   <block id="9b6ea8e99ee787981ebaca2de09e7c7f" category="summary">在 Workload Factory 中管理磁碟區的 SMB 或 CIFS 共用包括建立、確定使用者和群組存取權以及刪除。</block>
   <block id="8e3a7eb1ad6884834be95dd2aaf56b7b" category="paragraph">在 NetApp Workload Factory 中為 FSx for ONTAP 檔案系統建立複寫關係，以避免在發生意外災難時資料遺失。您可以在兩個 FSx for ONTAP 檔案系統之間複寫資料，也可以在內部部署 ONTAP 系統和 FSx for ONTAP 檔案系統之間複寫資料。</block>
-  <block id="6763c800441eccc6184c1709964c26be" category="paragraph">對於儲存 VM 遷移、請在建立複寫關係後立即完成切換作業。</block>
   <block id="3ff25ab258de4c80bbe3f420e00a3c7e" category="paragraph">遷移時，您可以選擇複製單一儲存 VM 的資料和組態設定。如果同時遷移資料和組態設定，請確保磁碟區的最後一次複寫在過去 24 小時內完成。若要使用此功能，您必須選取同一儲存 VM 中的所有磁碟區。所有磁碟區的分層原則預設為來源磁碟區的分層原則，建議用於遷移使用案例。</block>
   <block id="a4b076b073df12f01e734ba016dbebd2" category="paragraph">Workload Factory 支援在下列儲存系統之間對儲存 VM 進行移轉複寫。</block>
   <block id="5d7e49f428c9183384f592ccb040ea68" category="list-text">確保複製關係中的目標可以使用一個 FSx for ONTAP 檔案系統。</block>
-  <block id="cda193309e00fad10e2bff9e77570610" category="paragraph">為遷移使用案例建立複寫關係後，您必須切換複寫，才能將儲存 VM 資料和組態設定完成遷移至目標 FSx for ONTAP 檔案系統。切換複寫會將資料和儲存 VM 組態設定從來源檔案系統永久遷移至目標 FSx for ONTAP 檔案系統。在切換期間，資料會進行最後一次複寫。當切換開始時,來源儲存 VM 會離線。</block>
   <block id="ed57615365ad2815423480008d91d450" category="section-title">規劃轉換作業</block>
   <block id="fa425772bf4dc1e54c8368c2b99d4b1b" category="paragraph">在規劃遷移使用案例的轉換作業時，請考慮以下事項。</block>
   <block id="d77811034f737ab45ed7ddebe9c096fd" category="inline-xref">切換後更新組態設定</block>
@@ -3020,9 +3011,21 @@
   <block id="add6659449d7aeb40a4dd48b3f75db00" category="list-text">驗證廣播網域 MTU 設定是否符合預期</block>
   <block id="cd823c1632b612f3a00bc9cf049ef97b" category="list-text">驗證 DNS 設定是否符合預期</block>
   <block id="b33f176ae89f054db5b204e18e50bedb" category="list-text">如果來源儲存 VM 中存在快取磁碟區，請重新建立快取關係（ONTAP FlexCache 關係）。</block>
-  <block id="ff8ef958a372588abade913f254e0f32" category="inline-link-macro">初始化複寫</block>
-  <block id="9b8bc21c3f17473ed3febb96f530e881" category="list-text"><block ref="bdf3316336626320bcd98c3905d159fa" category="inline-link-macro-rx"></block> 用於建立新的複寫關係。</block>
   <block id="8b4df8663b05f7e02f9d177bf6bddcf9" category="section-title">儲存 VM 移轉複寫的限制</block>
   <block id="0b341938774d016fc95976391165da81" category="list-text">Workload Factory 不支援第一代和第二代 FSx for ONTAP 檔案系統之間儲存虛擬機器的遷移複寫。</block>
   <block id="5599690d98e9754752709f4613760d6e" category="list-text">對於在 vserver 上具有 S3 存取點或 ONTAP S3 組態（包括 object-store-server、buckets、users、groups 或 policies）的磁碟區，不支援切換複寫。</block>
+  <block id="b7830c7f4ff14caacfb88b17e1dfcbcb" category="paragraph">複製儲存 VM 資料和組態設定時，您必須先建立並初始化複寫關係，然後等待資料至少同步一次，才能完成切換作業。</block>
+  <block id="357b33fc2f59a9d12f59fb35bf104b91" category="paragraph">複寫包括建立和初始化複寫關係。若要設定複寫，請建立複寫關係。若要在來源儲存系統和目標儲存系統之間傳輸資料，請初始化複寫關係。遷移儲存 VM 資料和組態設定時，也必須完成轉換作業。</block>
+  <block id="e148ba55e71be246708dafe4293a314f" category="paragraph">若要遷移儲存 VM 資料和組態設定，必須完成以下三個操作。</block>
+  <block id="c6b6c5bfe5708feb9348282cee3701d5" category="inline-xref">建立複寫關係</block>
+  <block id="3297677183a67f243b8c6abf28b4fb81" category="list-text"><block ref="d3f4ef0dd3d11e1cc504390affbdef58" category="inline-xref-macro-rx"></block>，選擇 *Migration* 作為使用案例，然後選擇 *Replicate storage VM configuration*。</block>
+  <block id="4578208e79d59d2ad53f30812b33d008" category="inline-xref">初始化複寫關係</block>
+  <block id="ee673c79e2fee1e050f07ed104f6188d" category="list-text"><block ref="1876753e18c7b524394b3d041c7ca2f6" category="inline-xref-macro-rx"></block> 將資料從來源儲存系統傳輸到目標儲存系統。</block>
+  <block id="23dd3a896e2b24326fa839ac0c555b13" category="list-text"><block ref="78c2faa9b52f24796e9c82977a0d449a" category="inline-xref-macro-rx"></block> 將資料和組態設定從來源檔案系統永久遷移到目標 FSx for ONTAP 檔案系統。</block>
+  <block id="34ed3d0886446fdce0ca12aba8d0a847" category="section-title">步驟 1：建立複寫關係</block>
+  <block id="58f14dbd85a730a03075451e9af3c2b2" category="section-title">步驟 2：初始化複寫關係</block>
+  <block id="938304b34ce3517fe01a2000f5b9d7df" category="paragraph">當複寫狀態顯示為 *Idle* 時，資料傳輸已完成。</block>
+  <block id="d0d09a499e6cdf9f1d34c4e5929c7f4d" category="section-title">步驟 3：針對移轉使用案例切換複寫</block>
+  <block id="09b43c18bbbe0ab926e24296d842bf9b" category="paragraph">建立遷移使用案例的複寫關係後，您必須切換複寫，以完成將儲存 VM 資料和組態設定遷移至目標 FSx for ONTAP 檔案系統。切換複寫會將資料和儲存 VM 組態設定從來源檔案系統永久遷移至目標 FSx for ONTAP 檔案系統。在切換期間，資料會進行最後一次複寫。當切換開始時，來源儲存 VM 會離線。</block>
+  <block id="3d7746b6894a23aa721b9d2b99f0bff4" category="list-text">*複寫版本支援*：來源儲存系統和目標儲存系統必須具有相同的 ONTAP 主版本。例如，如果來源系統執行的是 ONTAP 9.18.1 版，則目標系統也必須執行 9.18.1 版。</block>
 </blocks>

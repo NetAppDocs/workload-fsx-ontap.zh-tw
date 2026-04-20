@@ -79,10 +79,8 @@ sidebar:
           url: "/restore-from-backup.html"
       - title: 使用複製
         entries:
-        - title: 建立複寫關係
+        - title: 複寫資料
           url: "/create-replication.html"
-        - title: 初始化複寫關係
-          url: "/initialize-replication.html"
       - title: 利用自動勒索軟體保護來保護資料
         url: "/ransomware-protection.html"
       - title: 複製磁碟區

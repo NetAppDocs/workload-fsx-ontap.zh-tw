@@ -1,0 +1,8 @@
+---
+permalink: initialize-replication.html 
+redirect: create-replication.html 
+---
+= 
+:allow-uri-read: 
+
+
