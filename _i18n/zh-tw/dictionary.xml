@@ -2551,7 +2551,6 @@
   <block id="507884c25618fc114f4becd877e50dd8" category="list-text">FSx for ONTAP 和 FSx for ONTAP 檔案系統</block>
   <block id="811a8960cadc3b9f9379096dc8b6b831" category="list-text">第一代到第一代</block>
   <block id="9b03bdd83a5017b3aa998f32e7ad219f" category="list-text">第二代至第二代</block>
-  <block id="4031de6ffffe0beb0671ccd52a118661" category="paragraph">在兩個 FSx for ONTAP 檔案系統之間、或在內部部署 ONTAP 系統和 FSx for ONTAP 檔案系統之間複寫資料。</block>
   <block id="66de39f46af06b661b7bce68c01c8e61" category="list-text">對於處於可用、已建立或配置錯誤以外狀態的磁碟區，以及 ONTAP 版本不相容時，不支援複寫。</block>
   <block id="cbcff6555c8b07eb6add33653d3ab030" category="list-text">對於遷移使用案例，請確保在使用儲存 VM 資料和組態設定建立複寫關係之前，磁碟區的最後一次複寫已在過去 24 小時內完成。</block>
   <block id="41ad46bbff5ae50ffe14d0bdc1b66775" category="paragraph">如果您為了遷移目的建立了複製關係，則必須切換所有磁碟區及其關聯的儲存 VM，才能完成將儲存 VM 資料和組態設定遷移到目標 FSx for ONTAP 檔案系統。</block>
@@ -2988,7 +2987,6 @@
   <block id="d08fabf4c0fdff2290096692a4ffa28a" category="section-title">區塊裝置的最後存取時間</block>
   <block id="fa4bdc942217a8579f785220b2742233" category="paragraph">Workload Factory 會回報區塊裝置的最後存取時間。該時間是根據您上次在 Workload Factory 中存取 igroup 的時間。了解每個區塊裝置的最後使用時間有助於您最佳化資源。</block>
   <block id="9b6ea8e99ee787981ebaca2de09e7c7f" category="summary">在 Workload Factory 中管理磁碟區的 SMB 或 CIFS 共用包括建立、確定使用者和群組存取權以及刪除。</block>
-  <block id="8e3a7eb1ad6884834be95dd2aaf56b7b" category="paragraph">在 NetApp Workload Factory 中為 FSx for ONTAP 檔案系統建立複寫關係，以避免在發生意外災難時資料遺失。您可以在兩個 FSx for ONTAP 檔案系統之間複寫資料，也可以在內部部署 ONTAP 系統和 FSx for ONTAP 檔案系統之間複寫資料。</block>
   <block id="3ff25ab258de4c80bbe3f420e00a3c7e" category="paragraph">遷移時，您可以選擇複製單一儲存 VM 的資料和組態設定。如果同時遷移資料和組態設定，請確保磁碟區的最後一次複寫在過去 24 小時內完成。若要使用此功能，您必須選取同一儲存 VM 中的所有磁碟區。所有磁碟區的分層原則預設為來源磁碟區的分層原則，建議用於遷移使用案例。</block>
   <block id="a4b076b073df12f01e734ba016dbebd2" category="paragraph">Workload Factory 支援在下列儲存系統之間對儲存 VM 進行移轉複寫。</block>
   <block id="5d7e49f428c9183384f592ccb040ea68" category="list-text">確保複製關係中的目標可以使用一個 FSx for ONTAP 檔案系統。</block>
@@ -3028,4 +3026,6 @@
   <block id="d0d09a499e6cdf9f1d34c4e5929c7f4d" category="section-title">步驟 3：針對移轉使用案例切換複寫</block>
   <block id="09b43c18bbbe0ab926e24296d842bf9b" category="paragraph">建立遷移使用案例的複寫關係後，您必須切換複寫，以完成將儲存 VM 資料和組態設定遷移至目標 FSx for ONTAP 檔案系統。切換複寫會將資料和儲存 VM 組態設定從來源檔案系統永久遷移至目標 FSx for ONTAP 檔案系統。在切換期間，資料會進行最後一次複寫。當切換開始時，來源儲存 VM 會離線。</block>
   <block id="3d7746b6894a23aa721b9d2b99f0bff4" category="list-text">*複寫版本支援*：來源儲存系統和目標儲存系統必須具有相同的 ONTAP 主版本。例如，如果來源系統執行的是 ONTAP 9.18.1 版，則目標系統也必須執行 9.18.1 版。</block>
+  <block id="28cd2b513c45599c0ed271171a723fae" category="paragraph">在 NetApp Workload Factory 中複製資料，以防止在資料所在區域發生災難時資料遺失。FSx for ONTAP 檔案系統與內部部署 ONTAP 系統或 Cloud Volumes ONTAP 之間支援資料複製。</block>
+  <block id="388c14942d26a5119b21a74fab9025a3" category="paragraph">在兩個 FSx for ONTAP 檔案系統之間、內部部署 ONTAP 系統和 FSx for ONTAP 檔案系統之間，或在 Cloud Volumes ONTAP 和 FSx for ONTAP 檔案系統之間複寫資料。</block>
 </blocks>
