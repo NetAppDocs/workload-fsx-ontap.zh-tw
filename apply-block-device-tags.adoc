@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: apply-block-device-tags.html 
+keywords: tags, EC2 tags, ONTAP tags, block storage tags, apply tags to block devices 
+summary: 在 NetApp Workload Factory 中，自動將 ONTAP 層級標籤套用至區塊裝置，以便進行資源管理。 
+---
+= 在 NetApp Workload Factory 中將 ONTAP 層級標記套用至區塊裝置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用 NetApp Workload Factory 提供的原生 EC2 使用者資料腳本，可在 AWS EC2 執行個體部署期間自動建立並標記區塊裝置。從 AWS EC2 主控台部署 EC2 執行個體時，請將 EC2 使用者資料腳本新增至啟動執行個體精靈範本。部署完成後、Workload Factory 會使用從腳本收集的中繼資料，將 ONTAP 層級的標籤套用到您的區塊裝置。這些標籤可協助您了解哪個主機正在使用哪個區塊裝置，以便在進行疑難排解或稽核時快速將使用情況與負責的主機建立關聯。
+
+.關於這項工作
+EC2 使用者資料指令碼會在 EC2 執行個體部署期間建立區塊裝置，並將 ONTAP 層級 EC2 標籤套用至區塊裝置。
+
+套用於區塊裝置的 _EC2 標籤_ 包含 EC2 名稱、EC2 ID 以及 EC2 執行個體中區塊裝置的掛載路徑。
+
+.步驟
+. 依照 link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-instance-wizard.html["啟動 Amazon Elastic Compute Cloud EC2 執行個體的說明"] 使用 AWS EC2 Console 中的啟動執行個體精靈進行操作。
+. 將 EC2 使用者資料指令碼新增至啟動執行個體精靈範本，以自動建立區塊裝置並加上標籤。
++
+請造訪我們的 GitHub 儲存庫 FSx-ONTAP-sample-scripts 取得link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/Management-Utilities/ec2-user-data-iscsi-create-and-mount["EC2 使用者資料指令碼"]。
+
+. 啟動執行個體。
++
+EC2 使用者資料腳本會自動將 ONTAP 等級的標籤套用至託管在 EC2 執行個體上的新區塊儲存裝置。
+
+. 對於現有的 EC2 執行個體，使用者資料指令碼只有在重新開機後才會生效。
+
+
+.結果
+EC2 標籤出現在關聯的 FSx for ONTAP 檔案系統的區塊設備表中。
+
+.相關資訊
+* link:create-igroup.html["在 NetApp Workload Factory 中為檔案系統建立啟動器群組（igroups）"]
+* link:manage-block-storage.html["在 NetApp Workload Factory 中管理檔案系統的區塊儲存"]
+

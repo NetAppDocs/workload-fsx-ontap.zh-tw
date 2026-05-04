@@ -565,7 +565,6 @@
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新增功能</block>
   <block id="7aa1575aeeddba65d55707b41584cd4a" category="sidebar">使用Amazon FSX for NetApp ONTAP 解決方案</block>
   <block id="2553f0a003cdfb6c46e0fb29cca1c670" category="sidebar">使用連結</block>
-  <block id="e2439a8512b353f75391ba9c346bc84d" category="sidebar">管理磁碟區</block>
   <block id="dc88dce8ec264777b2f90ec0af744f43" category="sidebar">建立Volume</block>
   <block id="8272f5b23e79d0ee33bd5151dcddc454" category="sidebar">建立儲存VM</block>
   <block id="e5787a3a7b79c3cdbeb01e163f0a84de" category="sidebar">管理快照</block>
@@ -689,7 +688,6 @@
   <block id="c853397a437814fc2251c95bdf57909f" category="list-text">在刪除關係對話方塊中，選取 * 刪除 * 。</block>
   <block id="ad1d6a18c0d830b44dfe2e6a96d2807d" category="list-text">（可選）選擇 * 備份卷 * 以在刪除之前備份卷。</block>
   <block id="136dc09835924029e4299fa28f17233d" category="list-text">選擇*繼續*。</block>
-  <block id="c5c6c97593c886ac31454d1f10313b78" category="list-text">選取啟用按鈕以 * 啟用自動容量管理 * 。</block>
   <block id="759c5ad2620497fe90dc2bc5e085c8c0" category="summary">啟用快照以進行長期保留，可讓您複寫特定快照以進行長期災難恢復。</block>
   <block id="37873c6c78867be44aa0676105354543" category="paragraph">長期保留功能可讓企業服務即使在整個站台發生故障時仍能繼續運作，支援使用次要複本的應用程式透明容錯移轉。</block>
   <block id="8107582f3eb31967f7b5b6bdc4826ea0" category="list-text">如果您選擇停用快照以進行長期保留，請選取 * 套用 * 以完成此作業。</block>
@@ -1863,7 +1861,6 @@
   <block id="c39b3cbd986af96ef05b9724f0b92e6b" category="summary">啟用磁碟區自動成長以讓 Workload Factory 為您管理磁碟區容量。您可以隨時停用它。</block>
   <block id="467fbaad5c04b9212fefde208c6fce39" category="doc">在 Workload Factory 中啟用磁碟區自動成長</block>
   <block id="c7cb41d0ae0beeca525b094df6834ee5" category="list-text">從磁碟區選項卡中，選擇要修改的磁碟區的操作選單。</block>
-  <block id="700ddd4e501b4b63ce13f0a4091d97c3" category="list-text">從 *FSx for ONTAP* 中，選擇檔案系統的操作選單以啟用自動容量管理。</block>
   <block id="a2f3bd55649066a9bad9a42a8df63f08" category="paragraph">在NetApp Workload Factory 中，您可以啟用快照進行長期保留，這樣您就可以複製特定快照以進行長期災難復原。</block>
   <block id="116537ad3a8e9d253ab6c2cf9b1375c4" category="list-text">從 *FSx for ONTAP* 中，選擇要更新的檔案系統的操作，然後選擇 *管理*。</block>
   <block id="92f16ef088dcbde798778ff8c71b147a" category="list-text">在複製關係標籤中，選擇要變更的複製關係計畫的操作選單。</block>
@@ -2167,13 +2164,11 @@
   <block id="05fbfa43ca52b70a735d4a870f0f8f6d" category="inline-link-macro">調整音量容量功能</block>
   <block id="8f764b06860786fe5978951124c18450" category="paragraph">您也可以隨時使用以下方法手動增加磁碟區的容量：<block ref="e78173f6bdea353abf41de50dd00987d" category="inline-link-macro-rx"></block> 。</block>
   <block id="ad5ba1f7c14b2135486dafc0e40196ac" category="summary">啟用此功能後，Workload Factory 可以根據容量需求隨時間的變化，自動為 FSx for ONTAP檔案系統新增增量儲存或 inode。</block>
-  <block id="e1d481cddc46ccb42fc6f59c020f5ce1" category="paragraph">啟用自動容量管理，自動增加儲存空間，直到達到 FSx for ONTAP檔案系統的最大容量限制。</block>
   <block id="7950e88c4d4bc489666a4af446a7d303" category="inline-link-macro">使用_檢視、規劃和分析_權限策略授予憑證</block>
   <block id="37d3a1150da64094460d233181c8c83e" category="list-text">你必須<block ref="1773ab1fe4aa6a3e5fc61d86a29970f0" category="inline-link-macro-rx"></block>在 Workload Factory 中完成此任務。</block>
   <block id="650ad6fb48eb81eacfa521124d1dc357" category="list-text">*警告閾值*：將警告閾值設定為低於觸發工作負載工廠通知服務的閾值增加值。預設值為 70%。</block>
   <block id="8ec47943fca737be2b087573534a2057" category="inline-link-macro">啟用工作負載工廠通知服務</block>
   <block id="60c52248134394a776265c66248137a8" category="paragraph">只有在您滿足以下條件時，警告閾值設定才可用：<block ref="e500d492a56da387ccd67dac5045b171" category="inline-link-macro-rx"></block> 。</block>
-  <block id="4e88714beba53ff4a9a4132c11a62597" category="list-text">*閾值增加*：輸入 FSx for ONTAP檔案系統的最大百分比增加值。預設值為 80%。</block>
   <block id="e5896468cb243b3cd2e0e75b0ca7173d" category="admonition">*Terraform 使用者*：Terraform 有限制，要求所有操作都必須在 Terraform 內部完成。  Terraform 不支援 inode 管理，但您可以在 Workload Factory 控制台中啟用自動 inode 管理。</block>
   <block id="0a0054f32c5856b9e4d1227d3aff2de3" category="list-text">若要自動管理磁碟區 inode，必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結關聯後，返回此操作。</block>
   <block id="2dc6db0702897622d8829494f1d3b37f" category="inline-link-macro">啟用工作負載工廠通知服務</block>
@@ -2606,7 +2601,6 @@
   <block id="201a18ac1c906df6358f39af33c244de" category="summary">在 NetApp Workload Factory 中管理 FSx for ONTAP 檔案系統的區塊儲存。</block>
   <block id="0006ccbc0d0f541209207d590ebc1b08" category="doc">在 NetApp Workload Factory 中管理檔案系統的區塊儲存</block>
   <block id="373d40a556613e20661d6c89ac8751a6" category="paragraph">使用 NetApp Workload Factory 簡化區塊儲存資源（包括 igroup 和區塊裝置）的管理，並控制客戶端對 FSx for ONTAP 區塊裝置的存取，以提供最佳效能並最大限度地降低成本。</block>
-  <block id="60318fe3439a99a9762a5aaaa9cc7b95" category="paragraph">從 Workload Factory 主控台，您可以管理啟動器群組（igroup）以控制用戶端對區塊裝置的存取。您也可以檢視區塊裝置詳細資料、增加容量、管理用戶端存取、歸檔非作用中區塊裝置的資料，以及刪除區塊裝置。</block>
   <block id="e0c31cfa2277dcf409fc0398234ce79b" category="paragraph">檢查區塊儲存圖表，確認是否有以下情況：</block>
   <block id="30f276b848a0c37c6c54368f5714fc72" category="list-text">用戶端連線</block>
   <block id="e7963aa68819cfe7f854ea292af57bb0" category="list-text">區塊裝置狀態</block>
@@ -2625,20 +2619,8 @@
   <block id="d5d9ee8255b76e97868c3facadf58360" category="paragraph">啟用容量管理後，NetApp Workload Factory 可以根據容量需求的變化，自動為 FSx for ONTAP 檔案系統新增增量儲存空間。此外，啟用此功能還無需手動監控容量。</block>
   <block id="b5750806a6c2de28360d7b511ba01b0c" category="paragraph">系統每 30 分鐘掃描一次 FSx for ONTAP 檔案系統。它會檢查是否需要新增增量儲存空間，並驗證可用的磁碟區 inode。計數會根據自動容量管理臨界值而增加。</block>
   <block id="7bdf690b1d068245416e9f5cbb766f44" category="paragraph">啟用 inode 管理後，NetApp Workload Factory 可以根據容量需求的變化，自動為 FSx for ONTAP 檔案系統新增增量 inode。此功能無需手動監控 inode。</block>
-  <block id="d00e9db543e20f2a587eedfba7e3b329" category="list-text">在「資訊」下，選擇 *Capacity management* 旁的鉛筆圖示。將滑鼠停留在 *Capacity management* 行上時，下拉箭頭旁邊會出現鉛筆圖示。</block>
-  <block id="eafb35aad9f2005878f19fafa1be8d82" category="list-text">在 *Capacity management* 對話方塊中、提供以下資訊：</block>
-  <block id="70c7829e6e55aa891ddd55aaf7bd1275" category="list-text">*Mode* ：選擇自動管理容量的模式。選項包括 incremental 模式和 adaptive 模式。</block>
-  <block id="8d1178637079d74b1d4df6828507f656" category="list-text">*增量模式*：在達到閾值時，以固定量增加容量。</block>
   <block id="a850b45530431e433b34aeb17888df66" category="paragraph">這是 Workload Factory 觸發作業以增加容量的閾值。例如，如果檔案系統容量達到 80% ，則 Workload Factory 會增加容量。</block>
-  <block id="de019eb3e94bf6fbb51fa0fc90f5bd75" category="list-text">*Adaptive 模式*：根據歷史資料預測並改變容量。</block>
-  <block id="11d9ed6b9e54bdea1a4ecc52907361f8" category="list-text">*分析週期*：設定分析週期（以小時為單位），以決定容量預測中需要考慮的歷史資料量。預設值為 120 小時。</block>
-  <block id="39f6b6f1dee1cd96aadfd7e0f2089c76" category="list-text">*規劃緩衝時間*：設定緩衝時間（以小時為單位），以確保在實際需要之前增加容量。預設值為 48 小時。</block>
   <block id="52f65090db0661db649aa6c7e46a8b14" category="paragraph">檔案系統每 30 分鐘進行一次掃描，以確定是否需要額外容量。</block>
-  <block id="5d38a14c79cf5c5f38102d6436886068" category="section-title">啟用容量通知</block>
-  <block id="6a93267b6668918bd024785ba7a1af41" category="paragraph">設定通知，以便在檔案系統達到特定容量閾值時收到警示。</block>
-  <block id="5c91dfe3f77e6a44fd914ea673600879" category="paragraph">您必須 <block ref="92ba022a113ba350cc22eb4ba703843c" category="inline-link-macro-rx"></block> 使用此功能。</block>
-  <block id="5bcc265168b27815fd10f23b771bad2a" category="list-text">在 *Capacity management* 對話方塊中，選取 *Enable capacity notifications* 以在容量達到閾值以及 Workload Factory 執行自動容量增加時開啟通知。</block>
-  <block id="3f810138549fa80c7e69f8ec485c8a27" category="list-text">設定 *Notification threshold* ，以便在檔案系統達到特定容量百分比時接收通知。預設值為 70% 。</block>
   <block id="fcb18dec8d5281d1ce666db128df5515" category="section-title">為檔案系統啟用 inode 管理</block>
   <block id="083afef27eb29c6a017bada830bc631c" category="paragraph">啟用自動 inode 管理，以增加每個磁碟區的 inode （檔案）數量，直到達到允許的限制。</block>
   <block id="d933b8209c8cd56ba75386ce9ae7847a" category="paragraph">FSx for ONTAP 檔案系統每 30 分鐘掃描一次。它會驗證可用的磁碟區 inode，並檢查是否需要新增增量 inode。計數會根據自動 inode 管理閾值遞增。</block>
@@ -3028,4 +3010,61 @@
   <block id="3d7746b6894a23aa721b9d2b99f0bff4" category="list-text">*複寫版本支援*：來源儲存系統和目標儲存系統必須具有相同的 ONTAP 主版本。例如，如果來源系統執行的是 ONTAP 9.18.1 版，則目標系統也必須執行 9.18.1 版。</block>
   <block id="28cd2b513c45599c0ed271171a723fae" category="paragraph">在 NetApp Workload Factory 中複製資料，以防止在資料所在區域發生災難時資料遺失。FSx for ONTAP 檔案系統與內部部署 ONTAP 系統或 Cloud Volumes ONTAP 之間支援資料複製。</block>
   <block id="388c14942d26a5119b21a74fab9025a3" category="paragraph">在兩個 FSx for ONTAP 檔案系統之間、內部部署 ONTAP 系統和 FSx for ONTAP 檔案系統之間，或在 Cloud Volumes ONTAP 和 FSx for ONTAP 檔案系統之間複寫資料。</block>
+  <block id="5a022ce9df2c118b15eecf6d431faf14" category="doc">區塊裝置複本</block>
+  <block id="c74340453798a5d4d4e10a5aaef38904" category="paragraph">Workload Factory 為您的區塊裝置提供複製功能，以便您可以快速佈建可寫入且高效的資料副本，同時控制容量、存取和生命週期。</block>
+  <block id="91cb86206fad91f1ee03be3263ce2b5e" category="section-title">區塊裝置上的 EC2 標籤</block>
+  <block id="4cdbcf74dda458c541b8fb774532f64e" category="paragraph">區塊裝置表格現在包含一欄，顯示正在使用每個區塊裝置的 EC2 主機標籤。這有助於您在疑難排解或稽核期間識別哪個主機使用每個區塊裝置。</block>
+  <block id="1182d4b8399f34126ea205e47a6a77aa" category="paragraph">若要在每個區塊裝置上建立標籤，請使用我們提供的使用者腳本部署 EC2 執行個體。</block>
+  <block id="949772caeac38120e37726672f87e673" category="inline-link-macro">EC2 使用者資料指令碼，用於將標籤指派給區塊裝置</block>
+  <block id="f253e6c2e63632a5f1a7ef4fe6522c2f" category="paragraph"><block ref="f253e6c2e63632a5f1a7ef4fe6522c2f" category="inline-link-macro-rx"></block></block>
+  <block id="607326d3637e008b134e64f39d8da723" category="section-title">FSx for ONTAP 檔案系統的容量趨勢</block>
+  <block id="f9fdfcc52193908a516c0b9d7964af8e" category="paragraph">直接從 FSx for ONTAP 檔案系統的概覽中了解 SSD 容量趨勢。這款全新的容量管理卡可全面展現上個月的使用趨勢。此分析包括實際使用容量與分配容量的對比，從而清楚評估資源利用率。</block>
+  <block id="9fe282a2158bc82a938a6290a314ca79" category="inline-link-macro">在 NetApp Workload Factory 中自動管理容量</block>
+  <block id="9ab7147fcc802f47be068771ba492092" category="paragraph"><block ref="9ab7147fcc802f47be068771ba492092" category="inline-link-macro-rx"></block></block>
+  <block id="408971f10d86e5c4321ade595b2c0c02" category="summary">在 NetApp Workload Factory 中，自動將 ONTAP 層級標籤套用至區塊裝置，以便進行資源管理。</block>
+  <block id="afd74d04ea9a5b8ff37eb68cdc1ce134" category="doc">在 NetApp Workload Factory 中將 ONTAP 層級標記套用至區塊裝置</block>
+  <block id="4e3be99b46a9e938ac0b99ef12ed4a7e" category="paragraph">使用 NetApp Workload Factory 提供的原生 EC2 使用者資料腳本，可在 AWS EC2 執行個體部署期間自動建立並標記區塊裝置。從 AWS EC2 主控台部署 EC2 執行個體時，請將 EC2 使用者資料腳本新增至啟動執行個體精靈範本。部署完成後、Workload Factory 會使用從腳本收集的中繼資料，將 ONTAP 層級的標籤套用到您的區塊裝置。這些標籤可協助您了解哪個主機正在使用哪個區塊裝置，以便在進行疑難排解或稽核時快速將使用情況與負責的主機建立關聯。</block>
+  <block id="59adf89635b6e0af666dd4f48d1e4af5" category="paragraph">EC2 使用者資料指令碼會在 EC2 執行個體部署期間建立區塊裝置，並將 ONTAP 層級 EC2 標籤套用至區塊裝置。</block>
+  <block id="d27f369607ec04a5867d5cf464d0beca" category="paragraph">套用於區塊裝置的 _EC2 標籤_ 包含 EC2 名稱、EC2 ID 以及 EC2 執行個體中區塊裝置的掛載路徑。</block>
+  <block id="91bf41936e8654c1243d1aafd192b3b5" category="inline-link-macro">啟動 Amazon Elastic Compute Cloud EC2 執行個體的說明</block>
+  <block id="61745748bc899eddac2cbd3ac107b47c" category="list-text">依照 <block ref="b2b1cddbb7ebbfd176c8e2b8f4d9478a" category="inline-link-macro-rx"></block> 使用 AWS EC2 Console 中的啟動執行個體精靈進行操作。</block>
+  <block id="bf51b85ce4f8fad76dfc76a9c238fdf1" category="list-text">將 EC2 使用者資料指令碼新增至啟動執行個體精靈範本，以自動建立區塊裝置並加上標籤。</block>
+  <block id="0a1aaabb4c9e55ee08ea763d11ed001e" category="inline-link-macro">EC2 使用者資料指令碼</block>
+  <block id="5808acc578d885a031ef2c6e21db45ce" category="paragraph">請造訪我們的 GitHub 儲存庫 FSx-ONTAP-sample-scripts 取得<block ref="8f119e1ca236cc96e65275f65c095c65" category="inline-link-macro-rx"></block>。</block>
+  <block id="00288a5b58c73c5d8737ba4edaf020e4" category="list-text">啟動執行個體。</block>
+  <block id="63c72d7d3fdb495f83c711241ddecf32" category="paragraph">EC2 使用者資料腳本會自動將 ONTAP 等級的標籤套用至託管在 EC2 執行個體上的新區塊儲存裝置。</block>
+  <block id="4cd7e529e00480d5fefb11dcd1f5488e" category="list-text">對於現有的 EC2 執行個體，使用者資料指令碼只有在重新開機後才會生效。</block>
+  <block id="29b6e33414e7d0e4411ace82e79b290c" category="paragraph">EC2 標籤出現在關聯的 FSx for ONTAP 檔案系統的區塊設備表中。</block>
+  <block id="30d27ffcd856ab25c82d64aa781314d3" category="inline-link-macro">在 NetApp Workload Factory 中為檔案系統建立啟動器群組（igroups）</block>
+  <block id="d7738a2cfc28b206bc9bb15af5cf1bf8" category="list-text"><block ref="d7738a2cfc28b206bc9bb15af5cf1bf8" category="inline-link-macro-rx"></block></block>
+  <block id="521f3c46f3c55c8cbef62abfb3a885c7" category="list-text"><block ref="521f3c46f3c55c8cbef62abfb3a885c7" category="inline-link-macro-rx"></block></block>
+  <block id="eb65a539cb451b6fbdc221ea311b28d4" category="paragraph">從 Workload Factory 主控台，您可以管理啟動器群組（igroup）以控制用戶端對區塊裝置的存取。您也可以檢視區塊裝置詳細資料、增加容量、建立複本、管理用戶端存取、歸檔非作用中區塊裝置的資料，以及刪除區塊裝置。</block>
+  <block id="f12250ce1a89e4780f783e37faff61bf" category="section-title">複製區塊裝置</block>
+  <block id="3852c39d262a8881e2a8268be54fe6ca" category="paragraph">您可以隨時建立現有區塊裝置的複本。區塊裝置複本是原始區塊裝置的可寫入複本，在對原始裝置或複本進行變更之前，兩者會共用相同的資料區塊。複製區塊裝置是一種快速且有效率的方式，可建立可重複使用的資料複本，而無需佔用額外的儲存容量。</block>
+  <block id="4cbb5fd33ac98b9c735c391778c8d7f0" category="list-text">導覽至區塊裝置的動作功能表，然後選取 *Clone block device* 。</block>
+  <block id="929051af38dd6b0381c93579bedb478d" category="list-text">在 Clone block device 對話方塊中、輸入複製區塊裝置的名稱。</block>
+  <block id="9fe66450d94dd471c65e7c48e7574afd" category="list-text">（選用）啟用自動刪除功能，以便在磁碟區空間不足時自動刪除已複製的區塊裝置。</block>
+  <block id="3f6182f8b829a2b8dac8608939de86e6" category="list-text">*iSCSI 組態*：選用。若要將區塊裝置複本連線至主機啟動器、請建立新的啟動器群組、或將其對應至現有的啟動器群組。</block>
+  <block id="bf13cfa9990015b5ba0006913a4d3697" category="list-text">*建立新的啟動器群組*：選取此選項可為區塊裝置複本建立新的啟動器群組。輸入下列詳細資料：</block>
+  <block id="99d3866ac5c6ba618aaf3143db301a5b" category="list-text">*主機作業系統*：選擇主機作業系統類型。</block>
+  <block id="3efb2d82cf33087b8cafdf6d069fb5e4" category="list-text">*啟動器群組名稱*：輸入 igroup 名稱。</block>
+  <block id="a113aa07b36a47078eaad655b24f8b10" category="list-text">*對應至現有啟動器群組*：選取此選項可將區塊裝置複本對應至現有啟動器群組。選取一個或多個啟動器群組，以將區塊裝置對應至這些群組。</block>
+  <block id="ea8da9dc858ea1d17060728f173c4d71" category="list-text">選取 *Clone* 以建立區塊裝置複本。</block>
+  <block id="203e616ed82fa6546f9999807f34c99e" category="section-title">啟用自動容量管理和容量通知</block>
+  <block id="907ec66004c2b411a03471b9875eed7b" category="paragraph">啟用自動容量管理，即可自動增加儲存空間，直到達到 FSx for ONTAP 檔案系統的最大容量限制。設定通知，以便在檔案系統達到特定容量臨界值時收到警示。</block>
+  <block id="bc86da8bf515d19787d896a0141bf5c2" category="list-text">從 *FSx for ONTAP* 中選擇要啟用自動容量的檔案系統。</block>
+  <block id="6295149c5cb94797e55cbe5c7539fa56" category="list-text">在「自動容量管理」卡中，選取 *Manage* 。</block>
+  <block id="e5711037f8e63eeedc2c04d138ff588b" category="list-text">選擇容量管理方法。選項包括遞增模式和自適應模式。</block>
+  <block id="e5a2f196660d32f0ab1950271fecf1f9" category="list-text">*增量式*：在達到臨界值時，以固定量增加容量。</block>
+  <block id="bdeb0344b5a2f528dfc652c5fd8fb865" category="list-text">*臨界值*：設定低於遞增值的臨界值，以觸發 Workload Factory 通知服務發出通知。預設值為 70% 。</block>
+  <block id="449a38bbcb6434ee7ed199ab25680695" category="paragraph">只有在您 <block ref="e500d492a56da387ccd67dac5045b171" category="inline-link-macro-rx"></block> 時，才能使用臨界值設定。</block>
+  <block id="ef32c449d460f74cb349c2f64a23580b" category="list-text">*增量*：輸入 FSx for ONTAP 檔案系統的最大增量百分比。預設值為 80% 。</block>
+  <block id="dbd2a879edd3f77d99da5f05f010db3a" category="list-text">*自適應*：根據歷史資料預測並變更容量。</block>
+  <block id="f131feb55a78e1beb8b4f46023bd04a9" category="list-text">*回溯期*：設定分析週期（以小時為單位），以決定容量預測中需要考慮的歷史資料量。預設值為 120 小時。</block>
+  <block id="b743c8928261822d2f08d89f862413ab" category="list-text">*提前規劃*：設定緩衝時間（以小時為單位），確保在實際需要之前增加容量。預設值為 48 小時。</block>
+  <block id="cc943b0b0f1ddb0c8232f2bb0ab56d0e" category="list-text">選擇 *Enable automatic capacity management* 以及 _view, planning, and analysis_ 權限憑證。</block>
+  <block id="30dd41f65f34e35a6b1cadb93c28336a" category="list-text">選取 *Enable capacity notifications* （啟用容量通知），即可在容量達到您設定的臨界值以及 Workload Factory 執行自動容量增加時開啟通知。預設值為 70% 。</block>
+  <block id="8da70820bee8cb0d257b3ee6f7436e40" category="paragraph">只有當您<block ref="e500d492a56da387ccd67dac5045b171" category="inline-link-macro-rx"></block>並啟用自動容量管理時，容量通知設定才可用。</block>
+  <block id="3be044b694628f6e958377c22febfacd" category="section-title">2026 年 5 月 3 日</block>
+  <block id="4ccd08ccc04cf1986a6dc1a2de287f72" category="sidebar">將標籤套用至區塊裝置</block>
 </blocks>

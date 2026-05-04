@@ -43,14 +43,12 @@ sidebar:
         url: "/create-link.html"
       - title: 管理連結
         url: "/manage-links.html"
+    - title: 建立Volume
+      url: "/create-volume.html"
     - title: 發現並查看快取卷
       url: "/discover-cache-volumes.html"
-    - title: 管理磁碟區
-      entries:
-      - title: 建立Volume
-        url: "/create-volume.html"
-      - title: 存取您的資料
-        url: "/access-data.html"
+    - title: 存取您的資料
+      url: "/access-data.html"
     - title: 建立區塊儲存資源
       entries:
       - title: 建立 igroup
@@ -143,6 +141,8 @@ sidebar:
       entries:
       - title: 管理區塊儲存設備
         url: "/manage-block-storage.html"
+      - title: 將標籤套用至區塊裝置
+        url: "/apply-block-device-tags.html"
     - title: 檔案系統管理
       entries:
       - title: 手動調整檔案系統容量
