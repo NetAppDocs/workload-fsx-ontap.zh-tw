@@ -3069,8 +3069,8 @@
   <block id="deede3cf7f18c08613ec53890188368e" category="section-title">FSx for ONTAP 檔案系統架構良好狀態的 PDF 報告</block>
   <block id="09731bdb23a8e229cca44808afd3eb18" category="inline-link-macro">在 NetApp Workload Factory 中查看 FSx for ONTAP 檔案系統的架構良好狀態。</block>
   <block id="bf36e3bb684711138abb04e7f7f95c1a" category="paragraph">分析完成後，您可以下載一份 PDF 報告，其中包含您的 FSx for ONTAP 檔案系統架構良好狀態的資訊，供您存檔或與您的團隊分享。<block ref="8f1fbab727bbab0e7967c959283750c4" category="inline-link-macro-rx"></block></block>
-  <block id="6279c641e85ceb888c688f0c728cd930" category="list-text">請確保開啟 TCP 連接埠 11105 和 11105，以便在儲存系統之間實現安全的資料傳輸和管理。</block>
   <block id="eeb77472aa3a83d51f0873ec83e22572" category="list-text">*儲存 VM 組態設定*：</block>
   <block id="0abde7f01f46e5ae295493bf4b280687" category="list-text">切換操作不會將所有儲存 VM 組態設定遷移到目標儲存 VM。例如，iSCSI、廣播網域 MTU 和 DNS 設定不會遷移。切換後，請在目標儲存 VM 上手動更新這些設定。如需更多詳細資料，請參閱 <block ref="af05d35e02c20d22f4e6b1df9b57e0a2" category="inline-xref-macro-rx"></block> 章節。</block>
   <block id="893700039eb02078c7602e997d7f9922" category="list-text">如果您的儲存 VM 使用網域通道驗證，請在開始移轉之前在目標檔案系統上設定並啟用網域通道。</block>
+  <block id="ec76bc02c6a3a5c32e0e22c2926d0319" category="list-text">請確保開啟 TCP 連接埠 11104 和 11105，以便在儲存系統之間實現安全的資料傳輸和管理。</block>
 </blocks>
