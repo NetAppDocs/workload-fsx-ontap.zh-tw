@@ -2975,7 +2975,6 @@
   <block id="ed57615365ad2815423480008d91d450" category="section-title">規劃轉換作業</block>
   <block id="fa425772bf4dc1e54c8368c2b99d4b1b" category="paragraph">在規劃遷移使用案例的轉換作業時，請考慮以下事項。</block>
   <block id="d77811034f737ab45ed7ddebe9c096fd" category="inline-xref">切換後更新組態設定</block>
-  <block id="6ceb7ae37e1ac2ec5ebe38f0e5082457" category="list-text">*Storage VM 組態設定*：轉換作業不會將所有 Storage VM 組態設定移轉至目標 Storage VM 。例如、 iSCSI 、廣播網域 MTU 和 DNS 設定不會移轉。轉換後、請在目標 Storage VM 上手動更新這些設定。如需更多詳細資料、請參閱<block ref="af05d35e02c20d22f4e6b1df9b57e0a2" category="inline-xref-macro-rx"></block>一節。</block>
   <block id="dddf91d5ccee3135470e6089b62618ba" category="list-text">*複製磁碟區*：複製磁碟區將作為獨立磁碟區進行遷移，因此會佔用目標 FSx for ONTAP 檔案系統的更多空間。建議在切換之前刪除複製磁碟區，以避免目標系統容量增加。</block>
   <block id="233115f3ed74b7b4516b8f0a1efbaedf" category="list-text">*快取磁碟區*：適用於 ONTAP FlexCache 9.17.x 或更低版本。包含快取磁碟區的來源儲存 VM 不支援轉換。轉換前請移除 ONTAP FlexCache 關係，以避免移轉失敗。</block>
   <block id="03c85e91696d00a533c3da3b08434532" category="list-text">*AWS S3 存取點*：對於包含 S3 存取點的磁碟區，不支援遷移使用案例的轉換複寫。請從來源磁碟區中刪除 S3 存取點，以避免遷移失敗。</block>
@@ -3070,4 +3069,8 @@
   <block id="deede3cf7f18c08613ec53890188368e" category="section-title">FSx for ONTAP 檔案系統架構良好狀態的 PDF 報告</block>
   <block id="09731bdb23a8e229cca44808afd3eb18" category="inline-link-macro">在 NetApp Workload Factory 中查看 FSx for ONTAP 檔案系統的架構良好狀態。</block>
   <block id="bf36e3bb684711138abb04e7f7f95c1a" category="paragraph">分析完成後，您可以下載一份 PDF 報告，其中包含您的 FSx for ONTAP 檔案系統架構良好狀態的資訊，供您存檔或與您的團隊分享。<block ref="8f1fbab727bbab0e7967c959283750c4" category="inline-link-macro-rx"></block></block>
+  <block id="6279c641e85ceb888c688f0c728cd930" category="list-text">請確保開啟 TCP 連接埠 11105 和 11105，以便在儲存系統之間實現安全的資料傳輸和管理。</block>
+  <block id="eeb77472aa3a83d51f0873ec83e22572" category="list-text">*儲存 VM 組態設定*：</block>
+  <block id="0abde7f01f46e5ae295493bf4b280687" category="list-text">切換操作不會將所有儲存 VM 組態設定遷移到目標儲存 VM。例如，iSCSI、廣播網域 MTU 和 DNS 設定不會遷移。切換後，請在目標儲存 VM 上手動更新這些設定。如需更多詳細資料，請參閱 <block ref="af05d35e02c20d22f4e6b1df9b57e0a2" category="inline-xref-macro-rx"></block> 章節。</block>
+  <block id="893700039eb02078c7602e997d7f9922" category="list-text">如果您的儲存 VM 使用網域通道驗證，請在開始移轉之前在目標檔案系統上設定並啟用網域通道。</block>
 </blocks>
