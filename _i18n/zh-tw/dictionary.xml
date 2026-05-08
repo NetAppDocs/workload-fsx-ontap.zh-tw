@@ -3073,4 +3073,5 @@
   <block id="0abde7f01f46e5ae295493bf4b280687" category="list-text">切換操作不會將所有儲存 VM 組態設定遷移到目標儲存 VM。例如，iSCSI、廣播網域 MTU 和 DNS 設定不會遷移。切換後，請在目標儲存 VM 上手動更新這些設定。如需更多詳細資料，請參閱 <block ref="af05d35e02c20d22f4e6b1df9b57e0a2" category="inline-xref-macro-rx"></block> 章節。</block>
   <block id="893700039eb02078c7602e997d7f9922" category="list-text">如果您的儲存 VM 使用網域通道驗證，請在開始移轉之前在目標檔案系統上設定並啟用網域通道。</block>
   <block id="ec76bc02c6a3a5c32e0e22c2926d0319" category="list-text">請確保開啟 TCP 連接埠 11104 和 11105，以便在儲存系統之間實現安全的資料傳輸和管理。</block>
+  <block id="8ee47478c07b40fab9e5a6a34028629c" category="list-text">開放 TCP 連接埠 11104 和 11105，以便在儲存系統之間進行安全的資料傳輸和管理。ICMP 是可選的，但有助於網路檢查和故障排除。</block>
 </blocks>
