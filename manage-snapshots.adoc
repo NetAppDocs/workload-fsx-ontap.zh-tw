@@ -76,7 +76,7 @@ summary: 編輯快照設定、啟用目錄存取和刪除快照以管理 Workloa
 
 您可以選擇將資料從快照還原到現有磁碟區或新磁碟區。
 
-link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_snapshot-mgmt/restore-volume-from-snapshot.html["從快照還原磁碟區"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-volume-from-snapshot.html["從快照還原磁碟區"]
 
 
 

@@ -29,7 +29,7 @@ summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免�
 
 [NOTE]
 ====
-您可以複寫一個來源（讀取 / 寫入）磁碟區或一個資料保護（ DP ）磁碟區。支援串聯複寫，但不支援第三個躍點。深入瞭解 link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_cascade-replication/cascade-replication.html["串聯複寫"^]。
+您可以複製一個來源（讀 / 寫）磁碟區或一個資料保護（DP）磁碟區。支援級聯複製，但不支援第三跳。深入瞭解link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html["串聯複寫"]。
 
 ====
 

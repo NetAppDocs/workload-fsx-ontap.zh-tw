@@ -68,7 +68,7 @@ ONTAP 使用重複資料刪除和壓縮功能實現儲存效率。重複資料�
 
 .. * Snapshot polic*: 選擇快照策略以指定快照的頻率和保留。
 +
-以下是 AWS 的預設策略。若要顯示現有的快照策略，您必須 link:link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["建立連結的關聯"]。
+以下是 AWS 的預設策略。若要顯示現有的快照策略，您必須 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["建立連結的關聯"]。
 
 +
 `default`:: 此原則會根據下列排程自動建立快照、並刪除最舊的快照複本、以便為較新的複本提供空間：

@@ -1224,7 +1224,6 @@
   <block id="ecc4c534126952c05eb3829106343643" category="list-text">機密不包含用於檔案系統驗證的有效 ONTAP 認證。</block>
   <block id="b94462bb135856834e40d9c982dbbc8b" category="paragraph">* 解析度 * ：提供認證，可在 AWS Secrets Manager 中驗證 ONTAP 檔案系統的 FSX 。</block>
   <block id="db02b80a9dd5a7c959ec87fdf41baa91" category="inline-link-macro">串聯複寫</block>
-  <block id="cb7048e2d3bbe74eff8dc77537e6b3cb" category="paragraph">您可以複寫一個來源（讀取 / 寫入）磁碟區或一個資料保護（ DP ）磁碟區。支援串聯複寫，但不支援第三個躍點。深入瞭解 <block ref="70f3f574eb9d2048e3113fc3bf26173a" category="inline-link-macro-rx"></block>。</block>
   <block id="a9349d3c10a82990ac0a1fc539e5f621" category="list-text">可複寫檔案系統中的所有磁碟區，或複寫選取的磁碟區。</block>
   <block id="ccbd024216a98284de9e40d4f35c7a8e" category="list-text">若要複寫檔案系統中的所有磁碟區：從檔案系統總覽選取 * 複寫資料 * 。</block>
   <block id="8c2ef6be41e1306ff1553a6b77895cad" category="list-text">若要複寫選取的磁碟區：從檔案系統總覽中選取 * Volumes （磁碟區） * 標籤。</block>
@@ -1535,7 +1534,6 @@
   <block id="743828d5c9c11b38d3dbbf76d787f497" category="section-title">增強 SMB/CIFS 共享建立和管理</block>
   <block id="421075462886e558113f14b52fe22487" category="paragraph">現在您可以建立指向磁碟區內的目錄的 SMB/CIFS 共用。在卷內，您將能夠看到存在哪些共享、共享指向哪裡以及授予特定使用者和群組的權限。</block>
   <block id="4662a232249c09ca958781da08211b0c" category="paragraph">對於資料保護卷，建立 SMB/CIFS 共用的流程現在包括建立到磁碟區的連線路徑以用於安裝目的。</block>
-  <block id="5f08db4267e771ad7b348d338d92e0e6" category="paragraph"><block ref="5f08db4267e771ad7b348d338d92e0e6" category="inline-link-macro-rx"></block></block>
   <block id="952da3361b1e3ca5daa8c23a39780e18" category="list-text">手動：使用 Codebox 中的 CloudFormation 或 Terraform 建立帶有手動註冊的連結。程式碼持續存在，為您提供更多時間來完成操作。這在與安全性和 DevOps 等不同的團隊合作時很有用，因為他們可能首先需要授予完成連結建立所需的權限。</block>
   <block id="d244d1524bd960c99e9fef848ac5ce4a" category="paragraph">您可以使用 Codebox 中的兩個基礎架構即程式碼 (IaC) 工具建立連結：CloudFormation 或 Terraform。使用此選項，您可以從 AWS CloudFormation 中提取連結的 ARN 並在此處報告。工作負載工廠手動為您註冊連結。</block>
   <block id="272404907923a583d38661d1f77a2a8c" category="list-text">在建立連結頁面上，從 Codebox 中選擇 CloudFormation 或 Terraform，然後提供以下內容：</block>
@@ -1665,7 +1663,6 @@
   <block id="8695344671e89445641e5521e94e092a" category="list-text">複製存取路徑。</block>
   <block id="f4b128dfa4315b7560d911b08c3653c2" category="section-title">從快照恢復數據</block>
   <block id="05f173e81abaca211df63916cfac7a74" category="paragraph">您可以選擇將資料從快照還原到現有磁碟區或新磁碟區。</block>
-  <block id="6520c3672c5d01c2976ef1980c6c4f4b" category="paragraph"><block ref="6520c3672c5d01c2976ef1980c6c4f4b" category="inline-link-macro-rx"></block></block>
   <block id="efb44cfe1d5b8d9954ea045385675c66" category="section-title">刪除快照</block>
   <block id="6dbf69edbee88e5a8078a8a4e008a3b8" category="paragraph">刪除快照以釋放空間。</block>
   <block id="65231a1c4b836cdc3226241028b6f5c1" category="paragraph">不可變快照在保留期結束前不能被刪除。</block>
@@ -2371,7 +2368,6 @@
   <block id="d9f80ec4d13936fdba78b793f44c184c" category="list-text">*建立新的啟動器群組*：提供主機作業系統、啟動器群組名稱，並新增一個或多個 iSCSI 限定名稱 (IQN) 主機啟動器。</block>
   <block id="104d3f014c0f2ca8498a2aa9f78b1864" category="list-text">*對應現有啟動器群組*：選擇一個現有啟動器群組，提供主機作業系統，然後選擇一個或多個 iSCSI 限定名稱 (IQN) 主機啟動器。</block>
   <block id="db784c6694930c54da9655a9d31c365a" category="list-text">在「效率與保護」項下，執行以下操作：</block>
-  <block id="8cbc6c14a0474488d906dfdd17ce79c4" category="paragraph">以下是 AWS 的預設策略。若要顯示現有的快照策略，您必須 <block ref="6ac03ad394740d642419d1159fa121ff" category="inline-link-macro-rx"></block>。</block>
   <block id="4dd81c3ec298b3b3b12adbd43350c454" category="paragraph">使用 Workload Factory 控制台建立磁碟區時，預設分層策略為 _Balanced (Auto)_。有關容量分層策略的更多信息，請參閱 <block ref="de51d392f5d252a956349995f441f55c" category="inline-link-macro-rx"></block> 在 AWS FSx for NetApp ONTAP文件中。請注意，Workload Factory 在 Workload Factory 控制台中使用基於用例的名稱來定義分層策略，並在括號中包含 FSx for ONTAP分層策略名稱。</block>
   <block id="eafa5af121307f6008fad4d24d6d9f14" category="list-text">ARP/AI 不支援包含不可變檔案的捲和使用 NVMe 協定的磁碟區。</block>
   <block id="1e3a8de3c21016b6778340215e821fb6" category="list-text">從 *FSx for ONTAP* 中選擇檔案系統的操作選單，然後選擇 *管理*。</block>
@@ -3072,6 +3068,7 @@
   <block id="eeb77472aa3a83d51f0873ec83e22572" category="list-text">*儲存 VM 組態設定*：</block>
   <block id="0abde7f01f46e5ae295493bf4b280687" category="list-text">切換操作不會將所有儲存 VM 組態設定遷移到目標儲存 VM。例如，iSCSI、廣播網域 MTU 和 DNS 設定不會遷移。切換後，請在目標儲存 VM 上手動更新這些設定。如需更多詳細資料，請參閱 <block ref="af05d35e02c20d22f4e6b1df9b57e0a2" category="inline-xref-macro-rx"></block> 章節。</block>
   <block id="893700039eb02078c7602e997d7f9922" category="list-text">如果您的儲存 VM 使用網域通道驗證，請在開始移轉之前在目標檔案系統上設定並啟用網域通道。</block>
-  <block id="ec76bc02c6a3a5c32e0e22c2926d0319" category="list-text">請確保開啟 TCP 連接埠 11104 和 11105，以便在儲存系統之間實現安全的資料傳輸和管理。</block>
   <block id="8ee47478c07b40fab9e5a6a34028629c" category="list-text">開放 TCP 連接埠 11104 和 11105，以便在儲存系統之間進行安全的資料傳輸和管理。ICMP 是可選的，但有助於網路檢查和故障排除。</block>
+  <block id="fa8b213a52b4f0e35de875db4340e809" category="paragraph"><block ref="fa8b213a52b4f0e35de875db4340e809" category="inline-link-macro-rx"></block></block>
+  <block id="e9df00e078102fb55394d13dad9115a4" category="paragraph">您可以複製一個來源（讀 / 寫）磁碟區或一個資料保護（DP）磁碟區。支援級聯複製，但不支援第三跳。深入瞭解<block ref="a7ce0f55df6d6b86426266d8a7eeb328" category="inline-link-macro-rx"></block>。</block>
 </blocks>

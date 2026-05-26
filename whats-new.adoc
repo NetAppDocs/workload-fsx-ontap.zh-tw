@@ -647,7 +647,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用 L
 
 對於資料保護卷，建立 SMB/CIFS 共用的流程現在包括建立到磁碟區的連線路徑以用於安裝目的。
 
-link:https://review.docs.netapp.com/us-en/workload-fsx-ontap_grogu-5684-wa-dismiss/manage-cifs-share.html#create-a-cifs-share-for-a-volume["為磁碟區建立 CIFS 共用區"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cifs-share.html#create-a-cifs-share-for-a-volume["為磁碟區建立 CIFS 共用區"]
 
 
 
