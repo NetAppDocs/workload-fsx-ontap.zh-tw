@@ -75,10 +75,8 @@ sidebar:
           url: "/create-backup.html"
         - title: 從備份還原磁碟區
           url: "/restore-from-backup.html"
-      - title: 使用複製
-        entries:
-        - title: 複寫資料
-          url: "/create-replication.html"
+      - title: 複寫資料
+        url: "/create-replication.html"
       - title: 利用自動勒索軟體保護來保護資料
         url: "/ransomware-protection.html"
       - title: 複製磁碟區
@@ -105,6 +103,8 @@ sidebar:
         url: "/edit-volume-autogrow.html"
       - title: 調整音量容量
         url: "/adjust-volume-capacity.html"
+      - title: 設定磁碟區延遲臨界值
+        url: "/set-volume-latency-thresholds.html"
       - title: 重新平衡磁碟區容量
         url: "/rebalance-volume.html"
       - title: 管理不可變的檔案
@@ -185,20 +185,10 @@ sidebar:
         entries:
         - title: 複寫資料保護磁碟區
           url: "/cascade-replication.html"
-        - title: 反轉複寫關係
-          url: "/reverse-replication.html"
-        - title: 變更來源 Volume 的複寫排程
-          url: "/change-replication-schedule.html"
-        - title: 限制複寫關係的最大傳輸率
-          url: "/limit-transfer-rate.html"
-        - title: 在複寫關係中手動更新快照資料
-          url: "/update-snapshot-replication.html"
-        - title: 暫停並恢復複寫關係
-          url: "/pause-resume-replication.html"
-        - title: 停止複寫關係
-          url: "/stop-replication.html"
-        - title: 刪除複寫關係
-          url: "/delete-replication.html"
+        - title: 追蹤複寫延遲
+          url: "/track-replication-delays.html"
+        - title: 管理複製關係
+          url: "/manage-replication.html"
     - title: 效能管理
       entries:
       - title: 為檔案系統配置 IOPS

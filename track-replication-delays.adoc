@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: track-replication-delays.html 
+keywords: replication, track replication, replication lag, replication delay, delay, monitor replication, replication threshold, lag notification 
+summary: 啟用追蹤功能，監控您帳戶中所有複製關係的延遲情況。 
+---
+= 追蹤複寫延遲
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+啟用追蹤功能，即可監控整個帳戶的複製延遲。Workload Factory 會在延遲超過設定閾值時發出警報。預設情況下，閾值為複製間隔的 150%，以確保正常的傳輸時間並減少誤報。您可以調整閾值以符合您的恢復點目標 （RPO），並在延遲超過閾值時收到通知。您也可以將資料匯出至 CSV 檔案，以進行進一步分析。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要更新的檔案系統的操作選單，然後選擇 *管理*。
+. 從檔案系統總覽中、選取 * 複寫關係 * 索引標籤。
+. 選擇 *Enable tracking*。
+. 在「啟用複製延遲歷史記錄」對話方塊中，選擇 *Enable*。
+. 返回「複製延遲歷史記錄」圖塊，選擇 *Customize threshold* 以設定您首選的閾值。
+. 在「自訂延遲時間閾值」對話方塊中，以小時和分鐘為單位輸入閾值。
+. （可選）選擇 *Enable lag time notifications* ，以便在複製延遲超過閾值時接收通知。
++
+通知將透過電子郵件發送，內容包括：
+
++
+** 來源檔案系統
+** 來源磁碟區
+** 目標檔案系統
+** 目標磁碟區
+** 已超過延遲時間閾值
+** 連結到複製關係
+
+
+. 選擇*應用*。
+
+
+.相關資訊
+link:manage-replication.html["管理複製關係"^]

@@ -1,32 +1,38 @@
 ---
 sidebar: sidebar 
 permalink: analyze-events.html 
-keywords: analyze events, events, FSx for ONTAP events, EMS, troubleshoot FSx for ONTAP 
-summary: 分析NetApp Workload Factory for FSx for ONTAP中的 EMS 事件。 
+keywords: analyze events, events, FSx for ONTAP events, EMS, troubleshoot FSx for ONTAP, latency 
+summary: 分析 NetApp Workload Factory for FSx for ONTAP 中的事件。 
 ---
-= 在NetApp Workload Factory中分析 FSx for ONTAP EMS 事件
+= 在 NetApp Workload Factory 中分析 FSx for ONTAP 事件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-使用 NetApp Workload Factory 中的智慧事件分析器，快速識別並解決 FSx for ONTAP 檔案系統問題。此事件分析器利用與 Amazon Bedrock 整合的 Agentic AI，自動擷取並分析 FSx for ONTAP 事件管理系統（EMS）事件。
+使用 NetApp Workload Factory 中的智慧事件分析器，快速識別並解決 FSx for ONTAP 檔案系統問題。此事件分析器利用與 Amazon Bedrock 整合的 Agentic AI，自動擷取並分析 FSx for ONTAP 事件管理系統 (EMS) 和延遲事件。
 
 
 
 == 關於這項工作
 
-儲存管理員通常只有在客戶投訴後才會回應 FSx for ONTAP EMS 事件,或透過維護自訂腳本和警報來解決問題。這種被動回應的方式會降低效率、延遲問題解決並增加停機時間。
+儲存管理員通常只有在客戶投訴後才會回應 FSx for ONTAP 事件，或透過維護自訂腳本和警報來解決問題。這種被動回應的方式會降低效率、延遲問題解決並增加停機時間。
 
-事件分析器會自動從 FSx for ONTAP 檔案系統中提取錯誤、警報和緊急 EMS 事件。您可以link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接至檔案系統"]和link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_檢視、規劃和分析_權限"^]在 AWS 帳戶中查看這些事件。事件會在 72 小時後移除前顯示。
+事件分析器會自動從 FSx for ONTAP 檔案系統中擷取下列事件類型：
+
+* *EMS 事件*：來自 ONTAP 事件管理系統的錯誤、警報和緊急事件。若要檢視和分析 EMS 事件，您必須 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到檔案系統"]。
+* *延遲事件*：讀取和寫入延遲事件。無需網路連線即可查看延遲事件。若要分析延遲事件並獲取 AI 驅動的洞察，您必須link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到檔案系統"]。
+
+
+若要查看事件，您必須link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、規劃和分析_權限"^]在您的 AWS 帳戶中。事件在移除前將顯示 72 小時。
 
 透過與 Amazon Bedrock 整合，Workload Factory 使用 AI 分析事件並提供可行的深入見解，以維護 FSx for ONTAP 檔案系統的健全狀況和效能。
 
 主要優勢包括：
 
-* 進階疑難排解：AI 自動識別、分析並提供深入見解，以修正 FSx for ONTAP EMS 事件，減少手動調查時間。
-* 最佳實務補救措施：事件分析器提供清晰、可操作的步驟來解決 FSx for ONTAP EMS 事件。
+* 進階疑難排解：AI 自動識別、分析並提供見解，以修復 FSx for ONTAP EMS 和延遲事件，從而減少人工調查時間。
+* 最佳實務補救措施：事件分析器提供清晰、可操作的步驟來解決 FSx for ONTAP EMS 和延遲事件。
 
 
 使用事件分析器時，您可以完全控制您的環境，同時也能受益於先進的 AI 分析。
@@ -51,17 +57,30 @@ link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定價"^]
 
 == 開始之前
 
-若要使用事件分析器、請確保下列事項：
 
-* 您可以在 AWS 帳戶中link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_operations and remediation_ 權限"^]分析 FSx for ONTAP 檔案系統的事件。
+
+=== 檢視事件
+
+若要查看延遲事件，您必須link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、規劃和分析_權限"^]在您的 AWS 帳戶中。
+
+要查看 EMS 事件，您還必須link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到檔案系統"]。
+
+
+
+=== 分析事件
+
+若要分析 EMS 和延遲事件並獲得 AI 驅動的洞察和建議，請確保以下事項：
+
+* 您在 AWS 帳戶中擁有 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_operations and remediation_ 權限"^]。
+* 您有link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["透過連結連接到檔案系統"]。
 * 連接埠 22 (SSH) 在與您的 FSx for ONTAP 檔案系統相關聯的安全性群組中已開啟。
 
 
-其他要求（系統會在記錄錯誤分析過程中提示您）：
+其他要求（系統會在事件分析過程中提示您）：
 
 * *亞馬遜基岩模型*
 +
-為每個 AWS 帳戶配置 Amazon Bedrock API。Amazon BedRock API 用於提供有關 FSx for ONTAP 事件的分析資料。
+為每個 AWS 帳戶設定 Amazon Bedrock API。Amazon Bedrock API 用於提供 FSx for ONTAP 事件的洞察資料。
 
 +
 推薦模型： `anthropic.claude-sonnet-4-20250514-v1:0`。請提供您所選區域的推理設定檔 ARN。
@@ -97,19 +116,35 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解�
 
 
 
-== 檢視和分析適用於ONTAP的 FSx 的 EMS 事件
+== 檢視並分析 FSx for ONTAP 的事件
 
-使用 Workload Factory 控制台檢視和分析 FSx for ONTAP檔案系統的 EMS 事件。
+使用 Workload Factory 主控台檢視和分析 FSx for ONTAP 檔案系統的 EMS 和延遲事件。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
 . 從“儲存”選單中，選擇“分析”。
-. 在「分析」畫面中，選擇包含要分析的 FSx for ONTAP檔案系統的 AWS 帳戶、憑證和區域。
+. 在「分析」畫面中，選擇包含要檢視的 FSx for ONTAP 檔案系統的 AWS 帳戶、憑證和區域。
 +
-僅支援在螢幕上顯示事件的ONTAP檔案系統的 FSx。
+僅顯示有事件的 FSx for ONTAP 檔案系統。
 
-. 如有需要，請依照螢幕提示完成 AI 分析設定要求，以滿足任何缺失的先決條件。
-. 找到要分析的 FSx for ONTAP檔案系統，然後選擇「檢視事件」。
-. 請查看詳細的活動資訊。
+. 選擇要檢視的 FSx for ONTAP 檔案系統。
++
+事件表顯示該檔案系統的所有事件。
+
+. 請查看表格中的事件詳情。
+. 若要分析事件，請執行下列操作之一：
++
+** 若要分析多個事件，請選取事件旁的核取方塊，然後在表格中選取 *Analyze*。
+** 若要分析某個事件並在側邊欄查看分析結果，請選擇事件名稱，然後在側邊欄中選擇 *Analyze*。分析結果和建議將顯示在側邊欄中。
+** 若要分析表格中的某個事件，請在事件列中選擇 *Analyze*，然後選擇事件名稱以檢視洞見與建議。
++
+如有需要，請依照螢幕提示完成 AI 分析設定要求，以滿足任何缺失的先決條件。
+
+
+
+
+
+.相關資訊
+* link:set-volume-latency-thresholds.html["在 Workload Factory 中設定磁碟區延遲臨界值"]
 

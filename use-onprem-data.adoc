@@ -59,7 +59,12 @@ image:screenshot-on-prem-connectivity.png["顯示內部部署 ONTAP 叢集應如
 如果您尚未建立連結，請依照指示操作，然後返回此作業並選取連結。
 
 .. * 叢集 IP 位址 * ：提供內部部署 ONTAP 叢集的 IP 位址以進行複寫。
-.. * ONTAP 認證 * ：輸入內部部署 ONTAP 叢集的 ONTAP 認證。確定使用者擁有所需的權限。
+.. *ONTAP credentials*：請提供以下資訊：
++
+*** GovCloud 帳戶：使用 ONTAP 憑證輸入 ARN。
+*** 所有其他帳戶：輸入內部部署 ONTAP 叢集的 ONTAP 憑證。確保使用者擁有所需的權限。
+
+
 
 
 . 選取 * 探索 * 以開始探索程序。

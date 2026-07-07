@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: set-volume-latency-thresholds.html 
+keywords: latency, latency thresholds, alerts, volume latency, read latency, write latency 
+summary: 設定磁碟區的延遲閾值，以便在讀取或寫入延遲超過指定值時收到警報。 
+---
+= 在 NetApp Workload Factory 中設定磁碟區延遲臨界值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+設定磁碟區的延遲閾值，以便在讀取或寫入延遲超過指定值時收到警報。
+
+.關於這項工作
+您可以按磁碟區配置延遲閾值，以監控效能並在延遲值超出您定義的限制時接收警示。Workload Factory 會監控讀取和寫入延遲，並在超出任一閾值時產生警示。
+
+設定延遲閾值時，NetApp Workload Factory 會監控以下內容：
+
+* *讀取延遲*：當讀取作業超過指定的毫秒閾值時觸發警示。
+* *寫入延遲*：當寫入作業超過指定的毫秒閾值時，觸發警示。
+
+
+延遲監控使用以下預設參數：
+
+* *IOPS 閾值*：100 IOPS（讀取和寫入）
+* *時間範圍*：10 分鐘
+
+
+當延遲閾值超過且 IOPS 閾值在指定時間範圍內達到時，系統會發出警報。
+
+
+NOTE: 您無需連接即可查看延遲事件並接收警報。但是，若要分析事件並接收 AI 驅動的洞察與建議，您必須link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到檔案系統"]。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選取含有要設定之磁碟區的檔案系統的動作選單，然後選取 *Manage*。
+. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
+. 在「磁碟區」標籤中，選取要設定延遲閾值之磁碟區的動作選單。
+. 選擇 *Alerts actions*，然後選擇 *Set latency threshold*。
+. 在「設定延遲閾值」對話方塊中，配置以下內容：
++
+.. *讀取延遲*：輸入讀取作業的閾值，單位為毫秒 (ms)。
+.. *寫入延遲*：輸入寫入作業的閾值，單位為毫秒 (ms)。
+
+
+. 選擇 *Save* 以套用延遲閾值。
+
+
+.結果
+Workload Factory 會監控磁碟區，並在讀取或寫入延遲超過設定閾值時產生警示。您可以從 link:analyze-events.html["分析螢幕"] 查看延遲事件。
+
+.相關資訊
+* link:analyze-events.html["在 NetApp Workload Factory 中分析 FSx for ONTAP 事件"]
+* link:adjust-volume-capacity.html["調整工作負載工廠的容量"]
+

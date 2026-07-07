@@ -77,7 +77,6 @@ AWS 維護您的 FSx for ONTAP帳戶，而不是 Workload Factory。請參閱lin
 以下 AWS 區域不受支援：
 
 * 中國地區
-* GovCloud（美國）區域
 * 秘密雲
 * 絕密雲
 

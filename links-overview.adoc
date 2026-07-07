@@ -39,6 +39,8 @@ NetApp Workload Factory 連結在 Workload Factory 帳戶和一個或多個 FSx 
 
 您可以使用儲存在 Workload Factory 憑證服務中的憑證或儲存在 AWS Secrets Manager 中的憑證來驗證連結。工作負載工廠不支援更改身份驗證模式。
 
+GovCloud 帳戶的連結連線功能受到支援。Workload Factory 使用 GovCloud 驗證金鑰，允許透過 GovCloud 核准的機制，以安全、無代理程式的方式存取 FSx for ONTAP 作業。
+
 
 
 == 成本
@@ -67,6 +69,7 @@ link:https://aws.amazon.com/lambda/pricing/["深入瞭解使用 AWS Lambda 的�
 * 容量自動成長以實現彈性擴展
 * 克隆創建和管理，用於即時、就地資料克隆
 * 直接從ONTAP顯示其他指標，例如ONTAP版本
+* 顯示儲存 VM 和叢集 LIF 詳細資訊，包括角色、端點、節點、IP 位址和狀態
 
 
 瞭解如何link:create-link.html["將連結連接到 FSx for ONTAP檔案系統"]。
