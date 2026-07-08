@@ -1256,13 +1256,8 @@
   <block id="9233b1148f18eb744b69d4d3620c296c" category="paragraph">Tracker 支援兩種監控層級，視作業而定。每項工作（例如檔案系統部署）都會顯示工作說明，狀態，開始時間，工作持續時間，使用者，區域， Proxy 資源，工作 ID 及所有相關的子工作。您可以檢視 API 回應，瞭解作業期間發生的情況。</block>
   <block id="0438bb5671845786f65a3d1eaf90ee88" category="list-text">將傳入資料識別為加密或純文字。</block>
   <block id="1060a5e83c2826fc8c8b1026883073b2" category="list-text">可偵測下列項目的分析：</block>
-  <block id="29d41a562d1e0cf6008ddada1ff89b18" category="list-text">** Entropy** ：評估檔案中資料的隨機性</block>
-  <block id="49f145e21418b726261c685bc578f801" category="list-text">** 檔案副檔名類型 ** ：不符合一般副檔名類型的副檔名</block>
-  <block id="0fdd857b9b47a1b1938f4a6ad7e2e5cc" category="list-text">** 檔案 IOPS ** ：資料加密的異常 Volume 活動激增</block>
   <block id="17dd4178e04d0564dec77c6d175b0538" category="list-text">學習和作用中模式</block>
-  <block id="239ddc4cf271c0d534eac546b693606d" category="paragraph">在作用中模式中、如果檔案副檔名標示為異常、您應該評估警示。您可以對警示採取行動以保護資料、也可以將警示標記為誤報。將警示標記為誤報會更新警示設定檔。例如、如果警示是由新的副檔名觸發、而您將警示標記為誤判、則下次觀察到該副檔名時、您將不會收到警示。</block>
   <block id="b26873df0260bdc332a7511f6823cf63" category="list-text">不支援的組態</block>
-  <block id="29ba980a9e9adedc9414ea868c74ebd5" category="list-text">iSCSI磁碟區</block>
   <block id="9b5d8e1ecbbcbb4b027fb2a806b1aab8" category="list-text">NVMe 磁碟區</block>
   <block id="d0850dba70fab390de4d068a106228e1" category="list-text">接受聲明以繼續。</block>
   <block id="2e262b068e3e98fc54dcb639fe733fae" category="section-title">驗證勒索軟體攻擊</block>
@@ -1273,8 +1268,6 @@
   <block id="0b77587206c432dfb02de07eb7de5f6e" category="inline-xref">恢復您的資料</block>
   <block id="7f01d3b02832945eb57f8ecdbd43dd34" category="list-text">如果發生攻擊，請針對表格中的磁碟區選取 * 實際攻擊 * 。「還原遭入侵的 Volume 資料」對話方塊隨即開啟。您可以立即進入<block ref="eb7272e44da4aaab68add0924fb123c6" category="inline-xref-macro-rx"></block>或選擇 * 關閉 * ，稍後再回來完成恢復程序。</block>
   <block id="8abdf8cb49c79ea34cb65b74cbbca9a6" category="section-title">在勒索軟體攻擊之後恢復資料</block>
-  <block id="10509e649157fc75584428f246ab342f" category="paragraph">在保留期間結束之前，無法刪除鎖定的快照。不過、如果您稍後決定將攻擊標示為誤判、則鎖定的複本將會刪除。</block>
-  <block id="ddee0127b2615f1fdd1f96c77f517a5e" category="paragraph">瞭解受影響的檔案和攻擊時間後，您可以選擇性地從各種快照中復原受影響的檔案，而不只是將整個磁碟區還原為其中一個快照。</block>
   <block id="7b1eb9297a43d596c916ffd8e47d666c" category="list-text">如果發生攻擊，請針對表格中的磁碟區選取 * 實際攻擊 * 。</block>
   <block id="f1ec04be328f876a66254a754134514c" category="list-text">在還原遭入侵的磁碟區資料對話方塊中，依照指示在檔案層級或磁碟區層級還原。在大多數情況下，您會還原檔案，而非整個磁碟區。</block>
   <block id="7dce199c156a479cadec99be5ee5c576" category="list-text">完成還原後，選取 * 關閉 * 。</block>
@@ -1404,7 +1397,6 @@
   <block id="cb0b32de8b019bb1df747d59de75707b" category="list-text">*ARP/AI*：當連結與檔案系統關聯時，NetApp 自主勒索軟體保護與 AI (ARP/AI) 預設為啟用。<block ref="c4c4beca7d4846b88f49bf491b5261f6" category="inline-link-macro-rx"></block>。接受聲明以繼續。</block>
   <block id="f6f1c3f8f0f62507f18da1fcf460ade4" category="paragraph">如果該功能不可用，則可能是由於以下原因之一：</block>
   <block id="9e46846308a6940deed12bb97a4f8290" category="list-text">連結與檔案系統無關聯。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block>。連結建立關聯後，請返回此作業。</block>
-  <block id="7c3e31cda0e937f8fa1edeeb89e9fe70" category="list-text">ARP/AI 不支援具有不可變檔案的磁碟區以及具有 iSCSI 和 NVMe 協定的磁碟區。</block>
   <block id="df1195db43983cb33962d0fe23f28da4" category="list-text">檔案系統已具有 ARP/AI 策略。</block>
   <block id="817a91472106a30911a7a081b0284ff7" category="paragraph">檢查 FlexVol 或 FlexGroup 卷容量的平衡，並重新平衡磁碟區容量，以將檔案均勻分佈在節點中的所有 FlexVol 磁碟區或所有組成部分之間，以便所有節點都參與單一 FlexGroup 磁碟區的工作負載。</block>
   <block id="46119f30376fd007e4806359f116810d" category="paragraph">FlexVol 捲和 FlexGroup 磁碟區支援重新平衡磁碟區容量。重新平衡磁碟區會在新增檔案和檔案成長、隨著時間的推移而產生不平衡時、重新分配容量。手動開始重新平衡作業後、我們會選取檔案、並自動且不中斷地移動。Volume 傳輸作業會消耗檔案系統資源。</block>
@@ -1580,17 +1572,12 @@
   <block id="b01b37af09f4438a0edf536fee6ee774" category="paragraph">依照步驟刪除磁碟區的 SMB/CIFS 共用。</block>
   <block id="dc782d3e46ef3bd4b9ae294af16366b0" category="paragraph">刪除 SMB/CIFS 共用將使任何想要掛載它的使用者都無法使用它並且無法存取它。</block>
   <block id="73d6e57b628ed920f4ce69e52d8df9d7" category="list-text">在刪除 SMB/CIFS 共用對話方塊中，選擇*刪除*確認刪除。</block>
-  <block id="767e43079c8ad05b4d262cf68c217644" category="summary">NetApp自主勒索軟體防護 AI (ARP/AI) 使用 NAS 環境中的工作負載分析來偵測並警告可能為勒索軟體攻擊的異常活動。</block>
   <block id="998611c020287338b0e962b507511c46" category="doc">使用NetApp自主勒索軟體防護和 AI 保護您的數據</block>
-  <block id="add00ed16085ed2381a03aa4c8f20a00" category="paragraph">使用NetApp自主勒索軟體防護 AI (ARP/AI) 功能保護您的數據，該功能使用 NAS (NFS/SMB) 環境中的工作負載分析來偵測並警告可能為勒索軟體攻擊的異常活動。當懷疑受到攻擊時，ARP/AI 也會建立新的、不可變的快照，您可以從中復原資料。</block>
   <block id="1dee40f78f31696a01245dd5be3f3382" category="paragraph">使用 ARP/AI 來防止拒絕服務攻擊，攻擊者會扣留資料直到支付贖金。  ARP/AI 提供基於以下內容的即時勒索軟體偵測：</block>
   <block id="87a09ae23e8a5437f45a7f7430ba7565" category="paragraph">ARP/AI 可以在僅少量文件被加密後檢測到大多數勒索軟體攻擊的傳播，自動採取行動保護數據，並提醒您疑似攻擊正在發生。</block>
   <block id="3d892826b81878b82d3bd5353e94ce1a" category="paragraph">ARP/AI 功能會根據Amazon FSx for NetApp ONTAP執行的ONTAP版本自動更新，因此您無需進行手動更新。</block>
-  <block id="2469529a30f5bbb492484458ae939451" category="list-text">ARP/AI 先在_學習模式_下執行，然後自動切換到_主動模式_。</block>
-  <block id="d3aac0b85a4a98813bf9ced9d70c7370" category="list-text">*主動模式*：ARP/AI 切換到_主動模式_後，如果偵測到威脅，FSx for ONTAP會建立 ARP/AI 快照來保護資料。</block>
   <block id="fa4c28f427b28e224da4284dcc124897" category="list-text">以下配置不支援使用 ARP/AI。</block>
   <block id="18c9bfe30b0887116855a65d0152a33b" category="section-title">為檔案系統或磁碟區啟用 ARP/AI</block>
-  <block id="1a80c74f05c78f26f4d552f980bf8647" category="paragraph">為檔案系統啟用 ARP/AI 會自動為所有現有 NAS 和新建立的 NAS（NFS/SMB）磁碟區新增保護。您也可以為單一磁碟區啟用 ARP/AI。</block>
   <block id="f03bda164bfeeaa7c09f85689862bd05" category="paragraph">若要為檔案系統或磁碟區啟用 ARP/AI，您必須關聯一個連結。<block ref="d247bd89ba7282a8d4fed90c00e6cb68" category="inline-link-macro-rx"></block> 。連結關聯後，返回此操作。</block>
   <block id="9af6115dc697f592721e21923c19d17f" category="open-title">為檔案系統啟用 ARP/AI</block>
   <block id="f371cba680893ef0527a9cf573867c3b" category="list-text">在資訊下，選擇「自主勒索軟體防護」旁的鉛筆圖示。當滑鼠停留在「Autonomous Ransomware Protection」行上時，箭頭旁邊會出現一個鉛筆圖示。</block>
@@ -1601,7 +1588,6 @@
   <block id="d70cc7512b30819cfdf359cc99f4c563" category="list-text">*偵測*：可選擇性地，選擇下列任一參數來自動掃描和偵測異常。</block>
   <block id="7c046c7fd2fa492a993883c5669d09ce" category="open-title">為磁碟區啟用 ARP/AI</block>
   <block id="c67c272ec9fba56bef92b7a9e3d42f6f" category="list-text">在管理 ARP/AI 對話方塊中，執行以下操作：</block>
-  <block id="eaba2a7eb36250fc59ebf37ea423ebd5" category="paragraph">當懷疑受到攻擊時，系統會在該時間點拍攝卷快照並鎖定該副本。如果稍後確認攻擊，則可以使用 ARP/AI 快照還原受影響的檔案或整個磁碟區。</block>
   <block id="613abd0d9da6f7ee37d283174e11fcaf" category="section-title">2025年8月3日</block>
   <block id="1595965c84afe577a4228c0f8a132a00" category="sidebar">管理 SMB/CIFS 共享</block>
   <block id="b8bfbf72dc92e989a0b91cd409144076" category="summary">工作負載工廠掃描Amazon FSx for NetApp ONTAP配置，提供見解和建議，協助您實現卓越營運。</block>
@@ -1802,7 +1788,6 @@
   <block id="8c1217143bc46f0e1317a88eb6b793a2" category="list-text">*特權刪除*： SnapLock管理員可以在SnapLock Enterprise磁碟區上啟用特權刪除，以允許在檔案保留期到期之前刪除檔案。預設情況下，此功能處於停用狀態。</block>
   <block id="f5dccf0dc3737f4e6aa4e171b28692b9" category="list-text">*磁碟區附加模式*：您無法修改受 WORM 保護的文件中現有資料。但是，不可變文件可讓您使用 WORM 可附加文件來維護對現有資料的保護。例如，您可以產生日誌檔案或儲存音訊或視訊串流數據，同時以增量方式向其中寫入資料。<block ref="d363aab3c17dd7b08ef55d9ecb5c0afa" category="inline-link-macro-rx"></block>在Amazon FSx for NetApp ONTAP文件中。</block>
   <block id="8d180d02c994d2b8038c916a9ece9ebb" category="list-text">您必須在 Workload Factory 控制台中擁有 FSx for ONTAP檔案系統。</block>
-  <block id="122aefb4f7b5e48c5923e31250d6e0e1" category="list-text">從 *FSx for ONTAP* 中，選擇要在其中建立磁碟區的檔案系統的操作選單，然後選擇 *建立磁碟區*。</block>
   <block id="49abb21c910ce41b88d46bbe2dbec336" category="list-text">*使用者*：選擇有權存取該磁碟區的現有使用者或建立新使用者。</block>
   <block id="ce5abe58cc3ff0993fa9e0b2c6ad1340" category="list-text">*使用者類型*：選擇*UNIX*或*Windows*作為使用者類型。</block>
   <block id="e4dbd2b2330a6ac73a7295afbdedcca9" category="list-text">*不可變檔案*：啟用不可變檔案功能將永久地將此磁碟區中的檔案提交到不可變的 WORM（一次寫入多次讀取）狀態。提供以下詳細資訊：</block>
@@ -1993,8 +1978,6 @@
   <block id="21f5ea0bd2c3e06693357df598869216" category="paragraph">你需要<block ref="9144f2d687cdfc71041a1a85068f8ab7" category="inline-link-macro-rx"></block>和<block ref="10204cc30f2f30795b6ce82a21da7b1a" category="inline-link-macro-rx"></block></block>
   <block id="8fd935558171bd50056871ef9ee7bd05" category="inline-link-macro">工作負載工廠控制台</block>
   <block id="42417c07633018b12e0946c06afcf181" category="paragraph">您將建立一個 FSx 檔案系統來開始在 Workload Factory 中管理您的儲存空間和 FSx for ONTAP資源。在<block ref="ed002915dbbbf90a20b3d8fdf4cc2390" category="inline-link-macro-rx"></block>在儲存中，選擇*建立檔案系統*。<block ref="1f3b8beb11bf530a33922b2af302faf4" category="inline-link-macro-rx"></block> 。</block>
-  <block id="189c3af86554306ea0fe0a97bba45b30" category="list-text">*學習模式*：當您啟用 ARP/AI 時，它以_學習模式_運行。在學習模式下，FSx for ONTAP檔案系統根據分析區域（熵、檔案擴充類型和檔案 IOPS）開發警報設定檔。在檔案系統以學習模式執行 ARP/AI 足夠時間以評估工作負載特徵後，Workload Factory 會自動切換到 ARP/AI 到_主動模式_並開始保護您的資料。</block>
-  <block id="03e41041be7c9cc902073018ac0bc605" category="paragraph">啟用 ARP/AI 後，如果發生攻擊並且您確定攻擊是真實的，Workload Factory 會自動設定快照策略，每四小時最多拍攝六次快照。每個快照鎖定2-5天。</block>
   <block id="dfb50a8875f6e98586f1d46423ec7e59" category="list-text">從 *FSx for ONTAP* 中，選擇檔案系統的操作選單以啟用 ARP/AI，然後選擇 *管理*。</block>
   <block id="ac3784491c023b93e68ef3c4bd387b65" category="list-text">從「磁碟區」標籤中，選擇磁碟區的操作選單以啟用 ARP/AI，然後選擇*資料保護操作*，然後選擇*管理 ARP/AI*。</block>
   <block id="6ff824e5b33a50750960455d60fe1f8b" category="list-text">從 *FSx for ONTAP* 中，選擇要驗證勒索軟體攻擊的檔案系統。</block>
@@ -2384,7 +2367,6 @@
   <block id="68d85c073028f0fd978bc424d69ee8fd" category="list-text">在“孤立設備”下，選擇“查看和回收容量”。</block>
   <block id="f6841052bd0d86548318f9b2df118ea3" category="list-text">在「回收未使用的區塊設備空間」畫面上，選擇一個或多個區塊設備來歸檔資料並回收容量。</block>
   <block id="2c77adf5fa1de4ed37a6e14d2212f074" category="list-text">選擇“存檔”。</block>
-  <block id="33e155c9d3cab85dd1499ba63bd9d34d" category="paragraph">包含區塊裝置的FlexVol磁碟區以活動模式啟動 ARP/AI。</block>
   <block id="aca2e051b8b58a53ee4cf20a78bdde8a" category="list-text">此連結必須能夠連接到以下端點：\ https://api.workloads.netapp.com.基於 Web 的控制台透過與 Workload Factory API 互動來管理和操作 FSx for ONTAP工作負載。</block>
   <block id="0ee3fcfb10a8d4af3c7cb550b6d9bc38" category="paragraph">透過與 Amazon Bedrock 整合，Workload Factory 使用 AI 分析事件並提供可行的深入見解，以維護 FSx for ONTAP 檔案系統的健全狀況和效能。</block>
   <block id="27562a45337f51e17d281897d9fddcd2" category="paragraph">使用事件分析器時，您可以完全控制您的環境，同時也能受益於先進的 AI 分析。</block>
@@ -3217,4 +3199,25 @@
   <block id="73a2a12878b0731214258fd091d03336" category="list-text">所有其他帳戶：輸入內部部署 ONTAP 叢集的 ONTAP 憑證。確保使用者擁有所需的權限。</block>
   <block id="1cdbc8bcb26cc8d5e894a97b9e7f269f" category="section-title">2026年7月5日</block>
   <block id="92ee6e4d72d15689a675017ce0db2fa1" category="section-title">2026 年 5 月 31 日</block>
+  <block id="c78fe199ccaa5a2c357a3d2c45be14ef" category="list-text">從「儲存」功能表中，選擇「磁碟區資源管理器」。</block>
+  <block id="6ff324bc406694300a857d2e2fe3a576" category="list-text">從「Volume explorer」中選擇「Create volume」。</block>
+  <block id="f4258ab9dce223a884192f1b0d9eadb2" category="list-text">含有不可變檔案的磁碟區及使用 NVMe 通訊協定的磁碟區不支援 ARP/AI。iSCSI 磁碟區從 ONTAP 9.17.1 開始支援。</block>
+  <block id="36aa278c460567c053811bf14b7377ad" category="summary">NetApp Autonomous Ransomware Protection with AI （ARP/AI）在 NAS 和 SAN 環境中進行工作負載分析，以偵測並警告可能構成勒索軟體攻擊的異常活動。</block>
+  <block id="7cfa8a15930cf4747377549a5e84a0d1" category="paragraph">使用 NetApp 具備人工智慧的自主勒索軟體防護 (ARP/AI) 來保護您的資料。它監控 NAS (NFS/SMB) 和 SAN 環境中的活動，以偵測可能預示勒索軟體攻擊的異常行為。如果偵測到威脅，ARP/AI 會自動建立新的不可變更快照，以便您可以還原資料。</block>
+  <block id="b53bfc6c1177eea66555c9666b37c9e9" category="list-text">**熵**：對檔案中資料隨機性的評估（用於 NAS 和 SAN 環境）</block>
+  <block id="1bf673bd7c936106f77291545deec7a8" category="list-text">**檔案副檔名類型**：不符合常規副檔名類型的副檔名（僅用於 NAS 環境）</block>
+  <block id="355c28bedfa4cda8d585eb1293d36edc" category="list-text">**檔案 IOPS**：資料加密時出現異常的磁碟區活動激增（僅用於 NAS 環境）</block>
+  <block id="882ef8e1029ee9f72bd9491df7babc37" category="list-text">ARP/AI 的行為取決於協定和磁碟區類型：</block>
+  <block id="9759e6bd21d15b072bae594778c54fdb" category="list-text">*NAS 磁碟區（NFS/SMB）*：啟用 ARP/AI 後，它會立即開始運作。它使用預先訓練的 AI 模型來即時偵測勒索軟體威脅。</block>
+  <block id="25b746529ef17a721460fce9866d66db" category="list-text">*SAN 磁碟區（自 ONTAP 9.17.1 起）*：ARP/AI 即使在首次評估期間內也能提供即時保護。在這 2-4 週內，系統會學習正常的加密活動並設定警報閾值。同時，系統會持續監控您的資料、偵測威脅並發送警報。</block>
+  <block id="01cce4c75e886643f23820059b3874d9" category="list-text">*主動模式*：啟用主動模式後，FSx for ONTAP 會建立 ARP/AI 快照，以便在偵測到潛在威脅時協助保護您的資料。</block>
+  <block id="9ffb77858975d88c69cc99bf2edd76be" category="paragraph">如果系統將某個檔案副檔名標記為異常，請查看警報。您可以回應警報以保護您的資料，或者如果活動在預期之內，則將其標記為誤報。</block>
+  <block id="a52de90cf01277a8ef85a0fbafbe1ad4" category="paragraph">當您將警報標記為誤報時，系統會更新其警報設定。例如，如果一個新的檔案副檔名觸發了警報，而您將其標記為誤報，那麼下次系統偵測到該檔案副檔名時，您將不會收到警報。</block>
+  <block id="9d66ce17d00193cf0e9b9b5938c56566" category="list-text">使用早於 ONTAP 9.17.1 版本的 iSCSI 磁碟區</block>
+  <block id="97d72a00f8b70aa013948ac7c42445e1" category="paragraph">為檔案系統啟用 ARP/AI 功能可自動保護所有現有和新增的 NAS 磁碟區（NFS/SMB）。從 ONTAP 9.17.1 開始，此功能也支援 SAN 磁碟區（iSCSI）。您也可以為特定磁碟區啟用 ARP/AI 功能。</block>
+  <block id="169751cbc1f9c9e977c3581d3afe08cd" category="paragraph">啟用 ARP/AI 後，如果偵測到真實攻擊，Workload Factory 會自動建立快照原則。此原則每四小時最多可建立六個快照。每個快照鎖定 2-5 天。</block>
+  <block id="a62673db6bf1ed74cf121ab8341c03f4" category="paragraph">當系統偵測到可能的攻擊時，它會建立並鎖定該時刻的磁碟區快照。</block>
+  <block id="6ec74364a6da4d201b148eef6afaaeb1" category="paragraph">如果攻擊事後得到確認，您可以從快照中還原受影響的檔案或整個磁碟區。</block>
+  <block id="f4cb46b03000a83dfbabafe89cb0af31" category="paragraph">鎖定的快照在保留期限到期前無法刪除。如果之後確認攻擊為誤報，則會刪除鎖定的快照。</block>
+  <block id="64e991d759281e91a768b558639fb387" category="paragraph">由於系統能夠識別受影響的檔案和攻擊時間，因此您可以僅從可用的快照中還原受影響的檔案，而無需還原整個磁碟區。</block>
 </blocks>
