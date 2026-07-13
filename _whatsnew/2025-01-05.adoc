@@ -4,6 +4,7 @@
 
 
 
+[[volume-cifs-share-enhancements]]
 === Volume CIFS 共用增強功能
 
 下列增強功能可用於管理 BlueXP  工作負載工廠中 Amazon FSX for ONTAP 檔案系統中磁碟區的 CIFS 共用：

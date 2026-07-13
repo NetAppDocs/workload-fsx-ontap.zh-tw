@@ -19,6 +19,7 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 
 
 
+[[about-this-task]]
 == 關於這項工作
 
 工作負載工廠每日分析Amazon FSx for NetApp ONTAP檔案系統部署設定。每日分析提供架構完善的狀態、見解和建議，以及自動修復配置問題的選項，確保您的檔案系統符合最佳實務。
@@ -32,15 +33,15 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 .分析內容
 工作負載工廠會針對適用於 ONTAP 檔案系統的 FSX ，分析下列組態的架構良好狀態：
 
-* 可靠性：SSD 容量閾值、排程本地快照、排程磁碟區備份、遠端資料複製、長期保留的資料可靠性，以及將主機連接至容錯移轉節點
+* 可靠性：SSD 容量臨界值、排程本機快照、排程磁碟區備份、遠端資料複寫，以及長期保留的資料可靠性
 * 安全性： NetApp自主勒索軟體防護（含 AI 功能，ARP/AI 已停用）以及對卷的未經授權訪問
 * 卓越營運：自動容量管理、Volume 檔案容量使用率臨界值、Volume 使用率接近全滿、快取關係寫入模式、最佳化快取 Volume 大小以及 Volume 邏輯容量報告
 * 成本最佳化：儲存效率、資料分層、不必要的快照和備份刪除、非作用中區塊裝置、未充分利用的 SSD 容量以及非作用中 NAS 磁碟區
-* 效能效率：將主機連接到首選節點
 
 
 
 
+[[before-you-begin]]
 == 開始之前
 
 * 您必須在 AWS 帳戶中link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _操作和修復_ 權限"^]。
@@ -50,6 +51,7 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 
 
 
+[[fix-a-configuration-issue]]
 == 修復配置問題
 
 您可以修正 FSx for ONTAP檔案系統或檔案系統中選定磁碟區的設定問題。您可以選擇一個或多個要修復的配置。
@@ -75,6 +77,7 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 
 
 
+[[dismiss-a-configuration-analysis]]
 == 取消配置分析
 
 解除以無限期停止對 FSx for ONTAP檔案系統或檔案系統中選定磁碟區的設定分析。您可以在需要時重新開始分析。
@@ -122,6 +125,7 @@ link:configuration-analysis.html["了解 Workload Factory 中的配置分析和�
 
 
 
+[[reactivate-a-dismissed-configuration-analysis]]
 == 重新啟動已解除的組態分析
 
 隨時重新啟動已解除的組態分析。您可以選擇一個或多個要重新啟動的配置。

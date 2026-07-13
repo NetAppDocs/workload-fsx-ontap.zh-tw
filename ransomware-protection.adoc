@@ -57,6 +57,7 @@ ARP/AI 功能會根據Amazon FSx for NetApp ONTAP執行的ONTAP版本自動更�
 
 
 
+[[enable-arpai-for-a-file-system-or-a-volume]]
 == 為檔案系統或磁碟區啟用 ARP/AI
 
 為檔案系統啟用 ARP/AI 功能可自動保護所有現有和新增的 NAS 磁碟區（NFS/SMB）。從 ONTAP 9.17.1 開始，此功能也支援 SAN 磁碟區（iSCSI）。您也可以為特定磁碟區啟用 ARP/AI 功能。
@@ -111,6 +112,7 @@ ARP/AI 功能會根據Amazon FSx for NetApp ONTAP執行的ONTAP版本自動更�
 ====
 
 
+[[validate-ransomware-attacks]]
 == 驗證勒索軟體攻擊
 
 判斷攻擊是假警報還是真正的勒索軟體事件。
@@ -129,6 +131,7 @@ ARP/AI 功能會根據Amazon FSx for NetApp ONTAP執行的ONTAP版本自動更�
 
 
 
+[[recover-data-after-a-ransomware-attack]]
 == 在勒索軟體攻擊之後恢復資料
 
 當系統偵測到可能的攻擊時，它會建立並鎖定該時刻的磁碟區快照。

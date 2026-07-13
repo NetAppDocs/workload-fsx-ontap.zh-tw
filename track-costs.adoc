@@ -15,6 +15,7 @@ summary: 在 NetApp Workload Factory 中追蹤 FSx for ONTAP 檔案系統資源�
 
 
 
+[[about-this-task]]
 == 關於這項工作
 
 Workload Factory 透過從 AWS Cost Explorer 取得成本資料來追蹤 FSx for ONTAP 檔案系統的成本和使用情況。追蹤的成本詳情包括：使用類型、使用 SKU、部署類型、使用量和總成本。
@@ -31,6 +32,7 @@ AWS 分配標籤鍵和標籤鍵值增加了一層額外的篩選功能，可以�
 
 
 
+[[track-costs]]
 == 追蹤成本
 
 Workload Factory 控制台成本儀表板中顯示的成本是基於 AWS Cost Explorer 的資料，該資料每 24 小時更新一次。
@@ -61,6 +63,7 @@ Workload Factory 控制台成本儀表板中顯示的成本是基於 AWS Cost Ex
 
 
 
+[[generate-cost-reports-for-your-fsx-for-ontap-resources]]
 == 為您的 FSx for ONTAP 資源產生成本報告
 
 產生特定 FSx for ONTAP 檔案系統資源的成本報告，以便與利害關係人共用。

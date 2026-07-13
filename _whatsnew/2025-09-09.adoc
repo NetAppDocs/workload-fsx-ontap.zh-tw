@@ -4,6 +4,7 @@
 
 
 
+[[storage-inventory-report-enhancements]]
 === 儲存庫存報表增強功能
 
 工作負載工廠增強了針對 FSx for ONTAP檔案系統所報告的資料。  FSx for ONTAP庫存頁面的可下載報表包括以下新欄位：
@@ -17,6 +18,7 @@
 
 
 
+[[snapshot-management-enhancements]]
 === 快照管理增強功能
 
 工作負載工廠對查看卷快照詳細資訊和管理卷快照做出了多項增強。這些增強功能使您更容易了解快照的狀態並保護您的資料。
@@ -38,6 +40,7 @@ image:screenshot-manage-snapshots-screen.png["顯示管理快照畫面的螢幕�
 
 
 
+[[ssd-storage-capacity-decrease-available]]
 === SSD 儲存容量可減少
 
 工作負載工廠支援減少第二代檔案系統的固態硬碟 (SSD) 容量。利用彈性檔案系統容量，您可以動態調整檔案系統的容量以滿足工作負載的需求。
@@ -46,6 +49,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capac
 
 
 
+[[new-notification-for-storage]]
 === 儲存的新通知
 
 工作負載工廠通知服務包括儲存自動容量管理的成功和失敗通知。

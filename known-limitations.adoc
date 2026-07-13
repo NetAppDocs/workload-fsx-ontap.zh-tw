@@ -15,6 +15,7 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 
 
+[[region-support]]
 == 區域支持
 
 以下 AWS 區域不受支援：
@@ -26,6 +27,7 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 
 
+[[adding-ha-pairs-limitations]]
 == 新增 HA 配對限制
 
 * 此作業可能需要約 30 分鐘的時間才能完成。
@@ -34,22 +36,26 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 
 
+[[throughput-capacity-region-support]]
 == 處理量容量區域支援
 
 
 
+[[scale-up-deployments]]
 === 橫向擴充部署
 
 所有地區均支援最高每秒 2 Gb 的橫向擴充組態。下列地區支援最高每秒 4 Gb 的最大處理量容量、可進行橫向擴充部署：美國東部（俄亥俄州）地區、美國東部（北維吉尼亞州）地區、美國西部（俄勒岡州）地區和歐洲（愛爾蘭）。
 
 
 
+[[scale-out-deployments]]
 === 橫向擴充部署
 
 以下區域支援高達 6 GB/s 的最大吞吐容量，以進行橫向擴展部署：美國東部（弗吉尼亞北部和俄亥俄）、美國西部（加利福尼亞北部和俄勒岡）、歐洲（法蘭克福、愛爾蘭和斯德哥爾摩）以及亞太地區（新加坡和雪梨）。
 
 
 
+[[capacity-management]]
 == 容量管理
 
 * iSCSI 傳輸協定目前不支援 Volume 自動擴充功能。
@@ -60,6 +66,7 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 
 
+[[storage-vms]]
 == 儲存VM
 
 每個 SKU 的儲存虛擬機器數量是有限的。  Workload Factory 不支援建立超出限制的儲存虛擬機器。 ^1^
@@ -68,6 +75,7 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 
 
+[[iscsi-protocol-support]]
 == iSCSI 傳輸協定支援
 
 * iSCSI 傳輸協定僅適用於 FlexVol 磁碟區。^1^
@@ -76,6 +84,7 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 
 
+[[data-protection]]
 == 資料保護
 
 * 無法刪除快照。
@@ -97,6 +106,7 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 
 
+[[storage-savings-calculator]]
 == 儲存節約計算機
 
 儲存節約計算機無法計算下列組態的成本節約效益：
@@ -108,18 +118,21 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 
 
+[[aws-secrets-manager-support]]
 == AWS Secrets Manager 支援
 
 使用控制台代理程式時不支援 AWS Secrets Manager。
 
 
 
+[[amazon-s3-access-points-limitation]]
 == Amazon S3 存取點限制
 
 每個儲存虛擬機器的 S3 存取點數量上限為 4,000 個。
 
 
 
+[[limitations-for-storage-vm-migration-replication]]
 == 儲存 VM 移轉複寫的限制
 
 * Workload Factory 不支援第一代和第二代 FSx for ONTAP 檔案系統之間儲存虛擬機器的遷移複寫。

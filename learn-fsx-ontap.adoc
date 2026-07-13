@@ -19,6 +19,7 @@ FSx for ONTAP是 Workload Factory 中的_儲存_元件。
 
 
 
+[[features]]
 == 功能
 
 適用於 ONTAP 的 FSX 提供下列功能：
@@ -40,6 +41,7 @@ FSx for ONTAP是 Workload Factory 中的_儲存_元件。
 
 
 
+[[additional-features-in-workload-factory]]
 == 工作負載工廠的附加功能
 
 * * 儲存成本比較計算機 * ：將 Amazon Elastic Block Store （ EBS ）， Elastic File System （ EFS ）和適用於 Windows 檔案伺服器的 FSX 儲存成本與適用於 ONTAP 的 FSX 進行比較。從計算機中、您可以檢視適用於 ONTAP 儲存組態的 FSX 如何節省成本、並規劃移轉至適用於 ONTAP 儲存設備的 FSX 。
@@ -49,6 +51,7 @@ FSx for ONTAP是 Workload Factory 中的_儲存_元件。
 
 
 
+[[tools-to-use-netapp-workload-factory]]
 == 使用NetApp Workload Factory 的工具
 
 您可以將NetApp Workload Factory 與以下工具一起使用：
@@ -64,12 +67,14 @@ FSx for ONTAP是 Workload Factory 中的_儲存_元件。
 
 
 
+[[cost]]
 == 成本
 
 AWS 維護您的 FSx for ONTAP帳戶，而不是 Workload Factory。請參閱link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html#pricing-for-fsx-ontap["Amazon FSX for NetApp ONTAP 的定價"^] 。
 
 
 
+[[regions]]
 == 區域
 
 所有支援 FSx for ONTAP 的商業區域都支援工作負載工廠。link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["檢視支援的Amazon地區。"^]
@@ -83,6 +88,7 @@ AWS 維護您的 FSx for ONTAP帳戶，而不是 Workload Factory。請參閱lin
 
 
 
+[[getting-help]]
 == 取得協助
 
 Amazon FSX for NetApp ONTAP 的功能是AWS的第一方解決方案。如需與適用於 ONTAP 檔案系統、基礎架構或任何使用此服務的解決方案的 FSX 相關的問題或技術支援問題、請使用 AWS 管理主控台的支援中心、開啟 AWS 的支援案例。選取「FSXfor ONTAP Sf1」服務和適當的類別。提供建立AWS支援案例所需的其餘資訊。

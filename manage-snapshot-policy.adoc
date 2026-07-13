@@ -22,6 +22,7 @@ summary: 在 Workload Factory 中管理 FSx for ONTAP磁碟區的快照原則。
 
 
 
+[[change-a-snapshot-policy]]
 == 變更快照原則
 
 您可以變更要保留的快照原則名稱，排程和複本數量，以及啟用或停用不可變快照。無法啟用或停用跨儲存 VM 的原則共用。此選項僅在建立快照原則時可用。
@@ -45,6 +46,7 @@ summary: 在 Workload Factory 中管理 FSx for ONTAP磁碟區的快照原則。
 
 
 
+[[enable-immutable-snapshots]]
 == 啟用不可變快照
 
 鎖定快照，防止在保留期間刪除快照。
@@ -74,6 +76,7 @@ Volume 快照現在已鎖定。
 
 
 
+[[assign-a-snapshot-policy-to-a-volume]]
 == 將快照原則指派給磁碟區
 
 您可以將快照原則指派給單一磁碟區，為該磁碟區建立排程快照。
@@ -100,6 +103,7 @@ Volume 快照現在已鎖定。
 
 
 
+[[remove-a-snapshot-policy-from-a-volume]]
 == 從磁碟區移除快照原則
 
 因為您不再需要磁碟區的快照，或是想要刪除指派給多個磁碟區的快照原則，所以請從磁碟區移除快照原則。若要<<刪除快照原則,刪除快照原則>>將其指派給多個 Volume ，您必須手動將其從所有 Volume 中移除。
@@ -123,6 +127,7 @@ Volume 快照現在已鎖定。
 
 
 
+[[delete-a-snapshot-policy]]
 == 刪除快照原則
 
 當您不再需要快照原則時，請將其刪除。

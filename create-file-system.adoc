@@ -25,6 +25,7 @@ summary: 使用NetApp Workload Factory，您可以建立 FSx for ONTAP檔案系�
 
 
 
+[[create-an-fsx-for-ontap-file-system]]
 == 為 ONTAP 檔案系統建立 FSX
 
 您可以使用 _Quick creity_ 或 _Advanced creity_ 、為 ONTAP 檔案系統建立 FSX 。您也可以使用 Codebox 中的下列工具： REST API 、 CloudForformation 和 Terraform 。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["瞭解如何使用 Codebox 進行自動化"^]。
@@ -229,6 +230,7 @@ NOTE: 從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏
 ====
 
 
+[[security-group-details]]
 == 安全性群組詳細資料
 
 下表提供安全性群組的詳細資料，包括通訊協定，連接埠和角色。

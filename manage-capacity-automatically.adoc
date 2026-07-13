@@ -15,6 +15,7 @@ summary: 啟用此功能後，Workload Factory 可以根據容量需求隨時間
 
 
 
+[[about-this-task]]
 == 關於這項工作
 
 系統每 30 分鐘掃描一次 FSx for ONTAP 檔案系統。它會檢查是否需要新增增量儲存空間，並驗證可用的磁碟區 inode。計數會根據自動容量管理臨界值而增加。
@@ -27,6 +28,7 @@ summary: 啟用此功能後，Workload Factory 可以根據容量需求隨時間
 
 
 
+[[enable-automatic-capacity-management-and-capacity-notifications]]
 == 啟用自動容量管理和容量通知
 
 啟用自動容量管理，即可自動增加儲存空間，直到達到 FSx for ONTAP 檔案系統的最大容量限制。設定通知，以便在檔案系統達到特定容量臨界值時收到警示。
@@ -83,6 +85,7 @@ summary: 啟用此功能後，Workload Factory 可以根據容量需求隨時間
 
 
 
+[[enable-inode-management-for-a-file-system]]
 == 為檔案系統啟用 inode 管理
 
 啟用自動 inode 管理，以增加每個磁碟區的 inode （檔案）數量，直到達到允許的限制。

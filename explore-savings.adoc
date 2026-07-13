@@ -19,6 +19,7 @@ NetApp Workload Factory 包含一個儲存節省計算器，用於將 Amazon 儲
 
 
 
+[[calculator-options]]
 == 計算機選項
 
 有兩種計算機選項可供您比較系統與適用於 ONTAP 的 FSX 之間的成本、這些選項可為您的 Amazon 儲存環境自訂及自動偵測。
@@ -31,6 +32,7 @@ NetApp Workload Factory 包含一個儲存節省計算器，用於將 Amazon 儲
 
 
 
+[[explore-savings-via-customization]]
 == 透過自訂功能探索節約效益
 
 請依照儲存設備選項卡下的步驟操作。
@@ -116,6 +118,7 @@ NetApp Workload Factory 包含一個儲存節省計算器，用於將 Amazon 儲
 
 
 
+[[explore-savings-for-detected-storage-environments]]
 == 探索偵測到的儲存環境的節約效益
 
 .開始之前
@@ -198,6 +201,7 @@ NOTE: 此計算機選項不支援 EBS 快照和適用於 Windows 檔案伺服器
 
 
 
+[[deploy-fsx-for-ontap-file-systems]]
 == 為 ONTAP 檔案系統部署 FSX
 
 如果您想要切換至適用於 ONTAP 的 FSX 以節省成本，請選取 * 建立 * ，直接從「建立適用於 ONTAP 檔案系統的 FSX 」精靈建立檔案系統，或選取 * 儲存 * 來儲存建議的組態以供稍後使用。

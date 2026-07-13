@@ -23,6 +23,7 @@ summary: 根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案�
 
 
 
+[[edit-the-cache-volume-name]]
 == 編輯快取卷名稱
 
 您可以隨時變更現有快取磁碟區的名稱。
@@ -39,6 +40,7 @@ summary: 根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案�
 
 
 
+[[adjust-the-capacity-of-a-cache-volume]]
 == 調整快取磁碟區的容量
 
 您可以隨時調整現有快取磁碟區的容量。
@@ -55,6 +57,7 @@ summary: 根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案�
 
 
 
+[[edit-the-cache-volume-export-policy]]
 == 編輯快取卷導出策略
 
 更改現有快取磁碟區的掛載路徑或匯出策略。
@@ -72,6 +75,7 @@ summary: 根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案�
 
 
 
+[[change-the-caching-method-for-a-cache-volume]]
 == 更改快取卷的快取方法
 
 您可以變更現有快取磁碟區的快取工作方式，使其採用寫繞式或寫回式。
@@ -90,6 +94,7 @@ summary: 根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案�
 
 
 
+[[prepopulate-a-cache-volume]]
 == 預先填充快取卷
 
 在使用快取卷之前，請先用來源磁碟區中的資料填入快取卷，以加快快取資料的可用性。
@@ -106,6 +111,7 @@ summary: 根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案�
 
 
 
+[[delete-a-cache-volume]]
 == 刪除快取卷
 
 刪除快取磁碟區時，會移除與其快取的關係。快取資料已失效。

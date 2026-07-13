@@ -15,10 +15,12 @@ summary: 瞭解 Amazon FSX for NetApp ONTAP 的新功能。
 
 
 
+[[05-july-2026]]
 == 2026年7月5日
 
 
 
+[[new-well-architected-dashboard-available-for-all-fsx-for-ontap-systems]]
 === 適用於所有 FSx for ONTAP 系統的全新架構完善儀表板現已推出
 
 現在，您可以透過 NetApp Workload Factory 中全新的架構完善儀表板，對 FSx for ONTAP 檔案系統進行架構完善分析。新儀表板集中展示了您所有帳戶和區域中的檔案系統及其配置。當您從檔案系統存取「架構完善」索引標籤時，會出現彈出通知。您可以透過在 Workload Factory 左側導覽功能表中選擇「架構完善」來存取新儀表板。
@@ -27,27 +29,15 @@ summary: 瞭解 Amazon FSX for NetApp ONTAP 的新功能。
 
 
 
-=== 架構良好的分析中的新建議
-
-Workload Factory 現在在針對 FSx for ONTAP 檔案系統的完善架構分析中加入了以下配置：
-
-* 將主機連線至容錯移轉節點：檢查主機是否已連線至主動-被動式 FSx for ONTAP 檔案系統中的容錯移轉節點，並建議將主機連線至容錯移轉節點以提高可靠性。
-* 將主機連接至慣用節點：檢查主機是否透過慣用節點連接至其區塊裝置，並建議將主機連接至慣用節點以提升效能效率。
-
-
-
-
+[[volumes-explorer]]
 === 磁碟區資源管理器
 
 磁碟區資源管理器為您提供 NetApp Workload Factory 中所有磁碟區的簡潔、可搜尋檢視。快速查看哪些磁碟區用於處理區塊或檔案工作負載。查看每個磁碟區的邏輯大小、實體已使用容量以及是否使用了儲存效率功能（壓縮、重複資料刪除和資料精簡）。按名稱、狀態（可用/失敗）、延遲、大小、已使用容量和保護功能進行篩選和排序。
 
 
 
-=== 複製延遲增強
-
-
-
-==== 增強複製延遲的電子郵件通知
+[[enhanced-email-notifications-for-replication-delays]]
+=== 增強複製延遲的電子郵件通知
 
 現在，複製延遲的電子郵件通知包含有關受影響關係的更多詳細資訊。此通知可協助您快速識別受影響的關係，並在 Workload Factory 主控台中查看相關資訊。
 
@@ -55,14 +45,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.h
 
 
 
-==== 將複製延遲資料匯出至 CSV
-
-現在您可以將複製延遲資料匯出至 CSV 檔案，以便在試算表中分析資料並與他人共用。
-
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.html["追蹤複寫延遲"]
-
-
-
+[[block-device-creation-enhancement]]
 === 區塊裝置建立增強功能
 
 Workload Factory 支援從磁碟區快照建立區塊裝置。
@@ -71,16 +54,19 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-block-device.html["
 
 
 
+[[31-may-2026]]
 == 2026 年 5 月 31 日
 
 
 
+[[support-for-aws-govcloud-us-in-netapp-workload-factory]]
 === 在 NetApp Workload Factory 中支援 AWS GovCloud（US）
 
 NetApp Workload Factory 支援 AWS GovCloud （US） 帳戶。使用 GovCloud 帳戶，您可以在 AWS GovCloud （US） 區域中部署和管理儲存工作負載。
 
 
 
+[[set-volume-latency-thresholds-in-netapp-workload-factory]]
 === 在 NetApp Workload Factory 中設定磁碟區延遲臨界值
 
 您可以按磁碟區配置延遲閾值，以監控效能並在延遲值超出您定義的限制時接收警示。Workload Factory 會監控讀取和寫入延遲，並在超出任一閾值時產生警示。
@@ -89,6 +75,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/set-volume-latency-thresho
 
 
 
+[[track-replication-delays-in-netapp-workload-factory]]
 === 在 NetApp Workload Factory 中追蹤複寫延遲
 
 借助 NetApp Workload Factory，您可以追蹤配置了遠端複製的 FSx for ONTAP 檔案系統的複製延遲。複製延遲是指資料寫入來源檔案系統到複製到目標檔案系統之間的時間延遲。追蹤複製延遲有助於您監控複製設定的運作狀況，並識別可能影響資料一致性和復原點目標（RPO）的潛在問題。
@@ -97,12 +84,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-replication-delays.h
 
 
 
+[[host-identification-and-workload-definitions-in-netapp-workload-factory]]
 === 在 NetApp Workload Factory 中的主機識別與工作負載定義
 
 Workload Factory 可辨識使用儲存的主機以及與主機活動相關的工作負載類型。工作負載定義由 AI 根據 AWS 標籤和中繼資料產生。您可以在 Workload Factory 的檔案系統、磁碟區和區塊裝置資源畫面中查看主機詳細資訊和工作負載定義。
 
 
 
+[[lif-details-available-in-netapp-workload-factory]]
 === LIF 詳細資料可在 NetApp Workload Factory 中取得
 
 我們在檔案系統的「概覽」標籤中直接顯示所有檔案系統和儲存 VM 端點。在 Workload Factory 主控台中直接查看端點，無需使用 CLI 或 CloudShell 即可輕鬆監控網路存取、端點和容錯移轉狀態。若要顯示 LIF 詳細資訊（包括角色、端點、節點、IP 位址和狀態），您需要將連結與檔案系統建立關聯。
@@ -111,6 +100,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解�
 
 
 
+[[cost-enhancements]]
 === 成本增強功能
 
 新增的選用頁面層級篩選器可最佳化跨所有 AWS 帳戶的資源成本分析結果。您可以選擇多個區域，並使用檔案系統指派標籤鍵和鍵值來篩選成本分析結果，從而取得 FSx for ONTAP 檔案系統和磁碟區的特定資源成本詳情。
@@ -119,6 +109,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-costs.html["在 NetA
 
 
 
+[[replication-initialization-scheduling-available-in-netapp-workload-factory]]
 === NetApp Workload Factory 中提供複寫初始化排程
 
 在資料複製設定過程中，您現在可以為 FSx for ONTAP 檔案系統排程複製初始化。您可以選擇立即初始化複製關係，也可以選擇在指定時間初始化。複製初始化是透過將資料從來源檔案系統複製到目標檔案系統來建立複製基線的過程。安排複製初始化可以自動執行此過程，並確保您的複製設定無需人工幹預即可保持最新狀態。
@@ -127,6 +118,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["�
 
 
 
+[[excel-report-of-the-well-architected-status-of-fsx-for-ontap-file-systems]]
 === FSx for ONTAP 檔案系統架構良好狀態的 Excel 報告
 
 分析完成後，您可以下載一份 Excel 報告，其中包含您的 FSx for ONTAP 檔案系統架構良好狀態的資訊，供您存檔或與您的團隊共享。
@@ -135,6 +127,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[view-and-analyze-latency-events]]
 === 檢視和分析延遲事件
 
 Workload Factory 現在支援檢視和分析 FSx for ONTAP 磁碟區的延遲事件。您無需連結連線即可檢視延遲事件，從而更輕鬆地監控效能問題。若要分析延遲事件並取得 AI 驅動的洞察和建議，您必須使用連結連線到檔案系統。分析結果提供目前延遲值、臨界值、QoS 回應分析和補救指南。
@@ -143,6 +136,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/analyze-events.html["在 N
 
 
 
+[[set-volume-latency-thresholds]]
 === 設定磁碟區延遲臨界值
 
 現在您可以按磁碟區配置延遲閾值，以監控效能並在讀取或寫入延遲超過您定義的限制時收到警報。延遲監控可協助您在效能問題影響工作負載之前主動識別它們。
@@ -151,10 +145,12 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/set-volume-latency-thresho
 
 
 
+[[03-may-2026]]
 == 2026 年 5 月 3 日
 
 
 
+[[block-device-clones]]
 === 區塊裝置複本
 
 Workload Factory 為您的區塊裝置提供複製功能，以便您可以快速佈建可寫入且高效的資料副本，同時控制容量、存取和生命週期。
@@ -163,6 +159,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[
 
 
 
+[[ec2-tags-on-block-devices]]
 === 區塊裝置上的 EC2 標籤
 
 區塊裝置表格現在包含一欄，顯示正在使用每個區塊裝置的 EC2 主機標籤。這有助於您在疑難排解或稽核期間識別哪個主機使用每個區塊裝置。
@@ -173,6 +170,7 @@ link:https://github.com/NetApp/FSx-ONTAP-samples-scripts/tree/main/Management-Ut
 
 
 
+[[capacity-trends-for-fsx-for-ontap-file-systems]]
 === FSx for ONTAP 檔案系統的容量趨勢
 
 直接從 FSx for ONTAP 檔案系統的概覽中了解 SSD 容量趨勢。新增的容量管理卡顯示了上個月的使用趨勢。此分析比較了實際容量和分配容量，方便您評估資源使用量。
@@ -181,6 +179,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-capacity-automatica
 
 
 
+[[pdf-report-of-the-well-architected-status-of-fsx-for-ontap-file-systems]]
 === FSx for ONTAP 檔案系統架構良好狀態的 PDF 報告
 
 分析完成後、您可以下載 FSx for ONTAP 檔案系統架構良好狀態的 PDF 報告、以供記錄或與團隊分享。
@@ -189,10 +188,12 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[06-april-2026]]
 == 2026 年 4 月 6 日
 
 
 
+[[well-architected-analysis-updates]]
 === 精心設計的分析更新
 
 Workload Factory 會分析您的 FSx for ONTAP 檔案系統，尋找*非使用中的 NAS 磁碟區*。組態分析會識別未主動使用的 NAS 磁碟區，並建議採取行動以最佳化儲存使用率並降低成本。
@@ -201,6 +202,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[journal-table-feature-for-s3-access-points]]
 === S3 存取點的日誌表功能
 
 日誌表功能提供了一種大規模管理 FSx ONTAP S3 物件儲存的方法，可讓您輕鬆稽核使用者對儲存貯體中物件的存取事件和操作。使用 Workload Factory，您可以設定儲存貯體和 S3 表的自動掃描，以記錄事件，顯示所有物件、其詳細資訊和使用者操作。
@@ -209,6 +211,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/setup-journal-table.html["
 
 
 
+[[support-for-managing-existing-igroups]]
 === 支援管理現有 igroup
 
 Workload Factory 支援管理現有的 igroup。您可以新增或移除區塊裝置和主機啟動器、以準時提供已部署的工作負載。
@@ -217,6 +220,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[
 
 
 
+[[support-for-specifying-the-aggregate-for-flexvol-volumes]]
 === 支援指定 FlexVol volume 的 Aggregate
 
 Workload Factory 支援在選定的 Aggregate 上建立 FlexVol 磁碟區。這樣，您可以將容量和效能負載分散到所有檔案系統資源。
@@ -225,16 +229,19 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["在 Ne
 
 
 
+[[last-access-time-for-block-devices]]
 === 區塊裝置的最後存取時間
 
 Workload Factory 會回報區塊裝置的最後存取時間。該時間是根據您上次在 Workload Factory 中存取 igroup 的時間。了解每個區塊裝置的最後使用時間有助於您最佳化資源。
 
 
 
+[[01-march-2026]]
 == 2026 年 3 月 1 日
 
 
 
+[[well-architected-analysis-updates]]
 === 精心設計的分析更新
 
 Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設定：
@@ -245,6 +252,7 @@ Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設�
 
 
 
+[[workload-factory-supports-ai-ml-use-case-for-replication]]
 === Workload Factory 支援 AI 與 ML 使用案例的複寫
 
 Workload Factory 支援將內部部署 ONTAP 資料複製到 FSx for ONTAP，並為 AWS 人工智慧（AI）和機器學習（ML）服務建立 S3 存取點，以加速 AI/ML 工作流程。
@@ -253,6 +261,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["�
 
 
 
+[[editing-existing-s3-access-points]]
 === 編輯現有的 S3 存取點
 
 您可以變更連接到磁碟區的現有 S3 存取點的使用者和使用者類型。您也可以啟用或停用存取點的中繼資料。
@@ -261,6 +270,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-s3-access-points.html
 
 
 
+[[added-block-storage-diagram]]
 === 新增區塊儲存圖
 
 如果您使用區塊儲存，可以查看區塊儲存圖，直觀地了解區塊設備如何連接到節點和 igroup。該圖有助於您理解和管理區塊儲存。
@@ -269,6 +279,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[
 
 
 
+[[update-to-automatic-capacity-management-feature]]
 === 自動容量管理功能更新
 
 此次更新將該功能拆分為兩個不同的功能：自動容量管理和容量通知。
@@ -281,6 +292,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-manag
 
 
 
+[[new-ask-me-bookmark-available-in-workload-factory]]
 === Workload Factory 中新增了「問我」書籤
 
 我們在 Workload Factory 控制台的每個畫面上都新增了 Ask Me 書籤。這項改進讓您在需要協助時更輕鬆快速地存取 Ask Me。Ask Me 是我們的 AI 助理。您可以詢問有關工作負載環境的問題、獲取個人化見解，並查看先前的對話。
@@ -291,10 +303,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/workload-factory-overvie
 
 
 
+[[16-february-2026]]
 == 2026 年 2 月 16 日
 
 
 
+[[support-for-storage-vm-migration]]
 === 支援儲存 VM 移轉
 
 NetApp Workload Factory 現已支援儲存虛擬機器遷移。此功能允許將 ONTAP 儲存系統資料和配置從本機 ONTAP 系統或第一代 FSx for ONTAP 檔案系統遷移到第二代 FSx for ONTAP 檔案系統。您可以複製儲存虛擬機器的資料和配置設置，以最小的停機時間和對使用者及應用程式的干擾遷移到新的檔案系統。
@@ -303,16 +317,19 @@ NetApp Workload Factory 現已支援儲存虛擬機器遷移。此功能允許�
 
 
 
+[[01-february-2026]]
 == 2026 年 2 月 1 日
 
 
 
+[[home-page-includes-well-architected-issues-and-ems-events-for-storage]]
 === 首頁包含 Storage 的 well-architected 問題和 EMS 事件
 
 NetApp Workload Factory 主頁包含一個「焦點」磁貼，其中會顯示工作負載的架構良好問題和 FSx for ONTAP 緊急管理系統（EMS）事件。您可以從這裡導覽至「儲存」工作負載，查看儲存環境中所有 FSx for ONTAP 檔案系統的架構良好狀態或事件。
 
 
 
+[[support-for-on-premises-data-replication-using-an-s3-access-point]]
 === 支援使用 S3 存取點進行內部部署資料複寫
 
 Workload Factory 支援將內部部署 ONTAP 資料複寫到雲端，以便與 AWS GenAI、ML 和分析功能整合。您可以使用 S3 存取點將內部部署資料複寫到 NFS 或 SMB/CIFS 磁碟區。
@@ -321,6 +338,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["�
 
 
 
+[[s3-access-point-enhancements-in-storage]]
 === Storage 中的 S3 存取點增強功能
 
 NetApp Workload Factory 的儲存工作負載中，S3 接入點管理功能已獲得多項增強。您可以輸入 S3 接入點的網路設定詳細資訊並新增 S3 接入點標籤。其他增強功能包括查看 S3 儲存桶詳細資訊以及執行更多 S3 接入點管理操作。
@@ -341,6 +359,7 @@ NetApp Workload Factory 為 S3 存取點提供額外的管理操作。您可以�
 
 
 
+[[well-architected-analysis-updates]]
 === 精心設計的分析更新
 
 Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設定：
@@ -352,6 +371,7 @@ Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設�
 
 
 
+[[additional-cards-for-block-devices]]
 === 區塊裝置的其他卡
 
 儲存工作負載的「區塊裝置」標籤中新增了三張卡片，以便快速瞭解區塊裝置的使用情況和保護狀態：
@@ -363,6 +383,7 @@ Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設�
 
 
 
+[[support-for-initiator-group-creation-and-management]]
 === 支援啟動器群組的建立和管理
 
 NetApp Workload Factory 支援在 FSx for ONTAP 檔案系統中建立和管理區塊儲存的啟動器群組（igroup）。啟動器群組將區塊設備（LUN）連接到允許存取它們的運算資源，從而為 SAN 環境中的區塊儲存提供權限層。
@@ -373,10 +394,12 @@ NetApp Workload Factory 支援在 FSx for ONTAP 檔案系統中建立和管理�
 
 
 
+[[04-january-2026]]
 == 2026年1月4日
 
 
 
+[[well-architected-analysis-updates]]
 === 精心設計的分析更新
 
 Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設定：
@@ -390,24 +413,28 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[ask-me-ai-assistant-home-page-integration]]
 === 問我關於人工智慧助理首頁整合的問題
 
 Workload Factory 控制台主頁嵌入了 Ask me AI 助手，讓您可以詢問有關您自己的儲存環境的問題，直接從您的環境中獲取個人化見解，並參考先前的對話。您可以與「問我」進行交互，以了解您的工作負載、解決問題並了解更多關於工作負載工廠的資訊——所有這些都無需離開控制台。
 
 
 
+[[use-of-iam-user-principal-in-lambda-link-resource-based-permission-policies]]
 === 在 Lambda 連結資源中採用 IAM 使用者主體權限策略
 
 用於連接 Workload Factory 帳戶和一個或多個 FSx for ONTAP檔案系統以執行高級ONTAP操作的 Lambda 鏈接，現在使用 IAM 使用者主體進行基於資源的策略權限。此項變更使 AWS 資源存取與行業最佳實踐更加一致。
 
 
 
+[[analysis-screen-added-for-the-ai-analyzer-for-ems-events]]
 === 為 EMS 事件的 AI 分析器添加了分析螢幕
 
 儲存選單中新增了「分析」畫面。從此畫面，您可以使用適用於ONTAP EMS 事件功能的 FSx AI 分析器。
 
 
 
+[[block-device-enhancements-in-netapp-workload-factory]]
 === NetApp Workload Factory中的區塊裝置增強功能
 
 針對區塊設備進行了以下增強。
@@ -437,10 +464,12 @@ NetApp Workload Factory包含以下增強功能： link:https://docs.netapp.com/
 
 
 
+[[04-december-2025]]
 == 2025年12月4日
 
 
 
+[[support-for-aws-s3-access-points-for-fsx-for-ontap]]
 === 支援用於ONTAP的 FSx 的 AWS S3 存取點
 
 NetApp Workload Factory為您的 FSx for ONTAP檔案系統提供 AWS S3 存取點。您可以使用 S3 存取點建立磁碟區，將 S3 存取點指派給現有捲，並從 Workload Factory 控制台管理 S3 存取點。使用 S3 存取點，您可以透過 AWS S3 API 存取駐留在 SMB/CIFS 或 NFS 磁碟區上的檔案資料。這樣，您就可以將現有資料與支援 S3 存取點的 AWS 服務的 GenAI、ML 和分析功能整合在一起。
@@ -451,10 +480,12 @@ NetApp Workload Factory為您的 FSx for ONTAP檔案系統提供 AWS S3 存取�
 
 
 
+[[27-november-2025]]
 == 2025年11月27日
 
 
 
+[[block-device-support-in-netapp-workload-factory]]
 === NetApp Workload Factory中的區塊設備支持
 
 NetApp Workload Factory中新引入的區塊裝置支持，可更有效地管理您的區塊裝置。此功能可讓您查看 iSCSI LUN 的詳細資訊並增加其容量，從而為您的儲存需求提供更大的靈活性。
@@ -463,6 +494,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[
 
 
 
+[[well-architected-analysis-updates]]
 === 精心設計的分析更新
 
 Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設定：
@@ -475,6 +507,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[ai-analyzer-for-ems-events-in-netapp-workload-factory]]
 === NetApp Workload Factory中的 EMS 事件 AI 分析器
 
 NetApp Workload Factory推出了一款基於 AI 的ONTAP事件管理系統 (EMS) 事件分析器。此功能透過分析 EMS 事件數據，提供見解和建議，幫助您快速識別和解決問題。
@@ -483,6 +516,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/analyze-events.html["在�
 
 
 
+[[monitor-cost-and-usage-trends-for-fsx-for-ontap-file-systems]]
 === 監控 FSx for ONTAP檔案系統的成本和使用趨勢
 
 您可以直接從NetApp Workload Factory控制台監控 FSx for ONTAP檔案系統的成本和使用趨勢。此功能提供儲存消耗和成本指標以及詳細成本，幫助您優化資源分配和預算規劃。
@@ -491,6 +525,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/track-costs.html["在 Work
 
 
 
+[[manage-fsx-tags-for-a-file-system-in-netapp-workload-factory]]
 === 在NetApp Workload Factory中管理檔案系統的 FSx 標籤
 
 直接從NetApp Workload Factory控制台輕鬆管理檔案系統的 FSx 標籤。此功能可讓您新增、編輯或刪除標籤，從而更好地組織和分類您的 FSx for ONTAP檔案系統。
@@ -499,6 +534,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-fsx-tags.html["在�
 
 
 
+[[adjust-cache-capacity-for-fsx-for-ontap-file-systems]]
 === 調整 FSx for ONTAP檔案系統的快取容量
 
 您可以透過工作負載工廠控制台增加和減少快取磁碟區的容量。
@@ -507,10 +543,12 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cache-volumes.html[
 
 
 
+[[02-november-2025]]
 == 2025年11月2日
 
 
 
+[[cache-volume-management]]
 === 快取磁碟區管理
 
 您可以在 Workload Factory 控制台中執行下列快取磁碟區管理操作：
@@ -527,6 +565,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cache-volumes.html[
 
 
 
+[[automatic-inode-management-available]]
 === 可自動進行 inode 管理
 
 您可以啟用自動 inode 管理，而無需啟用自動容量管理。
@@ -535,12 +574,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-manag
 
 
 
+[[threshold-warning-setting-for-capacity-and-inode-usage]]
 === 容量和 inode 使用情況的閾值警告設置
 
 容量和 inode 使用情況均有閾值警告。您可以在啟用自動容量或 inode 管理時設定這些閾值。若要使用此設置，您需要使用以下方式配置通知：link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["NetApp Workload Factory通知服務"^] 。
 
 
 
+[[volume-size-decrease-available]]
 === 容量減少可用
 
 您可以在NetApp Workload Factory中減少 NFS 和 SMB/CIFS 磁碟區的大小。此功能可讓您減少不再需要的磁碟區的大小，從而更好地管理儲存資源。
@@ -549,12 +590,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/adjust-volume-capacity.htm
 
 
 
+[[enhanced-fsx-for-ontap-resource-state]]
 === 增強型 FSx for ONTAP資源狀態
 
 Workload Factory 增強了「配置錯誤」資源狀態，使其包含對資源實際問題的解釋。
 
 
 
+[[well-architected-analysis-updates]]
 === 精心設計的分析更新
 
 Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設定：
@@ -565,6 +608,7 @@ Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設�
 
 
 
+[[permissions-changes-for-workload-factory-for-storage]]
 === Workload Factory for Storage 的權限變更
 
 Workload Factory 可以更清楚地說明執行特定操作所需的權限，並允許您精細地選擇所需的權限。新增憑證時，您將有三個權限選項可供選擇，而不是先前的權限模型（_唯讀_和_讀/寫_）。新的權限模型將權限策略分解如下：
@@ -580,6 +624,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
+[[fsx-for-ontap-cyber-vault-support]]
 === FSx 的ONTAP網路保險庫支持
 
 您可以使用 FSx for ONTAP作為網路保險庫架構中的來源或目標來建立網路保險庫。網路保險庫為儲存關鍵資料提供安全隔離的環境，保護資料免受勒索軟體和其他網路威脅的侵害。
@@ -588,20 +633,24 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-cyber-vault.html["�
 
 
 
+[[06-october-2025]]
 == 2025年10月6日
 
 
 
+[[bluexp-workload-factory-now-netapp-workload-factory]]
 === BlueXP workload factory現為NetApp工作負載工廠
 
 BlueXP已重新命名並重新設計，以更好地反映其在管理資料基礎架構中的作用。因此， BlueXP workload factory已重新命名為NetApp工作負載工廠。
 
 
 
+[[05-october-2025]]
 == 2025年10月5日
 
 
 
+[[optimize-savings-in-the-storage-calculator-for-amazon-elastic-block-store-ebs]]
 === 優化 Amazon Elastic Block Store (EBS) 儲存計算器中的節省
 
 Workload Factory 可以分析您的 EBS 效能使用情況，然後建議最佳且最具成本效益的 FSx for ONTAP配置，以便您可以透過切換到 FSx for ONTAP來節省更多。
@@ -610,12 +659,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html#explo
 
 
 
+[[quick-access-to-resource-screen-from-file-system-inventory]]
 === 從檔案系統清單快速存取資源螢幕
 
 您可以透過從 FSx for ONTAP清單中選擇檔案系統名稱（現在是超連結）快速導覽至 FSx for ONTAP檔案系統資源畫面。
 
 
 
+[[discover-cache-relationships-in-the-workload-factory-console]]
 === 在 Workload Factory 控制台中發現快取關係
 
 如果 FSx for ONTAP檔案系統與另一種類型的ONTAP儲存（本機系統、 Cloud Volumes ONTAP和 FSx for ONTAP）之間存在快取關係，則可以從 Workload Factory 控制台發現並查看它們。這使您能夠更好地了解資料流、優化快取利用率並提高分散式環境的效率。
@@ -624,6 +675,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/discover-cache-volumes.htm
 
 
 
+[[well-architected-analysis-update]]
 === 架構完善的分析更新
 
 工作負載工廠現在分析您的 FSx for ONTAP檔案系統的以下配置：
@@ -640,6 +692,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[additional-notification-for-storage]]
 === 儲存附加通知
 
 NetApp Workload Factory 通知服務包括每週針對架構良好的設定問題的通知。
@@ -648,16 +701,19 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[immutable-files-support-privileged-delete]]
 === 不可變檔案支援特權刪除
 
 使用此功能，您可以為 FSx for ONTAP檔案系統中的不可變檔案設定特權刪除存取權限。這使您可以保護關鍵資料免遭意外或惡意刪除，同時仍允許授權使用者覆蓋鎖定並根據需要刪除這些檔案。可以在磁碟區建立期間或針對現有磁碟區啟用特權刪除。
 
 
 
+[[09-september-2025]]
 == 2025年9月9日
 
 
 
+[[storage-inventory-report-enhancements]]
 === 儲存庫存報表增強功能
 
 工作負載工廠增強了針對 FSx for ONTAP檔案系統所報告的資料。  FSx for ONTAP庫存頁面的可下載報表包括以下新欄位：
@@ -671,6 +727,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[snapshot-management-enhancements]]
 === 快照管理增強功能
 
 工作負載工廠對查看卷快照詳細資訊和管理卷快照做出了多項增強。這些增強功能使您更容易了解快照的狀態並保護您的資料。
@@ -692,6 +749,7 @@ image:screenshot-manage-snapshots-screen.png["顯示管理快照畫面的螢幕�
 
 
 
+[[ssd-storage-capacity-decrease-available]]
 === SSD 儲存容量可減少
 
 工作負載工廠支援減少第二代檔案系統的固態硬碟 (SSD) 容量。利用彈性檔案系統容量，您可以動態調整檔案系統的容量以滿足工作負載的需求。
@@ -700,6 +758,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/increase-file-system-capac
 
 
 
+[[new-notification-for-storage]]
 === 儲存的新通知
 
 工作負載工廠通知服務包括儲存自動容量管理的成功和失敗通知。
@@ -708,10 +767,12 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[03-august-2025]]
 == 2025年8月3日
 
 
 
+[[enhancements-to-replication-relationships-tab]]
 === 複製關係標籤的增強功能
 
 我們在複製關係表中新增了幾個新列，以便在「複製關係」標籤中為您提供有關複製關係的更多資訊。該表現在包含以下列：
@@ -725,6 +786,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[enhancements-to-netapp-autonomous-ransomware-protection-with-ai-arpai]]
 === NetApp自主勒索軟體防護 AI (ARP/AI) 增強功能
 
 此版本引入了更新的術語“帶有 AI 的NetApp自主勒索軟體防護 (ARP/AI)”，以更好地反映人工智慧在我們的勒索軟體防護功能中的整合。
@@ -741,6 +803,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html
 
 
 
+[[well-architected-analysis-updates]]
 === 精心設計的分析更新
 
 工作負載工廠現在分析您的 FSx for ONTAP檔案系統的以下配置：
@@ -753,6 +816,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[dismiss-a-configuration-from-the-well-architected-analysis]]
 === 從結構良好的分析中排除配置
 
 現在您可以從精心設計的分析中消除一個或多個配置。這使您可以忽略目前不想解決的特定配置。
@@ -761,6 +825,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[terraform-support-for-link-creation]]
 === Terraform 支援連結創建
 
 現在您可以使用 Codebox 中的 Terraform 建立與 FSx for ONTAP檔案系統關聯的連結。此功能適用於手動建立連結的使用者。
@@ -769,6 +834,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用 L
 
 
 
+[[new-region-support-for-exploring-savings-in-storage]]
 === 探索存儲節省的新區域支持
 
 現支援以下新區域來探索 Amazon Elastic Block Store (EBS)、FSx for Windows File Server 和 Elastic File Systems (EFS) 的節省：
@@ -779,6 +845,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用 L
 
 
 
+[[enhancements-to-smbcifs-shares-creation-and-management]]
 === 增強 SMB/CIFS 共享建立和管理
 
 現在您可以建立指向磁碟區內的目錄的 SMB/CIFS 共用。在卷內，您將能夠看到存在哪些共享、共享指向哪裡以及授予特定使用者和群組的權限。
@@ -789,10 +856,12 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cifs-share.html#cre
 
 
 
+[[29-june-2025]]
 == 2025 年 6 月 29 日
 
 
 
+[[bluexp-workload-factory-notification-service-support]]
 === BlueXP 工作負載工廠通知服務支持
 
 BlueXP 工作負載工廠通知服務支援工作負載工廠向 BlueXP 警報服務或 Amazon SNS 主題發送通知。發送到 BlueXP 警報的通知會顯示在 BlueXP 警報面板中。當工作負載工廠向 Amazon SNS 主題發布通知時，該主題的訂閱者（例如人員或其他應用程式）會在為該主題配置的終端節點上收到通知（例如電子郵件或簡訊）。
@@ -801,6 +870,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.
 
 
 
+[[storage-dashboard-enhancements]]
 === 儲存儀表板增強功能
 
 Workload Factory 控制台中的儲存儀表板包含用於節省機會的新卡片。儀表板頂部的卡片顯示在 Amazon Elastic Block Store (EBS)、 Amazon FSx for Windows File Server 和 Amazon Elastic File Systems (EFS) 上執行的儲存環境的節省機會數。在儀表板的底部，三張新卡片顯示了亞馬遜儲存服務的節省機會 - EBS、FSx for Windows File Server 和 EFS。您可以從所有卡片中更詳細地探索省錢機會。
@@ -809,12 +879,14 @@ Workload Factory 控制台中的儲存儀表板包含用於節省機會的新卡
 
 
 
+[[volume-tab-enhancements]]
 === 音量選項卡增強功能
 
 Workload Factory 控制台中的「磁碟區」標籤已增強，可提供 FSx for ONTAP檔案系統的更全面的視圖。增強功能包括 SSD 容量、容量池和帶有 AI 的NetApp自主勒索軟體防護 (ARP/AI) 的新卡片。這些卡片總結了檔案系統中所有磁碟區的容量利用率和 ARP/AI 保護。
 
 
 
+[[support-for-second-generation-amazon-fsx-for-netapp-ontap-file-systems]]
 === 支援第二代 Amazon FSX for NetApp ONTAP 檔案系統
 
 工作負載工廠現在支援第二代Amazon FSx for NetApp ONTAP檔案系統。您可以在 Workload Factory 控制台中建立、管理和監控第二代檔案系統。所有新的商業區域均受支援。
@@ -823,6 +895,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["�
 
 
 
+[[flexvol-volume-support-for-rebalancing-volume-capacity]]
 === FlexVol 磁碟區支援重新平衡磁碟區容量
 
 FlexVol磁碟區可在 Workload Factory 控制台中發現。您可以檢查FlexVol磁碟區的平衡情況，並在因新檔案的新增和檔案成長而導致不平衡情況隨時間推移而出現時，重新平衡FlexVol磁碟區以重新分配容量。
@@ -831,12 +904,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html["重
 
 
 
+[[terminology-update]]
 === 術語更新
 
 在 Workload Factory 控制台中，「自主勒索軟體防護」(ARP) 一詞已更新為「具有 AI 的NetApp自主勒索軟體防護」(ARP/AI)。
 
 
 
+[[arpai-enabled-by-default-for-new-volumes]]
 === 新磁碟區預設啟用 ARP/AI
 
 當您在 Workload Factory 控制台中建立新磁碟區時，如果檔案系統具有 ARP/AI 策略，則預設啟用具有 AI (ARP/AI) 的NetApp自主勒索軟體防護。這意味著該卷可以使用人工智慧驅動的偵測和回應功能來自動防禦勒索軟體攻擊。
@@ -845,6 +920,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["在 Wo
 
 
 
+[[replication-support-for-immutable-files]]
 === 對不可變文件的複製支持
 
 工作負載工廠支援將不可變磁碟區從一個 FSx for ONTAP 系統複製到另一個 FSx for ONTAP 檔案系統，以保護關鍵資料免遭意外刪除或勒索軟體等惡意攻擊。目標磁碟區及其主機檔案系統將處於不可變狀態（即鎖定狀態），且在保留期結束之前，目標檔案系統中的任何資料都無法修改或刪除。
@@ -853,6 +929,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["�
 
 
 
+[[manage-iam-execution-role-and-permissions-during-link-creation]]
 === 在連結建立期間管理 IAM 執行角色和權限
 
 現在，您可以在 Workload Factory 控制台中建立連結時管理 IAM 執行角色及其附加的權限原則。連結在您的 Workload Factory 帳戶和一個或多個 FSx for ONTAP檔案系統之間建立連線。您有兩種選擇來指派 IAM 執行角色和連結權限 - 自動或使用者提供。在 Workload Factory 中管理執行角色及其附加的權限策略意味著您不再需要使用第三方程式碼。
@@ -861,10 +938,12 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用 L
 
 
 
+[[08-june-2025]]
 == 2025 年 6 月 08 日
 
 
 
+[[new-well-architected-analysis-and-support-for-fixing-issues]]
 === 全新精心設計的分析和問題修復支持
 
 FSx for ONTAP 檔案系統的自動容量管理現在作為配置分析包含在精心設計的狀態儀表板中。
@@ -884,10 +963,12 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[03-june-2025]]
 == 2025 年 6 月 03 日
 
 
 
+[[volume-autogrow-enhancement]]
 === 磁碟區自動增長增強
 
 現在，您可以設定磁碟區的自動成長大小，以便磁碟區大小可以超出業務需求和應用程式要求的預先配置大小。
@@ -896,6 +977,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html[
 
 
 
+[[well-architected-analysis-update]]
 === 架構完善的分析更新
 
 工作負載工廠現在會分析您的 FSx for ONTAP 檔案系統，以檢查是否正在利用儲存效率，包括資料壓縮、壓縮和重複資料刪除。儲存效率衡量檔案系統利用可用空間的效率。
@@ -904,12 +986,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[storage-dashboard-enhancements]]
 === 儲存儀表板增強功能
 
 從今天開始，當您從 Workload Factory 控制台開啟儲存工作負載時，您將看到*儀表板*。新設計的儀表板提供了 FSx for ONTAP系統的整體視圖，包括檔案系統數量、SSD 總容量、結構良好的狀態概覽、資料保護概覽和複製關係健康狀況。
 
 
 
+[[volumes-tab-enhancements]]
 === 磁碟區選項卡增強功能
 
 儲存工作負載對工作負載工廠控制台中 FSx for ONTAP檔案系統內的磁碟區選項卡進行了增強。增強功能包括：
@@ -920,6 +1004,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[storage-efficiencies-update-for-volume-creation]]
 === 磁碟區所建立的儲存效率更新
 
 建立新磁碟區時，預設啟用儲存效率，包括資料壓縮、壓縮和重複資料刪除。
@@ -928,10 +1013,12 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["在 Wo
 
 
 
+[[04-may-2025]]
 == 2025 年 04 月 5 日
 
 
 
+[[autonomous-ransomware-protection-for-fsx-for-ontap-file-systems]]
 === 適用於 ONTAP 檔案系統的 FSX 的自主勒索軟體保護
 
 使用自動勒索軟體保護（ ARP ）來保護您的資料，這項功能會在 NAS （ NFS/SMB ）環境中使用工作負載分析來偵測並警告可能是勒索軟體攻擊的異常活動。當懷疑有攻擊時， ARP 也會建立新的不可變快照，您可以從中還原資料。
@@ -940,6 +1027,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html
 
 
 
+[[flexgroup-volume-rebalance-enhancement]]
 === FlexGroup Volume 重新平衡增強功能
 
 BlueXP  工作負載工廠推出 FlexGroup Volume 重新平衡精靈，其中有數個配置選項可重新平衡 FlexGroup Volume 中的資料。重新平衡會將資料平均地重新分配給 FlexGroup 成員磁碟區。
@@ -948,6 +1036,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html["重
 
 
 
+[[implement-best-practices-for-an-fsx-for-ontap-file-system]]
 === 為 ONTAP 檔案系統實作 FSX 的最佳實務做法
 
 BlueXP  工作負載工廠提供儀表板，讓您檢視檔案系統組態架構良好的狀態。您可以利用此分析，為 ONTAP 檔案系統的 FSX 實作最佳實務做法。檔案系統組態分析包括下列組態： SSD 容量臨界值，排程本機快照， ONTAP 備份排程的 FSX ，資料分層和遠端資料複寫。
@@ -958,6 +1047,7 @@ BlueXP  工作負載工廠提供儀表板，讓您檢視檔案系統組態架�
 
 
 
+[[dual-protocol-volume-security-style-options]]
 === 雙傳輸協定 Volume 安全樣式選項
 
 您可以選擇 NTFS 或 UNIX 作為磁碟區的安全樣式，以決定使用者和權限存取磁碟區的方法。
@@ -966,6 +1056,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["建立
 
 
 
+[[replication-enhancements]]
 === 複寫增強功能
 
 
@@ -1002,18 +1093,21 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["�
 
 
 
+[[fsx-for-ontap-file-name-visible-in-volume-creation]]
 === 可在 Volume 建立中看到 ONTAP 檔案名稱的 FSX
 
 我們已改善在磁碟區建立期間， ONTAP 檔案系統的 FSX 可見度。建立磁碟區時，您會看到適用於 ONTAP 檔案系統的 FSX ，因此您可以確切知道磁碟區的建立位置。
 
 
 
+[[aws-account-visible-across-the-storage-workload]]
 === 整個儲存工作負載均可見 AWS 帳戶
 
 我們改善了儲存工作負載的帳戶可見度。當您瀏覽至 * Volumes * ， * Storage VMS* 和 * Replication * 標籤時，您會看到 AWS 帳戶。
 
 
 
+[[link-association-enhancements]]
 === 連結關聯增強功能
 
 * 您可以在「庫存」索引標籤中，快速建立從適用於 ONTAP 檔案系統的 FSX 連結的關聯。
@@ -1022,12 +1116,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["�
 
 
 
+[[link-authentication-support-for-aws-secrets-manager]]
 === AWS Secrets Manager 的連結驗證支援
 
 您現在可以選擇使用 AWS Secrets Manager 的機密來驗證連結，這樣就不需要使用儲存在 BlueXP  工作負載工廠中的認證資料。
 
 
 
+[[tracker-response-support]]
 === Tracker 回應支援
 
 Tracker 現在提供 API 回應，讓您可以查看與工作相關的 REST API 輸出。
@@ -1036,6 +1132,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html["�
 
 
 
+[[capacity-validation-when-restoring-a-volume-from-a-backup]]
 === 從備份還原磁碟區時進行容量驗證
 
 從備份還原磁碟區時， BlueXP  工作負載工廠會判斷您是否有足夠的容量進行還原，如果沒有，也可以自動新增 SSD 儲存層容量。
@@ -1044,22 +1141,26 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-from-backup.html["
 
 
 
+[[support-for-alternative-ontap-user-credentials]]
 === 支援替代的 ONTAP 使用者認證
 
 工作負載工廠現在支援替代的 ONTAP 認證集，可用來建立檔案系統，將安全風險降至最低。您可以選擇不同的 ONTAP 認證集，或選擇不為 fsxadmin 和 vsaadmin 使用者提供密碼，而不只使用 fsxadmin 使用者。
 
 
 
+[[updated-permissions-terminology]]
 === 更新的權限術語
 
 Workload Factory 使用者介面和文件現在使用「只讀」來指涉讀取權限，使用「讀取/寫入」來指稱自動化權限。
 
 
 
+[[30-march-2025]]
 == 2025 年 3 月 30 日
 
 
 
+[[automatic-capacity-management-for-scale-out-systems]]
 === 橫向擴充系統的自動容量管理
 
 工作負載工廠現在會掃描磁碟區中的可用 inode ，並根據設定的自動容量管理臨界值來增加其計數。此功能支援橫向擴充系統的自動容量管理。您可以在自動容量管理中啟用 inode 管理。
@@ -1068,6 +1169,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-manag
 
 
 
+[[flexgroup-rebalance-api]]
 === FlexGroup 重新平衡 API
 
 BlueXP  工作負載原廠發行的 FlexGroup 重新平衡 API 可讓您執行計畫，以重新平衡 FlexGroup 中的資料。重新平衡會將資料平均地重新分配給成員磁碟區。
@@ -1076,6 +1178,7 @@ link:https://console.workloads.netapp.com/api-doc["BlueXP  工作負載原廠 A
 
 
 
+[[replicate-data-form-includes-use-cases]]
 === Replicate 資料表單包含使用案例
 
 複寫資料表單現在包含使用案例，讓您更容易完成表單。您可以選擇下列其中一種資料複寫使用案例：移轉，熱災難恢復，冷災難恢復，歸檔或其他。選擇使用案例後， Workload Factory 會根據最佳實務做法建議值。您可以接受預先選取的值，或自訂表單中的值。
@@ -1084,6 +1187,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["�
 
 
 
+[[data-tiering-policy-terminology-changes]]
 === 資料分層原則術語變更
 
 現在，當您在磁碟區建立，資料複寫或現有分層原則的更新期間選取分層原則時，您會發現新的術語來說明分層原則。
@@ -1095,6 +1199,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["�
 
 
 
+[[security-group-details-for-file-system-creation]]
 === 檔案系統建立的安全性群組詳細資料
 
 安全性群組是作為 ONTAP 檔案系統建立程序的 FSX 一部分所建立。安全性群組詳細資料，包括通訊協定，連接埠和角色，現在已可供使用。
@@ -1103,10 +1208,12 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["�
 
 
 
+[[02-march-2025]]
 == 2025 年 3 月 02 日
 
 
 
+[[automatic-capacity-management-improvements]]
 === 自動容量管理改善
 
 啟用自動容量管理時， BlueXP  工作負載工廠現在會檢查檔案系統是否每 30 分鐘達到容量臨界值，而非每 2 小時。
@@ -1115,12 +1222,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["�
 
 
 
+[[immutable-snapshots]]
 === 不可變的快照
 
 現在您可以鎖定快照，使其在特定保留期間內不可變。鎖定可防止未經授權的存取和惡意刪除快照。您可以在快照原則建立期間，手動建立快照時，以及建立快照之後，啟用不可變的快照。
 
 
 
+[[immutable-files-update]]
 === 不可變更的檔案更新
 
 您現在可以對不可變更的檔案組態進行下列變更：保留原則，保留期間，自動認可期間和磁碟區附加模式。
@@ -1129,6 +1238,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-immutable-files.htm
 
 
 
+[[data-replication-enhancements]]
 === 資料複寫增強功能
 
 * 跨帳戶複寫： BlueXP  工作負載原廠主控台支援兩個 AWS 帳戶之間的複寫，以及複寫管理。
@@ -1140,6 +1250,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/pause-resume-replication.h
 
 
 
+[[cloudshell-events-in-tracker]]
 === Tracker 中的 CloudShell 事件
 
 現在您可以在 Tracker 中追蹤 CloudShell 事件。
@@ -1148,10 +1259,12 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html["�
 
 
 
+[[02-february-2025]]
 == 2025 年 02 月 2 日
 
 
 
+[[cloudshell-in-bluexp-workload-factory-console]]
 === BlueXP  工作負載原廠主控台的 CloudShell
 
 CloudShell 是BlueXP workload factory中用於儲存的嵌入式 CLI 功能。您可以使用 CloudShell 在 Workload Factory 控制台內類似 shell 的環境中從多個會話建立、共用和執行ONTAP或 AWS CLI 指令。
@@ -1160,6 +1273,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["深
 
 
 
+[[inventory-data-download]]
 === 庫存資料下載
 
 您現在可以從 BlueXP  工作負載工廠的儲存設備，將適用於 ONTAP 的 FSX 庫存資料下載到 Microsoft Excel 或 CSV 檔案中。
@@ -1168,6 +1282,7 @@ image:screenshot-fsx-inventory-download.png["BlueXP workload factory中的儲存
 
 
 
+[[fsx-for-ontap-file-system-additional-menu-options]]
 === 適用於 ONTAP 檔案系統的 FSX 其他功能表選項
 
 我們已從「儲存」的「適用於 ONTAP 的 FSX 」索引標籤，為適用於 ONTAP 檔案系統的 FSX 簡化下列作業。
@@ -1181,6 +1296,7 @@ image:screenshot-filesystem-menu-options.png["Storage 中的 FSX for ONTAP 標�
 
 
 
+[[terraform-support-for-creating-volumes]]
 === Terraform 支援建立 Volume
 
 您現在可以使用 Codebox 中的 Terraform 來建立 Volume 。
@@ -1189,6 +1305,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["建立
 
 
 
+[[file-locking-with-the-immutable-files-feature]]
 === 使用不可變檔案功能鎖定檔案
 
 當您為 ONTAP 檔案系統建立 FSX 磁碟區時，現在可以使用不可變檔案功能鎖定檔案。檔案鎖定可協助您和其他人在指定期間內防止意外或刻意刪除檔案。
@@ -1197,6 +1314,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["建立
 
 
 
+[[tracker-available-for-monitoring-and-tracking-operations]]
 === Tracker 可用於監控及追蹤作業
 
 Tracker ， Storage 提供全新的監控功能。您可以使用 Tracker 來監控和追蹤認證，儲存和連結作業的進度和狀態，檢閱作業工作和子任務的詳細資料，診斷任何問題或失敗，編輯失敗作業的參數，以及重試失敗的作業。
@@ -1205,6 +1323,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html["�
 
 
 
+[[support-for-second-generation-amazon-fsx-for-netapp-ontap-file-systems]]
 === 支援第二代 Amazon FSX for NetApp ONTAP 檔案系統
 
 現在您可以在NetApp Workload Factory 中使用Amazon FSx for NetApp ONTAP第二代檔案系統。  FSx for ONTAP第二代單可用區檔案系統由多達 12 個 HA 對提供支持，可提供高達 72 GBps 的吞吐容量和 2,400,000 SSD IOPS。  FSx for ONTAP第二代多可用區檔案系統由一個 HA 對提供支持，可提供 6 GBps 的吞吐容量和 200,000 SSD IOPS。
@@ -1215,10 +1334,12 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html["�
 
 
 
+[[05-january-2025]]
 == 2025 年 1 月 05 日
 
 
 
+[[volume-cifs-share-enhancements]]
 === Volume CIFS 共用增強功能
 
 下列增強功能可用於管理 BlueXP  工作負載工廠中 Amazon FSX for ONTAP 檔案系統中磁碟區的 CIFS 共用：
@@ -1233,10 +1354,12 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cifs-share.html["�
 
 
 
+[[1-december-2024]]
 == 2024 年 1 月 12 日
 
 
 
+[[block-storage-for-scale-out-fsx-for-ontap-file-systems]]
 === ONTAP 檔案系統橫向擴充 FSX 的區塊儲存設備
 
 現在，您可以透過適用於 ONTAP 的 FSX 配置區塊儲存設備，以使用橫向擴充的檔案系統部署，最多可配置 6 個 HA 配對。
@@ -1245,6 +1368,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-file-system.html["�
 
 
 
+[[mount-command-available]]
 === 可使用 mount 命令
 
 現在可以使用掛載命令來存取 NFS 和 CIFS 來存取磁碟區。您可以在 ONTAP 檔案系統的 FSX 內取得磁碟區的掛載點，方法是選取 * 基本動作 * ，然後選取 * 檢視掛載命令 * 。
@@ -1255,6 +1379,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/access-data.html["用於�
 
 
 
+[[update-storage-efficiency-after-volume-creation]]
 === 建立磁碟區之後，請更新儲存效率
 
 您現在可以在建立磁碟區之後，啟用或停用 FlexVol 磁碟區的儲存效率。儲存效率包括重複資料刪除，資料壓縮及資料壓縮。啟用儲存效率有助於您在 FlexVol volume 上實現最佳空間節約效益。
@@ -1263,6 +1388,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/update-storage-efficiency.
 
 
 
+[[on-premises-ontap-cluster-discovery-and-replication]]
 === 內部部署 ONTAP 叢集探索與複寫
 
 探索內部部署的 ONTAP 叢集資料，並將其複寫至適用於 ONTAP 檔案系統的 FSX ，以便用於豐富 AI 知識庫。所有內部部署探索和複寫工作流程都可以從儲存設備詳細目錄中的全新 * 內部部署 ONTAP （ * ）標籤中進行。
@@ -1271,6 +1397,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/use-onprem-data.html["探�
 
 
 
+[[aws-credentials-improve-savings-calculator-analysis]]
 === AWS 認證可改善儲蓄計算機分析
 
 您現在可以選擇從節約計算機新增 AWS 認證。新增認證可提升 Amazon Elastic Block Store ， Elastic File Systems 和適用於 Windows 檔案伺服器儲存環境的 FSX 的節約計算機分析準確度，相較於適用於 ONTAP 的 FSX 。
@@ -1279,10 +1406,12 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html["在 
 
 
 
+[[3-november-2024]]
 == 2024 年 11 月 3 日
 
 
 
+[[tab-views-in-storage-inventory]]
 === 儲存庫存中的索引標籤檢視
 
 儲存庫存已更新為雙索引標籤檢視：
@@ -1293,10 +1422,12 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html["在 
 
 
 
+[[29-september-2024]]
 == 2024 年 9 月 29 日
 
 
 
+[[link-creation-updates]]
 === 連結建立更新
 
 * Codebox 檢視器：Codebox 現在整合在連結建立過程中。您可以在 Workload Factory 中的 Codebox 檢視和複製 CloudFormation 模板，然後重新導向至 AWS 執行操作。
@@ -1308,16 +1439,19 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["建立�
 
 
 
+[[1-september-2024]]
 == 2024 年 9 月 1 日
 
 
 
+[[read-mode-support-for-storage-management]]
 === 儲存管理的讀取模式支援
 
 讀取模式可用於 Workload Factory 中的儲存管理。讀取模式透過新增唯讀權限增強了基本模式的體驗，以便基礎設施即程式碼範本填入您的特定變數。基礎架構即程式碼範本可以直接從您的 AWS 帳戶執行，而無需向 Workload Factory 提供任何修改權限。
 
 
 
+[[backup-before-volume-deletion-support]]
 === 支援磁碟區刪除之前的備份
 
 您現在可以在刪除之前備份磁碟區。備份將保留在檔案系統中、直到刪除為止。
@@ -1326,10 +1460,12 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/delete-volume.html["刪除
 
 
 
+[[4-august-2024]]
 == 2024 年 8 月 4 日
 
 
 
+[[terraform-support]]
 === Terraform 支援
 
 您現在可以使用 Codebox 中的 Terraform 來部署檔案系統和儲存 VM 。
@@ -1341,16 +1477,19 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/delete-volume.html["刪除
 
 
 
+[[throughput-and-iops-recommendations-in-the-storage-calculator]]
 === 儲存計算機中的處理量和 IOPS 建議
 
 儲存計算機會根據 AWS 最佳實務做法、針對處理量和 IOPS 、為 ONTAP 檔案系統設定 FSX 提供建議、為您的選擇提供最佳指引。
 
 
 
+[[7-july-2024]]
 == 2024 年 7 月 7 日
 
 
 
+[[initial-release-of-workload-factory-for-amazon-fsx-for-netapp-ontap]]
 === Amazon FSx for NetApp ONTAP的 Workload Factory 初始版本
 
 Amazon FSX for NetApp ONTAP 目前已正式推出 BlueXP  工作負載工廠。

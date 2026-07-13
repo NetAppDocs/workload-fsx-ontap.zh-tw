@@ -27,6 +27,7 @@ NOTE: 使用控制台代理程式時不支援 AWS Secrets Manager。
 
 
 
+[[associate-a-new-link]]
 == 建立新連結的關聯
 
 建立新連結的關聯包括連結建立和關聯。
@@ -234,6 +235,7 @@ Workload Factory 將連結與 FSx for ONTAP 檔案系統關聯起來。您可以
 
 
 
+[[associate-an-existing-link-with-an-fsx-for-ontap-file-system]]
 == 將現有連結與適用於 ONTAP 檔案系統的 FSX 建立關聯
 
 建立連結之後，請將其與 ONTAP 檔案系統的一或多個 FSX 建立關聯。
@@ -274,6 +276,7 @@ link:links-overview.html#when-a-link-is-required["深入瞭解連結"].
 
 
 
+[[troubleshoot-issues-with-aws-secrets-manager-link-authentication]]
 == 疑難排解 AWS Secrets Manager 連結驗證的問題
 
 問題:: 連結缺少擷取機密的權限。

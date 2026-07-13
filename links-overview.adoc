@@ -17,6 +17,7 @@ NetApp Workload Factory 連結在 Workload Factory 帳戶和一個或多個 FSx 
 
 
 
+[[why-links-are-beneficial]]
 == 為什麼連結是有益的
 
 連結很有用，因為它們允許 Workload Factory 執行透過Amazon FSx for ONTAP API 本身無法執行的操作。連結支援高階ONTAP功能和自動化，從而增強 FSx for ONTAP檔案系統的管理。
@@ -29,6 +30,7 @@ NetApp Workload Factory 連結在 Workload Factory 帳戶和一個或多個 FSx 
 
 
 
+[[how-links-work]]
 == 連結的運作方式
 
 連結運用 AWS Lambda 。Lambda 會回應事件執行程式碼、並自動管理該程式碼所需的運算資源。您建立的連結是 NetApp 帳戶的一部分、它們與 AWS 帳戶相關聯。
@@ -43,6 +45,7 @@ GovCloud 帳戶的連結連線功能受到支援。Workload Factory 使用 GovCl
 
 
 
+[[costs]]
 == 成本
 
 Lambda 執行的每筆交易都會產生費用。由於 Lambda 充當兩個系統之間的代理，因此當 Lambda 向檔案系統上的ONTAP REST API 發送請求時以及將回應傳送回 Workload Factory 時都會產生費用。
@@ -51,6 +54,7 @@ link:https://aws.amazon.com/lambda/pricing/["深入瞭解使用 AWS Lambda 的�
 
 
 
+[[when-a-link-is-required]]
 == 需要連結時
 
 工作負載工廠需要一個連結來顯示一些資訊並執行一些任務。如果您嘗試執行需要連結的操作，但尚未將連結與 FSx for ONTAP檔案系統關聯，則 Workload Factory 會通知您該操作需要連結。

@@ -4,6 +4,7 @@
 
 
 
+[[link-creation-updates]]
 === 連結建立更新
 
 * Codebox 檢視器：Codebox 現在整合在連結建立過程中。您可以在 Workload Factory 中的 Codebox 檢視和複製 CloudFormation 模板，然後重新導向至 AWS 執行操作。

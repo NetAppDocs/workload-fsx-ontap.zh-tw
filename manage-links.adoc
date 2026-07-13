@@ -17,6 +17,7 @@ link:links-overview.html["深入瞭解連結"] 或 link:create-link.html["建立
 
 
 
+[[view-the-links-associated-with-your-account]]
 == 檢視與您帳戶相關的連結
 
 您可以檢視目前與您帳戶相關的連結。
@@ -36,6 +37,7 @@ image:screenshot-view-link-details.png["顯示使用特定連結之 ONTAP 檔案
 
 
 
+[[edit-a-link]]
 == 編輯連結
 
 您無法從 Workload Factory 介面編輯連結。如果您需要更改鏈接，則需要建立一個新鏈接，然後將該鏈接關聯到您的檔案系統。
@@ -45,6 +47,7 @@ NOTE: 您可以使用 AWS 主控台編輯 Lambda 網路組態（例如 VPC 、�
 
 
 
+[[authenticate-a-link]]
 == 驗證連結
 
 提供 Workload Factory 憑證的管理使用者密碼或 AWS Secrets Manager 金鑰 ARN，以將連結連接到 FSx for ONTAP檔案系統。
@@ -74,6 +77,7 @@ NOTE: 每個連結只支援一種驗證方法。例如，如果您選取連結�
 
 
 
+[[update-the-password-for-link-authentication]]
 == 更新連結驗證的密碼
 
 當管理密碼無效時，請更新密碼，將連結連線至 ONTAP 檔案系統的 FSX 。
@@ -93,6 +97,7 @@ NOTE: 每個連結只支援一種驗證方法。例如，如果您選取連結�
 
 
 
+[[remove-a-link]]
 == 移除連結
 
 您可以移除不再在環境中使用的連結。移除連結後、任何適用於 ONTAP 檔案系統的 FSX 或其他使用連結的資源將無法使用特定功能。

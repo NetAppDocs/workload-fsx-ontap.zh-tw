@@ -23,6 +23,7 @@ summary: 暫停並恢復複寫關係，使目標 Volume 成為來源 Volume 。
 
 
 
+[[pause-a-replication-relationship]]
 == 暫停複寫關係
 
 .步驟
@@ -41,6 +42,7 @@ summary: 暫停並恢復複寫關係，使目標 Volume 成為來源 Volume 。
 
 
 
+[[resume-a-paused-replication-relationship]]
 == 恢復暫停的複寫關係
 
 當您恢復複寫關係時，在複寫停止時對目的地磁碟區所做的任何變更都會被刪除。

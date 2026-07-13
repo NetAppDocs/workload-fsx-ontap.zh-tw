@@ -15,6 +15,7 @@ FSx for ONTAP支援快照、具有 AI 的NetApp自主勒索軟體防護、複製
 
 
 
+[[types-of-data-protection]]
 == 資料保護類型
 
 為工作負載提供資料保護、有助於確保您隨時從任何資料遺失中恢復。請先瞭解資料保護的類型、再選擇您要使用的功能。
@@ -39,6 +40,7 @@ image:diagram-fsx-data-protection.png["螢幕擷取畫面顯示使用快照、�
 
 
 
+[[best-practices-for-protecting-your-workload-data]]
 == 保護工作負載資料的最佳實務做法
 
 適用於 ONTAP 的 FSX 提供多種資料保護選項、可結合使用以達成您所選的還原點和時間目標。為了獲得最佳保護、我們建議您同時使用磁碟區快照和磁碟區備份。
@@ -47,30 +49,35 @@ image:diagram-fsx-data-protection.png["螢幕擷取畫面顯示使用快照、�
 
 
 
+[[protect-your-workload-data-with-snapshots]]
 == 利用快照保護您的工作負載資料
 
 快照是磁碟區的虛擬時間點版本、會定期拍攝。您可以使用標準檔案系統命令來存取快照。快照提供的 RPO 只需一小時。RTO 取決於要還原的資料量、而且主要受限於磁碟區處理量限制。快照也可讓使用者還原特定檔案和目錄、進而進一步降低 RTO 。快照只會佔用額外的磁碟區空間、以供變更磁碟區。
 
 
 
+[[protect-your-workload-data-with-netapp-autonomous-ransomware-protection-with-ai]]
 == 使用NetApp自主勒索軟體防護和 AI 保護您的工作負載數據
 
 如果防毒軟體未能偵測到入侵， NetApp自主勒索軟體防護 AI (ARP/AI) 將成為重要的額外防禦層。設定 ARP/AI 策略可使其適用於所有儲存虛擬機器以及所有現有和新建立的磁碟區。一旦啟用，ARP/AI 就會偵測並保護所有磁碟區和儲存虛擬機器。如果檔案副檔名被標記為異常，則您應該評估警報。
 
 
 
+[[protect-your-workload-data-with-volume-replication]]
 == 使用 Volume 複寫保護工作負載資料
 
 Volume 複寫會建立磁碟區最新資料的複本、包括不同區域的所有快照。如果您無法負擔從磁碟區備份進行完整磁碟區還原作業的多小時 RTO 、請考慮執行磁碟區複寫。雖然 Volume 複寫功能可確保在不同的區域中使用最新資料、但您需要調整用戶端、以使用其他區域的磁碟區。
 
 
 
+[[protect-your-workload-data-with-backups]]
 == 使用備份來保護您的工作負載資料
 
 Volume 備份可為您的 Volume 提供不受時間點影響的複本。它們可用來儲存舊備份、並提供必要的第二份資料複本。每日、每週和每月備份排程可讓 RPO 從一天開始。Volume 備份只能還原為整體。根據備份的大小、從備份（ RTO ）建立磁碟區可能需要數小時到數天的時間。
 
 
 
+[[recommendations-for-protecting-your-workload-data]]
 == 保護工作負載資料的建議
 
 請考慮下列保護工作負載資料的建議。

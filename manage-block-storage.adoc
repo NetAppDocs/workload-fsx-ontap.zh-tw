@@ -31,12 +31,14 @@ summary: 在 NetApp Workload Factory 中管理 FSx for ONTAP 檔案系統的區�
 
 
 
+[[manage-igroups]]
 == 管理 igroup
 
 您可以查看 igroup 詳細資訊、管理用戶端存取權限以及刪除 igroup。
 
 
 
+[[manage-client-access-for-an-igroup]]
 === 管理 igroup 的用戶端存取
 
 隨時管理現有 igroup 的用戶端存取。
@@ -65,6 +67,7 @@ summary: 在 NetApp Workload Factory 中管理 FSx for ONTAP 檔案系統的區�
 
 
 
+[[delete-an-igroup]]
 === 刪除 igroup
 
 不再需要 igroup 時，請將其刪除。
@@ -81,6 +84,7 @@ summary: 在 NetApp Workload Factory 中管理 FSx for ONTAP 檔案系統的區�
 
 
 
+[[manage-block-devices-for-an-igroup]]
 == 管理 igroup 的區塊裝置
 
 區塊裝置或 LUN（邏輯單元號碼）是 SAN 環境中具有檔案系統的磁碟區，可透過網路供主機存取。
@@ -89,6 +93,7 @@ summary: 在 NetApp Workload Factory 中管理 FSx for ONTAP 檔案系統的區�
 
 
 
+[[view-block-device-details]]
 === 查看區塊設備詳情
 
 隨時查看現有區塊設備的詳細資訊。
@@ -106,6 +111,7 @@ summary: 在 NetApp Workload Factory 中管理 FSx for ONTAP 檔案系統的區�
 
 
 
+[[manage-client-access-for-a-block-device]]
 === 管理區塊設備的客戶端存取權限
 
 您可以隨時透過建立 igroup、新增或刪除區塊裝置和主機發起程式來管理現有區塊裝置的用戶端存取權限。
@@ -131,6 +137,7 @@ summary: 在 NetApp Workload Factory 中管理 FSx for ONTAP 檔案系統的區�
 
 
 
+[[increase-the-capacity-of-a-block-device]]
 === 增加塊設備的容量
 
 隨時增加現有塊設備的容量。
@@ -150,6 +157,7 @@ NOTE: 增加區塊裝置的大小後，請遵循主機作業系統提供的程�
 
 
 
+[[clone-a-block-device]]
 === 複製區塊裝置
 
 您可以隨時建立現有區塊裝置的複本。區塊裝置複本是原始區塊裝置的可寫入複本，在對原始裝置或複本進行變更之前，兩者會共用相同的資料區塊。複製區塊裝置是一種快速且有效率的方式，可建立可重複使用的資料複本，而無需佔用額外的儲存容量。
@@ -179,6 +187,7 @@ NOTE: 增加區塊裝置的大小後，請遵循主機作業系統提供的程�
 
 
 
+[[archive-the-data-of-an-inactive-block-device]]
 === 將非作用中區塊裝置的資料歸檔
 
 不再對應到客戶端或連續七天未使用的區塊裝置將被歸類為非活動區塊裝置。您可以將非活動區塊裝置的資料歸檔到容量池層，以回收 SSD 容量。
@@ -195,6 +204,7 @@ NOTE: 增加區塊裝置的大小後，請遵循主機作業系統提供的程�
 
 
 
+[[delete-a-block-device]]
 === 刪除區塊設備
 
 未對應到客戶端或七天內未使用的區塊設備將被視為非活動區塊設備。此操作將取消映射並刪除選定的區塊設備。如果主機 FlexVol volume 不包含任何區塊設備，Workload Factory 會將其刪除。
@@ -211,6 +221,7 @@ NOTE: 增加區塊裝置的大小後，請遵循主機作業系統提供的程�
 
 
 
+[[related-information]]
 == 相關資訊
 
 * link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-igroup.html["為 FSx for ONTAP 檔案系統建立 igroup"]

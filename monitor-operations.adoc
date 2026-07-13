@@ -40,6 +40,7 @@ Tracker 支援兩種監控層級，視作業而定。每項工作（例如檔案
 
 
 
+[[track-and-monitor-operations]]
 == 追蹤及監控作業
 
 使用 Tracker 追蹤和監控NetApp控制台中的操作。
@@ -56,6 +57,7 @@ image:screenshot-menu-tracker-option.png["帳戶設定功能表的螢幕擷取�
 
 
 
+[[view-api-request]]
 == 檢視 API 要求
 
 在 Codebox 中檢視 Tracker 工作的 API 要求。
@@ -67,6 +69,7 @@ image:screenshot-menu-tracker-option.png["帳戶設定功能表的螢幕擷取�
 
 
 
+[[retry-a-failed-operation]]
 == 重試失敗的作業
 
 在 Tracker 中重試失敗的作業。您也可以複製失敗作業的錯誤訊息。
@@ -84,6 +87,7 @@ NOTE: 失敗的作業只允許重試 x 次。
 
 
 
+[[edit-and-retry-a-failed-operation]]
 == 編輯並重試失敗的作業
 
 編輯失敗作業的參數，然後在 Tracker 外重試作業。

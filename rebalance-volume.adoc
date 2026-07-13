@@ -15,6 +15,7 @@ summary: 檢查並重新平衡容量以避免隨著時間的推移而出現不�
 
 
 
+[[about-this-task]]
 == 關於這項工作
 
 FlexVol 捲和 FlexGroup 磁碟區支援重新平衡磁碟區容量。重新平衡磁碟區會在新增檔案和檔案成長、隨著時間的推移而產生不平衡時、重新分配容量。手動開始重新平衡作業後、我們會選取檔案、並自動且不中斷地移動。Volume 傳輸作業會消耗檔案系統資源。
@@ -40,6 +41,7 @@ NOTE: iSCSI 和 NVMe 等 SAN 磁碟區不支援重新平衡。
 
 
 
+[[check-the-balance-of-your-volumes]]
 == 檢查您的交易量餘額
 
 檢查 FSx for ONTAP 檔案系統中 FlexVol 或 FlexGroup 磁碟區的平衡。
@@ -69,6 +71,7 @@ NOTE: iSCSI 和 NVMe 等 SAN 磁碟區不支援重新平衡。
 
 
 
+[[rebalance-volume-capacity]]
 == 重新平衡磁碟區容量
 
 重新平衡一個或多個非平衡的磁碟區。
@@ -158,6 +161,7 @@ FlexVol 卷已重新平衡。當作業完成時，檔案系統將會被節流回
 ====
 
 
+[[stop-a-volume-rebalance-operation]]
 == 停止磁碟區重新平衡操作
 
 隨時停止重新平衡操作；這不會造成中斷。停止操作會中止正在進行的磁碟區移動。

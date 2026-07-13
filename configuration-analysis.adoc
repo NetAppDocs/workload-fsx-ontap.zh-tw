@@ -24,6 +24,7 @@ NetApp Workload Factory 會定期分析 Amazon FSx for NetApp ONTAP 檔案系統
 
 
 
+[[how-it-works]]
 == 運作方式
 
 Workload Factory 每日分析您在 Amazon FSx for NetApp ONTAP 檔案系統部署上執行的工作負載。此分析提供架構完善的狀態資訊、洞察分析和建議。
@@ -34,12 +35,14 @@ Workload Factory 每日分析您在 Amazon FSx for NetApp ONTAP 檔案系統部�
 
 
 
+[[why-it-matters]]
 == 為什麼這很重要
 
 Workload Factory 將最佳實踐應用於大型儲存、資料庫和 VMware 環境，透過持續評估與建議洞察和修復措施相結合。在 Workload Factory 主控台中套用的自動化修復可減少人為錯誤、確保統一管理，並維護工作負載基礎架構的效能和可靠性。
 
 
 
+[[analysis-requirements]]
 == 分析需求
 
 要進行完整的檔案系統分析，必須執行以下操作：
@@ -56,6 +59,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["�
 
 
 
+[[best-practices-and-recommendations-for-storage-workloads]]
 == 儲存工作負載的最佳實務做法和建議
 
 Workload Factory 會對儲存配置進行評估，以深入了解 ONTAP 配置的最佳實踐，並確保其符合 AWS Well-Architected Framework。評估也會提出改進和修復建議。
@@ -64,6 +68,7 @@ Workload Factory 會對儲存配置進行評估，以深入了解 ONTAP 配置�
 
 
 
+[[reliability]]
 === 可靠性
 
 可靠性確保工作負載即使在出現中斷的情況下也能正確、持續地執行其預期功能。
@@ -96,14 +101,11 @@ SSD 儲存層的容量利用率不應持續超過 80%。否則可能會影響容
 +
 應提高檔案容量閾值，以避免達到磁碟區容量限制。檔案容量（inodes）過低會阻止向磁碟區寫入更多資料。NetApp Workload Factory 建議持續將可用檔案容量的使用率保持在 80% 以下。在磁碟區中建立新檔案需要足夠的可用檔案容量。
 
-* *將主機連線至容錯移轉節點*
-+
-Workload Factory 建議將主機連線至容錯移轉節點，以維持連線並避免在容錯移轉期間發生中斷。
 
 
 
 
-
+[[security]]
 === 安全性
 
 安全重點在於透過風險評估和緩解策略來保護資料、系統和資產。
@@ -120,6 +122,7 @@ NetApp 具備人工智慧的自主勒索軟體防護（ARP/AI）可協助您保�
 
 
 
+[[operational-excellence]]
 === 卓越營運
 
 卓越營運的重點在於提供最佳架構和業務價值。
@@ -152,6 +155,7 @@ Workload Factory 建議將儲存 VM 的預設報告設定設為邏輯報告，�
 
 
 
+[[cost-optimization]]
 === 成本最佳化
 
 成本優化可協助您在保持低成本的同時，為企業創造最大價值。
@@ -179,18 +183,6 @@ SSD 容量層利用率不足可能會導致不必要的成本。Workload Factory
 * *非使用中的 NAS Volume*
 +
 組態分析會識別未主動使用的 NAS Volume ，並建議刪除或歸檔 Volume 以降低成本。
-
-
-
-
-
-=== 效能效率
-
-效能效率著重於有效率地使用 IT 和計算資源。
-
-* *將主機連線至慣用節點*
-+
-在高可用性 FSx for ONTAP 部署模型中，主機應直接連接到服務區塊裝置的節點，以確保直接存取和最佳效能。
 
 
 

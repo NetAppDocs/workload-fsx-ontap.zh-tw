@@ -4,6 +4,7 @@
 
 
 
+[[cache-volume-management]]
 === 快取磁碟區管理
 
 您可以在 Workload Factory 控制台中執行下列快取磁碟區管理操作：
@@ -20,6 +21,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-cache-volumes.html[
 
 
 
+[[automatic-inode-management-available]]
 === 可自動進行 inode 管理
 
 您可以啟用自動 inode 管理，而無需啟用自動容量管理。
@@ -28,12 +30,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-manag
 
 
 
+[[threshold-warning-setting-for-capacity-and-inode-usage]]
 === 容量和 inode 使用情況的閾值警告設置
 
 容量和 inode 使用情況均有閾值警告。您可以在啟用自動容量或 inode 管理時設定這些閾值。若要使用此設置，您需要使用以下方式配置通知：link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["NetApp Workload Factory通知服務"^] 。
 
 
 
+[[volume-size-decrease-available]]
 === 容量減少可用
 
 您可以在NetApp Workload Factory中減少 NFS 和 SMB/CIFS 磁碟區的大小。此功能可讓您減少不再需要的磁碟區的大小，從而更好地管理儲存資源。
@@ -42,12 +46,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/adjust-volume-capacity.htm
 
 
 
+[[enhanced-fsx-for-ontap-resource-state]]
 === 增強型 FSx for ONTAP資源狀態
 
 Workload Factory 增強了「配置錯誤」資源狀態，使其包含對資源實際問題的解釋。
 
 
 
+[[well-architected-analysis-updates]]
 === 精心設計的分析更新
 
 Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設定：
@@ -58,6 +64,7 @@ Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設�
 
 
 
+[[permissions-changes-for-workload-factory-for-storage]]
 === Workload Factory for Storage 的權限變更
 
 Workload Factory 可以更清楚地說明執行特定操作所需的權限，並允許您精細地選擇所需的權限。新增憑證時，您將有三個權限選項可供選擇，而不是先前的權限模型（_唯讀_和_讀/寫_）。新的權限模型將權限策略分解如下：
@@ -73,6 +80,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/permissions-reference.ht
 
 
 
+[[fsx-for-ontap-cyber-vault-support]]
 === FSx 的ONTAP網路保險庫支持
 
 您可以使用 FSx for ONTAP作為網路保險庫架構中的來源或目標來建立網路保險庫。網路保險庫為儲存關鍵資料提供安全隔離的環境，保護資料免受勒索軟體和其他網路威脅的侵害。

@@ -17,6 +17,7 @@ summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免�
 
 
 
+[[about-this-task]]
 == 關於這項工作
 
 如果您的地區發生災難，複寫功能可以保護您的資料；它還可以用於移轉目的。
@@ -34,6 +35,7 @@ summary: 為適用於 ONTAP 檔案系統的 FSX 建立複寫關係、以避免�
 ====
 
 
+[[migration-use-cases]]
 === 遷移使用案例
 
 遷移時，您可以選擇複製單一儲存 VM 的資料和組態設定。如果同時遷移資料和組態設定，請確保磁碟區的最後一次複寫在過去 24 小時內完成。若要使用此功能，您必須選取同一儲存 VM 中的所有磁碟區。所有磁碟區的分層原則預設為來源磁碟區的分層原則，建議用於遷移使用案例。
@@ -59,6 +61,7 @@ Workload Factory 支援在下列儲存系統之間對儲存 VM 進行移轉複�
 
 
 
+[[step-1-create-the-replication-relationship]]
 == 步驟 1：建立複寫關係
 
 在兩個 FSx for ONTAP 檔案系統之間、內部部署 ONTAP 系統和 FSx for ONTAP 檔案系統之間，或在 Cloud Volumes ONTAP 和 FSx for ONTAP 檔案系統之間複寫資料。
@@ -196,6 +199,7 @@ NOTE: 為了確保長期資料保留，來源標籤和目標標籤必須相符�
 
 
 
+[[step-2-initialize-the-replication-relationship]]
 == 步驟 2：初始化複寫關係
 
 初始化來源磁碟區和目標磁碟區之間的複製關係，以傳送NetApp Workload Factory 中的快照和所有資料區塊。
@@ -221,12 +225,14 @@ NOTE: 為了確保長期資料保留，來源標籤和目標標籤必須相符�
 
 
 
+[[step-3-cut-over-replication-for-migration-use-cases]]
 == 步驟 3：針對移轉使用案例切換複寫
 
 建立遷移使用案例的複寫關係後，您必須切換複寫，以完成將儲存 VM 資料和組態設定遷移至目標 FSx for ONTAP 檔案系統。切換複寫會將資料和儲存 VM 組態設定從來源檔案系統永久遷移至目標 FSx for ONTAP 檔案系統。在切換期間，資料會進行最後一次複寫。當切換開始時，來源儲存 VM 會離線。
 
 
 
+[[plan-for-the-cutover-operation]]
 === 規劃轉換作業
 
 在規劃遷移使用案例的轉換作業時，請考慮以下事項。
@@ -276,6 +282,7 @@ NOTE: 為了確保長期資料保留，來源標籤和目標標籤必須相符�
 
 
 
+[[update-configuration-settings-after-cutover]]
 === 切換後更新組態設定
 
 在遷移使用案例中切換複寫後，請更新目標儲存 VM 上的下列儲存 VM 組態設定。
@@ -294,6 +301,7 @@ NOTE: 為了確保長期資料保留，來源標籤和目標標籤必須相符�
 
 
 
+[[related-information]]
 == 相關資訊
 
 link:change-tiering-policy.html["修改分層原則"]針對轉換後的目標磁碟區。

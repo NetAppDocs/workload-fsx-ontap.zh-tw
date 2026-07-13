@@ -15,6 +15,7 @@ summary: 在 NetApp Workload Factory 中為 S3 存取點設定日誌表基礎架
 
 
 
+[[about-this-task]]
 == 關於這項工作
 
 Journal 表功能可擷取受監控 FSx for ONTAP S3 存取點的 S3 資料平面事件（PutObject、GetObject、DeleteObject 等）。它使用部署到您 AWS 帳戶中的一系列 AWS 服務。正確設定基礎架構後，它會連接到 FSx for ONTAP Volume 存取點，並建立管道，將使用者存取和物件操作稽核事件擷取到 Journal 表中。
@@ -54,6 +55,7 @@ Journal 表功能可擷取受監控 FSx for ONTAP S3 存取點的 S3 資料平�
 
 
 
+[[before-you-begin]]
 == 開始之前
 
 若要啟用 Journal 表功能，請完成下列步驟：
@@ -172,6 +174,7 @@ Journal 表功能可擷取受監控 FSx for ONTAP S3 存取點的 S3 資料平�
 
 
 
+[[set-up-the-journal-table-infrastructure]]
 == 設定日誌表基礎架構
 
 設定基礎架構，以從 S3 存取點擷取 AWS 服務事件到日誌表中。
@@ -205,6 +208,7 @@ Journal 表功能可擷取受監控 FSx for ONTAP S3 存取點的 S3 資料平�
 
 
 
+[[troubleshoot-the-infrastructure-setup-for-the-journal-table]]
 == 疑難排解日誌表的基礎架構設定
 
 您可以使用 AWS Management Console 或 AWS CLI 來疑難排解 CloudFormation 堆疊部署及其建立的資源期間發生的故障。
@@ -213,6 +217,7 @@ Journal 表功能可擷取受監控 FSx for ONTAP S3 存取點的 S3 資料平�
 
 
 
+[[common-cloudformation-deployment-failures]]
 === 常見的 CloudFormation 部署故障
 
 
@@ -278,6 +283,7 @@ aws iam delete-role \
 ----
 
 
+[[failures-after-journal-table-enablement]]
 === 啟用日誌表後發生的故障
 
 提交 CloudTrail ARN 後，Workload Factory 會自動發送 _seed_（或測試）事件來驗證整個資源管道。如果驗證成功，種子事件將到達 S3 Tables 表中。此測試大約需要 10 分鐘。
@@ -348,12 +354,14 @@ S3TableIntegration 會自動建立一個名為 aws-cloudwatch 的表格儲存桶
 
 
 
+[[permissions-reference-for-the-journal-table-setup]]
 == 日誌表設定的權限參考
 
 用於部署 CloudFormation 堆疊以啟用 Journal 表功能的 IAM 角色需要下列權限。請參閱 <<開始之前,開始之前>> 以取得包含所需權限的可複製 JSON 策略。
 
 
 
+[[stack-operations]]
 === 堆疊操作
 
 [cols="1,1,1"]
@@ -371,6 +379,7 @@ S3TableIntegration 會自動建立一個名為 aws-cloudwatch 的表格儲存桶
 |===
 
 
+[[cloudtrail]]
 === CloudTrail
 
 [cols="1,1,1"]
@@ -394,6 +403,7 @@ S3TableIntegration 會自動建立一個名為 aws-cloudwatch 的表格儲存桶
 |===
 
 
+[[s3]]
 === S3
 
 [cols="1,1,1"]
@@ -411,6 +421,7 @@ S3TableIntegration 會自動建立一個名為 aws-cloudwatch 的表格儲存桶
 |===
 
 
+[[iam]]
 === IAM
 
 [cols="1,1,1"]
@@ -434,6 +445,7 @@ S3TableIntegration 會自動建立一個名為 aws-cloudwatch 的表格儲存桶
 |===
 
 
+[[cloudwatch-logs]]
 === CloudWatch 日誌
 
 [cols="1,1,1"]
@@ -463,6 +475,7 @@ S3TableIntegration 會自動建立一個名為 aws-cloudwatch 的表格儲存桶
 |===
 
 
+[[observabilityadmin]]
 === ObservabilityAdmin
 
 [cols="1,1,1"]
@@ -483,6 +496,7 @@ S3TableIntegration 會自動建立一個名為 aws-cloudwatch 的表格儲存桶
 |===
 
 
+[[s3-tables]]
 === S3 資料表
 
 [cols="1,1,1"]

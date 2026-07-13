@@ -4,6 +4,7 @@
 
 
 
+[[volume-autogrow-enhancement]]
 === 磁碟區自動增長增強
 
 現在，您可以設定磁碟區的自動成長大小，以便磁碟區大小可以超出業務需求和應用程式要求的預先配置大小。
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html[
 
 
 
+[[well-architected-analysis-update]]
 === 架構完善的分析更新
 
 工作負載工廠現在會分析您的 FSx for ONTAP 檔案系統，以檢查是否正在利用儲存效率，包括資料壓縮、壓縮和重複資料刪除。儲存效率衡量檔案系統利用可用空間的效率。
@@ -20,12 +22,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[storage-dashboard-enhancements]]
 === 儲存儀表板增強功能
 
 從今天開始，當您從 Workload Factory 控制台開啟儲存工作負載時，您將看到*儀表板*。新設計的儀表板提供了 FSx for ONTAP系統的整體視圖，包括檔案系統數量、SSD 總容量、結構良好的狀態概覽、資料保護概覽和複製關係健康狀況。
 
 
 
+[[volumes-tab-enhancements]]
 === 磁碟區選項卡增強功能
 
 儲存工作負載對工作負載工廠控制台中 FSx for ONTAP檔案系統內的磁碟區選項卡進行了增強。增強功能包括：
@@ -36,6 +40,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 
 
+[[storage-efficiencies-update-for-volume-creation]]
 === 磁碟區所建立的儲存效率更新
 
 建立新磁碟區時，預設啟用儲存效率，包括資料壓縮、壓縮和重複資料刪除。

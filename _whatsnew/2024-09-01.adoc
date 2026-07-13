@@ -4,12 +4,14 @@
 
 
 
+[[read-mode-support-for-storage-management]]
 === 儲存管理的讀取模式支援
 
 讀取模式可用於 Workload Factory 中的儲存管理。讀取模式透過新增唯讀權限增強了基本模式的體驗，以便基礎設施即程式碼範本填入您的特定變數。基礎架構即程式碼範本可以直接從您的 AWS 帳戶執行，而無需向 Workload Factory 提供任何修改權限。
 
 
 
+[[backup-before-volume-deletion-support]]
 === 支援磁碟區刪除之前的備份
 
 您現在可以在刪除之前備份磁碟區。備份將保留在檔案系統中、直到刪除為止。

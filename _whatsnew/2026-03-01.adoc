@@ -4,6 +4,7 @@
 
 
 
+[[well-architected-analysis-updates]]
 === 精心設計的分析更新
 
 Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設定：
@@ -14,6 +15,7 @@ Workload Factory 會分析您的 FSx for ONTAP檔案系統，以識別下列設�
 
 
 
+[[workload-factory-supports-ai-ml-use-case-for-replication]]
 === Workload Factory 支援 AI 與 ML 使用案例的複寫
 
 Workload Factory 支援將內部部署 ONTAP 資料複製到 FSx for ONTAP，並為 AWS 人工智慧（AI）和機器學習（ML）服務建立 S3 存取點，以加速 AI/ML 工作流程。
@@ -22,6 +24,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["�
 
 
 
+[[editing-existing-s3-access-points]]
 === 編輯現有的 S3 存取點
 
 您可以變更連接到磁碟區的現有 S3 存取點的使用者和使用者類型。您也可以啟用或停用存取點的中繼資料。
@@ -30,6 +33,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-s3-access-points.html
 
 
 
+[[added-block-storage-diagram]]
 === 新增區塊儲存圖
 
 如果您使用區塊儲存，可以查看區塊儲存圖，直觀地了解區塊設備如何連接到節點和 igroup。該圖有助於您理解和管理區塊儲存。
@@ -38,6 +42,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-block-storage.html[
 
 
 
+[[update-to-automatic-capacity-management-feature]]
 === 自動容量管理功能更新
 
 此次更新將該功能拆分為兩個不同的功能：自動容量管理和容量通知。
@@ -50,6 +55,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/enable-auto-capacity-manag
 
 
 
+[[new-ask-me-bookmark-available-in-workload-factory]]
 === Workload Factory 中新增了「問我」書籤
 
 我們在 Workload Factory 控制台的每個畫面上都新增了 Ask Me 書籤。這項改進讓您在需要協助時更輕鬆快速地存取 Ask Me。Ask Me 是我們的 AI 助理。您可以詢問有關工作負載環境的問題、獲取個人化見解，並查看先前的對話。

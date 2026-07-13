@@ -29,6 +29,7 @@ summary: 在NetApp Workload Factory 中發現並複製本地ONTAP數據，以便
 
 
 
+[[discover-an-on-premises-ontap-cluster]]
 == 探索內部部署 ONTAP 的叢集
 
 在NetApp Workload Factory 中發現本機ONTAP集群，以便您可以將資料複製到Amazon FSx for NetApp ONTAP檔案系統。
@@ -77,6 +78,7 @@ image:screenshot-on-prem-connectivity.png["顯示內部部署 ONTAP 叢集應如
 
 
 
+[[replicate-volume-data-from-an-on-premises-ontap-cluster]]
 == 從內部部署的 ONTAP 叢集複寫 Volume 資料
 
 將 Volume 資料從內部部署 ONTAP 叢集複寫到適用於 ONTAP 檔案系統的 FSX 。複寫後，資料可用於豐富 AI 知識庫。
@@ -145,6 +147,7 @@ image:screenshot-on-prem-connectivity.png["顯示內部部署 ONTAP 叢集應如
 
 
 
+[[remove-an-on-premises-ontap-cluster-from-netapp-workload-factory]]
 == 從NetApp Workload Factory 中刪除本地ONTAP集群
 
 需要時從NetApp Workload Factory 中刪除本地ONTAP叢集。

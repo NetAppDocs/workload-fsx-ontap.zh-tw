@@ -15,6 +15,7 @@ summary: 設定 FSx for ONTAP檔案系統後，在 Workload Factory 中建立 FS
 
 
 
+[[about-this-task]]
 == 關於這項工作
 
 FSx for ONTAP 磁碟區以虛擬方式將資料分組，決定資料的儲存方式，並決定資料的存取類型。Volume 不會消耗檔案系統儲存容量。儲存在磁碟區中的資料主要會消耗 SSD 儲存設備。視磁碟區的分層原則而定、資料可能也會佔用容量集區儲存空間。您可以在建立磁碟區時設定磁碟區的大小、稍後也可以變更其大小。
@@ -30,6 +31,7 @@ S3 端點可以連線到 FSx for ONTAP磁碟區。使用 S3 存取點，您可�
 
 
 
+[[details-for-volume-settings]]
 === 音量設定詳情
 
 .不可變文件
@@ -53,6 +55,7 @@ NOTE: 即使在保留期限到期之後，您仍無法修改 WORM 檔案。您�
 
 
 
+[[before-you-begin]]
 == 開始之前
 
 建立 Volume 之前、請先檢閱下列先決條件：
@@ -69,6 +72,7 @@ NOTE: 即使在保留期限到期之後，您仍無法修改 WORM 檔案。您�
 
 
 
+[[create-a-volume]]
 == 建立Volume
 
 您可以使用 Codebox 中提供的下列工具來建立 Volume ： REST API ， CloudForformation 和 Terraform 。link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox["瞭解如何使用 Codebox 進行自動化"^]。

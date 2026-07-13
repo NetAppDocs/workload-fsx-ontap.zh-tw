@@ -4,6 +4,7 @@
 
 
 
+[[autonomous-ransomware-protection-for-fsx-for-ontap-file-systems]]
 === 適用於 ONTAP 檔案系統的 FSX 的自主勒索軟體保護
 
 使用自動勒索軟體保護（ ARP ）來保護您的資料，這項功能會在 NAS （ NFS/SMB ）環境中使用工作負載分析來偵測並警告可能是勒索軟體攻擊的異常活動。當懷疑有攻擊時， ARP 也會建立新的不可變快照，您可以從中還原資料。
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html
 
 
 
+[[flexgroup-volume-rebalance-enhancement]]
 === FlexGroup Volume 重新平衡增強功能
 
 BlueXP  工作負載工廠推出 FlexGroup Volume 重新平衡精靈，其中有數個配置選項可重新平衡 FlexGroup Volume 中的資料。重新平衡會將資料平均地重新分配給 FlexGroup 成員磁碟區。
@@ -20,6 +22,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/rebalance-volume.html["重
 
 
 
+[[implement-best-practices-for-an-fsx-for-ontap-file-system]]
 === 為 ONTAP 檔案系統實作 FSX 的最佳實務做法
 
 BlueXP  工作負載工廠提供儀表板，讓您檢視檔案系統組態架構良好的狀態。您可以利用此分析，為 ONTAP 檔案系統的 FSX 實作最佳實務做法。檔案系統組態分析包括下列組態： SSD 容量臨界值，排程本機快照， ONTAP 備份排程的 FSX ，資料分層和遠端資料複寫。
@@ -30,6 +33,7 @@ BlueXP  工作負載工廠提供儀表板，讓您檢視檔案系統組態架�
 
 
 
+[[dual-protocol-volume-security-style-options]]
 === 雙傳輸協定 Volume 安全樣式選項
 
 您可以選擇 NTFS 或 UNIX 作為磁碟區的安全樣式，以決定使用者和權限存取磁碟區的方法。
@@ -38,6 +42,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["建立
 
 
 
+[[replication-enhancements]]
 === 複寫增強功能
 
 
@@ -74,18 +79,21 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["�
 
 
 
+[[fsx-for-ontap-file-name-visible-in-volume-creation]]
 === 可在 Volume 建立中看到 ONTAP 檔案名稱的 FSX
 
 我們已改善在磁碟區建立期間， ONTAP 檔案系統的 FSX 可見度。建立磁碟區時，您會看到適用於 ONTAP 檔案系統的 FSX ，因此您可以確切知道磁碟區的建立位置。
 
 
 
+[[aws-account-visible-across-the-storage-workload]]
 === 整個儲存工作負載均可見 AWS 帳戶
 
 我們改善了儲存工作負載的帳戶可見度。當您瀏覽至 * Volumes * ， * Storage VMS* 和 * Replication * 標籤時，您會看到 AWS 帳戶。
 
 
 
+[[link-association-enhancements]]
 === 連結關聯增強功能
 
 * 您可以在「庫存」索引標籤中，快速建立從適用於 ONTAP 檔案系統的 FSX 連結的關聯。
@@ -94,12 +102,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["�
 
 
 
+[[link-authentication-support-for-aws-secrets-manager]]
 === AWS Secrets Manager 的連結驗證支援
 
 您現在可以選擇使用 AWS Secrets Manager 的機密來驗證連結，這樣就不需要使用儲存在 BlueXP  工作負載工廠中的認證資料。
 
 
 
+[[tracker-response-support]]
 === Tracker 回應支援
 
 Tracker 現在提供 API 回應，讓您可以查看與工作相關的 REST API 輸出。
@@ -108,6 +118,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html["�
 
 
 
+[[capacity-validation-when-restoring-a-volume-from-a-backup]]
 === 從備份還原磁碟區時進行容量驗證
 
 從備份還原磁碟區時， BlueXP  工作負載工廠會判斷您是否有足夠的容量進行還原，如果沒有，也可以自動新增 SSD 儲存層容量。
@@ -116,12 +127,14 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/restore-from-backup.html["
 
 
 
+[[support-for-alternative-ontap-user-credentials]]
 === 支援替代的 ONTAP 使用者認證
 
 工作負載工廠現在支援替代的 ONTAP 認證集，可用來建立檔案系統，將安全風險降至最低。您可以選擇不同的 ONTAP 認證集，或選擇不為 fsxadmin 和 vsaadmin 使用者提供密碼，而不只使用 fsxadmin 使用者。
 
 
 
+[[updated-permissions-terminology]]
 === 更新的權限術語
 
 Workload Factory 使用者介面和文件現在使用「只讀」來指涉讀取權限，使用「讀取/寫入」來指稱自動化權限。

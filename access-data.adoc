@@ -19,6 +19,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.htm
 
 
 
+[[get-mount-point-for-volumes-in-netapp-workload-factory]]
 == 取得NetApp Workload Factory 中磁碟區的掛載點
 
 取得磁碟區的掛載點，以便在 CIFS 共用或 NFS 用戶端上掛載共用區。
@@ -35,6 +36,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.htm
 
 
 
+[[connect-to-nas-clients]]
 == 連線至 NAS 用戶端
 
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/attach-linux-client.html["在 Linux 用戶端上掛載磁碟區"^]
@@ -44,6 +46,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.htm
 
 
 
+[[connect-to-san-clients]]
 == 連線至 SAN 用戶端
 
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/mount-iscsi-luns-linux.html["在 Linux 用戶端上掛載 iSCSI LUN"^]

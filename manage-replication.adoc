@@ -15,6 +15,7 @@ summary: 在 NetApp Workload Factory 中管理複製關係。
 
 
 
+[[change-the-replication-schedule-of-a-source-volume]]
 == 變更來源 Volume 的複寫排程
 
 變更NetApp Workload Factory 中複製關係中來源磁碟區的複製計劃。
@@ -45,6 +46,7 @@ summary: 在 NetApp Workload Factory 中管理複製關係。
 
 
 
+[[limit-the-max-transfer-rate-of-a-replication-relationship]]
 == 限制複寫關係的最大傳輸率
 
 限制最大傳輸速率是選擇性的、但建議使用。如果沒有限制，網路和應用程式的效能可能會下降。
@@ -71,6 +73,7 @@ summary: 在 NetApp Workload Factory 中管理複製關係。
 
 
 
+[[manually-update-snapshot-data-in-a-replication-relationship]]
 == 手動更新複製關係中的快照資料
 
 複製關係有設定的複製計劃，但您可以隨時手動更新NetApp Workload Factory 中來源磁碟區和目標磁碟區之間傳輸的快照資料。
@@ -88,6 +91,7 @@ summary: 在 NetApp Workload Factory 中管理複製關係。
 
 
 
+[[pause-a-replication-relationship]]
 == 暫停複寫關係
 
 暫停複寫關係，以停止從來源磁碟區到目標磁碟區的排程複寫更新。目標 Volume 會從唯讀轉換為讀寫。這兩個磁碟區會繼續共用最新的複寫快照，作為日後重新同步的新基準。
@@ -111,6 +115,7 @@ summary: 在 NetApp Workload Factory 中管理複製關係。
 
 
 
+[[resume-a-paused-replication-relationship]]
 == 恢復暫停的複寫關係
 
 恢復複製關係後，複製停止期間對目標磁碟區所做的任何變更都將被刪除。目標磁碟區將從讀寫狀態轉換為唯讀狀態，並再次依照計畫的複製間隔接收來自來源磁碟區的更新。
@@ -134,6 +139,7 @@ NOTE: 在上次資料複寫與停用來源磁碟區之間、寫入原始來源�
 
 
 
+[[reverse-a-replication-relationship]]
 == 反轉複寫關係
 
 反轉複寫關係、使目標磁碟區成為來源磁碟區。
@@ -173,6 +179,7 @@ NOTE: 在上次資料複寫與停用來源磁碟區之間、寫入原始來源�
 
 
 
+[[stop-a-replication-relationship]]
 == 停止複寫關係
 
 停止NetApp Workload Factory 中的複製關係。當您停止複製關係時，從來源磁碟區到目標磁碟區的計畫複製更新將暫停。目標卷從唯讀轉換為讀/寫。
@@ -193,6 +200,7 @@ NOTE: 在上次資料複寫與停用來源磁碟區之間、寫入原始來源�
 
 
 
+[[delete-a-replication-relationship]]
 == 刪除複寫關係
 
 刪除NetApp Workload Factory 中的複製關係。當您刪除複製關係時，它會刪除來源磁碟區和目標磁碟區之間的複製關係。刪除複製關係後，兩個磁碟區將繼續獨立存在，並保留其包含的當前資料。

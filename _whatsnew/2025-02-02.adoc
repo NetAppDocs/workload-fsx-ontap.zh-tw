@@ -4,6 +4,7 @@
 
 
 
+[[cloudshell-in-bluexp-workload-factory-console]]
 === BlueXP  工作負載原廠主控台的 CloudShell
 
 CloudShell 是BlueXP workload factory中用於儲存的嵌入式 CLI 功能。您可以使用 CloudShell 在 Workload Factory 控制台內類似 shell 的環境中從多個會話建立、共用和執行ONTAP或 AWS CLI 指令。
@@ -12,6 +13,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html["深
 
 
 
+[[inventory-data-download]]
 === 庫存資料下載
 
 您現在可以從 BlueXP  工作負載工廠的儲存設備，將適用於 ONTAP 的 FSX 庫存資料下載到 Microsoft Excel 或 CSV 檔案中。
@@ -20,6 +22,7 @@ image:screenshot-fsx-inventory-download.png["BlueXP workload factory中的儲存
 
 
 
+[[fsx-for-ontap-file-system-additional-menu-options]]
 === 適用於 ONTAP 檔案系統的 FSX 其他功能表選項
 
 我們已從「儲存」的「適用於 ONTAP 的 FSX 」索引標籤，為適用於 ONTAP 檔案系統的 FSX 簡化下列作業。
@@ -33,6 +36,7 @@ image:screenshot-filesystem-menu-options.png["Storage 中的 FSX for ONTAP 標�
 
 
 
+[[terraform-support-for-creating-volumes]]
 === Terraform 支援建立 Volume
 
 您現在可以使用 Codebox 中的 Terraform 來建立 Volume 。
@@ -41,6 +45,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["建立
 
 
 
+[[file-locking-with-the-immutable-files-feature]]
 === 使用不可變檔案功能鎖定檔案
 
 當您為 ONTAP 檔案系統建立 FSX 磁碟區時，現在可以使用不可變檔案功能鎖定檔案。檔案鎖定可協助您和其他人在指定期間內防止意外或刻意刪除檔案。
@@ -49,6 +54,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html["建立
 
 
 
+[[tracker-available-for-monitoring-and-tracking-operations]]
 === Tracker 可用於監控及追蹤作業
 
 Tracker ， Storage 提供全新的監控功能。您可以使用 Tracker 來監控和追蹤認證，儲存和連結作業的進度和狀態，檢閱作業工作和子任務的詳細資料，診斷任何問題或失敗，編輯失敗作業的參數，以及重試失敗的作業。
@@ -57,6 +63,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/monitor-operations.html["�
 
 
 
+[[support-for-second-generation-amazon-fsx-for-netapp-ontap-file-systems]]
 === 支援第二代 Amazon FSX for NetApp ONTAP 檔案系統
 
 現在您可以在NetApp Workload Factory 中使用Amazon FSx for NetApp ONTAP第二代檔案系統。  FSx for ONTAP第二代單可用區檔案系統由多達 12 個 HA 對提供支持，可提供高達 72 GBps 的吞吐容量和 2,400,000 SSD IOPS。  FSx for ONTAP第二代多可用區檔案系統由一個 HA 對提供支持，可提供 6 GBps 的吞吐容量和 200,000 SSD IOPS。

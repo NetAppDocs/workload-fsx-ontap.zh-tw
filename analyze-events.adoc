@@ -15,6 +15,7 @@ summary: 分析 NetApp Workload Factory for FSx for ONTAP 中的事件。
 
 
 
+[[about-this-task]]
 == 關於這項工作
 
 儲存管理員通常只有在客戶投訴後才會回應 FSx for ONTAP 事件，或透過維護自訂腳本和警報來解決問題。這種被動回應的方式會降低效率、延遲問題解決並增加停機時間。
@@ -43,6 +44,7 @@ link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定價"^]
 
 
 
+[[data-privacy-and-security]]
 === 資料隱私和安全
 
 您的資料隱私和安全將透過以下方式受到保護：
@@ -55,10 +57,12 @@ link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定價"^]
 
 
 
+[[before-you-begin]]
 == 開始之前
 
 
 
+[[view-events]]
 === 檢視事件
 
 若要查看延遲事件，您必須link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、規劃和分析_權限"^]在您的 AWS 帳戶中。
@@ -67,6 +71,7 @@ link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定價"^]
 
 
 
+[[analyze-events]]
 === 分析事件
 
 若要分析 EMS 和延遲事件並獲得 AI 驅動的洞察和建議，請確保以下事項：
@@ -116,6 +121,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解�
 
 
 
+[[view-and-analyze-events-for-fsx-for-ontap]]
 == 檢視並分析 FSx for ONTAP 的事件
 
 使用 Workload Factory 主控台檢視和分析 FSx for ONTAP 檔案系統的 EMS 和延遲事件。

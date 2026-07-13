@@ -4,6 +4,7 @@
 
 
 
+[[tab-views-in-storage-inventory]]
 === 儲存庫存中的索引標籤檢視
 
 儲存庫存已更新為雙索引標籤檢視：
