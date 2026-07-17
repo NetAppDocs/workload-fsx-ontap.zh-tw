@@ -3054,9 +3054,6 @@
   <block id="46d1548637c7b145aedaf16fc4982ded" category="paragraph"><block ref="46d1548637c7b145aedaf16fc4982ded" category="inline-link-macro-rx"></block></block>
   <block id="6935aa37908b8d3e8e6495adec301374" category="section-title">設定磁碟區延遲臨界值</block>
   <block id="8d36c5c4d1b5b3180db932fcf4bd5e3b" category="paragraph">現在您可以按磁碟區配置延遲閾值，以監控效能並在讀取或寫入延遲超過您定義的限制時收到警報。延遲監控可協助您在效能問題影響工作負載之前主動識別它們。</block>
-  <block id="da6f5bf8aee08ef83468ad38ab52796b" category="doc">適用於所有 FSx for ONTAP 系統的全新架構完善儀表板現已推出</block>
-  <block id="7fca025a8bf1b5d72a149731d5c88125" category="paragraph">現在，您可以透過 NetApp Workload Factory 中全新的架構完善儀表板，對 FSx for ONTAP 檔案系統進行架構完善分析。新儀表板集中展示了您所有帳戶和區域中的檔案系統及其配置。當您從檔案系統存取「架構完善」索引標籤時，會出現彈出通知。您可以透過在 Workload Factory 左側導覽功能表中選擇「架構完善」來存取新儀表板。</block>
-  <block id="b09ad8a2ad81c470093e9c74313ea0c2" category="paragraph">您仍然可以存取特定檔案系統的架構完善分析，以及從 Storage 中的 *Well-architected* 功能表選項進行存取。</block>
   <block id="efbeddc0347a679a438120189b77f860" category="section-title">磁碟區資源管理器</block>
   <block id="3e1cc7f8632eafd5f69d910c06db3aa4" category="paragraph">磁碟區資源管理器為您提供 NetApp Workload Factory 中所有磁碟區的簡潔、可搜尋檢視。快速查看哪些磁碟區用於處理區塊或檔案工作負載。查看每個磁碟區的邏輯大小、實體已使用容量以及是否使用了儲存效率功能（壓縮、重複資料刪除和資料精簡）。按名稱、狀態（可用/失敗）、延遲、大小、已使用容量和保護功能進行篩選和排序。</block>
   <block id="3a410df7dfc102007ea8a7569fdb1810" category="section-title">增強複製延遲的電子郵件通知</block>
@@ -3205,4 +3202,6 @@
   <block id="64e991d759281e91a768b558639fb387" category="paragraph">由於系統能夠識別受影響的檔案和攻擊時間，因此您可以僅從可用的快照中還原受影響的檔案，而無需還原整個磁碟區。</block>
   <block id="16f2ae5a8a2de6f12ddc298127a4ddb7" category="list-text">可靠性：SSD 容量臨界值、排程本機快照、排程磁碟區備份、遠端資料複寫，以及長期保留的資料可靠性</block>
   <block id="d2eebd4f9400b9bd2c04860c048de241" category="paragraph">啟用追蹤功能，即可監控整個帳戶的複製延遲。Workload Factory 會在延遲超過設定閾值時發出警報。預設情況下，閾值為複製間隔的 150%，以確保正常的傳輸時間並減少誤報。您可以調整閾值以符合您的恢復點目標 （RPO），並在延遲超過閾值時收到通知。</block>
+  <block id="842065a36dace972d6dab0c170421bd1" category="section-title">磁碟區和區塊設備的工作負載標記</block>
+  <block id="47c38c6a3d7e96ce1b3b2519a980f283" category="paragraph">Workload Factory 現在可以識別並標記磁碟區和區塊裝置的主要工作負載或應用程式。您可以指派預先定義的工作負載標籤，例如 Microsoft SQL Server 或 Oracle Database，也可以為應用程式建立自訂標籤。標籤可以套用至個別資源，也可以由連線的儲存資源繼承。這有助於您使儲存設備配置與工作負載需求保持一致、了解事件影響，並更有效地進行疑難排解。</block>
 </blocks>
