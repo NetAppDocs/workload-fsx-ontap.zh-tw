@@ -3133,7 +3133,6 @@
   <block id="b26629c4d0db7a100913103c2501115d" category="section-title">工作負載標記和 AI 功能</block>
   <block id="c6e3575ea0e96a40eeea1698ed97e99f" category="paragraph">當系統管理員停用 AI 功能時，工作負載將不會被標記。如果在 Workload Factory 帳戶設定中關閉了 AI 功能，標記服務將無法識別或分類儲存資源上的工作負載。</block>
   <block id="9801425a2145ab6ed5aa12b9446c905c" category="inline-link-macro">了解人工智慧管理</block>
-  <block id="cbbc45b1bedc18c950d2da6ef1fe1f43" category="paragraph"><block ref="40737cbe54dcebc9ef5c68ebf72b8d96" category="inline-link-macro-rx"></block>。</block>
   <block id="39cf1aaf3e84c5c49c930c5bfe27e098" category="section-title">探索節省快照計算改進</block>
   <block id="a4f25c93cc96e84a15a9a235f569bbe2" category="paragraph">Explore savings 功能現在使用一致的快照容量計算，因此 FSx for ONTAP 節省估算可正確計算額外的快照容量資源池要求。</block>
   <block id="e14c4b029cabd340fe3b6c67835e9927" category="inline-link-macro">探索 Amazon Elastic Block Store、FSx for Windows File Server 和 Elastic File System 為您的儲存設備環境節省成本。</block>
@@ -3249,4 +3248,5 @@
   <block id="2f8586eac80bb95b25809876eb97f99a" category="paragraph">Workload Factory 會判斷您是否有足夠的容量進行還原，如果容量不足，則會自動新增 SSD 儲存層容量。</block>
   <block id="4fd22cd0c1b62f84962ef1e8ffd9c966" category="paragraph">啟用追蹤功能，即可監控整個帳戶的複製延遲。Workload Factory 會在延遲超過設定閾值時發出警報。預設情況下，閾值為複製間隔的 150%，以確保正常的傳輸時間並減少誤報。您可以調整閾值以符合您的恢復點目標 （RPO），並在延遲超過閾值時收到通知。您也可以將資料匯出至 CSV 檔案，以進行進一步分析。</block>
   <block id="adf6bc23c10d536eed25c42f34ba48e8" category="section-title">2026年8月2日</block>
+  <block id="bb971caaebe9e5940267caf457500810" category="paragraph"><block ref="247b746a5e5f871115d636673a8fd3a7" category="inline-link-macro-rx"></block>。</block>
 </blocks>
