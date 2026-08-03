@@ -43,6 +43,9 @@ summary: 分析 NetApp Workload Factory for FSx for ONTAP 中的事件。
 link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定價"^]
 
 
+NOTE: 如果您的帳戶管理員已關閉 AI 功能，您將看到一則訊息，並且無法使用 AI 分析。請聯絡您的系統管理員或 https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["了解 AI 管理"^]。
+
+
 
 [[data-privacy-and-security]]
 === 資料隱私和安全
@@ -60,19 +63,11 @@ link:https://aws.amazon.com/bedrock/pricing/["Amazon Bedrock 定價"^]
 [[before-you-begin]]
 == 開始之前
 
+若要檢視延遲事件，您必須執行以下操作：
 
+* link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、規劃和分析_權限"^]在您的 AWS 帳戶中。
+* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到檔案系統"]。
 
-[[view-events]]
-=== 檢視事件
-
-若要查看延遲事件，您必須link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、規劃和分析_權限"^]在您的 AWS 帳戶中。
-
-要查看 EMS 事件，您還必須link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到檔案系統"]。
-
-
-
-[[analyze-events]]
-=== 分析事件
 
 若要分析 EMS 和延遲事件並獲得 AI 驅動的洞察和建議，請確保以下事項：
 

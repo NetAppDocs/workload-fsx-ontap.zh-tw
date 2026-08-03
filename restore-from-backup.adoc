@@ -13,7 +13,7 @@ summary: 將磁碟區從備份還原至 AWS 帳戶中任何適用於 ONTAP 檔�
 [role="lead"]
 在NetApp Workload Factory 中，您可以將磁碟區從備份還原到 AWS 帳戶中的任何 FSx for ONTAP檔案系統。
 
-工作負載工廠會判斷您是否有足夠的容量進行還原，如果沒有，也可以自動新增 SSD 儲存層容量。
+Workload Factory 會判斷您是否有足夠的容量進行還原，如果容量不足，則會自動新增 SSD 儲存層容量。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
