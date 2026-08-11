@@ -88,6 +88,13 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html["探�
 
 
 
+[[ontap-features-displayed-in-volumes-explorer]]
+=== 在 Volumes Explorer 中顯示的 ONTAP 功能
+
+磁碟區資源管理器現在在磁碟區表中包含了 ONTAP 功能。這些功能提供了有關磁碟區的組態和狀態的更詳細資訊，例如保護範圍、Autonomous Ransomware Protection （ARP/AI） 狀態、儲存效率、分層原則和 Volume 自動擴充。
+
+
+
 [[05-july-2026]]
 == 2026年7月5日
 

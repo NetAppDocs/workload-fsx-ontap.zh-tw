@@ -755,8 +755,6 @@
   <block id="b755b7c9e5db773b9578d24d7b40b61d" category="list-text">選取 * 套用 * 以儲存變更。</block>
   <block id="124cb3fd3d0a35a1abf1c0f90f37e8a9" category="paragraph">若要使用內部部署 ONTAP 叢集的資料，您必須先探索內部部署 ONTAP 叢集。發現內部部署 ONTAP 叢集之後，您可以將資料用於下列任何一種使用案例。</block>
   <block id="2a3b399798aa16ecfbc1425cc560bfad" category="list-text">使用案例</block>
-  <block id="ef63a3d009f11deff50f4dc327b32173" category="list-text">請注意， GenAI 工作負載的主要使用案例是這一系列工作的重點。</block>
-  <block id="809c357d304bbfa1cd4446574b270af8" category="inline-link-macro">豐富 AI 知識庫</block>
   <block id="f15192f8afdcf438f7b1ccf0cda2b436" category="list-text">* 備份與移轉至雲端 * ：將內部部署 ONTAP Volume 資料複寫至適用於 ONTAP 檔案系統的 FSX ，可作為雲端的備份。</block>
   <block id="5b5a84720ff8905504e8a45fbc52fb73" category="list-text">* 資料分層 * ：複寫後，不常存取的內部部署 ONTAP Volume 資料可從 SSD 儲存層分層，移至容量集區儲存層。</block>
   <block id="4185f116d64b1130e6f9ba4250b147fa" category="paragraph">開始之前，請確定您擁有下列項目：</block>
@@ -1289,7 +1287,6 @@
   <block id="897bea1a5ca479178427004f773ee72e" category="list-text">您也可以在重新平衡之前下載磁碟區移動清單。</block>
   <block id="703547df715082455f8920d78fe90a30" category="list-text">選擇 * 重新平衡 * 。</block>
   <block id="eaaaf380859de755a58a543fbffc3d8a" category="paragraph"><block ref="eaaaf380859de755a58a543fbffc3d8a" category="inline-link-macro-rx"></block></block>
-  <block id="1418bddde60a7d4a1fbd71041ef29d36" category="list-text">* GenAI 工作負載 * ：將內部部署的 ONTAP Volume 資料複寫至適用於 ONTAP 檔案系統的 FSX ，以便將資料用於<block ref="8b94b70e10f0f6c7944c9419ec9922bc" category="inline-link-macro-rx"></block>。</block>
   <block id="7583f12b4559f6687c67d8588da1e2f7" category="doc">磁碟區自動增長增強</block>
   <block id="b57fe4f5ee65a0e01f61993297811ebf" category="paragraph">現在，您可以設定磁碟區的自動成長大小，以便磁碟區大小可以超出業務需求和應用程式要求的預先配置大小。</block>
   <block id="9f1effd9ace68ca00fe9e9e3c024b362" category="inline-link-macro">啟用Volume自動擴充</block>
@@ -1997,7 +1994,6 @@
   <block id="0b81b68aa4b4da3fc81b7541c9557525" category="summary">在NetApp Workload Factory 中，您可以在建立磁碟區後更新儲存效率設定。</block>
   <block id="0254d70b292c2efb3924bc70f603207a" category="summary">根據需要更新NetApp Workload Factory 中 FSx for ONTAP檔案系統的吞吐容量。</block>
   <block id="5b7dc0f0cef1ddf767dff9731a57d8a4" category="list-text">從 *FSx for ONTAP* 中，選擇要更新吞吐量容量的檔案系統的作業選單，然後選擇 *管理*。</block>
-  <block id="be31b62eb26bc544ed1c2919a1a354d8" category="summary">在NetApp Workload Factory 中發現並複製本地ONTAP數據，以便用於豐富 AI 知識庫。</block>
   <block id="5811115476eeb3b923e56f3b218e8861" category="doc">在NetApp Workload Factory 中使用本地ONTAP叢集數據</block>
   <block id="5433703774e7ff1a361e7a705d25ba42" category="paragraph">在NetApp Workload Factory 中發現本機ONTAP集群，以便您可以將資料複製到Amazon FSx for NetApp ONTAP檔案系統。</block>
   <block id="cab5c35909125289d94f24cfb933bb6d" category="list-text">*連結*：選擇一個連結。此連結將與內部部署叢集相關聯，以在叢集和工作負載工廠之間建立連線。</block>
@@ -3152,8 +3148,6 @@
   <block id="8215457eb88ef1fb110b79579b908e3d" category="paragraph">您可以忽略不適用於您環境的組態分析。這樣可以避免不必要的警示和不準確的最佳化結果。</block>
   <block id="8817b0c6f0795c52cab62044416eee8a" category="inline-link-macro">深入瞭解自訂規則</block>
   <block id="821af7226458ea25572e88e8ab2026e4" category="paragraph">您也可以使用純文字語言建立自訂規則，以根據組織的標準和 NetApp 最佳實務來驗證您的環境。先進行模擬執行測試規則，然後排程在您的環境中執行。<block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>。</block>
-  <block id="8be08850265c9930c26a8e5b28183a2e" category="paragraph">您也可以使用純文字語言建立自訂規則，以根據組織的標準和 NetApp 最佳實務來驗證您的環境。先進行模擬執行測試規則，然後排程在您的環境中執行。</block>
-  <block id="7c24f3892a999a3e8d688cabe068b17a" category="paragraph"><block ref="ce039b478eb432b675a03c04866f31ab" category="inline-link-macro-rx"></block>。</block>
   <block id="782a430d789ff1db80e40fbe9c0be819" category="paragraph">架構完善的儀表板會根據 ONTAP 最佳實務和 AWS Well-Architected Framework 評估儲存組態。此評估也會建議改進措施和修正方法。</block>
   <block id="790f31a1565b039a710f1ff6cd60e24a" category="list-text">*Volume 備份*</block>
   <block id="ca512a483bb26b1b253abc6b2cc463bd" category="list-text">*Snapshot 原則*</block>
@@ -3249,4 +3243,7 @@
   <block id="4fd22cd0c1b62f84962ef1e8ffd9c966" category="paragraph">啟用追蹤功能，即可監控整個帳戶的複製延遲。Workload Factory 會在延遲超過設定閾值時發出警報。預設情況下，閾值為複製間隔的 150%，以確保正常的傳輸時間並減少誤報。您可以調整閾值以符合您的恢復點目標 （RPO），並在延遲超過閾值時收到通知。您也可以將資料匯出至 CSV 檔案，以進行進一步分析。</block>
   <block id="adf6bc23c10d536eed25c42f34ba48e8" category="section-title">2026年8月2日</block>
   <block id="bb971caaebe9e5940267caf457500810" category="paragraph"><block ref="247b746a5e5f871115d636673a8fd3a7" category="inline-link-macro-rx"></block>。</block>
+  <block id="935b1e26eff078e94b224d92e0db898a" category="section-title">在 Volumes Explorer 中顯示的 ONTAP 功能</block>
+  <block id="2d4406cf931edb2fbd5ab72e7eb07c66" category="paragraph">磁碟區資源管理器現在在磁碟區表中包含了 ONTAP 功能。這些功能提供了有關磁碟區的組態和狀態的更詳細資訊，例如保護範圍、Autonomous Ransomware Protection （ARP/AI） 狀態、儲存效率、分層原則和 Volume 自動擴充。</block>
+  <block id="5800d9f6c1560d9eaf8bc5fbacb4698b" category="summary">在 NetApp Workload Factory 中探索並複寫內部部署的 ONTAP 資料，以便將其用作雲端備份。</block>
 </blocks>

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: use-onprem-data.html 
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
-summary: 在NetApp Workload Factory 中發現並複製本地ONTAP數據，以便用於豐富 AI 知識庫。 
+summary: 在 NetApp Workload Factory 中探索並複寫內部部署的 ONTAP 資料，以便將其用作雲端備份。 
 ---
 = 在NetApp Workload Factory 中使用本地ONTAP叢集數據
 :allow-uri-read: 
@@ -11,15 +11,14 @@ summary: 在NetApp Workload Factory 中發現並複製本地ONTAP數據，以便
 
 
 [role="lead"]
-在NetApp Workload Factory 中發現並複製本地ONTAP數據，以便用於豐富 AI 知識庫。
+在 NetApp Workload Factory 中探索並複寫內部部署的 ONTAP 資料，以便將其用作雲端備份。
 
 .關於這項工作
 若要使用內部部署 ONTAP 叢集的資料，您必須先探索內部部署 ONTAP 叢集。發現內部部署 ONTAP 叢集之後，您可以將資料用於下列任何一種使用案例。
 
-使用案例:: 請注意， GenAI 工作負載的主要使用案例是這一系列工作的重點。
+使用案例::
 +
 --
-* * GenAI 工作負載 * ：將內部部署的 ONTAP Volume 資料複寫至適用於 ONTAP 檔案系統的 FSX ，以便將資料用於link:https://docs.netapp.com/us-en/workload-genai/knowledge-base/create-knowledgebase.html["豐富 AI 知識庫"^]。
 * * 備份與移轉至雲端 * ：將內部部署 ONTAP Volume 資料複寫至適用於 ONTAP 檔案系統的 FSX ，可作為雲端的備份。
 * * 資料分層 * ：複寫後，不常存取的內部部署 ONTAP Volume 資料可從 SSD 儲存層分層，移至容量集區儲存層。
 
