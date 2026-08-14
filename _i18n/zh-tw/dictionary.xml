@@ -882,9 +882,6 @@
   <block id="01b0a4fcc33bdafd6e65537f24f463de" category="list-text">事件保留</block>
   <block id="b3c382e94f4b4abcc049ce95e85dc998" category="list-text">事件會保留在使用者介面上 30 天。</block>
   <block id="cfd98e00a6e308c04ab9f76a854b6989" category="section-title">追蹤及監控作業</block>
-  <block id="1c575ed3e5dce0a1d77706830609b278" category="inline-image-macro">帳戶設定功能表的螢幕擷取畫面，並反白顯示 Tracker 選項。</block>
-  <block id="7478b5abe2869b21138fe88cbd4d66da" category="paragraph"><block ref="7478b5abe2869b21138fe88cbd4d66da" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="e443a93c9da9763cd15656814a7e0c2e" category="list-text">在 Tracker 標籤中，使用篩選器或搜尋來縮小工作結果範圍。您也可以下載工作報告。</block>
   <block id="aa2a2cd452f8a71b2f2dcdae68114732" category="section-title">檢視 API 要求</block>
   <block id="68538d555ae12c680ea428aaa850d90f" category="paragraph">在 Codebox 中檢視 Tracker 工作的 API 要求。</block>
   <block id="968877018213bf42962084001c210472" category="list-text">在 Tracker 中，選取工作。</block>
@@ -1912,8 +1909,6 @@
   <block id="558281a06321bc8c7b90d170a463683f" category="doc">在NetApp Workload Factory 中管理磁碟區標籤</block>
   <block id="693a8f663c39ae53134101e5d974fda8" category="paragraph">標籤可以幫助您對資源進行分類。您可以隨時在NetApp Workload Factory 中為 FSx for ONTAP磁碟區新增、編輯和刪除磁碟區標籤。</block>
   <block id="ff53601e946713a2f9385573998c76d7" category="list-text">從「磁碟區」標籤中，選擇要修改標籤的磁碟區的操作選單。</block>
-  <block id="ddfa0843a8d65e78d4c6e602bca78098" category="summary">追蹤 FSx for ONTAP、憑證和連結操作，並使用NetApp Workload Factory for Storage 中的 Tracker 監控作業進度。</block>
-  <block id="a3ecc7f067e821700027526dbe820bb1" category="doc">使用NetApp Workload Factory 中的 Tracker 監控儲存操作</block>
   <block id="674b84367e7a585d7eb4cb69538ab5be" category="paragraph">監控和追蹤 FSx for ONTAP、憑證和連結操作的執行情況，並使用NetApp Workload Factory 中的 Tracker 監控任務進度。</block>
   <block id="e80eb219e8472681a001172074028f46" category="paragraph">使用 Tracker 追蹤和監控NetApp控制台中的操作。</block>
   <block id="bd56fc255ce900fc195c9bc0d7ed20c0" category="list-text">選擇操作選單，然後選擇*查看 API 請求*。</block>
@@ -3249,4 +3244,10 @@
   <block id="9b988decb4830a521f8e1487584f0385" category="doc">Volumes 總管中可用的 Volume 動作</block>
   <block id="a0c01b4b61e4e5c8542aca4694a620d6" category="paragraph">所有 Volume 操作均可直接在 Volumes explorer 中對一個或多個 Volume 執行。這使得執行 Volume 層級操作更加快速。Volume 操作包括修改 Volume 設定、管理快照以及執行其他 Volume 任務，而無需離開 Volumes explorer。您也可以從 FSx for ONTAP 檔案系統總覽中的 Volumes 索引標籤存取這些操作。</block>
   <block id="7ade7e78371066efd6d4e823d8da1fd8" category="section-title">2026年8月11日</block>
+  <block id="2ba65fb298b74a9b72d949d4fe3479b3" category="list-text">在 Tracker 中，您可以使用篩選器或搜尋功能來縮小工作結果範圍。您也可以下載工作報告。</block>
+  <block id="25f39cb1a1fb7c5e04993249b6cabc32" category="admonition">失敗的操作最多可以重試 10 次。</block>
+  <block id="7979b3c6963e66f9dcb00b6a71847a64" category="summary">使用 NetApp Workload Factory for FSx for ONTAP 中的 Tracker 追蹤工作負載操作並監控作業進度。</block>
+  <block id="8d4d423646d154ba5a24cc06f37ea486" category="doc">使用 Tracker 監控 FSx for ONTAP 操作</block>
+  <block id="90f9c44ed80c8f4c833d62a795593434" category="list-text">選擇選單 <block ref="d1917ed039a7bd34b3d1373e5ffc5ece" category="inline-image-macro-rx" type="image"></block>，然後選擇 *Administration*。</block>
+  <block id="31793001124176cff5a1e8aea00621a1" category="list-text">從管理選單中，選擇 *Tracker*。</block>
 </blocks>
