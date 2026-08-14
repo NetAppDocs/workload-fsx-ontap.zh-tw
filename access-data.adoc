@@ -27,9 +27,8 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.htm
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
-. 從 *FSx for ONTAP* 中，選擇具有磁碟區的檔案系統的操作選單，然後選擇 *管理*。
-. 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
-. 從“磁碟區”標籤中，選擇磁碟區的操作選單，然後選擇“基本操作”，然後選擇“查看掛載指令”。
+. 從「Storage」功能表中，選取「Volumes explorer」。
+. 選擇 Volume 的操作選單，然後選擇 *基本操作*，再選擇 *檢視裝載命令*。
 . 在 Mount 命令對話方塊中，選取 * Copy* 來複製 NFS 掛載點或 CIFS 共用的命令。您將在終端機中輸入複製的命令。
 . 選擇*關閉*。
 

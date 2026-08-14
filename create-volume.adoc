@@ -83,8 +83,8 @@ NOTE: 從 Codebox 使用 Terraform 時、您複製或下載的程式碼會隱藏
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
-. 從「儲存」功能表中，選擇「磁碟區資源管理器」。
-. 從「Volume explorer」中選擇「Create volume」。
+. 從「Storage」功能表中，選取「Volumes explorer」。
+. 選擇 *Create volume*。
 . 在「一般詳細資料」下的「建立 Volume 」頁面上、提供下列詳細資料：
 +
 .. * Volume 名稱 * ：輸入磁碟區的名稱。
