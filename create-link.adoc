@@ -16,9 +16,9 @@ summary: 您可以建立和管理鏈接，以在NetApp Workload Factory 帳戶�
 link:links-overview.html["深入瞭解連結"]。
 
 .關於這項工作
-連結利用 AWS Lambda 執行程式碼來回應事件、並自動管理該程式碼所需的運算資源。您建立的連結是 NetApp 帳戶的一部分、它們與 AWS 帳戶相關聯。
+連結使用 AWS Lambda 來回應事件執行程式碼，並自動管理該程式碼所需的運算資源。您建立的連結是您 NetApp 帳戶的一部分，並且與一個 AWS 帳戶關聯。
 
-您可以在定義 FSx for ONTAP檔案系統時在您的帳戶中建立連結。此連結用於該檔案系統，也可以用於其他 FSx for ONTAP檔案系統。您也可以稍後關聯檔案系統的連結。
+在定義 FSx for ONTAP 檔案系統時，您可以在帳戶中建立連結。此連結可用於目前檔案系統，也可用於其他 FSx for ONTAP 檔案系統。您也可以稍後為檔案系統關聯連結。
 
 連結需要驗證。您可以使用儲存在 Workload Factory 憑證服務中的憑證或儲存在 AWS Secrets Manager 中的憑證來驗證連結。每個連結僅支援一種身份驗證方法。例如，如果您選擇使用 AWS Secrets Manager 進行連結驗證，則以後無法變更身份驗證方法。
 
@@ -102,11 +102,12 @@ NOTE: AWS GovCloud 帳戶不支援自動建立連結。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
-. 從儲存選單中，選擇 *FSx for ONTAP*。
-. 從 *FSx for ONTAP* 中，選擇要關聯連結的檔案系統的操作選單，然後選擇 *關聯連結*。
-. 在關聯連結對話方塊中、選取 * 建立新連結 * 、然後選取 * 繼續 * 。
-. 在「建立連結」頁面上、提供下列項目：
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"]，然後選擇 *Administration*。
+. 從「管理」功能表中，選擇「連結」。
+. 在「連結」頁面上，選擇「建立並關聯」。
+. 在「關聯連結」對話方塊中，選擇要與連結關聯的檔案系統，然後選擇*Continue*。
+. 選擇 *建立新連結*，然後選擇 *繼續*。
+. 在「建立連結」頁面上，選擇「自動建立」，然後提供以下資訊：
 +
 .. * 連結名稱 * ：輸入您要用於此連結的名稱。名稱在您的帳戶中必須是唯一的。
 .. *AWS Secrets Manager*：可選。允許 Workload Factory 從您的 AWS Secrets Manager 取得 FSx for ONTAP存取憑證。
@@ -122,7 +123,7 @@ NOTE: AWS GovCloud 帳戶不支援自動建立連結。
 .. *連結權限*：選擇以下連結權限選項之一：
 +
 *** *自動*：選擇此選項，以便 AWS CloudFormation 程式碼自動建立 Lambda 權限原則和執行角色。
-*** *使用者提供*：選擇此選項可將指定的 Lambda 執行角色及其附加的策略指派給 Lambda 連結。 Lambda需要以下權限。 `secretsmanager:GetSecretValue`僅當您啟用 AWS Secrets Manager 時才需要權限。
+*** *使用者提供的執行角色*：選擇此選項可將指定的 Lambda 執行角色及其附加原則指派給 Lambda 連結。Lambda 權限原則需要以下權限。 `secretsmanager:GetSecretValue` 權限僅在您啟用 AWS Secrets Manager 時才需要。
 +
 [source, json]
 ----
@@ -131,7 +132,6 @@ NOTE: AWS GovCloud 帳戶不支援自動建立連結。
 "ec2:DeleteNetworkInterface",
 "ec2:AssignPrivateIpAddresses",
 "ec2:UnassignPrivateIpAddresses",
-"secretsmanager:GetSecretValue"
 ----
 +
 在文字方塊中輸入 Lambda 執行角色 ARN。
@@ -151,7 +151,7 @@ Workload Factory 會根據 FSx for ONTAP 檔案系統自動擷取 AWS 帳戶、�
 . 選取 * 繼續 * 以開啟 AWS 管理主控台、然後登入此 ONTAP 檔案系統的 AWS 帳戶。
 . 在「快速建立堆疊」頁面的「功能」下、選取 * 我瞭解 AWS CloudForgation 可能會建立 IAM 資源 * 。
 +
-請注意，啟動 CloudFormation 範本時會授予 Lambda 三項權限。NetApp Workload Factory 在使用連結時會使用這些權限。
+CloudFormation 範本在產品發表時會授予 Lambda 三個權限。Workload Factory 在使用連結時會使用這些權限。
 
 +
 [source, json]
@@ -162,7 +162,7 @@ Workload Factory 會根據 FSx for ONTAP 檔案系統自動擷取 AWS 帳戶、�
 ----
 . 選取 * 建立堆疊 * ，然後選取 * 繼續 * 。
 +
-您可以在事件頁面上監控連結建立狀態。這應該不會超過 5 分鐘。
+您可以在「事件」頁面上監控連結建立狀態。此過程通常不超過五分鐘。
 
 . 返回 Workload Factory 介面，您將看到該連結與 FSx for ONTAP檔案系統相關聯。
 
@@ -174,11 +174,13 @@ Workload Factory 會根據 FSx for ONTAP 檔案系統自動擷取 AWS 帳戶、�
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
-. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
-. 從儲存選單中，選擇 *FSx for ONTAP*。
-. 從 *FSx for ONTAP* 中，選擇要關聯連結的檔案系統的操作選單，然後選擇 *關聯連結*。
-. 在關聯連結對話方塊中、選取 * 建立新連結 * 、然後選取 * 繼續 * 。
-. 在建立連結頁面上，從 Codebox 中選擇 CloudFormation 或 Terraform，然後提供以下內容：
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"]，然後選擇 *Administration*。
+. 從「管理」功能表中，選擇「連結」。
+. 在「連結」頁面上，選擇「建立並關聯」。
+. 在「關聯連結」對話方塊中，選擇要與連結關聯的檔案系統，然後選擇*Continue*。
+. 選擇 *建立新連結*，然後選擇 *繼續*。
+. 在建立連結頁面上，選取 *手動建立*，然後從程式碼方塊中選取 CloudFormation 或 Terraform。
+. 在「詳細資料和憑證」部分，提供以下內容：
 +
 .. * 連結名稱 * ：輸入您要用於此連結的名稱。名稱在您的帳戶中必須是唯一的。
 .. *AWS Secrets Manager*：一律為 GovCloud 帳戶啟用。其他帳戶則為選用。允許 Workload Factory 從您的 AWS Secrets Manager 擷取 FSx for ONTAP 存取憑證。
@@ -200,7 +202,6 @@ Workload Factory 會根據 FSx for ONTAP 檔案系統自動擷取 AWS 帳戶、�
 "ec2:DeleteNetworkInterface",
 "ec2:AssignPrivateIpAddresses",
 "ec2:UnassignPrivateIpAddresses"
-"secretsmanager:GetSecretValue"
 ----
 +
 在文字方塊中輸入 Lambda 執行角色 ARN。
@@ -210,7 +211,7 @@ Workload Factory 會根據 FSx for ONTAP 檔案系統自動擷取 AWS 帳戶、�
 .. * 標記 * ：您也可以選擇新增任何標記來與此連結建立關聯、以便更輕鬆地將資源分類。例如、您可以新增一個標記、將此連結識別為由 FSX 用於 ONTAP 檔案系統。
 .. *連結註冊*：選擇CloudFormation或Terraform以取得如何註冊連結的說明，並依照指示進行操作。
 +
-請注意，啟動 CloudFormation 範本時會授予 Lambda 三項權限。NetApp Workload Factory 在使用連結時會使用這些權限。
+CloudFormation 範本在產品發表時會授予 Lambda 三個權限。Workload Factory 在使用連結時會使用這些權限。
 
 +
 [source, json]
@@ -223,7 +224,7 @@ Workload Factory 會根據 FSx for ONTAP 檔案系統自動擷取 AWS 帳戶、�
 ... 成功建立堆疊後，將 Lambda ARN 貼到 Workload Factory 主控台的文字方塊中。Workload Factory 會根據 FSx for ONTAP 檔案系統自動擷取 AWS 帳戶、位置和安全性群組。
 ... 選擇* Create *（建立*）。
 +
-您可以在事件頁面上監控連結建立狀態。這應該不會超過 5 分鐘。
+您可以在「事件」頁面上監控連結建立狀態。此過程通常不超過五分鐘。
 
 
 
@@ -241,7 +242,7 @@ Workload Factory 將連結與 FSx for ONTAP 檔案系統關聯起來。您可以
 [[associate-an-existing-link-with-an-fsx-for-ontap-file-system]]
 == 將現有連結與適用於 ONTAP 檔案系統的 FSX 建立關聯
 
-建立連結之後，請將其與 ONTAP 檔案系統的一或多個 FSX 建立關聯。
+建立連結後，將其與一個或多個 FSx for ONTAP 檔案系統建立關聯。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
@@ -254,7 +255,7 @@ Workload Factory 將連結與 FSx for ONTAP 檔案系統關聯起來。您可以
 ** Workload Factory ：輸入密碼兩次。
 ** AWS Secrets Manager ：輸入機密 ARN 。
 +
-確保密鑰 ARN 包含下列密鑰有效對，儘管 _filesystemID_ 是可選的。
+驗證密鑰 ARN 是否包含以下索引鍵值對，但 _filesystemID_ 為選用項目。
 
 +
 *** 檔案系統ID = FSx_filesystem_id（可選）
@@ -299,7 +300,7 @@ link:links-overview.html#when-a-link-is-required["深入瞭解連結"].
 --
 * 解析度 * ：前往 AWS Secrets Manager 並編輯格式。
 
-密碼應包含下列金鑰有效配對：
+此密鑰應包含以下鍵值對：
 
 * filesystemID = fsx_filesystem_id
 * 使用者名稱 = FSx_user

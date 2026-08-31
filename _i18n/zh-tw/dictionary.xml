@@ -131,10 +131,7 @@
   <block id="8997880c88dd70fe80799ee97bb7ac0c" category="doc">建立連結</block>
   <block id="6015cd2e9e5bc5b037ad456163cc26cb" category="inline-link-macro">深入瞭解連結</block>
   <block id="95254aef509d2d84e8ee7dd3052d1b61" category="paragraph"><block ref="97608ab403cabf20e3bcac439aacde61" category="inline-link-macro-rx"></block>。</block>
-  <block id="5c6789e8d71e288316c129b90f0a025e" category="paragraph">連結利用 AWS Lambda 執行程式碼來回應事件、並自動管理該程式碼所需的運算資源。您建立的連結是 NetApp 帳戶的一部分、它們與 AWS 帳戶相關聯。</block>
   <block id="22cc060f8b88cfca4c298ec0a9aae3fa" category="list-text">使用 CloudFormation 堆疊新增連結時、 AWS 帳戶必須具有下列權限：</block>
-  <block id="53bee45613e420a1313f02fc8a36b1b1" category="list-text">在關聯連結對話方塊中、選取 * 建立新連結 * 、然後選取 * 繼續 * 。</block>
-  <block id="b2f3a9c80071ec30919944cb6cd21a42" category="list-text">在「建立連結」頁面上、提供下列項目：</block>
   <block id="89a62ddcc9759060d903ef8b7aee42c3" category="list-text">* 連結名稱 * ：輸入您要用於此連結的名稱。名稱在您的帳戶中必須是唯一的。</block>
   <block id="68d5729d2a63e62a04de68bac212b9ab" category="list-text">* 標記 * ：您也可以選擇新增任何標記來與此連結建立關聯、以便更輕鬆地將資源分類。例如、您可以新增一個標記、將此連結識別為由 FSX 用於 ONTAP 檔案系統。</block>
   <block id="c602cdf8533ce956e9f326890f6d8723" category="list-text">選取 * 繼續 * 以開啟 AWS 管理主控台、然後登入此 ONTAP 檔案系統的 AWS 帳戶。</block>
@@ -1192,7 +1189,6 @@
   <block id="de786693aed7955f1cb538f51e25f7d6" category="paragraph">您可以根據預設權限建立機密，或為連結原則指派自訂權限。</block>
   <block id="49af4dcead2678507453b9bff6c332f1" category="paragraph">* 將 VPC 私有端點設定為 AWS Secrets Manager* 預設為停用。選取此選項會使用 VPC 私有端點儲存機密，而非儲存在本機。</block>
   <block id="48457d7f94975228307244f863f96fee" category="section-title">將現有連結與適用於 ONTAP 檔案系統的 FSX 建立關聯</block>
-  <block id="531d680092609d3ec7794cd6dd8c39fe" category="paragraph">建立連結之後，請將其與 ONTAP 檔案系統的一或多個 FSX 建立關聯。</block>
   <block id="447f36846a239be6be0faf7dc1fa0364" category="list-text">在「建立關聯」連結頁面中，選取 * 建立現有連結的關聯 * ，選取連結，然後選取 * 繼續 * 。</block>
   <block id="5b5b11575f2a0c06c832b5cbd1c6dcfe" category="list-text">選取驗證模式。</block>
   <block id="219e99148dae7112d47eedc1f49517ae" category="list-text">Workload Factory ：輸入密碼兩次。</block>
@@ -1208,7 +1204,6 @@
   <block id="ee67bf640d0b52ba5e821e265b1eacf5" category="paragraph">* 解決方法 * ：提供正確的秘密 ARN 。</block>
   <block id="0733070c151f197e780e335f701571f1" category="list-text">機密格式不正確。</block>
   <block id="6ef3be28f69c1735acc5b68f50b352ab" category="paragraph">* 解析度 * ：前往 AWS Secrets Manager 並編輯格式。</block>
-  <block id="63659b054a6e69260ce9e4a4634e56e0" category="paragraph">密碼應包含下列金鑰有效配對：</block>
   <block id="ecc4c534126952c05eb3829106343643" category="list-text">機密不包含用於檔案系統驗證的有效 ONTAP 認證。</block>
   <block id="b94462bb135856834e40d9c982dbbc8b" category="paragraph">* 解析度 * ：提供認證，可在 AWS Secrets Manager 中驗證 ONTAP 檔案系統的 FSX 。</block>
   <block id="db02b80a9dd5a7c959ec87fdf41baa91" category="inline-link-macro">串聯複寫</block>
@@ -1370,7 +1365,6 @@
   <block id="2c8c409e84df8a5368e9fc203dacd0e0" category="list-text">*自動*：對於自動操作，每建立 1 GiB，就會新增 3 IOPS。</block>
   <block id="080138c9fde9abc63b7003839106198b" category="list-text">*使用者配置*：對於使用者配置，輸入 IOPS 值。</block>
   <block id="2f33e5a4fe58163ac0df8f3b097df4db" category="list-text">*連結權限*：選擇以下連結權限選項之一：</block>
-  <block id="dd9c72ad3bbeb047b573638ce62d0cc6" category="list-text">*使用者提供*：選擇此選項可將指定的 Lambda 執行角色及其附加的策略指派給 Lambda 連結。 Lambda需要以下權限。<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block>僅當您啟用 AWS Secrets Manager 時才需要權限。</block>
   <block id="5f3b3b380e02766e8ad7eca5c6b37840" category="paragraph">在文字方塊中輸入 Lambda 執行角色 ARN。</block>
   <block id="38adbad92c37166c4ce64da1eb51513b" category="inline-link-macro">創建卷</block>
   <block id="f80d67f0a6951b3f6c1185e7c7f39c30" category="paragraph">指定卷的最大增長大小和單位。不能將最大成長大小設定為小於目前磁碟區大小</block>
@@ -1459,11 +1453,8 @@
   <block id="5b4d700431157f8e7dcc17b14d365c7f" category="list-text">\\伺服器</block>
   <block id="6b8258a2b9dce9918a5b42eb1c2de4c6" category="list-text">\\伺服器\項目</block>
   <block id="710ecb74356fd86fc995d76f7fcb7c5c" category="list-text">\\伺服器\專案\共享資源</block>
-  <block id="272d4b49948c30687aaaffecca19cb82" category="paragraph">您可以在定義 FSx for ONTAP檔案系統時在您的帳戶中建立連結。此連結用於該檔案系統，也可以用於其他 FSx for ONTAP檔案系統。您也可以稍後關聯檔案系統的連結。</block>
   <block id="049f730a98eb69627912748561a543b8" category="paragraph">連結部署堆疊會自動將以下預設金鑰管理器 ARN 正規表示式新增至 Lambda 權限策略：<block ref="218d5bbe44642244cc57db37477be310" prefix=" " category="inline-code"></block> 。</block>
   <block id="bab25954c067653929b889d687bcb718" category="paragraph">出現「重新導向到 CloudFormation」對話方塊並解釋如何從 AWS CloudFormation 服務建立連結。</block>
-  <block id="a37cbff3921a52bcde5c7689c912e1f4" category="paragraph">您可以在事件頁面上監控連結建立狀態。這應該不會超過 5 分鐘。</block>
-  <block id="9a5abe8b855a4f42f1c70c4b367d9bce" category="paragraph">確保密鑰 ARN 包含下列密鑰有效對，儘管 _filesystemID_ 是可選的。</block>
   <block id="1023373ba9dff02b999882804d6dc2ef" category="list-text">檔案系統ID = FSx_filesystem_id（可選）</block>
   <block id="508e0beab9fc0c907eb4adcaa7a736f7" category="list-text">使用者 = FSx_user</block>
   <block id="0dcf8b4e3476c0545950d4d61acb625c" category="admonition">使用 AWS Secrets Manager 進行身份驗證需要一個用戶，可以是您提供的 _FSx_user_，也可以是在 FSx for ONTAP檔案系統上建立的其他用戶。預設用戶是<block ref="679500f227997b45be97e3ca8115c678" prefix=" " category="inline-code"></block>如果您不提供使用者。</block>
@@ -1501,7 +1492,6 @@
   <block id="421075462886e558113f14b52fe22487" category="paragraph">現在您可以建立指向磁碟區內的目錄的 SMB/CIFS 共用。在卷內，您將能夠看到存在哪些共享、共享指向哪裡以及授予特定使用者和群組的權限。</block>
   <block id="4662a232249c09ca958781da08211b0c" category="paragraph">對於資料保護卷，建立 SMB/CIFS 共用的流程現在包括建立到磁碟區的連線路徑以用於安裝目的。</block>
   <block id="952da3361b1e3ca5daa8c23a39780e18" category="list-text">手動：使用 Codebox 中的 CloudFormation 或 Terraform 建立帶有手動註冊的連結。程式碼持續存在，為您提供更多時間來完成操作。這在與安全性和 DevOps 等不同的團隊合作時很有用，因為他們可能首先需要授予完成連結建立所需的權限。</block>
-  <block id="272404907923a583d38661d1f77a2a8c" category="list-text">在建立連結頁面上，從 Codebox 中選擇 CloudFormation 或 Terraform，然後提供以下內容：</block>
   <block id="1ca9512c09f6b26312a475fda293b54a" category="list-text">*連結註冊*：選擇CloudFormation或Terraform以取得如何註冊連結的說明，並依照指示進行操作。</block>
   <block id="aeb7b1f8e40a81f588a0d8770c9826d3" category="list-text">SMB/CIFS：Windows作業系統的檔案儲存協議</block>
   <block id="77e7ba17717c79352c95d49bede81697" category="list-text">您必須為所選協定（SMB/CIFS、NFS 或 iSCSI）配置存取權限。</block>
@@ -2987,7 +2977,6 @@
   <block id="e97bbb69ec6bcd2c1b3d761224ed4559" category="admonition">AWS GovCloud 帳戶不支援自動建立連結。</block>
   <block id="d37d952a78337c053485a61317b953df" category="list-text">*AWS Secrets Manager*：一律為 GovCloud 帳戶啟用。其他帳戶則為選用。允許 Workload Factory 從您的 AWS Secrets Manager 擷取 FSx for ONTAP 存取憑證。</block>
   <block id="f3a06ea1d47de2a4216fe3fd53364d24" category="list-text">*使用者提供*：選擇此選項可將指定的 Lambda 執行角色及其附加原則指派給 Lambda 連結。Lambda 權限原則需要以下權限。此<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block>權限僅在使用 AWS Secrets Manager 時需要。</block>
-  <block id="687e9c397e4fb6b561e735147b5af100" category="paragraph">請注意，啟動 CloudFormation 範本時會授予 Lambda 三項權限。NetApp Workload Factory 在使用連結時會使用這些權限。</block>
   <block id="1425c9b22ae63851bbaa938ebc0a967d" category="list-text">成功建立堆疊後，將 Lambda ARN 貼到 Workload Factory 主控台的文字方塊中。Workload Factory 會根據 FSx for ONTAP 檔案系統自動擷取 AWS 帳戶、位置和安全性群組。</block>
   <block id="47dfa5e12270c73140e2f3dc8b32a020" category="paragraph">Workload Factory 將連結與 FSx for ONTAP 檔案系統關聯起來。您可以執行進階 ONTAP 操作。</block>
   <block id="eb3eec333eedf15738e12e55e183cdb7" category="paragraph"><block ref="c7c8a4154bf78f63993b7572e6143221" category="inline-link-macro-rx"></block>.</block>
@@ -3246,4 +3235,24 @@
   <block id="12a6e2d4c91a43e9ac81b18d2fd28a4a" category="list-text">選擇要設定延遲閾值的 Volume 的動作選單。</block>
   <block id="388a60e15f099855100226e2026dc1cd" category="list-text">選取含有要分割之複製 Volume 的 Volume 動作選單。</block>
   <block id="3b4ba83afa209df4541afdb1c96a15f9" category="list-text">選擇要更新儲存效率設定的 Volume 的動作選單。</block>
+  <block id="c329a6ebc8c0891e88889203e3e31c39" category="doc">連結建立功能可在「連結」頁面找到</block>
+  <block id="ef8e743556b96fe2947729361cb5835f" category="paragraph">現在，除了 FSx for ONTAP 清單頁面和檔案系統總覽頁面之外，您還可以直接從管理選單的「連結」頁面建立連結。</block>
+  <block id="b65fab1584e1a15fb6cd01b1fb573a1f" category="inline-link-macro">深入瞭解如何建立連結</block>
+  <block id="2fb8fbf9eac6cb7cdbca3e8cae581dd0" category="paragraph"><block ref="ac8902bc899b18c41d3bea9bfd9e1e86" category="inline-link-macro-rx"></block>。</block>
+  <block id="eb72702456cb13d975ccfacb15b610d0" category="paragraph">連結使用 AWS Lambda 來回應事件執行程式碼，並自動管理該程式碼所需的運算資源。您建立的連結是您 NetApp 帳戶的一部分，並且與一個 AWS 帳戶關聯。</block>
+  <block id="de753f9064c7210624293a7c1d1e13f9" category="paragraph">在定義 FSx for ONTAP 檔案系統時，您可以在帳戶中建立連結。此連結可用於目前檔案系統，也可用於其他 FSx for ONTAP 檔案系統。您也可以稍後為檔案系統關聯連結。</block>
+  <block id="36c518eb88267ad8a7105893fd209a46" category="list-text">從「管理」功能表中，選擇「連結」。</block>
+  <block id="892be23a9211e0d2e6a0d60b06507944" category="list-text">在「連結」頁面上，選擇「建立並關聯」。</block>
+  <block id="cb045f0740ec2fb29d2864d6c52abff5" category="list-text">在「關聯連結」對話方塊中，選擇要與連結關聯的檔案系統，然後選擇*Continue*。</block>
+  <block id="a9dc1217e276dbbc98e08e5bf8b4e0bd" category="list-text">選擇 *建立新連結*，然後選擇 *繼續*。</block>
+  <block id="eaa9de7b48a473b999b69f05d59df6c2" category="list-text">在「建立連結」頁面上，選擇「自動建立」，然後提供以下資訊：</block>
+  <block id="0a447482fbe2f57253df6484a37127e2" category="list-text">*使用者提供的執行角色*：選擇此選項可將指定的 Lambda 執行角色及其附加原則指派給 Lambda 連結。Lambda 權限原則需要以下權限。<block ref="e6b67e3118c0caaf2206ab3d3fba8d67" prefix=" " category="inline-code"></block> 權限僅在您啟用 AWS Secrets Manager 時才需要。</block>
+  <block id="4e4d4587b3d4f525dd0bfabd81edb7d7" category="paragraph">CloudFormation 範本在產品發表時會授予 Lambda 三個權限。Workload Factory 在使用連結時會使用這些權限。</block>
+  <block id="6f0344b8291b1471c971ba88374dce8a" category="paragraph">您可以在「事件」頁面上監控連結建立狀態。此過程通常不超過五分鐘。</block>
+  <block id="7b8171c19525234afed5066a22d0bdbe" category="list-text">在建立連結頁面上，選取 *手動建立*，然後從程式碼方塊中選取 CloudFormation 或 Terraform。</block>
+  <block id="bf419e3bcb855d67fd85a99f9a55eb97" category="list-text">在「詳細資料和憑證」部分，提供以下內容：</block>
+  <block id="0b1685216b81bbd8b7a0d6bb09435f98" category="paragraph">建立連結後，將其與一個或多個 FSx for ONTAP 檔案系統建立關聯。</block>
+  <block id="64c7a4783273d9e14ea971d0631f7ac8" category="paragraph">驗證密鑰 ARN 是否包含以下索引鍵值對，但 _filesystemID_ 為選用項目。</block>
+  <block id="669b6152234fe8c12012646b005a7d2f" category="paragraph">此密鑰應包含以下鍵值對：</block>
+  <block id="1641126472d40ab162e3acf05ac611ba" category="section-title">2026年8月30日</block>
 </blocks>
