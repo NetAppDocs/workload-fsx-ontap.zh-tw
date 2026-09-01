@@ -4,7 +4,7 @@ permalink: limit-transfer-rate.html
 keywords: limit max transfer rate, limit transfer rate 
 summary: 限制NetApp Workload Factory 中複製關係的最大傳輸速率。 
 ---
-= 限制複寫關係的最大傳輸率
+= 限制 NetApp Workload Factory 中的複寫傳輸率
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

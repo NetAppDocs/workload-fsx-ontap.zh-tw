@@ -4,7 +4,7 @@ permalink: restore-volume-from-snapshot.html
 keywords: restore volume, snapshot 
 summary: 當磁碟區包含刪除或毀損的檔案時、從快照中還原適用於 ONTAP Volume 的 FSX 。 
 ---
-= 從 Workload Factory 中的快照還原磁碟區
+= 在 NetApp Workload Factory 中從快照還原 Volume
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

@@ -4,7 +4,7 @@ permalink: enable-snapshots-long-term.html
 keywords: snapshot long-term retention, enable long-term retention 
 summary: 啟用快照以進行長期保留，可讓您複寫特定快照以進行長期災難恢復。 
 ---
-= 啟用及編輯快照以進行長期保留
+= 在 NetApp Workload Factory 中啟用長期快照保留
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

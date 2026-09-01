@@ -4,7 +4,7 @@ permalink: manage-snapshot-policy.html
 keywords: manage snapshot policy, change snapshot policy, snapshot policies, snapshot schedule, update 
 summary: 在 Workload Factory 中管理 FSx for ONTAP磁碟區的快照原則。快照策略定義系統如何為磁碟區建立快照。 
 ---
-= 管理快照原則
+= 在 NetApp Workload Factory 中管理 Volume 的快照原則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

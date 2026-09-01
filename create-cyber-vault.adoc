@@ -4,7 +4,7 @@ permalink: create-cyber-vault.html
 keywords: create cyber vault, volume cyber vault, protect data cyber vault, cyber vault setup 
 summary: 了解NetApp網路保險庫以及如何實施網路保險庫架構，以保護您的資料免受勒索軟體和網路威脅的侵害。 
 ---
-= 使用網路安全保險庫保護您的資料。
+= 使用網路保存庫保護您的 FSx for ONTAP 資料
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

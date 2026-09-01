@@ -4,7 +4,7 @@ permalink: view-s3-details.html
 keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
 summary: 在 NetApp Workload Factory 中檢視磁碟區的 S3 存取點詳細資訊。 
 ---
-= 在 NetApp Workload Factory 中檢視某個磁碟區的 S3 存取端點詳細資料
+= 在 NetApp Workload Factory 中檢視 Volume 的 S3 存取點詳細資訊
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

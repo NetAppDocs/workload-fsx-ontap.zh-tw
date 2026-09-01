@@ -4,7 +4,7 @@ permalink: discover-cache-volumes.html
 keywords: discover cache volume, FlexCache technology, ONTAP FlexCache, FSx for ONTAP volume 
 summary: 無需離開NetApp Workload Factory 控制台即可發現並查看與快取關係關聯的快取磁碟區。 
 ---
-= 在 Workload Factory 中發現快取卷
+= 在 NetApp Workload Factory 中探索快取 Volume
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

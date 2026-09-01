@@ -4,7 +4,7 @@ permalink: track-replication-delays.html
 keywords: replication, track replication, replication lag, replication delay, delay, monitor replication, replication threshold, lag notification 
 summary: 啟用追蹤功能，監控您帳戶中所有複製關係的延遲情況。 
 ---
-= 追蹤複寫延遲
+= 在 NetApp Workload Factory 中追蹤複寫延遲
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

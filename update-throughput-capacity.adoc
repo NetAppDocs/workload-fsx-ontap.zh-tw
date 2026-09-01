@@ -4,7 +4,7 @@ permalink: update-throughput-capacity.html
 keywords: update throughput, change throughput, throughput capacity 
 summary: 根據需要更新NetApp Workload Factory 中 FSx for ONTAP檔案系統的吞吐容量。 
 ---
-= 更新檔案系統的處理量容量
+= 更新 NetApp Workload Factory 中檔案系統的處理量容量
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

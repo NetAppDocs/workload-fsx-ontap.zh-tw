@@ -4,7 +4,7 @@ permalink: manage-links.html
 keywords: links, accounts, lambda, creating, associating, disassociating, deleting, editing 
 summary: 您可以查看與您的帳戶關聯的連結、更新連結驗證的密碼以及刪除NetApp Workload Factory 中的連結。 
 ---
-= 管理工作負載工廠鏈接
+= 管理 NetApp Workload Factory 連結
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

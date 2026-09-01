@@ -4,7 +4,7 @@ permalink: create-snapshot.html
 keywords: create snapshot, snapshot 
 summary: 在NetApp Workload Factory 中建立 FSx for ONTAP磁碟區的手動快照。快照是磁碟區內容的某個時間點的版本。 
 ---
-= 為 ONTAP Volume 建立 FSX 的手動快照
+= 在 NetApp Workload Factory 中建立 Volume 的隨需快照
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

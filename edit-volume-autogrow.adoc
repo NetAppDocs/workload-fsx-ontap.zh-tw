@@ -4,7 +4,7 @@ permalink: edit-volume-autogrow.html
 keywords: volume autogrow, increase volume capacity, enable autogrow 
 summary: 啟用磁碟區自動成長以讓 Workload Factory 為您管理磁碟區容量。您可以隨時停用它。 
 ---
-= 在 Workload Factory 中啟用磁碟區自動成長
+= 在 NetApp Workload Factory 中啟用 Volume 自動擴充
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/

@@ -4,7 +4,7 @@ permalink: update-storage-efficiency.html
 keywords: storage efficiency change, update storage efficiency 
 summary: 在NetApp Workload Factory 中，您可以在建立磁碟區後更新儲存效率設定。 
 ---
-= 更新磁碟區的儲存效率設定
+= 在 NetApp Workload Factory 中更新 Volume 儲存效率
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
