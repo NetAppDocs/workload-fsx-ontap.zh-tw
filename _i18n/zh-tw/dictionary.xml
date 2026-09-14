@@ -2999,7 +2999,6 @@
   <block id="cd5018d2830f482994e77102c7380ec5" category="paragraph">連結連線可讓 Workload Factory 掃描效能、資料保護與組態方面的問題。<block ref="bd244e13e9233be6d4441bce58acbc1c" category="inline-link-macro-rx"></block> 以對您的檔案系統資源進行最全面的分析。</block>
   <block id="ab656c8a69b575add6ee0729f5bc54c7" category="list-text"><block ref="bd244e13e9233be6d4441bce58acbc1c" category="inline-link-macro-rx"></block>以對您的檔案系統資源進行最全面的分析。</block>
   <block id="5d1f387838383b2d368f6e7f1c840316" category="list-text">審查行動項目，了解此修復措施的後果，例如執行個體停機或服務中斷。</block>
-  <block id="6ad3b6fcf10a846b365b85062abd036b" category="paragraph">未解析的指令於 &lt;stdin&gt; - include::https://raw.githubusercontent.com/NetAppDocs/workload-setup-admin/main/_include/links-overview.adoc[]</block>
   <block id="1bd303a4a4865b24239ad78c657bf53e" category="list-text">您必須關聯一個連結來管理 igroups。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。關聯連結後，請返回此操作。</block>
   <block id="a5546560157685322114f05def377bc2" category="list-text">您必須關聯連結才能管理快取 Volume 和關係。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。關聯連結後，請返回此操作。</block>
   <block id="873090954c0fe574d1c9f3181d89742b" category="list-text">若要管理 SMB/CIFS 共享，您必須關聯連結。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。連結關聯完成後，請返回此操作。</block>
@@ -3071,4 +3070,39 @@
   <block id="55ce7397d464ef8e34bfaee401cec48d" category="sidebar">管理檔案系統設定</block>
   <block id="2ee20619a771993544eaaa7e388816d1" category="sidebar">管理儲存設備 VMs</block>
   <block id="1c388674e0a6805e31fb6d7602029a59" category="sidebar">管理儲存設備 VM 設定</block>
+  <block id="87251eaee5bfd306ceab7bcacfbf47f6" category="paragraph">NetApp Workload Factory 連結在 Workload Factory 帳戶與一個或多個 FSx for ONTAP 檔案系統之間建立信任關係和連線。這可讓您直接透過 ONTAP REST API 呼叫來監控和管理某些 Amazon FSx for ONTAP API 無法提供的檔案系統功能。</block>
+  <block id="1e2cf39904eebcbddae0fe72e0186b8b" category="paragraph">您無需連結即可開始使用 Workload Factory，但在某些情況下，您需要建立一個連結才能解除鎖定 Workload Factory 的所有功能和工作負載能力。</block>
+  <block id="65050310e57f3790fef3c72eb48d33fe" category="section-title">連結為何有益</block>
+  <block id="8db5475a47ce008ca4a3d502a243007d" category="paragraph">連結之所以有益，是因為它們允許 Workload Factory 執行 Amazon FSx for ONTAP API 原本無法提供的作業。連結可啟用進階 ONTAP 功能與自動化，進而增強 FSx for ONTAP 檔案系統的管理。</block>
+  <block id="abca8c391b472ef4e80c6577b5d5eb2a" category="paragraph">以下是使用連結的一些好處：</block>
+  <block id="bf5b08a19bccddd5697b54218eb442dd" category="list-text">此連結使 NetApp Console 能夠直接向您的 FSx for ONTAP 檔案系統傳送 ONTAP 命令，從而帶來 AWS 原生功能以外的高階 ONTAP 功能。</block>
+  <block id="92d3d2d26bd62a6b2959d23585ef12a2" category="list-text">連結運用 AWS Lambda 來執行程式碼以回應事件。這種無伺服器方法移除了對在 VPC 中執行的執行個體的依賴。</block>
+  <block id="87684df341e5a7d9f280a7bdf2048a6e" category="section-title">連結的工作原理</block>
+  <block id="5abd3a6ae198e27e4c8402463411560f" category="paragraph">連結運用 AWS Lambda。Lambda 會回應事件執行程式碼，並自動管理該程式碼所需的運算資源。您建立的連結是您 NetApp 帳戶的一部分，並且與 AWS 帳戶關聯。</block>
+  <block id="e721a1904dd1a2a54d259deb8d176230" category="paragraph">建立連結後，您可以將其關聯至一個或多個 FSx for ONTAP 檔案系統。每個檔案系統在同一個 NetApp 帳戶中只能關聯至一個連結。如果您有多個 NetApp 帳戶，則單一檔案系統可以在不同的 NetApp 帳戶下關聯至其他連結。</block>
+  <block id="0d369015d5a60606bb8b6330f6c1030f" category="paragraph">您可以在 Workload Factory 中從儲存設備工作負載建立及關聯連結。</block>
+  <block id="7869cf138befae7f7af03581af782724" category="paragraph">您可以使用儲存在 Workload Factory 憑證服務中的憑證或儲存在 AWS Secrets Manager 中的憑證來驗證連結。Workload Factory 不支援變更驗證模式。</block>
+  <block id="81fccfd8b7cc4d87c0978527048afe60" category="paragraph">GovCloud 帳戶的連結連線功能受到支援。Workload Factory 使用 GovCloud 驗證金鑰，允許透過 GovCloud 核准的機制，以安全、無代理程式的方式存取 FSx for ONTAP 作業。</block>
+  <block id="66096c22a6220952b7aef731ef78c167" category="section-title">成本</block>
+  <block id="2ec62661c871c6dda5bcd49be8cea521" category="paragraph">Lambda 執行的每筆交易都會產生費用。由於 Lambda 充當兩個系統之間的 Proxy，因此當 Lambda 向檔案系統上的 ONTAP REST API 發送請求以及將回應發送回 Workload Factory 時，都會產生費用。</block>
+  <block id="0ab8cd7f04804af6d53be93ef7bd5345" category="inline-link-macro">了解更多關於使用 AWS Lambda 的相關成本</block>
+  <block id="70f0040e444997fbb4beeeae8bd03d34" category="paragraph"><block ref="70f0040e444997fbb4beeeae8bd03d34" category="inline-link-macro-rx"></block></block>
+  <block id="8cd69d367e2dbdfca9ec0b55ba13baec" category="section-title">需要連結時</block>
+  <block id="875551355a7b095c8343c772ab9a39cd" category="paragraph">Workload Factory 需要連結才能顯示某些資訊並執行某些任務。如果您嘗試執行需要連結的操作，但尚未將連結關聯到 FSx for ONTAP 檔案系統，Workload Factory 會通知您該操作需要連結。</block>
+  <block id="c0653b3ad30a51a0fe3228ad2877ac9d" category="paragraph">需要連結的功能包括：</block>
+  <block id="d078fe237d087bff0fe3c19efd14fa54" category="list-text">FSx for ONTAP 檔案系統組態的架構完善狀態，用於主動式維護、可靠性及成本效能最佳化</block>
+  <block id="f1a54b856438e25c87919e1789ae841c" category="list-text">ONTAP EMS 事件監控與警報</block>
+  <block id="c6501747b7c38b1e25460b13a727ec7c" category="list-text">NetApp 自主勒索軟體防護（ARP/AI）</block>
+  <block id="489e0dc0c162e1aff5f0f664bf2ea756" category="list-text">增強對 FSx for ONTAP 檔案系統的整體容量可觀測性</block>
+  <block id="b97b322b8cb0f9b187eb7b966c9ff886" category="list-text">磁碟區和儲存設備虛擬機器資料複寫、管理和監控</block>
+  <block id="147d85abf5db68a53249c95e1a68cedb" category="list-text">SMB/CIFS 共用與 NFS 匯出原則資源配置與管理</block>
+  <block id="70b71b7616d1607e66f58defc9384bf3" category="list-text">在 FSx for ONTAP 檔案系統上管理 iSCSI 磁碟區</block>
+  <block id="0ff428418a3d64cc69a6ee68906a8959" category="list-text">建立和管理自訂保護 SLA 的快照原則</block>
+  <block id="c92f4938531f7fd55dc831a93892d29a" category="list-text">用於自動容量管理的 inode 管理增強功能</block>
+  <block id="3b5c7e283e0b752d51311178d3fa06f1" category="list-text">彈性擴充的磁碟區自動成長</block>
+  <block id="6cdde78d80d6fbbd8f3706a9bcac599e" category="list-text">複製建立與管理，用於即時、就地的資料複製</block>
+  <block id="7cacd07dfdd5c4feadcbf23d19f9972d" category="list-text">直接從 ONTAP 顯示其他計量，例如 ONTAP 版本</block>
+  <block id="f22e542eda471e2702ed07136761fd6c" category="list-text">顯示儲存 VM 和叢集 LIF 詳細資訊，包括角色、端點、節點、IP 位址和狀態</block>
+  <block id="30f1ae8a88bc842cdf5e493350ae7eb1" category="inline-link-macro">將連結連接至 FSx for ONTAP 檔案系統</block>
+  <block id="f86bb6aab3a49998f4db8fa07a49d81a" category="paragraph">了解如何<block ref="e658cbfbd30fb261626bc7c82308a713" category="inline-link-macro-rx"></block>。</block>
 </blocks>
