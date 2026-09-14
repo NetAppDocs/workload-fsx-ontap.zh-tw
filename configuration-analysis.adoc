@@ -27,9 +27,9 @@ NetApp Workload Factory 會定期分析 Amazon FSx for NetApp ONTAP 檔案系統
 [[how-it-works]]
 == 運作方式
 
-Workload Factory 每日分析您在 Amazon FSx for NetApp ONTAP 檔案系統部署上執行的工作負載。此分析提供架構完善的狀態資訊、洞察分析和建議。
+Workload Factory 每日分析您在支援的雲端儲存系統部署上執行的工作負載。此分析提供架構完善的狀態資訊、洞察分析和建議。
 
-每日分析完成後，部署的 Well-architected 儀表板會顯示配置狀態為「已最佳化」或「未最佳化」。您可以在這裡查看總優化得分、按類別劃分的配置問題以及配置問題和建議清單。您可以查看針對配置問題的建議。部分問題可由 Workload Factory 自動修復，而其他問題則需要人工幹預。在這種情況下，Workload Factory 會提供詳細說明，幫助您實施建議的變更。
+每日分析完成後，組態在部署的架構完善儀表板中會顯示為「最佳化的」或「未最佳化的」。您可以按類別查看組態問題，以及組態問題清單和建議。您可以審查針對組態問題的建議。Workload Factory 可以自動修復某些問題；其他問題則需要手冊干預。在這種情況下，Workload Factory 會提供詳細說明，幫助您實作建議的變更。
 
 您可以忽略不適用於您環境的組態分析。這樣可以避免不必要的警示和不準確的最佳化結果。
 
@@ -40,7 +40,7 @@ Workload Factory 每日分析您在 Amazon FSx for NetApp ONTAP 檔案系統部�
 [[why-it-matters]]
 == 為什麼這很重要
 
-Workload Factory 將最佳實踐應用於大型儲存、資料庫和 VMware 環境，透過持續評估與建議洞察和修復措施相結合。在 Workload Factory 主控台中套用的自動化修復可減少人為錯誤、確保統一管理，並維護工作負載基礎架構的效能和可靠性。
+Workload Factory 藉由結合後續評估與建議洞察和修復，將最佳實務做法應用於大型儲存設備、資料庫和 VMware 環境。自動化修復可減少人為錯誤，確保統一管理，並維護工作負載基礎架構的效能和可靠性。
 
 
 
@@ -51,11 +51,11 @@ Workload Factory 將最佳實踐應用於大型儲存、資料庫和 VMware 環�
 
 * 關聯連結。連結連接使 Workload Factory 能夠分析所有檔案系統配置，例如資料保護和效能。
 +
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。
 
 * 在您的 AWS 帳戶中授予_檢視、規劃和分析_權限。
 +
-link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["瞭解如何授予 AWS 帳戶權限"^]
+link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["瞭解如何授予 AWS 帳戶權限"^]。
 
 
 
@@ -135,31 +135,31 @@ NetApp 具備人工智慧的自主勒索軟體防護（ARP/AI）可協助您保�
 
 * *Volume 容量餘裕*
 +
-Workload Factory 建議 Volume 容量使用率不要超過 80%。這可能會影響應用程式的資料讀取和寫入。Volume 容量的增加可以手動進行，也可以使用 Volume 自動擴充功能自動進行。
+為避免對應用程式讀寫造成潛力影響，請將 Volume 使用率保持在 80% 以下。您可以手動增加容量，或使用 Volume 自動擴充。
 
 * *FlexCache 寫入模式*
 +
-為了獲得最佳效能， Workload Factory 會根據您的工作負載推薦最合適的快取關係寫入模式。對於讀取密集型、檔案較小的工作負載，環繞寫入模式可提供更佳的效能；而對於寫入密集型、檔案較大的工作負載，回寫模式可提供更佳的效能。
+為了獲得最佳效能，請根據您的工作負載設定快取關係寫入模式。對於讀取密集型、處理小檔案的工作負載，環繞寫入模式可提供更好的效能；而對於寫入密集型、處理大檔案的工作負載，回寫模式可提供更好的效能。
 
 * *FlexCache® 複本大小*
 +
-Workload Factory 建議啟用快取磁碟區的磁碟區自動調整大小和清理功能，以保持最佳大小並將快取集中用於熱資料，從而達到最高效率。
+啟用快取 Volume 自動調整規模和清理功能，以保持最佳大小並將快取集中用於熱資料，從而達到尖峰效率。
 
 * *主機可見容量報告*
 +
-Workload Factory 建議啟用主機可見的容量報告，以提供更佳的 Volume 層級儲存設備使用率可見度。
+啟用主機可見的容量報告，以提供對 Volume 層級儲存設備使用情況的更佳可見度。
 
 * *作業系統 （OS） 類型*
 +
-Workload Factory 建議確保 ONTAP LUN 作業系統 （OS） 類型值與作業系統分割區方案相符，以實現 I/O 對齊。組態不正確可能會降低效能。
+確認 ONTAP LUN 作業系統（OS）類型值與作業系統分割區方案相符，以達成 I/O 對齊。不正確的組態可能會降低效能。
 
 * *區塊設備空間管理*
 +
-Workload Factory 建議為資料庫主機執行個體所使用的 LUN 設定區塊裝置空間設定，以防止寫入失敗並提高 FSx for ONTAP 上的空間效率。此組態適用於資源隨需配置 Volume 的建議設定組合：保留空間、空間分配和部分保留。
+設定資料庫主機執行個體使用的 LUN 的區塊裝置空間設定，以防止寫入失敗並提高 FSx for ONTAP 的空間效率。此組態適用於資源隨需配置 Volume 的建議設定組合：保留空間、空間分配和部分保留。
 
 * *資源隨需配置*
 +
-Workload Factory 建議為託管資料庫執行個體的 FSx for ONTAP Volume 配置資源隨需配置。此方法可儲存比實際可用空間更多的邏輯資料。
+為託管資料庫執行個體的 FSx for ONTAP Volume 設定資源隨需配置。此方法允許儲存比實體可用空間更多的邏輯資料。
 
 
 
@@ -172,7 +172,7 @@ Workload Factory 建議為託管資料庫執行個體的 FSx for ONTAP Volume �
 
 * *冷資料分層*
 +
-啟用冷資料分層可降低 SSD 儲存層的使用率。Workload Factory 建議對每個專注於一般資料儲存設備的 Volume 套用分層原則。對於資料庫 Volume，我們建議在適當情況下啟用冷資料分層。FSx for ONTAP 會持續掃描資料中的冷資料，並將其移至容量資源池分層，而不會中斷服務。
+啟用冷資料分層以降低 SSD 儲存層的使用率。將分層原則套用至每個著重於一般資料儲存設備的 Volume。對於資料庫 Volume，請在適當情況下啟用冷資料分層。FSx for ONTAP 會持續掃描資料以尋找冷資料，並將其移至容量資源池層，而不會造成中斷。
 
 * *儲存效率*
 +
@@ -180,23 +180,23 @@ Workload Factory 建議為託管資料庫執行個體的 FSx for ONTAP Volume �
 
 * *備份到期*
 +
-Workload Factory 建議刪除已刪除 Volume 的所有手動建立的備份，以及超過兩週的備份。這些備份不會自動過期，如果您不再需要它們用於 SLA 或恢復，則會增加成本並增加複雜性。
+刪除已刪除 Volume 的所有手動建立的備份，以及超過兩週的任何備份。這些備份不會自動過期，如果您不再需要將其用於 SLA 或恢復，則可能會增加成本並增加複雜性。
 
 * *Snapshot 快照技術到期*
 +
-Workload Factory 建議您刪除不再需要的舊的或手動建立的 Snapshot 快照技術。刪除這些 Snapshot 快照技術可以降低成本並減少系統冗餘，尤其是在它們不再滿足您的 SLA 或恢復需求的情況下。
+刪除不再需要的舊快照或手動建立的快照。刪除它們可以降低成本並減少系統混亂，尤其是在它們並非滿足您的服務等級協定（SLA）或恢復需求的情況下。
 
 * *非作用中區塊裝置*
 +
-如果區塊設備連續七天未使用、Workload Factory 建議歸檔區塊設備資料或刪除未使用的區塊設備以降低成本。
+在區塊裝置七天未使用後，請歸檔區塊裝置資料或刪除未使用的區塊裝置，以降低成本。
 
 * *超額配置的固態硬碟容量*
 +
-過度配置的 SSD 容量層會增加不必要的成本。Workload Factory 建議在維持 20% 可用空間緩衝區的同時縮減 SSD 層容量。減少容量的作業需要數小時到數天時間，在此期間其他檔案系統作業將無法進行。
+過多的 SSD 容量會增加不必要的成本。減少 SSD 分層，同時維持 20% 的可用空間緩衝區。此操作可能需要數小時到數天，在此期間不支援其他檔案系統操作。
 
 * *非使用中的 NAS Volume*
 +
-組態分析會識別未主動使用的 NAS Volume ，並建議刪除或歸檔 Volume 以降低成本。
+組態分析會識別出未經常使用的 NAS Volume，並建議刪除或歸檔這些 Volume 以降低成本。
 
 
 
@@ -209,11 +209,11 @@ Workload Factory 建議您刪除不再需要的舊的或手動建立的 Snapshot
 
 * *FlexGroup Volume 重新平衡*
 +
-Workload Factory 建議您重新平衡 FlexGroup Volume，以提高效率。在向外擴充之後，整個 Volume 的容量和工作負載活動可能會變得不均勻。
+重新平衡您的 FlexGroup Volume 以提高效率。擴充後，容量和工作負載活動可能會在整個 Volume 上變得不平衡。
 
 * *FlexVol® Volume 重新平衡*
 +
-Workload Factory 建議重新平衡您的 FlexVol® Volume，以提高效率。在向外擴充之後，整個 Volume 的容量和工作負載活動可能會變得不均勻。
+重新平衡您的 FlexVol Volume 以提高效率。擴充後，容量和工作負載活動可能會在整個 Volume 上變得不平衡。
 
 
 

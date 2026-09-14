@@ -25,7 +25,7 @@ summary: 瞭解 Amazon FSX for NetApp ONTAP 的新功能。
 
 現在，除了 FSx for ONTAP 清單頁面和檔案系統總覽頁面之外，您還可以直接從管理選單的「連結」頁面建立連結。
 
-link:create-link.html["深入瞭解如何建立連結"]。
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["深入瞭解如何建立連結"^]。
 
 
 
@@ -209,7 +209,7 @@ Workload Factory 可辨識使用儲存的主機以及與主機活動相關的工
 
 我們在檔案系統的「概覽」標籤中直接顯示所有檔案系統和儲存 VM 端點。在 Workload Factory 主控台中直接查看端點，無需使用 CLI 或 CloudShell 即可輕鬆監控網路存取、端點和容錯移轉狀態。若要顯示 LIF 詳細資訊（包括角色、端點、節點、IP 位址和狀態），您需要將連結與檔案系統建立關聯。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何在 NetApp Workload Factory 中將連結與檔案系統建立關聯。"].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何在 NetApp Workload Factory 中將連結與檔案系統建立關聯。"^]。
 
 
 
@@ -943,7 +943,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 現在您可以使用 Codebox 中的 Terraform 建立與 FSx for ONTAP檔案系統關聯的連結。此功能適用於手動建立連結的使用者。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用 Lambda 連結連線至適用於 ONTAP 檔案系統的 FSX"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用 Lambda 連結連線至適用於 ONTAP 檔案系統的 FSX"^]
 
 
 
@@ -1047,7 +1047,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["�
 
 現在，您可以在 Workload Factory 控制台中建立連結時管理 IAM 執行角色及其附加的權限原則。連結在您的 Workload Factory 帳戶和一個或多個 FSx for ONTAP檔案系統之間建立連線。您有兩種選擇來指派 IAM 執行角色和連結權限 - 自動或使用者提供。在 Workload Factory 中管理執行角色及其附加的權限策略意味著您不再需要使用第三方程式碼。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用 Lambda 連結連線至適用於 ONTAP 檔案系統的 FSX"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用 Lambda 連結連線至適用於 ONTAP 檔案系統的 FSX"^]
 
 
 
@@ -1086,7 +1086,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 現在，您可以設定磁碟區的自動成長大小，以便磁碟區大小可以超出業務需求和應用程式要求的預先配置大小。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html["啟用Volume自動擴充"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-volume-capacity.html["啟用Volume自動擴充"]
 
 
 
@@ -1548,7 +1548,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/explore-savings.html["在 
 * 支援手動建立連結：此功能可在 AWS CloudForgation 中以手動註冊連結 ARN 的方式獨立建立。當安全團隊或 DevOps 團隊協助建立連結時、這項功能非常實用。
 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["建立連結"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["建立連結"^]
 
 
 

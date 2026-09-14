@@ -65,7 +65,7 @@ ARP/AI 功能會根據Amazon FSx for NetApp ONTAP執行的ONTAP版本自動更�
 啟用 ARP/AI 後，如果偵測到真實攻擊，Workload Factory 會自動建立快照原則。此原則每四小時最多可建立六個快照。每個快照鎖定 2-5 天。
 
 .開始之前
-若要為檔案系統或磁碟區啟用 ARP/AI，您必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"] 。連結關聯後，返回此操作。
+若要為檔案系統或 Volume 啟用 ARP/AI，必須先關聯一個連結。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。連結關聯完成後，返回此操作。
 
 [role="tabbed-block"]
 ====

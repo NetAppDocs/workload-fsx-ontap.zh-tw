@@ -1,43 +1,76 @@
 ---
 sidebar: sidebar 
-permalink: manage-capacity-automatically.html 
-keywords: auto capacity, automatic capacity management, inodes management, file system capacity 
-summary: 啟用此功能後，Workload Factory 可以根據容量需求隨時間的變化，自動為 FSx for ONTAP檔案系統新增增量儲存或 inode。 
+permalink: adjust-file-system-capacity.html 
+keywords: adjust capacity, elastic file system capacity, increase file system capacity, increase FSx capacity, decrease file system capacity, decrease FSx capacity 
+summary: 手動調整 FSx for ONTAP檔案系統的 SSD 儲存容量，以滿足具有不同活動工作集的基於專案的工作負載的需求。 
 ---
-= 在 NetApp Workload Factory 中自動管理容量和 inode
+= 在 NetApp Workload Factory 中調整檔案系統容量
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-啟用容量管理後，NetApp Workload Factory 可以根據容量需求的變化，自動為 FSx for ONTAP 檔案系統新增增量儲存空間。此外，啟用此功能還無需手動監控容量。
+調整 FSx for ONTAP 檔案系統的固態磁碟（SSD）儲存容量，以符合 NetApp Workload Factory 中具有不同作用中工作集的工作負載需求。當使用量超過您的臨界值時手動增加容量，或在不使用工作集時減少容量以節省成本。或者，啟用自動容量管理，讓 Workload Factory 隨著時間需求改變而新增遞增式儲存設備，免除手冊監控的負擔。
+
+
+NOTE: 僅第二代檔案系統支援減少 SSD 儲存容量。
 
 
 
-[[about-this-task]]
-== 關於這項工作
+[[adjust-file-system-capacity-manually]]
+== 手動調整檔案系統容量
 
-系統每 30 分鐘掃描一次 FSx for ONTAP 檔案系統。它會檢查是否需要新增增量儲存空間，並驗證可用的磁碟區 inode。計數會根據自動容量管理臨界值而增加。
+利用彈性檔案系統容量，您可以動態調整檔案系統的容量以滿足工作負載的需求。
 
-啟用 inode 管理後，NetApp Workload Factory 可以根據容量需求的變化，自動為 FSx for ONTAP 檔案系統新增增量 inode。此功能無需手動監控 inode。
+.關於這項工作
+變更檔案系統容量會影響 Amazon FSx for NetApp ONTAP 檔案系統的 IOPS 。
 
-只有一個帳戶可以管理此功能。
+當你自動link:provision-iops.html["配置 IOPS"]對於檔案系統，SSD 容量每增加或減少 1 GiB，IOPS 就會增加或減少 3 IOPS。
 
-所有適用於 ONTAP 檔案系統的 FSX 的 SSD 儲存容量上限為 524,288 GiB 。若要要求增加配額、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配額"^] AWS FSX for NetApp ONTAP 文件中的。
+手動時link:provision-iops.html["配置 IOPS"]，您可能需要增加 IOPS 配置，以支援增加的檔案系統容量。
+
+如需 SSD 儲存容量限制、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配額"^] AWS FSX for NetApp ONTAP 文件。
+
+.開始之前
+要調整檔案系統的容量，您必須先link:manage-capacity-automatically.html["停用自動容量管理"]。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儀表板中選擇*調整 SSD 容量*。
+. 選擇您要調整容量的檔案系統，然後選擇*繼續*。
+. 在調整 SSD 容量對話框中，輸入 *預先配置容量* 的數字。
+. 選取已配置容量的單位。
+. 選擇*應用*。
+
+
+
+
+[[enable-automatic-capacity-and-inode-management]]
+== 啟用自動容量和 inode 管理
+
+啟用容量和 inode 管理，即可讓 NetApp Workload Factory 隨著時間的推移，根據容量需求的變化，自動為 FSx for ONTAP 檔案系統新增遞增式儲存設備，並為 Volume 新增 inode（檔案）。這些功能可移除手動監控容量和 inode 的需求。
+
+只有一個帳戶可以管理這些功能。
 
 
 
 [[enable-automatic-capacity-management-and-capacity-notifications]]
-== 啟用自動容量管理和容量通知
+=== 啟用自動容量管理和容量通知
 
 啟用自動容量管理，即可自動增加儲存空間，直到達到 FSx for ONTAP 檔案系統的最大容量限制。設定通知，以便在檔案系統達到特定容量臨界值時收到警示。
+
+.關於這項工作
+Workload Factory 每 30 分鐘掃描一次 FSx for ONTAP 檔案系統，以檢查是否需要新增遞增式儲存設備。
+
+所有適用於 ONTAP 檔案系統的 FSX 的 SSD 儲存容量上限為 524,288 GiB 。若要要求增加配額、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limits.html["配額"^] AWS FSX for NetApp ONTAP 文件中的。
 
 .開始之前
 開始之前請先考慮下列事項：
 
 * 你必須link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["使用_檢視、規劃和分析_權限策略授予憑證"^]在 Workload Factory 中完成此任務。
-* 為了確保磁碟區 inode 隨著儲存容量的增加而增加，您必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
+* 為確保 Volume inode 隨儲存容量增加而增加，您必須關聯連結。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。連結關聯後，返回此操作。
 * 您不應在資料遷移期間啟用此功能，因為 AWS 規定 SSD 容量增加之間至少需要六小時的冷卻期。此限制可能會延遲調整，因此請做好相應的規劃。
 
 
@@ -86,11 +119,12 @@ summary: 啟用此功能後，Workload Factory 可以根據容量需求隨時間
 
 
 [[enable-inode-management-for-a-file-system]]
-== 為檔案系統啟用 inode 管理
+=== 為檔案系統啟用 inode 管理
 
 啟用自動 inode 管理，以增加每個磁碟區的 inode （檔案）數量，直到達到允許的限制。
 
-FSx for ONTAP 檔案系統每 30 分鐘掃描一次。它會驗證可用的磁碟區 inode，並檢查是否需要新增增量 inode。計數會根據自動 inode 管理閾值遞增。
+.關於這項工作
+Workload Factory 每 30 分鐘掃描一次 FSx for ONTAP 檔案系統，以驗證可用的 Volume inode，並檢查是否需要新增遞增 inode。計數會根據自動 inode 管理臨界值增加。
 
 
 NOTE: *Terraform 使用者*：Terraform 有限制，要求所有操作都必須在 Terraform 內部完成。  Terraform 不支援 inode 管理，但您可以在 Workload Factory 控制台中啟用自動 inode 管理。
@@ -98,7 +132,7 @@ NOTE: *Terraform 使用者*：Terraform 有限制，要求所有操作都必須�
 .開始之前
 開始之前請先考慮下列事項：
 
-* 若要自動管理磁碟區 inode，必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結關聯後，返回此操作。
+* 若要自動管理 Volume inode，您必須關聯連結。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。關聯連結後，請返回此作業。
 * 可以透過設定_警告閾值_來設定自動 inode 管理，該閾值會觸發 Workload Factory 通知服務的通知。要使用此功能，您必須link:https://docs.netapp.com/us-en/workload-setup-admin/configure-notifications.html["啟用工作負載工廠通知服務"^]第一的。
 * 你必須link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["使用_檢視、規劃和分析_權限策略授予憑證"^]在 Workload Factory 中完成此任務。
 

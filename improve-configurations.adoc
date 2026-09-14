@@ -11,9 +11,7 @@ summary: Workload Factory 掃描 Amazon FSx for NetApp ONTAP 組態，提供見�
 
 
 [role="lead"]
-利用組態分析洞察和建議，運用 Workload Factory 為您的 FSx for ONTAP 檔案系統實作最佳實務。您可以輕鬆審查架構良好的狀態，了解組態中存在的問題，並採取行動改善任何在可靠性、安全性、效率、效能和成本方面未最佳化的系統架構。
-
-您也可以忽略不適用於您的儲存環境的特定儲存配置的分析，以避免不必要的警報和不準確的最佳化結果。
+使用 Workload Factory 為您的 FSx for ONTAP 檔案系統實作最佳實務。您可以輕鬆審查架構良好的狀態，了解組態中的問題，並修復問題，從而改善任何未針對可靠性、安全性、效率、效能和成本進行最佳化的系統架構。
 
 link:configuration-analysis.html["了解組態分析和架構良好狀態。"]
 
@@ -22,13 +20,11 @@ link:configuration-analysis.html["了解組態分析和架構良好狀態。"]
 [[about-this-task]]
 == 關於這項工作
 
-Workload Factory 每日分析 Amazon FSx for NetApp ONTAP 檔案系統部署組態。每日分析提供架構完善的狀態資訊、深入見解和建議，並提供自動修復組態問題的選項，確保您的檔案系統符合最佳實務。
+Workload Factory 每日分析 Amazon FSx for NetApp ONTAP 檔案系統部署組態。
 
-連結連接允許 Workload Factory 掃描效能、資料保護和配置方面的問題。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到 FSx for ONTAP檔案系統"]對您的檔案系統資源進行最全面的分析。
+由於儲存組態的要求各不相同，您可以忽略不適用於您儲存環境的特定組態分析。
 
-您可以審查檔案系統組態問題的建議並修復這些問題。
-
-由於儲存組態的要求各不相同，您可以忽略不適用於您儲存環境的特定組態分析。這有助於避免不必要的警示及不準確的最佳化結果。
+連結連線可讓 Workload Factory 掃描效能、資料保護與組態方面的問題。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用連結連接到 FSx for ONTAP檔案系統"^] 以對您的檔案系統資源進行最全面的分析。
 
 .分析內容
 Workload Factory 分析以下 FSx for ONTAP 檔案系統組態的良好架構狀態：
@@ -46,7 +42,7 @@ Workload Factory 分析以下 FSx for ONTAP 檔案系統組態的良好架構狀
 == 開始之前
 
 * 您必須在 AWS 帳戶中link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予 _操作和修復_ 權限"^]。
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到 FSx for ONTAP檔案系統"]對您的檔案系統資源進行最全面的分析。
+* link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用連結連接到 FSx for ONTAP檔案系統"^]以對您的檔案系統資源進行最全面的分析。
 
 
 
@@ -69,7 +65,7 @@ Workload Factory 分析以下 FSx for ONTAP 檔案系統組態的良好架構狀
 +
 某些修復操作僅適用於特定操作，並非總是適用於多個資源。例如，您可能可以修復單一 Volume 的組態，但無法修復多個 Volume 的組態。
 
-. 請審查對話方塊中有關組態修復作業的資訊。某些作業可能會導致執行個體停機或服務中斷。
+. 審查行動項目，了解此修復措施的後果，例如執行個體停機或服務中斷。
 . 如果您希望 Workload Factory 套用建議的變更，請選擇「修復」。
 
 

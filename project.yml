@@ -27,96 +27,84 @@ sidebar:
       url: "/learn-fsx-ontap.html"
     - title: 快速入門
       url: "/quick-start.html"
-    - title: 為 ONTAP 檔案系統建立 FSX
-      url: "/create-file-system.html"
   - title: 使用Amazon FSX for NetApp ONTAP 解決方案
     entries:
     - title: 探索節約效益
       url: "/explore-savings.html"
-    - title: 追蹤與分析 FSx for ONTAP成本
-      url: "/track-costs.html"
-    - title: 使用連結
+    - title: 建立儲存資源
       entries:
-      - title: 了解連結
-        url: "/links-overview.html"
-      - title: 使用連結連線至檔案系統
-        url: "/create-link.html"
-      - title: 管理連結
-        url: "/manage-links.html"
-    - title: 建立Volume
-      url: "/create-volume.html"
-    - title: 發現並查看快取卷
-      url: "/discover-cache-volumes.html"
-    - title: 存取您的資料
-      url: "/access-data.html"
-    - title: 建立區塊儲存資源
-      entries:
+      - title: 為 ONTAP 檔案系統建立 FSX
+        url: "/create-file-system.html"
+      - title: 建立儲存VM
+        url: "/create-storage-vm.html"
+      - title: 建立Volume
+        url: "/create-volume.html"
       - title: 建立 igroup
         url: "/create-igroup.html"
       - title: 建立區塊設備
         url: "/create-block-device.html"
-    - title: 建立儲存VM
-      url: "/create-storage-vm.html"
-    - title: 保護您的資料
+    - title: 了解連結
+      url: "/learn-about-links.html"
+    - title: 發現並查看快取卷
+      url: "/discover-cache-volumes.html"
+    - title: 存取您的資料
+      url: "/access-data.html"
+  - title: 保護您的資料
+    entries:
+    - title: 資料保護總覽
+      url: "/data-protection-overview.html"
+    - title: 使用快照來保護資料
       entries:
-      - title: 資料保護總覽
-        url: "/data-protection-overview.html"
-      - title: 使用快照
-        entries:
-        - title: 建立快照
-          url: "/create-snapshot.html"
-        - title: 建立快照原則
-          url: "/create-snapshot-policy.html"
-        - title: 從快照還原磁碟區
-          url: "/restore-volume-from-snapshot.html"
-      - title: 使用備份到物件存儲
-        entries:
-        - title: 建立手動備份
-          url: "/create-backup.html"
-        - title: 從備份還原磁碟區
-          url: "/restore-from-backup.html"
+      - title: 使用快照來保護資料
+        url: "/use-snapshots.html"
+      - title: 管理快照原則
+        url: "/manage-snapshot-policy.html"
+      - title: 管理快照
+        url: "/manage-snapshots.html"
+    - title: 使用備份到物件存儲
+      url: "/use-backups.html"
+    - title: 使用複寫保護資料
+      entries:
       - title: 複寫資料
         url: "/create-replication.html"
-      - title: 利用自動勒索軟體保護來保護資料
-        url: "/ransomware-protection.html"
-      - title: 複製磁碟區
-        url: "/clone-volume.html"
-      - title: 使用內部部署 ONTAP 資料
+      - title: 將內部部署 ONTAP 資料複寫到 FSx for ONTAP
         url: "/use-onprem-data.html"
-      - title: 建立網路保險庫以保護數據
-        url: "/create-cyber-vault.html"
-  - title: 管理與監控
+      - title: 將儲存 VM 複寫到另一個檔案系統
+        url: "/replicate-svm-to-file-system.html"
+      - title: 追蹤複寫延遲
+        url: "/track-replication-delays.html"
+      - title: 管理複製關係
+        url: "/manage-replication.html"
+    - title: 利用自動勒索軟體保護來保護資料
+      url: "/ransomware-protection.html"
+    - title: 複製磁碟區
+      url: "/clone-volume.html"
+    - title: 建立網路保險庫以保護數據
+      url: "/create-cyber-vault.html"
+  - title: 在 Workload Factory 中管理 FSx for ONTAP
     entries:
-    - title: 使用 Tracker 監控作業
-      url: "/monitor-operations.html"
+    - title: 分析 FSx 中的ONTAP EMS 事件
+      url: "/analyze-events.html"
     - title: 實作檔案系統最佳實務做法
       entries:
       - title: 適用於 ONTAP 的 FSX 組態分析
         url: "/configuration-analysis.html"
       - title: 實作架構良好的檔案系統組態
         url: "/improve-configurations.html"
-    - title: 分析 FSx 中的ONTAP EMS 事件
-      url: "/analyze-events.html"
-    - title: Volume管理
+    - title: 追蹤與分析 FSx for ONTAP成本
+      url: "/track-costs.html"
+    - title: 管理磁碟區
       entries:
-      - title: 編輯 Volume 自動擴充
-        url: "/edit-volume-autogrow.html"
-      - title: 調整音量容量
-        url: "/adjust-volume-capacity.html"
+      - title: 管理 Volume 容量
+        url: "/manage-volume-capacity.html"
       - title: 設定磁碟區延遲臨界值
         url: "/set-volume-latency-thresholds.html"
-      - title: 重新平衡磁碟區容量
-        url: "/rebalance-volume.html"
-      - title: 管理不可變的檔案
-        url: "/manage-immutable-files.html"
-      - title: 管理 Volume 標記
-        url: "/manage-volume-tags.html"
+      - title: 管理 Volume 設定
+        url: "/manage-volume-settings.html"
       - title: 管理快取卷
         url: "/manage-cache-volumes.html"
       - title: 變更分層原則
         url: "/change-tiering-policy.html"
-      - title: 更新儲存效率
-        url: "/update-storage-efficiency.html"
       - title: 管理NFS匯出原則
         url: "/manage-nfs-export-policy.html"
       - title: 管理 SMB/CIFS 共享
@@ -137,64 +125,30 @@ sidebar:
         url: "/split-cloned-volume.html"
       - title: 刪除 Volume
         url: "/delete-volume.html"
-    - title: 區塊儲存管理
+    - title: 管理區塊儲存設備
       entries:
       - title: 管理區塊儲存設備
         url: "/manage-block-storage.html"
       - title: 將標籤套用至區塊裝置
         url: "/apply-block-device-tags.html"
-    - title: 檔案系統管理
+    - title: 管理檔案系統
       entries:
-      - title: 手動調整檔案系統容量
-        url: "/increase-file-system-capacity.html"
-      - title: 自動管理檔案系統容量
-        url: "/manage-capacity-automatically.html"
-      - title: 管理檔案系統標籤
-        url: "/manage-fsx-tags.html"
-      - title: 重設 fsxadmin 密碼
-        url: "/reset-fsxadmin-password.html"
-      - title: 刪除檔案系統
-        url: "/delete-file-system.html"
-    - title: 儲存VM管理
-      entries:
-      - title: 將儲存 VM 複寫到另一個檔案系統
-        url: "/replicate-svm-to-file-system.html"
-      - title: 設定及更新儲存 VM 的 Active Directory
-        url: "/configure-active-directory.html"
-      - title: 管理儲存 VM 標籤
-        url: "/manage-svm-tags.html"
-      - title: 重設儲存 VM 密碼
-        url: "/reset-svm-password.html"
-      - title: 刪除儲存VM
-        url: "/delete-svm.html"
-    - title: 資料保護管理
-      entries:
-      - title: 快照
-        entries:
-        - title: 管理快照原則
-          url: "/manage-snapshot-policy.html"
-        - title: 啟用及編輯快照以進行長期保留
-          url: "/enable-snapshots-long-term.html"
-        - title: 管理快照
-          url: "/manage-snapshots.html"
-      - title: 備份
-        entries:
-        - title: 管理磁碟區備份排程
-          url: "/manage-backup-schedule.html"
-      - title: 複寫
-        entries:
-        - title: 複寫資料保護磁碟區
-          url: "/cascade-replication.html"
-        - title: 追蹤複寫延遲
-          url: "/track-replication-delays.html"
-        - title: 管理複製關係
-          url: "/manage-replication.html"
-    - title: 效能管理
-      entries:
+      - title: 調整檔案系統容量
+        url: "/adjust-file-system-capacity.html"
+      - title: 管理檔案系統設定
+        url: "/manage-file-system-settings.html"
       - title: 為檔案系統配置 IOPS
         url: "/provision-iops.html"
-      - title: 更新檔案系統的處理量容量
-        url: "/update-throughput-capacity.html"
+      - title: 刪除檔案系統
+        url: "/delete-file-system.html"
+    - title: 管理儲存設備 VMs
+      entries:
+      - title: 管理儲存設備 VM 設定
+        url: "/manage-svm-settings.html"
+      - title: 刪除儲存VM
+        url: "/delete-svm.html"
+    - title: 使用 Tracker 監控作業
+      url: "/monitor-operations.html"
   - title: 參考資料
     entries:
     - title: 適用於 ONTAP 的 FSX 效能

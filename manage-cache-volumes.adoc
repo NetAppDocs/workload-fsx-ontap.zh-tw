@@ -17,7 +17,7 @@ summary: 根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案�
 您可以在NetApp Workload Factory控制台中管理與快取關係關聯的快取磁碟區。
 
 .開始之前
-* 您必須關聯一個連結來管理快取捲和關係。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。關聯連結後，返回此操作。
+* 您必須關聯連結才能管理快取 Volume 和關係。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。關聯連結後，請返回此操作。
 * 您必須擁有一個已存在的快取磁碟區才能進行編輯。
 
 

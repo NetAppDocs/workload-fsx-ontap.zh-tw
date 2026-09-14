@@ -41,7 +41,7 @@ Workload Factory 可辨識使用儲存的主機以及與主機活動相關的工
 
 我們在檔案系統的「概覽」標籤中直接顯示所有檔案系統和儲存 VM 端點。在 Workload Factory 主控台中直接查看端點，無需使用 CLI 或 CloudShell 即可輕鬆監控網路存取、端點和容錯移轉狀態。若要顯示 LIF 詳細資訊（包括角色、端點、節點、IP 位址和狀態），您需要將連結與檔案系統建立關聯。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何在 NetApp Workload Factory 中將連結與檔案系統建立關聯。"].
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何在 NetApp Workload Factory 中將連結與檔案系統建立關聯。"^]。
 
 
 

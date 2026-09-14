@@ -22,8 +22,8 @@ summary: 分析 NetApp Workload Factory for FSx for ONTAP 中的事件。
 
 事件分析器會自動從 FSx for ONTAP 檔案系統中擷取下列事件類型：
 
-* *EMS 事件*：來自 ONTAP 事件管理系統的錯誤、警報和緊急事件。若要檢視和分析 EMS 事件，您必須 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到檔案系統"]。
-* *延遲事件*：讀取和寫入延遲事件。無需網路連線即可查看延遲事件。若要分析延遲事件並獲取 AI 驅動的洞察，您必須link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到檔案系統"]。
+* *EMS 事件*：來自 ONTAP 事件管理系統的錯誤、警報和緊急事件。若要檢視和分析 EMS 事件，您必須 link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用連結連接到檔案系統"^]。
+* *延遲事件*：讀取和寫入延遲事件。無需網路連線即可查看延遲事件。若要分析延遲事件並獲取 AI 驅動的洞察，您必須link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用連結連接到檔案系統"^]。
 
 
 若要查看事件，您必須link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、規劃和分析_權限"^]在您的 AWS 帳戶中。事件在移除前將顯示 72 小時。
@@ -66,13 +66,13 @@ NOTE: 如果您的帳戶管理員已關閉 AI 功能，您將看到一則訊息�
 若要檢視延遲事件，您必須執行以下操作：
 
 * link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["授予_查看、規劃和分析_權限"^]在您的 AWS 帳戶中。
-* link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用連結連接到檔案系統"]。
+* link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用連結連接到檔案系統"^]。
 
 
 若要分析 EMS 和延遲事件並獲得 AI 驅動的洞察和建議，請確保以下事項：
 
 * 您在 AWS 帳戶中擁有 link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["_operations and remediation_ 權限"^]。
-* 您有link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["透過連結連接到檔案系統"]。
+* 您有link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["透過連結連接到檔案系統"^]。
 * 連接埠 22 (SSH) 在與您的 FSx for ONTAP 檔案系統相關聯的安全性群組中已開啟。
 
 
@@ -90,7 +90,7 @@ NOTE: 如果您的帳戶管理員已關閉 AI 功能，您將看到一則訊息�
 建立連結並將其與 FSx for ONTAP 檔案系統關聯，以啟用 AI 驅動的事件分析。此連結在 Workload Factory 與一個或多個 FSx for ONTAP 檔案系統之間建立信任關係，並利用 AWS Lambda。
 
 +
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結關聯後，返回此操作。
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html^["了解如何關聯現有連結或建立並關聯新連結"].連結關聯完成後，返回此操作。
 
 * *AWS IAM 權限*
 +

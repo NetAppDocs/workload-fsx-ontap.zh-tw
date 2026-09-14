@@ -1,0 +1,104 @@
+---
+sidebar: sidebar 
+permalink: manage-volume-settings.html 
+keywords: volume tags, edit volume tags, edit tags, enable immutable files, disable immutable files, lock files, unlock files, storage efficiency change, update storage efficiency 
+summary: 標記可協助您分類資源。您可以隨時為 ONTAP Volume 新增、編輯及移除 FSX 的 Volume 標籤。 
+---
+= 在 NetApp Workload Factory 中管理 Volume 設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Workload Factory 中自訂 FSx for ONTAP Volume 設定，以符合您組織的需求。您可以管理 Volume 標籤以對資源進行分類，更新儲存效率設定以最佳化空間和成本節約效益，以及管理不可變檔案設定以控制資料保留並防止未經授權的變更。
+
+
+
+[[manage-volume-tags]]
+== 管理 Volume 標記
+
+標籤可以幫助您對資源進行分類。您可以隨時在NetApp Workload Factory 中為 FSx for ONTAP磁碟區新增、編輯和刪除磁碟區標籤。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從「Storage」功能表中，選取「Volumes explorer」。
+. 選擇要修改標籤的 Volume 的動作選單。
+. 選擇 * 基本動作 * 、然後 * 編輯 Volume 標記 * 。
+. 在「編輯 Volume 標籤」頁面上、新增、編輯或移除標籤。
++
+您可以套用至 Volume 的標記數量上限為 50 個。
+
+. 選擇*應用*。
+
+
+
+
+[[update-volume-storage-efficiency]]
+== 更新 Volume 儲存效率
+
+在建立 Volume 後更新儲存效率設定。
+
+儲存效率功能包括重複資料刪除，資料壓縮及資料壓縮，可在 FlexVol volume 上達到最佳的空間節約效益。重複資料刪除技術可消除重複的資料區塊資料壓縮會壓縮資料區塊、以減少所需的實體儲存容量。資料壓縮可在較少空間中儲存更多資料、以提升儲存效率。
+
+如果您在建立磁碟區時選擇不啟用儲存效率，您可以隨時啟用設定，以節省可能的空間和成本。
+
+無論您啟用或停用儲存效率， Volume 都會使用精簡配置。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從「Storage」功能表中，選取「Volumes explorer」。
+. 選擇要更新儲存效率設定的 Volume 的動作選單。
+. 選擇 * 進階動作 * ，然後 * 設定儲存效率 * 。
+. 選擇啟用或停用 Volume 儲存效率。
+. 選取 * 套用 * 以儲存變更。
+
+
+
+
+[[manage-immutable-files-for-a-volume-in-netapp-workload-factory]]
+== 在NetApp Workload Factory 中管理磁碟區的不可變文件
+
+啟用此功能時，您可以更新磁碟區的某些不可變更檔案設定，例如保留原則和期間，自動認可期間和磁碟區附加模式。
+
+請注意，只有在期間才能啟用不可變link:create-volume.html["Volume 建立"]的檔案。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從「Storage」功能表中，選取「Volumes explorer」。
+. 選擇要更新的 Volume 的動作選單。
+. 選擇 * 資料保護動作 * ，然後 * 管理不可變的檔案 * 。
+. 在「管理不可修改的檔案」頁面上，您可以更新下列項目：
++
+** * 保留期間 * ：選擇 * 未指定 * 或 * 指定期間 * 。
++
+*** * 未指定 * ：預設最短期間為「 0 」年，預設最長期間為「 30 年」。
+*** * 指定期間 * ：可定義保留原則，最短和最長期間，自動認可功能及 Volume 附加模式功能的選項。提供下列詳細資料：
++
+**** * 保留政策 * ：此期間必須大於或等於最短保留期，且小於或等於最長保留期。
+**** * 最短與最長期間 * ：將此磁碟區中的檔案提交至不可變 WORM 狀態的最短與最長期間數設定為。
+
+
+
+
+** *AUTOCOMMIT* ：啟用或停用自動將檔案提交至 WORM 的功能，但此功能在 AUTOCOMMIT 期間尚未修改。
+** *特權刪除*：啟用或停用該功能。啟用此功能可讓SnapLock管理員刪除未過期的 WORM 磁碟區。此功能僅在企業保留模式下支援。
+** * Volume 附加模式 * ：啟用或停用此功能。啟用 Volume 附加模式可讓您將新內容新增至 WORM 檔案。
+
+
+. 按一下「 * 套用 * 」。
+
+
+
+
+[[related-information]]
+== 相關資訊
+
+* link:create-volume.html["在 Workload Factory 中建立卷"]
+* link:manage-volume-capacity.html["在 Workload Factory 中管理 Volume 容量"]
+* link:change-tiering-policy.html["在工作負載工廠中變更容量分層策略"]
+* link:manage-s3-access-points.html["在工作負載工廠中管理 S3 存取點"]
+

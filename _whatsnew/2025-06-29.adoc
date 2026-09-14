@@ -77,4 +77,4 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-replication.html["�
 
 現在，您可以在 Workload Factory 控制台中建立連結時管理 IAM 執行角色及其附加的權限原則。連結在您的 Workload Factory 帳戶和一個或多個 FSx for ONTAP檔案系統之間建立連線。您有兩種選擇來指派 IAM 執行角色和連結權限 - 自動或使用者提供。在 Workload Factory 中管理執行角色及其附加的權限策略意味著您不再需要使用第三方程式碼。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用 Lambda 連結連線至適用於 ONTAP 檔案系統的 FSX"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用 Lambda 連結連線至適用於 ONTAP 檔案系統的 FSX"^]

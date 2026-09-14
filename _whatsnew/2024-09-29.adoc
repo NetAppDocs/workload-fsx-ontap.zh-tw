@@ -12,4 +12,4 @@
 * 支援手動建立連結：此功能可在 AWS CloudForgation 中以手動註冊連結 ARN 的方式獨立建立。當安全團隊或 DevOps 團隊協助建立連結時、這項功能非常實用。
 
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["建立連結"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["建立連結"^]

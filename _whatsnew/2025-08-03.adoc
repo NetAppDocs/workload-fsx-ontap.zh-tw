@@ -62,7 +62,7 @@ link:https://docs.netapp.com/us-en/workload-fsx-ontap/improve-configurations.htm
 
 現在您可以使用 Codebox 中的 Terraform 建立與 FSx for ONTAP檔案系統關聯的連結。此功能適用於手動建立連結的使用者。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["使用 Lambda 連結連線至適用於 ONTAP 檔案系統的 FSX"]
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["使用 Lambda 連結連線至適用於 ONTAP 檔案系統的 FSX"^]
 
 
 

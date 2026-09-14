@@ -1,22 +1,82 @@
 ---
 sidebar: sidebar 
-permalink: rebalance-volume.html 
-keywords: rebalance capacity, volume capacity, redistribute capacity 
-summary: 檢查並重新平衡容量以避免隨著時間的推移而出現不平衡。 
+permalink: manage-volume-capacity.html 
+keywords: volume size, rebalance volume capacity, adjust volume capacity, volume autogrow, manage volume capacity, FlexVol volume, FlexGroup volume 
+summary: 了解如何管理 Volume 容量，包括手動調整 Volume 大小以及在 Workload Factory 中使用 Volume 自動擴充。 
 ---
-= 在 NetApp Workload Factory 中檢查並重新平衡 Volume 容量
+= 在 NetApp Workload Factory 中管理 Volume 容量
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-檢查 FlexVol 或 FlexGroup 卷容量的平衡，並重新平衡磁碟區容量，以將檔案均勻分佈在節點中的所有 FlexVol 磁碟區或所有組成部分之間，以便所有節點都參與單一 FlexGroup 磁碟區的工作負載。
+Volume 容量應隨著需求變化進行調整。您可以手動調整 Volume 大小，或開啟 Volume 自動擴充，讓 Workload Factory 為您管理 Volume 容量。檢查 FlexVol 或 FlexGroup Volume 容量的平衡，並重新平衡 Volume 容量，將檔案均勻分散到節點中的所有 FlexVol Volume 或所有組成 Volume 上，以便所有節點都能參與單一 FlexGroup Volume 的工作負載。
 
 
 
-[[about-this-task]]
-== 關於這項工作
+[[edit-volume-autogrow]]
+== 編輯 Volume 自動擴充
+
+啟用 Volume 自動擴充，即可讓 Workload Factory 為您管理 Volume 容量。您可以隨時停用此功能。
+
+
+NOTE: iSCSI Volume 不支援 Volume 自動擴充。
+
+.開始之前
+若要啟用 Volume 自動擴充，您必須關聯連結。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。連結關聯完成後，請返回此操作。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從「Storage」功能表中，選取「Volumes explorer」。
+. 選取要修改的 Volume 對應的動作選單。
+. 選擇*基本操作*，然後選擇*設定磁碟區自動增長*。
+. 在「設定自動成長」對話方塊中，啟用磁碟區自動成長功能，以自動擴充磁碟區容量，直到達到最大大小。此功能可適應不斷增長的數據使用量，確保操作不間斷。
++
+指定卷的最大增長大小和單位。最大增長大小不能小於目前磁碟區大小。
+
+. 選擇*應用*。
+
+
+
+
+[[adjust-volume-capacity-manually]]
+== 手動調整 Volume 容量
+
+您可以透過增加或減少磁碟區的已配置大小來調整磁碟區容量。下表顯示了不同體積類型的最小和最大體積尺寸：
+
+[cols="1,1,1"]
+|===
+| 卷類型 | 最小尺寸 | 最大尺寸 
+
+
+| 流通量FlexVol | 20 MiB | 300 TiB 
+
+
+| 流通量FlexGroup | 800 GiB | 2 PiB 
+|===
+對於 iSCSI LUN，增加磁碟區的大小也會增加主機 LUN 的大小。增加磁碟區容量後，請依照主機作業系統提供的步驟尋找 LUN 的新大小並擴充 LUN 的檔案系統。
+
+僅 NFS 和 SMB/CIFS 磁碟區支援減小磁碟區大小。
+
+.開始之前
+若要調整 Volume 容量，您必須關聯連結。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。連結關聯後，請返回此操作。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從「Storage」功能表中，選取「Volumes explorer」。
+. 選取要修改的 Volume 對應的動作選單。
+. 選擇*基本操作*，然後選擇*調整容量*。
+. 在「調整磁碟區容量」對話方塊中，設定「已配置容量」和單位。
+. 選擇“調整”以套用變更。
+
+
+
+
+[[rebalance-volume-capacity-for-flexvol-and-flexgroup-volumes]]
+== 重新平衡 FlexVol 和 FlexGroup Volume 的 Volume 容量
 
 FlexVol 捲和 FlexGroup 磁碟區支援重新平衡磁碟區容量。重新平衡磁碟區會在新增檔案和檔案成長、隨著時間的推移而產生不平衡時、重新分配容量。手動開始重新平衡作業後、我們會選取檔案、並自動且不中斷地移動。Volume 傳輸作業會消耗檔案系統資源。
 
@@ -42,13 +102,13 @@ NOTE: iSCSI 和 NVMe 等 SAN 磁碟區不支援重新平衡。
 
 
 [[check-the-balance-of-your-volumes]]
-== 檢查您的交易量餘額
+=== 檢查您的交易量餘額
 
 檢查 FSx for ONTAP 檔案系統中 FlexVol 或 FlexGroup 磁碟區的平衡。
 
 .開始之前
 * FlexGroup Volume Balance 僅適用於使用橫向擴充部署且至少有兩個 HA 配對的 ONTAP 檔案系統。
-* 要檢查卷的餘額，您必須link:manage-links.html["建立連結的關聯"] 。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
+* 若要檢查 Volume 的平衡，您必須link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["建立並關聯連結或將現有連結關聯到檔案系統"^]。連結建立關聯後，請返回此作業。
 
 
 .步驟
@@ -72,7 +132,7 @@ NOTE: iSCSI 和 NVMe 等 SAN 磁碟區不支援重新平衡。
 
 
 [[rebalance-volume-capacity]]
-== 重新平衡磁碟區容量
+=== 重新平衡磁碟區容量
 
 重新平衡一個或多個非平衡的磁碟區。
 
@@ -81,7 +141,7 @@ NOTE: Workload Factory 管理員可以<<停止磁碟區重新平衡操作,停止
 
 .開始之前
 * <<檢查您的交易量餘額,檢查卷的餘額>>重新平衡磁碟區之前。
-* 若要重新平衡磁碟區、您必須 link:manage-links.html["建立連結的關聯"]。如果您沒有現有的連結、 link:create-link.html["建立連結"]。若要在檔案系統中建立連結，請在 * 帳戶名稱 * 下選取 * 建立連結 * 。連結建立關聯後，請返回此作業。
+* 若要重新平衡 Volume，您必須link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["建立並關聯連結或將現有連結關聯到檔案系統"^]。連結關聯後，返回此操作。
 * 請注意，您重新平衡的磁碟區上現有的快照會變成部分快照，無法用來還原磁碟區資料，但重新平衡之後所拍攝的新快照可以用來還原磁碟區資料。
 * 最好將 FlexVol 磁碟區全部重新平衡，以便均勻平衡所有捲資源。取消選定的磁碟區不會主動參與平衡過程。
 
@@ -162,7 +222,7 @@ FlexVol 卷已重新平衡。當作業完成時，檔案系統將會被節流回
 
 
 [[stop-a-volume-rebalance-operation]]
-== 停止磁碟區重新平衡操作
+=== 停止磁碟區重新平衡操作
 
 隨時停止重新平衡操作；這不會造成中斷。停止操作會中止正在進行的磁碟區移動。
 

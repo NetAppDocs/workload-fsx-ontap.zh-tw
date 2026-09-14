@@ -1,0 +1,102 @@
+---
+sidebar: sidebar 
+permalink: manage-svm-settings.html 
+keywords: edit storage vm settings, vm tags, svm tags, storage vm settings, storage vm password, svm password 
+summary: 隨時新增、更新或移除儲存 VM 的儲存 VM 標籤。 
+---
+= 在 NetApp Workload Factory 中管理儲存設備 VM 設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+在 NetApp Workload Factory 中管理儲存設備 VM 的設定。您可以為儲存設備 VM 設定及更新 Active Directory、更新儲存設備 VM 密碼，以及管理儲存設備 VM 的標籤。
+
+
+
+[[configure-and-update-ad-for-a-storage-vm-in-netapp-workload-factory]]
+== 在 NetApp Workload Factory 中為儲存設備 VM 設定及更新 AD
+
+在NetApp Workload Factory 中為 FSx for ONTAP檔案系統中的儲存虛擬機器設定和更新 Active Directory。
+
+同樣的步驟也適用於設定及更新儲存 VM 的 Active Directory 。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要更新的儲存虛擬機器的檔案系統的操作選單，然後選擇 *管理*。
+. 在「儲存虛擬機器」下的檔案系統概覽中，選擇「管理」。
+. 在「管理儲存虛擬機器」畫面上，選擇要為其設定 Active Directory 的儲存虛擬機器的操作選單，然後選擇「基本操作」>「管理 AD 設定」。
+. 在「管理 AD 組態」頁面上、提供下列項目：
++
+.. * 要加入的 Active Directory 網域 * ：輸入 Active Directory 的完整網域名稱（ FQDN ）。
+.. * DNS IP 位址 * ：輸入最多三個 IP 位址、並以逗號分隔。
+.. *SMB 伺服器 NetBIOS 名稱 * ：輸入 Active Directory 電腦物件的 SMB 伺服器 NetBIOS 名稱、以建立儲存 VM 。這是 Active Directory 中此 SVM 的名稱。
+.. * 使用者名稱 * ：在現有的 Active Directory 中輸入服務帳戶的使用者名稱。
++
+請勿包含網域首碼或尾碼。對於 `EXAMPLE\ADMIN`，請使用 `ADMIN`。
+
+.. * 密碼 * ：輸入服務帳戶的密碼。
+.. * 組織單位（ OU ） * ：輸入組織單位。
++
+OU 是您要加入檔案系統之組織單位的辨別路徑名稱。
+
+.. * 委派系統管理員群組 * ：選擇性地輸入委派的檔案系統管理員群組。
++
+委派的系統管理員群組是 Active Directory 中可管理檔案系統的群組名稱。
+
++
+如果您使用的是 AWS 託管的 Microsoft AD 、則必須指定群組、例如 AWS 委派的 FSX 管理員、 AWS 委派管理員、或是具有 OU 委派權限的自訂群組。
+
++
+如果您要連線至自我管理的 AD 、請使用 AD 中的群組名稱。預設群組為 `Domain Admins`。
+
+
+
+. 選擇*應用*。
+
+
+
+
+[[manage-storage-vm-tags]]
+== 管理儲存 VM 標籤
+
+標籤可以幫助您對資源進行分類。您可以隨時在NetApp Workload Factory 中新增、編輯和刪除儲存虛擬機器的標籤。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中，選擇要更新的儲存虛擬機器的檔案系統的操作選單，然後選擇 *管理*。
+. 在「儲存虛擬機器」下的檔案系統概覽中，選擇「管理」。
+. 在「管理儲存虛擬機器」畫面上，選擇要編輯標籤的儲存虛擬機器的操作選單，然後選擇「基本操作」>「編輯儲存虛擬機器標籤」。
+. 在「編輯儲存 VM 標籤」頁面上、新增、編輯或移除標籤。
++
+您可以套用至儲存 VM 的標籤數量上限為 50 個。
+
+. 選擇*應用*。
+
+
+
+
+[[reset-the-storage-vm-password-in-netapp-workload-factory]]
+== 在NetApp Workload Factory 中重設儲存虛擬機器密碼
+
+必要時重設NetApp Workload Factory 中儲存虛擬機器的密碼。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從儲存選單中，選擇 *FSx for ONTAP*。
+. 從 *FSx for ONTAP* 中選擇要重設儲存 VM 密碼的檔案系統的操作選單，然後選擇 *管理*。
+. 在「儲存虛擬機器」下的檔案系統概覽中，選擇「管理」。
+. 在「管理儲存虛擬機器」畫面上，選擇要重設密碼的儲存虛擬機器的操作選單，然後選擇「基本操作」>「重設密碼」。
+. 在「重設密碼」對話方塊中、提供下列資訊：
++
+.. * 新密碼 * ：輸入儲存 VM 的新密碼。
+.. * 確認密碼 * ：再次輸入新密碼以確認。
+
+
+

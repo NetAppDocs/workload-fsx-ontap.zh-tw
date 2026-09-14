@@ -9,7 +9,7 @@
 
 現在，您可以設定磁碟區的自動成長大小，以便磁碟區大小可以超出業務需求和應用程式要求的預先配置大小。
 
-link:https://docs.netapp.com/us-en/workload-fsx-ontap/edit-volume-autogrow.html["啟用Volume自動擴充"]
+link:https://docs.netapp.com/us-en/workload-fsx-ontap/manage-volume-capacity.html["啟用Volume自動擴充"]
 
 
 

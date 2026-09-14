@@ -19,7 +19,7 @@ NetApp Workload Factory僅支援區塊設備的FlexVol磁碟區。您可以使�
 區塊大小必須小於可用的FlexVol volume大小。
 
 .開始之前
-* 您必須關聯連結才能建立區塊設備。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。關聯連結後，返回此操作。
+* 您必須關聯連結才能建立區塊裝置。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。關聯連結後，請返回此作業。
 
 
 .步驟
@@ -69,7 +69,7 @@ ONTAP 使用重複資料刪除和壓縮功能實現儲存效率。重複資料�
 
 .. * Snapshot polic*: 選擇快照策略以指定快照的頻率和保留。
 +
-以下是 AWS 的預設策略。若要顯示現有的快照策略，您必須 link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["建立連結的關聯"]。
+以下是 AWS 的預設原則。若要顯示現有的快照原則，您必須link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["建立連結的關聯"^]。
 
 +
 `default`:: 此原則會根據下列排程自動建立快照、並刪除最舊的快照複本、以便為較新的複本提供空間：
@@ -98,7 +98,7 @@ NOTE: 快照時間以檔案系統的時區為基礎、其預設為協調世界�
 如果該功能不可用，則可能是由於以下原因之一：
 
 +
-*** 連結與檔案系統無關聯。link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-link.html["了解如何關聯現有連結或建立並關聯新連結"]。連結建立關聯後，請返回此作業。
+*** 連結尚未與檔案系統關聯。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。連結關聯後，請返回此操作。
 *** ARP/AI 不支援包含不可變檔案的捲和使用 NVMe 協定的磁碟區。
 *** 檔案系統已具有 ARP/AI 策略。
 
