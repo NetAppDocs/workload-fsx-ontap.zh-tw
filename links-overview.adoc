@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: learn-about-links.html 
+permalink: links-overview.html 
 keywords: links, accounts, lambda 
 summary: Workload Factory 連結在 Workload Factory 帳戶和一個或多個 FSx for ONTAP檔案系統之間建立信任關係和連線。 
 ---

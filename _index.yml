@@ -18,6 +18,8 @@ indexpage:
     links:
     - title: 探索節約效益
       url: "/explore-savings.html"
+    - title: 了解連結
+      url: "/links-overview.html"
     - title: 使用連結連線至檔案系統
       url: https://docs.netapp.com/us-en/workload-setup-admin/create-link.html
     - title: 建立儲存VM
