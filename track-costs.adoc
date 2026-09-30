@@ -11,7 +11,7 @@ summary: 在 NetApp Workload Factory 中追蹤 FSx for ONTAP 檔案系統資源�
 
 
 [role="lead"]
-在 NetApp Workload Factory 控制台中，以整合檢視追蹤 FSx for ONTAP 檔案系統的成本和使用情況。成本資料有助於您有效管理預算並優化資源。Workload Factory 也會為您的 FSx for ONTAP 檔案系統資源產生成本報告，您可以與利害關係人共用這些報告。
+NetApp Workload Factory 提供 FSx for ONTAP 檔案系統成本和使用情況的統一檢視，協助您有效管理預算並最佳化資源。您也可以產生 FSx for ONTAP 檔案系統資源的成本報告，並與利害關係人共享。
 
 
 
@@ -20,15 +20,13 @@ summary: 在 NetApp Workload Factory 中追蹤 FSx for ONTAP 檔案系統資源�
 
 Workload Factory 透過從 AWS Cost Explorer 取得成本資料來追蹤 FSx for ONTAP 檔案系統的成本和使用情況。追蹤的成本詳情包括：使用類型、使用 SKU、部署類型、使用量和總成本。
 
-對於特殊資源，Workload Factory 透過綜合考慮實際效能層級使用情況、分配給已佈建但未使用空間的效能層級成本比例、按容量分配的效能配置以及容量集區使用情況來計算成本。每個組成部分均乘以其在該維度上的單位價格，再將結果加總，以確定每個資源的總成本。
+對於獨特的資源，Workload Factory 透過結合實際效能分層使用量、分配給已配置但未使用空間的效能分層成本的比例共享、按容量分佈的效能分配，以及容量資源池使用量來計算成本。Workload Factory 將每個組成部分乘以該維度的單位價格，並將結果相加，以決定每個資源的總成本。
 
-在「成本」控制面板中，您可以按 AWS 帳戶、憑證、一個或多個區域以及時間範圍篩選成本和使用情況資料，以便了解您的 FSx for ONTAP 檔案系統消耗情況。資料一律以每月費率顯示。
+在「成本」儀表板中，您可以按 AWS 帳戶、認證資料、一個或多個區域以及時間範圍篩選成本和使用情況資料，以便了解您的 Amazon FSx for NetApp ONTAP 檔案系統消耗情況。NetApp Workload Factory 始終以每月費率顯示資料。您也可以按一個或多個檔案系統以及檔案系統中的一個或多個 Volume 進行篩選。AWS 成本分配標籤鍵和標籤鍵值提供了額外的篩選階層，可以精確定位特定成本。一個標籤由一個鍵和一個值組成。若要按標籤鍵和標籤鍵值進行篩選，請為您的 Amazon FSx for NetApp ONTAP 檔案系統指派標籤。link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html["深入瞭解 AWS 成本分配標籤。"^]
 
-我們使用下列權限從 AWS Cost Explorer 取得您的 FSx for ONTAP 檔案系統資源的成本和使用情況資料： `ce:GetCostAndUsage`and `ce:GetTags`。我們使用 AWS Cost API 和我們的估算值來計算總成本。`
+Workload Factory 使用下列權限從 AWS Cost Explorer 取得 FSx for ONTAP 檔案系統資源的成本和使用情況資料： `ce:GetCostAndUsage` 和  `ce:GetTags`。我們使用 AWS cost API 和我們自己的估算來計算總成本。
 
-AWS 分配標籤鍵和標籤鍵值增加了一層額外的篩選功能，可以更精確地定位特定成本。一個標籤由一個鍵和一個值組成。若要按標籤鍵和標籤鍵值進行篩選，請將標籤指派給您的 FSx for ONTAP 檔案系統。link:https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html["深入瞭解 AWS 成本分配標籤。"^]
-
-除了成本儀表板中顯示的成本資料外，您還可以產生 FSx for ONTAP 檔案系統資源的成本報告。成本報告中的資料包含特定檔案系統和磁碟區的資訊。該報告為可下載的 PDF 檔案，您可以與相關人員共用。
+除了成本儀表板中的成本資料外，成本總結還顯示了您的 FSx for ONTAP 檔案系統成本以及您組織的支出模式。您也可以產生 FSx for ONTAP 檔案系統資源的成本報告。該報告為可下載的 CSV 檔案，您可以與利害關係人共享。
 
 
 
@@ -38,10 +36,10 @@ AWS 分配標籤鍵和標籤鍵值增加了一層額外的篩選功能，可以�
 Workload Factory 控制台成本儀表板中顯示的成本是基於 AWS Cost Explorer 的資料，該資料每 24 小時更新一次。
 
 .開始之前
-請確保您符合以下要求：
+請確認您符合以下要求：
 
 * 您必須link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["使用_檢視、規劃和分析_權限策略授予憑證"^]在 Workload Factory 中追蹤 FSx for ONTAP 成本。
-* 若要按 AWS 配置標籤進行篩選，請確保您的 FSx for ONTAP 檔案系統已指派標籤。
+* 若要按 AWS 分配標籤進行篩選，請驗證您的 FSx for ONTAP 檔案系統是否已指派標籤。
 
 
 .步驟
@@ -79,4 +77,4 @@ Workload Factory 控制台成本儀表板中顯示的成本是基於 AWS Cost Ex
 
 
 .結果
-系統將產生PDF報告，可供下載。
+系統將產生CSV報告，可供下載。

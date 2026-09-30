@@ -11,7 +11,7 @@ summary: NetApp Workload Factory 會定期分析 Amazon FSx for NetApp ONTAP 檔
 
 
 [role="lead"]
-NetApp Workload Factory 會定期分析 Amazon FSx for NetApp ONTAP 檔案系統設定，以判斷是否存在任何設定問題。當發現問題時，Workload Factory 會顯示這些問題並說明需要做出哪些更改，以確保您的檔案系統儲存能達到最佳效能、成本效益及符合最佳實務。
+NetApp Workload Factory 會定期分析 Amazon FSx for NetApp ONTAP 檔案系統組態，以判斷是否有任何組態問題。發現問題時，Workload Factory 會向您顯示問題所在，並說明需要變更的內容，讓您的檔案系統儲存設備達到最高效能、成本效率，並法規遵循最佳實務做法。
 
 主要功能包括：
 
@@ -27,9 +27,9 @@ NetApp Workload Factory 會定期分析 Amazon FSx for NetApp ONTAP 檔案系統
 [[how-it-works]]
 == 運作方式
 
-Workload Factory 每日分析您在支援的雲端儲存系統部署上執行的工作負載。此分析提供架構完善的狀態資訊、洞察分析和建議。
+Workload Factory 每天都會對支援的雲端儲存部署上的工作負載進行分析。分析結果提供架構完善的狀態資訊、洞察與建議。
 
-每日分析完成後，組態在部署的架構完善儀表板中會顯示為「最佳化的」或「未最佳化的」。您可以按類別查看組態問題，以及組態問題清單和建議。您可以審查針對組態問題的建議。Workload Factory 可以自動修復某些問題；其他問題則需要手冊干預。在這種情況下，Workload Factory 會提供詳細說明，幫助您實作建議的變更。
+每日分析完成後，部署的「架構完善」儀表板會將組態顯示為「最佳化的」或「未最佳化的」。您可以在這裡找到按類別組織的組態問題以及相應的建議。Workload Factory 可以自動修復一些問題；對於需要手冊干預的問題， Workload Factory 會提供詳細說明，幫助您實作建議的變更。
 
 您可以忽略不適用於您環境的組態分析。這樣可以避免不必要的警示和不準確的最佳化結果。
 
@@ -69,6 +69,9 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["�
 精心設計的分析將組態分類為架構的下列要素：_可靠性_、_安全性_、_卓越營運_、_成本最佳化_和_效能效率_。
 
 
+NOTE: 目前，Workload Factory 並未針對所有組態提供特定工作負載的建議。請根據特定的工作負載需求自訂您的組態。
+
+
 
 [[reliability]]
 === 可靠性
@@ -85,7 +88,7 @@ link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["�
 
 * *應用程式一致性快照*
 +
-對於資料庫環境，請搭配 NetApp SnapCenter 使用應用程式一致性快照，以便在特定時間點對 Volume 資料進行準確可靠的快照。這可確保應用程式流暢運作並保障資料安全。SnapCenter 能簡化備份流程，幫助您快速且準確地還原資料，從而減少停機並保護最重要的工作負載。
+對於資料庫環境，請搭配 NetApp SnapCenter 使用應用程式一致性快照，以在特定時間點為您的 Volume 資料建立準確、可靠的快照。這有助於讓您的應用程式順暢運作，並保護您的資料。SnapCenter 可簡化備份，並協助您快速正確地還原資料，進而減少停機並保護您最重要的工作負載。
 
 * * 跨區域複寫 *
 +
@@ -161,6 +164,10 @@ NetApp 具備人工智慧的自主勒索軟體防護（ARP/AI）可協助您保�
 +
 為託管資料庫執行個體的 FSx for ONTAP Volume 設定資源隨需配置。此方法允許儲存比實體可用空間更多的邏輯資料。
 
+* *AWS MGN 組態*
++
+在將 FSx for ONTAP 檔案系統與 AWS MGN 一起使用之前，請先設定所需的 AWS Transform MGN （MGN）連線和 API 驗證設定。
+
 
 
 
@@ -192,7 +199,7 @@ NetApp 具備人工智慧的自主勒索軟體防護（ARP/AI）可協助您保�
 
 * *超額配置的固態硬碟容量*
 +
-過多的 SSD 容量會增加不必要的成本。減少 SSD 分層，同時維持 20% 的可用空間緩衝區。此操作可能需要數小時到數天，在此期間不支援其他檔案系統操作。
+過剩的 SSD 容量會增加不必要的成本。減少 SSD 分層，同時維持 20% 的可用空間緩衝區。此操作可能需要數小時到數天的時間，在此期間不支援其他檔案系統操作。
 
 * *非使用中的 NAS Volume*
 +
@@ -214,6 +221,10 @@ NetApp 具備人工智慧的自主勒索軟體防護（ARP/AI）可協助您保�
 * *FlexVol® Volume 重新平衡*
 +
 重新平衡您的 FlexVol Volume 以提高效率。擴充後，容量和工作負載活動可能會在整個 Volume 上變得不平衡。
+
+* *Volume 空間管理*
++
+啟用協調的 Volume 空間管理，以降低 Volume 空間不足的風險。否則，意外的資料或快照成長可能會填滿 Volume，導致寫入失敗並影響應用程式。
 
 
 

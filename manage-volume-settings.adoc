@@ -11,7 +11,24 @@ summary: 標記可協助您分類資源。您可以隨時為 ONTAP Volume 新增
 
 
 [role="lead"]
-在 NetApp Workload Factory 中自訂 FSx for ONTAP Volume 設定，以符合您組織的需求。您可以管理 Volume 標籤以對資源進行分類，更新儲存效率設定以最佳化空間和成本節約效益，以及管理不可變檔案設定以控制資料保留並防止未經授權的變更。
+在 NetApp Workload Factory 中自訂 FSx for ONTAP Volume 設定，以滿足您組織的需求。您可以管理 Volume 標籤來對資源進行分類（例如設定 Volume 工作負載），更新儲存效率設定以最佳化空間和成本節約效益，以及管理不可變檔案設定以控制資料保留並防止未經授權的變更。
+
+
+
+[[change-volume-workload]]
+== 變更 Volume 工作負載
+
+更新 Volume 的工作負載，使其與預期用途相符。
+
+.步驟
+. 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
+. 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
+. 從「Storage」功能表中，選取「Volumes explorer」。
+. 選擇要更新工作負載的 Volume 的操作選單。
+. 選取 *進階操作*，然後選取 *變更工作負載*。
+. 在「變更工作負載」對話方塊中，為 Volume 選擇正確的工作負載。
+. 選取 * 套用 * 以儲存變更。
+
 
 
 
