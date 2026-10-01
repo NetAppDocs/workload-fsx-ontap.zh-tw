@@ -90,7 +90,7 @@ NOTE: 如果您的帳戶管理員已關閉 AI 功能，您將看到一則訊息�
 建立連結並將其與 FSx for ONTAP 檔案系統關聯，以啟用 AI 驅動的事件分析。此連結在 Workload Factory 與一個或多個 FSx for ONTAP 檔案系統之間建立信任關係，並利用 AWS Lambda。
 
 +
-link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html^["了解如何關聯現有連結或建立並關聯新連結"].連結關聯完成後，返回此操作。
+link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。連結關聯後，請返回此操作。
 
 * *AWS IAM 權限*
 +
