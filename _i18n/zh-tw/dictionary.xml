@@ -2957,7 +2957,6 @@
   <block id="6dbb8a49c1538ebdedcc12468334fb46" category="paragraph">刪除已刪除 Volume 的所有手動建立的備份，以及超過兩週的任何備份。這些備份不會自動過期，如果您不再需要將其用於 SLA 或恢復，則可能會增加成本並增加複雜性。</block>
   <block id="b5ad1c06d1e3c827001a5d86081f1bdb" category="paragraph">刪除不再需要的舊快照或手動建立的快照。刪除它們可以降低成本並減少系統混亂，尤其是在它們並非滿足您的服務等級協定（SLA）或恢復需求的情況下。</block>
   <block id="0be251ac51e901583999154779926c3b" category="paragraph">在區塊裝置七天未使用後，請歸檔區塊裝置資料或刪除未使用的區塊裝置，以降低成本。</block>
-  <block id="72d8d7f27cf31b02bb7df1a01b23ab49" category="paragraph">組態分析會識別出未經常使用的 NAS Volume，並建議刪除或歸檔這些 Volume 以降低成本。</block>
   <block id="058f4c97fb457003efd47bf8dac18f8b" category="paragraph">重新平衡您的 FlexGroup Volume 以提高效率。擴充後，容量和工作負載活動可能會在整個 Volume 上變得不平衡。</block>
   <block id="98ee4192cbfc73d968e2c1f61cbdb3dc" category="paragraph">重新平衡您的 FlexVol Volume 以提高效率。擴充後，容量和工作負載活動可能會在整個 Volume 上變得不平衡。</block>
   <block id="c2a622b55f06f11550a3499362e678c9" category="list-text">您必須關聯連結才能建立區塊裝置。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。關聯連結後，請返回此作業。</block>
@@ -3187,4 +3186,5 @@
   <block id="ec39403359b5b677efc5171e16b20cdb" category="paragraph"><block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。連結關聯後，請返回此操作。</block>
   <block id="9a90fd93ba397d5f48de07251acc1808" category="list-text">延遲事件的元件細目</block>
   <block id="6d4d9f3d79904b627f6aca8246717bca" category="list-text">*快取磁碟區*：包含快取磁碟區的來源儲存設備虛擬機器不支援切換。切換前請移除 ONTAP FlexCache 關係，以避免移轉失敗。</block>
+  <block id="084b022f1511ba8dda542f70832d22e4" category="paragraph">在 NAS Volume 連續 31 天未使用後，歸檔或刪除未使用的 NAS Volume 以降低成本。</block>
 </blocks>

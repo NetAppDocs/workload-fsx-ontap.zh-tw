@@ -203,7 +203,7 @@ NetApp 具備人工智慧的自主勒索軟體防護（ARP/AI）可協助您保�
 
 * *非使用中的 NAS Volume*
 +
-組態分析會識別出未經常使用的 NAS Volume，並建議刪除或歸檔這些 Volume 以降低成本。
+在 NAS Volume 連續 31 天未使用後，歸檔或刪除未使用的 NAS Volume 以降低成本。
 
 
 
