@@ -2508,7 +2508,6 @@
   <block id="fa425772bf4dc1e54c8368c2b99d4b1b" category="paragraph">在規劃遷移使用案例的轉換作業時，請考慮以下事項。</block>
   <block id="d77811034f737ab45ed7ddebe9c096fd" category="inline-xref">切換後更新組態設定</block>
   <block id="dddf91d5ccee3135470e6089b62618ba" category="list-text">*複製磁碟區*：複製磁碟區將作為獨立磁碟區進行遷移，因此會佔用目標 FSx for ONTAP 檔案系統的更多空間。建議在切換之前刪除複製磁碟區，以避免目標系統容量增加。</block>
-  <block id="233115f3ed74b7b4516b8f0a1efbaedf" category="list-text">*快取磁碟區*：適用於 ONTAP FlexCache 9.17.x 或更低版本。包含快取磁碟區的來源儲存 VM 不支援轉換。轉換前請移除 ONTAP FlexCache 關係，以避免移轉失敗。</block>
   <block id="03c85e91696d00a533c3da3b08434532" category="list-text">*AWS S3 存取點*：對於包含 S3 存取點的磁碟區，不支援遷移使用案例的轉換複寫。請從來源磁碟區中刪除 S3 存取點，以避免遷移失敗。</block>
   <block id="849ee629a3b8f33b04a9b242a47e3d59" category="list-text">*ONTAP S3 組態*：具有 ONTAP S3 組態的 vserver 不支援移轉使用案例的完全移轉複寫。請移除 vserver 上的 ONTAP S3 組態，包括 object-store-server、bucket、使用者、群組或原則，以避免移轉失敗。</block>
   <block id="ab3171de62100468c23112d3fda9227b" category="list-text">*LUN 序號和 iSCSI 目標 IQN*：LUN 序號和 iSCSI 目標 IQN 會在轉換期間變更。</block>
@@ -3187,4 +3186,5 @@
   <block id="56643767ee547abedda1d643567a4c85" category="paragraph">所有連結文件現已包含在 Workload Factory 設定和管理文件中。您仍然可以從 Workload Factory FSx for ONTAP 文件中參考 <block ref="08c564abbdedd12846cfb2f0de43f628" category="inline-link-macro-rx"></block>，並在設定和管理文件中找到相關頁面的連結。</block>
   <block id="ec39403359b5b677efc5171e16b20cdb" category="paragraph"><block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。連結關聯後，請返回此操作。</block>
   <block id="9a90fd93ba397d5f48de07251acc1808" category="list-text">延遲事件的元件細目</block>
+  <block id="6d4d9f3d79904b627f6aca8246717bca" category="list-text">*快取磁碟區*：包含快取磁碟區的來源儲存設備虛擬機器不支援切換。切換前請移除 ONTAP FlexCache 關係，以避免移轉失敗。</block>
 </blocks>
