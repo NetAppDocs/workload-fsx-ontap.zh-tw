@@ -155,6 +155,8 @@ sidebar:
       url: "/performance-reference.html"
     - title: 適用於 ONTAP 的 FSX 安全性
       url: "/security-reference.html"
+  - title: 常見問題
+    url: "/faq-fsx-ontap.html"
   - title: 知識與支援
     entries:
     - title: 註冊以取得支援

@@ -3187,4 +3187,157 @@
   <block id="9a90fd93ba397d5f48de07251acc1808" category="list-text">延遲事件的元件細目</block>
   <block id="6d4d9f3d79904b627f6aca8246717bca" category="list-text">*快取磁碟區*：包含快取磁碟區的來源儲存設備虛擬機器不支援切換。切換前請移除 ONTAP FlexCache 關係，以避免移轉失敗。</block>
   <block id="084b022f1511ba8dda542f70832d22e4" category="paragraph">在 NAS Volume 連續 31 天未使用後，歸檔或刪除未使用的 NAS Volume 以降低成本。</block>
+  <block id="cbcebbbc53a0dc734d698e345cc9f911" category="summary">在 NetApp Workload Factory 中尋找有關 FSx for ONTAP 檔案系統、Volume、資料保護、複寫、勒索軟體保護與區塊儲存設備的常見問題解答。</block>
+  <block id="f9a4cd4e165d95f6097d6058f8418612" category="doc">Amazon FSx for NetApp ONTAP for NetApp Workload Factory 常見問題解答</block>
+  <block id="d14d5544a341d1a9bc258908f734089f" category="paragraph">關於 Amazon FSx for NetApp ONTAP 在 NetApp Workload Factory 中的常見問題，涵蓋了影響您如何規劃、保護與管理 FSx for ONTAP 檔案系統和儲存設備的概念、行為與限制。</block>
+  <block id="bd908db5ccb07777ced8023dffc802f4" category="section-title">連結</block>
+  <block id="9dc4bd783bd557a81d2c1fbf6f420a0e" category="paragraph-title">什麼是連結？我什麼時候需要為 FSx for ONTAP 建立連結？</block>
+  <block id="50ccca3d9155c7a2f9130ee7765743fb" category="paragraph">連結在 Workload Factory 與一個或多個 FSx for ONTAP 檔案系統之間建立信任關係，並使用 AWS Lambda。許多作業都需要關聯的連結，包括：</block>
+  <block id="77acec8553d9971af97eac0340d2f48f" category="list-text">設定 Volume 傳輸協定存取</block>
+  <block id="a196e8c9e955288d8493ee9936ce3c76" category="list-text">管理 Snapshot 快照技術與 Snapshot 快照技術原則</block>
+  <block id="53c219370bf0c0452c0ccb2201bc2f80" category="list-text">啟用具備 AI 的 NetApp 自主勒索軟體防護（ARP/AI）</block>
+  <block id="ac63e90ab01039aa5e6c8597290b5cac" category="list-text">管理 Volume 自動擴充和手冊容量變更</block>
+  <block id="ddf35bccac94d0810429e6fa6c2fb972" category="list-text">管理 igroup 和快取 Volume</block>
+  <block id="d49fbd4141ef9211647083b276c978a0" category="list-text">管理 ONTAP 憑證</block>
+  <block id="6015cd2e9e5bc5b037ad456163cc26cb" category="inline-link-macro">深入瞭解連結</block>
+  <block id="7199140a960155d0d2f40b39a85d69f9" category="paragraph"><block ref="8fae953ea9a38f9ca7be3c5b0b0db56c" category="inline-link-macro-rx"></block>。</block>
+  <block id="dfe642f2cfde396edc18a4148131fed6" category="paragraph-title">如果我不將連結與我的檔案系統關聯，會發生什麼事？</block>
+  <block id="b4995c14539d70a4f6014816a0690b2e" category="paragraph">依賴連結的功能可能無法使用。例如，沒有連結，ARP/AI 將無法使用，建立 Volume 時無法顯示現有的 Snapshot 快照技術原則，而且無法發現快取關係。沒有連結，組態分析將無法掃描資料保護和效能設定，因此分析不完整。即使沒有連結，您仍然可以檢視延遲事件，但需要連結才能檢視和分析 EMS 事件以及分析延遲事件。</block>
+  <block id="3b18b13f059019d19211f8a9f36f7e4e" category="section-title">檔案系統</block>
+  <block id="cf8717fd7b61340ca19189e27312c629" category="paragraph-title">建立新檔案系統時，我應該使用快速建立還是進階建立？</block>
+  <block id="9eddcbef8d779c018cde871331edb56a" category="paragraph">快速建立會套用建議的最佳實務做法組態，之後您可以變更大多數設定。除非該區域不支援，否則預設會使用第二代檔案系統。進階建立可讓您設定每個選項，包括可用度、安全性、備份和維護。</block>
+  <block id="a19403c093e2bb37035acc084ebfaba3" category="paragraph"><block ref="9e0421bb729ebed0fb12b88c1fc5b0e9" category="inline-link-macro-rx"></block>。</block>
+  <block id="406f09292985fe61625e5bc497b6c220" category="paragraph-title">建立檔案系統時會自動建立哪些資源？我需要哪些權限？</block>
+  <block id="1dc12f7a5785b1a42ba7ddefb5ab5b8f" category="paragraph">建立檔案系統的同時也會建立儲存設備 VM 和安全性群組。您需要具有檔案系統建立和刪除權限的憑證，以及部署位置的區域和 VPC 詳細資訊。</block>
+  <block id="76a9205ec492cf551c5f1ee90bccaa35" category="paragraph-title">刪除檔案系統、儲存設備虛擬機器或 Volume 之前，我必須做什麼？</block>
+  <block id="23880fdd8c50489737b55ed18e4ae078" category="paragraph">若要刪除檔案系統，請先刪除其 Volume、儲存設備 VM 和複寫關係。若要刪除儲存設備 VM，請停止應用程式存取並刪除所有非根 Volume。若要刪除 Volume，請先刪除其複寫關係。刪除 Volume 的操作不可逆，並且會永久刪除其 Snapshot 快照技術，但 Volume 備份仍然保留。包含不可篡改的檔案和 Snapshot 快照技術的 Volume 在保留期間結束前無法刪除。</block>
+  <block id="28939361ef523b7b86e672e676b3e1ec" category="paragraph"><block ref="ce3cc6283244706d274727f309dc5c90" category="inline-link-macro-rx"></block>。</block>
+  <block id="346281733a566a2751f70d7d04da2306" category="paragraph-title">在新增 HA 配對以橫向擴充檔案系統之前，我應該考慮哪些因素？</block>
+  <block id="96f4a6eb6e28a53e7635063841767803" category="paragraph">新增 HA 配對僅適用於第二代 Single-AZ 檔案系統，且 HA 配對新增後無法移除。此操作大約需要 30 分鐘，在此期間，檔案系統將無法用於其他操作，例如建立 Volume。開始之前，您必須移除所有 iSCSI LUN。</block>
+  <block id="c0b2b9b069c7939799991f9d3d616613" category="inline-link-macro">新增 HA 對</block>
+  <block id="8195e8292fc7b3768df50ac10c7d2d7b" category="paragraph"><block ref="de5bf829a5358aac681b2e7eebaf884a" category="inline-link-macro-rx"></block>。</block>
+  <block id="c1c25df001491639d7e888e014b6f293" category="paragraph-title">主 ONTAP 憑證與受限 ONTAP 憑證有何差異？</block>
+  <block id="119bd10814b18c6c0c529a31fc0f461b" category="paragraph">檔案系統預設使用主 ONTAP 憑證，也就是您管理檔案系統的主要憑證。受限憑證僅用於 AI 操作，例如「Ask Me」、「規則建構者」和「自訂儀表板」。如果您未提供受限憑證，Workload Factory 將為這些操作建立唯讀 ONTAP 憑證。管理憑證需要連結。</block>
+  <block id="c296e3b831241983b2e24abde7008365" category="paragraph"><block ref="c296e3b831241983b2e24abde7008365" category="inline-link-macro-rx"></block></block>
+  <block id="57087519281821fc1d17d5e30777c380" category="section-title">容量和效能</block>
+  <block id="b3a9161808f27cc9a6cd00e86ea1e4e0" category="paragraph-title">自動容量管理是如何運作的？我該注意哪些方面？</block>
+  <block id="0c1c113c4f2ee23ecdde19495129d466" category="paragraph">Workload Factory 每 30 分鐘掃描一次檔案系統，並使用遞增模式（在達到臨界值時固定增加）或具調適能力的模式（根據歷史資料預測需求）新增 SSD 容量。啟用此功能後，您必須先將其停用，才能手動增加容量。請避免在資料移轉期間啟用此功能，因為 AWS 強制要求 SSD 容量增加之間至少有 6 小時的冷卻時間。</block>
+  <block id="a0b7bb144ab4d77c2e5c1863b5bbbd7b" category="paragraph"><block ref="e469d94a0ee9bf1ce6c0c27369cc1fd0" category="inline-link-macro-rx"></block>。</block>
+  <block id="d67fb3daeedc86ea1260ab85263eeeff" category="paragraph-title">變更 SSD 容量會如何影響 IOPS？</block>
+  <block id="4e640f4e7080cf80420cd99bfa5a75d3" category="paragraph">更改檔案系統容量會影響 IOPS。使用自動 IOPS 配置時，每增加或移除 1 GiB 的 SSD 容量，IOPS 會改變 3。使用手冊配置時，您可能需要在增加容量之前提高 IOPS。僅第二代檔案系統支援減少 SSD 容量。</block>
+  <block id="46d051c62a62bfc93f333021f3788d2e" category="paragraph-title">我應該保留多少 SSD 預留空間？如果容量耗盡會發生什麼事？</block>
+  <block id="52a5e43b336bdda3aefca2c487f6d913" category="inline-link-macro">增加容量以避免空間不足</block>
+  <block id="71c7540d16f368c7990f779b523c38e4" category="paragraph">將 SSD 分層使用率保持在 80% 以下。當容量耗盡時， Volume 會變成唯讀，且寫入會失敗。Volume 和檔案（inode）使用率也應保持在 80% 以下。如果備份快照導致 Volume 的 SSD 使用率超過 98% ，備份將會失敗。<block ref="b018d6bf39140941e97093a6185497f7" category="inline-link-macro-rx"></block>。</block>
+  <block id="b654d5b61cf2e16008a43b9a314e798a" category="section-title">Volume 和分層</block>
+  <block id="01bf97c05cf670ec1be04b3c6d5b0d93" category="paragraph-title">Volume 會使用檔案系統容量嗎，我應該選擇 FlexVol 還是 FlexGroup？</block>
+  <block id="7e1917a81d1dd5f9ee3540ab8195fd0f" category="paragraph">Volume 以虛擬方式將資料分組，本身並不使用檔案系統儲存容量。其資料主要使用 SSD 儲存設備，並根據分層原則，使用容量資源池儲存設備。FlexVol 是預設樣式。FlexGroup 是一種橫向擴充的 NAS Container，適用於高效能與大容量，由共享流量的組成 Volume 構成。大小有所不同：FlexVol 為 20 MiB 到 300 TiB，而 FlexGroup 為 800 GiB 到 2 PiB，每個組成 Volume 需要 100 GiB。</block>
+  <block id="a36ca7371803cf76de041db8c92a58f1" category="paragraph-title">重新平衡 Volume 會產生什麼影響？</block>
+  <block id="88dd9a20e01131121034b7168943572d" category="paragraph">重新平衡不會造成中斷，但 Volume 傳輸會使用檔案系統資源。重新平衡的 Volume 上現有的快照會變成部分快照，且無法用於還原 Volume 資料，而之後建立的快照則可以。SAN Volume（iSCSI 和 NVMe）不支援重新平衡。FlexGroup 重新平衡可以新增成員 Volume 並增加已配置的大小，除非您選擇受限佈局（該佈局支援複寫關係中的 Volume）。</block>
+  <block id="b9ab1ccee5c0da0d27f4ae3b0852cc94" category="paragraph-title">我應該為某個 Volume 選擇哪種分層原則？</block>
+  <block id="a074e1a1355e3b9a6616c1b9f56e8a30" category="paragraph">原則選擇會影響成本和效能：</block>
+  <block id="6f2eaf5cb4bb4cc40bc20d5980030182" category="list-text">*平衡（自動）*：預設；建議用於一般主要工作負載。</block>
+  <block id="077b9427f46090f6af0271f7abb515c4" category="list-text">*成本最佳化（全部）*：建議用於次要目標。</block>
+  <block id="3818513aad03af927b34cef46fbf9e9f" category="list-text">*效能最佳化的（僅限 Snapshot 快照技術）*：建議用於低延遲工作負載，例如關鍵任務資料庫。</block>
+  <block id="8f175cd81e367993ea59a83a2e1b87a0" category="list-text">*無*：將所有資料保留在 SSD 上。</block>
+  <block id="489b63d7af220700583bbbe5a7c3c0ee" category="paragraph">該原則是按 Volume 設定的，您可以隨時變更。</block>
+  <block id="c51c2f28a3258635295934f850798c60" category="inline-link-macro">更改分層原則</block>
+  <block id="94672c1a39764381cca229e031dad1aa" category="paragraph"><block ref="d187c757e0826c740815f6a73145d775" category="inline-link-macro-rx"></block>。</block>
+  <block id="763216abb62d188fd2a38c22749c8268" category="paragraph-title">Clone Volume 及其父會發生什麼情況？</block>
+  <block id="6698d44afa73e0e2e99c54192f1dafac" category="paragraph">Clone 是一個可寫入的 Volume。其資料仍然位於父 Volume 上，只有新的寫入位於 Clone 上。在將其分割之前，您無法刪除具有 Clone 的父 Volume。若要分割 Clone，您必須將連結與包含該 Clone 的檔案系統建立關聯。分割只會更新中繼資料，如果 Clone 處於資料保護關係中，則無法執行此操作。分割後，兩個 Volume 無法重新合併，且每個 Volume 都需要完整的空間分配。</block>
+  <block id="b018ec01649174ef4df48cfd1f6a90dc" category="paragraph-title">我應該使用哪些資料保護方法？</block>
+  <block id="6c1c987f19ea3d715e011f06d2f0dba1" category="paragraph">建議結合使用。Snapshot 快照技術可提供低至一小時的 RPO 以及快速的檔案層級還原。備份可提供從一天起的 RPO，且只能作為整個 Volume 進行還原，這可能需要數小時到數天的時間。複寫會在另一個區域保留一份複本，以進行低 RTO 的災難恢復，但您必須調整用戶端以使用該複本。ARP/AI 增加了勒索軟體偵測功能。</block>
+  <block id="e4b83b46c1cd11a2fe17fd874db8da11" category="inline-link-macro">了解資料保護的類型</block>
+  <block id="70c7303d6fd3f53eef2db9d073aee797" category="paragraph"><block ref="6f46f98f09a27b6993946c92b3c28ff7" category="inline-link-macro-rx"></block>。</block>
+  <block id="8613922e21d84b44dce92caf0ab391b7" category="paragraph-title">我該如何規劃快照容量？快照能否取代我的資料複本？</block>
+  <block id="c51ddae531add08bc2905d49040923a1" category="paragraph">快照並非資料的複本。它們僅對變更的資料使用空間，因此通常會隨著時間的推移而增長。對於大多數資料集，額外 20% 的容量足以將快照保留長達四週，但覆寫所有資料會使用大量容量。如果需要真正的複本，請使用備份或複寫。</block>
+  <block id="dc32484a3e2d422fbbb01210766e4130" category="paragraph-title">從 Snapshot 快照技術還原 Volume 會有什麼後果？</block>
+  <block id="4c48097b287bebce494ccfcacbb7622f" category="paragraph">還原至現有 Volume 會永久刪除在建立 Snapshot 快照技術後修改的任何資料。還原為新 Volume 會在幾秒鐘內建立複本，無論大小為何。如果還原切換了 NAS 傳輸協定類型，也可能會切換權限模型，這可能會導致檔案存取問題，而這些問題只能使用 NAS 用戶端工具手動修復。</block>
+  <block id="dd15a6587062568b1c339538786c7a23" category="paragraph-title">關於 Snapshot 快照技術原則，我需要了解哪些內容？</block>
+  <block id="f5c98f5e83814192eab43901f65ebc6f" category="paragraph">除非您變更，否則每個 Volume 都會使用檔案系統的<block ref="c21f969b5f03d33d43e04f8f136e7682" prefix=" " category="inline-code"></block> Snapshot 快照技術原則。原則是在儲存 VM 層級進行管理，並且可以在 Volume 之間共享。Snapshot 快照技術時間遵循檔案系統的時區，預設為 UTC。</block>
+  <block id="4e0fc48912e3e29f8b937ac9310dfdaf" category="paragraph"><block ref="736a68cb55f91f66669a195b9fe5473b" category="inline-link-macro-rx"></block>。</block>
+  <block id="c502f11c8db4ea75e5eb35f396e3300e" category="paragraph-title">不可篡改的快照有什麼作用，它們對刪除快照或 Volume 有何影響？</block>
+  <block id="0e8e6e5b8e504664d110271d696e2435" category="paragraph">建立 Volume 快照時，您可以啟用不可篡改性，這樣在保留期間快照就無法變更或刪除。在快照原則中啟用不可篡改的快照會鎖定該原則中的所有快照。包含不可篡改的檔案和快照的 Volume 在保留期間結束前無法變更或刪除。</block>
+  <block id="cf038fd665473a97bff21c349dc17074" category="paragraph-title">在 Volume 上啟用不可變檔案（SnapLock）之前，我應該決定什麼？</block>
+  <block id="12c3dce509666534de9a7eea019d9d82" category="paragraph">不可變檔案只能在建立 Volume 時啟用，之後無法停用。這是一項進階功能，需要額外付費。選擇保留模式：在企業模式下，SnapLock 系統管理員可以在保留期間內刪除檔案，而在合規模式下，WORM 檔案在保留期間到期前無法刪除，Volume 也無法刪除。複寫包含不可變檔案的來源 Volume 會將目標 Volume 和檔案系統鎖定，直到來源保留期間結束為止。</block>
+  <block id="a6cad80eac0d5069954875431536437c" category="inline-link-macro">建立 Volume 時啟用不可篡改的檔案</block>
+  <block id="bcaf9f890002d3e28f3df693fa025aae" category="paragraph"><block ref="749d0f46da5a5b1a0bf12aa938415ec7" category="inline-link-macro-rx"></block>。</block>
+  <block id="b65d1fe7ba94cbdd04fd3027af86e3fe" category="paragraph-title">Volume 備份的工作原理是什麼？什麼原因會導致 Volume 備份失敗？</block>
+  <block id="29efc3ce452f0cb3108631bbbd0942ac" category="paragraph">備份按 Volume 進行，並且是遞增的，因此只會保存自上次備份以來發生變更的資料。如果備份快照會導致 Volume 的 SSD 使用率超過 98%，則備份可能會失敗。您可以將備份還原到 AWS 帳戶中的任何 FSx for ONTAP 檔案系統，如果還原需要，Workload Factory 可以新增 SSD 容量。手動建立的備份不會自動過期，因此請清理舊備份。</block>
+  <block id="74d7e4521babc21838cb582b2bc32c8b" category="inline-link-macro">使用備份保護您的資料</block>
+  <block id="f1c9bf156c6c97b6b26ac2d8b1ed2c44" category="paragraph"><block ref="66366016d4e373a595f71ecdad6566ed" category="inline-link-macro-rx"></block>。</block>
+  <block id="d6a89ef548882aa2cac45b8985313205" category="paragraph-title">什麼是網路保存庫？我該如何獲得一個？</block>
+  <block id="d0e2c888863a16106a253179c04828a6" category="paragraph">網路保存庫是一個隔離的、實體隔離且不可篡改的備份複本儲存庫，可防範勒索軟體與內部威脅。支援將 FSx for ONTAP 作為網路保存庫的來源與目標。NetApp 協助實作：請聯絡網路保存庫團隊（ng-FSx-CyberVault@netapp.com），將有專家為您後續處理。</block>
+  <block id="420f68f6332b3deddd99f6b53543ddd9" category="inline-link-macro">了解更多關於網路安全保存庫的資訊</block>
+  <block id="06283f74ee45e09d68d11154aeb67b8e" category="paragraph"><block ref="3e786ad2ca598d807275c49bbdb03a30" category="inline-link-macro-rx"></block>。</block>
+  <block id="7478f8f98c41fc2f5747e6f31892fe6f" category="section-title">勒索軟體防護</block>
+  <block id="e6b09da75dd5269b66eee7c0d3c15e8e" category="paragraph-title">ARP/AI 的工作原理是什麼？它需要哪些條件？</block>
+  <block id="5ae6f721128845e30592fc95dc204972" category="paragraph">ARP/AI 會監控 NAS（NFS/SMB）和 SAN（iSCSI）Volume。當偵測到威脅時，它會建立不可篡改的 Snapshot 快照技術。在檔案系統上啟用此功能可保護所有目前與新的 Volume，且需要相關聯的連結。NVMe Volume 或 ONTAP 9.17.1 之前的 iSCSI Volume 不支援此功能。NAS 保護會立即開始，而 SAN Volume 則會經歷兩到四週的學習期，但仍會受到監控。</block>
+  <block id="f4112b3a56167004c566fed18c25301b" category="inline-link-macro">利用 ARP/AI 進行勒索軟體保護</block>
+  <block id="3c91d07a3b6082ef91f683ede528795a" category="paragraph"><block ref="e47e35f0fd751ec997a09e6ba0525b5e" category="inline-link-macro-rx"></block>。</block>
+  <block id="d40b922d6399c0f75bd8fe0dd35865a9" category="paragraph-title">當 ARP/AI 標記攻擊時會發生什麼事，以及如何處理錯誤警示？</block>
+  <block id="87ad13a82b896ad06830d3be808a7a52" category="paragraph">ARP/AI 會在偵測到威脅時建立一個鎖定的快照。預設情況下，ARP/AI 每四小時最多建立六個快照，每個快照鎖定兩到五天。如果您確認是真實攻擊，您可以還原受影響的檔案或整個 Volume。如果您將其標記為錯誤警示，則鎖定的快照將被刪除，系統會更新其警示設定，以便下次不會對相同的檔案副檔名發出警示。</block>
+  <block id="6383d03df046324b1bcbe5529c2a0784" category="section-title">複寫和移轉</block>
+  <block id="c6ae48f5a3c4c0040cb182a1bd548112" category="paragraph-title">在建立複寫關係之前，我需要準備什麼？</block>
+  <block id="36ee27bc3fc7c617977b35534609c979" category="paragraph">您需要：</block>
+  <block id="1b8ccd724ee15c5fc6c3791eb885da99" category="list-text">具有關聯連結的目標 FSx for ONTAP 檔案系統。</block>
+  <block id="01364c2a8f11483bf4a87621ff0dc5a0" category="list-text">儲存設備系統之間開啟 TCP 連接埠 11104 和 11105。</block>
+  <block id="84a932e4e1232b9f4190664226239f81" category="list-text">已探索的內部部署 ONTAP 系統（如果這是您的來源）。</block>
+  <block id="b51258de1e203e5ece7e3160756e695c" category="paragraph">複寫可在 FSx for ONTAP 檔案系統、內部部署 ONTAP 系統和 Cloud Volumes ONTAP 之間運作。複寫的 Volume 是名為<block ref="b10977e679cd9d50cf5cfc7431a7afa4" prefix=" " category="inline-code"></block>的資料保護 Volume。</block>
+  <block id="42a812c944fb445cb3758a031cad03b7" category="paragraph"><block ref="7f69f5f06b7f1081d234c230e63e1465" category="inline-link-macro-rx"></block>。</block>
+  <block id="77c1f0b1d4ead69988edf8dc8ac07564" category="paragraph-title">暫停、停止、恢復、反轉或刪除複寫關係時，資料會發生什麼情況？</block>
+  <block id="a3a90d21994cca3e8154b9450b10efc3" category="paragraph">暫停或停止會使目標 Volume 變成可寫入的。繼續執行會刪除目的地在可寫入的期間所做的任何變更，並將其還原為唯讀狀態。反轉會交換來源和目標角色，並以新來源的內容覆寫新目標。刪除關係會使兩個 Volume 保持獨立，但會移除它們共同的複寫 Snapshot 快照技術。當您反轉或繼續執行時，上次複寫之後寫入來源的資料不會被保留。</block>
+  <block id="3baac809cc5d7dd36919afed53778b41" category="inline-link-macro">管理複寫</block>
+  <block id="3a658afba9c3dfcee9d925db2e0ff4f8" category="paragraph"><block ref="f2c69fd21a914dd83b13a85cdc4eec00" category="inline-link-macro-rx"></block>。</block>
+  <block id="3d5bff6139d795a8155e7f553f076dcb" category="paragraph-title">級聯複寫支援多少跳？其優缺點是什麼？</block>
+  <block id="28b5e1c7f1d73416c886ec69d18688b1" category="paragraph">級聯複寫支援資料保護 Volume 的一個複本（第二跳：來源至次要至第三）。不支援第三跳，且不被視為最佳實務做法。如果次要 Volume 無法使用，級聯可讓您重新同步主要和第三 Volume，而無需進行新的基礎傳輸。級聯 Volume 可能需要較長時間才能重新同步，而且如果某個關係的來源本身是作為另一個關係目標的資料保護 Volume，您就無法反轉該關係。</block>
+  <block id="2bc8d84a3423863f5c9a0b3ab7db7f3f" category="paragraph"><block ref="bd81ceddd5c97e92f9f4da47609bf1b1" category="inline-link-macro-rx"></block>。</block>
+  <block id="ad329ec5a5e4e7399cd752b6449172cc" category="paragraph-title">我應該限制複寫關係的傳輸率嗎？</block>
+  <block id="ec0c7f22de2bdbae44d9c6ccfca26e29" category="paragraph">限制最大傳輸率是選用的，但建議這麼做，因為如果沒有限制，網路和應用程式效能可能會下降。對於關鍵工作負載（例如主要用於災難恢復的檔案系統），建議使用無限制的傳輸率。</block>
+  <block id="945292565dfffe4ed0fee6488bb3b60c" category="paragraph"><block ref="429a56d62002f598b22dcce8288b3439" category="inline-link-macro-rx"></block>。</block>
+  <block id="a230097e09995be185ef52257dc95903" category="paragraph-title">移轉儲存設備虛擬機器並切換複寫時，我應該做好哪些規劃？</block>
+  <block id="d61626dd853155a6688645f9530e9e29" category="paragraph">移轉需要三個步驟：建立關係（選擇 *移轉* 作為使用案例，並選擇 *複製儲存設備虛擬機器組態*）、初始化，以及切換。切換前，請停止用戶端存取並確保資料已同步。來源和目標必須執行相同的主要 ONTAP 版本。切換後，來源儲存設備虛擬機器將會離線，LUN 序號和 iSCSI 目標 IQN 將會發生變化，您必須手動更新 iSCSI、MTU 和 DNS 設定。</block>
+  <block id="fcd9f2021e4153be79dc65c67cde662d" category="section-title">S3 存取點、區塊儲存設備和快取 Volume</block>
+  <block id="f49ad1be510ca9d27bc7647626247d9c" category="paragraph-title">什麼是 S3 存取點？在啟用庫存表或日誌表等功能之前，我應該先了解哪些內容？</block>
+  <block id="34d042a2b876982d8d0353b5c197424a" category="paragraph">S3 存取點連接到 NFS 和 SMB Volume，以便 Amazon Bedrock 等 AWS 服務可以像在 S3 儲存桶中一樣讀取檔案資料。您可以將多個存取點連接到同一個 Volume。清單表會產生物件中繼資料，並產生 AWS S3 請求費用。日誌表的稽核記錄需要 AWS 基礎架構（CloudTrail、CloudWatch、S3、IAM），並要求存取點的網路組態為 *Internet*。</block>
+  <block id="a48c3194ed0afa3543de0ca1d8f81697" category="inline-link-macro">建立 S3 存取點</block>
+  <block id="373d2ffaec3d2acfaffcb7cadb99bd68" category="paragraph"><block ref="4eea5e415e098e4f094fd10e1d1b560b" category="inline-link-macro-rx"></block>。</block>
+  <block id="6ab646db89ac6e181dfc79f6c575c8e9" category="paragraph-title">我需要什麼來設定區塊（iSCSI）儲存設備？</block>
+  <block id="3e99c51170de44f25365793ca0d135cc" category="paragraph">您需要一個連結、一個 FlexVol Volume 和一個 igroup。區塊存取僅適用於具有六個或更少 HA 配對的橫向擴充部署。igroup 透過 IQN 授予主機存取權限，而且您需要同時具備 igroup 和 iSCSI 主機連線，iSCSI 才能正常運作。組態分析建議 iSCSI Volume 不應同時允許 NAS 存取。</block>
+  <block id="fe2d39294076e85cdac10b70a7da042f" category="list-text"><block ref="84e723a77e5da7869a8731958afee785" category="inline-link-macro-rx"></block>。</block>
+  <block id="07d668b158d086e53e8fd941e7fdca71" category="inline-link-macro">建立 FlexVol Volume</block>
+  <block id="7091b500a5a1083b4a0bc1cab9624d7c" category="list-text"><block ref="1152b69358e25ed020038ab1a2f7b59f" category="inline-link-macro-rx"></block>。</block>
+  <block id="7ae90698ba1370fe67da0f295b2b2e91" category="list-text"><block ref="d6d1c309c44b2ac294477e9c723222b3" category="inline-link-macro-rx"></block>。</block>
+  <block id="c991dc9f9a111736388c73da7f87b61b" category="list-text"><block ref="fae14ed30eab3eb467fd76c772cc086d" category="inline-link-macro-rx"></block>。</block>
+  <block id="3594719ae8cb139070d67e6d40b8e95b" category="paragraph-title">非作用中的區塊裝置會發生什麼事？</block>
+  <block id="9fa43fc99133313d50d439ec2c6fa134" category="paragraph">未對應至用戶端或連續七天未使用的區塊裝置，會被歸類為非作用中。您可以將其資料歸檔至容量資源池分層以回收 SSD 容量，或將其刪除。組態分析會將非作用中區塊裝置標記為成本最佳化項目。</block>
+  <block id="827c14c926238a66c0a093c1a77e016d" category="paragraph-title">如何選擇快取寫入模式？管理快取 Volume 需要哪些條件？</block>
+  <block id="b667ecd610cc9a1c9a8cfaf7df74c77e" category="paragraph">對於包含小型檔案的讀取密集型工作負載，環繞寫入模式效能更佳；對於包含大型檔案的寫入密集型工作負載，回寫模式效能更佳。Workload Factory 會探索現有的快取（FlexCache）關係，您必須關聯連結才能探索或管理快取 Volume。</block>
+  <block id="e3d67258919e3eaca0c3bfa2a4707cf8" category="paragraph"><block ref="f247a85aba96158557fe677ffc5b46f1" category="inline-link-macro-rx"></block>。</block>
+  <block id="8e7ca95a59148086d486ef47fb49de06" category="section-title">組態分析與監控</block>
+  <block id="d69b5c8fc4dad1afa25ce53b41b16a51" category="paragraph-title">組態分析的工作原理是什麼，自動套用修復程式是否安全？</block>
+  <block id="7978cb5149f8ef83ac902951c6fb0404" category="paragraph">Workload Factory 每日根據 ONTAP 最佳實踐和 AWS 架構完善框架的支柱（可靠性、安全性、卓越營運績效、成本優化和效能與效率）分析組態。它可以自動修復一些問題，並為其他問題提供手冊步驟。修復操作可能會導致停機或服務中斷，因此請先審查每項建議。您可以忽略不適用於您環境的檢查項目。</block>
+  <block id="aa54af5c37eb0272481e2b886c582cc4" category="paragraph">您必須在 AWS 帳戶中<block ref="6f74e2a9589a6666ba7fdb81dabfc5eb" category="inline-link-macro-rx"></block>，以讓 Workload Factory 分析您的組態。</block>
+  <block id="ff5ccdaf2a7215ed465831a104fb3f0a" category="inline-link-macro">評估您的組態</block>
+  <block id="708e218d0fedd11d8a301c079fa4bb75" category="paragraph"><block ref="7b6cc10b0bbf4a457f384d4dc42b913d" category="inline-link-macro-rx"></block>。</block>
+  <block id="cfb77eda684e695aff27ff4baff059a1" category="paragraph-title">使用 AI 驅動的事件分析需要哪些條件？</block>
+  <block id="e706ac51ff9738151992ba5cc32b94a3" category="inline-link-macro">_操作和修復_ 權限。</block>
+  <block id="b5f2f11273f258a399d225cfec9c5962" category="list-text"><block ref="311b9cdc8339ca8d6ef3bd16df51bc69" category="inline-link-macro-rx"></block>。</block>
+  <block id="ed0b5847028c930dc408ebbd36f6d482" category="list-text">一個連結。</block>
+  <block id="4c5f4b60eb6665165918fe104a709275" category="list-text">檔案系統安全性群組中的連接埠 22 開啟。</block>
+  <block id="46aa87fd95842ab8f19cc307118fa880" category="list-text">已為該帳戶啟用 Amazon Bedrock，並擁有所需的 Bedrock IAM 權限。</block>
+  <block id="c8eeeef64a75facc83f44f154dbcdb60" category="paragraph">事件將顯示 72 小時後移除。資料保留在您的 AWS 帳戶中，客戶資料不會用於訓練模型。如果您的帳戶管理員關閉了 AI 功能，則無法進行分析。</block>
+  <block id="6ff7afa8b9f67a5aab7d9ebedd08b828" category="inline-link-macro">分析事件</block>
+  <block id="c86a9065970d75fe94e2d0706441c006" category="paragraph"><block ref="074e21582aeb4daa56e1d1a7a4bcb4c1" category="inline-link-macro-rx"></block>。</block>
+  <block id="46efaf50e38b8209fb70575ab93faf71" category="section-title">成本和支援</block>
+  <block id="e3b45ee370955f06a09cd88b69cd4b20" category="paragraph-title">節省計算機如何運作，需要哪些權限？</block>
+  <block id="b1eeb9184bcd81ce2ddce0bcf7057718" category="paragraph">此計算機將 Amazon Elastic Block Store （EBS）、Elastic File System （EFS） 和 FSx for Windows File Server 的成本與 FSx for ONTAP 進行比較。您可以手動輸入詳細資料，或讓 Workload Factory 自動偵測您的環境，這需要 *檢視、規劃和分析* 權限才能偵測。自動偵測不支援 EBS 快照或 FSx for Windows File Server 陰影複製。</block>
+  <block id="d29c90b4f82c166798f1f8e15dcd72f2" category="inline-link-macro">了解如何使用節省計算機</block>
+  <block id="3892560eb1e15954593d8839a8469893" category="paragraph"><block ref="8d0197f1622e03b4410d58423c12a49b" category="inline-link-macro-rx"></block>。</block>
+  <block id="49d2626703101935d9e398b71c96df6f" category="paragraph-title">成本追蹤資料來自哪裡，其時效性如何？</block>
+  <block id="9360e28d38d02374c3ad5c00a2ecef7b" category="paragraph">成本資料來自 AWS Cost Explorer，使用<block ref="bba6542a0e46014b21a818003b1e41d2" prefix=" " category="inline-code"></block>和<block ref="f74e5982a82afd7d2755b24355dd08c6" prefix=" " category="inline-code"></block>權限，並每 24 小時重新整理一次。Workload Factory 也會根據自身的估算值計算每個資源的成本。若要依 AWS 成本分配標籤進行篩選，您必須為檔案系統指派標籤。</block>
+  <block id="041a2914aeb45839ef442b10d6702fce" category="paragraph"><block ref="d0de6db93f8e6230acc4beefa23bc62e" category="inline-link-macro-rx"></block>。</block>
+  <block id="d6a34a9b5fe1c271b8ccaa32eea6e101" category="paragraph-title">誰負責維護 FSx for ONTAP 帳戶，誰負責提供檔案系統問題的支援？</block>
+  <block id="9b0bda92a515730dcb3448fe36afdbe6" category="inline-link-macro">取得協助頁面</block>
+  <block id="017c1ba79347b70465209b766fe98e58" category="paragraph">AWS 維護您的 FSx for ONTAP 帳戶，而非 Workload Factory。如果您的檔案系統或基礎架構出現支援問題，請使用 AWS 管理主控台中的支援中心開啟 AWS 支援案例，並選擇 FSx for ONTAP 服務。有關 Workload Factory 的一般問題，請參閱 <block ref="5eb13988e4c0f86962c0003b7b755674" category="inline-link-macro-rx"></block>。</block>
+  <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">常見問題</block>
 </blocks>
