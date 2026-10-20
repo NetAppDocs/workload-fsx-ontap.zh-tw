@@ -3340,4 +3340,7 @@
   <block id="9b0bda92a515730dcb3448fe36afdbe6" category="inline-link-macro">取得協助頁面</block>
   <block id="017c1ba79347b70465209b766fe98e58" category="paragraph">AWS 維護您的 FSx for ONTAP 帳戶，而非 Workload Factory。如果您的檔案系統或基礎架構出現支援問題，請使用 AWS 管理主控台中的支援中心開啟 AWS 支援案例，並選擇 FSx for ONTAP 服務。有關 Workload Factory 的一般問題，請參閱 <block ref="5eb13988e4c0f86962c0003b7b755674" category="inline-link-macro-rx"></block>。</block>
   <block id="1fe917b01f9a3f87fa2d7d3b7643fac1" category="sidebar">常見問題</block>
+  <block id="9090c842809d5b87ef87f89f32e9670b" category="admonition">必須先刪除所有子複製或將其分離成獨立的 Volume，才能刪除具有子複製的 Volume。</block>
+  <block id="98929bc2ec4e4b6c1fb3d202f0a1c02d" category="paragraph">在歸檔資料之前，請確保同一 Volume 上的所有區塊裝置（LUN）均處於非活動狀態。</block>
+  <block id="a12fbd750c270e54cd66855e6a9c0d66" category="list-text">在「回收未使用的區塊裝置空間」畫面上，選取一個或多個區塊裝置以回收容量。</block>
 </blocks>
