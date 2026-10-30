@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-replication.html 
 keywords: replication management, manage replication, pause replication, stop replication, break replication, delete replication, track replication, change replication schedule, limit replication transfer rate, reverse replication 
-summary: 在 NetApp Workload Factory 中管理複製關係。 
+summary: 在 NetApp Workload Factory 中暫停、繼續、反轉、停止與刪除複寫關係，變更複寫排程，並限制傳輸率。 
 ---
 = 在 NetApp Workload Factory 中管理您的複寫關係
 :allow-uri-read: 
@@ -20,7 +20,7 @@ summary: 在 NetApp Workload Factory 中管理複製關係。
 
 變更NetApp Workload Factory 中複製關係中來源磁碟區的複製計劃。
 
-選擇從來源磁碟區將快照傳輸到複寫磁碟區的頻率、以符合您所需的點目標（ RPO ）。
+選擇將快照從來源 Volume 傳輸至複寫 Volume 的頻率，以符合您的恢復點目標（RPO）。
 
 當內部部署 ONTAP 叢集是複寫關係的目標時，不支援變更複寫排程。
 
@@ -32,7 +32,7 @@ summary: 在 NetApp Workload Factory 中管理複製關係。
 . 從檔案系統總覽中、選取 * 複寫關係 * 索引標籤。
 . 在複製關係標籤中，選擇要變更的複製關係計畫的操作選單。
 . 選取 * 編輯複寫間隔 * 。
-. 在「編輯複寫間隔」對話方塊中、選取來源磁碟區的快照傳輸頻率。您可以選擇下列頻率：
+. 在「編輯複寫間隔」對話方塊中，選擇從來源 Volume 傳送快照的頻率。選擇下列頻率之一：
 +
 ** 每 5 分鐘一次
 ** 每小時
@@ -51,7 +51,7 @@ summary: 在 NetApp Workload Factory 中管理複製關係。
 
 限制最大傳輸速率是選擇性的、但建議使用。如果沒有限制，網路和應用程式的效能可能會下降。
 
-或者、我們建議為 ONTAP 檔案系統的關鍵工作負載（例如主要用於災難恢復的工作負載）提供不限傳輸率的 FSX 。
+對於關鍵工作負載，例如主要用於災難恢復的 FSx for ONTAP 檔案系統，建議使用無限制的傳輸率。
 
 .開始之前
 請考慮要分配多少頻寬來進行複寫。
@@ -62,7 +62,7 @@ summary: 在 NetApp Workload Factory 中管理複製關係。
 . 從儲存選單中，選擇 *FSx for ONTAP*。
 . 從 *FSx for ONTAP* 中，選擇要更新的檔案系統的操作選單，然後選擇 *管理*。
 . 從檔案系統總覽中、選取 * 複寫關係 * 索引標籤。
-. 在複製關係標籤中，選擇複製關係的操作選單來限制最大傳輸速率。
+. 在「複寫關係」標籤中，選擇要限制最大傳輸率的複寫關係的操作選單。
 . 選取 * 編輯最大傳輸率 * 。
 . 在「編輯最大傳輸率」對話方塊中、選取 * 限制 * 、然後輸入以 MB/s 為單位的最大傳輸限制
 +
@@ -118,7 +118,7 @@ summary: 在 NetApp Workload Factory 中管理複製關係。
 [[resume-a-paused-replication-relationship]]
 == 恢復暫停的複寫關係
 
-恢復複製關係後，複製停止期間對目標磁碟區所做的任何變更都將被刪除。目標磁碟區將從讀寫狀態轉換為唯讀狀態，並再次依照計畫的複製間隔接收來自來源磁碟區的更新。
+恢復複寫關係後，目標 Volume 在複寫停止期間所做的任何變更都將被刪除。目標 Volume 將從讀寫轉換為唯讀模式，並再次依照計畫的複寫間隔接收來自來源 Volume 的更新。
 
 
 NOTE: 在上次資料複寫與停用來源磁碟區之間、寫入原始來源磁碟區的任何資料都不會保留。
@@ -152,7 +152,7 @@ NOTE: 在上次資料複寫與停用來源磁碟區之間、寫入原始來源�
 
 停止複寫並變更目標 Volume 之後、您可以將這些變更複寫回來源 Volume 。在災難恢復案例中、此程序很常見、您可以在目標磁碟區上操作一段時間、並想要切換磁碟區的角色。
 
-當您反轉並恢復複寫時、它會切換磁碟區的來源和目標角色；目標磁碟區會變成新的來源磁碟區、來源磁碟區會變成新的目標磁碟區。反向操作也會以新來源磁碟區的內容覆寫新目標磁碟區的內容。如果您將複寫還原兩次、則會重新建立原始複寫方向。
+當您反轉並恢復複寫時，Volume 的來源和目標角色會互換；目標 Volume 會成為新的來源 Volume，而來源 Volume 會成為新的目標 Volume。反轉作業也會以新來源 Volume 的內容覆寫新目標 Volume 的內容。如果您將複寫反轉兩次，將會重新建立原始的複寫方向。
 
 []
 ====
@@ -203,7 +203,7 @@ NOTE: 在上次資料複寫與停用來源磁碟區之間、寫入原始來源�
 [[delete-a-replication-relationship]]
 == 刪除複寫關係
 
-刪除NetApp Workload Factory 中的複製關係。當您刪除複製關係時，它會刪除來源磁碟區和目標磁碟區之間的複製關係。刪除複製關係後，兩個磁碟區將繼續獨立存在，並保留其包含的當前資料。
+在 NetApp Workload Factory 中刪除複寫關係。當您刪除複寫關係時，來源與目標 Volume 之間的關係將被移除。刪除關係後，兩個 Volume 將繼續獨立存在，並包含其目前的資料。
 
 當您刪除複寫關係時、適用於 ONTAP 的 FSX 也會刪除來源和目標 Volume 的一般複寫快照。
 

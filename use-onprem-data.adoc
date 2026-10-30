@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: use-onprem-data.html 
 keywords: use, detect, replicate, remove, on-premises, ONTAP cluster, on-premises cluster, ONTAP 
-summary: 在 NetApp Workload Factory 中探索並複寫內部部署的 ONTAP 資料，以便將其用作雲端備份。 
+summary: 在 NetApp Workload Factory 中探索、複寫及移除內部部署 ONTAP 叢集，以將 Volume 資料備份至雲端中的 FSx for ONTAP 檔案系統。 
 ---
 = 在NetApp Workload Factory 中使用本地ONTAP叢集數據
 :allow-uri-read: 
@@ -34,12 +34,12 @@ summary: 在 NetApp Workload Factory 中探索並複寫內部部署的 ONTAP 資
 在NetApp Workload Factory 中發現本機ONTAP集群，以便您可以將資料複製到Amazon FSx for NetApp ONTAP檔案系統。
 
 .開始之前
-開始之前，請確定您擁有下列項目：
+請確定您具備下列項目：
 
 * 用於 ONTAP 檔案系統進行複寫的 FSX 。
 * 要與探索到的內部部署叢集建立關聯的已連線連結。如果您沒有連結，您需要link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["建立一個"^]。
 * 具有必要權限的 ONTAP 使用者認證。
-* 內部部署 ONTAP 9.8 版及更新版本。
+* 內部部署的 ONTAP 版本 9.8 或更新版本。
 * 連線能力如下圖所示。
 +
 image:screenshot-on-prem-connectivity.png["顯示內部部署 ONTAP 叢集應如何連線至 Amazon Web Services Cloud 的管理路徑和資料路徑的螢幕擷取畫面"]
@@ -85,7 +85,7 @@ image:screenshot-on-prem-connectivity.png["顯示內部部署 ONTAP 叢集應如
 .開始之前
 * 您必須探索內部部署的 ONTAP 叢集，才能複寫其 Volume 資料。
 * 您必須有可用的 FSX ， ONTAP 檔案系統才能做為複寫的目標。
-* 您用於複寫關係的內部部署 ONTAP 叢集和 FSx for ONTAP 檔案系統都必須具有關聯的連結。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。連結關聯後，請返回此作業。
+* 您用於複寫關係的內部部署 ONTAP 叢集和 FSx for ONTAP 檔案系統都必須具有關聯的連結。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。關聯連結後，請返回此操作。
 
 
 .步驟
@@ -109,13 +109,13 @@ image:screenshot-on-prem-connectivity.png["顯示內部部署 ONTAP 叢集應如
 請注意、某些分層原則具有相關的最低冷卻週期、可設定磁碟區中的使用者資料必須保持非作用中狀態、才能將資料視為「冷」、並移至容量集區儲存層。當資料寫入磁碟時、冷卻週期即開始。
 
 +
-如需磁碟區分層原則的詳細資訊、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^]AWS FSX for NetApp ONTAP 文件中的。
+如需 Volume 分層原則的詳細資訊，請參閱 AWS FSx for NetApp ONTAP 文件中的 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^]。
 
 
 
 .. * 最大傳輸速率 * ：選取 * 受限 * ，然後在 MIB/s 中輸入最大傳輸限制或者、選取 * 無限 * 。
 +
-如果沒有限制，網路和應用程式的效能可能會下降。或者、我們建議為 ONTAP 檔案系統的關鍵工作負載（例如主要用於災難恢復的工作負載）提供不限傳輸率的 FSX 。
+如果沒有限制，網路和應用程式效能可能會下降。但是，我們建議對 FSx for ONTAP 檔案系統的關鍵工作負載（例如主要用於災難恢復的工作負載）設定無限的傳輸率。
 
 
 
@@ -124,7 +124,7 @@ image:screenshot-on-prem-connectivity.png["顯示內部部署 ONTAP 叢集應如
 .. * 複寫間隔 * ：選取快照從來源磁碟區傳輸到目標磁碟區的頻率。
 .. * 長期保留 * ：可選擇啟用快照以進行長期保留。
 +
-如果您啟用長期保留、請選取現有原則或建立新原則、以定義要複寫的快照和要保留的數量。
+如果啟用長期保留，請選擇現有原則或建立新原則來定義要複寫的快照和要保留的數量。
 
 +
 *** 對於現有原則，請選取 * 選擇現有原則 * ，然後從下拉式功能表中選取現有原則。

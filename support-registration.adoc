@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: support-registration.html 
 keywords: support registration, register for support, support, nss account, add nss account 
-summary: 在向NetApp技術支援部門提交支援案例之前，您需要在 Workload Factory 新增一個NetApp支援網站帳戶，然後註冊以獲得支援。 
+summary: 在 Workload Factory 中新增 NetApp 支援網站帳戶，並註冊您的帳戶以獲得支援，以便向 NetApp 技術支援開啟支援案件。 
 ---
 = 註冊您的 Workload Factory 帳戶以獲得 NetApp 支援
 :allow-uri-read: 

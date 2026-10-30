@@ -15,7 +15,7 @@ FSx for ONTAP是 Workload Factory 中的_儲存_元件。
 
 適用於 ONTAP 的 FSX 提供下列功能：
 
-* *完全託管服務*：提供與 Workload Factory 控制台整合的完全託管服務。
+* *完全代管服務*：提供與 Workload Factory 主控台整合的完全代管服務。
 * * 高可用度 * ：為 ONTAP 檔案系統的每個 FSX 提供高可用度、支援單一和多重可用度區域部署。
 * * 自動快照 * ：利用自動化、有效率的快照來保護資料、快照近乎即時、空間效率極高的時間點檔案系統或磁碟區唯讀複本。
 * * Volume 複寫 * ：透過 Amazon Web Services 的跨區域複寫功能、提供災難恢復功能。
@@ -26,7 +26,7 @@ FSx for ONTAP是 Workload Factory 中的_儲存_元件。
 * * 記憶體內快取和 NVMe 快取 * ：包含獨特的記憶體內快取和 NVMe 快取，可提升常用資料的效能。
 * * 數十萬 IOPS * ： SSD 磁碟可提供數十萬個 IOPS 、確保您的儲存設備和工作負載能及時獲得成果。
 * * 精簡配置 * ：可預先配置容量、節省成本、直到需要更多容量為止。
-* * 重複資料刪除與壓縮 * ：移除重複資料並壓縮資料，以減少 ONTAP 檔案系統的 FSX 所需的實體儲存容量，進而節省成本。
+* *重複資料刪除與壓縮*：移除複製資料並壓縮資料，以減少 FSx for ONTAP 檔案系統所需的實體儲存設備空間，進而帶來成本節約效益。
 * * 資料分層 * ：將較不常存取的資料從主要高效能 SSD 儲存層移至次要容量集區儲存層、藉此降低儲存成本。
 
 
@@ -68,7 +68,7 @@ AWS 維護您的 FSx for ONTAP帳戶，而不是 Workload Factory。請參閱lin
 [[regions]]
 == 區域
 
-所有支援 FSx for ONTAP 的商業區域都支援工作負載工廠。link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["檢視支援的Amazon地區。"^]
+Workload Factory 在所有支援 FSx for ONTAP 的商業區域均受支援。link:https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/["檢視支援的Amazon地區。"^]
 
 以下 AWS 區域不受支援：
 

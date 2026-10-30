@@ -18,17 +18,17 @@ summary: 將複本 FlexVol volume 從其父磁碟區分割成正常的讀寫 Fle
 .關於這項工作
 複製分割作業涉及下列項目：
 
-* 在分割作業期間、無法建立 FlexClone Volume 的新快照複本。
-* 如果 FlexClone Volume 屬於資料保護關係、則無法從父 Volume 分割。
-* 如果您在分割進行中使 FlexClone Volume 離線、分割作業會暫停；當您將 FlexClone Volume 恢復上線時、分割作業會恢復。
+* 在分割作業期間，您無法建立 FlexClone Volume 的新快照複本。
+* 如果 FlexClone Volume 屬於資料保護關係，您無法將其從父 Volume 分割。
+* 如果您在分割期間將 FlexClone Volume 設為離線，分割作業將會暫停。當您將 FlexClone Volume 重新設為線上時，分割作業將會恢復。
 * 分割後、父 FlexVol Volume 和複本都需要由其磁碟區保證所決定的完整空間分配。
-* 從父磁碟區分割 FlexClone 磁碟區之後、就無法重新加入這兩個磁碟區。
+* 將 FlexClone Volume 從其父 Volume 分割後，您無法將它們重新結合。
 
 
 .開始之前
 分割複製的磁碟區之前、請先考慮下列事項：
 
-* 若要分割複製的 Volume，必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。連結關聯完成後，請返回此作業。
+* 若要分割複製的 Volume，必須關聯一個連結。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。關聯連結後，請返回此操作。
 * 當分割作業開始時、 FlexClone Volume 必須處於線上狀態。
 * 父磁碟區必須處於線上狀態、才能成功分割。
 

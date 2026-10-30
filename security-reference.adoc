@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: security-reference.html 
 keywords: security, data protection, IAM, file system access control, vpc 
-summary: Amazon FSX for NetApp ONTAP 文件提供下列安全性主題供您參考。 
+summary: 檢視 AWS 和 NetApp Workload Factory 的 FSx for ONTAP 安全性文件，包括資料保護、身分與存取管理，以及檔案系統存取控制。 
 ---
 = NetApp Workload Factory 中 FSx for ONTAP的安全性
 :allow-uri-read: 
@@ -11,9 +11,10 @@ summary: Amazon FSX for NetApp ONTAP 文件提供下列安全性主題供您參�
 
 
 [role="lead"]
-Amazon FSX for NetApp ONTAP 文件提供下列安全性主題供您參考。
+AWS 文件涵蓋 Amazon FSx for NetApp ONTAP 的安全性，包括資料保護、身分與存取管理，以及檔案系統存取控制。NetApp 文件包含 Workload Factory 的資訊安全性。
 
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/data-protection.html["Amazon FSX for NetApp ONTAP 中的資料保護"^]
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/security-iam.html["適用於 Amazon FSX for NetApp ONTAP 的身分識別與存取管理"^]
 * link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/limit-access-security-groups.html["Amazon VPC 的檔案系統存取控制"^] Amazon FSX for NetApp ONTAP 文件
+* link:https://docs.netapp.com/us-en/workload-infosec/index.html["NetAppWorkload Factory 的資訊安全性"^]
 

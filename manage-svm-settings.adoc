@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-svm-settings.html 
 keywords: edit storage vm settings, vm tags, svm tags, storage vm settings, storage vm password, svm password 
-summary: 隨時新增、更新或移除儲存 VM 的儲存 VM 標籤。 
+summary: 在 FSx for ONTAP 檔案系統中設定 Active Directory、管理標籤並重設儲存設備 VM 的密碼。 
 ---
 = 在 NetApp Workload Factory 中管理儲存設備 VM 設定
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 隨時新增、更新或移除儲存 VM 的儲存 VM 標籤。
 
 
 [role="lead"]
-在 NetApp Workload Factory 中管理儲存設備 VM 的設定。您可以為儲存設備 VM 設定及更新 Active Directory、更新儲存設備 VM 密碼，以及管理儲存設備 VM 的標籤。
+在 NetApp Workload Factory 中管理儲存設備虛擬機器的設定。您可以設定和更新 Active Directory 、重設儲存設備虛擬機器密碼，以及管理儲存設備虛擬機器標籤。
 
 
 
@@ -33,13 +33,13 @@ summary: 隨時新增、更新或移除儲存 VM 的儲存 VM 標籤。
 +
 .. * 要加入的 Active Directory 網域 * ：輸入 Active Directory 的完整網域名稱（ FQDN ）。
 .. * DNS IP 位址 * ：輸入最多三個 IP 位址、並以逗號分隔。
-.. *SMB 伺服器 NetBIOS 名稱 * ：輸入 Active Directory 電腦物件的 SMB 伺服器 NetBIOS 名稱、以建立儲存 VM 。這是 Active Directory 中此 SVM 的名稱。
+.. *SMB 伺服器 NetBIOS 名稱*：輸入要為儲存設備虛擬機器建立的 Active Directory 電腦物件的 SMB 伺服器 NetBIOS 名稱。這是 Active Directory 中儲存設備虛擬機器的名稱。
 .. * 使用者名稱 * ：在現有的 Active Directory 中輸入服務帳戶的使用者名稱。
 +
 請勿包含網域首碼或尾碼。對於 `EXAMPLE\ADMIN`，請使用 `ADMIN`。
 
 .. * 密碼 * ：輸入服務帳戶的密碼。
-.. * 組織單位（ OU ） * ：輸入組織單位。
+.. *組織單位（OU）*：輸入組織單位。
 +
 OU 是您要加入檔案系統之組織單位的辨別路徑名稱。
 

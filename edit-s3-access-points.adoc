@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: edit-s3-access-points.html 
 keywords: S3, s3, access points, manage access points, change access points, update access points, modify access points 
-summary: 在 NetApp Workload Factory 中編輯磁碟區的 S3 存取點。 
+summary: 在 FSx for ONTAP 中更新 Volume 的 S3 存取點詳細資料、管理標籤，以及啟用或停用庫存表。 
 ---
 = 在 NetApp Workload Factory 中編輯某個 volume 的 S3 存取端點
 :allow-uri-read: 

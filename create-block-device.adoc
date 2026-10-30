@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-block-device.html 
 keywords: create block device, create lun, iscsi protocol 
-summary: '建立區塊設備以支援您的業務線 (LOB) 應用需求。' 
+summary: 在現有或新的 Volume 中建立 iSCSI 區塊裝置，設定啟動器群組存取，並為 FSx for ONTAP 設定儲存效率和保護選項。 
 ---
 = 在NetApp Workload Factory中為檔案系統建立區塊設備
 :allow-uri-read: 
@@ -91,7 +91,7 @@ NOTE: 快照時間以檔案系統的時區為基礎、其預設為協調世界�
 
 .. * 分層原則 * ：選取儲存在磁碟區中資料的分層原則。
 +
-使用 Workload Factory 控制台建立磁碟區時，預設分層策略為 _Balanced (Auto)_。有關容量分層策略的更多信息，請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^] 在 AWS FSx for NetApp ONTAP文件中。請注意，Workload Factory 在 Workload Factory 控制台中使用基於用例的名稱來定義分層策略，並在括號中包含 FSx for ONTAP分層策略名稱。
+使用 Workload Factory 主控台建立 Volume 時，預設分層原則為 _平衡（自動）_。如需 Volume 分層原則的詳細資訊，請參閱 AWS FSx for NetApp ONTAP 文件中的 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^]。Workload Factory 在 Workload Factory 主控台中使用以使用案例為基礎的名稱來命名分層原則，並將 FSx for ONTAP 分層原則名稱包含在括號中。
 
 .. *ARP/AI*：當連結與檔案系統關聯時，NetApp 自主勒索軟體保護與 AI (ARP/AI) 預設為啟用。link:https://docs.netapp.com/us-en/workload-fsx-ontap/ransomware-protection.html["了解有關 ARP/AI 的更多信息"]。接受聲明以繼續。
 +

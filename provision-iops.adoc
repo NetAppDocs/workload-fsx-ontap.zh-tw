@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: provision-iops.html 
 keywords: iops, SSD, provision, allocate 
-summary: 自動為 ONTAP 檔案系統的 FSX 配置或手動配置 SSD IOPS 。 
+summary: 在 Workload Factory 中為 FSx for ONTAP 檔案系統啟用自動 SSD IOPS 資源配置，或設定使用者資源配置的 IOPS 值。 
 ---
 = 為 ONTAP 檔案系統配置 FSX 的 SSD IOPS
 :allow-uri-read: 
@@ -11,10 +11,10 @@ summary: 自動為 ONTAP 檔案系統的 FSX 配置或手動配置 SSD IOPS 。
 
 
 [role="lead"]
-在NetApp Workload Factory 中為 FSx for ONTAP檔案系統自動設定或手動設定 SSD IOPS。
+在 NetApp Workload Factory 中自動或手動為 FSx for ONTAP 檔案系統資源配置 SSD IOPS，以控制工作負載可用的效能。
 
 .關於這項工作
-您可以為 FSX 檔案系統啟用自動 SSD IOPS 資源配置、或手動配置 IOPS 。
+您可以為 FSx for ONTAP 檔案系統啟用自動 SSD IOPS 資源配置，也可以手動資源配置 IOPS。
 
 自動佈建的 IOPS 是以每 GiB 三個 IOPS 計算。
 

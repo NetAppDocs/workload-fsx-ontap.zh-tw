@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: replicate-svm-to-file-system.html 
 keywords:  
-summary: 將儲存 VM 複製到另一個適用於 ONTAP 檔案系統的 FSX 、可在資料遺失時提供保護層的資料存取。 
+summary: 將儲存設備 VM 複寫到另一個 FSx for ONTAP 檔案系統，以便在資料遺失時提供資料存取的保護階層。 
 ---
 = 將儲存 VM 複寫到另一個適用於 ONTAP 檔案系統的 FSX
 :allow-uri-read: 
@@ -14,7 +14,7 @@ summary: 將儲存 VM 複製到另一個適用於 ONTAP 檔案系統的 FSX 、�
 在NetApp Workload Factory 中將儲存虛擬機器複製到另一個 FSx for ONTAP檔案系統可在資料遺失時提供資料存取的保護層。此操作將一個儲存虛擬機器中的所有磁碟區複製到另一個 FSx for ONTAP檔案系統。
 
 .開始之前
-若要將儲存設備虛擬機器複寫到另一個 FSx for ONTAP 檔案系統，您必須關聯連結。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。連結關聯完成後，請返回此操作。
+若要將儲存設備虛擬機器複寫到另一個 FSx for ONTAP 檔案系統，您必須關聯連結。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。關聯連結後，請返回此操作。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
@@ -22,28 +22,28 @@ summary: 將儲存 VM 複製到另一個適用於 ONTAP 檔案系統的 FSX 、�
 . 從儲存選單中，選擇 *FSx for ONTAP*。
 . 從 *FSx for ONTAP* 中，選擇要複製儲存虛擬機器的檔案系統的操作選單，然後選擇 *管理*。
 . 在「儲存虛擬機器」下的檔案系統概覽中，選擇「管理」。
-. 在「管理儲存虛擬機器」畫面上，選擇要為其複製 SVM 的儲存虛擬機器的操作選單，然後選擇「進階操作」>「複製儲存虛擬機器」。
+. 在「管理儲存設備虛擬機器」畫面上，選擇要複寫的儲存設備虛擬機器的操作選單，然後選擇 *進階操作* > *複寫儲存設備虛擬機器*。
 . 在「複寫資料」頁面的「複寫目標」下，提供下列項目：
 +
 .. * 適用於 ONTAP 檔案系統 * 的 FSX ：針對適用於 ONTAP 檔案系統的目標 FSX 、選取 ONTAP 檔案系統名稱的認證、區域和 FSX 。
 .. * 儲存 VM 名稱 * ：從下拉式功能表中選取儲存 VM 。
-.. *Volume name* ：目標 Volume 名稱會自動以下列格式產生 `{OriginalVolumeName}_copy`。
+.. *Volume 名稱*：目標 Volume 名稱會自動產生，格式為 `{OriginalVolumeName}_copy`。
 .. * 分層原則 * ：選取儲存在目標 Volume 中的資料分層原則。
 +
-使用 Workload Factory FSx for ONTAP使用者介面建立磁碟區時，_Auto_ 是預設分層策略。有關卷分層策略的更多信息，請參閱link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^]在 AWS FSx for NetApp ONTAP文件中。
+在 Workload Factory 主控台中建立 Volume 時，預設的分層原則為 _Auto_。如需 Volume 分層原則的詳細資訊，請參閱 Amazon FSx for NetApp ONTAP 文件中的 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/volume-storage-capacity.html#data-tiering-policy["Volume 儲存容量"^]。
 
-.. * 最大傳輸速率 * ：選取 * 受限 * 、然後以 MB/s 為單位輸入最大傳輸限制或者、選取 * 無限 * 。
+.. *最大傳輸率*：選擇*有限制*並輸入最大傳輸限制（單位為 MB/s）。或者，選擇*無限制*。
 +
-如果沒有限制，網路和應用程式的效能可能會下降。或者、我們建議為 ONTAP 檔案系統的關鍵工作負載（例如主要用於災難恢復的工作負載）提供不限傳輸率的 FSX 。
+如果沒有限制，網路和應用程式效能可能會下降。但是，我們建議對 FSx for ONTAP 檔案系統的關鍵工作負載（例如主要用於災難恢復的工作負載）設定無限的傳輸率。
 
 
 
 . 在複寫設定下、提供下列項目：
 +
-.. * 複寫間隔 * ：選取快照從來源磁碟區傳輸到目標磁碟區的頻率。
+.. *複寫間隔*：選擇快照從來源 Volume 傳輸至目標 Volume 的頻率。
 .. * 長期保留 * ：可選擇啟用快照以進行長期保留。
 +
-如果您啟用長期保留、請選取現有原則或建立新原則、以定義要複寫的快照和要保留的數量。
+如果啟用長期保留，請選擇現有原則或建立新原則來定義要複寫的快照和要保留的數量。
 
 +
 ... 若為 * 選擇現有原則 * 、請從下拉式功能表中選取現有原則。

@@ -16,7 +16,7 @@ summary: 建立啟動器群組以管理主機對 NetApp Workload Factory 中區�
 .關於這項工作
 啟動器群組或 igroup 會將區塊裝置（LUN）連接至允許存取這些裝置的運算資源。與 NFS 或 CIFS 不同（磁碟區可廣泛存取且使用者權限可控制存取），區塊儲存權限是在機器層級運作。通常一次只有一個系統可以存取區塊裝置。
 
-igroup 充當區塊儲存的權限層。當伺服器連接到儲存系統時，它會使用其 iSCSI qualified (IQN) 主機發起程式進行身份驗證。如果該 IQN 屬於一個或多個 igroup，則伺服器可以存取與這些 igroup 關聯的所有 LUN。igroup 和 iSCSI 主機連線對於 iSCSI 的正常運作都至關重要。
+igroup 充當區塊儲存設備的權限階層。當伺服器連接到儲存系統時，它會使用其 iSCSI 限定名稱（IQN）主機啟動器來識別自身。如果該 IQN 屬於一個或多個 igroup，則伺服器可以存取與這些 igroup 關聯的所有 LUN。igroup 和 iSCSI 主機連線都是 iSCSI 正常運作所必需的。
 
 .開始之前
 您必須關聯一個連結以建立 igroups。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。關聯連結後，請返回此操作。
@@ -34,7 +34,7 @@ igroup 充當區塊儲存的權限層。當伺服器連接到儲存系統時，�
 ** *Storage VM 名稱*：選擇啟動器群組的 Storage VM。
 ** *區塊裝置名稱*：選擇一個或多個要與啟動器群組建立關聯的區塊裝置。列出的區塊裝置是尚未對應至主機啟動器的裝置。
 ** *作業系統類型*：選擇作業系統類型的 Linux、VMware 或 Windows。
-** *主機啟動器*：在啟動器群組中新增一個或多個 iSCSI 合格（IQN）主機啟動器。
+** *主機啟動器*：在啟動器群組中新增一個或多個 iSCSI 限定名稱 (IQN) 主機啟動器。
 
 
 . 選擇* Create *（建立*）。

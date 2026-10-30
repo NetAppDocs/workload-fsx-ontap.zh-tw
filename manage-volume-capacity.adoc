@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-volume-capacity.html 
 keywords: volume size, rebalance volume capacity, adjust volume capacity, volume autogrow, manage volume capacity, FlexVol volume, FlexGroup volume 
-summary: 了解如何管理 Volume 容量，包括手動調整 Volume 大小以及在 Workload Factory 中使用 Volume 自動擴充。 
+summary: 在 Workload Factory 中手動調整 Volume 大小、開啟 Volume 自動擴充，並重新平衡 FlexVol 和 FlexGroup Volume 容量。 
 ---
 = 在 NetApp Workload Factory 中管理 Volume 容量
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 了解如何管理 Volume 容量，包括手動調整 Volume 大小以�
 
 
 [role="lead"]
-Volume 容量應隨著需求變化進行調整。您可以手動調整 Volume 大小，或開啟 Volume 自動擴充，讓 Workload Factory 為您管理 Volume 容量。檢查 FlexVol 或 FlexGroup Volume 容量的平衡，並重新平衡 Volume 容量，將檔案均勻分散到節點中的所有 FlexVol Volume 或所有組成 Volume 上，以便所有節點都能參與單一 FlexGroup Volume 的工作負載。
+根據您的需求變化調整 Volume 容量。手動增加或減少 Volume 大小，開啟 Volume 自動擴充讓 Workload Factory 為您管理容量，或重新平衡 FlexVol 和 FlexGroup Volume 容量，將檔案均勻分佈在節點中的所有 FlexVol Volume 或所有組成部分上，以便所有節點都能參與單一 FlexGroup Volume 的工作負載。
 
 
 
@@ -44,7 +44,7 @@ NOTE: iSCSI Volume 不支援 Volume 自動擴充。
 [[adjust-volume-capacity-manually]]
 == 手動調整 Volume 容量
 
-您可以透過增加或減少磁碟區的已配置大小來調整磁碟區容量。下表顯示了不同體積類型的最小和最大體積尺寸：
+您可以透過增加或減少 Volume 的資源配置大小來調整 Volume 容量。最小和最大大小因 Volume 類型而異：
 
 [cols="1,1,1"]
 |===
@@ -78,23 +78,23 @@ NOTE: iSCSI Volume 不支援 Volume 自動擴充。
 [[rebalance-volume-capacity-for-flexvol-and-flexgroup-volumes]]
 == 重新平衡 FlexVol 和 FlexGroup Volume 的 Volume 容量
 
-FlexVol 捲和 FlexGroup 磁碟區支援重新平衡磁碟區容量。重新平衡磁碟區會在新增檔案和檔案成長、隨著時間的推移而產生不平衡時、重新分配容量。手動開始重新平衡作業後、我們會選取檔案、並自動且不中斷地移動。Volume 傳輸作業會消耗檔案系統資源。
+FlexVol Volume 和 FlexGroup Volume 支援重新平衡 Volume 容量。當隨著時間推移，因為新增檔案和檔案成長而導致不平衡時，重新平衡 Volume 會重新分配容量。手動啟動重新平衡作業後，Workload Factory 會自動選擇檔案並無中斷地移動它們。Volume 傳輸作業會使用檔案系統資源。
 
-每種磁碟區類型和重新平衡操作均有不同，如下所示。
+重新平衡因 Volume 類型而異。
 
 .資料量FlexVol
 FlexVol 卷是一種邏輯容器，能夠靈活地管理數據，支援擴展、收縮、移動和高效複製。它們適用於 NAS 和 SAN 環境。
 
-在 FSx for ONTAP 檔案系統中，一個 FlexVol 磁碟區可以與一個節點內的其他 FlexVol 磁碟區進行平衡。如果檔案系統只有一個 FlexVol 卷，則無法進行重新平衡。當檔案系統每個節點有多個 FlexVol 磁碟區並且選擇了單一 FlexVol 磁碟區時，該 FlexVol 磁碟區會在所有 FlexVol 磁碟區的上下文中進行平衡，但只允許移動選取的磁碟區。
+在 FSx for ONTAP 檔案系統中的單一節點內，FlexVol Volume 可以相對於其他 FlexVol Volume 進行平衡。如果檔案系統只有單一 FlexVol Volume，則無法重新平衡。當檔案系統每個節點有多個 FlexVol Volume，且選取了單一 FlexVol Volume 時，該 FlexVol Volume 會在所有 FlexVols 的環境中進行平衡，但只允許移動所選的 Volume。
 
 .資料量FlexGroup
 另一方面，FlexGroup 磁碟區是可擴充的 NAS 容器，旨在實現高效能和自動負載分配。它們由多個成員卷（組成部分）組成，這些成員卷透明地共享流量。 FlexGroup卷提供海量容量，超越 FlexVol 的限制，最高可達 60PB 容量和 4000 億個檔案。它們透過提供單一命名空間容器來簡化管理。
 
-容量分佈在具有兩個或更多高可用性 (HA) 對的橫向擴展 FSx for ONTAP 檔案系統的多個組成部分中。每個組成都是指定最大單一檔案大小的容器。適用於 ONTAP 的 FSX 會以均勻的方式跨所有成員分散檔案，讓所有節點都能參與單一 FlexGroup Volume 的工作負載。
+在具有兩個或多個高可用度 (HA) 對的橫向擴充 FSx for ONTAP 檔案系統中，容量會分散在多個組成部分之間。每個組成部分都是一個 Container，決定了單一檔案的最大大小。FSx for ONTAP 將檔案均勻分散在所有組成部分上，因此所有節點都能參與單一 FlexGroup Volume 的工作負載。
 
 當組成要素未平均分散於所有節點時， FlexGroup Volume 效能會降低。
 
-檢查FlexGroup磁碟區容量的平衡包括評估組成部分的當前佈局。當您重新平衡磁碟區的容量時， NetApp Workload Factory 會設計一個具有偶數個組成部分的新組成部分佈局，以將資料均勻分佈在所有 HA 對中。此服務執行重新平衡計劃，從而改善讀寫操作。
+檢查 FlexGroup Volume 容量的平衡包括評估目前組成組件的佈局。當您重新平衡 Volume 的容量時，NetApp Workload Factory 會設計一個新的組成組件佈局，其中包含偶數個組成組件，以便將資料均勻分佈到所有 HA 配對上。此服務會執行重新平衡計畫，進而改善讀寫作業。
 
 
 NOTE: iSCSI 和 NVMe 等 SAN 磁碟區不支援重新平衡。
@@ -142,7 +142,7 @@ NOTE: Workload Factory 管理員可以<<停止磁碟區重新平衡操作,停止
 .開始之前
 * <<檢查您的交易量餘額,檢查卷的餘額>>重新平衡磁碟區之前。
 * 若要重新平衡 Volume，您必須link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["建立並關聯連結或將現有連結關聯到檔案系統"^]。連結關聯後，返回此操作。
-* 請注意，您重新平衡的磁碟區上現有的快照會變成部分快照，無法用來還原磁碟區資料，但重新平衡之後所拍攝的新快照可以用來還原磁碟區資料。
+* 您重新平衡的 Volume 上的現有快照會變得不完整，無法用於還原 Volume 資料，但重新平衡後拍攝的新快照可用於還原 Volume 資料。
 * 最好將 FlexVol 磁碟區全部重新平衡，以便均勻平衡所有捲資源。取消選定的磁碟區不會主動參與平衡過程。
 
 
@@ -150,7 +150,7 @@ NOTE: Workload Factory 管理員可以<<停止磁碟區重新平衡操作,停止
 ====
 .流通量FlexVol
 --
-在 FSx for ONTAP 檔案系統中，一個 FlexVol 磁碟區可以與同一節點內的其他 FlexVol 磁碟區進行平衡。當檔案系統每個節點有多個 FlexVol 磁碟區且選擇了單一 FlexVol 磁碟區時，此 FlexVol 磁碟區會在所有 FlexVol 磁碟區的上下文中進行平衡，但只允許移動選取的磁碟區。
+在 FSx for ONTAP 檔案系統中的一個節點內，可以相對於其他 FlexVol Volume 來平衡某個 FlexVol Volume。當檔案系統每個節點有多個 FlexVol Volume，並且選定了單一 FlexVol Volume 時，該 FlexVol Volume 會在所有 FlexVols 的環境下進行平衡，但只允許移動所選的 Volume。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。

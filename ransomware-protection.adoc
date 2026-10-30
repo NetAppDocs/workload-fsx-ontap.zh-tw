@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: ransomware-protection.html 
 keywords: ransomware, arp, autonomous protection, protect, security, detect, detection, restore, recover, threat, attack, suspect, anti-ransomware, entropy, abnormal volume activity, anti-ransomware, extension conformity, ransomware protection strategy 
-summary: NetApp Autonomous Ransomware Protection with AI （ARP/AI）在 NAS 和 SAN 環境中進行工作負載分析，以偵測並警告可能構成勒索軟體攻擊的異常活動。 
+summary: 啟用 NetApp AI 自主勒索軟體防護，以偵測異常 Volume 活動、驗證可疑攻擊，並從快照中恢復資料。 
 ---
-= 使用 NetApp Autonomous Ransomware Protection with AI 保護您的 FSx for ONTAP 資料
+= 使用具備 AI 功能的 NetApp 自主勒索軟體防護來保護 FSx for ONTAP 資料
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
@@ -45,7 +45,7 @@ ARP/AI 功能會根據Amazon FSx for NetApp ONTAP執行的ONTAP版本自動更�
 
 當您將警報標記為誤報時，系統會更新其警報設定。例如，如果一個新的檔案副檔名觸發了警報，而您將其標記為誤報，那麼下次系統偵測到該檔案副檔名時，您將不會收到警報。
 
-不支援的組態:: 以下配置不支援使用 ARP/AI。
+不支援的組態:: ARP/AI 不支援這些組態。
 +
 --
 * NVMe 磁碟區
@@ -65,7 +65,7 @@ ARP/AI 功能會根據Amazon FSx for NetApp ONTAP執行的ONTAP版本自動更�
 啟用 ARP/AI 後，如果偵測到真實攻擊，Workload Factory 會自動建立快照原則。此原則每四小時最多可建立六個快照。每個快照鎖定 2-5 天。
 
 .開始之前
-若要為檔案系統或 Volume 啟用 ARP/AI，必須先關聯一個連結。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。連結關聯完成後，返回此操作。
+若要為檔案系統或 Volume 啟用 ARP/AI，必須先關聯一個連結。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["了解如何關聯現有連結或建立並關聯新連結"^]。關聯連結後，請返回此操作。
 
 [role="tabbed-block"]
 ====
@@ -124,7 +124,7 @@ ARP/AI 功能會根據Amazon FSx for NetApp ONTAP執行的ONTAP版本自動更�
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
 . 從「自主勒索軟體保護」磚中選取 * 分析攻擊 * 。
 . 下載攻擊事件報告，檢閱是否有任何檔案或資料夾遭到入侵，然後決定是否發生攻擊。
-. 如果未發生攻擊，請在表格中選取 * 錯誤警報 * 作為磁碟區，然後選取 * 關閉 *
+. 如果沒有發生攻擊，請為表格中的 Volume 選擇 *錯誤警示*，然後選擇 *關閉*。
 . 如果發生攻擊，請針對表格中的磁碟區選取 * 實際攻擊 * 。「還原遭入侵的 Volume 資料」對話方塊隨即開啟。您可以立即進入<<在勒索軟體攻擊之後恢復資料,恢復您的資料>>或選擇 * 關閉 * ，稍後再回來完成恢復程序。
 
 

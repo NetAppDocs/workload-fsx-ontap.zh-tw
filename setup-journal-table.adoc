@@ -187,7 +187,7 @@ Journal 表功能可擷取受監控 FSx for ONTAP S3 存取點的 S3 資料平�
 . 從檔案系統總覽中、選取 * Volumes （磁碟區） * 標籤。
 . 在「磁碟區」標籤中，選擇要管理 S3 存取點的磁碟區的操作選單，然後選擇 *進階操作*，再選擇 *管理 S3 存取點*。
 . 從 *Manage S3 access points* 畫面中，選擇操作選單，然後選擇 *Edit access point* 。
-. 在「編輯 S3 存取點」對話方塊中、確保網路組態設定為「Internet」。
+. 在 *編輯 S3 存取點* 對話方塊中，確認網路組態設定為 *Internet*。
 . 依照對話方塊中的說明設定日誌表功能的基礎架構。
 . 下載 CloudFormation 範本。
 . 在您的 AWS 帳戶中部署 CloudFormation 堆疊。
@@ -232,7 +232,7 @@ Journal 表功能可擷取受監控 FSx for ONTAP S3 存取點的 S3 資料平�
 
 ==== CloudTrail 限制
 
-AWS 預設每個區域最多只能建立 5 條軌跡。如果帳戶已建立 5 條軌跡， `the FsxDataEventTrail`資源將失敗，並顯示：超出最大軌跡數 (5)。您可以使用以下命令檢查區域層級的軌跡數：
+AWS 預設每個區域最多只能建立五個 Trail。如果帳戶已擁有五個 Trail， `FsxDataEventTrail` 資源將會失敗，並顯示：超出最大 Trail 數量（5）。您可以使用以下命令檢查區域層級的 Trail 數量：
 
 [source, cli]
 ----
@@ -335,14 +335,14 @@ S3TableIntegration 會自動建立一個名為 aws-cloudwatch 的表格儲存桶
 +
 ** 如果 aws-cloudwatch 表格儲存桶不存在，則 `S3TableIntegrationRole`缺少權限。它需要 `s3tables:CreateTableBucket`、 `s3tables:PutTableBucketEncryption`和 `s3tables:PutTableBucketPolicy`— 所有這些權限都限定在 `arn:aws:s3tables:*:*:bucket/aws-cloudwatch`範圍內。
 ** 如果表格儲存桶存在但 `logs.aws_cloudtrail__data`未顯示，則整合未路由事件。整合必須顯示 `Status: ACTIVE`並將 `aws_cloudtrail`作為日誌來源。
-** 如果表存在但種子事件不在其中，則該事件可能仍在傳輸中。S3 Tables 資料導入有一定的延遲。請稍等幾分鐘。如果 15-20 分鐘後仍未出現，則整合可能已中斷。
+** 如果表格存在但種子事件不在其中，則該事件可能仍在傳輸中。S3 Tables 的資料導入有一定的延遲。請再稍等幾分鐘。如果 15-20 分鐘後仍未出現，則整合可能已中斷。
 
 
 . 直接查詢種子事件。
 +
 .. 在 AWS Management Console 中開啟 S3 Tables。
 .. 導覽至 aws-cloudwatch 表格儲存桶 → aws_cloudtrail__data 表格，然後使用 *Preview* 按鈕直接在瀏覽器中執行快速查詢。
-.. 如果事件已存在於表中，但日誌仍顯示 `FAILED`，則可能是輪詢視窗在事件到達之前已過期。
+.. 如果事件存在於表格中，但日誌仍顯示 `FAILED`，則輪詢視窗可能在事件到達之前已過期。
 
 
 

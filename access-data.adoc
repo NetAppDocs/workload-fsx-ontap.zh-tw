@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: access-data.html 
 keywords: access data, mount point, mount volumes, mount clients, on-premises 
-summary: 您可以從內部部署的內部部署來存取適用於 ONTAP 檔案系統的 FSX 、方法是為 NAS 用戶端安裝磁碟區、以及為 SAN 用戶端安裝 iSCSI LUN 。 
+summary: 在 Workload Factory 中取得 FSx for ONTAP Volume 的安裝點，並尋找在 NAS 和 SAN 用戶端上裝載 Volume 和 iSCSI LUN 的連結。 
 ---
 = 存取您的 FSX 以取得 ONTAP 檔案系統資料
 :allow-uri-read: 
@@ -13,7 +13,7 @@ summary: 您可以從內部部署的內部部署來存取適用於 ONTAP 檔案�
 [role="lead"]
 您可以從內部部署的內部部署來存取適用於 ONTAP 檔案系統的 FSX 、方法是為 NAS 用戶端安裝磁碟區、以及為 SAN 用戶端安裝 iSCSI LUN 。
 
-link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["存取資料"^] 在 Amazon FSX for NetApp ONTAP 文件中、提供如何存取資料以供參考的主題。
+Amazon FSx for NetApp ONTAP 文件中的 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.html["存取資料"^] 提供有關如何存取資料的資訊。
 
 您也可以在NetApp Workload Factory 中取得磁碟區的掛載點。
 
@@ -22,7 +22,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/supported-fsx-clients.htm
 [[get-mount-point-for-volumes-in-netapp-workload-factory]]
 == 取得NetApp Workload Factory 中磁碟區的掛載點
 
-取得磁碟區的掛載點，以便在 CIFS 共用或 NFS 用戶端上掛載共用區。
+取得 Volume 的安裝點，以便將 Volume 裝載為 CIFS 共用區或在 NFS 用戶端上。
 
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。

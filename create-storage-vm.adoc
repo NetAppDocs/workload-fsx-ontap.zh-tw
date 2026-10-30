@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: create-storage-vm.html 
 keywords: create storage VM, create svm 
-summary: '您可以建立 FSx for ONTAP儲存虛擬機器 (SVM)，為NetApp Workload Factory 中的工作負載提供儲存和資料服務。' 
+summary: 建立 FSx for ONTAP 儲存設備虛擬機器（SVM），以便在 NetApp Workload Factory 中為您的工作負載提供儲存設備和資料服務。 
 ---
 = 為 ONTAP 檔案系統的 FSX 建立儲存 VM
 :allow-uri-read: 
@@ -16,7 +16,7 @@ summary: '您可以建立 FSx for ONTAP儲存虛擬機器 (SVM)，為NetApp Work
 .關於這項工作
 儲存虛擬機器是獨立的檔案伺服器，您可以使用它來存取工作負載工廠儲存中每個工作負載的資料。每個 SVM 都有自己的管理憑證和端點，用於管理和存取資料。
 
-有了 SVM 、當您存取適用於 ONTAP 的 FSX 中的資料時、您的用戶端和工作站會使用 SVM 的端點（ IP 位址）、掛載由 SVM 託管的 Volume 、 CIFS/SMB 共享區或 iSCSI LUN 。
+用戶端和工作站透過 SVM 端點（IP 位址）裝載由 SVM 託管的 Volume、CIFS/SMB 共享或 iSCSI LUN，來存取 FSx for ONTAP 中的資料。
 
 .開始之前
 確認每個檔案系統支援的儲存 VM 數量。如需每個檔案系統的 SVM 最大數量、請參閱 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html#max-svms["管理 ONTAP 儲存虛擬機器的 FSX"^] AWS 文件中的。

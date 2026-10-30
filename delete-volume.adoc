@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: delete-volume.html 
 keywords: delete volume, volume deletion 
-summary: 刪除 FSX for ONTAP 檔案系統中不再需要的 Volume ，並釋放空間。此操作無法還原。 
+summary: 從 FSx for ONTAP 檔案系統中刪除不再需要的 Volume 以釋放空間。此操作不可逆。 
 ---
 = 在NetApp Workload Factory 中刪除卷
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 刪除 FSX for ONTAP 檔案系統中不再需要的 Volume ，並釋放
 
 
 [role="lead"]
-刪除 FSX for ONTAP 檔案系統中不再需要的 Volume ，並釋放空間。此操作無法還原。
+從 FSx for ONTAP 檔案系統中刪除不再需要的 Volume 以釋放空間。此操作不可逆。
 
 .開始之前
 刪除磁碟區之前、請先考慮下列事項：

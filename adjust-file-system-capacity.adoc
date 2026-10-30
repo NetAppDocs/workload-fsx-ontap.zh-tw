@@ -50,7 +50,7 @@ NOTE: 僅第二代檔案系統支援減少 SSD 儲存容量。
 [[enable-automatic-capacity-and-inode-management]]
 == 啟用自動容量和 inode 管理
 
-啟用容量和 inode 管理，即可讓 NetApp Workload Factory 隨著時間的推移，根據容量需求的變化，自動為 FSx for ONTAP 檔案系統新增遞增式儲存設備，並為 Volume 新增 inode（檔案）。這些功能可移除手動監控容量和 inode 的需求。
+啟用容量和 inode 管理，即可讓 NetApp Workload Factory 根據容量需求的變化，自動為 FSx for ONTAP 檔案系統新增遞增式儲存設備，並在 Volume 中新增 inode（檔案）。這些功能可移除手動監控容量和 inode 的需求。
 
 只有一個帳戶可以管理這些功能。
 
@@ -143,7 +143,7 @@ NOTE: *Terraform 使用者*：Terraform 有限制，要求所有操作都必須�
 . 從儲存選單中，選擇 *FSx for ONTAP*。
 . 在 *FSx for ONTAP* 中，選擇檔案系統的操作選單以啟用自動 inode 管理。
 . 選擇*管理*。
-. 在「資訊」下，選擇「自動 inode 管理」旁的鉛筆圖示。當滑鼠停留在「自動 inode 管理」行上時，下拉箭頭旁邊會出現鉛筆圖示。
+. 在「資訊」下，選擇 *自動 inode 管理* 旁的鉛筆圖示。當滑鼠停留在 *自動 inode 管理* 列上時，下拉箭頭旁邊會出現鉛筆圖示。
 . 在「自動 inode 管理」對話方塊中，提供以下資訊：
 +
 .. * 認證 * ：從下拉式功能表中選取具有 _ 自動化 _ 權限的認證。

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: manage-file-system-settings.html 
 keywords: create fsx tags, create tags, edit fsx tags, fsx tags, reset fsx admin password 
-summary: 隨時為檔案系統新增、更新或刪除 FSx for ONTAP檔案系統標籤。 
+summary: 在 NetApp Workload Factory 中管理 FSx for ONTAP 檔案系統設定，包括標籤、 ONTAP 認證資料、 fsxadmin 密碼和處理量容量。 
 ---
 = 在 NetApp Workload Factory 中管理 FSx for ONTAP 檔案系統設定
 :allow-uri-read: 
@@ -51,7 +51,7 @@ Workload Factory 支援在 Workload Factory 認證資料服務（使用者名稱
 
 Workload Factory 處理受限認證資料的方式如下：
 
-* 如果您沒有為檔案系統提供受限認證資料，然後建立自訂規則或儀表板，或提出 Ask Me 問題，Workload Factory 會建立唯讀 ONTAP 認證資料，以做為受限認證資料集。
+* 如果您沒有為檔案系統提供受限認證資料，然後建立自訂規則或儀表板，或向 Ask Me 提交問題，則 Workload Factory 會建立唯讀 ONTAP 認證資料，以做為受限認證資料集。
 * 如果您已經為檔案系統提供了受限認證資料，則這些認證資料將用於 AIOps。
 
 

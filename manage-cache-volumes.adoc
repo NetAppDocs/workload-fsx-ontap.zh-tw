@@ -11,7 +11,7 @@ summary: 根據需要，在NetApp Workload Factory中管理 FSx for ONTAP檔案�
 
 
 [role="lead"]
-使用NetApp Workload Factory控制台管理 FSx for ONTAP檔案系統的快取磁碟區。快取是一種暫時儲存資料的方法，它透過減少檢索時間來提高資料存取效能。您可以編輯快取名稱、調整容量、變更匯出策略、選擇快取方法、預先填入快取或刪除快取磁碟區。
+使用 NetApp Workload Factory 主控台來管理 FSx for ONTAP 檔案系統的快取 Volume。快取是一種暫時儲存資料的方法，可透過減少擷取時間來提升資料存取效能。您可以編輯快取名稱、調整容量、變更匯出原則、選取快取方法、預先填入快取，或刪除快取 Volume。
 
 .關於這項工作
 您可以在NetApp Workload Factory控制台中管理與快取關係關聯的快取磁碟區。
