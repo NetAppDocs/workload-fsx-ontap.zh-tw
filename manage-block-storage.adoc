@@ -11,13 +11,14 @@ summary: 在 NetApp Workload Factory 中管理 FSx for ONTAP 檔案系統的區�
 
 
 [role="lead"]
-使用 NetApp Workload Factory 簡化區塊儲存資源（包括 igroup 和區塊裝置）的管理，並控制客戶端對 FSx for ONTAP 區塊裝置的存取，以提供最佳效能並最大限度地降低成本。
+使用 NetApp Workload Factory 簡化區塊儲存資源（包括 igroup 和區塊裝置）的管理，並控制用戶端對 FSx for ONTAP 區塊裝置的存取，以提供最佳效能並將成本降至最低。請參閱區塊裝置 igroup 圖，以最佳化用戶端連線並快速解決問題。
 
 .關於這項工作
 從 Workload Factory 主控台，您可以管理啟動器群組（igroup）以控制用戶端對區塊裝置的存取。您也可以檢視區塊裝置詳細資料、增加容量、建立複本、管理用戶端存取、歸檔非作用中區塊裝置的資料，以及刪除區塊裝置。
 
 使用區塊儲存設備圖檢查以下內容：
 
+* 主機詳細資訊，包括主機名稱、執行個體 ID、工作負載類型、區域和 iSCSI 限定名稱（IQN）
 * 用戶端連線
 * 區塊裝置狀態
 * 節點 - 用戶端關係

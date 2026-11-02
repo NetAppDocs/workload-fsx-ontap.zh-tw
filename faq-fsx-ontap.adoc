@@ -32,7 +32,7 @@ summary: 在 NetApp Workload Factory 中尋找有關 FSx for ONTAP 檔案系統�
 * 管理 ONTAP 憑證
 
 
-link:learn-about-links.html["深入瞭解連結"]。
+link:links-overview.html["深入瞭解連結"]。
 
 .如果我不將連結與我的檔案系統關聯，會發生什麼事？
 依賴連結的功能可能無法使用。例如，沒有連結，ARP/AI 將無法使用，建立 Volume 時無法顯示現有的 Snapshot 快照技術原則，而且無法發現快取關係。沒有連結，組態分析將無法掃描資料保護和效能設定，因此分析不完整。即使沒有連結，您仍然可以檢視延遲事件，但需要連結才能檢視和分析 EMS 事件以及分析延遲事件。

@@ -30,7 +30,7 @@ summary: 在 Amazon FSx for NetApp ONTAP 檔案系統中複寫資料，以防止
 
 [NOTE]
 ====
-您可以複製一個來源（讀 / 寫）磁碟區或一個資料保護（DP）磁碟區。支援級聯複製，但不支援第三跳。深入瞭解link:https://docs.netapp.com/us-en/workload-fsx-ontap/cascade-replication.html["串聯複寫"]。
+您可以複製一個來源（讀 / 寫）磁碟區或一個資料保護（DP）磁碟區。支援級聯複製，但不支援第三跳。深入瞭解 <<cascade-replication,串聯複寫>>。
 
 ====
 
@@ -54,14 +54,15 @@ Workload Factory 支援在下列儲存系統之間對儲存 VM 進行移轉複�
 
 若要遷移儲存 VM 資料和組態設定，必須完成以下三個操作。
 
-. <<步驟 1：建立複寫關係,建立複寫關係>>，選擇 *Migration* 作為使用案例，然後選擇 *Replicate storage VM configuration*。
-. <<步驟 2：初始化複寫關係,初始化複寫關係>> 將資料從來源儲存系統傳輸到目標儲存系統。
-. <<步驟 3：針對移轉使用案例切換複寫,切換複寫以適應移轉使用案例>> 將資料和組態設定從來源檔案系統永久遷移到目標 FSx for ONTAP 檔案系統。
+. <<step-1-create-replication-relationship,步驟 1：建立複寫關係>>，選擇 *Migration* 作為使用案例，然後選擇 *Replicate storage VM configuration*。
+. <<step-2-initialize-replication-relationship,步驟 2：初始化複寫關係>> 將資料從來源儲存系統傳輸到目標儲存系統。
+. <<step-3-cutover-replication,步驟 3：針對移轉使用案例切換複寫>> 測試移轉，然後將資料和組態設定從來源檔案系統永久移轉到目標 FSx for ONTAP 檔案系統。
 
 
 
 
 [[step-1-create-the-replication-relationship]]
+[[step-1-create-replication-relationship]]
 == 步驟 1：建立複寫關係
 
 在兩個 FSx for ONTAP 檔案系統之間、內部部署 ONTAP 系統和 FSx for ONTAP 檔案系統之間，或在 Cloud Volumes ONTAP 和 FSx for ONTAP 檔案系統之間複寫資料。
@@ -200,6 +201,7 @@ NOTE: 為了確保長期資料保留，來源標籤和目標標籤必須相符�
 
 
 [[step-2-initialize-the-replication-relationship]]
+[[step-2-initialize-replication-relationship]]
 == 步驟 2：初始化複寫關係
 
 初始化來源磁碟區和目標磁碟區之間的複製關係，以傳送NetApp Workload Factory 中的快照和所有資料區塊。
@@ -226,6 +228,7 @@ NOTE: 為了確保長期資料保留，來源標籤和目標標籤必須相符�
 
 
 [[step-3-cut-over-replication-for-migration-use-cases]]
+[[step-3-cutover-replication]]
 == 步驟 3：針對移轉使用案例切換複寫
 
 建立移轉使用案例的複寫關係後，您必須切換複寫，才能完成儲存 VM 資料和組態設定至目標 FSx for ONTAP 檔案系統的移轉。切換複寫會將資料和儲存 VM 組態設定從來源檔案系統永久移轉至目標 FSx for ONTAP 檔案系統。在切換期間，Workload Factory 會最後一次複寫資料。切換開始時，來源儲存 VM 將會離線。
@@ -235,25 +238,26 @@ NOTE: 為了確保長期資料保留，來源標籤和目標標籤必須相符�
 [[plan-for-the-cutover-operation]]
 === 規劃轉換作業
 
-在規劃遷移使用案例的轉換作業時，請考慮以下事項。
+在進行測試和切換之前，請考慮以下事項。
 
 * *複寫版本支援*：來源和目標儲存系統必須具有相同的主要 ONTAP 版本。例如，如果來源系統執行的是 ONTAP 版本 9.18.1，則目標系統也必須執行 ONTAP 版本 9.18.1。
 * *儲存 VM 組態設定*：
 +
-** 切換操作不會將所有儲存 VM 組態設定遷移到目標儲存 VM。例如，iSCSI、廣播網域 MTU 和 DNS 設定不會遷移。切換後，請在目標儲存 VM 上手動更新這些設定。如需更多詳細資料，請參閱 <<切換後更新組態設定,切換後更新組態設定>> 章節。
+** 切換作業不會將所有儲存設備虛擬機器組態設定移轉至目標儲存設備虛擬機器。例如，iSCSI、廣播網域 MTU 和 DNS 設定不會移轉。<<update-configuration-settings-after-cutover,手動更新這些設定>> 於切換後的目標儲存設備虛擬機器上。
 ** 如果您的儲存 VM 使用網域通道驗證，請在開始移轉之前在目標檔案系統上設定並啟用網域通道。
 
 
 * *複製*：切換作業會將複製移轉為獨立的 Volume，這會使用目標 FSx for ONTAP 檔案系統上的更多空間。建議在切換前刪除複製，以避免目標上的容量增加。
 * *快取磁碟區*：包含快取磁碟區的來源儲存設備虛擬機器不支援切換。切換前請移除 ONTAP FlexCache 關係，以避免移轉失敗。
 * *AWS S3 存取點*：對於包含 S3 存取點的磁碟區，不支援遷移使用案例的轉換複寫。請從來源磁碟區中刪除 S3 存取點，以避免遷移失敗。
-* *ONTAP S3 組態*：具有 ONTAP S3 組態的 vserver 不支援移轉使用案例的完全移轉複寫。請移除 vserver 上的 ONTAP S3 組態，包括 object-store-server、bucket、使用者、群組或原則，以避免移轉失敗。
+* *ONTAP S3 組態*：對於具有 ONTAP S3 組態的儲存設備虛擬機器，不支援移轉使用案例的切換複寫。請移除儲存設備虛擬機器上的 ONTAP S3 組態，包括 object-store-server、儲存桶、使用者、群組或原則，以避免移轉失敗。
 * *LUN 序號和 iSCSI 目標 IQN*：LUN 序號和 iSCSI 目標 IQN 會在轉換期間變更。
 
 
 .開始之前
 開始之前、請先檢閱這些需求。
 
+* 在 Workload Factory 的檔案系統中，檢查複寫關係表中的 *SVM 移轉狀態* 是否為 *已啟用 | 準備測試切換*。
 * 在切換複寫之前，請停止所有用戶端對儲存 VM 的存取。
 * 在切換複寫之前，請確認沒有來源 Volume 正在提供資料。
 * 在切換複寫之前，請確認來源和目標 Volume 之間的資料已同步。
@@ -264,6 +268,17 @@ NOTE: 為了確保長期資料保留，來源標籤和目標標籤必須相符�
 
 
 
+
+
+[[cut-over-replication]]
+=== 切換複寫
+
+Workload Factory 可協助您管理移轉案例中的複寫切換流程。首先，它會測試您的環境，以確認切換可以順利進行。其次，它會執行到目標檔案系統的實際切換。
+
+在完成移轉測試之前，請確保您可以存取目標儲存設備 VM 上的所有資料。
+
+請按照指示切換複寫以進行移轉使用案例。使用者介面將引導您逐步完成切換程序。
+
 .步驟
 . 使用其中一項登link:https://docs.netapp.com/us-en/workload-setup-admin/console-experiences.html["主控台體驗"^]入。
 . 選擇選單 image:workloads-menu-icon.png["漢堡選單圖示用於導航至儲存、EDA、AI、資料庫、VMware 和管理等工作負載。"] 然後選擇“儲存”。
@@ -271,7 +286,11 @@ NOTE: 為了確保長期資料保留，來源標籤和目標標籤必須相符�
 . 從 *FSx for ONTAP* 中、選取包含要複寫之磁碟區的檔案系統。
 . 選擇 *Replication relationships* 標籤。
 . 在複製關係表中、選取要切換的複製關係、然後選取 *Cut over replication* 。
-. 查看「切換複製」對話方塊中的資訊，然後輸入 _cut over_ 進行確認。
+. 完成切換測試步驟，然後執行實際切換。
++
+如果您在程序中結案對話方塊，您可以從 *複寫關係* 索引標籤檢查 *SVM 移轉狀態*，並在準備就緒時繼續切換作業。
+
+. 檢閱「切換複寫」對話方塊中的資訊，然後鍵入 _cut over_ 以完成程序。
 
 
 . 選擇 *Cut over* 。
@@ -291,7 +310,7 @@ NOTE: 為了確保長期資料保留，來源標籤和目標標籤必須相符�
 +
 ** 重新建立 igroup
 ** 更新 LUN 對應
-** 登入每個 SAN 用戶端，更新新目標的 iSCSI/MPIO 設定，並移除舊的 vserver 目標 IP
+** 登入每個 SAN 用戶端，更新新目標的 iSCSI/MPIO 設定，並移除舊的儲存設備 VM 目標 IP
 
 
 * 驗證廣播網域 MTU 設定是否符合預期
@@ -304,6 +323,7 @@ NOTE: 為了確保長期資料保留，來源標籤和目標標籤必須相符�
 
 
 [[cascade-replication-for-data-protection-volumes]]
+[[cascade-replication]]
 == 資料保護 Volume 的級聯複寫
 
 NetApp Workload Factory 支援複製資料保護卷，也稱為_級聯部署_。 _級聯部署_由一系列關係組成，其中源卷鏡像到輔助卷（第一跳），輔助卷鏡像到第三卷（第二跳）。如果輔助磁碟區不可用，您可以同步主磁碟區和三級磁碟區之間的關係，而無需執行新的基準傳輸。
