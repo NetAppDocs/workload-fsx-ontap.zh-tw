@@ -3419,4 +3419,6 @@
   <block id="356b28bbbd0d4021c21f75e7c065f091" category="list-text">主機詳細資訊，包括主機名稱、執行個體 ID、工作負載類型、區域和 iSCSI 限定名稱（IQN）</block>
   <block id="8b253c1d4259c21c8314fc85adcb31d6" category="section-title">2026年11月1日</block>
   <block id="7dc50386b3284326e1114e4e7f4eb3fd" category="section-title">2026年11月1日</block>
+  <block id="7cc20c44b067a9d650d7a25d5be9d67d" category="section-title">客戶管理的 Bedrock 分類支援</block>
+  <block id="8a8cb6e7e1b94c2efc52b7f5d677eb4d" category="paragraph">Workload Factory 現在允許您使用自己的 Amazon Bedrock 設定進行工作負載標籤分類。您可以提供自己的 Bedrock 端點和憑證，以便分類請求透過您自己的 Bedrock 組態執行。</block>
 </blocks>
