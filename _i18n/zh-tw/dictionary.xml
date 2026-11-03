@@ -2539,8 +2539,6 @@
   <block id="9204792b7a380af352b0493b88d5303b" category="inline-link-macro">分析螢幕</block>
   <block id="6f5b7d64dd977f3594b9b347533d7259" category="paragraph">Workload Factory 會監控磁碟區，並在讀取或寫入延遲超過設定閾值時產生警示。您可以從 <block ref="df1730d271761ecb498a3dca135d5e07" category="inline-link-macro-rx"></block> 查看延遲事件。</block>
   <block id="a1edc47cfd4f855c0729219748978279" category="list-text"><block ref="a1edc47cfd4f855c0729219748978279" category="inline-link-macro-rx"></block></block>
-  <block id="56df9b1084a1d8fbfcb5630d52db4560" category="summary">在 NetApp Workload Factory 中追蹤 FSx for ONTAP 檔案系統資源的成本並產生報表。</block>
-  <block id="132c7cd068e9c3c95296d05738c81a90" category="paragraph">Workload Factory 透過從 AWS Cost Explorer 取得成本資料來追蹤 FSx for ONTAP 檔案系統的成本和使用情況。追蹤的成本詳情包括：使用類型、使用 SKU、部署類型、使用量和總成本。</block>
   <block id="80e92f578bcc9bc76e7904c0736e30b0" category="inline-link-macro">深入瞭解 AWS 成本分配標籤。</block>
   <block id="258ef99c8c6162f96d39f58575b891c4" category="section-title">追蹤成本</block>
   <block id="4eb4c996873463b028b9c244954294a7" category="paragraph">Workload Factory 控制台成本儀表板中顯示的成本是基於 AWS Cost Explorer 的資料，該資料每 24 小時更新一次。</block>
@@ -2981,10 +2979,7 @@
   <block id="17ec06b9eaa321300fab59fd56971e66" category="list-text">選擇要更新工作負載的 Volume 的操作選單。</block>
   <block id="ed2541738b61ca0c7584cd62bf74b27d" category="list-text">選取 *進階操作*，然後選取 *變更工作負載*。</block>
   <block id="cd9e2d546766552cd75de00b7717f0cf" category="list-text">在「變更工作負載」對話方塊中，為 Volume 選擇正確的工作負載。</block>
-  <block id="8137b647e9c277bf5504be0415118937" category="paragraph">NetApp Workload Factory 提供 FSx for ONTAP 檔案系統成本和使用情況的統一檢視，協助您有效管理預算並最佳化資源。您也可以產生 FSx for ONTAP 檔案系統資源的成本報告，並與利害關係人共享。</block>
   <block id="0ecf72bcc13fb55d0aa28c82a90ab6f4" category="paragraph">對於獨特的資源，Workload Factory 透過結合實際效能分層使用量、分配給已配置但未使用空間的效能分層成本的比例共享、按容量分佈的效能分配，以及容量資源池使用量來計算成本。Workload Factory 將每個組成部分乘以該維度的單位價格，並將結果相加，以決定每個資源的總成本。</block>
-  <block id="ecec373dbe2f05b3a3b863fd07d13592" category="paragraph">Workload Factory 使用下列權限從 AWS Cost Explorer 取得 FSx for ONTAP 檔案系統資源的成本和使用情況資料：<block ref="bba6542a0e46014b21a818003b1e41d2" prefix=" " category="inline-code"></block> 和 <block ref="f74e5982a82afd7d2755b24355dd08c6" prefix=" " category="inline-code"></block>。我們使用 AWS cost API 和我們自己的估算來計算總成本。</block>
-  <block id="552ae61b34399969ed0ea2c7955fd9ef" category="paragraph">除了成本儀表板中的成本資料外，成本總結還顯示了您的 FSx for ONTAP 檔案系統成本以及您組織的支出模式。您也可以產生 FSx for ONTAP 檔案系統資源的成本報告。該報告為可下載的 CSV 檔案，您可以與利害關係人共享。</block>
   <block id="e291c5603b49506d01779471f77ce7c8" category="paragraph">請確認您符合以下要求：</block>
   <block id="53c306e93da69caff455d3eaa34a6b5c" category="list-text">若要按 AWS 分配標籤進行篩選，請驗證您的 FSx for ONTAP 檔案系統是否已指派標籤。</block>
   <block id="74bc5d714652a3ae18c64ee93e4ba085" category="section-title">2026 年 9 月 30 日</block>
@@ -3334,8 +3329,6 @@
   <block id="a27e74c36d4d969817e56da6fc886e29" category="list-text">將 FlexClone Volume 從其父 Volume 分割後，您無法將它們重新結合。</block>
   <block id="02ed8ce03f0b69a9238ad5fe674db730" category="list-text">若要分割複製的 Volume，必須關聯一個連結。<block ref="b0d0cfa49a5b8ebda8e687152ec0aadd" category="inline-link-macro-rx"></block>。關聯連結後，請返回此操作。</block>
   <block id="c880e220ac8aee50a0a860cfa3d40661" category="summary">在 Workload Factory 中新增 NetApp 支援網站帳戶，並註冊您的帳戶以獲得支援，以便向 NetApp 技術支援開啟支援案件。</block>
-  <block id="79ccfc8de982194cab3acf19277d4a57" category="doc">在 NetApp Workload Factory 中追蹤 FSx for ONTAP 成本並取得報告</block>
-  <block id="9fa871dac57d54d520eddd6e7c2bc7e4" category="paragraph">在「成本」儀表板中，您可以按 AWS 帳戶、認證資料、一個或多個區域以及時間範圍篩選成本和使用情況資料，以了解您的 FSx for ONTAP 檔案系統使用情況。Workload Factory 始終以每月費率顯示資料。您也可以按一個或多個檔案系統以及檔案系統中的一個或多個 Volume 進行篩選。AWS 成本分配標籤鍵和標籤鍵值增加了階層篩選功能，可以精確定位特定成本。一個 _標籤_ 由一個鍵和一個值組成。若要按標籤鍵和標籤鍵值進行篩選，請為您的 FSx for ONTAP 檔案系統指派標籤。<block ref="8ea95efe0fef689337ea8960e5c1861f" category="inline-link-macro-rx"></block></block>
   <block id="904e5c7e4bec4fed64fcbb6a83a967f6" category="paragraph">Workload Factory 會產生您可以下載的 CSV 報告。</block>
   <block id="d50ebccae5983a46539e57c6cafdeafa" category="list-text">（選用）選取 *啟用延遲時間通知* 以在複寫延遲超過臨界值時接收通知。</block>
   <block id="57aa08723363676e08889a7debcc7fae" category="paragraph">Volume 備份是遞增的，這表示僅儲存自上次備份以來 Volume 上發生變更的資料。這可將建立備份所需的時間和備份所需的儲存設備降至最低，並透過不重複資料來節省儲存設備成本。</block>
@@ -3421,4 +3414,35 @@
   <block id="7dc50386b3284326e1114e4e7f4eb3fd" category="section-title">2026年11月1日</block>
   <block id="7cc20c44b067a9d650d7a25d5be9d67d" category="section-title">客戶管理的 Bedrock 分類支援</block>
   <block id="8a8cb6e7e1b94c2efc52b7f5d677eb4d" category="paragraph">Workload Factory 現在允許您使用自己的 Amazon Bedrock 設定進行工作負載標籤分類。您可以提供自己的 Bedrock 端點和憑證，以便分類請求透過您自己的 Bedrock 組態執行。</block>
+  <block id="6347309ad07af7266241819bb2af76d1" category="list-text">*將主機連線至容錯移轉節點*</block>
+  <block id="e89cb70f69260bd0359dad1d58cb94de" category="paragraph">Workload Factory 建議將主機連線至容錯移轉節點，以維持連線並避免在容錯移轉期間發生中斷。</block>
+  <block id="d8f7d6931c10571f6b09ab824fb1eb68" category="list-text">*SAP HANA Snapshot 快照技術原則*</block>
+  <block id="5430bb473a033ac7ca3cf168ada8eef0" category="paragraph">將 SAP HANA Volume 的快照原則設為「無」，以降低儲存設備成本並提高作用中資料庫資料的效能。</block>
+  <block id="bed53786c7f97a0d4610c92e2155c179" category="list-text">*MySQL 快照原則*</block>
+  <block id="2cfa406a51ef73bbf2e8700e3f414fba" category="paragraph">將 MySQL Volume 的快照原則設為「無」，以降低儲存設備成本並提高作用中資料庫資料的效能。</block>
+  <block id="277b9300260dd55ca64290333450ba59" category="list-text">*PostgreSQL 快照原則*</block>
+  <block id="2a902e0c93222642481e7829b61f6885" category="paragraph">將 PostgreSQL Volume 的快照原則設為 "None"，以降低儲存設備成本並提高作用中資料庫資料的效能。</block>
+  <block id="f6713ad974e1c45e6ae6f336e05e1acb" category="list-text">*ARP/AI 多裝置偵測差距*</block>
+  <block id="99585e92af9e1ad2380aa522d6753d7a" category="paragraph">當 Volume 僅連接一個區塊裝置時，ARP/AI 可提供全面的保護。如果 Volume 連接了多個區塊裝置，Workload Factory 會將這些區塊裝置移至新的 Volume，以確保每個 Volume 僅連接一個區塊裝置。</block>
+  <block id="94252ec3a780f58314c91e97ef4e34dd" category="list-text">*Kubernetes iSCSI 後端雙向 CHAP*</block>
+  <block id="33abb23bb89c7fd6e6403f57410fd19d" category="paragraph">對 Trident iSCSI 後端使用雙向 CHAP 驗證，以確保 iSCSI 啟動器和目標相互驗證。這可防止未經授權的主機與儲存設備虛擬機器建立 iSCSI 工作階段。</block>
+  <block id="6afaedca049edca8b26b3afcc63112c5" category="list-text">*在應用程式儲存設備虛擬機器上停用<block ref="d51321f13693d09d4a9cbb2758b42d12" prefix=" " category="inline-code"></block>*</block>
+  <block id="bfd8d5ee3b60e71cb8f894bb8d7d7f01" category="paragraph">在應用程式儲存設備 VM 上停用<block ref="d51321f13693d09d4a9cbb2758b42d12" prefix=" " category="inline-code"></block>，以防止用戶端列出其無法存取的匯出。</block>
+  <block id="17a183ee5c2a455937989091c69ca48d" category="list-text">*專用 Kubernetes 儲存設備 VM*</block>
+  <block id="aeb9ac6a931deb0972004e13a0b50cbd" category="paragraph">為 Kubernetes 工作負載使用專用儲存設備虛擬機器。將 Kubernetes 儲存設備保持分隔可簡化管理、簡化原則設定，並有助於確保一致的儲存設定。</block>
+  <block id="dd54a6cc471e0bb15a8807c9b04d608a" category="list-text">*使 igroup 作業系統與主機相符*</block>
+  <block id="9b4b32350b17fe80d09c863ee9493bc1" category="paragraph">使啟動器群組（igroup）的作業系統與主機的作業系統相符，以防止 I/O 或效能問題。</block>
+  <block id="e2521a2a2f696d450620b08167cf1c24" category="list-text">*複製清理*</block>
+  <block id="25c12f9fc894aee637d81a1bb835e475" category="paragraph">刪除任何超過 30 天的 Volume 複本，以最佳化儲存設備使用並降低成本。</block>
+  <block id="01fae763ec208cbe8aba55abc3b09866" category="summary">在 NetApp Workload Factory 中追蹤 FSx for ONTAP 檔案系統資源的成本。</block>
+  <block id="3f9d767840a18ac75b11c7dd9ba87a88" category="doc">在 NetApp Workload Factory 中追蹤資源成本</block>
+  <block id="bfb6f1b412cd95d58b271e3d69547dda" category="paragraph">使用 NetApp Workload Factory 追蹤您的 FSx for ONTAP 檔案系統成本和使用情況，以便有效管理預算並最佳化資源。我們使用 AWS Cost Explorer 提供整體成本資料，且所需權限極少。依資源（檔案系統或 Volume）計算的成本是基於 Workload Factory 的計算結果，提供 AWS Cost Explorer 無法提供的獨特見解。</block>
+  <block id="c3f094be203d9270a67844e5fa353013" category="paragraph">Workload Factory 使用下列權限從 AWS Cost Explorer 取得 FSx for ONTAP 檔案系統資源的成本和使用情況資料：<block ref="bba6542a0e46014b21a818003b1e41d2" prefix=" " category="inline-code"></block> 和 <block ref="f74e5982a82afd7d2755b24355dd08c6" prefix=" " category="inline-code"></block>。追蹤的成本詳情包括：使用類型、使用 SKU、部署類型、使用量和總成本。</block>
+  <block id="0044e1f3a22c6d9ef97c0d6e8c1fdb03" category="paragraph">在成本儀表板中，有兩個索引標籤分別提供總成本和依資源劃分的成本。</block>
+  <block id="65ab1b7df4df327df8504998be956f5b" category="list-text">總成本是基於直接從 AWS Cost Explorer API 取得的資料。</block>
+  <block id="19750d3971220ee9a9363828b643acdf" category="list-text">按資源成本會顯示依檔案系統或磁碟區劃分的成本估算。</block>
+  <block id="512a8b4930f422b87988b36e61c761d2" category="paragraph">Workload Factory 始終以每月費率顯示資料。</block>
+  <block id="03bb428183665b2d297f7a2b126ada64" category="paragraph">您可以依 AWS 帳戶、憑證、一個或多個區域以及時間範圍來篩選成本與使用量資料，以便了解您的 FSx for ONTAP 檔案系統使用情況。您也可以依一個或多個檔案系統，以及檔案系統中的一個或多個 Volume 進行篩選。</block>
+  <block id="6d24db4e0644546ba5972d86f0474123" category="paragraph">AWS 成本分配標籤鍵和標籤鍵值增加了階層篩選功能，可以精確定位特定成本。一個 _標籤_ 由一個鍵和一個值組成。若要按標籤鍵和標籤鍵值進行篩選，請為您的 FSx for ONTAP 檔案系統指派標籤。<block ref="8ea95efe0fef689337ea8960e5c1861f" category="inline-link-macro-rx"></block></block>
+  <block id="00785d0f1296ca2a8d0846890b38a469" category="paragraph">除了成本儀表板中的成本資料外，AI 產生的成本總結還會顯示您的 FSx for ONTAP 檔案系統成本以及您組織的支出模式。您可以產生 FSx for ONTAP 檔案系統資源的 CSV 檔案，以便與您的團隊和利害關係人共享。</block>
 </blocks>

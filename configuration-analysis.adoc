@@ -106,6 +106,22 @@ SSD 儲存層的容量使用率不得超過 80%。否則可能會影響容量資
 +
 提高檔案容量臨界值，以避免達到 Volume 容量限制。檔案容量（inode）過低會導致無法將額外資料寫入 Volume。Workload Factory 建議將檔案容量使用率保持在 80% 以下，以允許建立新檔案。
 
+* *將主機連線至容錯移轉節點*
++
+Workload Factory 建議將主機連線至容錯移轉節點，以維持連線並避免在容錯移轉期間發生中斷。
+
+* *SAP HANA Snapshot 快照技術原則*
++
+將 SAP HANA Volume 的快照原則設為「無」，以降低儲存設備成本並提高作用中資料庫資料的效能。
+
+* *MySQL 快照原則*
++
+將 MySQL Volume 的快照原則設為「無」，以降低儲存設備成本並提高作用中資料庫資料的效能。
+
+* *PostgreSQL 快照原則*
++
+將 PostgreSQL Volume 的快照原則設為 "None"，以降低儲存設備成本並提高作用中資料庫資料的效能。
+
 
 
 
@@ -122,6 +138,18 @@ NetApp 具備人工智慧的自主勒索軟體防護（ARP/AI）可協助您保�
 * *未經授權的 iSCSI Volume 存取*
 +
 使用 iSCSI 儲存應用程式資料的 Volume 不應同時允許 NAS 存取。Workload Factory 建議限制 iSCSI Volume 使用任何其他通訊協定。
+
+* *ARP/AI 多裝置偵測差距*
++
+當 Volume 僅連接一個區塊裝置時，ARP/AI 可提供全面的保護。如果 Volume 連接了多個區塊裝置，Workload Factory 會將這些區塊裝置移至新的 Volume，以確保每個 Volume 僅連接一個區塊裝置。
+
+* *Kubernetes iSCSI 後端雙向 CHAP*
++
+對 Trident iSCSI 後端使用雙向 CHAP 驗證，以確保 iSCSI 啟動器和目標相互驗證。這可防止未經授權的主機與儲存設備虛擬機器建立 iSCSI 工作階段。
+
+* *在應用程式儲存設備虛擬機器上停用 `showmount`*
++
+在應用程式儲存設備 VM 上停用 `showmount`，以防止用戶端列出其無法存取的匯出。
 
 
 
@@ -168,6 +196,14 @@ NetApp 具備人工智慧的自主勒索軟體防護（ARP/AI）可協助您保�
 +
 在將 FSx for ONTAP 檔案系統與 AWS MGN 一起使用之前，請先設定所需的 AWS Transform MGN （MGN）連線和 API 驗證設定。
 
+* *專用 Kubernetes 儲存設備 VM*
++
+為 Kubernetes 工作負載使用專用儲存設備虛擬機器。將 Kubernetes 儲存設備保持分隔可簡化管理、簡化原則設定，並有助於確保一致的儲存設定。
+
+* *使 igroup 作業系統與主機相符*
++
+使啟動器群組（igroup）的作業系統與主機的作業系統相符，以防止 I/O 或效能問題。
+
 
 
 
@@ -204,6 +240,10 @@ NetApp 具備人工智慧的自主勒索軟體防護（ARP/AI）可協助您保�
 * *非使用中的 NAS Volume*
 +
 在 NAS Volume 連續 31 天未使用後，歸檔或刪除未使用的 NAS Volume 以降低成本。
+
+* *複製清理*
++
+刪除任何超過 30 天的 Volume 複本，以最佳化儲存設備使用並降低成本。
 
 
 
