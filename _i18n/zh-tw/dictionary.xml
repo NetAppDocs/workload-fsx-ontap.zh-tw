@@ -1698,7 +1698,6 @@
   <block id="75ef547803457d883c1ab7eec9dd8c12" category="paragraph">支援將Amazon FSx for NetApp ONTAP用作網路安全保險庫的來源和目標。</block>
   <block id="b672f52ade975e864ae6b58722c03689" category="paragraph-title">執行</block>
   <block id="e8e8dcbe97676a6fe5760aae822c6e61" category="paragraph">Workload Factory 提供建立網路安全架構的協助。當您聯絡NetApp表示有興趣實施網路安全保險庫後， NetApp專家會與您聯繫，討論您的需求。</block>
-  <block id="9577a31ea32e2c5b58950150698f2a07" category="paragraph">請發送電子郵件至ng-FSx-Cyber​​Vault@netapp.com以開始使用。</block>
   <block id="a9541230016fd9f6de7895f1a32b75fb" category="inline-link-macro">ONTAP網路保險庫文檔</block>
   <block id="18e03b41df425134308f1975a1972f8e" category="list-text">具有建立和刪除檔案系統權限的憑證，用於建立ONTAP檔案系統的 FSx。<block ref="582f3532371a870cf4bd6406f93d26de" category="inline-link-macro-rx"></block>。</block>
   <block id="8763b09bbcb06ec11c1d0d3331ba74f4" category="paragraph"><block ref="8763b09bbcb06ec11c1d0d3331ba74f4" category="inline-link-macro-rx"></block></block>
@@ -3351,7 +3350,6 @@
   <block id="19206cde68f30f89cddf386749d22382" category="paragraph">Workload Factory 現在會在您成功新增認證資料後提醒您完成連結關聯。雖然認證資料可用於資源探索，但進階的 ONTAP 功能需要與探索到的檔案系統進行連結關聯。您將在每週一收到電子郵件通知。完成連結關聯後，通知將停止。</block>
   <block id="6ea6cb3b2f3b5abc021a1f0e4229c7fc" category="inline-link-macro">在 Workload Factory 控制台中設定通知</block>
   <block id="a518b4e2bba0d0ce3d0ecdc772d503ed" category="paragraph"><block ref="a518b4e2bba0d0ce3d0ecdc772d503ed" category="inline-link-macro-rx"></block></block>
-  <block id="41d8c250ba5deffd33a0d05e7f94eaf4" category="paragraph">所有連結文件現已包含在 Workload Factory 設定和管理文件中。您仍然可以從 Workload Factory FSx for ONTAP 文件中參考 <block ref="25b81a757714a127c9c382013e960ce5" category="inline-link-macro-rx"></block>，並在設定和管理文件中找到相關頁面的連結。</block>
   <block id="40a8a1ceba59de4101cf77a14d6fb2d5" category="section-title">針對架構完善的問題進行電子郵件增強</block>
   <block id="954ae82c2d96e9bd8c7d4e143bf3c187" category="paragraph">新的電子郵件設計針對 Workload Factory 偵測到的組態問題，提供更多詳細資料與背景資訊。電子郵件包含已分析的資源數量、有多少資源發生警告或關鍵問題，以及這些問題是什麼。電子郵件也會連結至 FSx for ONTAP 完善架構儀表板，讓您可以立即解決問題。</block>
   <block id="1854fdec65dd4a2dd839c666aba07186" category="section-title">精心設計的儀表板增強功能</block>
@@ -3445,4 +3443,5 @@
   <block id="03bb428183665b2d297f7a2b126ada64" category="paragraph">您可以依 AWS 帳戶、憑證、一個或多個區域以及時間範圍來篩選成本與使用量資料，以便了解您的 FSx for ONTAP 檔案系統使用情況。您也可以依一個或多個檔案系統，以及檔案系統中的一個或多個 Volume 進行篩選。</block>
   <block id="6d24db4e0644546ba5972d86f0474123" category="paragraph">AWS 成本分配標籤鍵和標籤鍵值增加了階層篩選功能，可以精確定位特定成本。一個 _標籤_ 由一個鍵和一個值組成。若要按標籤鍵和標籤鍵值進行篩選，請為您的 FSx for ONTAP 檔案系統指派標籤。<block ref="8ea95efe0fef689337ea8960e5c1861f" category="inline-link-macro-rx"></block></block>
   <block id="00785d0f1296ca2a8d0846890b38a469" category="paragraph">除了成本儀表板中的成本資料外，AI 產生的成本總結還會顯示您的 FSx for ONTAP 檔案系統成本以及您組織的支出模式。您可以產生 FSx for ONTAP 檔案系統資源的 CSV 檔案，以便與您的團隊和利害關係人共享。</block>
+  <block id="1e1ba6e3e89c5c46a8b08f6bb7ca5b1e" category="paragraph">請傳送電子郵件至 ng-CyberVault@netapp.com 以開始使用。</block>
 </blocks>

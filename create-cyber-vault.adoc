@@ -26,7 +26,7 @@ summary: 了解NetApp網路保險庫以及如何實施網路保險庫架構，�
 .執行
 Workload Factory 提供建立網路安全架構的協助。當您聯絡NetApp表示有興趣實施網路安全保險庫後， NetApp專家會與您聯繫，討論您的需求。
 
-請發送電子郵件至ng-FSx-Cyber​​Vault@netapp.com以開始使用。
+請傳送電子郵件至 ng-CyberVault@netapp.com 以開始使用。
 
 .相關資訊
 有關網絡保險庫以及如何構建此架構的更多信息，請參閱… link:https://docs.netapp.com/us-en/netapp-solutions-dataops/cyber-vault/ontap-cyber-vault-overview.html["ONTAP網路保險庫文檔"^]。
