@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: learn-custom-rules.html 
+keywords: custom rules, byor, bring your own rules, fsx, ontap, well architected, organizational standards 
+summary: 了解如何在 NetApp Workload Factory 中定義和管理您自己的架構規則，以強制執行組織標準與 NetApp 最佳實務做法。 
+---
+= 了解 NetApp Workload Factory 中的自訂規則
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+自訂規則可讓您在 NetApp Workload Factory 的規則目錄中，設定、檢查及強制執行您自己的架構標準，以及 NetApp 最佳實務做法。
+
+
+
+[[overview]]
+== 概況
+
+規則建構者可讓您使用一般語言建立自訂規則。這些規則會針對您的所有資源進行檢查。自訂規則有助於您強制執行組織的標準、風險限制和營運要求，而這些可能是預設規則無法涵蓋的。
+
+
+NOTE: 如果您的帳戶系統管理員已關閉 AI 功能，您將無法建立新規則或編輯現有規則。任何已排程的規則將繼續執行。link:https://docs.netapp.com/us-en/workload-setup-admin/manage-genai-features.html["了解如何管理人工智慧功能"^]。
+
+
+
+[[how-custom-rules-work]]
+== 自訂規則的工作原理
+
+自訂規則利用人工智慧將簡單的語言指示轉換為清晰、結構化的規則。人工智慧會轉譯您的要求，建議一項規則，解釋它如何理解您的指示，並在儲存或排程規則之前要求核准。此程序有助於確保：
+
+* 此規則定義明確，並經過錯誤檢查
+* 未執行任何自訂程式碼
+* 在批准規則之前，您可以審查具體評估內容
+* 每個自訂規則都包含要評估的資源類型、條件邏輯、嚴重性、評估排程和補救指南。
+
+
+
+
+[[before-you-begin]]
+== 開始之前
+
+在建立和執行自訂規則之前，請確保您已具備以下條件：
+
+AWS 憑證:: 對您的 AWS 環境擁有唯讀存取。自訂規則要求使用唯讀權限作為安全性邊界。link:https://docs.netapp.com/us-en/workload-setup-admin/add-credentials.html["將 AWS 憑證新增至 Workload Factory"]。
+ONTAP 憑證:: 具有唯讀權限的 FSx 檢視器使用者。如果每個 FSx for ONTAP 檔案系統上尚不存在唯讀使用者，Workload Factory 會建立一個，以便 Workload Factory 可以執行評估。
+連結或代理程式:: 僅針對必須直接連線至 ONTAP 以檢查 AWS API 無法存取之設定的規則才需要。link:https://docs.netapp.com/us-en/workload-setup-admin/create-link.html["透過連結連接到 FSx for ONTAP 檔案系統"^]。
+
+
+
+
+[[limitations]]
+== 限制
+
+* 規則無法自動解決問題。您必須按照提供的指南自行更正不合規的資源。
+* 每條規則只檢查一種類型的資源，但可以應用於多種資源。例如，一條規則可以評估多個區域、所有區域或多個帳戶中的 Volume。若要評估不同的資源類型，請建立分隔的規則。
+* 為防止過度掃描，規則最多每小時執行一次。
+* 規則只能讀取您的環境，而不能進行更改。
+* 您稍後可以從規則目錄更新這些設定。
+
+
+
+
+[[rule-lifecycle]]
+== 規則生命週期
+
+自訂規則會經歷以下階段：
+
+進行中:: 建立或檢查規則。
+建立失敗:: 無法建立規則。您可以重新開啟規則，並在聊天中繼續編輯。
+草稿:: 已儲存但尚未排程。
+已驗證草稿:: 已通過驗證，可以儲存或安排執行。
+編輯:: 更新現有規則的草稿複本。目前排程的規則會繼續執行，直到您儲存變更為止。
+已排程:: 作用中，並依定義的排程執行。
+已停用:: 已暫停但未刪除。可重新啟用。
+已刪除:: 已永久移除。
+
+
+
+
+[[custom-rule-examples]]
+== 自訂規則範例
+
+生產 Volume 保護:: "所有帶有 'Prod' 標籤的 Volume 都必須安裝快照原則"
++
+--
+此規則會驗證生產磁碟區是否具有快照原則，以根據公司要求對其進行保護。
+
+--
+歸檔 Volume 分層:: 「所有帶有『Archive』標籤的 Volume 都應將分層原則設定為『All』」
++
+--
+該規則透過自動將歸檔資料移至更便宜的儲存設備來降低成本。
+
+--
+檔案系統命名標準:: 「所有檔案系統都必須遵循命名慣例 'fsx-{environment}-{application}'」
++
+--
+此規則驗證檔案系統是否遵守組織命名慣例，以便於管理和成本分配。
+
+--
+
+
+
+
+[[what-to-do-next]]
+== 接下來該做什麼
+
+link:create-custom-rule.html["建立自訂規則"] link:manage-custom-rules.html["管理自訂規則"]

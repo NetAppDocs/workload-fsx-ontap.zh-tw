@@ -91,6 +91,14 @@ sidebar:
         url: "/configuration-analysis.html"
       - title: 實作架構良好的檔案系統組態
         url: "/improve-configurations.html"
+      - title: 自訂規則
+        entries:
+        - title: 了解自訂規則
+          url: "/learn-custom-rules.html"
+        - title: 建立自訂規則
+          url: "/create-custom-rule.html"
+        - title: 管理自訂規則
+          url: "/manage-custom-rules.html"
     - title: 追蹤與分析 FSx for ONTAP成本
       url: "/track-costs.html"
     - title: 管理磁碟區
